@@ -1,0 +1,287 @@
+# ID: uiuc_lsat_index
+# SOURCE: https://m-selig.ae.illinois.edu/uiuc_lsat.html
+# ORIGINAL: reference/raw/uiuc_lsat_index.html
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type html | 1 pages | ~2495 tokens
+# NOTE: UIUC LSAT landing page: all volumes + tabular page-locator PDFs
+
+=== PAGE 1 ===
+# UIUC APA - LSATs
+
+#
+
+### Select a Link:
+
+- Home
+
+- Research
+
+- People
+
+- Publications
+
+- Contact
+
+- FAQ
+
+### Resources:
+
+- UIUC LSATs
+
+- UIUC Airfoil Data Site
+
+- UIUC Propeller Data Site
+
+- Incomplete Guide to Airfoil Usage
+
+- PROPID
+
+- PROFOIL
+
+- PROFOIL GitHub
+
+### Links:
+
+- APA Links
+
+## UIUC Low-Speed Airfoil Tests
+
+The goals of the UIUC Low-Speed Airfoil Tests (UIUC LSATs) program
+are to design, analyze and wind tunnel test airfoils for low
+Reynolds number applications. The UIUC Applied Aerodynamics group
+has been a leader in this research area with new airfoil designs
+being applied to unmanned aerial vehicles, small wind turbines,
+model aircraft and many other applications. Over 200 low Reynolds
+number airfoils, many of them new designs, have been built and
+validated in the UIUC Subsonic Aerodynamics Lab 3x4 ft wind tunnel
+with the results being documented in books, reports, theses, and
+journal/conference publications.
+
+## Summary of Low-Speed Airfoil Data Books
+
+Selig,
+M.S., Guglielmo, J.J., Broeren, A.P., and Giguère, P., Summary
+of Low-Speed Airfoil Data, Vol. 1, SoarTech Publications, Virginia Beach, VA,
+1995, 292 pages. Wind tunnel data on 34 airfoils tested at Reynolds Numbers ranging from
+30,000 to 500,000.
+
+[Download Vol. 1]
+
+Selig,
+M.S., Lyon, C.A., Giguère, P., Ninham, C.P., and Guglielmo,
+J.J., Summary of Low-Speed Airfoil Data, Vol. 2, SoarTech
+Publications, Virginia Beach, VA, 1996, 252 pages. Wind tunnel data on 25 airfoils
+tested at Reynolds Numbers ranging from 40,000 to
+400,000.
+
+[Download Vol. 2]
+
+Lyon, C.A.,
+Broeren, A.P., Giguère, P., Gopalarathnam, A., and Selig,
+M.S., Summary of Low-Speed Airfoil Data, Vol. 3, SoarTech
+Publications, Virginia Beach, VA, 1998, 418 pages. Wind tunnel data on 37 airfoils
+tested at Reynolds Numbers ranging from 60,000 to
+500,000.
+
+[Download Vol. 3]
+
+Selig,
+M.S. and McGranahan, B.D., Wind Tunnel Aerodynamic Tests of Six
+Airfoils for Use on Small Wind
+Turbines, National Renewable Energy
+Laboratory, NREL/SR-500-34515, Oct 2004, 133 pages. aka
+Summary of Low-Speed Airfoil Data - Volume 4. Six airfoils
+tested at Reynolds Numbers ranging from 100,000 to 500,000.
+
+[Download Vol. 4 / NREL Report]
+
+Williamson, G.A.,
+McGranahan, B.D, Broughton, B.A., Deters, R.W., Brandt, J.B.,
+and Selig, M.S., Summary of Low-Speed Airfoil Data,
+Vol 5, 2012, 363 pages. Airfoils: AG12, AG16, AG24, AG35-r,
+AG40d-02r with flap, AG455ct-02r with flap, CAL1215j, CAL2263m, CAL4014l, E387, flat
+plate airfoil with various leading-edge treatments, MA409, NACA 43012A, S1223 with
+Gurney flap, S8064, and S9000 with flap.
+
+[Download Vol. 5]
+[Flat plate airfoil tests - additional details by Camille Goudeseune]
+
+Williamson, G.A. Experimental Wind Tunnel Study
+of Airfoils with Large Flap Deflections at Low Reynolds Numbers, Master's
+Thesis, Department of Aerospace Engineering, University of Illinois at
+Urbana-Champaign, Urbana, IL, 2012, 535 pages. Airfoils: AG40d-02r, AG455ct-02r, W1011, W1015 - all
+with very large flap deflections.
+
+[Download Thesis]
+
+## SoarTech 8
+
+The book Airfoils at Low Speeds (SoarTech 8),
+includes wind tunnel data on 54 airfoils tested at Reynolds
+numbers ranging from 60,000 to 300,000. The book contains extensive
+commentary and analysis. Testing was performed at Princeton
+University during 1987 and 1988 by Michael Selig, John Donovan and
+David Fraser. This work was the important precursor to the low Reynolds
+number airfoil research at UIUC. The book and data can be
+downloaded for here:
+
+[Download "Airfoils at Low Speeds" (SoarTech #8)]
+
+[Download SoarTech 8 tabulated airfoil data in zip format]
+
+## LRN-FB Design
+
+A three-component wind tunnel force
+balance was designed and assembled to study the low Reynolds
+number aerodynamics of low-to-moderate aspect ratio wings. The
+balance designed is capable of measuring lift, drag and moment of
+wings. Details of the design, assembly, and calibration of the
+three-component force balance can be found in the thesis of Ananda
+(2012), here:
+http://hdl.handle.net/2142/42319. Solidworks
+CAD assembly files together with an IGES file of the whole assembly
+are provided below. Please
+contact gavin.k.ananda@gmail.com
+for more information regarding the force balance design and
+calibration techniques. -Gavin Ananda
+
+[Download "LRN-FB_FinalAssembly.zip"]
+
+[Download "LRN-FB_FullAssembly.IGS"]
+
+## Low Reynolds Number Airfoil Data and Documentation
+
+- Composite plots of airfoils tested
+
+- Alphabetical listing of all airfoils tested
+
+- Listing of available datasets in tabular form:
+[ Vol 1 |
+Vol 2 |
+Vol 3 |
+Vol 4 |
+Vol 5 ]
+
+- All of the low Reynolds number airfoil data in
+Vols 1-4 and SoarTech 8 data are available here online in plain ASCII text files. The
+first two volumes include lift and drag coefficient data while
+the second two volumes also include pitching
+moment data. For SoarTech 8 tabulated airfoil data, see link above.
+
+- S9104
+heavy lift/high lift airfoil: Designed in yr 2023, this single-element airfoil
+is predicted to achieve a lift coefficient of
+nearly 2.6 at a Reynolds number of 200,000.
+The airfoil has approximately 10% more lift than the S1223.
+The link above includes the coordinates (plus airfoil as a nurb
+curve) and performance predictions from XFOIL.
+
+- S1223
+lift and pitching moment plots: The S1223 is a popular airfoil
+used in the SAE Aero Design Competition. The airfoil first
+appeared in UIUC LSATs Vol 1 without pitching moment data, but
+these data were taken after Vol 1 and posted here online.
+Additional data on the S1223 with Gurney flaps is in Vol 5.
+
+- SG6050 and SG6051:
+These airfoils were designed and tested for the WindLite 8 kW wind
+turbine. They are semisymmetrical with an aft flat bottom for
+easy building. The experimental data was publically released in 2016 thanks to
+the agreement of the project
+sponsor.
+
+- Low Reynolds number airfoils are
+defined by having a laminar separation bubble that causes an
+increase in drag. This bubble can be seen by injecting smoke into
+the boundary layer and also by a technique called oil flow
+visualization [graphics downloads].
+
+- "Theory,
+testing and in-flight: put teeth on it and take a bite out of your
+airplane's stall" by Camille Goudeseune -- is a nice article about
+the effects of applying leading edge serrations on a flat plate airfoil.
+These data are also included in the Summary of Low-Speed Airfoil Data,
+Vol 5 above.
+
+## Low Reynolds Number Airfoil Publications
+
+Some additional low Reynolds number airfoil publications from our group are listed below.
+
+- Selig, M.S., Deters, R.W., and Williamson, G.A., "Wind
+Tunnel Testing Airfoils at Low Reynolds
+Numbers," 49th AIAA Aerospace Sciences
+Meeting, AIAA Paper 2011-875, Orlando, FL, January 2011.
+| PDF
+
+- Selig, M.S. and McGranahan, B.D., "Wind Tunnel Aerodynamic
+Tests of Six Airfoils for Use on Small Wind
+Turbines," ASME Journal of Solar Energy
+Engineering, Vol. 126, November 2004, pp. 986-1001.
+| PDF
+
+- Selig, M.S. and McGranahan, B.D., "Wind Tunnel Aerodynamic
+Tests of Six Airfoils for Use on Small Wind
+Turbines," AIAA Paper 2004-1188.
+| PDF
+
+- Selig, M.S., "Low Reynolds Number Airfoil
+Design," VKI Lecture Series - Low
+Reynolds Number Aerodynamics on Aircraft Including Applications in
+Emerging UAV Technology, von Karman Institute for Fluid
+Dynamics (VKI) Lecture Series, RTO/AVT-VKI-104, November
+2003.
+| PDF
+
+- McGranahan, B.D. and Selig, M.S., "Surface Oil Flow
+Measurements on Several Airfoils at Low Reynolds
+Numbers," AIAA 42nd Applied Aerodynamics
+Conference, AIAA Paper 2003-4067, Orlando, FL, June 2003.
+| PDF
+
+- Gopalarathnam, A., Broughton, B.A., McGranahan, B.D., and Selig,
+M.S., "Design of Low Reynolds Number Airfoils with
+Trips," Journal of Aircraft, Vol. 40,
+No. 4, 2003, pp. 768-775.
+| PDF
+
+- Giguère, P. and Selig, M.S., "New Airfoils for Small
+Horizontal Axis Wind Turbines," ASME
+Journal of Solar Energy Engineering, Vol. 120, May 1998,
+pp. 108-114.
+| PDF
+
+- Selig, M.S. and Guglielmo, J.J., "High-Lift Low Reynolds
+Number Airfoil Design," Journal of
+Aircraft, Vol. 34, No. 1, January-February 1997,
+pp. 72-79.
+| PDF
+
+© 1994 - 2026 UIUC Applied Aerodynamics Group
+
+Please send comments about this page to webmaster
+
+Department of Aerospace Engineering |
+University of Illinois at Urbana-Champaign
+
+## Document links on this page
+- https://m-selig.ae.illinois.edu/uiuc_lsat/Low-Speed-Airfoil-Data-V1.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/Low-Speed-Airfoil-Data-V2.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/Low-Speed-Airfoil-Data-V3.pdf
+- https://m-selig.ae.illinois.edu/pubs/SeligMcGranahan-2004-NREL-SR-500-34515-SixNRLAirfoils.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/Low-Speed-Airfoil-Data-V5.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/Williamson-2012-UIUC-MS-Thesis.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/Airfoils-at-Low-Speeds.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/Stec8.zip
+- https://m-selig.ae.illinois.edu/uiuc_lsat/lrn_fb_ananda/LRN-FB_FinalAssembly.zip
+- https://m-selig.ae.illinois.edu/uiuc_lsat/AirfoilsVolume1.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/AirfoilsVolume2.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/AirfoilsVolume3.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/AirfoilsVolume4.pdf
+- https://m-selig.ae.illinois.edu/uiuc_lsat/AirfoilsVolume5.pdf
+- https://m-selig.ae.illinois.edu/pubs/SeligDetersWilliamson-2011-AIAA-2011-875-LRN-AirfoilWindTunnelTesting.pdf
+- https://m-selig.ae.illinois.edu/pubs/SeligMcGranahan-2004-JSEE-SixLRNAirfoils.pdf
+- https://m-selig.ae.illinois.edu/pubs/SeligMcGranahan-2004-AIAA-2004-1188.pdf
+- https://m-selig.ae.illinois.edu/pubs/Selig-2003-VKI-LRN-Airfoil-Design-Lecture-Series.pdf
+- https://m-selig.ae.illinois.edu/pubs/McGranahanSelig-2003-AIAA-2003-4067-LRN-Airfoils.pdf
+- https://m-selig.ae.illinois.edu/pubs/GopalarathnamEtal-2003-JofAC-LRNAirfoiLDesignWithTrips.pdf
+- https://m-selig.ae.illinois.edu/pubs/GiguereSelig-1998-JSEE-NewAirfoils.pdf
+- https://m-selig.ae.illinois.edu/pubs/GuglielmoSelig-1997-JofAC-S1223.pdf

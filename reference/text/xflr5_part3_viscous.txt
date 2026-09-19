@@ -1,0 +1,391 @@
+# ID: xflr5_part3_viscous
+# SOURCE: https://flow5.tech/xflr5/docs/Part%20III%3A%20The%20viscous%20flow_rev1.2.pdf
+# ORIGINAL: reference/raw/xflr5_part3_viscous.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 26 pages | ~3998 tokens
+# NOTE: XFLR5 docs Part III viscous flow
+# FLAG img: pages 2-25
+# FLAG lowtext: pages 20-21
+# TOC:
+#   Slide 1 -> PDF page 1
+#   Slide 2 -> PDF page 2
+#   Slide 3 -> PDF page 3
+#   Slide 4 -> PDF page 4
+#   Slide 5 -> PDF page 5
+#   Slide 6 -> PDF page 6
+#   Slide 7 -> PDF page 7
+#   Slide 8 -> PDF page 8
+#   Slide 9 -> PDF page 9
+#   Slide 10 -> PDF page 10
+#   Slide 11 -> PDF page 11
+#   Slide 12 -> PDF page 12
+#   Slide 13 -> PDF page 13
+#   Slide 14 -> PDF page 14
+#   Slide 15 -> PDF page 15
+#   Slide 16 -> PDF page 16
+#   Slide 17 -> PDF page 17
+#   Slide 18 -> PDF page 18
+#   Slide 19 -> PDF page 19
+#   Slide 20 -> PDF page 20
+#   Slide 21 -> PDF page 21
+#   Slide 22 -> PDF page 22
+#   Slide 23 -> PDF page 23
+#   Slide 24 -> PDF page 24
+#   Slide 25 -> PDF page 25
+#   Slide 26 -> PDF page 26
+
+=== PAGE 1 ===
+          Why does an airfoil drag:
+
+               the viscous problem
+
+Rev. 1.2 – © André Deperrois – March 2019
+
+=== PAGE 2 | img ===
+                                Navier-Stokes equations
+                    Inviscid fluid                                Time averaged
+                                                                   turbulence              CFD « RANS »
+                                                                                           Reynolds Averaged
+              Euler’s equations                              Reynolds equations           Navier-stokes solvers
+
+       irrotational flow
+                                                                                       Viscosity models, uniform
+                                                            3d Boundary Layer eq.   pressure in BL thickness, Prandlt
+               Potential flow                                                          mixing length hypothesis.
+                                                                    2d BL equations
+   Time independent,
+  incompressible flow
+             Laplace’s Laplace’s equation equation             1d BL Integral                 2d BL differential
+                                                                 equations                       equations
+                                            2d
+                                                                       mixed empirical + theoretical
+2d, 3d                                                               turbulence and transition models
+
+                          2d viscous results
+                            interpolation
+
+=== PAGE 3 | img ===
+              The inviscid flow around an airfoil
+
+Favourable pressure gradient, the flow
+ accelerates from zero at the leading
+      edge’s stagnation point.                 Adverse pressure gradient, the flow decelerates
+
+                                                                   Away from the surface, the flow
+     free                                                         tends asymptotically towards the
+  stream air                                                          freestream uniform flow
+     flow
+
+                                             inviscid ◀—▶ “laminar”,
+
+=== PAGE 4 | img ===
+                   The boundary layer
+
+                                                                    Away from the surface, the
+                                                                        fluid’s velocity tends
+             Due to viscosity, the
+                                                                     asymptotically towards the
+           tangential velocity at the
+                                                                  velocity field of an ideal inviscid
+  free      contact of the foil is 0
+                                                                       flow around an airfoil.
+stream air
+  flow
+                                                   (magnified scale)
+
+                        The boundary layer is defined as the flow between the foil’s surface
+                        and the thickness where the fluid’s velocity reaches 99% or 99.5% of
+                                           the inviscid flow’s velocity.
+
+=== PAGE 5 | img ===
+          The viscous flow around an airfoil at
+
+                            low Reynolds number
+  Favourable pressure gradient, the flow
+accelerates from zero at the leading edge’s
+            stagnation point.                  Adverse pressure gradient, the flow decelerates
+
+             In adverse pressure gradients, the laminar   A separation bubble forms. The flow goes
+             flow separates. The velocity close to the     progressively turbulent inside the bubble.
+                     surface goes negative.                                The turbulent flow reattaches,
+                                                                              i.e. the velocity reverts to
+                    Laminar flow                                             positive throughout the BL
+
+                         Stagnation point where the flow
+                           separates and the tangential                  The turbulent flow separates
+                                  velocity is 0
+
+=== PAGE 6 | img ===
+               The viscous flow around an airfoil
+
+      y
+
+ Top
+surface
+
+                                                                                                       s
+                    laminar flow  surf. velocity  lam. separation  turbulent    turbulent        wake
+                                  decreases                    reattachment     separation
+                                                                                               s
+
+             Things to    ●The BL thickness increases progressively
+               note         No surface slip on the airfoil surface
+
+=== PAGE 7 | img ===
+                The viscous flow around an airfoil
+
+Favorable pressure gradient, the  Adverse pressure gradient, the flow        A separation bubble forms. The
+       flow accelerates.              decelerates and separates.            flow goes progressively turbulent
+                                                                                    inside the bubble.
+
+                               BL edge velocity
+       free                  calculated by XFoil                                                 The turbulent flow
+    stream air                                                                                   reattaches, i.e. the
+      flow                                                                                        surface velocity
+                                                                                                 reverts to positive
+
+                             Stagnation point where the flow divides
+                                 and the tangential velocity is 0
+
+=== PAGE 8 | img ===
+          The viscous flow around an airfoil
+
+                                 The transition problem
+
+              The transition from laminar to turbulent flow is a complex problem in 2d and
+              even more so in 3d.
+
+  free        Things to note in 2d:
+stream air    ●Transition occurs when the amplification factor of spatial waves known as
+  flow          Tollmien–Schlichting waves reaches a critical value, i.e. the NCrit factor
+              ●Turbulent flow starts with small “sparks” which eventually extend downstream
+                to full turbulence
+
+              ●“For low Reynolds number flows, the transition is separation induced”
+                (in.T. Cebeci, Modeling and computation of boundary-layer flows, chapter.5.2)
+                This is also what Xfoil predicts
+
+=== PAGE 9 | img ===
+                              The 2d problem
+
+The 2d inviscid potential problem can be                  The velocity field is used as an
+solved numerically for the velocity field by               input to solve the BL problem
+       solving Laplace’s equation
+
+=== PAGE 10 | img ===
+                              The 2d problem
+
+The 2d inviscid potential problem can be                  The velocity field is used as an
+solved numerically for the velocity field                 input to solve the BL problem
+
+                  In the 1940s, theoreticians have found that this method
+                 does not converge in adverse pressure gradients, e.g. on
+                              the upper surface of an airfoil.
+                   This problem is known as the “Goldstein singularity”
+
+=== PAGE 11 | img ===
+                               The 2d problem
+
+ The 2d inviscid potential problem can be                   The velocity field is used as an
+  solved numerically for the velocity field                 input to solve the BL problem
+
+                          The reason is that the BL disturbs the
+                        inviscid flow: the foil behaves as if it had an
+                                  additional thickness
+
+The inviscid flow wants to dictate                        This additional thickness is called the
+its law to the BL, but the BL does                            “displacement thickness δ * ”
+     not agree, and vice versa.                        Note: not the same thing as the BL thickness
+
+=== PAGE 12 | img ===
+                                The 2d problem
+
+  The 2d inviscid potential problem can be                   The velocity field is used as an
+  solved numerically for the velocity field                  input to solve the BL problem
+
+                           The reason is that the BL disturbs the
+The inviscid             inviscid flow: the foil behaves as if it had an
+flow needs to                      additional thickness
+ be updated
+
+                                 This iterative method is called the
+                                “Interactive Boundary Layer”, or IBL
+
+=== PAGE 13 | img ===
+                               The 2d problem
+
+                                                                        The inviscid velocity is used as
+                                                     “Direct” :           an input for the BL solver
+
+                                                                       The viscous velocity from the BL
+Many schemes have been proposed for                   “Inverse”
+                                                                        solution is used as an input for
+           the IBL problem                                                 the potential flow solver
+
+                                                  “Simultaneous” :      The inviscid and BL equations
+                                                                       are solved concurrently at each
+                                                                                  iteration
+
+                                                 Developed by M. Drela and H. Youngren in the
+                                                1990s, XFoil is still a (the?) state-of-the-art IBL
+                                                           solver some 30 years later
+
+=== PAGE 14 | img ===
+                             About XFoil
+
+                                                       A comprehensive set of 2d BL
+                                                     turbulence and transition models
+Three main things which make
+     XFoil outstanding                                 A full simultaneous IBL solver
+
+                                                       A robust and reliable software
+                                                                 package
+
+                                         http://web.mit.edu/drela/Public/papers/xfoil_sv.pdf
+
+=== PAGE 15 | img ===
+                            About XFoil
+
+                              XFoil’s 1D Integral method
+      BL equations are integrated in the BL thickness
+      BL properties are therefore function only of the streamwise position “s”
+      3 variables, one space dimension
+Laminar flow: the BL properties are            Turbulent flow: the BL properties are
+defined by                                     defined by
+    - the displacement thickness δ *               - the displacement thickness δ *
+    - the momentum thickness θ                     - the momentum thickness θ
+    - the amplification factor n                   - the max. shear stress coeff. Cτ
+
+                                                                                  s
+
+                                         http://web.mit.edu/drela/Public/papers/xfoil_sv.pdf
+
+=== PAGE 16 | img ===
+                                About XFoil                                   Standard behaviour of
+                                                                                   a BL at low Re
+
+Progressive transition
+  from laminar to           Turbulent                                   Turbulent wake
+turbulent inside the      reattachment
+ separation bubble
+
+                                     Turbulent
+  Laminar                            separation
+ separation                         (not always)
+
+                                                       Displacement                 Momentum
+                                                       thickness δ*                 thickness θ
+
+=== PAGE 17 | img ===
+          Differential solvers
+
+With the increase of computing power, it has become possible to solve the BL
+           equations without prior integration in the thickness.
+
+             BL properties are defined at each position (s, y).
+
+            y
+
+                                                                    s
+
+        Although they require less empirical assumptions than integral
+      methods, differential solvers still need a turbulence model which is
+                    the key building brick of the method.
+
+=== PAGE 18 | img ===
+           Differential solvers
+
+The results which follow are from a differential solver currently in
+development.
+●The solver is based on the methods proposed by T. Cebeci in
+ “Modeling and computation of boundary-layer flows”
+●It uses the Cebeci-Smith turbulence model
+
+                                                             s
+
+=== PAGE 19 | img ===
+                                  Differential solver
+
+Laminar attached flow            Laminar separation            Turbulent separated         Wake flow
+BL thickness ≈ 0.004             BL thickness ≈ 0.015          BL thickness ≈ 0.020        BL thickness ≈ 0.06
+
+                   Clark Y airfoil, Top surface, Re=200k, aoa=3°, unit chord length
+
+=== PAGE 20 | lowtext, img ===
+BL thickness vs. Displacement thickness
+
+                      δ
+
+                      δ*
+
+=== PAGE 21 | lowtext, img ===
+XFoil vs. a differential solver
+
+=== PAGE 22 | img ===
+         So why does an airfoil drag?
+
+The viscosity creates drag forces by
+two effects
+ ➔it creates skin friction forces on             “friction drag”
+   the airfoil’s surface
+ ➔it creates unbalanced pressure                 “pressure drag”
+   forces on the airfoil’s surface
+
+                                                                             s
+
+  Note: The induced drag is a 3d effect only, and is     pressure forces
+          not related to viscosity
+                                                         skin friction forces
+
+=== PAGE 23 | img ===
+         So why does an airfoil drag?
+
+The viscosity creates drag forces by                                =0 in inviscid flow:
+two effects                                                          ”no viscosity, no
+ ➔it creates skin friction forces on                                     friction”
+                                                 “friction drag”
+   the airfoil’s surface
+ ➔it creates unbalanced pressure                 “pressure drag”      =0 in inviscid flow
+   forces on the airfoil’s surface                                         due to
+                                                                        d’Alembert’s
+                                                                          paradox
+                                                                             s
+
+  Note: The induced drag is a 3d effect only, and is     pressure forces
+          not related to viscosity
+                                                         skin friction forces
+
+=== PAGE 24 | img ===
+So why does an airfoil drag?
+
+“friction drag” + “pressure drag” = “Viscous drag” or “Profile drag”
+
+                                        Both terms are used
+                                       interchangeably in xflr5
+
+                                                                    s
+
+                                               pressure forces
+                                               skin friction forces
+
+=== PAGE 25 | img ===
+        So why does an airfoil drag?
+
+         “friction drag” + “pressure drag” = “Viscous drag” or “Profile drag”
+Note: The direct evaluation of friction
+and pressure forces is numerically
+unreliable; XFoil’s method is to evaluate
+the total viscous drag in the wake using
+the Squire-Young formula
+
+                                                                              s
+
+                                                         pressure forces
+                                                         skin friction forces
+
+=== PAGE 26 ===
+                           - up next -
+
+       Theoretical limitations and
+            shortcomings of xflr5
+
+Rev. 1.2 – © André Deperrois – March 2019

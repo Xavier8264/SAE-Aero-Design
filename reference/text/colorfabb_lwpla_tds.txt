@@ -1,0 +1,103 @@
+# ID: colorfabb_lwpla_tds
+# SOURCE: https://colorfabb.com/media/datasheets/tds/colorfabb/TDS_E_ColorFabb_LW-PLA.pdf
+# ORIGINAL: reference/raw/colorfabb_lwpla_tds.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 3 pages | ~1113 tokens
+# NOTE: ColorFabb LW-PLA (foaming, lightweight) data sheet
+
+=== PAGE 1 ===
+Technical datasheet
+
+LW-PLA
+
+Date of issue:  October 27, 2022
+Version:        v1.0
+
+ColorFabb LW-PLA is a high quality expanding PLA 3D printing filament. The first filament of its kind using an
+active foaming technology to achieve light weight, low density PLA parts. At around 230C this material will start
+foaming, increasing its volume by nearly 3 times. Users can decrease material flow by 65% to achieve light
+weight parts, or use the expanding properties to effectively reduce print time by using big layer heights or
+single extra thick perimeters.
+
+               TYPICAL MATERIAL PROPERTIES – 3D Printed
+
+Physical properties                         Unit          Value @         Value @         Method
+
+                                                        200°C; 100%     250°C; 45%
+
+                                                            Flow           Flow
+
+Tensile modulus                             MPa           3333,76          864,25         ISO 527
+
+Yield strength                              MPa            43,07            N/A           ISO 527
+
+Yield strain                                 %                              N/A           ISO 527
+                                                            1,68
+Tensile strength                            MPa            43,07           10,83          ISO 527
+
+Tensile strain at tensile strength           %              1,68           12,00          ISO 527
+
+Tensile stress at break                     MPa            38,74           10,73          ISO 527
+
+Tensile strain at break                      %              8,08           12,78          ISO 527
+
+Charpy unnotched impact strength           kJ/m2              -             5,46      ISO 179-1/1 eU
+
+Charpy notched impact strength             kJ/m2              -             3,67      ISO 179-1/1 eU
+
+Heat Deflection Temperature (HDT)            oC               -              -            ISO 75
+
+colorFabb B.V.                         T +31 (0)77 – 4664015                       KvK nr: 53498607
+Bremweg 7                              F +31 (0)77 – 3971414                       VAT nr: NL850902770B01
+5951 DK Belfeld                        E sales@colorfabb.com                       IBAN: NL54RABO0151849188
+The Netherlands                        I colorfabb.com                             BIC: RABONL2U
+
+=== PAGE 2 ===
+Technical datasheet
+
+LW-PLA
+
+Date of issue:  October 27, 2022
+Version:        v1.0
+
+TYPICAL MATERIAL PROPERTIES – Injection molded
+Physical properties                       Unit             Value            Method
+Density                                  g/cm3           0.40 - 1,24        -
+Glass Transition Temperature               oC              55 - 60          DSC
+
+FILAMENT SPECIFICATION
+Nominal diameter:       Diameter tolerance        Ovality
+             1,75 mm          ± 0,05              ≥ 95%
+             2,85 mm          ± 0,10              ≥ 95%
+
+Netto filament weight          750g
+
+GUIDELINE FOR PRINT SETTINGS
+
+Nozzle temperature               195 - 260oC
+Bed temperature                  50 - 60oC
+Bed surface / modification       -
+Active cooling fan               -
+Print speed                      40 - 100 mm/s
+
+Disclaimer
+The product- and technical information provided in this datasheet is correct to the best of our knowledge. The
+information given is provided as a guidance for good use, handling and processing and is not to be considered
+as a quality specification. The information only relates to the specific product and the material properties.
+
+colorFabb B.V.                         T +31 (0)77 – 4664015                        KvK nr: 53498607
+Bremweg 7                              F +31 (0)77 – 3971414                        VAT nr: NL850902770B01
+5951 DK Belfeld                        E sales@colorfabb.com                        IBAN: NL54RABO0151849188
+The Netherlands                        I colorfabb.com                              BIC: RABONL2U
+
+=== PAGE 3 ===
+Technical datasheet
+
+LW-PLA
+
+Date of issue:  October 27, 2022
+Version:        v1.0
+
+colorFabb B.V.                           T +31 (0)77 – 4664015                         KvK nr: 53498607
+Bremweg 7                                F +31 (0)77 – 3971414                         VAT nr: NL850902770B01
+5951 DK Belfeld                          E sales@colorfabb.com                         IBAN: NL54RABO0151849188
+The Netherlands                          I colorfabb.com                               BIC: RABONL2U

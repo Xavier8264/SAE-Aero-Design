@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html>
+<head id="ctl00_Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	SAE Aero Design
+</title>
+        <!-- ## DATADOG ## -->
+        <script 
+            type="text/javascript" 
+            src="https://www.datadoghq-browser-agent.com/us1/v5/datadog-logs.js">
+        </script>
+        <script>
+            window.DD_LOGS && window.DD_LOGS.init({
+                clientToken: 'pub2b998a9408da81e2b93d28713ea65e93',
+                site: 'datadoghq.com',
+                forwardErrorsToLogs: true,
+                forwardConsoleLogs: 'all', // ['log', 'debug', 'info', 'warn', 'error']
+                sessionSampleRate: 100,
+                silentMultipleInit: false,
+                trackingConsent: 'granted', // 'not-granted'
+                telemetrySampleRate: 0,
+                storeContextsAcrossPages: false,
+                allowUntrustedEvents: false,
+                service: 'sae_aero_design_north_america',
+                env: 'production',
+                version: '2.1.26.8121',
+                beforeSend: (log) => {
+                    // discard 404 network errors
+                    if (log.http && log.http.status_code === 404) {
+                        return false;
+                    }
+
+                    // remove email from view url
+                    log.view.url = log.view.url.replace(/email=[^&]*/, "email=REDACTED");
+                }
+            });
+
+            //window.DD_LOGS && window.DD_LOGS.setContextProperty('referrer', document.referrer);
+            //window.DD_LOGS && window.DD_LOGS.logger.setLevel('error');
+            window.DD_LOGS && window.DD_LOGS.logger.setHandler(['http', 'console']); //'http' | 'console' | 'silent'
+            //window.DD_LOGS && window.DD_LOGS.logger.setHandler('silent');
+            //window.DD_LOGS && window.DD_LOGS.setTrackingConsent('granted');
+
+            //https://docs.datadoghq.com/logs/log_collection/javascript/#global-context
+            //window.DD_LOGS && window.DD_LOGS.getInternalContext();
+            //window.DD_LOGS && window.DD_LOGS.setGlobalContext({ env: 'staging' });
+            window.DD_LOGS && window.DD_LOGS.setGlobalContextProperty('referrer', document.referrer);
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {env: 'staging', referrer: ...}
+            //window.DD_LOGS && window.DD_LOGS.removeGlobalContextProperty('referrer');
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {env: 'staging'}
+            //window.DD_LOGS && window.DD_LOGS.clearGlobalContext();
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {}
+
+            //https://docs.datadoghq.com/logs/log_collection/javascript/#user-context
+            //window.DD_LOGS && window.DD_LOGS.setUserProperty('type', 'customer');
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {id: '1234', name: 'John Doe', email: 'john@doe.com', type: 'customer'}
+            //window.DD_LOGS && window.DD_LOGS.removeUserProperty('type');
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {id: '1234', name: 'John Doe', email: 'john@doe.com'}
+            //window.DD_LOGS && window.DD_LOGS.clearUser();
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {}
+
+            window.DD_LOGS && window.DD_LOGS.setUser({
+                id: '',
+                un: ''
+            });
+        </script>
+        <!-- ## DATADOG ## -->
+    
+
+    <script type="text/javascript" src="/cdsweb/SharedComponents/public_assets/jquery-1.11.2.min.js"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/jqueryui-1-11-2-full/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="/cdsweb/SharedComponents/public_assets/jqueryui-1-11-2-full/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="/cdsweb/SharedComponents/public_assets/data-tables/src/datatables.min.css" />
+    <script src="/cdsweb/SharedComponents/public_assets/data-tables/src/dataTables.js" type="text/javascript"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/moment/moment.min.js" type="text/javascript"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/moment/datetime-moment.js" type="text/javascript"></script>
+    <link href="/Main_Responsive.css" rel="stylesheet" type="text/css" /><link href="/panels.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" /><link href="/cdsweb/SharedComponents/public_assets/CdsWeb.css" rel="stylesheet" type="text/css" /><link href="/Overrides.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/cdsweb/SharedComponents/public_assets/CdsWeb.js"></script>
+
+    
+</head>
+
+<body>
+    
+    <link href="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.min.css" rel="stylesheet" />
+    <script src="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.min.js"></script>
+    <div id="dateTimePopup"></div>
+    <script src="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.js"></script>
+    
+    
+    <div id="header">
+        <div id="logo">
+            <a id="ctl00_aHome" href="/">
+                <img src="/cdsweb/SharedComponents/saeaerodesign.com/img/CdsWeb-AEROD-Header-Logo-Max65pxH.png" />
+            </a>
+        </div>
+        <div id="header-sae" class="hidden-xs pull-right">
+            <a href="http://www.sae.org/">
+                <img src="/cdsweb/SharedComponents/public_assets/img/sae_vrt_blk_rgb_pos_l.png"" style="width:120px" />
+            </a>
+        </div>
+
+        <button type="button" class="pull-right navbar-toggle btn btn-default btn-lg" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    
+
+<style>
+    #testVisualIndicator {
+        background-image: repeating-linear-gradient(-45deg, #f4d308 0 8px, black 8px 16px);
+        display: flex;
+        justify-content: center;
+    }
+
+    #testVisualIndicator > span {
+        color: white;
+        background-color: black;
+        font-size: x-small;
+        padding: 0 5px;
+    }
+
+    #prodVisualIndicator {
+        background-image: repeating-linear-gradient(-45deg, red 0 8px, white 8px 16px);
+        display: flex;
+        justify-content: center;
+    }
+
+    #prodVisualIndicator > span {
+        color: white;
+        background-color: black;
+        font-size: x-small;
+        padding: 0 5px;
+    }
+</style>
+
+
+    <form name="aspnetForm" method="post" action="./ViewFAQ.aspx?faqnum=170" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A7B15C41" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="DU9z39ZGwNw0WHSvvnJ9+C2G1KabCJ9Pgrj93moV+ce0ZXmot1hJT0ZS/ejmuUSQmjWwTr1cQMYdJaAcyMhU0jderArpWqphgMJWVRmmSOlqj2XBSloMmk0fsRcaYbd2qpzPuK8P4n5gJgyyGxCGxqXx9PkXn8OFjr46x3nOJS4=" />
+</div>
+        <nav class="navbar" role="navigation">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    
+
+                    
+                    <li><a href="/">Home</a></li>
+
+                    
+                    
+
+                    
+                    <li class="dropdown hidden">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Jump To Activity&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            
+                        </ul>
+                    </li>
+
+                    
+                    <li><a href="/cdsweb/app/news.aspx">News</a></li>
+
+                    
+                    <li><a href="/cdsweb/reg/UpcomingCompList.aspx">Competitions & Workshops</a></li>
+
+                    
+                    <li><a href="/Deadlines.aspx?seriesCode=AERO">Deadlines</a></li>
+
+                    
+                    <li><a href="/app/CompetitionResources.aspx" target="_blank">Competition Resources</a></li>
+
+                    
+                    <li><a href="/cdsweb/gen/DocumentResources.aspx">Series Resources</a></li>
+
+                    
+                    <li><a href="/page.aspx?pageid=c93ea933-b70e-4523-8cbc-276cc89a4211">Results</a></li>
+
+                    
+                    <li><a href="/Page.aspx?pageid=1c4426c1-520a-427a-8f2b-7521d7dd8fe5">Membership</a></li>
+                    
+                    
+                    <li><a href="/Page.aspx?pageid=73d2a0c9-163d-4c9a-8ed0-a27e3be95b1f">Media</a></li>
+
+                    
+                    <li><a href="/go/signup">Create an Account</a></li>
+
+                    
+                    
+
+                    
+                    <li><a href="https://www.saeaerodesign.com/Login.aspx">Login</a></li>
+
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <div id="content-wrapper">
+            <div id="content" class='container min-height'>
+                
+
+                
+<div id="dismissableAlert" style="display: none;" class="alert alert-danger">
+    <div id="errorDetails"></div>
+
+    <p>Click the button to view more details of the error.</p>
+    <button type="button" class="btn btn-danger" onclick="ShowTheError()">Click here to see what went wrong</button>
+    <button type="button" class="btn btn-secondary" id="AlertCloseButon">Dismiss</button>
+</div>
+
+<script>
+    var htmlResponse = "";
+    var errorPopupDetails = "";
+
+    function ShowTheError() {
+        window.open('').document.body.innerHTML = htmlResponse;
+        $("#dismissableAlert").hide();
+    }
+
+    $(document).ready(function () {
+        $("#AlertCloseButon").click(function () {
+            $("#dismissableAlert").hide();
+        });
+    });
+
+    function PopulateErrorMessage(messageHtml){
+        htmlResponse = messageHtml;
+        //htmlResponse = htmlResponse.replace("<b>Source Error:</b>", "<b>Source Error:</b>" + , window.location.href)
+        var beginIndex = htmlResponse.indexOf("<h2> <i>");
+        var endIndex = htmlResponse.indexOf("<b>Stack Trace:</b>");
+        errorPopupDetails = htmlResponse.substring(beginIndex, endIndex);
+
+        $("#dismissableAlert").show();
+        document.getElementById("errorDetails").innerHTML = errorPopupDetails;
+
+        window.scrollTo(0, 0); // values are x,y-offset
+    }
+</script>
+
+                
+    <span id="ctl00_main_ibTop" class="InfoBlock"></span>
+    
+<div id="ctl00_main_faqViewer_pMain">
+	
+    <div class="row">
+        <div class="col-xs-12">
+            <input type="hidden" name="ctl00$main$faqViewer$hfFaqID" id="ctl00_main_faqViewer_hfFaqID" value="ab47c7ea-8286-4078-b72a-f6762a5ee397" />
+            <div class="Head1 no-margin-left no-padd-left">
+                <span id="ctl00_main_faqViewer_lblFaqNum">FAQ #170</span><br />
+                <span id="ctl00_main_faqViewer_lblFaqTitle">All Classes: Pilot Eligibility</span>
+            </div>
+            <p class="no-margin-bottom">
+                Last Updated On
+                <span id="ctl00_main_faqViewer_lblLastUpdated" style="font-weight:normal;font-style:normal;">12/13/2024 02:55:50 PM</span>
+                by
+            </p>
+            <p>
+                <span id="ctl00_main_faqViewer_lblUpdatedByUsername" style="font-weight:normal;font-style:normal;">brett.foley</span>
+            </p>
+            <div class="form-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Question
+                    </div>
+                    <div class="panel-body">
+                        <span id="ctl00_main_faqViewer_lblQuestion">Our team pilot is a member of my countries national aeromodeling organization. Do they also have to be a member of the AMA, the Academy of Model Aeronautics, to fly at Aero Design?</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Answer
+                    </div>
+                    <div class="panel-body">
+                        <span id="ctl00_main_faqViewer_lblAnswer">As per rule 1.3, valid Academy of Model Aeronautics (AMA) membership cards must be presented at the flying field prior to flying any team’s aircraft.<br><br>All pilots must be AMA members, with one exception. Members of the Model Aircraft Association of Canada do not have to join the AMA, as the AMA has a reciprocal arrangement with the MAAC. One reason for this requirement is the liability insurance provided by the AMA.<br><br>You can become an Affiliate member of the AMA, if you are not a USA resident. However, you must apply using a mailed-in form, well in advance of your need for membership. You cannot obtain an Affiliate membership on line. This link the the mail in form mentions Affiliate membership: <br><br>https://www.modelaircraft.org/files/902.pdf<br><br>If you want a full AMA membership and you are not a US resident, you must also apply using a mailed-in as stated on the online registration web site. US residents can join the AMA on the main web site as a full member. They do take credit cards and they send an email confirmation of membership right away.<br><br>https://www.modelaircraft.org/joinrenew.aspx<br><br></span>
+                    </div>
+                </div>
+            </div>
+            
+<div id="ctl00_main_faqViewer_rqaFaqFiles_pNoAttachments">
+		
+ No Attachments
+
+	</div>
+            <hr />
+            <div id="ctl00_main_faqViewer_ruleTagEditor_pMain">
+		
+    <input type="hidden" name="ctl00$main$faqViewer$ruleTagEditor$hfInquiryID" id="ctl00_main_faqViewer_ruleTagEditor_hfInquiryID" />
+    <input type="hidden" name="ctl00$main$faqViewer$ruleTagEditor$hfFaqID" id="ctl00_main_faqViewer_ruleTagEditor_hfFaqID" value="ab47c7ea-8286-4078-b72a-f6762a5ee397" />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <div id="ctl00_main_faqViewer_ruleTagEditor_pTitle">
+			Rule Numbers
+		</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                    <tr>
+                        <td>
+                            <span id="ctl00_main_faqViewer_ruleTagEditor_rptrRuleTags_ctl00_lblRuleTag">2017:1.3.5</span>&nbsp;
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <span id="ctl00_main_faqViewer_ruleTagEditor_rptrRuleTags_ctl01_lblRuleTag">2025:1.3</span>&nbsp;
+                        </td>
+                    </tr>
+                
+        </tbody>
+    </table>
+    
+    
+
+	</div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="/cdsweb/SharedComponents/public_assets/js/markdown/simplemde.min.js"></script>
+<script src="/cdsweb/SharedComponents/public_assets/js/markdown/markdown.js"></script>
+
+    <span id="ctl00_main_ibBottom" class="InfoBlock"></span>
+    
+
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                
+            </div>
+
+            <a class="sae-privacy-policy" href="https://www.sae.org/privacy" target="_blank">SAE International Privacy Policy</a>
+        </div>
+    </form>
+</body>
+</html>

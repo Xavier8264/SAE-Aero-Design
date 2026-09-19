@@ -1,0 +1,349 @@
+# ID: vspaero_tutorial
+# SOURCE: https://openvsp.org/wiki/lib/exe/fetch.php?media=workshop20:vspaero_gui_tutorial_-_basics.pdf
+# ORIGINAL: reference/raw/vspaero_tutorial.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 16 pages | ~2475 tokens
+# NOTE: OpenVSP 2020 workshop: VSPAERO GUI basics
+# FLAG img: pages 1-16
+
+=== PAGE 1 | img ===
+ 1
+
+                           VSPAERO GUI & Tutorial - Basics
+
+                                                  Presented by:
+                                                  Justin Gravett
+                                           justin.gravett@esaero.com
+                                Empirical Systems Aerospace, Inc. (ESAero)
+
+Empirical Systems Aerospace, Inc.               www.esaero.com         NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 2 | img ===
+ 2
+  Agenda
+
+  •    Introduction
+
+  •    VSPAERO GUI Walkthrough
+
+  •    VSPAERO Results Manager
+
+  •    VSP Viewer
+
+  •    Exporting Results
+
+  •    Basic Workflow
+
+  •    Tessellation
+
+  •    Modeling Tips for VSPAERO
+
+  •    Demo
+
+Empirical Systems Aerospace, Inc.            www.esaero.com        NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 3 | img ===
+ 3
+  Introduction
+
+                                                                    Geometry
+  Overview                                                          Preview
+  • VSPAERO and OpenVSP are
+     separate programs
+      – Interact through files and command
+        line arguments
+      – Slicer and Viewer are additional
+        programs OpenVSP executes
+
+  Role of OpenVSP
+  • Geometric modeling tool
+  • Generate VSPAERO geometry input
+     files (DegenGeom & Cart3D)
+  • User-friendly GUI to setup and run
+     VSPAERO
+  • Collect and organize VSPAERO
+     results
+  • Support API automation
+
+Empirical Systems Aerospace, Inc.  www.esaero.com  NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 4 | img ===
+ 4
+  GUI – Overview Tab (1/2)
+
+Case Setup
+•   Analysis methods: VLM or Panel
+     – VLM recommended for most cases
+•   Selectable Geometry Set
+•   Option to preview VLM input
+    DegenGeom
+     – Use Surface dropdown in Geom
+       Browser to change back
+
+Ref Aero, Lengths
+•   Manual or From Model (wing
+    geom)
+
+Moment Reference Position
+•   Manual or Calc CG (Mass
+    Properties tool)
+
+Empirical Systems Aerospace, Inc.  www.esaero.com  NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 5 | img ===
+ 5
+
+  GUI – Overview Tab (2/2)
+
+Flow Condition
+•   Alpha, Beta in degrees
+•   Avoid transonic Mach values
+•   Ability to run linearly spaced
+    array of points
+     – Multiple flow conditions not
+        supported with some advanced
+        options (i.e. unsteady analysis)
+
+Control Group Angles*
+•   Enable\disable control groups
+•   Set deflection angle (deg)
+
+*See “VSPAERO GUI Advanced” presentation
+
+Empirical Systems Aerospace, Inc.     www.esaero.com     NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 6 | img ===
+ 6
+  GUI – Solver Console & Execution
+
+Solver Console
+•  VSPAERO status messages
+•  Solver console always visible
+•  VSPAERO command arguments
+   shown first
+
+Execution
+•  Launch Solver to execute
+   VSPAERO
+                                                                VSPAERO Command
+    – Kill Solver to terminate                                  Line Input Arguments
+       prematurely
+•  Results Manager Plot Screen &
+   VSPAERO Viewer available
+   after execution
+•  New Feature: Load results from
+   previous VSPAERO run
+    – Looks for files with base
+       DegenGeom/Cart3D name
+Empirical Systems Aerospace, Inc.  www.esaero.com   NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 7 | img ===
+ 7
+  GUI Overview – Results Manager: Load Dist.
+
+•   Plots *.lod
+    output file
+
+               Data
+         Selection
+
+        Advanced
+           Options
+
+  Flow Condition
+         Selection
+
+•   Highlights
+    spanwise
+    distribution of
+    results
+
+Empirical Systems Aerospace, Inc.           www.esaero.com       NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 8 | img ===
+ 8
+
+  GUI Overview – Results Manager: Convergence
+
+•   Plots *.history
+    output file
+
+•   Highlights
+    changes across
+    wake iterations
+
+•   Optional log10()
+    of residual
+      •   If difference
+          between
+          iterations
+
+            Legend
+
+           Manual
+      Axis Limits
+
+Empirical Systems Aerospace, Inc.            www.esaero.com        NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 9 | img ===
+ 9
+  GUI Overview – Results Manager: Sweep
+
+• Plots *.history
+    output file
+
+• Result from last
+    wake iteration
+
+• Highlights
+    changes across
+    flow conditions
+    – i.e. drag polar
+
+• Multiple data
+    selection is
+    supported for X
+    or Y (not both)
+
+Empirical Systems Aerospace, Inc.        www.esaero.com     NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 10 | img ===
+10
+
+  VSP Viewer
+
+                                                                                  Step Through Flow Condition
+                                                                                      or Time (Unsteady)
+
+                                                                                  Component List and
+                                                                                    Drawing Settings
+
+                                                                                          Function Contour Type
+
+                                                                                               Draw Beam3D
+                                                                                                   Model
+
+                                                                                                 Draw Axis
+                             Legend                                                                Planes
+
+         View
+                                                  Aero                 Options                Draw Axis Planes
+
+Empirical Systems Aerospace, Inc.             www.esaero.com       NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 11 | img ===
+11
+
+   GUI Overview – Export
+
+                                                                                              Export all
+
+                                                                                              VSPAERO results
+
+                                                                                              as a single CSV
+
+Empirical Systems Aerospace, Inc.                www.esaero.com         NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 12 | img ===
+12
+
+  GUI Overview – Basic Workflow
+
+          1
+
+                                                                                  3
+1.    Analysis VSPAERO                 2
+
+2.    Select options
+3.    [Optional] Preview VLM Geom
+
+4.    Launch/Kill Solver
+
+5.    View & Export Results
+    –     Show Results Mgr (launched
+          automatically after execution)
+    –     Launch Viewer                                                  4
+    –     Export to *.csv
+
+                                    5
+                                                                                                      6
+
+Empirical Systems Aerospace, Inc.          www.esaero.com      NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 13 | img ===
+13
+  Tessellation
+
+  • Wing
+      – Control for LE/TE and root/tip
+         clustering
+      – Chordwise (W): “Plan” tab
+      – Spanwise (U): “Sect” tab
+           • Number and location of
+             wakes
+  • Bodies
+      – Skinning controls clustering
+  • Increased tessellation:
+      – Increased computing time
+      – Usually higher fidelity – not
+         always
+  • Adjusting geometry or
+     tessellation slightly can fix
+     mesh and solution issues
+
+Empirical Systems Aerospace, Inc.   www.esaero.com  NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 14 | img ===
+14
+  Modeling Tips for VSPAERO
+
+  • Start simple
+      – Few wake iterations
+      – Simple geometries
+      – VLM over Panel Method
+
+  • Check VLM geometry preview                                      Potentially
+                                                                    Problematic
+                                                                    DegenGeom
+  • Ensure components are closed
+      – Model 1st and last fuselage XSec as point type
+
+  • U tessellation sets number of wakes for lifting surfaces
+      – Increase tessellation -> increase execution time
+      – Increasing tessellation usually improves fidelity – use caution
+
+  • Be careful including body components in VLM analysis
+      – Do not contribute to lift or induced drag
+      – May introduce errors when modeled incorrectly
+
+Empirical Systems Aerospace, Inc.  www.esaero.com  NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 15 | img ===
+15
+ Modeling Tips for VSPAERO
+
+ • Do not use rounded rectangle
+    airfoils – incompatible with
+    VSPAERO
+
+ • Avoid high U (spanwise) with
+    low W (chordwise) tessellation
+    or vise versa
+                                      http://openvsp.org/wiki/doku.php?id=vspaerosummary
+ • Slight adjustments to geometry
+    or tessellation can alleviate
+    mesh and solution issues
+
+ • Several wiki pages covering
+    VSPAERO
+
+ • Post questions and issues to
+    the Google group
+
+Empirical Systems Aerospace, Inc.  www.esaero.com  NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th
+
+=== PAGE 16 | img ===
+16
+
+                                                    Demo
+
+Empirical Systems Aerospace, Inc.                   www.esaero.com          NNX09CC86P OpenVSP SBIR Review, Workshop Presented 2020 Sept. to NASA, 15th July – Sept. 7th, 2009 17th

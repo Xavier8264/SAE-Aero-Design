@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<html>
+<head id="ctl00_Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	SAE Aero Design
+</title>
+        <!-- ## DATADOG ## -->
+        <script 
+            type="text/javascript" 
+            src="https://www.datadoghq-browser-agent.com/us1/v5/datadog-logs.js">
+        </script>
+        <script>
+            window.DD_LOGS && window.DD_LOGS.init({
+                clientToken: 'pub2b998a9408da81e2b93d28713ea65e93',
+                site: 'datadoghq.com',
+                forwardErrorsToLogs: true,
+                forwardConsoleLogs: 'all', // ['log', 'debug', 'info', 'warn', 'error']
+                sessionSampleRate: 100,
+                silentMultipleInit: false,
+                trackingConsent: 'granted', // 'not-granted'
+                telemetrySampleRate: 0,
+                storeContextsAcrossPages: false,
+                allowUntrustedEvents: false,
+                service: 'sae_aero_design_north_america',
+                env: 'production',
+                version: '2.1.26.8121',
+                beforeSend: (log) => {
+                    // discard 404 network errors
+                    if (log.http && log.http.status_code === 404) {
+                        return false;
+                    }
+
+                    // remove email from view url
+                    log.view.url = log.view.url.replace(/email=[^&]*/, "email=REDACTED");
+                }
+            });
+
+            //window.DD_LOGS && window.DD_LOGS.setContextProperty('referrer', document.referrer);
+            //window.DD_LOGS && window.DD_LOGS.logger.setLevel('error');
+            window.DD_LOGS && window.DD_LOGS.logger.setHandler(['http', 'console']); //'http' | 'console' | 'silent'
+            //window.DD_LOGS && window.DD_LOGS.logger.setHandler('silent');
+            //window.DD_LOGS && window.DD_LOGS.setTrackingConsent('granted');
+
+            //https://docs.datadoghq.com/logs/log_collection/javascript/#global-context
+            //window.DD_LOGS && window.DD_LOGS.getInternalContext();
+            //window.DD_LOGS && window.DD_LOGS.setGlobalContext({ env: 'staging' });
+            window.DD_LOGS && window.DD_LOGS.setGlobalContextProperty('referrer', document.referrer);
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {env: 'staging', referrer: ...}
+            //window.DD_LOGS && window.DD_LOGS.removeGlobalContextProperty('referrer');
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {env: 'staging'}
+            //window.DD_LOGS && window.DD_LOGS.clearGlobalContext();
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {}
+
+            //https://docs.datadoghq.com/logs/log_collection/javascript/#user-context
+            //window.DD_LOGS && window.DD_LOGS.setUserProperty('type', 'customer');
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {id: '1234', name: 'John Doe', email: 'john@doe.com', type: 'customer'}
+            //window.DD_LOGS && window.DD_LOGS.removeUserProperty('type');
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {id: '1234', name: 'John Doe', email: 'john@doe.com'}
+            //window.DD_LOGS && window.DD_LOGS.clearUser();
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {}
+
+            window.DD_LOGS && window.DD_LOGS.setUser({
+                id: '',
+                un: ''
+            });
+        </script>
+        <!-- ## DATADOG ## -->
+    
+
+    <script type="text/javascript" src="/cdsweb/SharedComponents/public_assets/jquery-1.11.2.min.js"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/jqueryui-1-11-2-full/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="/cdsweb/SharedComponents/public_assets/jqueryui-1-11-2-full/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="/cdsweb/SharedComponents/public_assets/data-tables/src/datatables.min.css" />
+    <script src="/cdsweb/SharedComponents/public_assets/data-tables/src/dataTables.js" type="text/javascript"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/moment/moment.min.js" type="text/javascript"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/moment/datetime-moment.js" type="text/javascript"></script>
+    <link href="/Main_Responsive.css" rel="stylesheet" type="text/css" /><link href="/panels.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" /><link href="/cdsweb/SharedComponents/public_assets/CdsWeb.css" rel="stylesheet" type="text/css" /><link href="/Overrides.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/cdsweb/SharedComponents/public_assets/CdsWeb.js"></script>
+
+    
+</head>
+
+<body>
+    
+    <link href="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.min.css" rel="stylesheet" />
+    <script src="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.min.js"></script>
+    <div id="dateTimePopup"></div>
+    <script src="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.js"></script>
+    
+    
+    <div id="header">
+        <div id="logo">
+            <a id="ctl00_aHome" href="/">
+                <img src="/cdsweb/SharedComponents/saeaerodesign.com/img/CdsWeb-AEROD-Header-Logo-Max65pxH.png" />
+            </a>
+        </div>
+        <div id="header-sae" class="hidden-xs pull-right">
+            <a href="http://www.sae.org/">
+                <img src="/cdsweb/SharedComponents/public_assets/img/sae_vrt_blk_rgb_pos_l.png"" style="width:120px" />
+            </a>
+        </div>
+
+        <button type="button" class="pull-right navbar-toggle btn btn-default btn-lg" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    
+
+<style>
+    #testVisualIndicator {
+        background-image: repeating-linear-gradient(-45deg, #f4d308 0 8px, black 8px 16px);
+        display: flex;
+        justify-content: center;
+    }
+
+    #testVisualIndicator > span {
+        color: white;
+        background-color: black;
+        font-size: x-small;
+        padding: 0 5px;
+    }
+
+    #prodVisualIndicator {
+        background-image: repeating-linear-gradient(-45deg, red 0 8px, white 8px 16px);
+        display: flex;
+        justify-content: center;
+    }
+
+    #prodVisualIndicator > span {
+        color: white;
+        background-color: black;
+        font-size: x-small;
+        padding: 0 5px;
+    }
+</style>
+
+
+    <form name="aspnetForm" method="post" action="./ViewFAQ.aspx?faqnum=394" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="hG/0IjNIw+z2JLUWEURt34gK00Negt56mVSAkaOvWSBAiJwGkq1UuQvFGDyzUHAcC3QqCU+A/o3f3yO2xIMDxHmfbXryu6FfKLXQqAbPCLoZaLW+dokG3Zg8qZ8e42hQ/NfGxtrjNa/Lre+gy9cwvJ+RQINc+PuTk63BJJxcBsBF1CnGRvXqLbmkHrR43GJp8NzdjCAtBA0G74uviNA95ZK0zn81ICmr4WBrLoucmJ+D5y6nXfZGxMQsBbPi4km8q6IkUVooGs7IKnYGclhbv+xwXt2wXfK/qcsAAK1VdvkFJ5DUdyBFzLKZcCdCB11iCTbW6dKz0hPUYrDMBIqMLu8bG7+pdhV7jGra5pCPYCOro0Sd2eavUKOLHvyDBn56+uryjTvYk96pgK0B0u41PlGHelStTsLHa26lQwwleMDlr8Nzm93VH0fl9kMJml/g649GgP+nft8I4dHPpCvNRowb3JvNwsbfEIAvUmxZArr298favOplhtfMgZjy3KDK9SRWkOTB2TfPJ1HV3k69YZpxNHcjrGftOn5L0UqhVyf+1R6o2GtGIXuk88+4Iumm5buXohLrGc6dUGU6jkBAqpIoDrAYZeWqIoGa2/Oa3p/rdhDQaVlmRwPyTkv8N9jG86XwyVjEo3WkcosVl1u0pTAtM/HZgfdQVSnKxTT7JIthMqVEN2InwAmfUB1VBEe6iZM68CZzEdViZRa1+CAIe/rhJCewX5fSGXAj2F5RehpaOo2nWxzWQBhw9lhIJSEbMlXZQyEEV5aJETFd0frQbOyaWyqtXcLK7Y/8VM76mNrmmt3brQLBkPWAaaHPNbmaalRFWR1dxk5JCpnqsTDfRkiiR3vXvhuPMxbo6zi/sfednk3nunKbluKk6zqNxCq/UerjwWq+sMgTFDwEVI5WmFrKkurk1pYXNwePjbE4pTAVZuGg30+I0l9FBNGr26hJ5bfePwNdMhGznAnkz1F+ycqWcMLZ3/B/8GcC/GBtk0YThuKaoyYLqDjdUPcrq5pGulWVBy4jEc/bge7ngveOkSPquDWMXCPpcTyT/lkW8WJpD4sylT77pU+cv8vQwy4WitLlah161omnzMWAOFKj80Wq6x3vZSB1tzibocyed13PljnwzOo8Xuf59W3lbhXzdnv7ippOxicDQdGV+hcS2FC1qIwu94RxDpn2AbGsvHwcS//h1fJj1D3xO2u2187f9iVLx7LjGP2pHJrvHYjc1pTDQdfKNpfLi/VoXY7556RmxWiSxWH7G40Yi7Loslqg+MBtNes9HiAGcMiu+HmBj6C3YC0F303s4lwOie9xOJJo/m0btYOXweKER76ictKkSdKvWsi5PrGj5PJmPqQCIsiKD9M37/6T5iyJk+tYEfA5QBZZku65lVkV3o3aHp6PFqq4NO5bChfNnfKq4xrDX5qKMvC4vLh3pxLtWKS8CHRH6tr0eq07JJ7IUzrVaBVxH6LG2a57pOYBuHxCwnZF1q/FwSTnTtxL89+c8nko+JE/KoF5iWf9pteyT9pyWfvxUXvwUJnhFms2nx5rfhdXshwncScB/dyQGm5vRAsxvb4c3WC423FWtSSVopQDhzE+xs7KUboTk+Lkyb5hPd8lODX5UUCRKFHdOTnWk/ZyW9nzO7ZF3NF5PGRVS2nk9wl3Ca1gFnupHHC3TJ8e+umJo1zydgr5WyPM2D1HX3wn7iJG98wScq2HLh0NgJLacXUe8hIoJ15L9WG++RW95JKmPLUcRNwLGsHPIyvaM6j3AO34KgDs2LUkdR0tRn0ZOkSyIgwHw/6IwmL8Wd/CR9UIaJm714ye9QYLKvk47X5VCBk=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A7B15C41" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="xMZT0oGtgMz0JNW1Vtd6adGBMZTqT4mMz0tNygIe1UEudEE0jnPjaGhovFD7ZaHz7sDrAIk7FKN0OTUTPFdj543bhgT1E2anU2VsuKMIQlK0X8eqMM/RrO5TnP902kuALlSByZb3d4VuGXusYuijqsQSIhsnUDMHVAcW88kSZTI=" />
+</div>
+        <nav class="navbar" role="navigation">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    
+
+                    
+                    <li><a href="/">Home</a></li>
+
+                    
+                    
+
+                    
+                    <li class="dropdown hidden">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Jump To Activity&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            
+                        </ul>
+                    </li>
+
+                    
+                    <li><a href="/cdsweb/app/news.aspx">News</a></li>
+
+                    
+                    <li><a href="/cdsweb/reg/UpcomingCompList.aspx">Competitions & Workshops</a></li>
+
+                    
+                    <li><a href="/Deadlines.aspx?seriesCode=AERO">Deadlines</a></li>
+
+                    
+                    <li><a href="/app/CompetitionResources.aspx" target="_blank">Competition Resources</a></li>
+
+                    
+                    <li><a href="/cdsweb/gen/DocumentResources.aspx">Series Resources</a></li>
+
+                    
+                    <li><a href="/page.aspx?pageid=c93ea933-b70e-4523-8cbc-276cc89a4211">Results</a></li>
+
+                    
+                    <li><a href="/Page.aspx?pageid=1c4426c1-520a-427a-8f2b-7521d7dd8fe5">Membership</a></li>
+                    
+                    
+                    <li><a href="/Page.aspx?pageid=73d2a0c9-163d-4c9a-8ed0-a27e3be95b1f">Media</a></li>
+
+                    
+                    <li><a href="/go/signup">Create an Account</a></li>
+
+                    
+                    
+
+                    
+                    <li><a href="https://www.saeaerodesign.com/Login.aspx">Login</a></li>
+
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <div id="content-wrapper">
+            <div id="content" class='container min-height'>
+                
+
+                
+<div id="dismissableAlert" style="display: none;" class="alert alert-danger">
+    <div id="errorDetails"></div>
+
+    <p>Click the button to view more details of the error.</p>
+    <button type="button" class="btn btn-danger" onclick="ShowTheError()">Click here to see what went wrong</button>
+    <button type="button" class="btn btn-secondary" id="AlertCloseButon">Dismiss</button>
+</div>
+
+<script>
+    var htmlResponse = "";
+    var errorPopupDetails = "";
+
+    function ShowTheError() {
+        window.open('').document.body.innerHTML = htmlResponse;
+        $("#dismissableAlert").hide();
+    }
+
+    $(document).ready(function () {
+        $("#AlertCloseButon").click(function () {
+            $("#dismissableAlert").hide();
+        });
+    });
+
+    function PopulateErrorMessage(messageHtml){
+        htmlResponse = messageHtml;
+        //htmlResponse = htmlResponse.replace("<b>Source Error:</b>", "<b>Source Error:</b>" + , window.location.href)
+        var beginIndex = htmlResponse.indexOf("<h2> <i>");
+        var endIndex = htmlResponse.indexOf("<b>Stack Trace:</b>");
+        errorPopupDetails = htmlResponse.substring(beginIndex, endIndex);
+
+        $("#dismissableAlert").show();
+        document.getElementById("errorDetails").innerHTML = errorPopupDetails;
+
+        window.scrollTo(0, 0); // values are x,y-offset
+    }
+</script>
+
+                
+    <span id="ctl00_main_ibTop" class="InfoBlock"></span>
+    
+<div id="ctl00_main_faqViewer_pMain">
+	
+    <div class="row">
+        <div class="col-xs-12">
+            <input type="hidden" name="ctl00$main$faqViewer$hfFaqID" id="ctl00_main_faqViewer_hfFaqID" value="464dde38-9bda-412c-9d81-562b33915363" />
+            <div class="Head1 no-margin-left no-padd-left">
+                <span id="ctl00_main_faqViewer_lblFaqNum">FAQ #394</span><br />
+                <span id="ctl00_main_faqViewer_lblFaqTitle">Regular Class 2026 - Increasing Bottle Payload</span>
+            </div>
+            <p class="no-margin-bottom">
+                Last Updated On
+                <span id="ctl00_main_faqViewer_lblLastUpdated" style="font-weight:normal;font-style:normal;">2/17/2026 09:52:25 AM</span>
+                by
+            </p>
+            <p>
+                <span id="ctl00_main_faqViewer_lblUpdatedByUsername" style="font-weight:normal;font-style:normal;">talmadge33</span>
+            </p>
+            <div class="form-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Question
+                    </div>
+                    <div class="panel-body">
+                        <span id="ctl00_main_faqViewer_lblQuestion">Can we remove two empty bottles and replace with one filled bottle?<br><br>Example:<br>Successful Flight 1:  2 empty + 2 filled<br>Flight 2: 3 filled<br><br>Please let us know if this incrementation strategy is acceptable.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Answer
+                    </div>
+                    <div class="panel-body">
+                        <span id="ctl00_main_faqViewer_lblAnswer">Total bottle count must be constant or increasing.  Removing two empty bottles and adding one filled bottle is not allowed, even though the total payload weight might be increasing.<br><br>Valid examples:<br><br>Successful Flight 1: 2 empty + 2 filled (4 total bottles)<br>Flight 2: 1 empty + 3 filled (4 total bottles)<br><br>Successful Flight 1: 2 empty + 2 filled (4 total bottles)<br>Flight 2: 3 empty + 2 filled (5 total bottles)<br></span>
+                    </div>
+                </div>
+            </div>
+            
+<div id="ctl00_main_faqViewer_rqaFaqFiles_pNoAttachments">
+		
+ No Attachments
+
+	</div>
+            <hr />
+            <div id="ctl00_main_faqViewer_ruleTagEditor_pMain">
+		
+    <input type="hidden" name="ctl00$main$faqViewer$ruleTagEditor$hfInquiryID" id="ctl00_main_faqViewer_ruleTagEditor_hfInquiryID" />
+    <input type="hidden" name="ctl00$main$faqViewer$ruleTagEditor$hfFaqID" id="ctl00_main_faqViewer_ruleTagEditor_hfFaqID" value="464dde38-9bda-412c-9d81-562b33915363" />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <div id="ctl00_main_faqViewer_ruleTagEditor_pTitle">
+			Rule Numbers
+		</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                    <tr>
+                        <td>
+                            <span id="ctl00_main_faqViewer_ruleTagEditor_rptrRuleTags_ctl00_lblRuleTag">2026:2026.7.4</span>&nbsp;
+                        </td>
+                    </tr>
+                
+        </tbody>
+    </table>
+    
+    
+
+	</div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="/cdsweb/SharedComponents/public_assets/js/markdown/simplemde.min.js"></script>
+<script src="/cdsweb/SharedComponents/public_assets/js/markdown/markdown.js"></script>
+
+    <span id="ctl00_main_ibBottom" class="InfoBlock"></span>
+    
+
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                
+            </div>
+
+            <a class="sae-privacy-policy" href="https://www.sae.org/privacy" target="_blank">SAE International Privacy Policy</a>
+        </div>
+    </form>
+</body>
+</html>

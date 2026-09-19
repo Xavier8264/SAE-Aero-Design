@@ -1,0 +1,1916 @@
+# ID: selig_lowre_lecture
+# SOURCE: https://m-selig.ae.illinois.edu/pubs/Selig-2003-VKI-LRN-Airfoil-Design-Lecture-Series.pdf
+# ORIGINAL: reference/raw/selig_lowre_lecture.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 43 pages | ~30976 tokens
+# NOTE: Selig 2003 VKI lecture: low-Re airfoil design principles (Clmax, transition, bubbles). Use first half
+# FLAG img: pages 23-25,29,32-35,37,40-42
+
+=== PAGE 1 ===
+             Low Reynolds Number Airfoil Design
+
+                                Lecture Notes
+
+                                 Michael S. Selig∗
+
+                      Department of Aerospace Engineering
+                  University of Illinois at Urbana–Champaign
+                           Urbana, Illinois 61801 USA
+
+                               VKI Lecture Series
+
+                                    Sponsored by
+             NATO Research and Technology Organization (RTO)
+                    Applied Vehicle Technology (AVT) Panel
+                               24–28 November 2003
+
+Abstract
+
+An approach to low Reynolds number airfoil design is described, and several example design
+cases are presented and discussed. The overall approach involves using the inverse method
+PROFOIL for design and XFOIL for analysis. Validation of these methods and the low
+Reynolds number airfoil design philosophy is supported by UIUC wind tunnel experiments.
+These notes derive largely from four prior publications of the author (see Refs. 1–4) and the
+contributions of the respective co-authors are gratefully acknowledged.
+
+1    Introduction
+
+For over 100 years, airfoil design has continued to capture the interest of practitioners of
+applied aerodynamics. The field is fueled by the ever-growing combination of airfoil design
+requirements for unique applications, such as UAVs, and this state of affairs is likely to
+continue. When one considers all possible permutations of the myriad of airfoil design re-
+quirements, it quickly becomes apparent that the number of unique sets of requirements far
+  ∗Associate Professor, 306 Talbot Laboratory, 104 S. Wright St. email: m-selig@uiuc.edu.
+   Presented at the von Karman Institute for Fluid Dynamics, Lecture Series: Low Reynolds Number
+Aerodynamics on Aircraft including applications in Emerging UAV Technology, 24–28 November 2003.
+   Copyright c⃝2003 by Michael S. Selig. Published by the von Karman Institute for Fluid Dynamics or
+NATO-RTO/AVT, with permission.
+
+                                           1
+
+=== PAGE 2 ===
+exceeds the collection of existing airfoils. For this reason, the advancement and use of meth-
+ods for airfoil design continues to be the economical solution. In contrast, the enrichment of
+airfoil “catalogs” for their own sake is felt to be of limited value.
+   The objective of this lecture focuses on the design of airfoils for low Reynolds numbers,
+which has been the subject of considerable research as documented in several major con-
+ferences and books.5–9 First, various approaches to airfoil design are discussed, leading to
+the use of inverse methods being favored over the alternatives. Second, several sections of
+these notes outline the important influence of laminar separation bubbles on low Reynolds
+number airfoils, leading to the need for an inverse method that has the unique capabilities
+of being able to more or less directly control the movement of transition with angle of at-
+tack. The desired behavior of transition forms the basis of a design philosophy that has been
+implemented in a methodology for inverse airfoil design. Finally, to illustrate the overall
+approach to low Reynolds number airfoil design, several example airfoils are presented in
+this lecture. In each case, state-of-the-art tools for airfoil design10,11 and analysis12–14 were
+used. Although these airfoils were each designed for specific applications, the systematic
+and parametric studies show useful performance trends and trade-offs in airfoil design at low
+Reynolds numbers. As will be shown, the overall design process has been validated through
+wind tunnel tests, and these results are presented together with the predictions.
+
+2    Various Approaches to Airfoil Design
+
+In this section, various approaches to airfoil design are briefly summarized. The alternative
+to our great legacy of airfoil design by geometric means guided by empirical study (Fig. 1a) is
+to use an inverse method, and there are certain advantages to be had by adopting the latter
+while realizing that often geometric constraints must still be achieved. By adopting an inverse
+approach, the degree to which the aerodynamic performance can be controlled has reached
+a high level of sophistication. Inverse design in the classic sense involves specifying a desired
+velocity distribution (Fig. 1b) based on boundary-layer and consequently performance con-
+siderations. Taking this one step further by directly prescribing the desired boundary-layer
+characteristics (Fig. 1c) is a step closer to controlling the desired outcome—the performance.
+Thus, employing an inverse boundary-layer-like approach can give the designer tremendous
+power in achieving the performance goals in the face of all the trade-offs that one must
+consider in the process of airfoil design. Continuing the sequence in going from geometry
+based methods to inverse methods, the final step is one wherein the performance is speci-
+fied using an optimization scheme (Fig. 1d), but implementation of an efficient optimization
+method has met with limited success relative to the other approaches. Nevertheless, each
+of these four approaches to design have their respective strengths of allowing more or less
+direct control over particular characteristics of airfoils. Each of these characteristics could
+be considered as a design variable (Fig. 1d) that ideally should be incorporated into a single
+design methodology.
+   Apart from the design variables of choice, a second consideration involves having the
+ability to control the performance over multiple operating points. Figure 3 illustrates this
+concept. Typically, airfoil design requirements include information regarding Cl,max (point
+C in the figure) as well as the operating range over which low drag is achieved (points A
+
+                                           2
+
+=== PAGE 3 ===
+to B). These requirements can be translated into specific characteristics to be embodied in
+the pressure distribution. For instance, low drag at points A and B requires extended runs
+of laminar flow on the lower and upper surfaces, respectively, while the high lift require-
+ment is achieved by limiting the leading edge suction peak behavior, each of which must be
+achieved at the corresponding design lift coefficient. Collectively this approach is referred to
+as multipoint design, which is clearly a desired feature of any airfoil design method.
+
+3    Laminar Separation Bubbles and Transition
+
+Low Reynolds number airfoil flows are principally distinguished by their associated laminar
+separation bubbles such as that depicted in Fig. 4. In past research, considerable attention
+has been focused on laminar separation bubbles because they are the leading culprit to the
+degradation in performance relative to airfoils at higher Reynolds numbers. When laminar
+separation bubbles do appear, they are caused by the inabilty of the flow to make a transition
+to turbulent flow in the attached boundary layer on the surface of the airfoil. Instead, the
+laminar flow separates before transition. When this happens, transition occurs in the free
+shear layer, and the so-called laminar separation bubble is formed when the turbulent flow
+reattaches to the airfoil surface downstream of transition. For the most part, the resulting
+pressure drag over the region of the laminar separation bubble is responsible for the relatively
+high drag that can sometimes accompany airfoils at low Reynolds numbers. The existence
+of a laminar separation bubble and its extents can be deduced by examining surface oil flow
+visualization as will be discussed later in these notes.
+   As shown by Drela,15 the drag contribution owning to a bubble can be approximated by
+considering the integral boundary layer equation
+
+                             dθ             θ due
+                                = −(2 + H)        + 2 Cf
+                             dξ             ue dξ
+from which the drag coefficient can be determined using
+
+                                        2(θus + θls)
+                                   Cd =
+                                             c
+For the special purpose here of considering the drag due to a laminar separation bubble, it
+is more helpful to express the integral boundary layer equation as
+
+                               1 d(ρu2 eθ)   Cf −H due
+                                          =
+                             ρu2 eθ  dξ      2 θ  ue dξ
+Inside the laminar separation bubble, the skin friction is nearly zero and hence it can be
+assumed that Cf ≃0. In this case the integral boundary layer equation becomes
+
+                                  ∆ρu2 eθ      ∆ue
+                                         ≃−H
+                                   ρu2 eθ       ue
+or
+
+                                 ∆ρu2 eθ ≃−ρueδ∗∆ue
+
+                                          3
+
+=== PAGE 4 ===
+   Thus, the drag increment due to a laminar separation bubble is proportional to the
+product of the average mass defect ρueδ∗and drop in the edge velocity ∆ue. A graphical
+interpretation of this result is shown in Fig. 5. Three edge velocity distributions are shown
+together with the drag increment that grows downstream. For case 1, transition is assumed
+to have occurred on the airfoil surface without the mechanism of a laminar separation bubble.
+Prior to transition, the drag increases slowly, while downstream of transition the growth is
+more rapid and consistent with a turbulent boundary layer. For case 2, laminar separation
+is shown to have occurred as indicated by the plateau in the velocity distribution, which
+is accompanied by no growth in the drag increment until transition occurs. At transition
+and subsequent reattachment, there is a jump in the drag that continues to grow consistent
+with the turbulent boundary layer behavior. For case 3, a longer laminar separation bubble
+is considered. In this case, the larger drop in the edge velocity at transition gives rise to
+a correspondingly larger jump in the drag increment as compared with case 2. Clearly,
+between the two limiting cases of transition without a bubble (case 1) and transition at the
+end of a long bubble (case 3), there is an optimum where the bubble drag increment can
+be minimized. For most airfoils, this minimum case in relation to the total airfoil drag is
+associated with a thin laminar separation bubble that has only a small drop in the edge
+velocity at transition.
+   From this discussion in connection with Fig. 5 that shows the drag increment through a
+bubble, the location of transition dictates the size of the bubble and with it the drag of the
+bubble. Thus, an airfoil designer focuses on the questions: where is transition, where should
+it be, and how can it be controlled? Taken together answers to these questions should yield
+more knowledge of airfoil flows and help in the development of a design philosophy. As a
+step in this direction, the following section outlines an approach to finding the transition
+location, which is the first step in low Reynolds number airfoil design.
+
+4    Finding Transition
+
+As will be seen, having knowledge of the transition location is key to the development of
+the low Reynolds number airfoil design philosophy presented later. In what follows, two
+tools for determining transition are discussed—first through experiments and then through
+predictions.
+
+4.1   Tool #1: Wind Tunnel Tests
+
+All experiments were conducted in the University of Illinois at Urbana–Champaign (UIUC)
+subsonic wind tunnel (Fig. 6), which has a nominal test section that is 2.81-ft high and 4-ft
+wide. The test set-up depicted in Figs. 7 and 8 was used for this study.16,17 As seen in Fig. 7,
+two 6-ft long Plexiglas splitter plates are inserted 2.8 ft apart into the test section to isolate
+the airfoil models from both the support hardware and the tunnel side wall boundary layers.
+The 1-ft chord airfoil models were inserted horizontally between the splitter plates with
+nominal gaps of 0.040–0.080 in. between the end of the airfoil model and the splitter plates.
+Performance data were taken at Reynolds numbers of 100,000, 200,000, 350,000 and 500,000.
+The lift was measured using a strain gauge load cell, and the drag was determined using
+
+                                          4
+
+=== PAGE 5 ===
+the momentum deficit method.16 To account for spanwise drag variations at low Reynolds
+numbers,18 the drag was obtained from an average of eight equidistant wake surveys over the
+center of the model so that a 10.5-in. wide span was covered. The overall uncertainty in both
+the lift and drag measurements was estimated at 1.5%.16,17 All lift and drag measurements
+were corrected for wind tunnel interference and validated with data from the NASA Langley
+Low Turbulence Pressure Tunnel.4,16,18–20
+   As has been well documented, low Reynolds number airfoil flows are highly sensitive to
+the tunnel flow quality. Consequently, tunnel flow quality measurements were taken and
+documented in detail in Refs. 4 and 21. Only a subset of those results, in particular the
+turbulence intensity measurements, are included in these lecture notes. The turbulence
+intensity was measured using hot-wire anemometry. Specifically, the hot-wire system was
+a TSI Incorporated IFA 100 anemometer in conjunction with a TSI Model 1210-T1.5 hot-
+wire probe. The probe makes use of a 1.5-micron platinum-coated tungsten wire. The
+probe was mounted in the tunnel end-flow orientation with the wire perpendicular to the
+tunnel floor in order to measure the axial turbulence intensity. A PC equipped with a data
+acquisition card was used to log the signal from the anemometer. A HP 35665A Dynamic
+Signal Analyzer, which performed a FFT (Fast Fourier Transform) analysis, was employed
+to allow the turbulence spectrum to be monitored over a broad range of frequencies. More
+details of the method are given in Ref. 21.
+   The turbulence intensity was calculated from data using a total of 50,000 samples with a
+sample frequency of 10,000 Hz. Figure 9 shows the resulting turbulence levels for both the
+tunnel empty case and with the full measurement apparatus installed. In general these levels
+are considered to be sufficiently low for taking low Reynolds number airfoil measurements.
+   The surface oil flow visualization technique made use of a fluorescent pigment (Kent-
+Moore 28431-1) suspended in a light, household-grade mineral oil that was sprayed onto the
+surface of the model using a Paasche Model VL double-action airbrush. The model was
+then subjected to 20–45 min of continuous wind-tunnel run time at a fixed Reynolds number
+and angle of attack. During this period, the oil moved in the direction of the local flow
+velocity at a rate dependent on the balance of forces dictated by the boundary-layer skin
+friction coefficient Cf and surface tension of the oil. As a result, regions of the flow could be
+identified and compared with the NASA Langley Low-Turbulence Pressure Tunnel (LTPT)
+data.19,20
+   Figure 10 shows a photograph of the surface oil flow pattern made visible under fluo-
+rescent light. Figure 11 conceptually illustrates the connection between the salient surface
+oil flow features and the skin friction distribution. Note that the skin friction distribution,
+though conceptual, is consistent with the results of many computational studies.22–27 The
+authors believe that the unique shape of the Cf distribution, in particular the strong negative
+Cf spike, has yet to be experimentally verified (as no experimental data could be found);
+however, the oil flow patterns observed seem to confirm the validity of the negative Cf spike
+concept.
+   Several important flow features can be identified and related to the underlying skin
+friction and surface tension forces. In Fig. 10, laminar flow is seen to exist from the leading
+edge to approximately 0.40c. The oil streaks are characteristically smooth in this region
+until laminar separation occurs, which is identified in Fig. 11 as the point where Cf = 0.
+(Note again that the flow shown in Fig. 11 is conceptual, and it is not intended to match
+
+                                          5
+
+=== PAGE 6 ===
+Fig. 10 in detail.) Downstream of the point of laminar separation, the original airbrushed
+“orange-peel” texture that existed prior to running the tunnel still exists, indicating that
+the flow is stagnant in this region. This stagnant flow is consistent with the known behavior
+of flow in the interior leading-edge region of a laminar separation bubble. As sketched, the
+Cf magnitude in this region is quite small due to the low flow speed and negative in sign
+due to reverse flow at the surface.
+   In the presence of a laminar separation bubble, transition takes place in the free shear
+layer above the surface of the airfoil. Downstream of this point, reattachment occurs in a
+process that is known to be unsteady as vortices are periodically generated and impinge on
+the airfoil surface.27,28 These unsteady vortices colliding with the surface lead to a relatively
+high shear stress that tends to scour away the oil at the mean reattachment point, pushing
+oil upstream or downstream of the reattachment point. As seen in Fig. 11, the reattachment
+line is less distinct because the bulk of the oil has been pushed away revealing the underlying
+black airfoil surface. In Fig. 10, the tunnel run time was long enough that the reattachment
+line at 0.58c is even harder to see than in Fig. 11. In the original high-resolution color
+photographs that were archived, this feature is clear and easily quantifiable.
+   Downstream of reattachment the boundary layer is turbulent. The high skin friction in
+this area relative to the laminar boundary layer upstream tends to clear away more oil, again
+making the black surface downstream more visible than in the upstream region.
+   The remaining visible feature of the flow is a line where the oil tends to pool, termed here
+the “oil accumulation line.” This intrinsic feature of the oil flow has no direct connection to
+laminar flow, reverse flow in the bubble, or the ensuing turbulent flow downstream. However,
+it does indicate a relatively important feature of the flow with regard to the nature of the
+skin friction in the vicinity of reattachment. The negative Cf spike shown in predictions and
+sketched conceptually in Fig. 11 is most likely responsible for generating the oil accumulation
+line. Assuming that this is the case, the fluctuating high skin friction that is generated over
+the unsteady reattachment zone will tend to push the oil upstream ahead of the mean
+reattachment point. At some location on the airfoil, however, the oil moving upstream will
+experience a balance of forces between the rapidly weakening skin friction force and that of
+the surface tension and oil adhesion that is retarding its motion. At the location where these
+two forces balance, the oil accumulates into a line that becomes the most distinguishable
+feature of the oil flow. Consequently, it is speculated that this flow feature is sometimes
+mislabeled as “reattachment” as will be discussed below.
+
+4.2   Tool #2: XFOIL Predictions
+
+In the data presented here, XFOIL14 has been used as a post-design viscous/inviscid analysis
+tool. A linear-vorticity second-order accurate panel method is used for inviscid analysis in
+XFOIL. This panel method is coupled with an integral boundary-layer method and an en-
+type transition amplification formulation using a global Newton method to compute the
+inviscid/viscous coupling, requiring less than a minute of elapse time per polar on modern
+desktop computers. For the current work ncrit was set to the default value of 9, which
+is typical for a smooth wing surface in a low-turbulence environment. Each airfoil was
+represented in XFOIL using 230 panels distributed using XFOIL’s default paneling routine.
+XFOIL has proven to be well suited for the analysis of subcritical airfoils even in the presence
+
+                                           6
+
+=== PAGE 7 ===
+of significant laminar separation bubbles.
+
+4.3   Results
+
+XFOIL was used to predict the viscous pressure distributions on the E387 airfoil as shown
+in Figs. 12a–c. The characteristic pressure distribution caused by the presence of a laminar
+separation bubble is clearly seen. Oil flow visualization was performed to document the
+locations of the major surface flow features as presented in Figs. 13, 14, 15, and 16. These
+results were then compared with benchmark data and also XFOIL predictions.
+   Figures 17 and 18 show the previously described flow features compared with benchmark
+data obtained at the NASA Langley LTPT. In the low drag range between −2 deg and 7 deg
+angle of attack, the agreement in the laminar separation line between the NASA LTPT and
+UIUC data sets is mostly within 0.01c to 0.02c, which is very near the uncertainty of the
+method. As previously discussed, the next feature to appear is the oil accumulation line.
+The UIUC oil accumulation line agrees fairly well with the “reattachment” line identified in
+the NASA experiment. It is believed, however, that based on the previous reasoning this
+label given in the original reference20 is a misnomer. Had the UIUC tests been performed
+for a longer duration, the reattachment zone would be scoured clean with no remaining
+distinguishing feature, leaving only the oil accumulation line to be labeled as the “reattach-
+ment line,” knowing that one must exist. Hence, it is speculated here and in prior UIUC
+work17 that such a scenario took place in the NASA study, i.e. the oil-accumulation line was
+misinterpreted as the reattachment line.
+   Guided by this working assumption, the two results again are in good agreement. It must
+be stated, however, that the oil accumulation line might change slightly from one facility to
+the next since it is dictated by a force balance that depends on the skin friction forces of the
+boundary layer relative to the adhesion forces of the particular oil used. The predictions,
+however, show that the negative Cf region has a sharp upstream edge, which is most likely
+where the oil accumulates regardless of the surface tension characteristics. Differences in
+the oil accumulation line due to differences in the type of oil used are therefore believed
+to be small. The good comparisons between UIUC and Langley data tend to support this
+assumption.
+   Moving further downstream, the UIUC reattachment data is plotted, but unfortunately
+no direct comparison can be made because of the ambiguity with respect to the reattachment
+data reported in the NASA study. However, close inspection of the data suggests that at a
+Reynolds number of 300,000 and between 5 and 7 deg angle of attack, the LTPT line merges
+with the UIUC reattachment line. Perhaps in this case, the measurements at Langley were
+indeed the reattachment points.
+   The conclusion to be drawn from this comparison of the oil flow visualization results
+is that the two facilities produce airfoil flows that are in close agreement. Moreover, if
+the arguments regarding the oil accumulation line are correct, then the agreement can be
+considered excellent and within the uncertainty of the measurements.
+   To make comparisons with predictions, the upper-surface flow features for each airfoil
+were computed at Reynolds numbers of 200,000, 350,000, and 500,000 and at angles of attack
+from −2 to 18 deg using XFOIL14 (version 6.94, http://raphael.mit.edu/xfoil/). These data
+were then used to determine the point of laminar separation and reattachment, which are
+
+                                          7
+
+=== PAGE 8 ===
+both defined by Cf = 0 as illustrated in Fig. 11. A comparison between these predictions and
+experimental measurements are shown in Figs. 19, 20, and 21. The agreement is quite good,
+and this lends confidence to using XFOIL as an integral tool for analysis of low Reynolds
+number airfoils.
+
+5    Design Philosophy
+
+As was discussed in Section 3, the performance of low Reynolds number airfoils is strongly
+dependent on the location of transition as that sets the length of the laminar separation
+bubble and consequently the magnitude of the drag rise attributable to the bubble. Thus,
+controlling transition is a key step towards mitigating the adverse effects of laminar separa-
+tion bubbles on low Reynolds number airfoils.
+   One common approach to controlling transition, in particular, promoting transition, is
+to employ an instability region in the pressure gradient or, as it is commonly called, a
+transition ramp. A general discussion of transition ramps can be found in Refs. 13 and 29,
+and additional details specific to low Reynolds number airfoils are discussed in Refs. 15, 30,
+31, and 32. Figure. 22 shows a concept sketch of a transition ramp on the upper surface
+velocity distribution. A ramp can be used on either surface of the airfoil, but in these lecture
+notes attention will be focused on the upper surface. A second approach is to use a turbulator
+or trip on the airfoil surface, such a zigzag trip like that shown in Fig. 23. Various types of
+boundary layer trips have been used in the past, but for greatest efficiency three-dimensional
+trips are believed to be more effective.33 The remainder of these lecture notes is concerned
+with the former approach to promoting transition—that of using a transition ramp.
+   Of critical importance in the design of low Reynolds number airfoils is the upper surface
+pressure distribution. The tendency of the flow to form a laminar separation bubble can
+lead to a significant degradation in performance owing to the high bubble drag. To mitigate
+these adverse effects, a transition ramp in the pressure distribution is often employed to
+gradually bring the flow to transition in a thin bubble without a large pressure rise and high
+drag associated with an otherwise thick bubble.
+   Illustrating a transition ramp by means of showing the pressure distribution (Fig. 22) is
+instructive, but the essence of a transition ramp can be more precisely defined by examining
+the movement of transition with angle of attack. Figure 24 shows a concept sketch of a polar
+and in relation to this the transition locations on both surfaces of the airfoil. As can be seen,
+over the low drag range, transition on the upper surface is in the vicinity of the midchord of
+the airfoil. As the angle of attack is increased, transition moves forward as the upper surface
+pressure gradient becomes more adverse. In these notes, the transition ramp as indicated in
+Fig. 24 will be defined as the chordwise extent over which transition moves while the airfoil
+operates in the low drag range of the polar.
+   Given this approach to defining a transition ramp, consider the Wortmann FX 63-137
+airfoil shown in Fig. 25 together with its inviscid pressure distribution. As can be seen, on
+the upper surface there is a gradual adverse pressure gradient that will promote transition
+as has been described. Figure 26 shows the measured locations of the major flow features
+with angle of attack, and in this form the extents of the ramp are more clearly defined. As
+can be deduced from the figure, transition (which occurs near the point of reattachment)
+
+                                           8
+
+=== PAGE 9 ===
+moves from nearly 80% of chord at low angles of attack to near 20% of chord at an angle of
+attack of near ≃10 deg. The corresponding performance is shown in Fig. 27. The low drag
+range of the polar extends from Cl = 0.5 to Cl ≃1.6 which correspond to angles of attack
+of −2 deg to ≃10 deg, respectively.
+   In contrast to the FX 63-137 airfoil, which was designed for low Reynolds numbers,
+the high Reynolds number design NASA NLF(1)-0414F airfoil was also examined. At high
+Reynolds numbers, the need for a relatively long transition ramp is diminished. Thus,
+the pressure recovery region can occur rather abruptly so long as transition occurs before
+recovery. For this reason, a relatively short transition ramp is often employed. On the
+NASA NLF(1)-0414F airfoil this ramp occurs at ≃70% chord on the upper surface (see
+Fig. 28). At low Reynolds numbers with a steep pressure recovery occurring this far aft,
+a long bubble can be expected to occur. Indeed as shown in Fig. 29 laminar separation
+occurs relatively far aft, and at the lowest Reynolds number of 200,000 reattachment does
+not occur. For the two higher Reynolds numbers of 350,000 and 500,000, reattachment does
+occur on the airfoil. However, the resulting long bubble leads to a significant degradation in
+performance as show in Fig. 30.
+   The contrast between the FX 63-137 and NASA NLF(1)-0414F airfoils illustrates large
+performance differences resulting from correspondingly large differences in their respective
+transition ramps. Even small changes in the shape of the transition ramp, however, can have
+important effects on performance as follows.
+   The effect of subtle changes in the transition ramp is demonstrated using two example
+airfoils A and B. Figure 31 shows a comparison of the geometries and inviscid velocity
+distributions. These airfoils were designed to each have a different transition ramp that is
+reflected in a different shape for the transition curve (Cl-xtr/c curve) on the upper surface.
+The two airfoils were analyzed using XFOIL, and Fig. 32 shows the drag polars and upper-
+surface transition curves for a Reynolds number of 200,000. As was mentioned, the transition
+ramp is defined here as the region over which the bubble moves gradually as defined by the
+transition curve. (In this context, the transition ramp might be more aptly called a “bubble
+ramp.”31)
+   From Fig. 32, it can be seen that airfoil A has lower drag than airfoil B at lift coefficients
+from around 0.3 to around 0.7, above which value airfoil B has lower drag. Also noticeable is
+the correlation between the drag polar and the shape of the upper-surface transition curve.
+For the Cl-range from 0.3–0.7, where airfoil A has lower drag, the transition curve for airfoil A
+is shallower than for airfoil B; that is, there is a larger change in the value of xtr/c for airfoil A
+than for B. For values of Cl from 0.7–1.2 where airfoil B has lower drag, the transition curve
+for airfoil B is shallower than for A. This figure shows that the steepness of the transition
+curve is a direct indication of the bubble drag. By adjusting the shape of this curve, it is
+therefore possible to tailor the drag polar of an airfoil at low Reynolds numbers.
+   Figure 32 also includes an overlay of the variation of bubble size (xr −xs) with Cl. The
+size of the bubble for each Cl was obtained by determining the chordwise extent over which
+the skin-friction Cf, as predicted by XFOIL, was less than or equal to zero. Studying the
+bubble-size variation for the two airfoils further illustrates the connection between the shape
+of the transition curve and the bubble drag. The bubble is larger when the transition curve
+is steeper.
+   Figure 33 shows the inviscid velocity distributions for airfoil A at Cl values of 0.5 and 1.0
+
+                                          9
+
+=== PAGE 10 ===
+with the upper-surface bubble location marked in bold. A similar plot for airfoil B is shown
+in Fig. 34. Comparing the velocity drops across the bubble for the four cases, it can be seen
+that while airfoil A has a smaller velocity drop than airfoil B at Cl = 0.5, the situation is
+reversed for Cl = 1.0. Since the pressure drag due to the bubble increases with increasing
+velocity drop across the bubble, airfoil A has smaller bubble drag at the low Cl and larger
+bubble drag at the higher Cl. Thus, a steeper transition curve results in a larger bubble and
+also a larger velocity drop across the bubble causing an increase in bubble drag.
+   The connection between the transition ramp as defined by the Cl-xtr/c transition curve
+and the resulting performance forms the basis of the present low Reynolds number airfoil
+design philosophy. The philosophy is to prescribed the Cl-xtr/c transition curve realizing
+that at most it can extend from the trailing edge to the leading edge. Between these two
+points (or simply the extent of the ramp) the airfoil performance can be further controlled by
+prescribing the slope of the curve—the shallower the slope, the lower the drag, and vice versa.
+There are however tradeoffs that must be addressed as was illustrated in the prior example.
+The next step involves the implementation of this philosophy into a design methodology.
+
+6    Methodology
+
+In this section, the philosophy of prescribing the Cl-xtr/c transition curve (which in effect
+is the transition ramp) is conveniently implemented in the inverse design code PROFOIL.
+First, however, general background on the method and its capabilities are presented, and
+following this its use in low Reynolds number airfoil design is described.
+   The PROFOIL code10,11 embodies an inverse airfoil design method and an integral
+boundary-layer method for rapid analysis at the design points. The method draws on the
+pioneering work of Eppler12,13,34,35 in inverse airfoil design and analysis through conformal
+mapping (outlined in Figs. 35, 36 and 37) and integral boundary-layer techniques, respec-
+tively. PROFOIL differs from the Eppler code in that laminar and turbulent boundary-layer
+developments can be directly prescribed through iteration on the velocity distribution. The
+method also allows for control over certain geometric constraints, such as the local geome-
+try, maximum thickness, thickness distribution, etc. Additional differences are discussed in
+Refs. 10, 11, and 36. Both the boundary-layer and thickness-constraint capabilities are used
+in the examples presented in these lecture notes. A web-based version of PROFOIL and
+further discussion is available on the web.37
+   The general capabilities of PROFOIL are illustrated in Figs. 38, 39, and 40. In Fig. 38,
+three segments of an airfoil (to be designed) are specified to include a velocity distribution,
+n-development (as used in the en method for transition prediction), and H12 development,
+each to be achieved at different conditions. It should be noted that this is merely an example
+and is not intended to be use for any practical application. Figure 39 shows the solution
+that includes the relevant characteristics as prescribed, while Fig. 40 shows the final airfoil
+shape.
+   For the low Reynolds number airfoil design problem, the design variable of choice is not
+the geometry nor the velocity, but instead it is the Cl-xtr/c transition curve as illustrated in
+Figs. 31–34. In coping with this problem of in effect prescribing the Cl-xtr/c transition curve,
+a useful approach derives from an inherent feature of the Eppler theory for inverse airfoil
+
+                                          10
+
+=== PAGE 11 ===
+design. Briefly, in the Eppler method, the designer can specify for a segment of the airfoil
+a design angle attack α∗(relative to the zero-lift line) over which the velocity is constant.
+For instance, the forward upper surface can be defined as one segment and given a design
+angle of attack of 10 deg (Cl = 2παz ≃1). When the resulting airfoil is then operated at
+10 deg with respect to the zero-lift angle of attack αzl, the velocity over that segment is then
+constant. For a higher angle of attack, the resulting pressure gradient is adverse and vice
+versa. Further discussion can be found in Refs. 13 and 38.
+   Because (1) the boundary layer responds to the pressure gradient, (2) the design angle
+of attack α∗for a segment has a direct effect on the pressure gradient, and (3) many such
+segments can be used to define an airfoil, these three aspects can be connected to yield an
+elegant solution to having precise control over the Cl-xtr/c transition curve. Figure 41 shows
+the velocity distributions for the SA7035 airfoil at several design angles of attack. As seen,
+for segments 8, 9, 10, 11, 12, and 13 the design angles of attack α∗are 1.59, 3.34, 5.07, 6.63,
+7.41, and 8.21 deg, respectively. When the airfoil operates at these values of αz, the velocity
+gradient over the respective segments is zero as shown in the exploded portion of the figure.
+   When these design angles of attack α∗are plotted vs. the segment-endpoint arc limits φ
+used in the conformal mapping to generate the airfoil, the resulting curves shown in Fig. 42
+mimic the corresponding transition curves over the respective surface of the airfoil, thereby
+providing a means of controlling the transition ramp and resulting drag as was done also
+with the example of Figs. 31 and 32. For the SA703x series, the α∗-φ curve shown in Fig. 42
+maps from leading edge back to segment-endpoint 1 or approximately 75% of the chord
+(see Fig. 41). It is over this region that the ramp is controlled by the α∗-φ curve, with the
+remainder being controlled by the final trailing edge pressure recovery seen in Fig. 41. The
+essence of this technique has been employed in the design of most of the S*xxxx four-digit
+airfoils reported in the literature and archived in Refs. 16, 17, 31, 37, 39, and 40.
+   The PROFOIL code, which is written in Fortran, has been integrated with a graphical
+user interface (GUI) using Matlab. This GUI code, given the name MFOIL, allows the
+user to interactively modify the α∗-φ curve and view the resulting changes in the airfoil and
+corresponding velocity distributions. Sample screen grabs of the code are show in Figs. 43
+and Fig. 44.
+   The remainder of these notes are devoted to applications of the methodology.
+
+7    SD7003 and SD2030 Airfoil for F3B Model Sailplanes
+
+This first example airfoil, the SD7003, was designed in 1989 and documented in Ref. 31.
+Originally it was intended for F3B R/C soaring competition, and at the time of its design its
+overall drag characteristics were predicted and measured to be the lowest of several competing
+sections. Figure 45 shows the airfoil and inviscid velocity distributions while Fig. 46 shows
+the α∗-φ curve.
+   What distinguishes this airfoil from many others is the rather long and quite shallow
+transition ramp as seen in Figs. 47, 48, and 49 and as is consistent with the shape of the
+α∗-φ curve. In fact, the upper surface transition ramp extends along the entire length of
+the airfoil. The shallow ramp yields a thin bubble and consequently little associated bubble
+drag as can be deduced from the polars shown in Fig. 50. Several attempts were made to
+
+                                          11
+
+=== PAGE 12 ===
+reduce the drag through the use of turbulators, but they either increased the drag or had
+no effect as documented in Ref. 31. This fact is further evidence that the bubble drag is
+quite small for this section. Another interesting observation is that as compared with the
+E387 (and several other airfoils) the oil flow on the surface of the SD7003 was more smeared
+without the high degree of flow feature definition seen in Fig. 10.
+   During this exploratory period in 1989 when there was generally less known about low
+Reynolds number airfoils, a second F3B airfoil, the SD2030 shown in Fig. 51, was designed
+for higher Reynolds number operation with the use of camber changing flaps. The design
+philosophy was opposite that of the SD7003 in that the bubble ramp was rather short and
+positioned far aft on the airfoil. Although the α∗-φ curve is not shown, it mirrors the
+shape of the Cl-xtr/c transition curve that is shown together with the polar in Fig. 52. As
+compared with the SD7003, the ramp on the SD2030 is steeper and occurs further aft on
+the airfoil. From this information alone, one would expect the drag to be higher at the
+lower Reynolds numbers, and this is indeed the case as seen in the predictions (Fig. 52) and
+measured performance shown Fig. 53. For Re = 500,000, however, the extended runs of
+laminar flow give rise to lower drag than the SD7003, which was one of the original design
+goals. (It is worth noting the generally good agreement between the XFOIL predictions
+and experiment, particularly at a Reynolds number of 200,000. The model in this case was
+accurate to 0.006 inch for the 12-inch chord model that was tested.4 In comparison, the
+SD7003 was accurate to 0.004 inch.31)
+
+8    SG604x Series for Small Wind Turbines
+
+The SG604x series of airfoils41 as shown in Fig. 55 was designed for small variable-speed
+horizontal-axis wind turbines having a rated-power of 1–5 kW. The operational Reynolds
+number for such machines is typically below 1,000,000. The focus here will be on the per-
+formance at a Reynolds number of 300,000, which represents rotors on the lower end of the
+range. In ideal conditions, variable speed wind turbines operate at a constant tip speed ratio
+(ΩR/V∞), which leads to the airfoil operating at a single angle of attack over a wide range
+of wind speeds. As a result, for optimum aerodynamic performance during variable-speed
+operation, the low-drag lift range (drag bucket) can be reduced in favor of having greater
+lift-to-drag ratios. However, to account for possible variations in the tip-speed-ratio caused
+by atmospheric turbulence and operational considerations, the best lift-to-drag ratio condi-
+tions should occur over a range of lift coefficients centered about the design lift coefficient.
+In rotor design, another factor deals with the trade-offbetween the blade solidity and the
+design lift coefficient. With all else being equal, a high-solidity rotor requires an airfoil with
+lower lift than that required for a low-solidity rotor. Therefore, given the range of rotor
+designs, a family of airfoils that cover a range of lift coefficients is desirable. These gen-
+eral considerations and others were taken into account in setting the design requirements as
+detailed more thoroughly in Ref. 41. The current discussion is mainly concerned with the
+details of the design approach.
+   PROFOIL was used to prescribe the desired aerodynamic characteristics. In a manner
+similar to that used in the previously discussed SD7003 and SD2030 airfoils, the α∗-φ curve
+was prescribed to define the desired shape of the Cl-xtr/c transition curve. Since the objective
+
+                                          12
+
+=== PAGE 13 ===
+was to achieve a high lift-to-drag ratio with less emphasis being given to operation over a wide
+range, the ramp on the upper surface was made to be rather shallow at the specific design lift
+coefficients of 0.6, 0.9 and 1.2 for the SG6041, SG6042, and SG6043, respectively. Additional
+constraints included the pitching moment, which increased with the design lift coefficient and
+also the airfoil thickness of 10%. It should be added that for ease of construction a finite
+trailing-edge angle was used, producing a zero trailing-edge velocity as seen in Fig. 55.
+   Performance predictions at a Reynolds number of 300,000 are shown in Fig. 56 and
+compare relatively well with the experimental results of Fig. 57. Most importantly, the
+trends in the predictions agree well with experiment, and also the behavior of the α∗-φ curve
+is reflected in the transition curve (Fig. 56).
+   Figure 58 shows the resulting experimentally-determined lift-to-drag ratios at a Reynolds
+number of 300,000 as compared with those for many previously existing airfoils. The SG6040
+shown in the figure is the thicker companion root airfoil for the series of tip airfoils discussed
+here. Clearly, the objective of achieving high lift-to-drag ratios has been achieved. Given the
+high level of performance, these airfoils will likely find their way into applications beyond
+wind energy.
+
+9    S607x Series Designed for Low Pitching Moment
+
+The S607x series is composed of three series of three airfoils each. The effort finally lead
+to an airfoil for its intended application that required a low pitching moment and optimum
+performance at a Reynolds number of 150,000 and lift coefficient near 1. Only data for
+a Reynolds number of 200,000 is presented here, however. The series evolved from a 9%-
+thick family to 12%, and then permutations in the pitching moment were made while other
+improvements were incorporated. In these lecture notes only the second two series are
+discussed.
+   For the second series (S6074/5/6), the study centered on the upper-surface transition
+ramp. Figure 59 shows the small changes in the α∗-φ curve to optimize the transition ramp
+so as to achieve optimum performance near Cl ≃1. These differences result in small changes
+to the resulting velocity distributions shown in Fig. 60. As seen, the shallower α∗-φ curve
+for airfoil S6076 results in a shallower pressure gradient over the forward upper surface. The
+differences in the airfoil shapes are so minute that a magnification of the y-axis is needed to
+highlight the differences. These small changes to the ramp, however, do have a significant
+effect on the bubble as may be deduced from the wind-tunnel tests results depicted in Fig. 61.
+   Unfortunately, this series exhibited undesirable hysteresis as seen in the lift and moment
+curves shown in Fig. 62. The occurance of hysteresis sometimes found at low Reynolds
+numbers (as in this case) cannot be predicted by any computational method. However,
+should hysteresis arise, an attempt can be made to reduce the amount of hysteresis or
+eliminate it entirely. The first steps toward this remedy requires some understanding of the
+flow phenomenon.
+   Figure 63 shows two types of hysteresis that sometimes appear on low Reynolds number
+airfoils. The flow states corresponding to points A and B on opposite branches of the
+hysteresis loops is sketched in Fig. 64. For case A, a short laminar separation bubble exists
+on the upper surface near the leading edge. Downstream of this point the flow is mostly
+
+                                          13
+
+=== PAGE 14 ===
+attached, but some trailing edge separation (not sketched) may exist. For case B, the flow is
+in a stalled state, and laminar flow extends to the point of separation, which occurs near the
+midchord or even closer to the leading edge. As shown both of these flow states are possible
+at the same angle of attack (as indicated in Fig.63), and hence there is hysteresis.
+   What separates and distinguishes the two cases shown in Fig. 63 is the order in which
+flow states A and B occur. For the clockwise hysteresis loop, when the angle of attack is
+decreasing out of stall on the lower branch, the flow is first massively separated. Then at
+a certain point, a small bubble is formed and the lift jumps to the upper branch. For the
+counter clockwise loop, the opposite situation occurs. First, a small bubble resides near
+the leading edge, and then it bursts and jumps to the lower branch where there is massive
+separation. When the angle of attack is increased from the normally attached flow condition,
+the description follows along similar lines except the flow states are reversed.
+   For the current series, the clockwise hysteresis loop is present. Its elimination depends on
+a short bubble attaching to the leading edge as the airfoil comes out of stall with decreasing
+angle of attack. To promote the formation of this bubble, one strategy involves making
+the leading edge suction peak stronger, thereby causing a leading edge bubble and hence
+transition to form sooner. This approach was taken.
+   Figure 65 shows the resulting S6077/9 designs (S6078 is omitted) that have stronger
+suction peaks as compared with the prior series. A secondary purpose of this final series was
+to examine the effects of a change in the pitching moment, which was specified using the
+inverse capabilities of PROFOIL. In comparing the velocity distributions shown in Fig. 60
+with those in Fig. 65, it is seen that this current series has a more concave velocity distribution
+on the forward upper surface to further promote the early formation of a leading edge laminar
+separation bubble. This difference is reflected in the shapes of the S6074/6 vs. S6077/9. As
+seen in Fig. 67, this change in the velocity distribution is enough to practically eliminate the
+stall hysteresis. Finally, the performance is shown in Fig. 68. One feature of using a more
+concave distribution is that the α∗-φ curve (not shown) becomes more shallow. As a result,
+the laminar separation bubble drag is reduced at the upper corner of the low drag range,
+yielding lower drag than the S6074/6 airfoils but also lower maximum lift as a tradeoff.
+
+10     S1223 High Lift Section
+
+Increased payloads, shortened takeoffand landing distances, reduced aircraft noise, and
+lowered stall speeds can all be derived from the beneficial effects of improved high-lift airfoil
+aerodynamics. It is, therefore, not surprising that the classic problem of high-lift airfoil
+design has been and remains a topic of considerable interest.13,42–44 The purpose here is
+to present a high-lift airfoil design philosophy for the increasingly important low Reynolds
+number regime in which small unmanned aerial vehicles (UAVs) operate. Only single-element
+airfoils are considered here.
+   Airfoils for such aircraft typically operate in the Reynolds number range 200,000 to
+500,000. For example, U.S. Navy electronic warfare UAVs (e.g., LAURA45 and FLYRT46,47
+aircraft) fly at ship-like speeds ranging from 25 to 40 knots with payload requirements
+varying from 10 to 25 lbs. The small vehicle size required for efficient shipboard storage
+coupled with low flight speeds and demanding payload requirements places great emphasis
+
+                                          14
+
+=== PAGE 15 ===
+on high-lift low Reynolds number aerodynamics. A similar-sized aircraft, the hand-launched
+Pointer UAV operated by the U.S. Army,48 is used to perform short-range reconnaissance
+missions. Moreover, small payload-laden UAVs have been envisioned for missions that involve
+atmospheric sampling, border surveillance, forest fire detection/tracking, ship- or aircraft-
+wreck survivor search and weather monitoring. In each case, high-lift airfoil performance
+can to varying degrees play an important role.
+   To place the current work in a proper global context, Fig. 69 presents the maximum lift
+characteristics of a number of representative low-speed airfoils taken from various sources
+documented in Ref. 1. Although not all of these airfoils were specifically designed for high-
+lift, a predictable and anticipated trend emerges—the lower the Reynolds number, the lower
+the maximum lift. In particular, in going from a Reynolds number of 1 × 106 to 1 × 105, a
+sharp drop in Cl,max is seen in the available data. The lower end of this range is of interest in
+the design of small UAVs based on current trends.46 In particular, this section of the notes
+focuses on high-lift airfoil design for a Reynolds number of 200,000.
+   It should be mentioned that high lift is rarely the only desirable feature of an airfoil.
+The airfoil lift-to-drag ratio, endurance parameter, thickness, pitching moment, stall char-
+acteristics and sensitivity to roughness are all important factors, among others, that must
+each be weighed separately when one considers selecting or designing an airfoil. This study
+focuses on those factors most related to enhanced high-lift low Reynolds numbers airfoil
+performance.
+   Based on an analysis of several high lift sections, Fig. 70 shows the pitching moment
+characteristics vs. the type of upper-surface pressure recovery for several airfoils. The FX 63-
+137 with its relatively high (negative) pitching moment and convex pressure recovery appears
+towards the upper left corner. In contrast, airfoils with a Stratford-like concave pressure
+recoveries and low pitching moments, such as the Miley M06-13-128 airfoil,43 appear on the
+lower right. Also shown in the Fig. 70 are several trend lines that, together with the moment
+and recovery-type information, can be used to deduce a strategy for high-lift low Reynolds
+number airfoil design. It should be noted that the figure is used to only illustrate the trends
+and qualitative ideas discussed. Thus, it is not intended to be wholly accurate with respect
+to the placement of the airfoils. For instance, two airfoils can have the same pitching moment
+and similar recovery distributions and hence occupy the same point on the plot, yet these
+two airfoils could exhibit different camber, Cl,max and stall characteristics. In the figure,
+the airfoils are placed most accurately with respect to the Cl,max and shape of the recovery
+distribution.
+   One trend depicted in Fig. 70 is that an airfoil typically becomes more cambered when
+the pitching moment increases and/or when the recovery becomes less concave and more
+convex. Another trend is that the trailing-edge stall becomes more abrupt as the pressure
+recovery becomes less convex and more concave. “Stall rate” (as denoted in Fig. 70) refers
+to the shape of the lift curve at stall. The FX 63-137 is an example of an airfoil with
+a “slow” trailing-edge stall for which the point of turbulent separation slowly progresses
+forward as the angle of attack increases. The M06-13-128 is an example of an airfoil that has
+a “moderate” trailing-edge stall.1 The lift curve peaks at Cl,max, then falls offmore rapidly
+than the FX 63-137 airfoil. This characteristic is indicative of a turbulent separation point
+that moves forward more quickly with increasing angle of attack.
+   The last trend shown in Fig. 70 is that the maximum lift coefficient increases as the
+
+                                          15
+
+=== PAGE 16 ===
+pitching moment increases and as the pressure recovery approaches that of a Stratford dis-
+tribution. The FX 63-137 is a good example of increasing the Cl,max primarily through added
+pitching moment. In contrast, classic Liebeck-type airfoils49 (such as the M06-13-128) are
+good examples of increasing the Cl,max mainly through the use of a Stratford distribution.
+   Specifically, the Liebeck high-lift design philosophy10 involves using a Stratford distribu-
+tion to recover the most pressure without separation at Cl,max. Since separation is avoided
+entirely, the prototypical Liebeck airfoil is one with no aft loading, which yields a low pitching
+moment. The M06-13-128 serves as an example of applying the Liebeck design philosophy
+at low Reynolds numbers. Although the M06-13-128 has a high mid-range bubble drag at
+the off-design Reynolds numbers of 300,000, the Cl,max is approximately 1.5. This value for
+Cl,max is high, especially in light of the intrinsic low pitching moment.
+   It is discussed by Eppler13 that to achieve maximum lift on an airfoil with a concave
+Stratford-like recovery the low pitching-moment constraint should be relaxed. In a compu-
+tational study for Reynolds numbers above 1 × 106, Eppler showed that the lift of an airfoil
+with a concave recovery can be increased through the use of aft loading. The airfoils in-
+corporated the favorable effects of both a concave recovery distribution and added pitching
+moment to achieve high Cl,max values. In Fig. 70, airfoils of this type would appear between
+the FX 63-137 and M06-13-128, but displaced in the direction of increased lift.
+   As further discussed in Ref. 1, these considerations and others were used to design an
+airfoil with Cl,max greater than 2 for a Reynolds number of 200,000. Figure 71 shows the
+inviscid velocity distributions predicted by the Eppler code12 for the S1223 for Cl = 1.95.
+Through the use of PROFOIL, the upper-surface velocity distribution corresponding to the
+design Cl,max was determined from a specified boundary-layer development. In particular,
+from the leading edge to near 0.20c, the boundary layer was prescribed to be near laminar
+separation, an approach that could be considered as a “laminar analogy” to the turbulent
+Stratford pressure recovery.50,51 At 0.20c, a short bubble ramp was employed. The main
+pressure recovery was prescribed by specifying the turbulent boundary layer to be increas-
+ingly near turbulent separation toward the trailing edge. Finally, aft loading was employed
+at the trailing edge since, as discussed, the penalty due to limited trailing-edge separation is
+expected to be more than offset by the gain in Cl,max.
+   Measured lift characteristics for a Reynolds number of 200,000 are shown in Fig. 72. The
+results indicate a Cl,max of approximately 2.2, which clearly validates the aforementioned
+design philosophy. As compared with the Cl,max of 1.75 for the FX 63-137, a Cl,max of 2.2 for
+the S1223 represents a 25% increase. It should be noted that the S1223 exhibits acceptable
+moderate stall characteristics much like the M06-13-128. This characteristic is important for
+some UAVs that operate with the airfoil near Cl,max to achieve low-speed flight requirements
+for loiter, cruise or landing.
+   In an effort to increase the Cl,max of the S1223, it was tested with vortex generators
+(VGs) located on the upper surface at 0.17c and, separately, with a 0.01c Gurney flap.1 The
+VGs produced a Cl,max of 2.3 for increasing angles of attack followed by an abrupt stall and
+a hysteresis loop. Thus, the VGs as tested were not beneficial. The lift performance with
+the Gurney flap yielded a Cl,max of 2.3, and the stall was much like that of the clean airfoil.
+   Drag data was taken on the S1223 and is shown in Fig. 73. When the drag coefficient
+exceeded approximately 0.05, no further data was taken since the airfoil was partially stalled
+in which case the accuracy of the wake rake measurements are suspect. As compared with the
+
+                                          16
+
+=== PAGE 17 ===
+FX 63-137, the S1223 has higher drag, which is an expected tradeofffor such high maximum
+lift coefficients.
+
+11     SA703x Series for Thermal Duration Sailplanes
+
+This last example presents a series of airfoils for application to radio controlled (R/C) model
+aircraft, specifically R/C soaring. The interest in designing such a series was motivated by
+the results of a survey at the 1996 AMA Nationals/Unlimited Thermal Soaring Category
+that showed of the 101 responses (from nearly all of the participants) 40 of the pilots used
+the SD7037 airfoil31 shown in Fig. 74 together with its inviscid velocity distribution. Two
+other airfoils (S3021 and RG15) each numbered 8 in use, followed by the fourth (SD7080)
+with 6, and then 24 different airfoils were used on the remainder. Despite the overwhelming
+popularity of the SD7037, it was obvious that this airfoil could not be the optimum for a wide
+range of sailplanes with different sizes, wing loadings and weather conditions. For example,
+in some situations pilots would benefit by having a faster version of the SD7037 (lower lift),
+and in others a slower version (higher lift) might be preferable. Thus, the SD7037 became
+the baseline for this series.
+   For the series, the objective was to produce a range of similar performing airfoils that
+differed with respect to their lift range. One approach would be to make simple camber
+changes to the SD7037 to arrive at the new airfoils, but this process was not used because it
+is more attractive to control the performance by using the inverse capabilities in PROFOIL.
+In particular, PROFOIL was used to set the lower corner of the polar by specifying that
+the laminar boundary layer on the lower surface be close to separating at the lift coefficient
+at the lower corner of the polar. The shape of the polar above this lift coefficient was then
+obtained by tailoring the upper surface transition ramp as was discussed (see Fig. 42).
+   Figure 75 shows the particular laminar boundary-layer development prescribed for the
+lower corner of the polar. This boundary-layer shape parameter H12 distribution, which is
+close to laminar separation, was specified to be achieved at the design angles of attack of
+1.75, 2.15, 2.55 and 2.95 deg relative to the zero-lift line to produce each respective airfoil
+of the SA703x series shown in Fig. 76. (The SA7037 mimics the baseline SD7037.) In the
+figure, the velocity distributions are plotted at angle of attack increments equal to those
+that separate the aforementioned lower surface design angles of attack. The corresponding
+boundary-layer shape parameter developments as predicted by XFOIL for the lower surface
+design condition are shown in Fig. 77, and they are practically identical to the prescription
+shown in Fig. 75. It is worth noting that the laminar boundary-layer H12 developments are
+plotted for a Reynolds number of 200,000; however, the laminar development to transition
+is independent of the Reynolds number as discussed in Ref. 13.
+   When each airfoil is operated below the respective design angle of attack for the lower sur-
+face, laminar separation and subsequent transition in the laminar separation bubble quickly
+move forward and lead to higher drag at the end of the low drag range. This result is found
+in the predictions of XFOIL shown in Fig. 78 and validated by the wind tunnel test results
+shown in Fig. 79. (In place of the SA7037, the baseline SD7037 was tested.) Additional data
+for these airfoils over the Reynolds number range from 100,000 to 300,000 can be found in
+Ref. 17, and tabulated data is available from the web.37
+
+                                          17
+
+=== PAGE 18 ===
+12     Conclusions
+
+In these lecture notes, an approach to the design of low Reynolds number airfoils was de-
+scribed. The power of modern computational tools for low Reynolds number airfoil design
+and analysis was discussed with several examples illustrating the overall approach. Emphasis
+was placed on the design of the airfoils based on boundary-layer considerations related to
+the laminar separation bubble and transition. More specifically, the parameterization of the
+design problem centered around prescribing desirable boundary-layer features through an
+inverse method. Formulating the design problem in this way offers the designer considerably
+more power than one would otherwise have using more traditional methods of inverse design
+(based on a single-point velocity distribution) and design by geometric perturbation. The
+design approach and philosophy can be used successfully to assess design trade-offs with
+a high degree of control. Finally, wind-tunnel testing of low Reynolds number airfoils is,
+however, still needed to provide engineers with a necessary level of confidence required to
+make important engineering decisions.
+
+References
+
+ [1] Guglielmo, J. J. and Selig, M. S., “High-Lift Low Reynolds Number Airfoil Design,”
+    Journal of Aircraft, Vol. 34, No. 1, January–February 1997, pp. 72–79.
+
+ [2] Selig, M. S., Gopalaratham, A., Gigu ́ere, P., and Lyon, C. A., “Systematic Airfoil Design
+    Studies at Low Reynolds Numbers,” Fixed and Flapping Wing Aerodynamics for Micro
+    Air Vehicle Applications, edited by T. J. Mueller, Vol. 195 of Progress in Astronautics
+    and Aeronautics Series, AIAA, New York, 2001, pp. 143–167.
+
+ [3] McGranahan, B. H. and Selig, M. S., “Surface Oil Flow Measurements on Several Airfoils
+    at Low Reynolds Numbers,” AIAA Paper 2003–4067, June 2003.
+
+ [4] Selig, M. S. and McGranahan, B. D., “Wind Tunnel Aerodynamic Tests of Six Airfoils
+    for Use on Small Wind Turbines,” AIAA Paper 2004–1188, January 2004.
+
+ [5] Mueller, T. J., “Low Reynolds Number Vehicles,” AGARDograph 288, February 1985.
+
+ [6] Mueller, T. J., editor, Proceedings of the Conference on Low Reynolds Number Airfoil
+    Aerodynamics, UNDAS-CP-77B123. University of Notre Dame, Notre Dame, IN, June
+    1985.
+
+ [7] Aerodynamics at Low Reynolds Numbers 104 < Re < 106 International Conference,
+    The Royal Aeronautical Society, sponsored by U.S. Office of Naval Research. London
+    Branch, October 1986.
+
+ [8] Mueller, T. J., editor, Low Reynolds Number Aerodynamics, Vol. 54 of Lecture Notes in
+    Engineering. Springer-Verlag, New York, June 1989.
+
+ [9] Mueller, T. J., editor, Fixed and Flapping Wing Aerodynamics for Micro Air Vehicle
+    Applications, Vol. 195 of Progress in Astronautics and Aeronautics Series. AIAA, New
+    York, 2001.
+
+                                         18
+
+=== PAGE 19 ===
+[10] Selig, M. S. and Maughmer, M. D., “A Multi-Point Inverse Airfoil Design Method Based
+    on Conformal Mapping,” AIAA Journal, Vol. 30, No. 5, May 1992, pp. 1162–1170.
+
+[11] Selig, M. S. and Maughmer, M. D., “Generalized Multipoint Inverse Airfoil Design,”
+    AIAA Journal, Vol. 30, No. 11, November 1992, pp. 2618–2625.
+
+[12] Eppler, R. and Somers, D. M., “A Computer Program for the Design and Analysis of
+    Low-Speed Airfoils,” NASA TM 80210, August 1980.
+
+[13] Eppler, R., Airfoil Design and Data, Springer-Verlag, New York, 1990.
+
+[14] Drela, M., “XFOIL: An Analysis and Design System for Low Reynolds Number Airfoils,”
+    Low Reynolds Number Aerodynamics, edited by T. J. Mueller, Vol. 54 of Lecture Notes
+    in Engineering, Springer-Verlag, New York, June 1989, pp. 1–12.
+
+[15] Drela, M., “Low Reynolds-Number Airfoil Design for the M.I.T. Daedalus Prototype:
+    A Case Study,” AIAA Journal, Vol. 25, No. 8, August 1988, pp. 724–732.
+
+[16] Selig, M. S., Guglielmo, J. J., Broeren, A. P., and Gigu`ere, P., Summary of Low-Speed
+    Airfoil Data, Vol. 1, SoarTech Publications, Virginia Beach, Virginia, 1995.
+
+[17] Lyon, C. A., Broeren, A. P., Gigu`ere, P., Gopalarathnam, A., and Selig, M. S., Summary
+    of Low-Speed Airfoil Data, Vol. 3, SoarTech Publications, Virginia Beach, Virginia,
+    1998.
+
+[18] Guglielmo, J. J. and Selig, M. S., “Spanwise Variations in Profile Drag for Airfoils
+    at Low Reynolds Numbers,” Journal of Aircraft, Vol. 33, No. 4, July–August 1996,
+    pp. 699–707.
+
+[19] Evangelista, R., McGhee, R. J., and Walker, B. S., “Correlation of Theory to Wind-
+    Tunnel Data at Reynolds Numbers below 500,000,” Low Reynolds Number Aerodynam-
+    ics, edited by T. J. Mueller, Vol. 54 of Lecture Notes in Engineering, Springer-Verlag,
+    New York, June 1989, pp. 131–145.
+
+[20] McGhee, R. J., Walker, B. S., and Millard, B. F., “Experimental Results for the Eppler
+    387 Airfoil at Low Reynolds Numbers in the Langley Low-Turbulence Pressure Tunnel,”
+    NASA TM 4062, October 1988.
+
+[21] Selig, M. S. and McGranahan, B. D., “Wind Tunnel Aerodynamic Tests on Six Airfoils
+    for Use on Small Wind Turbines,” NREL report in preparation, 2004.
+
+[22] Briley, R. W. and McDonald, H., “Numerical Prediction of Incompressible Separation
+    Bubbles,” Journal of Fluid Mechanics, Vol. 69, No. 4, 1975, pp. 631–656.
+
+[23] Kwon, O. K. and Pletcher, R. H., “Prediction of Incompressible Separated Boundary
+    Layers Including Viscous-Inviscid Interaction,” Transactions of the ASME, Vol. 101,
+    December 1979, pp. 466–472.
+
+[24] Davis, R. L. and Carter, J. E., “Analysis of Airfoil Transitional Separation Bubbles,”
+    NASA CR-3791, July 1984.
+
+                                          19
+
+=== PAGE 20 ===
+[25] Walker, G. J., Subroto, P. H., and Platzer, M. F., “Transition Modeling Effects on
+    Viscous/Inviscid Interaction Analysis of Low Reynolds Number Airfoil Flows Involving
+    Laminar Separation Bubbles,” ASME Paper 88-GT-32, 1988.
+
+[26] Huebsch, W. W. and Rothmayer, A. P., “The Effects of Small-Scale Surface Roughness
+    on Laminar Airfoil-Scale Trailing Edge Separation Bubbles,” AIAA Paper 98-0103,
+    January 1998.
+
+[27] Alam, M. and Sandham, N. D., “Direct Numerical Simulation of ‘Short’ Laminar Sep-
+    aration Bubbles with Turbulent Reattachment,” Journal of Fluid Mechanics, Vol. 403,
+    2000, pp. 223–250.
+
+[28] Lin, J. C. M. and Pauley, L. L., “Low-Reynolds-Number Separation on an Airfoil,”
+    AIAA Journal, Vol. 34, No. 8, 1996, pp. 1570–1577.
+
+[29] Wortmann, F. X., “Progress in the Design of Low Drag Airfoils,” Boundary Layer and
+    Flow Control, edited by G. V. Lachmann, London, 1961, pp. 748–770.
+
+[30] Selig, M. S., “The Design of Airfoils at Low Reynolds Numbers,” AIAA Paper 85-0074,
+    January 1985.
+
+[31] Selig, M. S., Donovan, J. F., and Fraser, D. B., Airfoils at Low Speeds, Soartech 8,
+    SoarTech Publications, Virginia Beach, Virginia, 1989.
+
+[32] Donovan, J. F. and Selig, M. S., “Low Reynolds Number Airfoil Design and Wind
+    Tunnel Testing at Princeton University,” Low Reynolds Number Aerodynamics, edited
+    by T. J. Mueller, Vol. 54 of Lecture Notes in Engineering, Springer-Verlag, New York,
+    June 1989, pp. 39–57.
+
+[33] Hama, F. R., “An Efficient Tripping Devices,” Journal of the Aeronautical Sciences,
+    Vol. 24, March 1957, pp. 236–237.
+
+[34] Eppler, R., “Direkte Berechnung von Tragfl ̈ugelprofilen aus der Druckverteilung,”
+    Ingenieur-Archive, Vol. 25, No. 1, 1957, pp. 32–37, (translated as “Direct Calculation
+    of Airfoil from Pressure Distribution,” NASA TT F-15, 417, 1974).
+
+[35] Eppler, R., “Ergebnisse gemeinsamer Anwendung vo Grenzschicht- und Potentialtheo-
+    rie,” Zeitschrift f ̈ur Flugwissenschaften, Vol. 8, No. 9, 1960, pp. 247–260, (translated as
+    “Results of the Combined Application of Boundary Layer and Profile Theory,” NASA
+    TT F-15, 416, March 1974).
+
+[36] Selig, M. S., Multi-Point Inverse Design of Isolated Airfoils and Airfoils in Cascade in
+    Incompressible Flow, Ph.D. thesis, The Pennsylvania State University, College Park,
+    Pennsylvania, May 1992.
+
+[37] Selig, M. S., UIUC Applied Aerodynamics Group, PROFOIL—Airfoil Design System,
+    http://www.profoil.org, University of Illinois at Urbana–Champaign.
+
+[38] Gopalarathnam, A. and Selig, M. S., “Low Speed NLF Airfoils: A Case Study in Inverse
+    Airfoil Design,” AIAA Paper 99-0399, January 1999.
+
+                                          20
+
+=== PAGE 21 ===
+[39] Selig, M. S., Lyon, C. A., Gigu`ere, P., Ninham, C. N., and Guglielmo, J. J., Summary of
+    Low-Speed Airfoil Data, Vol. 2, SoarTech Publications, Virginia Beach, Virginia, 1996.
+
+[40] Selig, M. S., The Design of Airfoils at Low Reynolds Numbers, Soartech 3, SoarTech
+    Publications, Virginia Beach, Virginia, July 1984.
+
+[41] Gigu`ere, P. and Selig, M. S., “New Airfoils for Small Horizontal Axis Wind Turbines,”
+    ASME Journal of Solar Energy Engineering, Vol. 120, May 1998, pp. 108–114.
+
+[42] Liebeck, R. H. and I., A., “Optimization of Airfoils for Maximum Lift,” Journal of
+    Aircraft, Vol. 7, No. 5, May 1970, pp. 409–415.
+
+[43] Miley, S. J., “On the Design of Airfoils for Low Reynolds Numbers,” AIAA/MIT/SSA
+    2nd International Symposium of the Technology and Science of Low-Speed and Motorless
+    Flight, Soaring Society of America, Los Angeles, CA, 1974, pp. 82–96, also AIAA Paper
+    74-1017, Sept 1974.
+
+[44] Wortmann, F. X., “The Quest for High Lift,” AIAA/MIT/SSA 2nd International Sym-
+    posium of the Technology and Science of Low-Speed and Motorless Flight, Soaring So-
+    ciety of America, Los Angeles, CA, 1974, pp. 97–101, also AIAA Paper 74-1018, Sept
+    1974.
+
+[45] Foch, J. R. and Toot, P. L., “Flight Testing Navy Low Reynolds Number (LRN) Un-
+    manned Aircraft,” Low Reynolds Number Aerodynamics, edited by T. J. Mueller, Vol. 54
+    of Lecture Notes in Engineering, Springer-Verlag, New York, June 1989, pp. 407–417.
+
+[46] Foch, R. J. and Ailinger, K. G., “Low Reynolds Number, Long Endurance Aircraft
+    Design,” AIAA Paper 92–1263, February 1992.
+
+[47] Bovais, C. and Toot, P. L., “Flight Testing the Flying Radar Target (FLYRT),” AIAA
+    Paper 94–2144, June 1994.
+
+[48] Karch, L. G., “Very Low Cost UAVs: Why We Need Them, What More We Need to
+    Do,” Marine Corps Gazette, March 1991, pp. 54–57.
+
+[49] Liebeck, R. H., “Design of Subsonic Airfoils for High Lift,” Journal of Aircraft, Vol. 15,
+    No. 9, 1978, pp. 547–561.
+
+[50] Drela, M. and Giles, M. B., “Viscous-Inviscid Analysis of Transonic and Low Reynolds
+    Number Airfoils,” AIAA Journal, Vol. 25, No. 10, October 1987, pp. 1347–1355.
+
+[51] Somers, D. M., “Subsonic Natural-Laminar-Flow Airfoils,” Natural Laminar Flow and
+    Laminar Flow Control, edited by R. W. Barnwell and M. Y. Hussaini, Springer-Verlag,
+    New York, 1992, pp. 143–176.
+
+                                         21
+
+=== PAGE 22 ===
+         (a) Direct design methods                     (b) Inverse method via velocity distributions
+
+(c) Inverse viscous design (H12 shown in con-          (d) Optimization methods that optimize per-
+ceptual example)                                       formance
+
+                       Figure 1: Various approaches to airfoil design.
+
+                                               22
+
+=== PAGE 23 | img ===
+                                             Figure 4: Smoke flow visualization of a lam-
+                                             inar separation bubble on the E387 airfoil
+                                             at a Re = 100,000, α = 2 deg. (Photo cour-
+                                             tesy of Prof. T.J. Mueller and G. M.Cole,
+Figure 2: Design variables that should be    University of Notre Dame, 1990.)
+considered: velocity distribution, boundary
+layer developments, airfoil geometry, and
+performance.
+
+Figure 3: Multipoint design considerations
+in connection with the desired airfoil perfor-  Figure 5: Effect of transition location on
+mance and corresponding velocity distribu-   bubble size and drag increment (adapted
+tion that gives rise to that performance.    from Drela15).
+
+                                         23
+
+=== PAGE 24 | img ===
+Figure 6: UIUC 3×4 ft low-speed subsonic
+wind tunnel.
+                                                                                       Figure 8: Photograph of the UIUC 3×4 ft
+                                                                                       low-speed subsonic wind tunnel test sec-
+                                                                                       tion.
+
+                                                                                                             Average Turbulence Intensity (Empty Test Section)
+                                                                                         0.25
+                                                                                       (%)        DC Coupled
+                                                                                                  HPF = 0.1Hz
+                                                                                       Intensity 0.2  HPF = 3Hz
+                                                                                                  HPF = 10Hz
+                                                                                         0.15
+                                                                                       Turbulence
+                                                                                          0.1
+                                                                                       Mean
+                                                                                         0.05 100,000      200,000          300,000         400,000          500,000
+                                                                                                                        Reynolds Number
+                                                                                                            Average Turbulence Intensity (Test Apparatus Installed)
+                                                                                         0.25
+                                                                                       (%)        DC Coupled
+                                                                                                  HPF = 0.1Hz
+                                                                                       Intensity 0.2  HPF = 3Hz
+                                                                                                  HPF = 10Hz
+                                                                                         0.15
+                                                                                       Turbulence
+                                                                                          0.1
+                                                                                       Mean
+                                                                                         0.05 100,000      200,000          300,000         400,000          500,000
+                                                                                                                        Reynolds Number
+
+Figure 7:          Experimental setup with Plexi-                                      Figure 9:           Turbulence intensity at tunnel
+glass splitter plates and traverse enclosure                                           centerline, empty test section and with rig
+box not shown for clarity.                                                             in place.
+
+                                                                                24
+
+=== PAGE 25 | img ===
+Figure 10: Representative upper-surface
+oil flow visualization on the E387, Re =
+300,000, α = 5 deg.
+
+Figure 11: Conceptual illustration of the re-
+lationship between the surface oil flow fea-
+tures and skin friction distribution in the
+region of a laminar separation bubble plot-
+ted against the airfoil arc length.
+
+                                           25
+
+=== PAGE 26 ===
+                                    (a) Re = 200,000
+
+                                    (b) Re = 350,000
+
+                                    (c) Re = 500,000
+
+Figure 12: Predicted pressure distributions and evidence of a laminar separation bubble on
+the E387 airfoil for several Reynolds numbers over a range of angles of attack.
+
+                                          26
+
+=== PAGE 27 ===
+                    E387                    Re = 200,000                                              E387                   Re = 500,000
+                    UIUC                                                                              UIUC
+                                        Laminar separation                                                               Laminar separation
+                                        Oil accumulation                                                                 Oil accumulation
+                                        Reattachment                                                                     Reattachment
+                                        Natural transition                                                               Natural transition
+                                        Turbulent separation                                                             Turbulent separation
+               18                                                                                18
+               16                                                                                16
+               14                                                                                14
+               12                                                                                12
+               10                                                                                10
+        α (deg)                                                                           α (deg)
+                8                                                                                 8
+                6                                                                                 6
+                4                                                                                 4
+                2                                                                                 2
+                0                                                                                 0
+               −2                                                                                −2
+                 0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9     1                                     0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9    1
+                                      x/c                                                                               x/c
+
+Figure 13: Locations of the upper surface                                        Figure 15: Locations of the upper surface
+flow features for the E387 airfoil at Re =                                        flow features for the E387 airfoil at Re =
+
+200,000.                                                                         500,000.
+
+                                                                                                      E387 E387 E387 (E) (E) (E)
+                                                                                                      200k 350k 500k
+                                                                                                                         Laminar Laminar Laminar separation separation separation
+                                                                                                                         Oil Oil Oil accumulation accumulation accumulation
+                    E387                    Re = 350,000                                                                 Reattachment Reattachment Reattachment
+                    UIUC                                                                                                 Natural Natural Natural transition transition transition
+                                        Laminar separation                                                               Turbulent Turbulent Turbulent separation separation separation
+                                        Oil accumulation                                         18
+                                        Reattachment
+                                        Natural transition                                       16
+                                        Turbulent separation                                     14
+               18
+               16                                                                                12
+               14                                                                                10
+                                                                                          α (deg)
+               12                                                                                 8
+               10                                                                                 6
+        α (deg)                                                                                   4
+                8
+                6                                                                                 2
+                4                                                                                 0
+                2                                                                                −2
+                                                                                                   0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9    1
+                0                                                                                                       x/c
+
+               −2                                                                Figure 16: Locations of the upper surface
+                 0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9     1
+                                      x/c                                                                                                      Re
+                                                                                 flow features for the E387 airfoil for                                =
+Figure 14: Locations of the upper surface                                        200,000, 350,000 and 500,000 (‘E’ denotes
+flow features for the E387 airfoil at Re =                                        that this is the 5th E387 model in the UIUC
+
+350,000.                                                                         collection).
+
+                                                                          27
+
+=== PAGE 28 ===
+                    E387 E387               Re Re = = 200,000 200,000                                 E387 E387              Re Re = = 200,000 200,000
+                    UIUC LTPT                                                                         UIUC XFOIL
+                                        Laminar Laminar separation separation                                            Laminar Laminar separation separation
+                                        Oil Oil accumulation accumulation                                                Transition Transition
+                                        Reattachment Reattachment                                                        Oil Oil accumulation accumulation
+                                        Natural Natural transition transition                                            Reattachment Reattachment
+                                        Turbulent Turbulent separation separation                                        Turbulent Turbulent separation separation
+               18                                                                                18
+               16                                                                                16
+               14                                                                                14
+               12                                                                                12
+               10                                                                                10
+        α (deg)                                                                           α (deg)
+                8                                                                                 8
+                6                                                                                 6
+                4                                                                                 4
+                2                                                                                 2
+                0                                                                                 0
+               −2                                                                                −2
+                 0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9     1                                     0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9    1
+                                      x/c                                                                               x/c
+
+Figure       17:      Comparison             of    major       E387              Figure        19:      Comparison             of   major        E387
+upper-surface flow features between UIUC                                          upper-surface flow features between UIUC
+and NASA LTPT for Re = 200,000.                                                  and XFOIL for Re = 200,000.
+
+                    E387 E387               Re Re = = 300,000 300,000                                 E387 E387              Re Re = = 350,000 350,000
+                    UIUC LTPT                                                                         UIUC XFOIL
+                                        Laminar Laminar separation separation                                            Laminar Laminar separation separation
+                                        Oil Oil accumulation accumulation                                                Transition Transition
+                                        Reattachment Reattachment                                                        Oil Oil accumulation accumulation
+                                        Natural Natural transition transition                                            Reattachment Reattachment
+                                        Turbulent Turbulent separation separation                                        Turbulent Turbulent separation separation
+               18                                                                                18
+               16                                                                                16
+               14                                                                                14
+               12                                                                                12
+               10                                                                                10
+        α (deg)                                                                           α (deg)
+                8                                                                                 8
+                6                                                                                 6
+                4                                                                                 4
+                2                                                                                 2
+                0                                                                                 0
+               −2                                                                                −2
+                 0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9     1                                     0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9    1
+                                      x/c                                                                               x/c
+
+Figure       18:      Comparison             of    major       E387              Figure        20:      Comparison             of   major        E387
+upper-surface flow features between UIUC                                          upper-surface flow features between UIUC
+and NASA LTPT for Re = 300,000.                                                  and XFOIL for Re = 350,000.
+
+                                                                          28
+
+=== PAGE 29 | img ===
+            E387 E387      Re Re = = 500,000 500,000
+            UIUC XFOIL
+                        Laminar Laminar separation separation
+                        Transition Transition
+                        Oil Oil accumulation accumulation
+                        Reattachment Reattachment
+                        Turbulent Turbulent separation separation
+         18
+         16
+         14
+         12
+         10
+     α (deg)
+          8
+          6
+          4                                       Figure 23: Surface oil-flow visualization on
+          2
+                                                  an airfoil with a zigzag boundary layer tur-
+          0
+                                                  bulator that promotes rapid transition at
+         −2 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+                       x/c                        the trip location.
+
+Figure 21:    Comparison of major E387
+upper-surface flow features between UIUC
+and XFOIL for Re = 500,000.
+
+                                                  Figure 24: Defining the upper surface tran-
+Figure 22:   Conceptual illustration of a         sition ramp as the chordwise extent over
+transition ramp on the upper surface of an        which transition moves while the airfoil op-
+airfoil.                                          erates in the low drag range of the polar.
+
+                                              29
+
+=== PAGE 30 ===
+                                                                              FX 63−137 (B)
+                                                                                  Re = 200,000
+                                                                                  Re = 350,000
+                                                                                  Re = 500,000
+                                                                          2.0
+
+                                                                          1.5
+
+                                                                        Cl
+
+                                                                          1.0
+
+                                                                          0.5
+
+                                                                          0.0
+Figure 25: Inviscid pressure distributions                                 0.00     0.01     0.02      0.03     0.04     0.05
+
+for the FX 63-137 airfoil.
+
+                                                                    Figure 27: Measured performance for the
+                                                                    FX 63-137.
+
+                 FX FX FX 63−137 63−137 63−137 (B) (B) (B)
+                 200k 350k 500k
+                                 Laminar Laminar Laminar separation separation separation
+                                 Transition Transition Transition
+                                 Oil Oil Oil accumulation accumulation accumulation
+                                 Reattachment Reattachment Reattachment
+                                 Turbulent Turbulent Turbulent separation separation separation
+             18
+             16
+             14
+             12
+             10
+       α (deg)
+              8
+              6
+              4
+              2
+              0
+             −2
+               0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+                                x/c
+
+Figure 26: Locations of the upper surface
+flow features for the FX 63-137 airfoil for                          Figure 28: Inviscid pressure distributions
+Re = 200,000, 350,000 and 500,000.                                  for the NASA NLF(1)-0414F airfoil.
+
+                                                              30
+
+=== PAGE 31 ===
+                  NASA NASA NASA NLF(1)−0414F NLF(1)−0414F NLF(1)−0414F   1.5
+                  200k 350k 500k
+                                   Laminar Laminar Laminar separation separation separation
+                                   Transition Transition Transition      V/V∞
+                                   Oil Oil Oil accumulation accumulation accumulation
+                                   Reattachment Reattachment Reattachment
+                                   Turbulent Turbulent Turbulent separation separation separation  1.0
+             18
+             16
+             14
+                                                                          0.5
+             12
+                                                                                                Airfoil A, Cl = 0.6
+             10                                                                                 Airfoil B,  = 0.6
+       α (deg)                                                                                           Cl
+              8
+                                                                           0
+              6
+                                                                               0                      0.5         x/c          1
+              4
+              2
+              0
+             −2
+               0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+                                 x/c                                   Figure 31:        Inviscid velocity distributions
+                                                                       for airfoils A and B to study the different
+Figure 29:         Locations of the upper sur-
+                                                                       effects on drag.
+face flow features for the NASA NLF(1)-
+0414F airfoil for Re = 200,000, 350,000 and
+500,000.
+
+         NASA NLF(1)−0414F
+             Re = 200,000
+             Re = 350,000
+             Re = 500,000
+    1.5
+
+                                                                                 Airfoil A  XFOIL v6.8
+    1.0                                                                          Airfoil B Re = 200,000   Airfoil A       Airfoil B
+                                                                          1.5                       1.5             1.5
+  Cl
+    0.5                                                                   1.0                       1.0             1.0
+                                                                         Cl                         Cl              Cl
+                                                                          0.5                       0.5             0.5
+    0.0
+                                                                          0.0                       0.0             0.0
+                                                                           0.00   0.01   0.02    0.03  0    0.5  1.0   0   0.5   1.0
+                                                                                      Cd                  xs,tr,r/c       xs,tr,r/c
+   −0.5
+      0.00      0.01      0.02      0.03      0.04      0.05
+                               Cd
+                                                                       Figure 32: XFOIL predictions for airfoils A
+Figure 30: Measured performance for the                                and B to illustrate the effects of changes in
+NASA NLF(1)-0414F.                                                     the transition ramp on drag.
+
+                                                                 31
+
+=== PAGE 32 | img ===
+  2.0
+ V/V∞                 Airfoil A
+                      Cl = 0.5, 1.0
+  1.5
+
+  1.0
+                                                  Figure 35: Conformal mapping of a circle
+                                                  to an airfoil.
+  0.5
+
+  0
+     0               0.5      x/c      1
+
+Figure 33: Inviscid velocity distributions
+for airfoil A with the locations of the bubble
+marked.
+
+                                                  Figure 36: Definitions of flow speed and an-
+                                                  gle on the airfoil.
+
+  2.0
+ V/V∞                 Airfoil B
+                      Cl = 0.5, 1.0
+  1.5
+
+  1.0
+
+  0.5
+
+  0
+     0               0.5      x/c      1
+                                                  Figure 37: Flowchart of steps taken to ob-
+Figure 34: Inviscid velocity distributions        tain the geometry of an airfoil given the
+for airfoil B with the locations of the bubble    specified flow velocity (several details omit-
+marked.                                           ted).
+
+                                              32
+
+=== PAGE 33 | img ===
+                                            Figure 39: Partial velocity distributions
+                                            and boundary-layer developments corre-
+                                            sponding to the design conditions (R = 1×
+                                            106 for the n-development, smax = 2.067).
+
+Figure 38: Specification to be achieved.
+
+                                            Figure 40: Airfoil and velocity distributions
+                                            for α = 8, 10 and 15 deg.
+
+                                        33
+
+=== PAGE 34 | img ===
+                  1.75 13   Beginning of segment
+                            End of segment
+                       12
+                        11
+
+                           10
+  2.0
+                               9
+ V/V∞                               8
+                  1.15
+  1.5                 0                  0.25
+
+  1.0
+                         αz (deg) design
+                                 segment
+                           1.59     8
+  0.5                      3.34     9
+                           5.07     10
+                           6.63     11
+                           7.41     12
+                           8.21     13
+   0
+      0                  0.5        x/c       1
+          9 8 7    6   5   4   3
+        10                         2 1
+               SA7035
+                                              19           Figure 43: Interactive Matlab MFOIL GUI
+       17                 18
+                                                           for PROFOIL showing the velocity distri-
+                                                           bution.
+Figure 41: SA7035 inviscid velocity distri-
+butions showing the zero pressure-gradient
+segments and corresponding design angles
+of attack α∗.
+
+      10                          1.5
+                        SA7038
+  α* (deg)                        Cl
+                        SA7037
+       5                SA7036
+                        SA7035    1.0
+       0
+                                  0.5
+      −5
+
+     −10                          0.0
+       180     120     60      0   0.0   0.5   1.0
+                 φ (deg)                 xtr/c
+
+Figure 42: Linkage between the α∗-φ and
+Cl-xtr curves for the SA703x airfoil series.
+
+                                                      34
+
+=== PAGE 35 | img ===
+                                                                10
+
+                                                          α* (deg)
+
+                                                                 5
+
+                                                                 0
+
+                                                                −5
+
+                                                               −10
+                                                                 180      120       60        0
+                                                                             φ (deg)
+
+                                                     Figure 46: SD7003 airfoil α∗-φ curves for
+                                                     control over the Cl-xtr curves.
+
+Figure 44: Interactive Matlab MFOIL GUI
+for PROFOIL showing the α∗-φ curve edit
+window.
+
+                                                                  SD7003 SD7003   Re Re = = 200,000 200,000
+                                                                  UIUC XFOIL
+                                                                               Laminar Laminar separation separation
+                                                                               Transition Transition
+                                                                               Oil Oil accumulation accumulation
+                                                                               Reattachment Reattachment
+                                                                               Turbulent Turbulent separation separation
+                                                               18
+                                                               16
+                                                               14
+                                                               12
+                                                               10
+                                                           α (deg)
+                                                                8
+                                                                6
+                                                                4
+                                                                2
+                                                                0
+                                                               −2 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+                                                                              x/c
+                                                     Figure 47: Comparison of major SD7003
+Figure 45: Inviscid pressure distributions           upper-surface flow features between UIUC
+for the SD7003 airfoil.                              and XFOIL for Re = 200,000.
+
+                                                 35
+
+=== PAGE 36 ===
+                   SD7003 SD7003          Re Re = = 350,000 350,000                      SD7003
+                   UIUC XFOIL                                                                Re = 200,000
+                                      Laminar Laminar separation separation
+                                      Transition Transition                                  Re = 350,000
+                                      Oil Oil accumulation accumulation                      Re = 500,000
+                                      Reattachment Reattachment                    1.5
+                                      Turbulent Turbulent separation separation
+               18
+               16
+                                                                                   1.0
+               14
+               12                                                                Cl
+               10
+        α (deg)                                                                    0.5
+                8
+                6
+                4                                                                  0.0
+                2
+                0
+                                                                                  −0.5
+               −2                                                                    0.00       0.01       0.02       0.03       0.04       0.05
+                 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+                                     x/c                                                                         Cd
+
+Figure      48:      Comparison            of    major       E387             Figure 50:          Measured performance for the
+upper-surface flow features between UIUC                                       SD7003.
+and XFOIL for Re = 350,000.
+
+                   SD7003 SD7003          Re Re = = 500,000 500,000
+                   UIUC XFOIL
+                                      Laminar Laminar separation separation
+                                      Transition Transition
+                                      Oil Oil accumulation accumulation       Figure 51:          Inviscid pressure distributions
+                                      Reattachment Reattachment
+                                      Turbulent Turbulent separation separation  for the SD2030 airfoil.
+               18
+               16
+               14
+               12
+               10
+        α (deg)
+                8
+                6
+                4
+                2
+                0
+               −2
+                 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+                                     x/c
+
+Figure      49:      Comparison            of    major       E387
+upper-surface flow features between UIUC                                       Figure       52:       XFOIL         predictions         for     the
+and XFOIL for Re = 500,000.
+                                                                              SD2030.
+
+                                                                        36
+
+=== PAGE 37 | img ===
+                                                           1.5
+                                                          V/V∞
+                                                           1.0
+
+                                                           0.5              SG6043, αz = 9.0 deg
+                                                                            SG6042, αz = 6.5 deg
+                                                                            SG6041, αz = 4.0 deg
+                                                            0
+                                                              0                  0.5       x/c       1
+
+                                                                          SG6043
+
+                                                                          SG6042
+
+                                                                          SG6041
+
+Figure 53: Measured performance for the
+SD2030.                                                 Figure 55: SG604x airfoils and inviscid ve-
+                                                        locity distributions.
+
+              15
+                            SG6043
+                            SG6042
+              10            SG6041
+          α* (deg)
+               5
+
+               0
+
+              −5
+
+              −10
+
+              −15
+               180     120     60      0
+                          φ (deg)
+
+Figure 54: SG604x airfoil series α∗-φ curves            Figure 56:      XFOIL predictions for the
+for control over the Cl-xtr curves.                     SG604x airfoil series.
+
+                                                    37
+
+=== PAGE 38 ===
+         SG6043                                                                            10
+         SG6042
+         SG6041    Re = 300,000                                                      α* (deg)                S6074
+                                                                                                             S6075
+   1.5                            1.5
+                                                                                                             S6076
+                                                                                            5
+
+   1.0                            1.0
+  Cl                              Cl                                                        0
+   0.5                            0.5
+
+                                                                                           −5
+   0.0                            0.0
+
+  −0.5                           −0.5                                                     −10
+     0.00    0.01    0.02     0.03 −10       0       10      20
+                  Cd                          α (deg)
+
+                                                                                          −15
+Figure 57: Measured performance for the
+SG604x airfoil series.
+                                                                                          −20
+
+                                                                                          −25
+                                                                                            180       120        60         0
+                                                                                                          φ (deg)
+
+                                                                         Figure 59:         S6074/5/6 airfoil series α∗-φ
+
+                                                                         curves for control over the Cl-xtr curves.
+
+  110
+        Re = 300,000                                    SG6043 (t/c=10%)        LRN1007 (t/c=7.3%)
+          SG604x Airfoil Family
+  100     Previously existing airfoils
+                                                                                     FX 63-137 (t/c=13.6%)
+
+                                SG6042 (t/c=10%)
+ratio 90
+                                                          SD7032 (t/c=10%)
+                                           E387                 GO 417a (t/c=2.9%)
+lift-to-drag                            (t/c=9%)
+   80                                A18 (t/c=7.3%)                 SG6040 (t/c=16%)
+                                          Clark-Y (t/c=11.7%)
+              S6062                                                            SD7062 (t/c=14%)
+            (t/c=8%)                     SD7037 (t/c=9.2%)
+Maximum                      SD6060
+   70       SG6041           (t/c=10.4%)     S822 (t/c=16%)
+           (t/c=10%)                                          BW-3 (t/c=5%)
+                             S7012
+              RG15           (t/c=8.8%)        NACA 2414
+           (t/c=8.9%)                          (t/c=14%)
+   60                                                         S823 (t/c=21%)
+
+   50
+     0.5      0.6       0.7       0.8       0.9       1.0       1.1      1.2       1.3       1.4       1.5
+                                    Lift coefficient for maximum lift-to-drag ratio
+
+Figure 58: Maximum lift-to-drag ratio ver-
+sus the corresponding lift coefficient for the
+SG604x airfoil series as compared with sev-
+eral previously existing airfoils.
+
+                                                                   38
+
+=== PAGE 39 ===
+   2.0                                                                         S6074   Re = 200,000           S6076   Re = 200,000
+                                                                               Increasing α                   Increasing α
+                                                                               Decreasing α                   Decreasing α
+ V/V∞                                                                    1.5                       −0.3 1.5                       −0.3
+
+   1.5                                                                   1.0                       −0.2 1.0                       −0.2
+                                                                         Cl                             Cl
+                                                                         0.5                       −0.1 0.5                       −0.1
+   1.0                                                                                             Cm                             Cm
+                                                                         0.0                        0.0 0.0                       0.0
+
+   0.5                                                                  −0.5                        0.1 −0.5                      0.1
+                                                                          −10      0      10     20      −10      0      10     20
+                         S6074, Cl = 0.6                                            α (deg)                        α (deg)
+                         S6076, Cl = 0.6
+
+    0                                                                  Figure 62:         Measured lift curves for the
+       0                       0.5         x/c          1              S6074/6 airfoils.
+                  S6074
+
+                  S6076
+
+Figure 60: S6074/6 airfoils and inviscid ve-
+locity distributions.
+
+                                                                                     A                           A
+
+        S6074
+        S6076     Re = 200,000
+   1.5                           1.5
+                                                                       C                               Cl
+                                                                          l
+   1.0                           1.0
+                                                                                              B                           B
+ Cl                             Cl
+   0.5                           0.5
+
+   0.0                           0.0                                                    a                               a
+
+  −0.5                          −0.5
+    0.00    0.01    0.02    0.03 −10        0      10      20             (a) Clockwise hys-              (b) Counter clock-
+                 Cd                          α (deg)
+                                                                          teresis loop                    wise hysteresis loop
+
+Figure 61:        Measured drag polars for the                         Figure 63: Two types of hysteresis in lift on
+S6074/6 airfoils.                                                      airfoils at low Reynolds numbers.
+
+                                                                 39
+
+=== PAGE 40 | img ===
+                                                                                        S6074
+                                                                                        S6076
+                                                                                        S6077
+                                                                                        S6079
+                    (a) Flow state A
+
+                                                                    Figure 66:       S6074/6/7/9 airfoils with the
+                                                                    thickness magnified to show the small dif-
+                                                                    ferences.
+
+                    (b) Flow state B
+                                                                            S6077  Re = 200,000          S6079  Re = 200,000
+                                                                            Increasing α                 Increasing α
+Figure 64: Flow states corresponding to the                                 Decreasing α                 Decreasing α
+                                                                      1.5                     −0.3 1.5                      −0.3
+upper and lower branches of the hysteresis
+loops see in Fig. 63.                                                 1.0                     −0.2 1.0                      −0.2
+                                                                     Cl                            Cl
+                                                                      0.5                     −0.1 0.5                      −0.1
+                                                                                              Cm                            Cm
+                                                                      0.0                      0.0 0.0                       0.0
+
+                                                                     −0.5                      0.1 −0.5                      0.1
+                                                                       −10     0      10     20     −10      0     10      20
+                                                                                α (deg)                       α (deg)
+
+  2.0
+                                                                    Figure 67:        Measured lift curves for the
+ V/V∞
+                                                                    S6077/9 airfoils.
+  1.5
+
+  1.0
+                                                                            S6077
+                                                                            S6079    Re = 200,000
+                                                                       1.5                         1.5
+
+  0.5
+                                                                       1.0                         1.0
+                        S6077, Cl = 0.6
+                        S6079, Cl = 0.6                               Cl                           Cl
+                                                                       0.5                         0.5
+   0
+       0                     0.5         x/c         1
+                                                                       0.0                         0.0
+                 S6077
+
+                                                                      −0.5                        −0.5
+                 S6079                                                  0.00    0.01   0.02    0.03 −10       0      10      20
+                                                                                    Cd                         α (deg)
+
+Figure 65: S6077/9 airfoils and inviscid ve-                        Figure 68:       Measured drag polars for the
+locity distributions.                                               S6077/9 airfoils.
+
+                                                              40
+
+=== PAGE 41 | img ===
+                                               Figure 71: Inviscid velocity distributions
+                                               for the S1223 airfoil for Cl = 1.95 (invis-
+                                               cid).
+Figure 69: Maximum lift coefficient of sev-
+eral airfoils over a range of Reynolds num-
+bers.
+
+Figure 70: Trends in low Reynolds num-
+ber airfoil characteristics as functions of the
+pitching moment and type of upper-surface      Figure 72: Measured lift characteristics for
+pressure recovery distributions.               the S1223 airfoils at Re = 200,000.
+
+                                           41
+
+=== PAGE 42 | img ===
+                                                                                                 2 1
+                                                                            SA703x
+                                                                      17                  18
+                                                                  5
+                                                                        Critical H12 for laminar separation
+                                                                  4
+                                                                                         18
+                                                                  3   17
+                                                              H12
+                                                                  2                           H12 prescription
+                                                                  1
+                                                                  0
+                                                                   0                   0.5       x/c        1
+
+                                                            Figure      75:        Lower-surface        laminar
+                                                            boundary-layer        development       prescribed
+                                                            for the SA703x airfoil series for the lower
+                                                            corner of the drag polar.
+
+Figure 73: Measured performance for the
+S1223.
+
+                                                              1.5
+
+                                                             V/V∞
+
+  2.0                                                         1.0
+                          αz (deg) α (deg)  Cl
+ V/V∞                       2.00    5.30   0.24
+                            4.00    7.30   0.47
+                            6.00    9.30   0.71                                  SA7038, αz = 6.2 deg
+  1.5                       8.00   11.30   0.94               0.5                SA7037, αz = 5.8 deg
+                           10.00   13.30   1.17                                  SA7036, αz = 5.4 deg
+                                    α0l = −3.3 deg                               SA7035,   = 5.0 deg
+                                                                                         αz
+  1.0                                                          0
+                                                                  0                   0.5       x/c        1
+                                                                           SA7038
+  0.5
+                                                                           SA7037
+
+   0
+                                                                           SA7036
+      0                   0.5       x/c        1
+
+               SD7037                                                      SA7035
+
+Figure 74: SD7037 airfoil and inviscid ve-                  Figure 76: SA703x airfoils and inviscid ve-
+locity distributions.                                       locity distributions.
+
+                                                       42
+
+=== PAGE 43 ===
+      5                                                                SA7038
+            Critical H12 for laminar separation                        SD7037
+      4                                                                SA7036
+          17                  18                                       SA7035  Re = 200,000
+      3                                                           1.5                       1.5
+  H12                     development (XFOIL)
+      2               H12
+                      H12 prescription
+      1                                                           1.0                       1.0
+      0                                                          Cl                         Cl
+       0                    0.5        x/c        1
+                                                                  0.5                       0.5
+
+Figure 77: Laminar boundary-layer devel-
+                                                                  0.0                       0.0
+opment achieved for the SA703x airfoils and
+the agreement with the prescription.
+                                                                 −0.5                       −0.5
+                                                                   0.00   0.01   0.02    0.03 −10     0      10     20
+                                                                              Cd                       α (deg)
+
+                                                               Figure 79: Measured performance for the
+                                                               SA703x airfoil series.
+
+Figure 78:        XFOIL predictions for the
+SA703x airfoil series.
+
+                                                          43

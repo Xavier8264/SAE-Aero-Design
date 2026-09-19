@@ -1,0 +1,267 @@
+# ID: xflr5_part1_theory
+# SOURCE: https://flow5.tech/xflr5/docs/Part%20I%3A%20Theoretical%20overview.pdf
+# ORIGINAL: reference/raw/xflr5_part1_theory.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 18 pages | ~2748 tokens
+# NOTE: XFLR5 official docs Part I theory (Deperrois 2019)
+# FLAG img: pages 1-5,7,9-17
+# FLAG lowtext: pages 2,6-7
+# TOC:
+#   Slide 1 -> PDF page 1
+#   Slide 2 -> PDF page 2
+#   Slide 3 -> PDF page 3
+#   Slide 4 -> PDF page 4
+#   Slide 5 -> PDF page 5
+#   Slide 6 -> PDF page 6
+#   Slide 7 -> PDF page 7
+#   Slide 8 -> PDF page 8
+#   Slide 9 -> PDF page 9
+#   Slide 10 -> PDF page 10
+#   Slide 11 -> PDF page 11
+#   Slide 12 -> PDF page 12
+#   Slide 13 -> PDF page 13
+#   Slide 14 -> PDF page 14
+#   Slide 15 -> PDF page 15
+#   Slide 16 -> PDF page 16
+#   Slide 17 -> PDF page 17
+#   Slide 18 -> PDF page 18
+
+=== PAGE 1 | img ===
+                            Overview of the
+
+           theoretical background in
+
+                                                                         Watch on YouTube:
+                                                                         Part I: Theoretical overview
+                                                                         Part II: The inviscid problem
+Rev. 1.0 – © André Deperrois – March 2019                                Part III: The viscous flow
+
+=== PAGE 2 | lowtext, img ===
+    The million dollar problem:
+solving the Navier-Stokes Equations
+
+=== PAGE 3 | img ===
+      The million dollar problem:
+ solving the Navier-Stokes Equations
+
+The Navier-Stokes equations are to fluid dynamics
+what Maxwell’s equations are to electromagnetism
+              (more on that later)
+
+=== PAGE 4 | img ===
+                         The million dollar problem:
+                   solving the Navier-Stokes Equations
+
+                                                       One of the seven millennium prize
+“Although these equations were written down in               problems published by
+  the 19th Century, our understanding of them            The Clay Mathematics Institute
+   remains minimal. The challenge is to make
+  substantial progress toward a mathematical
+theory which will unlock the secrets hidden in the
+          Navier-Stokes equations.”
+
+=== PAGE 5 | img ===
+     The million dollar problem:
+solving the Navier-Stokes Equations
+
+       Computational Fluid Dynamics is all
+          about solving numerically the
+            Navier-Stokes equations
+
+=== PAGE 6 | lowtext ===
+Navier-Stokes equations
+
+=== PAGE 7 | lowtext, img ===
+                 Navier-Stokes equations
+
+      Inviscid fluid
+
+Euler’s equations
+
+=== PAGE 8 ===
+                           Navier-Stokes equations
+
+              Inviscid fluid
+
+       Euler’s equations
+
+irrotational flow
+
+         Potential flow
+
+=== PAGE 9 | img ===
+                            Navier-Stokes equations
+
+                 Inviscid fluid
+
+           Euler’s equations                            The same equation governs
+                                                                 electrostatics
+    irrotational flow
+
+            Potential flow                          Fluid                          Electrostatic
+                                                  potential                           potential
+Time independent,
+incompressible flow
+          Laplace’s Laplace’s equation equation       Fluid                            Electric
+
+                                                  velocity field                         field
+
+=== PAGE 10 | img ===
+                                  Navier-Stokes equations
+
+                      Inviscid fluid
+
+               Euler’s equations
+
+       irrotational flow
+
+                Potential flow
+
+   Time independent,
+  incompressible flow
+              Laplace’s Laplace’s equation equation
+
+                                                2d
+2d, 3d
+
+=== PAGE 11 | img ===
+                            Navier-Stokes equations
+                 Inviscid fluid                        From Richard Feynman Lectures:
+
+            Euler’s equations                     “When we drop the viscosity term, we will be
+                                                 making an approximation which describes some
+      irrotational flow
+                                                    ideal stuff rather than real water. John
+                                                von Neumann was well aware of the tremendous
+             Potential flow                     difference [...], [...] the main interest was in solving
+                                                    beautiful mathematical problems with this
+  Time independent,                              approximation which had almost nothing to do
+  incompressible flow                             with real fluids. He characterized the theorist
+           Laplace’s Laplace’s equation equation  who made such analyses as a man who studied
+                                                “dry water.” [...]. We are postponing a discussion
+2d, 3d                                                 of real water to the next chapter.”
+
+                                               http://www.feynmanlectures.caltech.edu/II_40.html
+
+=== PAGE 12 | img ===
+                               Navier-Stokes equations
+                    Inviscid fluid                               Time averaged
+                                                                  turbulence
+                                                                                         CFD « RANS »
+                                                                                         Reynolds Averaged
+             Euler’s equations                              Reynolds equations
+                                                                                         Navier-stokes solvers
+       irrotational flow
+
+               Potential flow
+
+   Time independent,
+  incompressible flow
+             Laplace’s Laplace’s equation equation
+
+2d, 3d
+
+=== PAGE 13 | img ===
+                              Navier-Stokes equations
+                   Inviscid fluid                              Time averaged
+                                                                turbulence             CFD « RANS »
+                                                                                       Reynolds Averaged
+             Euler’s equations                            Reynolds equations          Navier-stokes solvers
+      irrotational flow
+
+                                                         3d Boundary Layer eq.
+               Potential flow
+
+  Time independent,                                  In aerodynamics, the main effect of
+  incompressible flow
+                                                          viscosity is to create a thin
+            Laplace’s Laplace’s equation equation      Boundary Layer (BL) on all lifting
+                                                           and non-lifting surfaces
+2d, 3d
+
+=== PAGE 14 | img ===
+                                Navier-Stokes equations
+                    Inviscid fluid                                 Time averaged
+                                                                    turbulence              CFD « RANS »
+                                                                                            Reynolds Averaged
+              Euler’s equations                               Reynolds equations            Navier-stokes solvers
+
+       irrotational flow
+                                                                                         Viscosity models, uniform
+                                                             3d Boundary Layer eq.    pressure in BL thickness, Prandlt
+               Potential flow                                                            mixing length hypothesis.
+
+   Time independent,
+  incompressible flow
+             Laplace’s Laplace’s equation equation
+
+2d, 3d
+
+=== PAGE 15 | img ===
+                               Navier-Stokes equations
+                    Inviscid fluid                               Time averaged
+                                                                  turbulence             CFD « RANS »
+                                                                                          Reynolds Averaged
+             Euler’s equations                              Reynolds equations           Navier-stokes solvers
+
+       irrotational flow
+                                                                                      Viscosity models, uniform
+                                                           3d Boundary Layer eq.   pressure in BL thickness, Prandlt
+               Potential flow                                                         mixing length hypothesis.
+                                                                   2d BL equations
+   Time independent,
+  incompressible flow
+             Laplace’s Laplace’s equation equation            1d BL Integral                2d BL differential
+                                                                equations                      equations
+
+2d, 3d
+
+=== PAGE 16 | img ===
+                               Navier-Stokes equations
+                    Inviscid fluid                               Time averaged
+                                                                  turbulence              CFD « RANS »
+                                                                                          Reynolds Averaged
+             Euler’s equations                              Reynolds equations           Navier-stokes solvers
+
+       irrotational flow
+                                                                                      Viscosity models, uniform
+                                                           3d Boundary Layer eq.   pressure in BL thickness, Prandlt
+               Potential flow                                                         mixing length hypothesis.
+                                                                   2d BL equations
+   Time independent,
+  incompressible flow
+             Laplace’s Laplace’s equation equation            1d BL Integral                2d BL differential
+                                                                equations                       equations
+                                            2d
+                                                                      mixed empirical + theoretical
+2d, 3d                                                              turbulence and transition models
+
+=== PAGE 17 | img ===
+                                Navier-Stokes equations
+                    Inviscid fluid                                Time averaged
+                                                                   turbulence              CFD « RANS »
+                                                                                           Reynolds Averaged
+              Euler’s equations                              Reynolds equations           Navier-stokes solvers
+
+       irrotational flow
+                                                                                       Viscosity models, uniform
+                                                            3d Boundary Layer eq.   pressure in BL thickness, Prandlt
+               Potential flow                                                          mixing length hypothesis.
+                                                                    2d BL equations
+   Time independent,
+  incompressible flow
+             Laplace’s Laplace’s equation equation             1d BL Integral                 2d BL differential
+                                                                 equations                       equations
+                                            2d
+                                                                       mixed empirical + theoretical
+2d, 3d                                                               turbulence and transition models
+
+                          2d viscous results
+                            interpolation
+
+=== PAGE 18 ===
+                     - up next -
+
+          Why does a plane fly:
+      the inviscid potential flow
+
+Rev. 1.0 – © André Deperrois – March 2019

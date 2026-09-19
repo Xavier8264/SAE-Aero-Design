@@ -1,0 +1,49 @@
+# ID: results_2026_east
+# SOURCE: https://www.saeaerodesign.com/content/2026-SAE-Aero-Design-East-Final-Results.pdf
+# ORIGINAL: reference/2026/2026_SAE_Aero_Design_East_Final_Results.pdf
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type pdf | 1 pages | ~718 tokens
+# NOTE: Placings only, no scores
+
+=== PAGE 1 ===
+                     2026 SAE Aero Design Final Results
+
+                       SAE Aero Design East – March 6-8 – Lakeland, FL
+            First Place    Warsaw University of Technology – WUT Regular
+       Reg.  Second Place Concordia University – Regular Stingers
+            Third Place    Univ of Manitoba – Polar Air
+            First Place    Wroclaw University of Technology – JetStream Advanced
+Design  Adv.  Second Place Univ of Cincinnati – Cincinnati Light Air Works
+            Third Place    Georgia Institute of Technology – STINGularity
+            First Place    Georgia Institute of Technology – BUZZfin
+       Micro  Second Place Univ of British Columbia – UBC AeroDesign Micro
+            Third Place    Texas A&M Univ – Farmers Flight Lite
+            First Place    Texas A&M Univ – Farmers Flight
+       Reg.  Second Place Univ of Wisconsin – Platteville – Pioneer Flyers
+            Third Place    Univ of Manitoba – Polar Air
+            First Place    Univ of Cincinnati – Cincinnati Light Air Works
+Presentation  Adv.  Second Place Concordia University – Advanced Stingers
+            Third Place    Western University – Western Aero Design
+            First Place    Univ of British Columbia – UBC AeroDesign Micro
+       Micro  Second Place Texas A&M Univ – Farmers Flight Lite
+            Third Place    Univ of Ottawa – UOAeronautics Micro
+            First Place    Politechnika Poznanska – White Eagle
+      Reg.  Second Place Univ of Wisconsin – Platteville – Pioneer Flyers
+            Third Place    Universidade Federal da Bahia – Axé Fly
+            First Place    Univ of British Columbia – UBC AeroDesign Advanced
+Mission  Adv.  Second Place Univ of Michigan - Ann Arbor – M-Fly Advanced Class
+            Third Place    Univ of Cincinnati – Cincinnati Light Air Works
+            First Place    Georgia Institute of Technology – BUZZfin
+      Micro  Second Place Texas A&M Univ – Farmers Flight Lite
+            Third Place    Wroclaw University of Technology – JetStream Micro
+MathWorks First Place      Universidade Federal da Bahia – Axé Fly
+Simulation Second Place Dayananda Sagar College of Engineering – Team Arcis
+  Award     Third Place    UNESP SJBV Brazil – Adelphi AeroDesign
+            First Place    Politechnika Poznanska – White Eagle
+      Reg.  Second Place Univ of Wisconsin – Platteville – Pioneer Flyers
+            Third Place    Universidade Federal da Bahia – Axé Fly
+            First Place    Univ of Cincinnati – Cincinnati Light Air Works
+Overall  Adv.  Second Place Univ of British Columbia – UBC AeroDesign Advanced
+            Third Place    Univ of Michigan - Ann Arbor – M-Fly Advanced Class
+            First Place    Texas A&M Univ – Farmers Flight Lite
+      Micro  Second Place Georgia Institute of Technology – BUZZfin
+            Third Place    Wroclaw University of Technology – JetStream Micro

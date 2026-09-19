@@ -1,0 +1,94 @@
+# ID: apc_engineering
+# SOURCE: https://www.apcprop.com/technical-information/engineering/
+# ORIGINAL: reference/raw/apc_engineering.html
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type html | 1 pages | ~2554 tokens
+# NOTE: APC theoretical basis: aero, structural (RPM limits), performance-data methodology
+
+=== PAGE 1 ===
+# Engineering - APC Propellers
+
+## Technical Info
+
+Home
+|
+Technical Information
+|
+Engineering
+
+# Engineering
+
+### Engineering Design Process Used to Develop APC Propellers
+
+#### CAD-CAM Computer Program
+
+APC propeller development uses a proprietary PC based CAD-CAM software. The software is specifically tailored for model and UAV propeller design and manufacture. This specialized software allows APC to design, analyze, and manufacture all propellers in-house at our California facility. The system has been undergoing continuous development and improvement for over three decades. The first version of the software came on line in 1989.
+
+#### Injection Molding Parting Line Requirements
+
+APC propellers are injection molded using a pair of mold halves. CNC milling machines are used to accurately machine the molds, aka tooling. The APC computer software, used to define airfoils, blade shape and the resulting CNC motion, dominantly reflects parting line driven requirements. The parting line must be very precise and continuous around the entire perimeter of the tooling cavity to allow precision molding of the very thin airfoils used on many APC propellers.
+
+#### Airfoils
+
+The airfoils may have arbitrary shapes defined with either tabular data (splined cubic fits) or analytical functions typically used for NACA airfoils. The airfoil shapes may vary with span. Capability exists to smoothly "splice" together widely different airfoil shapes. The dominant basis for the primary airfoil shape used in most APC propellers is similar to the NACA 4412 and Clark-Y airfoils, except the leading edge is somewhat lower. Also, the aft region is somewhat thicker. This alters the zero-lift angle by approximately one degree and provides greater lift without having to twist the blade more. Most blades have some washout near the tip. For applications where Mach number effects become significant near the tip, either pitch washout or camber reduction are used to minimize Mach drag rise.
+
+Thin electric, slow-fly, and multi-rotor propellers typically blend the low Reynolds number Eppler E63 airfoil (inboard) with a Clark-Y similar airfoil near the tip.
+
+#### Hub Geometry
+
+Cross-section geometry in and near the hub region is defined with specialized algorithms. The aerodynamic-dominant airfoil must smoothly transition into a structural-dominant shape in a manner that emphasizes strength consistent with milling machine tool constraints. Hub geometry for 3 and 4 bladed propellers is very complex because of the need to match mold parting lines at all points on the mold surface perimeter.
+
+#### Theoretical Basis - Aerodynamics
+
+The performance analysis module in the APC software uses Vortex theory as the basis for the computational method used to determine blade loading. This code has been heavily developed to provide very stable (numerical) performance over a broad range of environments. Numerical stability is an essential property for batch processing. The computer software is capable of analyzing an unlimited number of propellers using a batch processing feature.
+
+Lift-drag data are computed using either the NASA TAIR Code or airfoil Polar Diagrams, using representative airspeed and engine RPM to set Reynolds number distributions. Empirical data are also used in some cases to characterize minimum drag levels under low propeller loading conditions. For some applications, (i.e., an AT-6), the fuselage shape and/or cowling can significantly affect the airflow through the propeller. These flow field effects are computed using 3D potential flow theory. Although the flow field modeling capability exists, it is only used for case specific analyses.
+
+#### Current Development - Aerodynamics
+
+The NASA TAIR code is most appropriate for high speed conditions where the propeller is in the trans-sonic range. As a result, the current version of the analysis software relies on airfoil Polar Diagrams to determine section lift and drag. APC has an extensive airfoil library that is utilized in the design and performance analysis process.
+
+In 2022, APC completed a major update to the performance analysis module of its CAD-CAM software. This improvement will substantially increase predictive accuracy of performance data for a wider range of Reynolds numbers.
+
+Future objectives include the ability to simulate propeller noise. A noise footprint plot, that shows sound pressure levels at varying distances from the aircraft, is a useful tool for assessing ground noise.
+
+#### Performance Data Files
+
+APC provides Performance Data files for all propellers currently in production. These performance data provide estimates of thrust, torque and efficiency over a broad range of model speeds and engine RPM. The performance files now include a software version and a simulation date in the header.
+
+The performance data are all computer generated using the theoretical and computational methods described above. A batch processing system is used to update these data when improvements are made to any of the elements within the performance software. A few days of continuous processing on a high-end workstation is required to update the performance data files.
+
+These data are most useful when utilized on a comparative basis to identify the effects of design changes when test data exist to anchor performance of a particular design. In particular, UAV propeller design will benefit from improved performance data where a highly coupled relationship exists between aircraft drag, engine characteristics, and propeller performance.
+
+In order to allow users to analyze and verify APC propeller performance using their own methods, geometry data is now available for all production propellers. The geometry data files are found in a compressed archive file on the Downloads page.
+
+#### Theoretical Basis - Structural
+
+A propeller-unique stress analysis package is used to compute propeller peak stress and fatigue endurance. Blade cross-section geometric properties (needed for structural analysis) are computed numerically with a very fine chord wise mesh. Steady and alternating stresses are evaluated along the entire blade considering inertia and aerodynamic loads. Stresses are evaluated in terms of bending (thrust and drag), centrifugal (inertia), and torsional (acceleration) components. Fatigue endurance margins are estimated assuming Goodman, Gerber and Smith criteria.
+
+Natural modes (frequencies) of the propeller are computed assuming that the hub is rigid. Both published and empirically determined ranges of composite modulus of elasticity (bending) are used to calculate dynamic amplification factors. These dynamic amplification factors are used to augment (intensify) cyclic stress components.
+
+Torsional acceleration for internal combustion is typically highly sensitive to engine fuel mixture and is therefore rather uncertain. Design parameters have been empirically developed to seek reasonable upper bounds for maximum torsional acceleration loads. However, the uncertainty with this sometimes strong (especially for racing applications) contributor to cyclic stress requires that extensive operational testing be employed to verify structural integrity for high performance applications. The component of cyclic torsional acceleration is not considered for electric motor applications.
+
+Cyclic bending stress induced by precession during rapid loops is also included in the stress computations. However, this effect is very minor, even under extreme pitch rate conditions. In addition, precession stress is normally out-of-phase with torsional vibration effects; therefore, it does not add to peak cyclic stress magnitude.
+
+#### Modulus of Elasticity
+
+Modulus of elasticity (bending) is empirically determined using force-deflection tests with molded specimens that reflect the effects of "skinning " during the injection molding process. The bending modulus is sensitive to humidity.
+
+#### Design Iteration
+
+Fixed pitch propellers generally have to perform well over a large range of flight conditions. Therefore there is no single design condition that may be used to optimize a propeller shape, even if the model airplane characteristics (i.e., total drag coefficient) and engine performance characteristics (torque vs. RPM) are well known. Most (initial) propeller design iterations were verified almost exclusively with extensive flight tests. However, with our extensive propeller data base and updated design software, accurate performance predictions can now be made quickly and without flight tests.
+
+Once a design is broadly set, interactive optimization algorithms may be used to adjust diameter, pitch and chord distributions to maximize thrust for specified model speed, engine RPM and engine torque. Two complementary methods have been used to measure engine RPM and model airspeed in the past. (1) Telemetry provides direct in-flight measurement of engine RPM and airspeed. (2) Radar gun and (video) sound measurements were used to quantify model speed and engine RPM under specific flight conditions. These in-flight speed and RPM data were then used to evaluate the propeller performance. After a large database was developed, interpolation between existing designs was used for developing new designs.
+
+#### Engine In-Flight RPM and Model Airspeed from Telemetry
+
+The telemetry system is a computer controlled data acquisition system that can record data and/or transmit live data to the user. While many options exist within the system, it is primarily used for airspeed and RPM measurements. The airspeed and RPM measurements consistently yield data very close to performance predictions, providing considerable confidence in our performance analysis software.
+
+#### 3 and 4 Blade Propeller Design
+
+Conversion to 3 and 4 bladed propellers is performed by matching the 2-blade torque for specified model speed and RPM conditions. This method allows efficient use of a rather broad data base that now exists for 2-blade propellers.
+
+Assuming the propeller pitch remains unchanged, the diameter of a 3-bladed propeller is approximately 90% of the 2-blade diameter.
+
+Similarly, the diameter of a 4-bladed propeller is approximately 84% of the 2-blade diameter.

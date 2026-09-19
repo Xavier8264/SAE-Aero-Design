@@ -1,0 +1,99 @@
+# ID: klal_windrose
+# SOURCE: https://mesonet.agron.iastate.edu/sites/windrose.phtml?station=LAL&network=FL_ASOS
+# ORIGINAL: reference/raw/klal_windrose.html
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type html | 1 pages | ~1895 tokens
+# NOTE: IEM wind rose page for KLAL (select month on the live page)
+
+=== PAGE 1 ===
+# IEM :: Site Wind Roses
+
+- Station Data & Metadata
+
+- FL_ASOS
+
+Select Station:
+[AAF] APALACHICOLA MUNI (ASOS) [1945-][BOW] Bartow [1944-][F95] Blountstown [2024-][BCT] BOCA RATON AIRPORT [1942-][BKV] BROOKSVILLE (ASOS) [1943-][FIN] Bunnell [2014-][XMR] Cape Canaveral [1950-][VSH] Chipley [2012-2015][NFJ] Choctaw [2005-][CLW] Clearwater Air Park [2014-][2IS] Clewiston [2019-][54A] Coral Creek [2018-][CEW] CRESTVIEW/BOB SIKES [1940-][CTY] Cross City [1943-][CGC] Crystal River [2009-][DAB] DAYTONA BEACH RGNL [1943-][54J] DeFuniak [2013-][DED] DeLand [2012-][DTS] Destin - Fort Walton Beach [1996-][EGI] DUKE FLD/EGLIN [1949-][VPS] EGLIN AFB/VALPARAIS [1938-][EGC] Everglades City [2002-2006][FHB] Fernandina Beach [2011-][FXE] FORT LAUDERDALE [1984-][FLL] Fort Lauderdale - Hollywood [1945-][FMY] FORT MYERS/PAGE FLD [1919-][RSW] FT MYERS/SW FLORIDA [1983-][FPR] FT PIERCE/ST LUCIE [1988-][GNV] GAINESVILLE RGNL [1943-][HWO] HOLLYWOOD/N. PERRY [1999-][HST] HOMESTEAD AFB [1943-][HRT] HURLBURT FIELD (AF) [1955-][IMM] Immokalee Auxiliary [2013-][INF] Inverness [2009-][VQQ] Jacksonville - Cecil Field [1972-][CRG] JACKSONVILLE/CRAIG [1974-][HEG] Jacksonville - Herlong [2019-][JAX] Jacksonville Intl [1930-][NIP] JACKSONVILLE NAS [1945-][NEN] Jacksonville - Whitehouse [2007-][K70] Key Largo - Ocean Reef [2022-][42J] Keystone Heights [1943-][EYW] Key West [1932-][NQX] KEY WEST NAS [1945-][ISM] KISSIMMEE MUNI AIRPORT/ORLANDO [1944-][LCQ] Lake City [1945-][LAL] LAKELAND REGIONAL [1942-][X07] Lake Wales [2018-][LNA] Lantana [2017-][LEE] LEESBURG MUNICIPAL AIRPORT [1943-][24J] Live Oak [2014-][MCF] MACDILL AFB/TAMPA [1941-][AGR] MacGill AFB [2022-][MTH] Marathon [1988-][MKY] Marco Island [2013-][MAI] MARIANA [1950-][NRB] MAYPORT NS [1955-][MLB] MELBOURNE REGIONAL [1928-][COI] Merritt Island [2025-][MBF] Miami Beach [2002-2006][MIA] MIAMI INTL AIRPORT [1932-][TMB] MIAMI/KENDALL-TAMIA [1976-][OPF] MIAMI/OPA LOCKA [1952-][NDZ] Milton [2005-][APF] NAPLES MUNICIPAL [1943-][TTS] NASA SHUTTLE FCLTY [1978-][EVB] NEW SMYRNA BEACH MUNI [2004-][OCF] Ocala [1944-][OCR] Ocean Reef [2002-2003][OBE] Okeechobee [2006-][ORL] ORLANDO/HERNDON [1929-][MCO] Orlando International [1952-][OMN] ORMOND BEACH MUNI [2004-][28J] Palatka [2013-][XFL] Palm Coast [2009-2025][ECP] Panama City [2010-][PFN] PANAMA CITY/BAY CO. [1948-2010][TDR] Panama City Beach - Drone Runway [2012-][COF] PATRICK AFB/COCOA B [1945-][NPA] PENSACOLA NAS [1945-][PNS] PENSACOLA REGIONAL [1937-][FPY] Perry [1998-][PCM] Plant City [2006-][PMP] POMPANO BEACH [1988-][PGD] PUNTA GORDA [1944-][2J9] Quincy [2011-][PIE] SAINT PETERSBURG [1972-][SFB] SANFORD/ORLANDO [1945-][SRQ] SARASOTA-BRADENTON [1972-][SEF] Sebring [1942-][SGJ] ST AUGUSTINE AIRPT [1996-][SPG] St Petersburg [1986-][TLH] TALLAHASSEE RGNL [1937-][TPA] TAMPA INTL AIRPORT [1937-][TPF] Tampa/Knight [2005-][VVG] The VIllages [2001-2018][X21] Titusville [2024-][TIX] TITUSVILLE [1973-][1J0] Tri County [2011-2025][BCR] Tri-County [2006-][PAM] TYNDALL AFB [1942-][X59] Valkaria [2025-][X26] Valkaria AFS [2020-][VDF] VANDENBERG AIRPORT/TAMPA [2001-][VNC] Venice [1944-][VRB] Vero Beach [1931-][F45] West Palm Beach [2018-][DJT] WEST PALM BEACH [1938-][NSE] WHITING FLD NAS-N. [1945-][X60] Williston [2015-][GIF] WINTER HAVEN (ASOS) [1996-][SUA] WITHAM FIELD AIRPORT/STUART [2000-][ZPH] Zephyrville [2012-]
+or
+Select from map
+
+Info-circleInformation ClockLast Ob CameraPhotographs Graph-upMeteogram TableNetwork Table PeopleNeighbors Calendar-monthMonthly Summaries Clock-historyObservation History Diagram-3Wind Roses Diagram-3Custom Wind Roses CalendarData Calendar CloudSatellite Cloud Product DownloadDownload CloudTerminal Aerodome Forecast
+
+## Wind Roses
+
+Scroll down to view monthly climatologies and detailed breakdowns.
+
+Wind roses are information-packed plots providing frequencies of
+wind direction and wind speed. They quickly indicate dominant
+wind directions and the direction of strongest wind speeds.
+
+The IEM has generated these wind roses based on our archive. The archive does
+contain errors and non-representative data, so please use care when using these plots.
+In general, data from airports is of good quality and representative of the
+local surrounding area.
+
+These images and data are in the public domain.
+The disclaimer page contains more details.
+
+Dynamic Wind Rose Tool
+
+Create custom wind roses over any time period
+
+Launch Tool
+
+#### Yearly Climatology
+
+View Raw Data
+
+All-time wind rose based on available historical data
+
+#### Monthly Climatology
+
+Click any thumbnail to view full-size image
+
+January
+
+February
+
+March
+
+April
+
+May
+
+June
+
+July
+
+August
+
+September
+
+October
+
+November
+
+December
+
+##### Wind Rose
+
+### Publications Citing IEM Data ( View All )
+
+These are the most recent 10 publications that have cited the usage of data
+from this page. This
+list is not exhaustive, so please let us know
+if you have a publication that should be added.
+
+- Johnson, M. and K. Tanui. 2026, Incorporating Real Aircraft Safety Data Projects into Aerospace and Aviation Education. 2026 ASEE Annual Conference. https://peer.asee.org/incorporating-real-aircraft-safety-data-projects-into-aerospace-and-aviation-education.pdf
+- Krzyzanowski, B., K. Beyene, et al. 2025, Ambient Trichloroethylene Exposure and Parkinson Disease Risk in Medicare Beneficiaries. Neurology 2025;105:e214174 https://doi.org/10.1212/WNL.0000000000214174
+- Ghennai, M. and A. Belakehal. 2025, The Impact of the Site and the Local Climatic Conditions on the Design of the Forums in
+Roman Cities. International Journal of Sustainable Development and Planning Vol. 20, No. 9 https://doi.org/10.18280/ijsdp.200902
+- Henrico, I. and S. Henrico. 2025, Mapping Red Dust Dispersion in Saldanha Bay: Machine Learning Classification Using Open-Source Geospatial Tools. Advances in Cartography and GIScience of the International Cartographic Association, 5, 14 https://doi.org/10.5194/ica-adv-5-14-2025
+- Ahmed, M., H. Soussa, et al. 2025, Numerical modeling of hydrodynamic and water quality impacts of wastewater discharges in coastal Lagoons: A case study of Ria Formosa. Ain Shams Engineering Journal. Volume 16, Issue 8 https://doi.org/10.1016/j.asej.2025.103482
+- Gobran, A., M. Abd-Elhady, et al. 2025, Influence of an Air Slit in Dust Shields on Accumulation of Dust over PV Panels. Fluids 2025, 10, 153. https://doi.org/10.3390/fluids10060153
+- Hung, J., L. Liu, et al. 2025, Autonomous Year‐Round Measurements of O3, CO, CH4, and N2O in the High Arctic With the Atmospheric Emitted Radiance Interferometer. JGR Atmospheres https://doi.org/10.1029/2024JD042847
+- Dilparic, D., M. Graesch, et al. 2025, PFAS in Iowa drinking water sources: Chemical and geospatial patterns. Science of The Total Environment. Volume 977. https://doi.org/10.1016/j.scitotenv.2025.179397
+- Fitzgerald, K. 2025, The Utilization and Deterior The Utilization and Deterioration of T ation of Travertine in Classical, tine in Classical, Baroque, and Fascist Ar ascist Architectur chitecture: A Case Study fr e: A Case Study from Rome, Italy om Rome, Italy. University of Arkansas, Fayetteville. Masters Thesis https://scholarworks.uark.edu/etd/5698
+- Moumane, A., Al Karkour, et al. 2025, Utilizing GIS, remote sensing, and AHP-multi-criteria decision analysis for optimal landfill site selection in Kenitra Province, Morocco: a step towards sustainable development goals. Discov Environ 3, 4 (2025) https://doi.org/10.1007/s44274-025-00183-0
+
+## Document links on this page
+- https://peer.asee.org/incorporating-real-aircraft-safety-data-projects-into-aerospace-and-aviation-education.pdf

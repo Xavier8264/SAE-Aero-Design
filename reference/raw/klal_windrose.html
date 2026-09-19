@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEM :: Site Wind Roses</title>
+    <meta name="description" content="Iowa State University, Iowa Environmental Mesonet">
+    <meta name="author" content="daryl herzmann akrherz@iastate.edu">
+
+    <link href="/vendor/bootstrap/5.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons for UI and navigation -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="/css/iastate-iem.css" rel="stylesheet">
+
+    <!-- Any page specific headextra content here -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/css/tom-select.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/css/tom-select.bootstrap5.css" rel="stylesheet"><link rel="stylesheet" href="/sites/windrose.css" />
+    <!-- Essential Social Tags -->
+    <meta property="og:title" content="IEM :: Site Wind Roses">
+    <meta property="og:description" content="Iowa Environmental Mesonet of Iowa State University">
+    <meta property="og:image" content="https://mesonet.agron.iastate.edu/images/logo_large.png">
+    <meta property="og:url" content="https://mesonet.agron.iastate.edu/sites/windrose.phtml?station=LAL&amp;network=FL_ASOS">
+        <meta name="twitter:card" content="summary">
+
+    <!-- Non-essential -->
+    <meta name="twitter:creator" content="@akrherz">
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+  </head>
+
+  <body>
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+<header>
+<!-- Mobile navbar: Simple single row with logo, search, and hamburger -->
+<nav class="navbar-site d-block d-lg-none" aria-label="Utility navigation">
+    <div class="container">
+        <div class="mobile-navbar-row d-flex align-items-center">
+            <div class="mobile-logo me-2">
+                <a href="/" title="Home">
+                    <img src="/images/logo_small.png" alt="IEM" height="30">
+                </a>
+            </div>
+            
+            <div class="mobile-search flex-fill me-2">
+                <form action="/search" method="GET" role="search">
+                    <input name="q" aria-label="Search" title="Search" placeholder="Search 'DSM' 'autoplot 100' 'street address'" type="text" class="form-control form-control-sm">
+                </form>
+            </div>
+            
+            <div class="mobile-menu d-flex align-items-center">
+                <!-- Utility toggler removed per design: keep only primary-nav toggler -->
+                <button type="button" class="navbar-toggler p-1 ms-2" data-bs-toggle="collapse" data-bs-target="#navbar-menu-collapse" aria-controls="navbar-menu-collapse" aria-expanded="false" aria-label="Toggle primary navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="visually-hidden">Primary navigation</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile site links (contact, disclaimer, apps) now unified target -->
+        <div class="collapse" id="mobile-nav-collapse">
+            <ul class="nav navbar-nav mobile-site-nav" aria-label="Utility navigation links">
+                <li class="nav-item"><a class="nav-link" href="/info/contacts.php">contact us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/disclaimer.php">disclaimer</a></li>
+                <li class="nav-item"><a class="nav-link" href="/apps.php">apps</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Desktop navbar: ISU wordmark on left, search and links stacked on right -->
+<nav class="navbar-site d-none d-lg-block" aria-label="Utility navigation">
+    <div class="container">
+        <div class="desktop-navbar-row">
+            <div class="desktop-wordmark">
+                <a href="/" title="Home" class="wordmark-unit">
+                    <span class="wordmark-isu">Iowa State University</span>
+                    <span class="wordmark-unit-title">Iowa Environmental Mesonet</span>
+                </a>
+            </div>
+            
+            <div class="desktop-right">
+                <div class="desktop-search">
+                    <form action="/search" method="GET" role="search">
+                        <input name="q" aria-label="Search" title="Search" placeholder="Search 'DSM' 'autoplot 100' 'street address'" type="text" class="form-control">
+                    </form>
+                </div>
+                
+                <div class="desktop-links">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/info/contacts.php">contact us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/disclaimer.php">disclaimer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/apps.php">apps</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+
+<!-- Main navigation menu navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom" aria-label="Primary navigation">
+    <div class="container">
+        <!-- Desktop IEM logo (visible in main nav on desktop) -->
+        <div class="d-none d-lg-block">
+            <a href="/"><img style="height: 50px;" alt="IEM" class="img-fluid float-start" src="/images/logo_small.png" /></a>
+        </div>
+        
+    <!-- Main navigation menu (collapsible on mobile) -->
+    <div class="navbar-collapse collapse" id="navbar-menu-collapse">
+            <div class="d-none d-lg-block">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        href="#" aria-label="Home resources menu"> <i class="bi bi-house-fill" aria-hidden="true"></i><span class="visually-hidden">Home resources</span> </a>
+                        <ul class="dropdown-menu">
+<li><a class="dropdown-item" href="/projects/iao/">Iowa Atmospheric Observatory</a></li>
+<li><a class="dropdown-item" href="/">Iowa Environmental Mesonet</a></li>
+<li><a class="dropdown-item" href="https://cocorahs.org">CoCoRaHS</a></li>
+<li><a class="dropdown-item" href="https://dailyerosion.org">Daily Erosion Project</a></li>
+<li><a class="dropdown-item" href="https://weather.im">Weather.IM Project</a></li>
+                        </ul>
+                    </li>
+<li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Apps</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/apps.php">Application Index</a></li>
+<li><a class="dropdown-item" href="/plotting/auto/">Automated Data Plotting</a></li>
+<li><a class="dropdown-item" href="/climodat/">Climodat</a></li>
+<li><a class="dropdown-item" href="/climodat/monitor.php">Climodat Monitor</a></li>
+<li><a class="dropdown-item" href="/explorer/">IEM Explorer</a></li>
+<li><a class="dropdown-item" href="/rainfall/obhour.phtml">Hourly Precip</a></li>
+<li><a class="dropdown-item" href="/GIS/apps/rview/warnings.phtml">Interactive Radar</a></li>
+<li><a class="dropdown-item" href="/topics/pests/">Pest Maps + Forecasting</a></li>
+<li><a class="dropdown-item" href="/my/current.phtml">Sortable Currents</a></li>
+<li><a class="dropdown-item" href="/timemachine/">Time Machine</a></li>
+<li><a class="dropdown-item active" href="/sites/windrose.phtml?station=AMW&amp;network=IA_ASOS">Wind Roses</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Areas</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/agweather/">Ag Weather/Climate Info</a></li>
+<li><a class="dropdown-item" href="/archive/">Archive Mainpage</a></li>
+<li><a class="dropdown-item" href="/climate/">Climate Mainpage</a></li>
+<li><a class="dropdown-item" href="/current/">Current Mainpage</a></li>
+<li><a class="dropdown-item" href="/dm/">Drought</a></li>
+<li><a class="dropdown-item" href="/GIS/">GIS Mainpage</a></li>
+<li><a class="dropdown-item" href="/nws/">NWS Mainpage</a></li>
+<li><a class="dropdown-item" href="/current/severe.phtml">Severe Weather Mainpage</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Datasets</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/COOP/extremes.php">Daily Climatology</a></li>
+<li><a class="dropdown-item" href="/request/daily.phtml">Daily Observations</a></li>
+<li><a class="dropdown-item" href="/info/datasets/">Dataset Documentation</a></li>
+<li><a class="dropdown-item" href="/iemre/">IEM Reanalysis</a></li>
+<li><a class="dropdown-item" href="/mos/">Model Output Statistics</a></li>
+<li><a class="dropdown-item" href="/docs/nexrad_mosaic/">NEXRAD Mosaic</a></li>
+<li><a class="dropdown-item" href="/request/gis/pireps.php">PIREP - Pilot Reports</a></li>
+<li><a class="dropdown-item" href="/roads/">Roads Mainpage</a></li>
+<li><a class="dropdown-item" href="/current/radar.phtml">RADAR &amp; Satellite</a></li>
+<li><a class="dropdown-item" href="/rainfall/">Rainfall Data</a></li>
+<li><a class="dropdown-item" href="/archive/raob/">Sounding Archive</a></li>
+<li><a class="dropdown-item" href="/smos/">Soil Moisture Satellite</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Info</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/info.php">Info Mainpage</a></li>
+<li><a class="dropdown-item" href="/onsite/features/past.php">Daily Features</a></li>
+<li><a class="dropdown-item" href="/info/links.php">Links</a></li>
+<li><a class="dropdown-item" href="/onsite/news.phtml">News</a></li>
+<li><a class="dropdown-item" href="/present/">Presentations</a></li>
+<li><a class="dropdown-item" href="/info/refs.php">Referenced By</a></li>
+<li><a class="dropdown-item" href="/sites/locate.php">Station Data and Metadata</a></li>
+<li><a class="dropdown-item" href="/QC/">Quality Control</a></li>
+<li><a class="dropdown-item" href="/info/variables.phtml">Variables</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Networks</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/sites/networks.php">Network Tables</a></li>
+<li><a class="dropdown-item" href="/ASOS/">ASOS/AWOS Airports</a></li>
+<li><a class="dropdown-item" href="/cocorahs/">CoCoRaHS - Citizen Science</a></li>
+<li><a class="dropdown-item" href="/DCP/">DCP/HADS/SHEF - Hydrological</a></li>
+<li><a class="dropdown-item" href="/COOP/">NWS COOP - Daily Climate</a></li>
+<li><a class="dropdown-item" href="/agclimate/">ISU Soil Moisture</a></li>
+<li><a class="dropdown-item" href="/nstl_flux/">NLAE Flux</a></li>
+<li><a class="dropdown-item" href="/RWIS/">RWIS - Roadway Weather</a></li>
+<li><a class="dropdown-item" href="/scan/">SCAN - NRCS Soil Climate</a></li>
+<li><a class="dropdown-item" href="/other/">Other</a></li>
+<li><a class="dropdown-item" href="/uscrn/">US Climate Reference</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">NWS Data</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/nws/">NWS Mainpage</a></li>
+<li><a class="dropdown-item" href="/lsr/">Local Storm Report App</a></li>
+<li><a class="dropdown-item" href="/cow/">IEM Cow (SBW Verification)</a></li>
+<li><a class="dropdown-item" href="/raccoon/">IEM Raccoon (SBW Powerpoints)</a></li>
+<li><a class="dropdown-item" href="/river/">River Summary</a></li>
+<li><a class="dropdown-item" href="/GIS/goes.phtml">Satellite Data</a></li>
+<li><a class="dropdown-item" href="/vtec/search.php">Search for Warnings</a></li>
+<li><a class="dropdown-item" href="/nws/sps_search/">Special Weather Statement (SPS) Search</a></li>
+<li><a class="dropdown-item" href="/nws/spc_outlook_search/">SPC Convective Outlook / MCD Search</a></li>
+<li><a class="dropdown-item" href="/GIS/apps/rview/watch.phtml">SPC Watches</a></li>
+<li><a class="dropdown-item" href="/nws/text.php">Text Archives Mainpage</a></li>
+<li><a class="dropdown-item" href="/wx/afos/list.phtml">Text Listing by WFO/Center/Product</a></li>
+<li><a class="dropdown-item" href="/wx/afos/">Text by Product ID</a></li>
+<li><a class="dropdown-item" href="/vtec/">VTEC Browser</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Services</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/api/">API Mainpage</a></li>
+<li><a class="dropdown-item" href="/api/#cgi">CGI / Bulk Data</a></li>
+<li><a class="dropdown-item" href="/request/grx/">Gibson Ridge Placefiles</a></li>
+<li><a class="dropdown-item" href="/projects/iembot/">iembot</a></li>
+<li><a class="dropdown-item" href="/api/#json">JSON Webservices</a></li>
+<li><a class="dropdown-item" href="/request/ldm.php">LDM</a></li>
+<li><a class="dropdown-item" href="/request/maxcsv.py?help">Max CSV</a></li>
+<li><a class="dropdown-item" href="/ogc/">OGC Webservices</a></li>
+<li><a class="dropdown-item" href="/GIS/radmap_api.phtml">RadMap API</a></li>
+<li><a class="dropdown-item" href="/GIS/radview.phtml">RADAR Services</a></li>
+</ul></li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Webcams</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="/projects/webcam.php">Webcam mainpage</a></li>
+<li><a class="dropdown-item" href="/current/bloop.phtml">Build your own lapses</a></li>
+<li><a class="dropdown-item" href="/cool/">Cool lapses</a></li>
+<li><a class="dropdown-item" href="/current/viewer.phtml">IEM Webcam Viewer</a></li>
+<li><a class="dropdown-item" href="/current/isucams.phtml">ISU Campus Webcams</a></li>
+<li><a class="dropdown-item" href="/current/camlapse/">Recent lapses</a></li>
+<li><a class="dropdown-item" href="/current/webcam.php">Still images</a></li>
+</ul></li>
+                </ul>
+            </div>
+            <div class="d-lg-none py-2">
+                <div class="accordion" id="mobile-primary-nav-accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="mobile-nav-home-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mobile-nav-home-collapse" aria-expanded="false"
+                                aria-controls="mobile-nav-home-collapse">Home</button>
+                        </h2>
+                        <div id="mobile-nav-home-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="mobile-nav-home-heading" data-bs-parent="#mobile-primary-nav-accordion">
+                            <div class="accordion-body py-2">
+<a class="d-block py-1 text-decoration-none" href="/projects/iao/">Iowa Atmospheric Observatory</a>
+<a class="d-block py-1 text-decoration-none" href="/">Iowa Environmental Mesonet</a>
+<a class="d-block py-1 text-decoration-none" href="https://cocorahs.org">CoCoRaHS</a>
+<a class="d-block py-1 text-decoration-none" href="https://dailyerosion.org">Daily Erosion Project</a>
+<a class="d-block py-1 text-decoration-none" href="https://weather.im">Weather.IM Project</a>
+                            </div>
+                        </div>
+                    </div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-0-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-0-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-0-collapse">Apps</button></h2><div id="mobile-nav-tab-0-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-0-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/apps.php">Application Index</a>
+<a class="d-block py-1 text-decoration-none" href="/plotting/auto/">Automated Data Plotting</a>
+<a class="d-block py-1 text-decoration-none" href="/climodat/">Climodat</a>
+<a class="d-block py-1 text-decoration-none" href="/climodat/monitor.php">Climodat Monitor</a>
+<a class="d-block py-1 text-decoration-none" href="/explorer/">IEM Explorer</a>
+<a class="d-block py-1 text-decoration-none" href="/rainfall/obhour.phtml">Hourly Precip</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/apps/rview/warnings.phtml">Interactive Radar</a>
+<a class="d-block py-1 text-decoration-none" href="/topics/pests/">Pest Maps + Forecasting</a>
+<a class="d-block py-1 text-decoration-none" href="/my/current.phtml">Sortable Currents</a>
+<a class="d-block py-1 text-decoration-none" href="/timemachine/">Time Machine</a>
+<a class="d-block py-1 text-decoration-none fw-semibold text-primary" href="/sites/windrose.phtml?station=AMW&amp;network=IA_ASOS">Wind Roses</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-1-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-1-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-1-collapse">Areas</button></h2><div id="mobile-nav-tab-1-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-1-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/agweather/">Ag Weather/Climate Info</a>
+<a class="d-block py-1 text-decoration-none" href="/archive/">Archive Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/climate/">Climate Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/current/">Current Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/dm/">Drought</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/">GIS Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/nws/">NWS Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/current/severe.phtml">Severe Weather Mainpage</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-2-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-2-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-2-collapse">Datasets</button></h2><div id="mobile-nav-tab-2-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-2-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/COOP/extremes.php">Daily Climatology</a>
+<a class="d-block py-1 text-decoration-none" href="/request/daily.phtml">Daily Observations</a>
+<a class="d-block py-1 text-decoration-none" href="/info/datasets/">Dataset Documentation</a>
+<a class="d-block py-1 text-decoration-none" href="/iemre/">IEM Reanalysis</a>
+<a class="d-block py-1 text-decoration-none" href="/mos/">Model Output Statistics</a>
+<a class="d-block py-1 text-decoration-none" href="/docs/nexrad_mosaic/">NEXRAD Mosaic</a>
+<a class="d-block py-1 text-decoration-none" href="/request/gis/pireps.php">PIREP - Pilot Reports</a>
+<a class="d-block py-1 text-decoration-none" href="/roads/">Roads Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/current/radar.phtml">RADAR &amp; Satellite</a>
+<a class="d-block py-1 text-decoration-none" href="/rainfall/">Rainfall Data</a>
+<a class="d-block py-1 text-decoration-none" href="/archive/raob/">Sounding Archive</a>
+<a class="d-block py-1 text-decoration-none" href="/smos/">Soil Moisture Satellite</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-3-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-3-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-3-collapse">Info</button></h2><div id="mobile-nav-tab-3-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-3-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/info.php">Info Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/onsite/features/past.php">Daily Features</a>
+<a class="d-block py-1 text-decoration-none" href="/info/links.php">Links</a>
+<a class="d-block py-1 text-decoration-none" href="/onsite/news.phtml">News</a>
+<a class="d-block py-1 text-decoration-none" href="/present/">Presentations</a>
+<a class="d-block py-1 text-decoration-none" href="/info/refs.php">Referenced By</a>
+<a class="d-block py-1 text-decoration-none" href="/sites/locate.php">Station Data and Metadata</a>
+<a class="d-block py-1 text-decoration-none" href="/QC/">Quality Control</a>
+<a class="d-block py-1 text-decoration-none" href="/info/variables.phtml">Variables</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-4-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-4-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-4-collapse">Networks</button></h2><div id="mobile-nav-tab-4-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-4-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/sites/networks.php">Network Tables</a>
+<a class="d-block py-1 text-decoration-none" href="/ASOS/">ASOS/AWOS Airports</a>
+<a class="d-block py-1 text-decoration-none" href="/cocorahs/">CoCoRaHS - Citizen Science</a>
+<a class="d-block py-1 text-decoration-none" href="/DCP/">DCP/HADS/SHEF - Hydrological</a>
+<a class="d-block py-1 text-decoration-none" href="/COOP/">NWS COOP - Daily Climate</a>
+<a class="d-block py-1 text-decoration-none" href="/agclimate/">ISU Soil Moisture</a>
+<a class="d-block py-1 text-decoration-none" href="/nstl_flux/">NLAE Flux</a>
+<a class="d-block py-1 text-decoration-none" href="/RWIS/">RWIS - Roadway Weather</a>
+<a class="d-block py-1 text-decoration-none" href="/scan/">SCAN - NRCS Soil Climate</a>
+<a class="d-block py-1 text-decoration-none" href="/other/">Other</a>
+<a class="d-block py-1 text-decoration-none" href="/uscrn/">US Climate Reference</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-5-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-5-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-5-collapse">NWS Data</button></h2><div id="mobile-nav-tab-5-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-5-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/nws/">NWS Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/lsr/">Local Storm Report App</a>
+<a class="d-block py-1 text-decoration-none" href="/cow/">IEM Cow (SBW Verification)</a>
+<a class="d-block py-1 text-decoration-none" href="/raccoon/">IEM Raccoon (SBW Powerpoints)</a>
+<a class="d-block py-1 text-decoration-none" href="/river/">River Summary</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/goes.phtml">Satellite Data</a>
+<a class="d-block py-1 text-decoration-none" href="/vtec/search.php">Search for Warnings</a>
+<a class="d-block py-1 text-decoration-none" href="/nws/sps_search/">Special Weather Statement (SPS) Search</a>
+<a class="d-block py-1 text-decoration-none" href="/nws/spc_outlook_search/">SPC Convective Outlook / MCD Search</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/apps/rview/watch.phtml">SPC Watches</a>
+<a class="d-block py-1 text-decoration-none" href="/nws/text.php">Text Archives Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/wx/afos/list.phtml">Text Listing by WFO/Center/Product</a>
+<a class="d-block py-1 text-decoration-none" href="/wx/afos/">Text by Product ID</a>
+<a class="d-block py-1 text-decoration-none" href="/vtec/">VTEC Browser</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-6-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-6-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-6-collapse">Services</button></h2><div id="mobile-nav-tab-6-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-6-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/api/">API Mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/api/#cgi">CGI / Bulk Data</a>
+<a class="d-block py-1 text-decoration-none" href="/request/grx/">Gibson Ridge Placefiles</a>
+<a class="d-block py-1 text-decoration-none" href="/projects/iembot/">iembot</a>
+<a class="d-block py-1 text-decoration-none" href="/api/#json">JSON Webservices</a>
+<a class="d-block py-1 text-decoration-none" href="/request/ldm.php">LDM</a>
+<a class="d-block py-1 text-decoration-none" href="/request/maxcsv.py?help">Max CSV</a>
+<a class="d-block py-1 text-decoration-none" href="/ogc/">OGC Webservices</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/radmap_api.phtml">RadMap API</a>
+<a class="d-block py-1 text-decoration-none" href="/GIS/radview.phtml">RADAR Services</a>
+</div></div></div>
+<div class="accordion-item"><h2 class="accordion-header" id="mobile-nav-tab-7-heading"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-nav-tab-7-collapse" aria-expanded="false" aria-controls="mobile-nav-tab-7-collapse">Webcams</button></h2><div id="mobile-nav-tab-7-collapse" class="accordion-collapse collapse" aria-labelledby="mobile-nav-tab-7-heading" data-bs-parent="#mobile-primary-nav-accordion"><div class="accordion-body py-2"><a class="d-block py-1 text-decoration-none" href="/projects/webcam.php">Webcam mainpage</a>
+<a class="d-block py-1 text-decoration-none" href="/current/bloop.phtml">Build your own lapses</a>
+<a class="d-block py-1 text-decoration-none" href="/cool/">Cool lapses</a>
+<a class="d-block py-1 text-decoration-none" href="/current/viewer.phtml">IEM Webcam Viewer</a>
+<a class="d-block py-1 text-decoration-none" href="/current/isucams.phtml">ISU Campus Webcams</a>
+<a class="d-block py-1 text-decoration-none" href="/current/camlapse/">Recent lapses</a>
+<a class="d-block py-1 text-decoration-none" href="/current/webcam.php">Still images</a>
+</div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main role="main" id="main-content"><div class="container-fluid"><div class="hidden-print">
+<form method="GET" name="automatic">
+<input type="hidden" name="network" value="FL_ASOS">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/sites/locate.php">Station Data &amp; Metadata</a></li>
+<li class="breadcrumb-item"><a href="/sites/locate.php?network=FL_ASOS">FL_ASOS</a></li>
+</ol>
+
+<div class="d-flex align-items-center gap-2 mb-3">
+    <label for="station-select" class="form-label mb-0">Select Station:</label>
+    <select name="station" onChange="(this.value)" class="iemselect2" style="min-width: 300px;"><option value="AAF">[AAF] APALACHICOLA MUNI (ASOS) [1945-]</option><option value="BOW">[BOW] Bartow [1944-]</option><option value="F95">[F95] Blountstown [2024-]</option><option value="BCT">[BCT] BOCA RATON AIRPORT [1942-]</option><option value="BKV">[BKV] BROOKSVILLE (ASOS) [1943-]</option><option value="FIN">[FIN] Bunnell [2014-]</option><option value="XMR">[XMR] Cape Canaveral [1950-]</option><option value="VSH">[VSH] Chipley [2012-2015]</option><option value="NFJ">[NFJ] Choctaw [2005-]</option><option value="CLW">[CLW] Clearwater Air Park [2014-]</option><option value="2IS">[2IS] Clewiston [2019-]</option><option value="54A">[54A] Coral Creek [2018-]</option><option value="CEW">[CEW] CRESTVIEW/BOB SIKES [1940-]</option><option value="CTY">[CTY] Cross City [1943-]</option><option value="CGC">[CGC] Crystal River [2009-]</option><option value="DAB">[DAB] DAYTONA BEACH RGNL [1943-]</option><option value="54J">[54J] DeFuniak [2013-]</option><option value="DED">[DED] DeLand [2012-]</option><option value="DTS">[DTS] Destin - Fort Walton Beach [1996-]</option><option value="EGI">[EGI] DUKE FLD/EGLIN [1949-]</option><option value="VPS">[VPS] EGLIN AFB/VALPARAIS [1938-]</option><option value="EGC">[EGC] Everglades City [2002-2006]</option><option value="FHB">[FHB] Fernandina Beach [2011-]</option><option value="FXE">[FXE] FORT LAUDERDALE [1984-]</option><option value="FLL">[FLL] Fort Lauderdale - Hollywood [1945-]</option><option value="FMY">[FMY] FORT MYERS/PAGE FLD [1919-]</option><option value="RSW">[RSW] FT MYERS/SW FLORIDA [1983-]</option><option value="FPR">[FPR] FT PIERCE/ST LUCIE [1988-]</option><option value="GNV">[GNV] GAINESVILLE RGNL [1943-]</option><option value="HWO">[HWO] HOLLYWOOD/N. PERRY [1999-]</option><option value="HST">[HST] HOMESTEAD AFB [1943-]</option><option value="HRT">[HRT] HURLBURT FIELD (AF) [1955-]</option><option value="IMM">[IMM] Immokalee Auxiliary [2013-]</option><option value="INF">[INF] Inverness [2009-]</option><option value="VQQ">[VQQ] Jacksonville - Cecil Field [1972-]</option><option value="CRG">[CRG] JACKSONVILLE/CRAIG [1974-]</option><option value="HEG">[HEG] Jacksonville - Herlong [2019-]</option><option value="JAX">[JAX] Jacksonville Intl [1930-]</option><option value="NIP">[NIP] JACKSONVILLE NAS [1945-]</option><option value="NEN">[NEN] Jacksonville - Whitehouse [2007-]</option><option value="K70">[K70] Key Largo - Ocean Reef [2022-]</option><option value="42J">[42J] Keystone Heights [1943-]</option><option value="EYW">[EYW] Key West [1932-]</option><option value="NQX">[NQX] KEY WEST NAS [1945-]</option><option value="ISM">[ISM] KISSIMMEE MUNI AIRPORT/ORLANDO [1944-]</option><option value="LCQ">[LCQ] Lake City [1945-]</option><option value="LAL" selected>[LAL] LAKELAND REGIONAL [1942-]</option><option value="X07">[X07] Lake Wales [2018-]</option><option value="LNA">[LNA] Lantana [2017-]</option><option value="LEE">[LEE] LEESBURG MUNICIPAL AIRPORT [1943-]</option><option value="24J">[24J] Live Oak [2014-]</option><option value="MCF">[MCF] MACDILL AFB/TAMPA [1941-]</option><option value="AGR">[AGR] MacGill AFB [2022-]</option><option value="MTH">[MTH] Marathon [1988-]</option><option value="MKY">[MKY] Marco Island [2013-]</option><option value="MAI">[MAI] MARIANA [1950-]</option><option value="NRB">[NRB] MAYPORT NS [1955-]</option><option value="MLB">[MLB] MELBOURNE REGIONAL [1928-]</option><option value="COI">[COI] Merritt Island [2025-]</option><option value="MBF">[MBF] Miami Beach [2002-2006]</option><option value="MIA">[MIA] MIAMI INTL AIRPORT [1932-]</option><option value="TMB">[TMB] MIAMI/KENDALL-TAMIA [1976-]</option><option value="OPF">[OPF] MIAMI/OPA LOCKA [1952-]</option><option value="NDZ">[NDZ] Milton [2005-]</option><option value="APF">[APF] NAPLES MUNICIPAL [1943-]</option><option value="TTS">[TTS] NASA SHUTTLE FCLTY [1978-]</option><option value="EVB">[EVB] NEW SMYRNA BEACH MUNI [2004-]</option><option value="OCF">[OCF] Ocala [1944-]</option><option value="OCR">[OCR] Ocean Reef [2002-2003]</option><option value="OBE">[OBE] Okeechobee [2006-]</option><option value="ORL">[ORL] ORLANDO/HERNDON [1929-]</option><option value="MCO">[MCO] Orlando International [1952-]</option><option value="OMN">[OMN] ORMOND BEACH MUNI [2004-]</option><option value="28J">[28J] Palatka [2013-]</option><option value="XFL">[XFL] Palm Coast [2009-2025]</option><option value="ECP">[ECP] Panama City [2010-]</option><option value="PFN">[PFN] PANAMA CITY/BAY CO. [1948-2010]</option><option value="TDR">[TDR] Panama City Beach - Drone Runway [2012-]</option><option value="COF">[COF] PATRICK AFB/COCOA B [1945-]</option><option value="NPA">[NPA] PENSACOLA NAS [1945-]</option><option value="PNS">[PNS] PENSACOLA REGIONAL [1937-]</option><option value="FPY">[FPY] Perry [1998-]</option><option value="PCM">[PCM] Plant City [2006-]</option><option value="PMP">[PMP] POMPANO BEACH [1988-]</option><option value="PGD">[PGD] PUNTA GORDA [1944-]</option><option value="2J9">[2J9] Quincy [2011-]</option><option value="PIE">[PIE] SAINT PETERSBURG [1972-]</option><option value="SFB">[SFB] SANFORD/ORLANDO [1945-]</option><option value="SRQ">[SRQ] SARASOTA-BRADENTON [1972-]</option><option value="SEF">[SEF] Sebring [1942-]</option><option value="SGJ">[SGJ] ST AUGUSTINE AIRPT [1996-]</option><option value="SPG">[SPG] St Petersburg [1986-]</option><option value="TLH">[TLH] TALLAHASSEE RGNL [1937-]</option><option value="TPA">[TPA] TAMPA INTL AIRPORT [1937-]</option><option value="TPF">[TPF] Tampa/Knight [2005-]</option><option value="VVG">[VVG] The VIllages [2001-2018]</option><option value="X21">[X21] Titusville [2024-]</option><option value="TIX">[TIX] TITUSVILLE [1973-]</option><option value="1J0">[1J0] Tri County [2011-2025]</option><option value="BCR">[BCR] Tri-County [2006-]</option><option value="PAM">[PAM] TYNDALL AFB [1942-]</option><option value="X59">[X59] Valkaria [2025-]</option><option value="X26">[X26] Valkaria AFS [2020-]</option><option value="VDF">[VDF] VANDENBERG AIRPORT/TAMPA [2001-]</option><option value="VNC">[VNC] Venice [1944-]</option><option value="VRB">[VRB] Vero Beach [1931-]</option><option value="F45">[F45] West Palm Beach [2018-]</option><option value="DJT">[DJT] WEST PALM BEACH [1938-]</option><option value="NSE">[NSE] WHITING FLD NAS-N. [1945-]</option><option value="X60">[X60] Williston [2015-]</option><option value="GIF">[GIF] WINTER HAVEN (ASOS) [1996-]</option><option value="SUA">[SUA] WITHAM FIELD AIRPORT/STUART [2000-]</option><option value="ZPH">[ZPH] Zephyrville [2012-]</option></select>    <input type="submit" class="btn btn-primary" value="Change Station" />
+    <span class="text-muted">or</span>
+    <a href="/sites/locate.php?network=FL_ASOS" class="btn btn-outline-secondary btn-sm">Select from map</a>
+</div>
+</form>
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a href="/sites/site.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-info-circle me-1" aria-hidden="true"></i><span class="visually-hidden">Info-circle</span>Information</a> <a href="/sites/current.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-clock me-1" aria-hidden="true"></i><span class="visually-hidden">Clock</span>Last Ob</a> <a href="/sites/pics.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-camera me-1" aria-hidden="true"></i><span class="visually-hidden">Camera</span>Photographs</a> <a href="/sites/meteo.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-graph-up me-1" aria-hidden="true"></i><span class="visually-hidden">Graph-up</span>Meteogram</a> <a href="/sites/networks.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-table me-1" aria-hidden="true"></i><span class="visually-hidden">Table</span>Network Table</a> <a href="/sites/neighbors.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-people me-1" aria-hidden="true"></i><span class="visually-hidden">People</span>Neighbors</a> <a href="/sites/monthlysum.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-calendar-month me-1" aria-hidden="true"></i><span class="visually-hidden">Calendar-month</span>Monthly Summaries</a> <a href="/sites/obhistory.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-clock-history me-1" aria-hidden="true"></i><span class="visually-hidden">Clock-history</span>Observation History</a> <a href="/sites/windrose.phtml?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary active"><i class="bi bi-diagram-3 me-1" aria-hidden="true"></i><span class="visually-hidden">Diagram-3</span>Wind Roses</a> <a href="/sites/dyn_windrose.phtml?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-diagram-3 me-1" aria-hidden="true"></i><span class="visually-hidden">Diagram-3</span>Custom Wind Roses</a> <a href="/sites/hist.phtml?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-calendar me-1" aria-hidden="true"></i><span class="visually-hidden">Calendar</span>Data Calendar</a> <a href="/sites/scp.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-cloud me-1" aria-hidden="true"></i><span class="visually-hidden">Cloud</span>Satellite Cloud Product</a> <a href="/request/download.phtml?network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-download me-1" aria-hidden="true"></i><span class="visually-hidden">Download</span>Download</a> <a href="/sites/taf.php?station=LAL&amp;network=FL_ASOS" class="btn btn-outline-primary"><i class="bi bi-cloud me-1" aria-hidden="true"></i><span class="visually-hidden">Cloud</span>Terminal Aerodome Forecast</a> </div>
+</div>
+<div class="row"><div class="col-md-12">
+<h2 class="mb-3">Wind Roses</h2>
+
+<div class="alert alert-info d-flex align-items-center mb-4" role="alert">
+    <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+    <div>
+        <strong>Scroll down</strong> to view monthly climatologies and detailed breakdowns.
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-lg-8">
+        <p class="lead">Wind roses are information-packed plots providing frequencies of
+        wind direction and wind speed. They quickly indicate dominant
+        wind directions and the direction of strongest wind speeds.</p>
+
+        <p>The IEM has generated these wind roses based on our archive. The archive does
+        contain errors and non-representative data, so please use care when using these plots.
+        In general, data from airports is of good quality and representative of the
+        local surrounding area.</p>
+
+        <p class="text-muted small">These images and data are in the public domain.
+        The <a href="/disclaimer.php">disclaimer page</a> contains more details.</p>
+    </div>
+    <div class="col-lg-4">
+        <div class="card border-primary">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-tools me-2"></i>Dynamic Wind Rose Tool
+            </div>
+            <div class="card-body">
+                <p class="card-text">Create custom wind roses over any time period</p>
+                <a href="dyn_windrose.phtml?station=LAL&network=FL_ASOS"
+                   class="btn btn-primary w-100">
+                    <i class="bi bi-graph-up me-2"></i>Launch Tool
+                </a>
+            </div>
+        </div>
+    </div>
+</div><div class="card mb-4">
+    <div class="card-header bg-light">
+        <h4 class="mb-0"><i class="bi bi-calendar-range me-2"></i>Yearly Climatology</h4>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=1'
+               class='btn btn-outline-primary'
+               role='button'
+               rel='nofollow'>
+                <i class='bi bi-table' aria-hidden='true'></i> View Raw Data
+            </a>
+        </div>
+        <figure class="figure">
+            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_yearly.png"
+                 class="img-fluid rounded shadow-sm"
+                 alt="Yearly wind rose for LAL"
+                 loading="lazy">
+            <figcaption class="figure-caption text-center mt-2">
+                All-time wind rose based on available historical data
+            </figcaption>
+        </figure>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header bg-light">
+        <h4 class="mb-0"><i class="bi bi-calendar3 me-2"></i>Monthly Climatology</h4>
+        <small class="text-muted">Click any thumbnail to view full-size image</small>
+    </div>
+    <div class="card-body">
+        <div class="row g-4">            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>January</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=1&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for January'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_jan.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_jan.png"
+                           data-bs-title="January Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_jan.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="January wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>February</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=2&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for February'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_feb.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_feb.png"
+                           data-bs-title="February Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_feb.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="February wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>March</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=3&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for March'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_mar.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_mar.png"
+                           data-bs-title="March Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_mar.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="March wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>April</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=4&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for April'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_apr.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_apr.png"
+                           data-bs-title="April Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_apr.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="April wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>May</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=5&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for May'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_may.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_may.png"
+                           data-bs-title="May Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_may.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="May wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>June</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=6&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for June'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_jun.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_jun.png"
+                           data-bs-title="June Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_jun.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="June wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>July</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=7&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for July'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_jul.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_jul.png"
+                           data-bs-title="July Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_jul.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="July wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>August</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=8&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for August'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_aug.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_aug.png"
+                           data-bs-title="August Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_aug.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="August wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>September</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=9&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for September'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_sep.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_sep.png"
+                           data-bs-title="September Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_sep.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="September wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>October</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=10&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for October'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_oct.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_oct.png"
+                           data-bs-title="October Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_oct.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="October wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>November</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=11&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for November'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_nov.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_nov.png"
+                           data-bs-title="November Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_nov.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="November wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6 col-lg-4'>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary bg-opacity-10">
+                        <strong class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-month me-2"></i>December</span>
+                            <a href='/cgi-bin/mywindrose.py?nsector=36&station=LAL&network=FL_ASOS&year1=1970&day1=1&day2=1&month2=1&minute1=0&minute2=0&units=mph&justdata=true&hour1=0&hour2=0&year2=2027&month1=12&monthlimit=1'
+                               class='btn btn-sm btn-outline-primary'
+                               role='button'
+                               rel='nofollow'
+                               title='View raw data for December'>
+                                <i class='bi bi-table'></i>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="card-body p-2">
+                        <a href="/onsite/windrose/FL_ASOS/LAL/LAL_dec.png"
+                           class="d-block position-relative overflow-hidden rounded"
+                           data-bs-toggle="modal"
+                           data-bs-target="#imageModal"
+                           data-bs-image="/onsite/windrose/FL_ASOS/LAL/LAL_dec.png"
+                           data-bs-title="December Wind Rose">
+                            <img src="/onsite/windrose/FL_ASOS/LAL/LAL_dec.png"
+                                 class="img-fluid hover-zoom"
+                                 alt="December wind rose"
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Wind Rose</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" id="modalImage" class="img-fluid" alt="Wind rose">
+            </div>
+        </div>
+    </div>
+</div>
+<h3>Publications Citing IEM Data (<a href="/info/refs.php">View All</a>)</h3>
+<p>These are the most recent 10 publications that have cited the usage of data
+from this page. This
+list is not exhaustive, so please <a href="/info/contacts.php">let us know</a>
+if you have a publication that should be added.</p>
+<ul><li>Johnson, M. and K. Tanui. 2026, Incorporating Real Aircraft Safety Data Projects into Aerospace and Aviation Education. 2026 ASEE Annual Conference. <a href="https://peer.asee.org/incorporating-real-aircraft-safety-data-projects-into-aerospace-and-aviation-education.pdf">https://peer.asee.org/incorporating-real-aircraft-safety-data-projects-into-aerospace-and-aviation-education.pdf</a></li><li>Krzyzanowski, B., K. Beyene, et al. 2025, Ambient Trichloroethylene Exposure and Parkinson Disease Risk in Medicare Beneficiaries. Neurology 2025;105:e214174 <a href="https://doi.org/10.1212/WNL.0000000000214174">https://doi.org/10.1212/WNL.0000000000214174</a></li><li>Ghennai, M. and A. Belakehal. 2025, The Impact of the Site and the Local Climatic Conditions on the Design of the Forums in
+Roman Cities. International Journal of Sustainable Development and Planning Vol. 20, No. 9 <a href="https://doi.org/10.18280/ijsdp.200902">https://doi.org/10.18280/ijsdp.200902</a></li><li>Henrico, I. and S. Henrico. 2025, Mapping Red Dust Dispersion in Saldanha Bay: Machine Learning Classification Using Open-Source Geospatial Tools. Advances in Cartography and GIScience of the International Cartographic Association, 5, 14 <a href="https://doi.org/10.5194/ica-adv-5-14-2025">https://doi.org/10.5194/ica-adv-5-14-2025</a></li><li>Ahmed, M., H. Soussa, et al. 2025, Numerical modeling of hydrodynamic and water quality impacts of wastewater discharges in coastal Lagoons: A case study of Ria Formosa. Ain Shams Engineering Journal. Volume 16, Issue 8 <a href="https://doi.org/10.1016/j.asej.2025.103482">https://doi.org/10.1016/j.asej.2025.103482</a></li><li>Gobran, A., M. Abd-Elhady, et al. 2025, Influence of an Air Slit in Dust Shields on Accumulation of Dust over PV Panels. Fluids 2025, 10, 153. <a href="https://doi.org/10.3390/fluids10060153">https://doi.org/10.3390/fluids10060153</a></li><li>Hung, J., L. Liu, et al. 2025, Autonomous Year‐Round Measurements of O3, CO, CH4, and N2O in the High Arctic With the Atmospheric Emitted Radiance Interferometer. JGR Atmospheres <a href="https://doi.org/10.1029/2024JD042847">https://doi.org/10.1029/2024JD042847</a></li><li>Dilparic, D., M. Graesch, et al. 2025, PFAS in Iowa drinking water sources: Chemical and geospatial patterns. Science of The Total Environment. Volume 977. <a href="https://doi.org/10.1016/j.scitotenv.2025.179397">https://doi.org/10.1016/j.scitotenv.2025.179397</a></li><li>Fitzgerald, K. 2025, The Utilization and Deterior The Utilization and Deterioration of T ation of Travertine in Classical, tine in Classical, Baroque, and Fascist Ar ascist Architectur chitecture: A Case Study fr e: A Case Study from Rome, Italy om Rome, Italy. University of Arkansas, Fayetteville. Masters Thesis <a href="https://scholarworks.uark.edu/etd/5698">https://scholarworks.uark.edu/etd/5698</a></li><li>Moumane, A., Al Karkour, et al. 2025, Utilizing GIS, remote sensing, and AHP-multi-criteria decision analysis for optimal landfill site selection in Kenitra Province, Morocco: a step towards sustainable development goals. Discov Environ 3, 4 (2025) <a href="https://doi.org/10.1007/s44274-025-00183-0">https://doi.org/10.1007/s44274-025-00183-0</a></li></ul></div></div>
+</div><!--/.container--></main><footer>
+    <div class="container" id="iem-footer" aria-label="Site footer">
+        <div class="row">
+
+            <!-- footer-associates -->
+            <section class="footer-associates col-sm-12 col-md-3">
+                <ul>
+                    <li><a href="https://iastate.edu"><img src="/vendor/img/isu-stacked.svg" class="wordmark-isu" alt="Iowa State University"></a></li>
+                    <li><a href="https://www.ag.iastate.edu">College of Ag</a></li>
+                    <li><a href="https://www.agron.iastate.edu">Department of Agronomy</a></li>
+                </ul>
+            </section>
+
+            <!-- footer-contact -->
+            <section class="footer-contact col-sm-12 col-md-3" aria-labelledby="footer-contact-heading">
+                <h2 id="footer-contact-heading" class="visually-hidden">Contact</h2>
+                <address class="mb-2">
+                    <strong>Department of Agronomy</strong><br>
+                    <a href="https://maps.google.com/?q=716+Farm+House+Ln+Ames,+IA+50011">716 Farm House Ln<br>
+                    Ames, IA 50011</a>
+                </address>
+                <a href="mailto:akrherz@iastate.edu">akrherz@iastate.edu</a><br>
+            </section>
+
+            <!-- footer-social -->
+            <section class="footer-social col-sm-12 col-md-3" aria-labelledby="footer-social-heading">
+                <h2 id="footer-social-heading" class="visually-hidden">Social media</h2>
+                <ul class=" labeled">
+                <li><a href="https://www.facebook.com/IEM-157789644737/"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Facebook</a></li>
+                <li><a href="https://x.com/akrherz"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Twitter</a></li>
+                <li><a href="https://github.com/akrherz/iem"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Github</a></li>
+                <li><a href="https://youtube.com/akrherz"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> YouTube</a></li>
+                <li><a href="/rss.php"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> RSS</a></li>
+                </ul>
+            </section>
+
+            <!-- footer-legal -->
+            <section class="footer-legal col-sm-12 col-md-3" aria-labelledby="footer-legal-heading">
+                <h2 id="footer-legal-heading" class="visually-hidden">Legal</h2>
+                <p>Copyright &copy; 2001-2026<br>
+                                Iowa State University<br>
+                                of Science and Technology<br>
+                                All rights reserved.</p>
+                <ul>
+                    <li><a href="https://www.policy.iastate.edu/policy/discrimination">Non-discrimination Policy</a></li>
+                    <li><a href="https://www.policy.iastate.edu/electronicprivacy">Privacy Policy</a></li>
+                    <li><a href="https://digitalaccess.iastate.edu">Digital Access &amp; Accessibility</a></li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+</footer>
+    <script src="/vendor/bootstrap/5.3.6/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/iastate-iem.js"></script>
+
+    <script type="module" src="/sites/windrose.module.js"></script><script src="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/js/tom-select.complete.min.js"></script>
+<script src="/js/select2.js?v=3"></script>  </body>
+</html>

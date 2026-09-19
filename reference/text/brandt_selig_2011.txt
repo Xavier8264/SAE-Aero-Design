@@ -1,0 +1,895 @@
+# ID: brandt_selig_2011
+# SOURCE: https://m-selig.ae.illinois.edu/pubs/BrandtSelig-2011-AIAA-2011-1255-LRN-Propellers.pdf
+# ORIGINAL: reference/raw/brandt_selig_2011.pdf
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type pdf | 18 pages | ~11889 tokens
+# NOTE: Brandt & Selig AIAA 2011-1255: low-Re prop test method and results (UIUC prop DB paper)
+# FLAG img: pages 2,4-6
+# TOC:
+#   p1 -> PDF page 1
+#     Introduction -> PDF page 1
+#     Experimental Setup -> PDF page 1
+#       UIUC Wind Tunnel -> PDF page 1
+#       Thrust and Torque Measurements -> PDF page 1
+#       Propeller Speed Measurement -> PDF page 1
+#       Freestream Flow Speed Measurement -> PDF page 1
+#       Motor, Speed Controller and Propellers -> PDF page 1
+#       Data Acquistion and Experimental Procedure -> PDF page 1
+#     Data Reduction and Wind Tunnel Corrections -> PDF page 1
+#       Propeller Speed Determination -> PDF page 1
+#       Velocity Corrections -> PDF page 1
+#     Results -> PDF page 1
+#       APC Propellers -> PDF page 1
+#       Graupner Propellers -> PDF page 1
+#       GWS Propellers -> PDF page 1
+#       Master Airscrew Propellers -> PDF page 1
+#     Conclusion -> PDF page 1
+#   Brandt_Selig_2011_AIAA-ASM-Conf-110114-hours10-min40 -> PDF page 1
+#     Introduction -> PDF page 1
+#     Experimental Setup -> PDF page 2
+#       UIUC Wind Tunnel -> PDF page 2
+#       Thrust and Torque Measurements -> PDF page 2
+#       Propeller Speed Measurement -> PDF page 3
+#       Freestream Flow Speed Measurement -> PDF page 3
+#       Motor, Speed Controller and Propellers -> PDF page 4
+#       Data Acquistion and Experimental Procedure -> PDF page 6
+#     Data Reduction and Wind Tunnel Corrections -> PDF page 6
+#       Propeller Speed Determination -> PDF page 7
+#       Velocity Corrections -> PDF page 7
+#     Results -> PDF page 9
+#       APC Propellers -> PDF page 9
+#       Graupner Propellers -> PDF page 10
+#       GWS Propellers -> PDF page 14
+#       Master Airscrew Propellers -> PDF page 14
+#     Conclusion -> PDF page 15
+
+=== PAGE 1 ===
+49th AIAA Aerospace Sciences Meeting                                             AIAA 2011-1255
+4-7 January 2011, Orlando, FL
+
+Propeller Performance Data at Low Reynolds Numbers
+
+                           John B. Brandt∗and Michael S. Selig†
+                 University of Illinois at Urbana-Champaign, Urbana, IL 61801, USA
+
+        While much research has been carried out on propellers for full-scale aircraft,
+     not much data exists on propellers applicable to the ever growing number of UAVs.
+     Many of these UAVs use propellers that must operate in the low Reynolds number
+     range of 50,000 to 100,000 based on the propeller chord at the 75% propeller-blade
+     station. Tests were performed at the University of Illinois at Urbana-Champaign
+     (UIUC) to quantify the propeller efficiency at these conditions. In total, 79 pro-
+     pellers were tested and the majority fit in the 9- to 11-in diameter range. During
+     the tests, the propeller speed (RPM) was fixed while changing the wind-tunnel
+     speed to sweep over a range of advance ratios until reaching the windmill state (zero
+     thrust). To examine Reynolds number effects, typically four RPM’s were tested
+     in the range 1,500 to 7,500 RPM depending on the propeller diameter. Propeller
+     efficiencies varied greatly from a peak near 0.65 (for an efficient propeller) to near
+     0.28 (for an exceptionally poor propeller). Thus, these results indicate that proper
+     propeller selection for UAVs can have a dramatic effect on aircraft performance.
+
+                                      I.  Introduction
+
+   Propeller performance at low Reynolds numbers has become increasingly important in the design and
+performance prediction of unmanned air vehicles (UAVs). While propeller performance for full-scale airplanes
+has been well documented since the pioneering days of aviation, data on propellers at low Reynolds numbers
+has been scarce. Tests performed by Bailey1 documented tests on seven wooden Top FliteTM model-airplane
+propellers ranging in diameter from 9 to 14 in. It was reported that those results showed propeller efficiencies
+7.5% to 15% lower than larger 36-in diameter propellers having similar pitch-to-diameter ratios tested by
+Durand.2 Similar degradation in performance was later measured by Bass3 for propellers larger than 24-in
+diameter and also by Asson and Dunn4 showing data on two wooden 14-in diameter Zinger brand model
+airplane propellers. During the same time period that current tests were performed,5 Merchant and Miller
+conducted tests on as many as 30 model airplane propellers ranging in diameter from 6 to 22 in, but only
+a subset of the measurements on seven propellers have been reported from that effort.6,7 More recently
+Ol, et al.8 carried out measurements on many propellers aimed toward use on UAVs and made detailed
+comparisons with analysis, revealing important low Reynolds number effects. These recent measurements
+on small-scale propellers and the results reported here have all been motivated by the same interests in
+documenting the aerodynamic performance of small-scale propellers that are used in small UAVs and other
+low Reynolds number appliations.
+   In the research reported here, 79 propellers were tested and nearly all fit in the 9- to 11-in diameter
+range. Thrust and torque were measured over a range of propeller advance ratios for discrete propeller
+speeds (RPM’s) – typically four different values of RPM to examine low Reynolds number effects. Also
+static thrust was measured over a range of propeller speeds from nominally 1500 to 7500 RPM depending
+on the propeller diameter.
+   The remainder of this paper describes the propellers tested, the experimental setup, and presents some
+of the measurements obtained, including some discussion of Reynolds number effects observed in the data.
+  ∗Currently with Boeing, Aerodynamics - Stability & Control, Seattle, WA. Member AIAA.
+  †Associate Professor, Department of Aerospace Engineering, 104 S. Wright St. Senior Member AIAA.
+http://www.ae.illinois.edu/m-selig
+
+                                             1 of 18
+
+                            American Institute of Aeronautics and Astronautics
+Copyright © 2011 by the authors. Published by the American Institute of Aeronautics and Astronautics, Inc., with permission.
+
+=== PAGE 2 | img ===
+                Figure 1. Photograph of test section with experimental rig installed.
+
+The entire dataset is available online.9
+
+                                   II.   Experimental Setup
+
+A. UIUC Wind Tunnel
+
+The tests presented here were performed in the UIUC subsonic wind tunnel. The wind tunnel is an open-
+return type with a 7.5:1 contraction ratio. The rectangular test section is nominally 2.8 × 4.0 ft (0.853 ×
+1.219 m) in cross section and 8-ft (2.438-m) long. Over the length of the test section, the width increases
+by approximately 0.5 in. (1.27 cm) to account for boundary-layer growth along the tunnel sidewalls. Test-
+section speeds are variable up to 160 mph (71.53 m/sec) via a 125-hp (93.25-kW) AC motor connected to a
+five-bladed fan. For the tests presented here, the maximum tunnel speed used was 80 ft/sec (24.38 m/sec).
+A photograph of the test section is presented in Fig. 1.
+   In order to ensure good flow quality in the test section, the wind-tunnel settling chamber contains
+a 4-in. thick honeycomb in addition to four anti-turbulence screens. The turbulence intensity has been
+measured to be less than 0.1% for the empty tunnel,10 showing that the tunnel indeed has good flow quality.
+The turbulence intensity for varying wind tunnel speeds was measured with hotwire anemometry. After
+calibrating the hotwire, the probe was placed at the centerline of the tunnel and oriented to measure the axial
+turbulence intensity. In order to monitor the turbulence intensity over a broad range of frequencies, 50,000
+samples were acquired at 10,000 Hz. Figure 2 shows the turbulence intensities for the approximate range of
+velocities used in the present experiment with various high-pass filters applied to the signal. Assuming that
+the test apparatus has a minimal effect on the turbulence levels, the good flow quality will be retained.
+
+B. Thrust and Torque Measurements
+
+The test apparatus is pictured in Fig. 3. The thrust and torque produced by a right-handed propeller are
+illustrated. The thrust measurement was obtained outside the wind tunnel through a pendulum T-shaped
+structure that pivoted about two flexural pivots while being constrained by a load cell outside of the tunnel.
+The Interface model SM-10 load cell was used, having a maximum capacity of 10 lbs. To ensure that the
+freestream flow did not produce a drag force on the beam located inside of the tunnel, a fairing was used as
+shown in Fig. 1.
+   To minimize measurement uncertainty in thrust, flexural pivots and a variable load-cell location were
+used. The flexural pivots, made by Goodrich Aerospace, are frictionless, stiction-free bearings with negligible
+hysteresis that are designed for applications with limited angular travel (±30 deg). The pivots are made
+with flat, crossed springs (that visually appear like a crosshair) that support rotating sleeves. These flexural
+pivots were chosen over standard bearings because they greatly reduce the adverse tendencies that bearings
+
+                                                2 of 18
+
+                             American Institute of Aeronautics and Astronautics
+
+=== PAGE 3 ===
+                           0.2
+                                  DC Coupled
+                                  HPF = 0.1Hz
+                       (%)        HPF = 3Hz
+                          0.15    HPF = 10Hz
+                       Intensity
+
+                           0.1
+                       Turbulence
+
+                       Mean 0.05
+
+                            0
+                             0      15      30      45      60      75     90
+                                               Velocity (ft/sec)
+
+                        Figure 2. Turbulence intensity at tunnel centerline.
+
+are prone to when used in static applications, namely stiction and hysteresis. The test rig was designed to
+use the 3/8 in. double-ended series (part number 6012-600). The upper balance arm of the mechanism was
+designed to allow the load cell to be placed any of 10 possible locations, which allowed the balance arm to
+be varied from 3.75 in. (9.53 cm) to 12.75 in. (32.39 cm), in 1 in. (2.54 cm) increments. This feature ensured
+that the load cell could be placed in a position such that the full range of the load cell was used for each
+propeller tested.
+   The torque produced by the propeller was measured using the RTS-25 and RTS-100 reaction torque trans-
+ducers made by Transducer Techniques. These devices are simply force transducers housed and calibrated so
+that, when placed appropriately, a torque can be measured. The rig was designed with the torque transducer
+placed between the motor housing and support arm of the thrust mechanism, as is shown in Fig. 4. One of
+two torque transducers (25 oz-in. or 100 oz-in. capacities) was used depending on the expected maximum
+torque.
+
+C. Propeller Speed Measurement
+
+To measure the propeller rotation speed, a photoreflector was used to count the number of revolutions the
+output shaft made in a fixed time interval (0.75 sec). The photoreflector was a Honeywell HOA1180-002
+Reflective Sensor, which has a transistor output and allows the sensor to be placed up to 0.5 in. (1.27 cm)
+from the reflective surface. When combined with a simple circuit of resistors and a 9-V battery, the output
+voltage was near 2 V when aimed at a reflective surface and near 0 V when aimed at a non-reflective surface.
+The circuit had a response time around 5 μsec. The output voltages and response time of the circuit proved to
+be more than sufficient for measuring the rotational speed of the propellers, which never exceeded 7,000 RPM
+in these tests.
+
+D. Freestream Flow Speed Measurement
+
+The freestream flow speed was measured with a pitot-tube connected to a differential pressure transducer,
+an absolute differential pressure transducer, and a thermocouple. The dynamic pressure is measured with
+the pitot tube connected to one of two MKS differential pressure transducers – a MKS model 220DD 1-torr
+transducer used when the velocity is below 40 ft/sec and a MKS model 221BD 10-torr model used when
+the velocity exceeds 40 ft/sec. The atmospheric pressure outside of the tunnel is measured with an MKS
+absolute pressure transducer. The temperature is measured with an Omega GTMQSS T-type thermocouple
+located at the inlet of the wind tunnel.
+   The pitot tube is positioned 5.25-in above the wind tunnel floor, approximately 25.25-in upstream of the
+propeller, at the centerline of the tunnel. This positioning requires corrections to be applied to the velocity
+measurements to account for the propeller inflow at that pitot tube. This setup is used because traditional
+
+                                                3 of 18
+
+                             American Institute of Aeronautics and Astronautics
+
+=== PAGE 4 | img ===
+                             Figure 3. Test apparatus without fairing.
+
+                        Figure 4. Torque transducer installed in the test rig.
+
+techniques that use pressure measurements in the inlet to determine the velocity would be less accurate at
+the lower velocities tested.
+
+E. Motor, Speed Controller and Propellers
+
+The propellers were driven by the Astro 020 Planetary System (model 803P) made by AstroFlight. This
+motor and gearbox system used a 200-W motor with a 4.4:1 gear ratio that was capable of driving the
+propeller to a maximum speed of 7,500 RPM. For simplicity in the laboratory, a variable voltage switch
+mode power supply, made by BK Precision, is used to power the motor. The model used, the BK1692, can
+be set to an output voltage of 3 V to 15 V with a maximum current of 40 A.
+   Given that the Astro 020 is a brushless motor designed to work with a speed controller, a method was
+needed to send the appropriate signal to the speed controller. To set the rotational speed, a device called
+the ServoXciter EF, made by Vexa Control, was used. This device is designed to be used for testing R/C
+servos by allowing the operator to adjust the pulse-width of the signal being sent to the servo. Since the
+
+                                                4 of 18
+
+                             American Institute of Aeronautics and Astronautics
+
+=== PAGE 5 | img ===
+                  Figure 5. APC Slow-Flyer, Sport, and Thin-Electric propellers.
+
+                Figure 6. Graupner CAM, CAM Slim, and Super-Nylon propellers.
+
+                      Figure 7. GWS Hyper-Drive, and Slow-Flyer propellers.
+
+speed controller works with the same pulse-width modulation, the ServoXciter was used here as a throttle.
+Initially, the throttle was set manually using the knob on the ServoXciter. However, the device was modified
+so that it could be controlled with the data acquisition software, further automating the test. This was
+accomplished by modifying the ServoXciter to bypass the potentiometer, which was connected to the knob,
+and controlling the device with a command voltage from the data acquisition board.
+   The propellers that were tested span a variety of intended applications, including both gas and electric
+powered applications. Figures 5–9 show representative photographs of every style of propeller tested. All
+propellers were injection molded; no wooden propellers were tested.
+
+                                                5 of 18
+
+                             American Institute of Aeronautics and Astronautics
+
+=== PAGE 6 | img ===
+                                    Figure 8. Kyosho propeller.
+
+                 Figure 9. Master Airscrew Electric, G/F, and Scimitar propellers.
+
+F. Data Acquistion and Experimental Procedure
+
+A brief summary of the data acquistion and experimental procedure5 is given here. All signals were ac-
+quired using a National Instruments NI PCI-6031E 16-bit analog-to-digital data acquisition board driven by
+custom software developed using LabVIEW ⃝, R which is a C-based software suite from National Instruments,
+for creating Graphical User Interfaces (GUIs). The propeller speed measurement required a high data ac-
+quisition rate (20,000 Hz) to ensure that the signal from the photoreflector was accurately recorded. Due
+to limitations on the data acquisition board, this prohibited acquiring all of the data simultaneously. Thus,
+the propeller speed was first acquired at the higher data acquisition rate, then the remaining quantities
+(thrust, torque, dynamic pressure, atmospheric pressure, and temperature) were acquired simultaneously
+immediately thereafter at a reduced rate (1,000 Hz). This method proved to be appropriate, as the propeller
+speed measurements showed fluctuations below 0.1% over time periods significantly longer than those used
+for data acquisition.
+   The experimental procedure included setting up the experimental hardware and data acquisition system,
+calibration and calibration checks of the various instruments, and acquiring the performance data. The
+calibration checks performed during the setup process and the frequent calibrations performed throughout the
+tests ensured that the calibration data was as accurate as possible. Acquiring the performance data included
+obtaining the static performance data (where V∞= 0) as well as obtaining the remaining performance data
+in one of two test modes. The two possible test modes allowed the experimenter to sweep the advance ratio
+range by varying either the freestream velocity or propeller speed, while holding the other constant. In all
+the data reported here, the latter mode was used – the propeller speed was held constant while sweeping the
+tunnel speed in order to cover a range of advance ratios. The sweep in advanced ratio continued until the
+thrust became negative.
+
+                 III.   Data Reduction and Wind Tunnel Corrections
+
+   The data reduction process starts by converting the measured voltages into physical measurements of
+thrust, torque, rotational speed, dynamic pressure, atmospheric pressure, and temperature. The thrust,
+torque, dynamic pressure, air temperature, and atmospheric pressure are all found using the calibration
+data that is either provided by the transducer manufacturer or found in the calibration procedure, and the
+measured voltage. The signal obtained from the photoreflector is used to determine the rotational speed
+of the propeller. From these quantities, the propeller power, air density, and tunnel speed are calculated
+
+                                                6 of 18
+
+                             American Institute of Aeronautics and Astronautics
+
+=== PAGE 7 ===
+according to
+
+                                             P = 2πnQ                                             (1)
+
+                                                  Patm
+                                             ρ =                                                  (2)
+                                                 R Tair
+
+                                              V = r2q                                             (3)
+                                                     ρ
+   Corrections are applied to the velocity to account for wind tunnel wall and blockage effects and to correct
+for the pitot tube being in an area influenced by the propeller inflow. These corrections are detailed below.
+   Finally, the above measured and derived quantities are non-dimensionalized to obtain the propeller
+performance data. The quantities include the thrust coefficient, power coefficient, and efficiency. For the
+static case (J = 0), the thrust and power coefficients are plotted against the propeller speed. For the non-
+static case (J > 0), the coefficients and the efficiency are plotted against the advance ratio. The definitions
+for the advance ratio, thrust and power coefficients, and propeller efficiency are given by
+
+                                                    V
+                                              J =                                                 (4)
+                                                   nD
+
+                                                    T
+                                            CT =                                                  (5)
+                                                  ρ n2D4
+
+                                                    P
+                                            CP =                                                  (6)
+                                                  ρ n3D5
+
+                                                    CT
+                                              η = J                                               (7)
+                                                    CP
+
+A. Propeller Speed Determination
+
+Determining the propeller rotational speed from the photoreflector signal is a relatively straightforward
+process. First, the signal is analyzed to determine the minimum and maximum voltage readings. Next,
+the software analyzes each data point to determine if the reading is indicating a reflective or non-reflective
+surface. Each time the state changes, the switch is counted and the duration of the previous state is recorded.
+The propeller speed is then determined from the total number of revolutions and the sampling time used to
+acquire the signal.
+
+B. Velocity Corrections
+
+With the current setup, several factors are present that warrant velocity corrections, as the dynamic pressure
+measured is not equivalent to the true freestream dynamic pressure that would be found under normal, open-
+air operating conditions. The effect that the propeller inflow has on the velocity measurement is corrected
+with a scheme developed specifically for these tests. Two additional methods are used to account for the
+solid blockage caused by the fairing and the constriction of the propeller slipstream caused by the wind
+tunnel walls. The correction that accounts for the inflow caused by the propeller is iterative in nature,
+where the other two correction factors are not. Since the remaining two corrections are to be applied to the
+freestream velocity of the wind tunnel, the measured velocity is first corrected for the inflow. Subsequently,
+the remaining two corrections are applied to the corrected freestream velocity of the wind tunnel.
+   The correction to account for the inflow at the pitot tube models the induced flow with a double helical
+vortex extending “infinitely” downstream. The key factors in this correction include the radius and pitch
+of the helix, as well as the strength of the vortex. Below, Eqs. 10 and 12 show that the vortex strength is
+a function of the disk loading T/A. To develop this method, MATLAB ⃝was R   used to set up the doubly
+infinite image system of helical vortices, as suggested in Ref. 11. This program was used to find the velocities
+induced both at the propeller disk and the pitot tube for varying helix pitch and radius using a unit strength
+vortex. Due to the computational effort required for this correction scheme, the method was not directly
+
+                                                7 of 18
+
+                             American Institute of Aeronautics and Astronautics
+
+=== PAGE 8 ===
+incorporated into the data acquisition and reduction software. Accordingly, results from the MATLAB
+script are tabulated and the finite data sets are interpolated to find the velocity correction. Although this
+method is developed for a two-bladed propeller, it will suffice as a correction for a blade with an arbitrary
+number of blades. This results from the scheme being independent of the blade number (see below). For a
+propeller with a different number of blades, the two-blade equivalent vortex system corrects for the inflow.
+The iterative scheme is outlined below.
+
+  1. Set the freestream velocity. The first estimate uses the measured velocity and subsequent guesses use
+     an under-relaxed estimate that combines the previous estimate and the corrected velocity according to
+     Eq. 8, where a = 0.5.
+                                       ˆV∞,+ = (1 −a) ˆV∞,−+ a Vcorr                               (8)
+
+     where in the following
+                                                V∞= ˆV∞,+                                          (9)
+
+  2. Use Eq. 10, found in Ref. 12, to find the velocity induced at the propeller disk udisk based on momentum
+     theory.
+                                                           2   2 T
+                                        udisk = −V∞+ s V ∞+                                       (10)
+                                                                ρA
+
+  3. Calculate the pitch of the vortex system based on the freestream velocity, induced velocity at the disk,
+     and propeller tip speed using Eq. 11, as it is suggested in Ref. 11.
+
+                                                    V∞+ udisk
+                                            tan k =                                               (11)
+                                                       Vtip
+
+  4. Interpolate the data set for the inflow induced at the propeller disk using the propeller radius R and
+     helix pitch k to find the inflow induced by a unit strength vortex uΓ=1.
+
+  5. Calculate the vortex strength needed to produce udisk using Eq. 12.
+                                                     udisk
+                                                 Γ =                                              (12)
+                                                     uΓ=1
+
+  6. Find the induced velocity at the pitot tube,⃗Vpitot, using the propeller radius, helix pitch k, and vortex
+     strength Γ by interpolating the data set established for the inflow at the pitot tube.
+
+  7. Calculate the flow angle using Eq. 13, where the components of the velocity vector are those illustrated
+     in Fig. 10.
+                                                    v2 pitot + w2 pitot
+                                          sin Λ = q                                               (13)
+                                                      Vmeas
+
+  8. Calculate the corrected freestream velocity using Eq. 14
+
+                                        Vcorr = Vmeas cos Λ −upitot                               (14)
+
+   Once the above scheme is used to correct the measured velocity for the inflow induced at the location
+of the pitot tube, the remaining two corrections are applied. The presence of the fairing in the wind tunnel
+reduces the cross-sectional area, increasing the velocity in the vicinity of the fairing. To correct for this, the
+3-D solid blockage technique presented in Ref. 13 and shown in Eq. 15 is used. The factors K1 and τ1 (see
+Ref. 13) are determined from the fairing thickness ratio and the ratio between the model span and tunnel
+breadth, respectively. V fairing and C are the volume of the fairing and the cross-sectional area of the wind
+tunnel, respectively.
+                                         ∆V     K1τ1V fairing
+                                             =                                                    (15)
+                                         Vu         C3/2
+   The boundary correction used to account for the wind tunnel walls was developed by Glauert in Ref. 14.
+The wind tunnel walls constrict the flowfield, causing an increased static pressure in propeller slipstream.
+
+                                                8 of 18
+
+                              American Institute of Aeronautics and Astronautics
+
+=== PAGE 9 ===
+                       Figure 10. Measured velocity vector at the pitot tube.
+
+Thus, the thrust that is developed would actually be produced by a lower freestream velocity in an unre-
+stricted flow, which is based on a continuity analysis. The correction needed to account for this effect is
+presented in Eq. 16, where τ4 = T/ρAV ∞and 2  α1 = A/C.
+
+                                       Vcorr          τ4 α1
+                                             = 1 − 2√1                                           (16)
+                                        V∞              + 2 τ4
+
+                                          IV.    Results
+
+   Although the propellers tested here are limited to non-folding, two-bladed propellers, a wide range of
+propeller styles were tested nonetheless. The majority of the propellers tested had diameters ranging from
+9 in. to 11 in., though a few larger sizes were tested. For this series of tests, all of the propellers were
+tested without any alterations. Thus, any sharp and some times ragged leading edges that result from
+manufacturing processes remained. Some of the models tested are intended to be used on aircraft with
+electric motors, while others are designed to be used with fuel powered engines. With such a wide range
+of designs tested, a wide range of performance characteristics are observed. Here, the general trends found
+in the data are highlighted, although trends in the thrust and power coefficient are discussed briefly, the
+propeller efficiency is the main focus.
+   Looking at the entire set of data, one general trend is observed throughout (and will be illustrated in the
+figures to follow): as the propeller speed is increased, the performance improves. This result is most evident
+through increased efficiency. The degree of the improvement varies from propeller-to-propeller, but it is a
+trend that is consistent. This improvement is also seen in the thrust coefficient curves, as higher thrust
+coefficients are obtained with increasing propeller speed. The increased thrust is most easily seen looking at
+the static thrust plots.
+   The performance improvement that accompanies the increased propeller speed is an expected trend given
+that the propellers are operating with low chord-based Reynolds numbers and that increasing the propeller
+speed increases the Reynolds number. The work presented in Refs. 10 and 15–17, as well as myriad of
+other studies performed on low Reynolds aerodynamics, show that the aerodynamic performance of airfoils
+improves with increasing Reynolds numbers. Extending this improved performance to the airfoils on the
+propellers, shows that this trend is indeed expected. In the following, the trends observed for the different
+brands and styles are presented discussed.
+
+A. APC Propellers
+
+Three types of APC propellers were tested, namely the Slow Flyer, Sport, and Thin Electric propellers. Both
+the Slow Flyer and Thin Electric propellers are designed to be used solely with electric motors. The Sport
+propellers are designed to handle the increased torque produced by gas powered engines. The airfoil profiles
+on the Slow Flyer propellers are quite thin with a sharp leading edge, where the remaining two have thicker
+airfoil sections with rounded leading edges.
+   All of the APC propellers show some variation in the performance curves that is consistent with the
+overall trends. The Slow Flyers show the least variation in efficiency and the differences are larger near peak
+
+                                                9 of 18
+
+                             American Institute of Aeronautics and Astronautics
+
+=== PAGE 10 ===
+                                APC Thin Electric 11x8
+                                True Diameter: 11.00 in (27.94 cm)
+                                       chord             twist
+                            1.00                                    60
+
+                            0.75                                    45
+
+                       c/R 0.50                                     30 β (deg)
+
+                            0.25                                    15
+
+                            0.00                                     0
+                              0.00     0.25     0.50     0.75     1.00
+                                                r/R
+
+                                             Front View
+
+                                              Side View
+
+                   Figure 11. APC Thin Electric 11×8 geometric characteristics.
+
+efficiency. The Sport propellers exhibit the largest efficiency variance that is observed over the entire range
+of advance ratio. Similar to the Slow Flyers, the Thin Electric propellers also show increased performance
+differences near peak efficiency.
+   One interesting trend is found in the thrust and power coefficients for the Thin Electric propellers; it is
+seen that variations in these coefficients are dramatically increased over a small range of advance ratio near
+the peak efficiency. The result is shown for the APC Thin Electric 11×8 propeller in Figs. 11–14.
+
+B.  Graupner Propellers
+
+The four styles of Graupner propellers tested include the CAM, CAM Slim, Slim, and Super Nylon propellers.
+The former three are all designed specifically for use with electric motors, and the latter are intended to be
+used with gas powered engines. The CAM and Super Nylon propellers are designed with moderately thick
+airfoils with conventional round leading edges; where as, the CAM Slim and Slim propellers are designed
+with much thinner airfoil sections that have sharp leading edges.
+   The CAM propellers all show significant differences in the efficiency curves over the range of propeller
+speeds. These differences are rooted in significant variations in the thrust characteristics and minor variations
+in the power characteristics. Both the CAM Slim and Slim propellers show only minor variations in peak
+efficiency, with the Slim propeller showing some of the smallest variations in performance. The CAM Slim
+propellers show minor variations in both the thrust and power coefficients over a small range of advance ratio
+that correspond to the region of peak efficiency (see Figs. 15–18). Finally, the Super Nylons show moderate
+variations in the efficiency, with increased differences seen near the peaks.
+
+                                                10 of 18
+
+                              American Institute of Aeronautics and Astronautics
+
+=== PAGE 11 ===
+            APC Thin Electric 11x8
+               Ω = 3000 RPM         Ω = 5000 RPM
+               Ω = 4000 RPM         Ω = 6000 RPM
+         0.8
+
+         0.6
+
+      η 0.4
+
+         0.2
+
+         0.0
+          0.0      0.2     0.4     0.6      0.8     1.0
+                                J
+
+  Figure 12. APC Thin Electric 11×8 efficiency curves.
+
+             APC Thin Electric 11x8
+               Ω = 3000 RPM         Ω = 5000 RPM
+               Ω = 4000 RPM         Ω = 6000 RPM
+        0.15
+
+        0.10
+
+     CT
+
+        0.05
+
+        0.00
+           0.0     0.2     0.4      0.6     0.8      1.0
+                                J
+
+Figure 13. APC Thin Electric 11×8 thrust characteristics.
+
+             APC Thin Electric 11x8
+               Ω = 3000 RPM         Ω = 5000 RPM
+               Ω = 4000 RPM         Ω = 6000 RPM
+         0.10
+
+     CP 0.05
+
+         0.00
+           0.0     0.2      0.4     0.6     0.8      1.0
+                                J
+
+Figure 14. APC Thin Electric 11×8 power characteristics.
+
+                           11 of 18
+
+        American Institute of Aeronautics and Astronautics
+
+=== PAGE 12 ===
+               Graupner CAM Slim 10x8
+               True Diameter: 9.90 in (25.15 cm)
+                      chord               twist
+          1.00                                        60
+
+          0.75                                        45
+
+     c/R 0.50                                         30 β (deg)
+
+          0.25                                        15
+
+          0.00                                        0
+            0.00      0.25      0.50      0.75      1.00
+                                r/R
+
+                             Front View
+
+                              Side View
+
+Figure 15. Graupner CAM Slim 10×8 geometric characteristics.
+
+           Graupner CAM Slim 10x8
+               Ω = 3000 RPM              Ω = 5000 RPM
+               Ω = 4000 RPM              Ω = 6000 RPM
+        0.6
+
+        0.4
+
+     η
+
+        0.2
+
+        0.0
+         0.0      0.2      0.4      0.6      0.8      1.0     1.2
+                                    J
+
+    Figure 16. Graupner CAM Slim 10×8 efficiency curves.
+
+                               12 of 18
+
+            American Institute of Aeronautics and Astronautics
+
+=== PAGE 13 ===
+          Graupner CAM Slim 10x8
+             Ω = 3000 RPM              Ω = 5000 RPM
+             Ω = 4000 RPM              Ω = 6000 RPM
+     0.15
+
+     0.10
+
+  CT
+
+     0.05
+
+     0.00
+        0.0     0.2      0.4     0.6      0.8      1.0     1.2
+                                  J
+
+Figure 17. Graupner CAM Slim 10×8 thrust characteristics.
+
+          Graupner CAM Slim 10x8
+             Ω = 3000 RPM              Ω = 5000 RPM
+             Ω = 4000 RPM              Ω = 6000 RPM
+      0.10
+
+  CP 0.05
+
+      0.00
+        0.0     0.2      0.4      0.6     0.8      1.0     1.2
+                                  J
+
+Figure 18. Graupner CAM Slim 10×8 power characteristics.
+
+                             13 of 18
+
+          American Institute of Aeronautics and Astronautics
+
+=== PAGE 14 ===
+                                GWS Slow Flyer 11x4.7
+                                True Diameter: 11.00 in (27.94 cm)
+                                       chord             twist
+                            0.75                                    45
+
+                            0.50                                    30
+
+                       c/R                                              β (deg)
+
+                            0.25                                    15
+
+                            0.00                                     0
+                              0.00     0.25     0.50     0.75     1.00
+                                                r/R
+
+                                             Front View
+
+                                              Side View
+
+                   Figure 19. GWS Slow Flyer 11×4.7 geometric characteristics.
+
+C.   GWS Propellers
+
+The two styles of GWS propellers that were tested are the Direct Drive and Slow Flyer propellers, both of
+which are designed to be used with electric motors. The Direct Drive propellers are designed to operate at
+higher rotational speeds, where the Slow Flyers are designed to operate at lower rotational speeds. Both
+styles of GWS propellers are designed with thin airfoils with sharp leading edges.
+   The GWS Direct Drive propellers show moderate variations in the peak efficiencies for the range of
+propeller speeds tested, where as shown in Figs. 19–22 the Slow Flyers show minimal variations in the
+performance. Looking at the GWS Slow Flyer data, unique trends are observed in both the efficiency and
+coefficient curves. In all other cases tested, increasing the propeller speed increased the efficiency, thrust
+coefficient, and power coefficient by varying degrees. However, it is observed here that the GWS Slow Flyers
+have lower efficiencies, thrust coefficients, and power coefficients at higher advance ratio. These trends are
+believed to be a result of blade flutter, as excessive noise was observed in a few extreme cases.
+
+D.   Master Airscrew Propellers
+
+The Master Airscrew propellers tested included propellers limited to electric applications as well as propellers
+that could be used with either gas powered engines or electric motors. The Electric series propellers are
+designed to only be used with electric motors. Both the G/F and Scimitar series are designed for use with
+gas powered engines but can be easily used with electric motors as well. The Master Airscrew propellers are
+designed with relatively thick airfoils with round leading edges, but they have a sharp leading edge that is
+a result of the manufacturing process.
+   The Master Airscrew Electric series propellers show performance variations that are moderate in magni-
+tude and consistent with the overall trends. The G/F series show some of the largest variations in both the
+efficiency and thrust coefficient curves, as the differences are exacerbated for the lower pitched propellers.
+The Master Airscrew G/F 11×4 shows that the peak efficiency nearly doubles over the range of propeller
+
+                                                14 of 18
+
+                              American Institute of Aeronautics and Astronautics
+
+=== PAGE 15 ===
+                                       GWS Slow Flyer 11x4.7
+                                        Ω = 3000 RPM     Ω = 5000 RPM
+                                        Ω = 4000 RPM     Ω = 6000 RPM
+                                   0.6
+
+                                   0.4
+
+                                η
+
+                                   0.2
+
+                                   0.0
+                                     0.0     0.2     0.4      0.6     0.8
+                                                      J
+
+                         Figure 20. GWS Slow Flyer 11×4.7 efficiency curves.
+
+                                       GWS Slow Flyer 11x4.7
+                                         Ω = 3000 RPM     Ω = 5000 RPM
+                                         Ω = 4000 RPM     Ω = 6000 RPM
+                                   0.15
+
+                                   0.10
+
+                                CT
+
+                                   0.05
+
+                                   0.00
+                                     0.0     0.2      0.4     0.6      0.8
+                                                      J
+
+                      Figure 21. GWS Slow Flyer 11×4.7 thrust characteristics.
+
+                                       GWS Slow Flyer 11x4.7
+                                         Ω = 3000 RPM     Ω = 5000 RPM
+                                         Ω = 4000 RPM     Ω = 6000 RPM
+                                   0.10
+
+                                CP 0.05
+
+                                   0.00
+                                     0.0      0.2     0.4     0.6      0.8
+                                                      J
+
+                      Figure 22. GWS Slow Flyer 11×4.7 power characteristics.
+
+speeds tested (see Figs. 23–26). The Scimitar series shows moderate changes in performance for varying
+propeller speeds, where the differences are magnified over certain ranges of advance ratio.
+
+                                                 15 of 18
+
+                               American Institute of Aeronautics and Astronautics
+
+=== PAGE 16 ===
+                                 Master Airscrew G/F 11x4
+                                 True Diameter: 11.00 in (27.94 cm)
+                                        chord             twist
+                            0.75                                      45
+
+                            0.50                                      30
+
+                        c/R                                              β (deg)
+
+                            0.25                                      15
+
+                            0.00                                      0
+                              0.00      0.25     0.50     0.75     1.00
+                                                 r/R
+
+                                              Front View
+
+                                               Side View
+
+                  Figure 23. Master Airscrew G/F 11×4 geometric characteristics.
+
+                                      Master Airscrew G/F 11x4
+                                        Ω = 3000 RPM    Ω = 5000 RPM
+                                        Ω = 4000 RPM    Ω = 6000 RPM
+                                   0.6
+
+                                   0.4
+
+                                η
+
+                                   0.2
+
+                                   0.0
+                                    0.0     0.2      0.4     0.6     0.8
+                                                     J
+
+                       Figure 24. Master Airscrew G/F 11×4 efficiency curves.
+
+                                          V.    Conclusion
+
+   In the research reported here, 79 propellers were tested and nearly all fit in the 9- to 11-in. diameter
+range. Thrust and torque were measured over a range of propeller advance ratios for discrete propeller
+speeds (RPM’s) – typically four different values of RPM to examine low Reynolds number effects. Also
+static thrust was measured over a range of propeller speeds from nominally 1,500 to 7,500 RPM depending
+on the propeller diameter. The results showed significant Reynolds number effects with degradation in
+performance with lower RPM’s. Also, over a range of propellers, the propeller efficiency varied greatly from
+
+                                                16 of 18
+
+                              American Institute of Aeronautics and Astronautics
+
+=== PAGE 17 ===
+                                        Master Airscrew G/F 11x4
+                                          Ω = 3000 RPM     Ω = 5000 RPM
+                                          Ω = 4000 RPM     Ω = 6000 RPM
+                                    0.10
+
+                                 CT 0.05
+
+                                    0.00
+                                      0.0     0.2      0.4      0.6     0.8
+                                                        J
+
+                     Figure 25. Master Airscrew G/F 11×4 thrust characteristics.
+
+                                        Master Airscrew G/F 11x4
+                                          Ω = 3000 RPM     Ω = 5000 RPM
+                                          Ω = 4000 RPM     Ω = 6000 RPM
+                                    0.10
+
+                                 CP 0.05
+
+                                    0.00
+                                      0.0      0.2     0.4      0.6     0.8
+                                                        J
+
+                     Figure 26. Master Airscrew G/F 11×4 power characteristics.
+
+a peak near 0.65 down to near 0.28 for an exceptionally poor propeller. It is envisioned that the data gathered
+in these experiments will serve several purposes. The results will give aircraft designers a large database that
+can be used for selecting appropriate propellers for a wide variety of applications. Further, any beneficial or
+adverse trends found in the data will be used to improve design capabilities. Finally, prediction tools could
+be refined using the data gathered here.
+
+                                         Acknowledgments
+
+   The authors would like to thank Robert Deters, Paul Gush, and Kian Tehrani for their laboratory help
+in setting up and taking much of the propeller data report here and in the larger online collection. Also,
+the authors are grateful for the additional lab assistance provided by Keerti Bhamidipati, Chris Needham,
+Digesh Patel, and Sean Warrenburg.
+
+                                              References
+
+    1Bailey, J. E., “Mini-RPV Engine-Propeller Wind Tunnel Tests,” National Free Flight Society Annual Symposium Pro-
+ceedings, 1978.
+    2Durand, W. F., “Experimental Research on Air Propellers,” NACA Report 141, 1923.
+    3Bass, R. M., “Small Scale Wind Tunnel Testing of Model Propellers,” AIAA Paper 86–392, January 1986.
+    4Asson, K. M. and Dunn, P. F., “Compact Dynamometer System That Can Accurately Determine Propeller Performance,”
+Journal of Aircraft, Vol. 29, No. 1, 1992, pp. 8–9.
+    5Brandt, J. B., Small-Scale Propeller Performance at Low Speeds, Master’s thesis, Department of Aerospace Engineering,
+University of Illinois at Urbana-Champaign, Illinois, 2005.
+    6Merchant, M. P., Propeller Performance Measurements for Low Reynolds Number Unmanned Aerial Vehicle Applica-
+tions, Master’s thesis, Department of Aerospace Engineering, Wichita State University, Kansas, 2005.
+    7Merchant, M. P. and Miller, L. S., “Propeller Performance Measurements for Low Reynolds Number UAV Applications,”
+
+                                                  17 of 18
+
+                               American Institute of Aeronautics and Astronautics
+
+=== PAGE 18 ===
+AIAA Paper 2006–1127, January 2006.
+     8Ol, M., Zeune, C., and Logan, M., “Analytical/Experimental Comparison for Small Electric Unmanned Air Vehicle
+Propellers,” AIAA Paper 2008–7345, August 2008.
+     9Brandt, J. B. and Selig, M. S., “Small-Scale Propeller Performance at Low Speeds – Online Database,”
+http://www.ae.illinois.edu/m-selig/props/propDB.html, 2010.
+    10Selig, M. S. and McGranhan, B. D., “Wind Tunnel Aerodynamic Tests of Six Airfoils for Use on Small Wind Turbines,”
+National Renewable Energy Laboratory, NREL/SR-500-35515, 2004.
+    11Stepniewski, W. Z. and Keys, C. N., Rotary-Wing Aerodynamics, Dover Publications, New York, 1984.
+    12McCormick, B. W., Aerodynamics, Aeronautics, and Flight Mechanics, John Wiley & Sons, New York, 2nd ed., 1995.
+    13Barlow, J. B., Rae, W. H., Jr., and Pope, A., Low-Speed Wind Tunnel Testing, Third Ed., John Wiley and Sons, New
+York, 1999.
+    14Glauert, H., The Elements of Aerofoil and Airscrew Theory, Second Ed., University Press, Cambridge, 1948.
+    15Selig, M. S., Guglielmo, J. J., Broeren, A. P., and Gigu`ere, P., Summary of Low-Speed Airfoil Data, Vol. 1, SoarTech
+Publications, Virginia Beach, Virginia, 1995.
+    16Selig, M. S., Lyon, C. A., Gigu`ere, P., Ninham, C. N., and Guglielmo, J. J., Summary of Low-Speed Airfoil Data, Vol. 2,
+SoarTech Publications, Virginia Beach, Virginia, 1996.
+    17Lyon, C. A., Broeren, A. P., Gigu`ere, P., Gopalarathnam, A., and Selig, M. S., Summary of Low-Speed Airfoil Data,
+Vol. 3, SoarTech Publications, Virginia Beach, Virginia, 1998.
+
+                                                      18 of 18
+
+                                  American Institute of Aeronautics and Astronautics

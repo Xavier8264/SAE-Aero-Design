@@ -1,0 +1,49 @@
+# ID: nws_density_altitude_formula
+# SOURCE: https://www.weather.gov/media/epz/wxcalc/densityAltitude.pdf
+# ORIGINAL: reference/raw/nws_density_altitude_formula.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 2 pages | ~421 tokens
+# NOTE: NWS density altitude equations (vapor pressure, virtual temperature, DA). KEY for the TDS prediction curve
+# FLAG math: pages 1-2
+
+=== PAGE 1 | math ===
+                               Density Altitude
+
+From the user, an air temperature ( T ) , a station pressure ( Psta ) , and a dewpoint
+temperature ( Td ) . The density altitude calculation is quite complex. Before calculating
+the density altitude, the virtual temperature must be calculated first. To perform all the
+calculation for the density altitude calculation, the air temperature must be in units of
+Kelvin ( K ) , the station pressure must be in units of inches of mercury ( inHg ) and
+millibars ( mb ) , and the dewpoint temperature must be in units of degrees Celsius ( °C ) .
+To see how to convert the temperature and pressure, see the links below:
+
+Pressure Conversion
+
+Temperature Conversion
+
+To calculate the virtual temperature ( Tv ) , a vapor pressure ( e ) must be calculated first
+using the equation below.
+
+                        7.5 × Td
+                     (        )
+                       237.3 + Td
+e = 6. 11 × 10
+
+then using the station pressure in units of millibars ( Pmb ) , the virtual temperature can be
+calculated:
+
+                   T
+Tv =
+         1 − ( e ) × ( 1 − 0.622 )
+              Pmb
+
+The virtual temperature answer will be in units of Kelvin ( K ) and needs to converted to
+Rankine ( R ) to calculate the density altitude. To see ho to convert Kelvin to Rankine,
+see the temperature link above. Finally, the density altitude can be calculated. Using
+the virtual temperature in units of Rankine ( Tv ) and station pressure in inches of mercury
+( PinHg )
+
+=== PAGE 2 | math ===
+                                17.326 ×    0.235
+                                       PinHg
+hdensity = 145366 × ( 1 − (                )     )
+                                     Tv

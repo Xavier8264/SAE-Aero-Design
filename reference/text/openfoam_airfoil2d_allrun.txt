@@ -1,0 +1,16 @@
+# ID: openfoam_airfoil2d_allrun
+# SOURCE: https://raw.githubusercontent.com/OpenFOAM/OpenFOAM-dev/master/tutorials/incompressibleFluid/airFoil2D/Allrun
+# ORIGINAL: reference/raw/openfoam_airfoil2d_allrun.txt
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type txt | 1 pages | ~59 tokens
+# NOTE: OpenFOAM-dev airFoil2D tutorial run script; full case at tutorials/incompressibleFluid/airFoil2D (foamRun)
+
+=== PAGE 1 ===
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+runApplication foamRun
+
+#------------------------------------------------------------------------------

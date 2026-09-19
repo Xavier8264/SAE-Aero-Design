@@ -1,0 +1,49 @@
+# ID: uw_2026_rule_summary
+# SOURCE: https://aerouw.org/rule_summary.pdf
+# ORIGINAL: reference/2026/UW_2026_rule_summary.pdf
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type pdf | 1 pages | ~829 tokens
+# NOTE: Unofficial team summary of 2026 rules; contains an error (says single motor)
+# FLAG img: pages 1
+
+=== PAGE 1 | img ===
+SAE Aero Design – 2026 Rules Overview
+
+Regular Class: Competition Scoring
+
+Technical Design Report (TDR): xx/50 pts
+   -   The TDR must include the following: A selection of the overall vehicle configuration, wing planform design
+       including airfoil selection, drag analysis including three-dimensional drag effects, aircraft stability and
+       control, power plant performance including both static and dynamic thrust, and performance prediction.
+   -   2D Drawings must be submitted with the center of gravity and center of lift marked in the format of the
+       standard aeronautical 3-view orthographic projection, following the the ANSI-Y14.5M standard.
+   -   A Payload Prediction Curve must be included to represent an engineering estimate of the aircraft’s lift
+       performance at variable altitude densities while carrying the calculated Predicted Payload, “P”.
+Flight Demonstration Readiness Review (FDRR): xx/50 pts
+   -   Teams are to present at competition on the mission overview, preflight predictions (payload), mission
+       hardware & software pedigree and readiness, competition first time events & mission risks, outstanding
+       major milestones prior to competition, team roles and responsibilities, and post flight risk planning.
+Final Flight Score (FFS): Scoring variable based on the FFS equation below.
+   -   A flight attempt is scored if the plane takes off within 100 feet and lands within the 400-foot landing zone.
+   -   PPB is scored if two people unload the payload from the aircraft within one minute after the flight attempt.
+   -   After each successful flight, payload must be increased for the next attempt by adding an empty bottle or
+       replacing one with a filled bottle (see Airframe and Payload requirements for details).
+
+Regular Class: Key Design Requirements
+
+Airframe and Payload:
+   -   Takeoff weight may not exceed 55 pounds when fully loaded with the payload (WPayload).
+   -   Fixed-wing configuration only. Wingspan = [72”, 120”]; min chord length = 4”; max fuselage length = 120”.
+   -   Payload consists of standard 2-liter cylindrical plastic bottles, carried internally in enclosed cargo bays.
+          o Empty bottles weigh between 1.0–4.0 lbs.
+          o Filled bottles weigh ≥4.0 lbs.
+   -   Payload design shall not contribute to the structural integrity of the airframe.
+   -   Cargo must not shift in flight and must remain fully enclosed during the mission.
+   -   There must be no chord steps or discontinuities, and the wingtip chord length must be at least 4”.
+   -   The aircraft cannot be solely reliant on aerodynamic control surfaces for steering during taxing.
+   -   Fiber reinforced plastics are prohibited except when using commercially available props or landing gear.
+Electronics and Propulsion Systems:
+   -   The aircraft shall be propelled by a single electric motor, driving the prop(s) at the motor RPM.
+   -   Propeller limits: Must use 2 propellers (12” diameter) or 4 propellers (9” diameter).
+   -   Must be powered by a commercially available one 4-cell (14.8 V) LiPo pack, maximum 2200 mAh capacity.
+   -   The aircraft shall employ a 2.4 GHz radio control system with a functional fail-safe system.
+   -   Receiver must use a separate battery or BEC, and the system must function with the arming plug removed.

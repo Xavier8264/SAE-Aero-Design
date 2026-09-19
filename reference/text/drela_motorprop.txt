@@ -1,0 +1,290 @@
+# ID: drela_motorprop
+# SOURCE: https://web.mit.edu/drela/Public/web/qprop/motorprop.pdf
+# ORIGINAL: reference/raw/drela_motorprop.pdf
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type pdf | 6 pages | ~3156 tokens
+# NOTE: Drela MIT 16.50 DC motor/prop matching; first-order motor model (Kv, Rm, I0). KEY for propulsion sizing
+
+=== PAGE 1 ===
+DC Motor / Propeller Matching                                           3 Mar 05
+Lab 5 Lecture Notes
+
+Nomenclature
+ T     prop thrust                            ρ   air density
+ Q     prop torque                            μ   air viscosity
+ Qm    motor torque                           Re Reynolds number
+ Pshaft shaft power                           V   flight velocity
+ Pelec electrical power                       Ω   motor and propeller rotation rate
+ CT    thrust coefficient based on tip speed    v   motor terminal voltage
+ CP    power coefficient based on tip speed     R motor resistance
+ λ     advance ratio                          i   motor current
+ ηp    propeller efficiency                     Kv motor speed constant
+ ηm    motor efficiency                         ()o quantity at zero load
+
+Motor Parameters
+The behavior of an electric motor is fairly accurately described by the equivalent circuit
+model shown in Figure 1. The internal back-EMF vm is proportional to the rotation rate
+Ωvia the motor speed constant Kv. Applying the usual circuit equations, together with
+the conservation of energy, gives the following motor parameters as functions of the motor
+current i and motor terminal voltage v:
+                      Qm(i) = (i −io)/Kv                                         (1)
+                      Ω(i, v) = (v −iR)Kv                                        (2)
+                  Pshaft(i, v) = Qm Ω= (i −io)(v −iR)                            (3)
+
+                   Pelec(i, v) = v i                                             (4)
+                     ηm(i, v) = Pshaft/Pelec = (1 −io/i)(1 −iR/v)                (5)
+
+These relations depend on the “motor constants” R, io, Kv, which can be measured via
+simple benchtop experiments. The equations here assume Kv is in rad/s/Volt, although it’s
+usually given in RPM/Volt.
+                                                                 i
+                    Ω
+            Q m                                           +
+                                  +             R
+                                     υ m = Ω / K v        υ
+                                  −
+                                                          −
+
+                                                                  i
+              Figure 1: Equivalent circuit for a brushed DC electric motor.
+
+For the purpose of matching the motor to a load, such as a propeller, we first manipulate
+relation (2) into a function for the current,
+                                            −Ω     1
+                              i(Ω, v) =   v                                      (6)
+                                              Kv R
+
+                                         1
+
+=== PAGE 2 ===
+which is then substituted into all the other righthand sides to give the following functions of
+motor speed and voltage:
+
+                                        −Ω     1       1
+                        Qm(Ω, v) =     v         −io                         (7)
+                                          Kv R        Kv
+
+                                        −Ω     1       Ω
+                      Pshaft(Ω, v) =   v         −io                         (8)
+                                          Kv R         Kv
+
+                                            ioR      Ω
+                        ηm(Ω, v) = " 1 −           #                         (9)
+                                          v −Ω/Kv v Kv
+
+These functions are sketched in Figure 2 versus motor speed, for three applied voltages.
+
+            Q m
+                            υ = 8
+                          υ = 6
+                        υ = 4
+                                                     Ω
+
+           Pshaft                        υ = 8
+
+                                  υ = 6
+                            υ = 4
+                                                     Ω
+
+            ηm
+                                                υ = 8
+                                        υ = 6
+                                υ = 4
+
+                                                     Ω
+       Figure 2: Motor output variables versus motor speed and applied voltage.
+
+Propeller Parameters
+A propeller is characterized by the thrust and power coefficients, which depend primarily on
+the advance ratio λ, the blade Reynolds number Re, and on the prop geometry.
+
+                           CT = CT(λ, Re, geometry)                         (10)
+                           CP = CP(λ, Re, geometry)                         (11)
+                                   V
+                             λ =                                            (12)
+                                   ΩR
+                                   ρΩR cave
+                            Re =                                            (13)
+                                      μ
+
+                                       2
+
+=== PAGE 3 ===
+Once the propeller geometry is specified and the CT, CP, ηp functions generated by mea-
+surement or analysis, the dimensional thrust and torque can be computed for any other V
+and Ωby dimensionalizing the coefficients.
+
+                              V
+                 λ(Ω, V ) =                                                   (14)
+                             ΩR
+                             1                 1   2    CT(λ, Re)
+                 T(Ω, V ) = 2ρ(ΩR)2 πR2 CT = 2ρV πR2                          (15)
+                                                           λ2
+                             1                 1   2    CP(λ, Re)
+                Q(Ω, V ) = 2ρ(ΩR)2 πR3 CP = 2ρV πR3                           (16)
+                                                           λ2
+Figure 3 shows the resulting T and Q variation for a propeller operating at two fixed V values
+(presumably set by the aircraft trim), as functions of the rotational speed Ω(presumably
+varied by the effective motor voltage). Strictly speaking, the correct Re which increases with
+Ωshould be used to evaluate the CT and CP functions, although its effect is usually weak
+and a typical constant Re is often assumed.
+                                             increasing Ω
+
+                                                                  ηp
+
+                                                            CT
+   V = 5       ηp
+
+                                                          CP
+                    Q                                                        λ = V
+                                                      λ4 λ    λ2     λ          Ω R
+                                                          3           1
+                         T                                             λo
+
+                                                 Ω
+             Ω1   Ω2  Ω3   Ω4
+          Ω o = 500
+
+   V = 8
+                       ηp
+                                Q
+                                      T
+
+                                                 Ω
+                     Ω1      Ω 2    Ω 3     Ω 4
+                  Ω o = 800
+
+Figure 3: Propeller T, Q, ηp versus Ωfor two flight speeds V =5, 8 , generated using common
+CT, CP, ηp curves. Zero-thrust speeds Ωo occur at the same V/ΩoR=λo values.
+
+Motor/Prop Matching
+The equilibrium operating speed Ωof the motor/prop combination occurs when the torques
+are equal:
+
+                               Qm(Ω, v) = Q(Ω, V )                            (17)
+
+                                        3
+
+=== PAGE 4 ===
+A common situation is the need to determine all the prop and motor operating parameters
+which result from a specified flight speed V and applied motor voltage v. This is shown
+graphically in Figure 4, where the torque-matching condition (17) is applied to first determine
+the motor speed Ω. All the other prop and motor parameters can then be determined from
+the propeller and motor characteristic curves.
+
+       ηp
+                                            prop efficiency at specified V
+
+                                                                            Ω
+
+                                           prop thrust at specified V
+
+        T
+
+                                                                            Ω
+
+                 motor torque at specified υ
+                        Qm                  Q prop torque at specified V
+
+  Q = Q                                                   specified motor voltage
+    m
+
+                                                    υ =
+                                                        8
+
+                                                                            Ω
+                                   Ω
+                                                 υ = 8
+
+       ηm
+
+                                                                            Ω
+
+Figure 4: Prop and motor parameters obtained from a specified flight speed V and a specified
+motor voltage v. The motor speed Ωis read from the intersection of of the prop and motor
+torque curves, and all the other prop and motor parameters follow.
+
+                                        4
+
+=== PAGE 5 ===
+Another situation is the need to determine the motor voltage which will give a required
+thrust T at some specified flight speed V (e.g. to sustain level flight). This procedure is
+shown graphically in Figure 5. Again, the torque-matching condition (17) is used, but this
+time to read offthe required voltage, suitably interpolated from the computed Qm(Ω, v) lines.
+
+        ηp
+                                             prop efficiency at specified V
+
+                                                                             Ω
+
+                                            prop thrust at specified V
+
+ specified T
+ thrust
+
+                                                                             Ω
+
+             υ =
+                8                            Q prop torque at specified V
+           υ       required
+             = 6         voltage
+  Q = Q                                              motor torque lines
+    m      υ                                         for different voltages
+             = 4                         υ =
+                                            7.3           Qm
+
+                                                                              Ω
+                                   Ω
+
+                                            = 7.3
+                                          υ
+       ηm
+
+                                                                              Ω
+
+Figure 5: Prop and motor parameters obtained from a specified flight speed V and a required
+thrust T. The required motor voltage v is read from the intersection of the prop and motor
+torque curves, and all the other motor parameters follow.
+
+                                         5
+
+=== PAGE 6 ===
+ An alternative to graphical interpolation is obtained if we take equation (7), which defines
+ the Qm(Ω, v) lines in Figure 5, and invert it, also replacing Qm with Q.
+                                                         Ω
+                           v(Ω, Q) = (Kv Q + io) R +                             (18)
+                                                        Kv
+ Equation (18) gives the motor voltage v in terms of the propeller speed Ωand torque Q,
+ both of which follow directly from the specified thrust T.
+
+ Well-Matched Systems
+ A power supplier and a power sink (the motor and the propeller in this case), are said to
+ have a good impedance match if they are both operating at close to their peak efficiency. This
+ means that their efficiency curves must both have their peaks at roughly the same speed Ω,
+ and at the required thrust. Figure 6 shows good and poor match cases. A common approach
+ to get a better impedance match in propeller systems is with gearing, which allows shifting
+ the efficiency peak of the motor/gearbox system to a lower output-shaft Ω, where the prop
+ wants to operate. But the gearing has drawbacks in its own losses, plus more weight, more
+ cost, and possibly less reliability. Hence, a careful tradeoffis called for.
+
+               Well−matched                              Poorly−matched
+
+     ηp
+
+                                               ηp
+
+                                          Ω                                         Ω
+
+required T
+thrust                                          T
+
+                                          Ω                                         Ω
+
+     ηm
+
+                                               ηm
+
+                                          Ω                                          Ω
+
+          Figure 6: Well-matched and poorly matched motor and propeller pairs.
+
+                                          6

@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html>
+<head id="ctl00_Head1"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	SAE Aero Design
+</title>
+        <!-- ## DATADOG ## -->
+        <script 
+            type="text/javascript" 
+            src="https://www.datadoghq-browser-agent.com/us1/v5/datadog-logs.js">
+        </script>
+        <script>
+            window.DD_LOGS && window.DD_LOGS.init({
+                clientToken: 'pub2b998a9408da81e2b93d28713ea65e93',
+                site: 'datadoghq.com',
+                forwardErrorsToLogs: true,
+                forwardConsoleLogs: 'all', // ['log', 'debug', 'info', 'warn', 'error']
+                sessionSampleRate: 100,
+                silentMultipleInit: false,
+                trackingConsent: 'granted', // 'not-granted'
+                telemetrySampleRate: 0,
+                storeContextsAcrossPages: false,
+                allowUntrustedEvents: false,
+                service: 'sae_aero_design_north_america',
+                env: 'production',
+                version: '2.1.26.8121',
+                beforeSend: (log) => {
+                    // discard 404 network errors
+                    if (log.http && log.http.status_code === 404) {
+                        return false;
+                    }
+
+                    // remove email from view url
+                    log.view.url = log.view.url.replace(/email=[^&]*/, "email=REDACTED");
+                }
+            });
+
+            //window.DD_LOGS && window.DD_LOGS.setContextProperty('referrer', document.referrer);
+            //window.DD_LOGS && window.DD_LOGS.logger.setLevel('error');
+            window.DD_LOGS && window.DD_LOGS.logger.setHandler(['http', 'console']); //'http' | 'console' | 'silent'
+            //window.DD_LOGS && window.DD_LOGS.logger.setHandler('silent');
+            //window.DD_LOGS && window.DD_LOGS.setTrackingConsent('granted');
+
+            //https://docs.datadoghq.com/logs/log_collection/javascript/#global-context
+            //window.DD_LOGS && window.DD_LOGS.getInternalContext();
+            //window.DD_LOGS && window.DD_LOGS.setGlobalContext({ env: 'staging' });
+            window.DD_LOGS && window.DD_LOGS.setGlobalContextProperty('referrer', document.referrer);
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {env: 'staging', referrer: ...}
+            //window.DD_LOGS && window.DD_LOGS.removeGlobalContextProperty('referrer');
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {env: 'staging'}
+            //window.DD_LOGS && window.DD_LOGS.clearGlobalContext();
+            //window.DD_LOGS && window.DD_LOGS.getGlobalContext(); // => {}
+
+            //https://docs.datadoghq.com/logs/log_collection/javascript/#user-context
+            //window.DD_LOGS && window.DD_LOGS.setUserProperty('type', 'customer');
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {id: '1234', name: 'John Doe', email: 'john@doe.com', type: 'customer'}
+            //window.DD_LOGS && window.DD_LOGS.removeUserProperty('type');
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {id: '1234', name: 'John Doe', email: 'john@doe.com'}
+            //window.DD_LOGS && window.DD_LOGS.clearUser();
+            //window.DD_LOGS && window.DD_LOGS.getUser(); // => {}
+
+            window.DD_LOGS && window.DD_LOGS.setUser({
+                id: '',
+                un: ''
+            });
+        </script>
+        <!-- ## DATADOG ## -->
+    
+
+    <script type="text/javascript" src="/cdsweb/SharedComponents/public_assets/jquery-1.11.2.min.js"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/jqueryui-1-11-2-full/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="/cdsweb/SharedComponents/public_assets/jqueryui-1-11-2-full/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="/cdsweb/SharedComponents/public_assets/data-tables/src/datatables.min.css" />
+    <script src="/cdsweb/SharedComponents/public_assets/data-tables/src/dataTables.js" type="text/javascript"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/moment/moment.min.js" type="text/javascript"></script>
+    <script src="/cdsweb/SharedComponents/public_assets/moment/datetime-moment.js" type="text/javascript"></script>
+    <link href="/Main_Responsive.css" rel="stylesheet" type="text/css" /><link href="/panels.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/bootstrap-3.2.0/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" /><link href="/cdsweb/SharedComponents/public_assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" /><link href="/cdsweb/SharedComponents/public_assets/CdsWeb.css" rel="stylesheet" type="text/css" /><link href="/Overrides.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/cdsweb/SharedComponents/public_assets/CdsWeb.js"></script>
+
+    
+</head>
+
+<body>
+    
+    <link href="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.min.css" rel="stylesheet" />
+    <script src="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.min.js"></script>
+    <div id="dateTimePopup"></div>
+    <script src="/cdsweb/SharedComponents/public_assets/datetimepicker/DateTimePicker.js"></script>
+    
+    
+    <div id="header">
+        <div id="logo">
+            <a id="ctl00_aHome" href="/">
+                <img src="/cdsweb/SharedComponents/saeaerodesign.com/img/CdsWeb-AEROD-Header-Logo-Max65pxH.png" />
+            </a>
+        </div>
+        <div id="header-sae" class="hidden-xs pull-right">
+            <a href="http://www.sae.org/">
+                <img src="/cdsweb/SharedComponents/public_assets/img/sae_vrt_blk_rgb_pos_l.png"" style="width:120px" />
+            </a>
+        </div>
+
+        <button type="button" class="pull-right navbar-toggle btn btn-default btn-lg" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    
+
+<style>
+    #testVisualIndicator {
+        background-image: repeating-linear-gradient(-45deg, #f4d308 0 8px, black 8px 16px);
+        display: flex;
+        justify-content: center;
+    }
+
+    #testVisualIndicator > span {
+        color: white;
+        background-color: black;
+        font-size: x-small;
+        padding: 0 5px;
+    }
+
+    #prodVisualIndicator {
+        background-image: repeating-linear-gradient(-45deg, red 0 8px, white 8px 16px);
+        display: flex;
+        justify-content: center;
+    }
+
+    #prodVisualIndicator > span {
+        color: white;
+        background-color: black;
+        font-size: x-small;
+        padding: 0 5px;
+    }
+</style>
+
+
+    <form name="aspnetForm" method="post" action="./ViewFAQ.aspx?faqnum=157" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="jD7JdHdPSSL6zhvwfKpAjm3smKwx8f9Ic4QCiQHx5XjldgsnuEOLl89x6VIauNrBF2LjPWsLj5cEDRt87Oi0EOLKpAAcCw41wEmplhsLfGmKkgL3NyhsVa4fvOPITml3ZAqpCXwGFXGTk06vwMxAKL//hasjdDDmBl/MFmZUtd3BWNwiSI/xHuM0wlBDIbrxnC76rUoXmq7E1mmkhx4MICImZ2yTNyhxSbAt7z3KeBBlotmmV5t2Nk/7XhVC6JpCwgALfSg2gt5ZZl/pKaAAHQHhSKJeOId7sJoGgw3MjGfrBqnfvHTapCJqPQRNu3WHgDJQNhD+RxwRlklrKeVehcnxJNULP/V5c7Nt0+rzvHq1Fd0/h0yMvTYsi4DFD9Iew6gDZwIhpoT9/gvRGlnnL0XlQFY97JgOETzrCW2YOL384EcH9Ut6fD7NkDYknMHmITkqeBo5y/GAz01WG1EzN1trdRVNunoBP106HcLAmC8Q3e/DFb9O2gqF0lLUS9ZqX5xYoi5LjK+6oUfZQdnHgaan6szBaGTmI83SdGSOEN+pH5ZXrXSEWZEq7TO3AKOw8DgTYSK9fqjneGKtGrz4yCAWrQJi32QE2caXg+Yt3zlQAcAtBVgFbXNz7piTNJjayIHZ5kFyVzxG+oCucd8ksIEp5U3OeWjpcZUekNopUWYr6tev0+EQRIP/M7nYjsuagXL7xbfI2lcuXuwFj+zQLP8GpEBm9mmF0i39o9mPagbAnfMPqLCyfnY1uqmOiPoby45gaxiMih29CWGOOc/T6CW53np9gtOFXqTCoMOLYu4YSKvm70ugBPBc+1nsVsOlzcMzca8xyjp7jck3pO8uUxr7BaubzYgKMqXKswbBAzrYa9w6aPZvRluF7IJvlOUz1zAid1x3oPKGoSMLRCzwyTeSo07nsxGwGvGdTj42vU8L5lwNOf6Fs/+eUi1YTiC33sYLxT9nNIrBJjMKI24c4YTC24lYMVABru5waa5gLN+MZ2Wh6b1265jMqgzk7J57+bYhbrqe+CY+sGUAuNWUHDGf4cnBWYx0tYvBBXb2FDi5NzeXLAteVm+N3XNFJPBz19hbk/nwW1NFvOqn9qFOHBINhmeLW8qX8mwInzRmd6gi7YgbJ/ZKAagp5/bAdk3bIcUWG95PPvPY+DgouDucTl6R5DxhLT+MOmekJYfY+gXFDWPRGKVegYl4VjmjD1vZODVry6Lc3mSuQMcxkdAJW17WfhkuRfEWO5XvaFtEVgaAT56HIldkVZjyJQN4urqWJWft7+EGF8ZjhtfdSIGMVxEP5moohhHb+3jz4CwGjQOcdxvn+Wg3XFokyJNqYpr4KEtkMkeh1XVsXI6GljC+OtOdPVNHDO2fG9VsJ7fyhwmbsPE/cPSOCDfHpMRWT8sPoFSyYaFjt/ooMVRmKKlTXM7/lZplCUbi2tuyAMqVY3E=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A7B15C41" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="6FNF6FyP9z0QTDutfDTIwRgmtoY1Qd2Kc0zSwm2o9366fSgXZs228jYJi20RutwEcoViBkevnsvFRxQVDeEulV6HLJGUQyR7uZEUk0EdZrRemb0Wv6zsPRk9NJdzbvhVJcpsdwVmM7lWOX5eHX7ZGII7jP4SbkUkltSTMHsuL+M=" />
+</div>
+        <nav class="navbar" role="navigation">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    
+
+                    
+                    <li><a href="/">Home</a></li>
+
+                    
+                    
+
+                    
+                    <li class="dropdown hidden">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Jump To Activity&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            
+                        </ul>
+                    </li>
+
+                    
+                    <li><a href="/cdsweb/app/news.aspx">News</a></li>
+
+                    
+                    <li><a href="/cdsweb/reg/UpcomingCompList.aspx">Competitions & Workshops</a></li>
+
+                    
+                    <li><a href="/Deadlines.aspx?seriesCode=AERO">Deadlines</a></li>
+
+                    
+                    <li><a href="/app/CompetitionResources.aspx" target="_blank">Competition Resources</a></li>
+
+                    
+                    <li><a href="/cdsweb/gen/DocumentResources.aspx">Series Resources</a></li>
+
+                    
+                    <li><a href="/page.aspx?pageid=c93ea933-b70e-4523-8cbc-276cc89a4211">Results</a></li>
+
+                    
+                    <li><a href="/Page.aspx?pageid=1c4426c1-520a-427a-8f2b-7521d7dd8fe5">Membership</a></li>
+                    
+                    
+                    <li><a href="/Page.aspx?pageid=73d2a0c9-163d-4c9a-8ed0-a27e3be95b1f">Media</a></li>
+
+                    
+                    <li><a href="/go/signup">Create an Account</a></li>
+
+                    
+                    
+
+                    
+                    <li><a href="https://www.saeaerodesign.com/Login.aspx">Login</a></li>
+
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <div id="content-wrapper">
+            <div id="content" class='container min-height'>
+                
+
+                
+<div id="dismissableAlert" style="display: none;" class="alert alert-danger">
+    <div id="errorDetails"></div>
+
+    <p>Click the button to view more details of the error.</p>
+    <button type="button" class="btn btn-danger" onclick="ShowTheError()">Click here to see what went wrong</button>
+    <button type="button" class="btn btn-secondary" id="AlertCloseButon">Dismiss</button>
+</div>
+
+<script>
+    var htmlResponse = "";
+    var errorPopupDetails = "";
+
+    function ShowTheError() {
+        window.open('').document.body.innerHTML = htmlResponse;
+        $("#dismissableAlert").hide();
+    }
+
+    $(document).ready(function () {
+        $("#AlertCloseButon").click(function () {
+            $("#dismissableAlert").hide();
+        });
+    });
+
+    function PopulateErrorMessage(messageHtml){
+        htmlResponse = messageHtml;
+        //htmlResponse = htmlResponse.replace("<b>Source Error:</b>", "<b>Source Error:</b>" + , window.location.href)
+        var beginIndex = htmlResponse.indexOf("<h2> <i>");
+        var endIndex = htmlResponse.indexOf("<b>Stack Trace:</b>");
+        errorPopupDetails = htmlResponse.substring(beginIndex, endIndex);
+
+        $("#dismissableAlert").show();
+        document.getElementById("errorDetails").innerHTML = errorPopupDetails;
+
+        window.scrollTo(0, 0); // values are x,y-offset
+    }
+</script>
+
+                
+    <span id="ctl00_main_ibTop" class="InfoBlock"></span>
+    
+<div id="ctl00_main_faqViewer_pMain">
+	
+    <div class="row">
+        <div class="col-xs-12">
+            <input type="hidden" name="ctl00$main$faqViewer$hfFaqID" id="ctl00_main_faqViewer_hfFaqID" value="5241369a-27ba-41e1-946d-6134a3dbb369" />
+            <div class="Head1 no-margin-left no-padd-left">
+                <span id="ctl00_main_faqViewer_lblFaqNum">FAQ #157</span><br />
+                <span id="ctl00_main_faqViewer_lblFaqTitle">Student Member Affiliation</span>
+            </div>
+            <p class="no-margin-bottom">
+                Last Updated On
+                <span id="ctl00_main_faqViewer_lblLastUpdated" style="font-weight:normal;font-style:normal;">12/13/2024 02:54:17 PM</span>
+                by
+            </p>
+            <p>
+                <span id="ctl00_main_faqViewer_lblUpdatedByUsername" style="font-weight:normal;font-style:normal;">brett.foley</span>
+            </p>
+            <div class="form-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Question
+                    </div>
+                    <div class="panel-body">
+                        <span id="ctl00_main_faqViewer_lblQuestion">Do members need to be affiliated on both the www.sae.org site and the www.saeaerodesign.com site?</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Answer
+                    </div>
+                    <div class="panel-body">
+                        <span id="ctl00_main_faqViewer_lblAnswer">Only students that need to submit documents and ask rules questions must be affiliated on www.saeaerodesign.com.  Otherwise, all team members and faculty advisors must be affiliated on www.sae.org.</span>
+                    </div>
+                </div>
+            </div>
+            
+<div id="ctl00_main_faqViewer_rqaFaqFiles_pNoAttachments">
+		
+ No Attachments
+
+	</div>
+            <hr />
+            <div id="ctl00_main_faqViewer_ruleTagEditor_pMain">
+		
+    <input type="hidden" name="ctl00$main$faqViewer$ruleTagEditor$hfInquiryID" id="ctl00_main_faqViewer_ruleTagEditor_hfInquiryID" />
+    <input type="hidden" name="ctl00$main$faqViewer$ruleTagEditor$hfFaqID" id="ctl00_main_faqViewer_ruleTagEditor_hfFaqID" value="5241369a-27ba-41e1-946d-6134a3dbb369" />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <div id="ctl00_main_faqViewer_ruleTagEditor_pTitle">
+			Rule Numbers
+		</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                    <tr>
+                        <td>
+                            <span id="ctl00_main_faqViewer_ruleTagEditor_rptrRuleTags_ctl00_lblRuleTag">2016:1.2.2</span>&nbsp;
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <span id="ctl00_main_faqViewer_ruleTagEditor_rptrRuleTags_ctl01_lblRuleTag">2025:1.2</span>&nbsp;
+                        </td>
+                    </tr>
+                
+        </tbody>
+    </table>
+    
+    
+
+	</div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="/cdsweb/SharedComponents/public_assets/js/markdown/simplemde.min.js"></script>
+<script src="/cdsweb/SharedComponents/public_assets/js/markdown/markdown.js"></script>
+
+    <span id="ctl00_main_ibBottom" class="InfoBlock"></span>
+    
+
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                
+            </div>
+
+            <a class="sae-privacy-policy" href="https://www.sae.org/privacy" target="_blank">SAE International Privacy Policy</a>
+        </div>
+    </form>
+</body>
+</html>

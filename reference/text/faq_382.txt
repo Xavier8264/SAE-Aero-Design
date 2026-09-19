@@ -1,0 +1,40 @@
+# ID: faq_382
+# SOURCE: https://saeaerodesign.com/cdsweb/rqa/ViewFAQ.aspx?faqnum=382
+# ORIGINAL: reference/raw/faq_382.html
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type html | 1 pages | ~165 tokens
+
+=== PAGE 1 ===
+# SAE Aero Design
+
+Menu
+
+Click the button to view more details of the error.
+
+Click here to see what went wrong
+Dismiss
+
+FAQ #382
+
+All Classes: Controllability and Ground Steering
+
+Last Updated On
+12/13/2024 02:55:13 PM
+by
+
+brett.foley
+
+Question
+
+Can we use differential thrust as ground steering?
+
+Answer
+
+No, as per rule 2.6, if an aircraft is equipped with a wheeled landing gear, the aircraft must have a ground steering mechanism for positive directional control during takeoffs and landings. Aircraft cannot rely solely on aerodynamic control surfaces for ground steering.
+
+No Attachments
+
+| Rule Numbers |
+
+| 2025:2.6 |
+
+SAE International Privacy Policy

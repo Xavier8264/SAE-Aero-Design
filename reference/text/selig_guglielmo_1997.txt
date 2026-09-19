@@ -1,0 +1,574 @@
+# ID: selig_guglielmo_1997
+# SOURCE: https://m-selig.ae.illinois.edu/pubs/GuglielmoSelig-1997-JofAC-S1223.pdf
+# ORIGINAL: reference/raw/selig_guglielmo_1997.pdf
+# CONVERTED: 2026-09-18 21:21 UTC-0500 | type pdf | 10 pages | ~11647 tokens
+# NOTE: Selig and Guglielmo 1997 J. Aircraft: High-lift low-Re airfoil design (the S1223 paper)
+# FLAG img: pages 1-7
+# TOC:
+#   A9rkfr9_7hhjfd_l48.tmp -> PDF page 1
+#     Local Disk -> PDF page -1
+#       file:///L/users/mseligHome-svn/m-seligConsulting/221231-KennethHuff-HighLiftDesign/deliveries/230320-S1223-points/s1223.txt -> PDF page 1
+#   A91hbdtc1_7hhjfo_l48.tmp -> PDF page 1
+#     Local Disk -> PDF page -1
+#       file:///C/s1223.txt -> PDF page 9
+
+=== PAGE 1 | img ===
+JOURNAL OF AIRCRAFT
+Vol. 34, No. 1, January­ February 1997
+
+               High-Lift Low Reynolds Number Airfoil Design
+
+                                        Michael S. Selig* and James J. Guglielmo†
+                          University of Illinois at Urbana­ Champaign, Urbana, Illinois 61801
+
+                 A new high-lift airfoil design philosophy has been developed and experimentally validated through
+               wind-tunnel tests. A key element of the high-lift design philosophy was to make use of a concave pressure
+               recovery with aft loading. Three codes for airfoil design and analysis (PROFOIL, the Eppler code, and
+               ISES) were used to design the example S1223 high-lift airfoil for a Reynolds number of 2 3 105. In wind-
+               tunnel tests, the new airfoil yielded a maximum lift coef cient of 2.2. With vortex generators and a 1%
+               chord Gurney  ap (used separately), the Cl,max increased to 2.3. The airfoil demonstrates the rather
+               dramatic gains in Cl,max over those airfoils previously used for high-lift low Reynolds number applications.
+
+                      Nomenclature                                 wreck survivor search and weather monitoring. In each case,
+Cd    = airfoil drag coef cient                                   high-lift airfoil performance can to varying degrees play an
+Cl    = airfoil lift coef cient                                   important role.
+Cl,max = airfoil maximum lift coef cient                            To place the current work in a proper global context, Fig. 1
+Cm,c/4 = airfoil pitching-moment coef cient about the             presents the maximum lift characteristics of a number of rep-
+                                                                   resentative low-speed airfoils taken from various sources.1,9­ 16
+        quarter-chord point
+c     = airfoil chord                                              Although not all of these airfoils were speci cally designed
+V     = velocity distribution nondimensionalized by the            for high-lift, a predictable and anticipated trend emerges, the
+        freestream                                                 lower the Reynolds number, the lower the maximum lift. In
+x     = airfoil x coordinate                                       particular, in going from a Reynolds number of 1 3 106 to 1
+      = angle of attack relative to chord line                     3 105, a sharp drop in Cl,max is seen in the available data. The
+a
+                                                                   lower end of this range is of interest in the design of small
+                     I.  Introduction                              UAVs based on current trends.6 In particular, this paper focuses
+                                                                   on high-lift airfoil design for a Reynolds number of 2 3 105.
+I NCREASED payloads, shortened takeoff and landing dis-
+                                                                     High lift is rarely the only desirable feature of an airfoil.
+  tances, reduced aircraft noise, and lowered stall speeds can
+                                                                   The airfoil lift-to-drag ratio, endurance parameter, thickness,
+all be derived from the bene cial effects of improved high-lift
+                                                                   pitching moment, stall characteristics, and sensitivity to rough-
+airfoil aerodynamics. It is, therefore, not surprising that the
+                                                                   ness are all important factors, among others, that must each be
+classic problem of high-lift airfoil design has been and remains
+                                 4                                 weighed separately when one considers selecting or designing
+a topic of considerable interest.1­ The purpose of this paper
+                                                                   an airfoil. This study focuses on those factors most related to
+is to present a high-lift airfoil design philosophy for the in-
+                                                                   enhanced high-lift low Reynolds numbers airfoil performance.
+creasingly important low Reynolds number regime in which
+small unmanned aerial vehicles (UAVs) operate. Only single-
+element airfoils are considered in the current work.                                   II.   Experiments
+  Airfoils for such aircraft typically operate in the Reynolds       This section describes the wind-tunnel experiment used to
+number range 2 3 105 to 5 3 105. For example, U.S. Navy            validate the design philosophy discussed in the next section.
+electronic warfare UAVs (e.g., LAURA5 and FLYRT6,7 aircraft)
+ y at ship-like speeds ranging from 25 to 40 kn with payload
+requirements varying from 10 to 25 lb. The small vehicle size
+required for ef cient shipboard storage coupled with low  ight
+speeds and demanding payload requirements places great em-
+phasis on high-lift low Reynolds number aerodynamics. A sim-
+ilar-sized aircraft, the hand-launched Pointer UAV operated by
+the U.S. Army,8 is used to perform short-range reconnaissance
+missions. Moreover, small payload-laden UAVs have been en-
+visioned for missions that involve atmospheric sampling, bor-
+der surveillance, forest  re detection/tracking, ship- or aircraft-
+
+  Presented as Paper 94-1866 at the AIAA 12th Applied Aerodynam-
+ics Conference, Colorado Springs, CO, June 20 ­ 23, 1994; received
+Nov. 25, 1995; revision received Oct. 15, 1996; accepted for publi-
+cation Oct. 26, 1996. Copyright q 1996 by M. S. Selig and J. J.
+Guglielmo. Published by the American Institute of Aeronautics and
+Astronautics, Inc., with permission.
+  *Assistant Professor, Department of Aeronautical and Astronautical
+Engineering, 306 Talbot Laboratory, 104 South Wright Street. Mem-
+ber AIAA.
+  †Graduate Research Assistant, Department of Aeronautical and As-
+tronautical Engineering; currently Engineer/Scientist, McDonnell
+Douglas Aerospace, Advanced Systems and Technology/Phantom
+Works, Mail Code 71-35, 2401 East Wardlow Road, Long Beach, CA     Fig. 1 Maximum lift coef cient of several airfoils over a range
+90807-5309 . Member AIAA.                                          of Reynolds numbers.
+                                                              72
+
+=== PAGE 2 | img ===
+                                                    SELIG AND GUGLIELMO                                                       73
+
+Since details of the method can be found in Refs. 17 ­ 21, only    splitter plates and the tunnel side-walls). Since the pitot-static
+a summary is given here.                                           probe that was used to measure the freestream was located
+                                                                   fairly close to the model, the probe measurements were there-
+A. Wind-Tunnel and Measurement Techniques                          fore corrected for airfoil circulation effects so as to obtain the
+  The experiments were performed in the University of Illinois     true freestream test section speed. The details of this correction
+open-return subsonic wind tunnel. The rectangular test-section     procedure can be found in Ref. 21.
+dimensions are approximately 2.8 3 4 ft in cross section and         Overall uncertainty in the lift coef cient is estimated to be
+8 ft long. To ensure good  ow quality in the test section, the    1.5%. The drag measurement error comes from three sources:
+tunnel settling chamber contains a 4 in.-thick honeycomb and       1) accuracy of the data acquisition instruments, 2) repeatabil-
+four antiturbulence screens, resulting in a turbulence level of    ity of the measurements, and 3) the locations of the particular
+less than 0.1% over the Reynolds number range tested.              four wake pro les used to determine the average drag coef -
+  The experimental setup is shown in Fig. 2. To isolate the        cient. Based partly on the error analysis method presented in
+ends of the airfoil model from the tunnel side-wall boundary       McGhee et al.23 and Coleman and Steele,24 the uncertainty
+layers and the outer support hardware, the airfoil models were     caused by the instruments and measurement repeatability are
+mounted horizontally between two 3­8 in.-thick, 6 ft-long Plex-    less than 1 and 1.5%, respectively. Based on a statistical anal-
+iglast splitter plates (not shown in Fig. 2 for clarity). Gaps     ysis (for a 95% con dence interval) of the spanwise drag re-
+between the model and splitter plates were nominally 0.05 in.      sults for the E374 airfoil17 at a = 4 deg, the uncertainties
+All models had a 12-in. chord and 33 5­8 -in. span. One side of    caused by the spanwise variations were estimated to be 3% for
+the model was free to pivot (far side of Fig. 2). At this location,  Re = 1 3 105 and reduce to approximately 1.5% at and above
+the angle of attack was measured using an ac potentiometer         Re = 2 3 105. The current airfoils are expected to have ap-
+(rotary transformer). The other side of the model was free to      proximately the same uncertainties. A more detailed discussion
+move vertically on a precision ground shaft, but not free to       of this topic is presented in Ref. 18. For the angle-of-attack
+rotate. A servo-feedback-control force balance, however, re-       sensor, the uncertainty is estimated to be 0.08 deg.
+strained the motion of the model and measured the lift force.
+Linear and spherical ball bearings within the lift carriage        B. Model Accuracy
+helped to minimize any frictional effects.                           To determine the accuracy of airfoil pro les, each model
+  The drag was obtained from the momentum method. To en-           was digitized with a Brown & Sharpe coordinate measuring
+sure that the wake had relaxed to tunnel static pressure, the      machine. Approximately 80 points were taken around each
+wake measurements were performed 14.8 in. (approximately           airfoil, and the spacing between points was approximately pro-
+1.25-chord lengths) downstream of the model trailing edge.
+Each vertical wake traverse consisted of between 20 ­ 80 total-
+head pressure measurements (depending on wake thickness)
+with points nominally spaced 0.08 in. apart. Owing to span-
+wise wake nonuniformities,17,18 wake pro le measurements
+were taken at four spanwise locations spaced 4 in. apart over
+the center 12 in. of the model span. The resulting four drag
+coef cients were then averaged to obtain the drag at a given
+angle of attack.
+  The lift, drag, and angle-of-attack measurements were cor-
+rected to account for the effects of solid blockage, wake block-
+age, and streamline curvature.22 The velocity was not only cor-
+rected for solid and wake blockage but also for a circulation
+effect that is unique to setups that make use of splitter plates.
+For the current tests, the freestream velocity, rather than being
+measured far upstream, had to be measured between the split-
+ter plates because of a spillage effect (air  owing between the
+
+Fig. 2 Wind-tunnel test section with model installed (splitter     Fig. 3 Comparison between measured model coordinates and
+plates and traverser omitted for clarity).                         true coordinates.
+
+=== PAGE 3 | img ===
+74                                                  SELIG AND GUGLIELMO
+
+                                                                  values. Although the viscous velocity distributions differ from
+                                                                  the inviscid ones owing to laminar separation bubble effects,
+                                                                  much can be gleaned nonetheless from the inviscid velocity
+                                                                  distributions. The experimental data was taken in the UIUC
+                                                                  subsonic wind tunnel as described in the previous section. For
+                                                                  the lift curves, the solid-triangle and open-circle symbols are
+                                                                  for increasing and decreasing angles of attack, respectively.
+                                                                     Figure 11 shows the pitching moment characteristics vs the
+                                                                  type of upper-surface pressure recovery for several airfoils,
+                                                                  including not only the FX 63-137 and M06-13-128, but also
+
+    Fig. 4 Comparison of the E387 measured drag polars.
+
+portional to the local curvature. Thus, near the leading and
+trailing edges, the spacing was relatively small, whereas over
+the midchord it was no greater than 0.7 in. These measured
+coordinates were compared with the true coordinates using a
+two-dimensional least-squares approach (rotation and vertical     Fig. 5 Inviscid velocity distribution for the FX 63-137 airfoil at
+translation), which yielded an average difference of approxi-     Cl = 1.5.
+mately 0.010 in. for all airfoils discussed in this paper. Figure
+3 shows a comparison of the FX 63-137 measured model co-
+ordinates (dot­ dash line) and true coordinates (solid line).
+Also shown are the M06-13-128, S1223, and E387 airfoils for
+later reference. Each plot depicts the differences between the
+model airfoil and the true coordinates for the airfoil upper
+surface (solid line) and lower surface (dot­ dash line). A dis-
+placement above or below the axis means that the model sur-
+face lies above or below the true coordinates, respectively. For
+instance, the FX 63-137 model was thicker than the true co-
+ordinates by approximately 0.009 in. over most of the airfoil
+chord.
+
+C. Validation
+  Data taken on the E387 model for Re = 2 3 105 and 4.6 3
+105 are shown in Fig. 4 and compared with data taken in the
+NASA Langley Research Center’s Low-Turbulence Pressure
+Tunnel (LTPT).23 As seen, good agreement is observed, and
+this serves to validate the current experiments. Moreover, sur-
+face oil- ow visualization taken to determine the laminar sep-
+aration and oil-accumulation lines showed that the lines agreed
+with NASA Langley Research Center’s LTPT data to within                     Fig. 6 Drag polar for the FX 63-137 airfoil.
+1­ 2% of chord.25 (It should be noted that a previous version
+of the E38717,18 was less accurate than the current model, and
+this led to discrepancies when compared with the LTPT data.
+It should also be noted that data shown previously,17 from
+Delft26 and Stuttgart,14 was obtained from only one wake pro-
+ le measurement and is therefore subject to error, because, as
+mentioned earlier, the wake pro les should be taken at several
+spanwise stations and averaged.17,18)
+
+                III.   Design Philosophy
+  The high-lift low Reynolds number airfoil design philosophy
+to be discussed can be illustrated by considering the Wortmann
+FX 63-13713 and Miley M06-13-1283 airfoils. The inviscid ve-
+locity distribution for the FX 63-137 (for Cl = 1.5) as well as
+the measured drag polar and lift characteristics are shown in
+Figs. 5­ 7, respectively. For reference, a Cl = 1.5 for the FX
+63-137 corresponds to a value approximately 10% less than
+the viscous Cl,max. Data for the M06-13-128 are shown in Figs.
+8­ 10. The inviscid velocity distribution in this case corre-
+sponds to Cl = 1.35, again approximately 10% less than the
+viscous Cl,max. No special signi cance should be given to these  Fig. 7 Lift characteristics for the FX 63-137 airfoil at Re = 2
+Cl values, except that they are close to the respective Cl,max    3 105.
+
+=== PAGE 4 | img ===
+                                                     SELIG AND GUGLIELMO                                                        75
+
+others that could be used to equally illustrate the design phi-     airfoil with a slow trailing-edge stall for which the point of
+losophy. Some of the information used to construct the  gure       turbulent separation slowly progresses forward as the angle of
+is presented in Table 1. The FX 63-137 with its relatively high     attack increases. As shown in Fig. 7, the plateau in the lift
+(negative) pitching moment and convex pressure recovery ap-         curve past the point of stall initiation is indicative of the slow
+pears toward the upper left corner. In contrast, airfoils with a    movement of the separation point. The M06-13-128 (Fig. 10)
+Stratford-like concave pressure recoveries and low pitching         is an example of an airfoil that has a moderate trailing-edge
+moments, such as the Miley M06-13-128 airfoil, appear on the        stall. The lift curve peaks at Cl,max, then falls off more rapidly
+lower right. Also shown in Fig. 11 are several trend lines that,    than the FX 63-137 airfoil. This characteristic is indicative of
+together with the moment and recovery-type information, can         a turbulent separation point that moves forward more quickly
+be used to deduce a strategy for high-lift low Reynolds number      with increasing angle of attack.
+airfoil design. It should be noted that the  gure is used to only    The last trend shown in Fig. 11 is that the maximum lift
+illustrate the trends and qualitative ideas discussed. Thus, it is  coef cient increases as the pitching moment increases and as
+not intended to be wholly accurate with respect to the place-       the pressure recovery approaches that of a Stratford distribu-
+ment of the airfoils. For instance, two airfoils can have the       tion. The FX 63-137 is a good example of increasing the Cl,max
+same pitching moment and similar recovery distributions, and        primarily through added pitching moment. In contrast, classic
+hence, occupy the same point on the plot, yet these two airfoils    Liebeck-type airfoils10 (such as the M06-13-128) are good ex-
+could exhibit different camber Cl,max, and stall characteristics.   amples of increasing the Cl,max mainly through the use of a
+In the  gure, the airfoils are placed most accurately with re-     Stratford distribution.
+spect to the Cl,max and shape of the recovery distribution.           Speci cally, the Liebeck high-lift design philosophy10 in-
+  One trend depicted in Fig. 11 is that an airfoil typically        volves using a Stratford distribution to recover the most pres-
+becomes more cambered when the pitching moment increases            sure without separation at Cl,max. Since separation is avoided
+and/or when the recovery becomes less concave and more con-         entirely, the prototypical Liebeck airfoil is one with no aft
+vex. Another trend is that the trailing-edge stall becomes more     loading, which yields a low pitching moment. The M06-13-
+abrupt as the pressure recovery becomes less convex and more        128 serves as an example of applying the Liebeck design phi-
+concave. Stall rate (as denoted in Fig. 11) refers to the shape
+of the lift curve at stall. The FX 63-137 is an example of an
+
+Fig. 8 Inviscid velocity distribution for the M06-13-128 airfoil at  Fig. 10 Lift characteristics for the M06-13-128 airfoil at Re = 2
+Cl = 1.35.                                                          3 105.
+
+                                                                    Fig. 11 Trends in low Reynolds number airfoil characteristics as
+                                                                    functions of the pitching moment and type of upper-surface pres-
+        Fig. 9 Drag polar for the M06-13-128 airfoil.               sure recovery distribution.
+
+=== PAGE 5 | img ===
+76                                                   SELIG AND GUGLIELMO
+
+        Table 1 Tabulated data for airfoils in Fig. 11             been designed with its high-lift characteristics achieved
+                                                                   through the use of both a concave recovery and aft loading,
+Airfoil        Cl,max    Cm,c/4        Re          Reference
+                                                                   two features that have not been previously incorporated into a
+E214            1.25     20.11      2 3 105           27           high-lift airfoil speci cally designed for low Reynolds num-
+E423            2.00    20.25 a     2 3 105           20
+                              a                                    bers.
+FX 63-137       1.75    20.17       2 3 105      Present paper
+M06-13-128      1.52     0.00 a     2 3 105      Present paper
+                                                                                   IV.   Design Methodology
+LA2573A         1.86      0.02     2.5 3 105          9
+LNV109A         1.87     20.02     2.5 3 105          9              A high-lift airfoil based on the preceding discussion and
+S1223           2.23    20.29 a     2 3 105      Present paper     presented in the following section was designed through the
+S3021           1.17     20.07      2 3 105           27           use of several low-speed airfoil design and analysis codes:
+                                                                   PROFOIL,29­ 31 the Eppler code,4,32 and ISES.33 First, PRO-
+aBased on predictions.19,28
+                                                                   FOIL was used for rapid interactive design. A new airfoil that
+                                                                   appeared to meet the performance objectives was then
+                                                                   screened through two more computationally intensive analysis
+                                                                   codes,  rst the Eppler code and then the ISES code. If at any
+
+                                                                                  Table 2 S1223 airfoil coordinates
+                                                                                Upper surface         Lower surface
+                                                                                x/c       y/c        x/c        y/c
+                                                                              0.00019   0.00286    0.00005   20.00138
+                                                                              0.00080   0.00745    0.00083   20.00593
+                                                                              0.00221   0.01365    0.00139   20.00690
+                                                                              0.00482   0.02100    0.00312   20.00872
+                                                                              0.00706   0.02587    0.00790   20.01068
+                                                                              0.01082   0.03257    0.01449   20.01150
+Fig. 12 Cl,max characteristics for  ve Wortmann airfoils (adapted            0.01503   0.03884    0.02138   20.01185
+from Ref. 1).                                                                 0.01989   0.04487    0.03330   20.01196
+                                                                              0.02846   0.05369    0.04627   20.01153
+losophy at low Reynolds numbers. Although the M06-13-128                      0.03568   0.05999    0.06389   20.01040
+has a high midrange bubble drag at the off-design Reynolds                    0.04897   0.07000    0.08117   20.00888
+numbers of 3 3 105, the Cl,max is approximately 1.5. This value               0.06800   0.08199    0.10354   20.00663
+                                                                              0.08018   0.08863    0.12948   20.00369
+for Cl,max is high, especially in light of the intrinsic low pitching         0.09550   0.09613    0.16404     0.00134
+moment.                                                                       0.11009   0.10247    0.20100     0.00781
+  It is argued by Eppler4 that to achieve maximum lift on an                  0.12497   0.10819    0.25115     0.01690
+airfoil with a concave Stratford-like recovery, the low pitching-             0.14032   0.11348    0.29610     0.02479
+moment constraint should be relaxed. In a computational study                 0.15733   0.11868    0.33392     0.03100
+for Reynolds numbers above 1 3 106, Eppler4 showed that the                   0.17473   0.12336    0.38160     0.03816
+lift of an airfoil with a concave recovery can be increased                   0.19561   0.12802    0.43006     0.04455
+through the use of aft loading. The airfoils incorporated the                 0.21283   0.13114    0.47940     0.05004
+favorable effects of both a concave recovery distribution and                 0.23263   0.13393    0.52654     0.05432
+added pitching moment to achieve high         values. In Fig.                 0.26356   0.13679    0.57684     0.05747
+                                         Cl,max                               0.29648   0.13794    0.63172     0.05939
+11, airfoils of this type would appear between the FX 63-137                  0.32854   0.13771    0.67649     0.05980
+and M06-13-128, but displaced in the direction of increased                   0.35962   0.13665    0.71559     0.05921
+lift.                                                                         0.38752   0.13509    0.73675     0.05844
+  The high-lift design philosophy described by Eppler4 was                    0.41610   0.13304    0.76333     0.05703
+employed nearly two decades earlier by Wortmann1 in the de-                   0.44641   0.13039    0.78942     0.05506
+sign of the FX 74-CL5-140 airfoil and three more conservative                 0.47863   0.12718    0.80947     0.05310
+derivative airfoils. Figure 12 shows the Cl,max characteristics of            0.50578   0.12419    0.83028     0.05062
+the FX 74-CL5-140 that achieves a Cl,max of nearly 2.4 at a                   0.53542   0.12074    0.86994     0.04446
+                          106,                                                0.56407   0.11720    0.89924     0.03838
+Reynolds number of 1 3         as contrasted with the FX 63-                  0.59071   0.11368    0.92149     0.03274
+137 that only achieves a Cl,max of 1.7­ 1.8 for the Reynolds                  0.61072   0.11087    0.94479     0.02561
+number range 2.5 3 105 to 7 3 105. The trend of slightly                      0.65038   0.10483    0.95707     0.02117
+increasing Cl,max with decreasing Reynolds number has been                    0.68153   0.09976    0.97177     0.01493
+observed elsewhere9 and is characteristic of some airfoils at                 0.71868   0.09328    0.98900     0.00570
+low Reynolds numbers.19 At  rst glance, Fig. 1 appears to in-                0.74802   0.08779    0.99231     0.00363
+dicate a general trend that Cl,max for a range of airfoils dra-               0.78334   0.08061    0.99800   20.00013
+matically decreases with Reynolds number, particularly over                   0.81744   0.07305    1.00000     0.00000
+the range of interest in this study, namely for Re = 2 3 105.                 0.84496   0.06638
+Inspection of the FX 74-CL5-140 reveals, however, that it em-                 0.87178   0.05924
+                                                                              0.88969   0.05399
+ploys a concave recovery1 as opposed to the convex recovery                   0.91053   0.04728
+of the FX 63-137. Thus, in light of the preceding discussion,                 0.92548   0.04204
+the main difference in the maximum lift is not because of a                   0.94176   0.03581
+Reynolds number effect as suggested by Fig. 12. Rather, the                   0.95370   0.03080
+difference is because of the shape of the recovery distribution:              0.96293   0.02660
+convex vs concave.                                                            0.97339   0.02127
+  Since the FX 63-137 is not similar in its design to the FX                  0.98075   0.01692
+CL/MS-class airfoil, there appears to be an area of design                    0.98689   0.01260
+                                                                              0.99187   0.00839
+space that has yet to be explored. Airfoils that would  t into               0.99720   0.00333
+this design space could be considered relatives of the FX CL/                 1.00000   0.00000
+MS-class airfoils. It is within this region that an airfoil has
+
+=== PAGE 6 | img ===
+                                                     SELIG AND GUGLIELMO                                                       77
+
+point the candidate airfoil failed to meet the design goals, the   Cl,max of 1.75 for the FX 63-137, a Cl,max of 2.2 for the S1223
+experience gained was used to redesign the airfoil to more         represents a 25% increase. Thus, again, the FX 63-137 should
+closely match the desired high-lift performance objectives.        not be viewed as a high-lift airfoil in a class similar to the FX
+This iterative process continued until a successful airfoil was    74-CL5-140, and the trend lines for Cl,max vs Re indicated in
+designed, and subsequently, wind-tunnel tested to validate the     Figs. 1 and 12 are in the current light misleading. The S1223
+design philosophy.                                                 exhibits acceptable moderate stall characteristics much like the
+                                                                   M06-13-128. This characteristic is important for some UAVs
+                     V.   Application                              that operate with the airfoil near Cl,max to achieve low-speed
+  The example airfoil presented, the S1223 with coordinates         ight requirements for loiter, cruise, or landing.
+given in Table 2, was designed to achieve a Cl,max greater than       In an effort to increase the Cl,max of the S1223, it was tested
+2 for a Reynolds number of 2 3 105. Figure 13 depicts the          with vortex generators (VGs) located on the upper surface at
+inviscid velocity distributions for the S1223 for Cl = 1.95.       0.17c and, separately, with a 0.01c Gurney  ap as depicted in
+Through the use of PROFOIL, the upper-surface velocity dis-        Fig. 15. As shown in Fig. 16, the VGs produced a Cl,max of 2.3
+tribution corresponding to the design Cl,max was determined        for increasing angles of attack followed by an abrupt stall and
+from a speci ed boundary-layer development. In particular,        a hysteresis loop between 16 ­ 20 deg. Thus, the VGs as tested
+from the leading edge to near 0.20c, the boundary layer was        were not bene cial. The lift performance with the Gurney  ap
+prescribed to be near laminar separation, an approach that         is shown in Fig. 17. As seen, Cl,max is 2.3 with the Gurney  ap,
+could be considered as a laminar analogy to the turbulent Strat-   and the stall is much like that of the clean airfoil. Unfortu-
+ford pressure recovery.34,35 At 0.20c, a short bubble ramp was     nately, lift measurements were only taken for increasing angles
+employed. The main pressure recovery was prescribed by             of attack, in which case it is not possible to detect hysteresis
+specifying the turbulent boundary layer to be increasingly near    or lack thereof.
+turbulent separation toward the trailing edge. Finally, aft load-     Drag data were taken on the S1223 and shown in Fig. 18.
+ing was employed at the trailing edge since, as discussed, the     When the drag coef cient exceeded approximately 0.05, no
+penalty caused by limited trailing-edge separation is expected
+to be more than offset by the gain in Cl,max.
+  A wind-tunnel model of the S1223 was constructed and
+tested in the University of Illinois at Urbana ­ Champaign
+(UIUC) subsonic wind tunnel. Lift characteristics for a Reyn-
+olds number of 2 3 105 are shown in Fig. 14. The results
+indicate a Cl,max of approximately 2.2, which clearly validates
+the aforementioned design philosophy. As compared with the
+
+                                                                   Fig. 15 Vortex generators and Gurney  ap geometries used sep-
+Fig. 13 Inviscid velocity distribution for the S1223 airfoil at Cl  arately on the S1223 airfoil.
+= 1.95.
+
+                                                                   Fig. 16 Lift characteristics for the S1223 airfoil with vortex gen-
+Fig. 14 Lift characteristics for the S1223 airfoil at Re = 2 3 105.  erators at Re = 2 3 105.
+
+=== PAGE 7 | img ===
+78                                                     SELIG AND GUGLIELMO
+
+                                                                      gram to test low Reynolds number airfoils. The help of Phi-
+                                                                      lippe Gigue ́re and Andy P. Broeren during the wind-tunnel
+                                                                      tests is gratefully acknowledged. Finally, the meticulous efforts
+                                                                      of Mark Allen (builder of the M06-12-138 and FX 63-137
+                                                                      wind-tunnel models), Jerry Robertson (E387), and Yvan Tinel
+                                                                      (S1223) are greatly appreciated.
+
+                                                                                               References
+                                                                        1Wortmann, F. X., ‘‘The Quest for High Lift,’’ Proceedings of the
+                                                                      AIAA/MIT/SSA 2nd International Symposium of the Technology and
+                                                                      Science of Low-Speed and Motorless Flight, Soaring Society of Amer-
+                                                                      ica, Los Angeles, CA, 1974, pp. 97­ 101; also AIAA Paper 74-1018,
+                                                                      Sept. 1974.
+                                                                        2Liebeck, R. H., and Ormsbee, A. I., ‘‘Optimization of Airfoils for
+                                                                      Maximum Lift,’’ Journal of Aircraft, Vol. 7, No. 5, 1970, pp. 409 ­
+                                                                      415.
+                                                                        3Miley, S. J., ‘‘On the Design of Airfoils for Low Reynolds Num-
+                                                                      bers,’’ Proceedings of the AIAA/MIT/SSA 2nd International Sympo-
+                                                                      sium of the Technology and Science of Low-Speed and Motorless
+                                                                      Flight, Soaring Society of America, Los Angeles, CA, 1974, pp.
+                                                                      82 ­ 96; also AIAA Paper 74-1017, Sept. 1974.
+Fig. 17 Lift characteristics for the S1223 airfoil with a 1% chord      4Eppler, R., Airfoil Design and Data, Springer ­ Verlag, New York,
+Gurney  ap at Re = 2 3 105.                                          1990.
+                                                                        5Foch, J. R., and Toot, P. L., ‘‘Flight Testing Navy Low Reynolds
+                                                                      Number (LRN) Unmanned Aircraft,’’ Lecture Notes in Engineering:
+                                                                      Low Reynolds Number Aerodynamics, edited by T. J. Mueller, Vol.
+                                                                      54, Springer ­ Verlag, New York, 1989, pp. 407 ­ 417.
+                                                                        6Foch, J. R., and Ailinger, K. G., ‘‘Low Reynolds Number, Long
+                                                                      Endurance Aircraft Design,’’ AIAA Paper 92-1263, Feb. 1992.
+                                                                        7Bovais, C., and Toot, P., ‘‘Flight Testing the Flying Radar Target
+                                                                      (FLYRT),’’ AIAA Paper 94-2144, June 1994.
+                                                                        8Karch, L. G., ‘‘Very Low Cost UAVs: Why We Need Them, What
+                                                                      More We Need to Do,’’ Marine Corps Gazette, March 1991, pp.
+                                                                      54 ­ 57.
+                                                                        9Liebeck, R. H., ‘‘Low Reynolds Number Airfoil Design at the
+                                                                      Douglas Aircraft Company,’’ Proceedings of the Aerodynamics at Low
+                                                                      Reynolds Numbers 10 4 < Re < 10 6 International Conference, Vol. 1,
+                                                                      The Royal Aeronautical Society, London, 1986, pp. 7.1 ­ 7.24.
+                                                                        10Liebeck, R. H., ‘‘Design of Subsonic Airfoils for High Lift,’’
+                                                                      Journal Aircraft, Vol. 15, No. 9, 1978, pp. 547 ­ 561.
+                                                                        11Van Ingen, J. L., and Boermans, L. M. M., ‘‘Aerodynamics at
+                                                                      Low Reynolds Numbers: A Review of Theoretical and Experimental
+                                                                      Research at Delft University of Technology,’’ Proceedings of the Aero-
+                                                                      dynamics at Low Reynolds Numbers 10 4 < Re < 10 6 International
+                                                                      Conference, Vol. 1, The Royal Aeronautical Society, London, 1986,
+                                                                      pp. 1.1 ­ 1.40.
+                                                                        12Maughmer, M. D., and Somers, D. M., ‘‘Design and Experimental
+                                                                      Results for a High-Altitude, Long-Endurance Airfoil,’’ Journal of Air-
+                                                                      craft, Vol. 26, No. 2, 1989, pp. 148 ­ 153.
+                                                                        13Althaus, D., and Wortmann, F. X., Stuttgarter Pro lkatalog I,
+           Fig. 18 Drag polar for the S1223 airfoil.                  Vieweg, Brunswick, Germany, 1981, ISBN 3-528-08464-2 .
+                                                                        14Althaus, D., Pro lpolaren fu ̈r den Modellug, Neckar ­ Verlag,
+further data were taken since the airfoil was partially stalled,      Villingen-Schwenningen, Germany, 1980.
+in which case the accuracy of the wake rake measurements are            15Althaus, D., Pro lpolaren fu ̈r den Modell ug, Vol. 2, Neckar ­
+suspect.22 As compared with the FX 63-137, the S1223 has              Verlag, Villingen-Schwenningen, Germany, 1985.
+higher drag, which must be expected for such high maximum               16Mueller, T. J., ‘‘Low Reynolds Number Vehicles,’’AGARDograph
+lift coef cients.                                                    288, Feb. 1985.
+                                                                        17Guglielmo, J. J., and Selig, M. S., ‘‘Spanwise Variations in Pro le
+                                                                      Drag for Airfoils at Low Reynolds Numbers,’’ Journal of Aircraft,
+                     VI.   Conclusions
+                                                                      Vol. 33, No. 4, 1996, pp. 699­ 707.
+  As a result of this work, it is clear that low Reynolds number        18Guglielmo, J. J., ‘‘Spanwise Variations in Pro le Drag for Airfoils
+airfoils can be designed to achieve lift coef cients much higher     at Low Reynolds Numbers,’’ M.S. Thesis, Dept. of Aeronautical and
+than previously thought possible. Such high-lift performance          Astronautical Engineering, Univ. of Illinois at Urbana ­ Champaign,
+can be achieved through the use of a design philosophy that           IL, 1995.
+fully exploits the favorable effects of both a concave pressure         19Selig, M. S., Guglielmo, J. J., Broeren, A. P., and Gigue ́re, P.,
+                                                                      Summary of Low-Speed Airfoil Data, Vol. 1, SoarTech Publications,
+recovery and aft loading. Application of this philosophy was
+                                                                      Virginia Beach, VA, 1995.
+demonstrated through the successful design of an airfoil that           20Selig, M. S., Lyon, C. A., Gigue ́re, P., Ninham, C. P., and Gug-
+achieved a Cl,max = 2.2 at a Re = 2 3 105. Surprisingly, as the       lielmo, J. J., Summary of Low-Speed Airfoil Data, Vol. 2, SoarTech
+example airfoil illustrates, the pressure recovery for this class     Publications, Virginia Beach, VA, 1996.
+of airfoils, though concave and close to a Stratford distribution,      21Gigue ́re, P., and Selig, M. S., ‘‘Freestream Velocity Measurements
+can be tailored to produce acceptable stall characteristics for       and Corrections for Two-Dimensional Testing with Splitter Plates,’’
+UAV applications.                                                     AIAA Paper 96-2388, June 1996.
+                                                                        22Rae, W. H., Jr., and Pope, A., Low-Speed Wind Tunnel Testing,
+                     Acknowledgments                                  Wiley, New York, 1984.
+                                                                        23McGhee, R. J., Walker, B. S., and Millard, B. F., ‘‘Experimental
+  This work was funded through private donations to the Uni-          Results for the Eppler 387 Airfoil at Low Reynolds Numbers in the
+versity of Illinois at Urbana ­ Champaign in support of a pro-        Langley Low-Turbulence Pressure Tunnel,’’ NASA TM-4062, Oct.
+
+=== PAGE 8 ===
+                                                       SELIG AND GUGLIELMO                                                          79
+
+1988.                                                                 Inverse Airfoil Design,’’ AIAA Journal, Vol. 30, No. 11, 1992, pp.
+  24Coleman, H. W., and Steele, W. G., Jr., Experimentation and Un-   2618 ­ 2625.
+certainty Analysis for Engineers, Wiley, New York, 1989.                 31Selig, M. S., ‘‘Multipoint Inverse Design of Isolated Airfoils and
+  25Selig, M. S., Lyon, C. A., and Broeren, A. P., ‘‘Boundary Layer   Airfoils in Cascade in Incompressible Flow,’’ Ph.D. Dissertation,
+Turbulators on Airfoils at Low Reynolds Numbers,’’ AIAA Paper 97-     Dept. of Aerospace Engineering, Pennsylvania State Univ., University
+0511, Jan. 1997.                                                      Park, PA, May 1992.
+  26Volkers, D. F., ‘‘Preliminary Results of Wind Tunnel Measure-        32Eppler, R., and Somers, D. M., ‘‘A Computer Program for the
+ments on Some Airfoil Sections at Reynolds Numbers Between 0.6        Design and Analysis of Low-Speed Airfoils,’’ NASA TM-80210, Aug.
+3 105 and 5.0 3 105,’’ Delft Univ. of Technology, Memo M-276,         1980.
+Delft, The Netherlands, 1977.                                            33Drela, M., and Giles, M. B., ‘‘Viscous-Inviscid Analysis of Tran-
+  27Althaus, D., ‘‘Recent Wind Tunnel Experiments at Low Reynolds     sonic and Low Reynolds Number Airfoils,’’ Journal of Aircraft, Vol.
+Numbers,’’ Proceedings of the Aerodynamics at Low Reynolds Num-       25, No. 10, 1987, pp. 1347­ 1355.
+bers 10 4 < Re < 10 6 International Conference, Vol. 2, The Royal        34Somers, D. M., ‘‘Subsonic Natural-Laminar-Flow Airfoils,’’ Nat-
+Aeronautical Society, London, 1986, pp. 18.1 ­ 18.42.                 ural Laminar Flow and Laminar Flow Control, edited by R. W. Barn-
+  28Selig, M. S., and Guglielmo, J. J., ‘‘High-Lift Low Reynolds      well and M. Y. Hussaini, Springer ­ Verlag, New York, 1992, pp.
+Number Airfoil Design,’’ AIAA Paper 94-1866, June 1994.               143 ­ 176.
+  29Selig, M. S., and Maughmer, M. D., ‘‘A Multipoint Inverse Airfoil    35Eppler, R., Laminar Airfoils for Reynolds Numbers Greater than
+Design Method Based on Conformal Mapping,’’ AIAA Journal, Vol.        4 3 10 6, National Technical Information Service, N69-28178, trans-
+30, No. 5, 1992, pp. 1162 ­ 1170.                                     lated from Ingenieur-Archiv, Bd. 38, Heft 4/5, B-819-35, April 1969,
+  30Selig, M. S., and Maughmer, M. D., ‘‘Generalized Multipoint       pp. 232 ­ 240.
+
+=== PAGE 9 ===
+   S1223
+   1.00000  0.00000
+   0.99838  0.00126
+   0.99417  0.00494
+   0.98825  0.01037
+   0.98075  0.01646
+   0.97111  0.02250
+   0.95884  0.02853
+   0.94389  0.03476
+   0.92639  0.04116
+   0.90641  0.04768
+   0.88406  0.05427
+   0.85947  0.06089
+   0.83277  0.06749
+   0.80412  0.07402
+   0.77369  0.08044
+   0.74166  0.08671
+   0.70823  0.09277
+   0.67360  0.09859
+   0.63798  0.10412
+   0.60158  0.10935
+   0.56465  0.11425
+   0.52744  0.11881
+   0.49025  0.12303
+   0.45340  0.12683
+   0.41721  0.13011
+   0.38193  0.13271
+   0.34777  0.13447
+   0.31488  0.13526
+   0.28347  0.13505
+   0.25370  0.13346
+   0.22541  0.13037
+   0.19846  0.12594
+   0.17286  0.12026
+   0.14863  0.11355
+   0.12591  0.10598
+   0.10482  0.09770
+   0.08545  0.08879
+   0.06789  0.07940
+   0.05223  0.06965
+   0.03855  0.05968
+   0.02694  0.04966
+   0.01755  0.03961
+   0.01028  0.02954
+   0.00495  0.01969
+   0.00155  0.01033
+   0.00005  0.00178
+   0.00044 -0.00561
+   0.00264 -0.01120
+   0.00789 -0.01427
+   0.01718 -0.01550
+   0.03006 -0.01584
+   0.04627 -0.01532
+
+file:///C/s1223.txt[3/20/2023 8:22:54 PM]
+
+=== PAGE 10 ===
+   0.06561 -0.01404
+   0.08787 -0.01202
+   0.11282 -0.00925
+   0.14020 -0.00563
+   0.17006 -0.00075
+   0.20278  0.00535
+   0.23840  0.01213
+   0.27673  0.01928
+   0.31750  0.02652
+   0.36044  0.03358
+   0.40519  0.04021
+   0.45139  0.04618
+   0.49860  0.05129
+   0.54639  0.05534
+   0.59428  0.05820
+   0.64176  0.05976
+   0.68832  0.05994
+   0.73344  0.05872
+   0.77660  0.05612
+   0.81729  0.05219
+   0.85500  0.04706
+   0.88928  0.04088
+   0.91966  0.03387
+   0.94573  0.02624
+   0.96693  0.01822
+   0.98255  0.01060
+   0.99268  0.00468
+   0.99825  0.00115
+   1.00000  0.00000
+
+file:///C/s1223.txt[3/20/2023 8:22:54 PM]

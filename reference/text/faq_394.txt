@@ -1,0 +1,54 @@
+# ID: faq_394
+# SOURCE: https://saeaerodesign.com/cdsweb/rqa/ViewFAQ.aspx?faqnum=394
+# ORIGINAL: reference/raw/faq_394.html
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type html | 1 pages | ~238 tokens
+
+=== PAGE 1 ===
+# SAE Aero Design
+
+Menu
+
+Click the button to view more details of the error.
+
+Click here to see what went wrong
+Dismiss
+
+FAQ #394
+
+Regular Class 2026 - Increasing Bottle Payload
+
+Last Updated On
+2/17/2026 09:52:25 AM
+by
+
+talmadge33
+
+Question
+
+Can we remove two empty bottles and replace with one filled bottle?
+
+Example:
+Successful Flight 1: 2 empty + 2 filled
+Flight 2: 3 filled
+
+Please let us know if this incrementation strategy is acceptable.
+
+Answer
+
+Total bottle count must be constant or increasing. Removing two empty bottles and adding one filled bottle is not allowed, even though the total payload weight might be increasing.
+
+Valid examples:
+
+Successful Flight 1: 2 empty + 2 filled (4 total bottles)
+Flight 2: 1 empty + 3 filled (4 total bottles)
+
+Successful Flight 1: 2 empty + 2 filled (4 total bottles)
+Flight 2: 3 empty + 2 filled (5 total bottles)
+
+No Attachments
+
+| Rule Numbers |
+
+| 2026:2026.7.4 |
+
+SAE International Privacy Policy

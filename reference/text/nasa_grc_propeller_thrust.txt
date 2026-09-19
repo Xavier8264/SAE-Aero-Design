@@ -1,0 +1,67 @@
+# ID: nasa_grc_propeller_thrust
+# SOURCE: https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/propeller-thrust/
+# ORIGINAL: reference/raw/nasa_grc_propeller_thrust.html
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type html | 1 pages | ~1277 tokens
+# NOTE: NASA Glenn: propeller thrust from momentum theory (thrust falloff with speed)
+
+=== PAGE 1 ===
+# Propeller Thrust | Glenn Research Center | NASA
+
+Home > Beginners Guide to Aeronautics
+
+Propeller Thrust
+The Wright brothers used twin-pusher propellers on their powered aircraft between 1903 and 1905. The details of how a propeller generates thrust is very complex, but we can still learn a few of the fundamentals using the simplified momentum theory presented here. This modern theory is slightly different from the theory developed by the Wright’s to design their propellers.
+
+## Propeller Propulsion System
+
+On the page, we show a schematic of a propeller propulsion system at the top and some of the equations that define how a propeller produces thrust at the bottom. The details of propeller propulsion are very complex because the propeller is like a rotating wing. The Wright brothers are generally credited with being the first ones to look at the problem this way. The Wright propellers had 2 blades. The blades were designed to be long and thin, and a cut through the blade perpendicular to the long dimension gives an airfoil shape. Because the blades rotate, the tip moves faster than the hub.
+
+So, to make the propeller efficient, the blades are twisted from hub to tip. The angle of attack of the airfoils at the tip is lower than at the hub because it is moving at a higher velocity than the hub. Of course, these variations make analyzing the airflow through the propeller a very difficult task. Leaving the details to the aerodynamicists, let us assume that the spinning propeller acts like a disk through which the surrounding air passes (the yellow ellipse in the schematic).
+
+The engine, shown in white, turns the propeller and does work on the airflow. So, there is an abrupt change in pressure across the propeller disk. (Mathematicians denote a change by the Greek symbol “delta”. Across the propeller plane, the pressure changes by “delta p”. The propeller acts like a rotating wing.
+
+From airfoil theory, we know that the pressure over the top of a lifting wing is lower than the pressure below the wing. A spinning propeller sets up a pressure lower than free stream in front of the propeller and higher than free stream behind the propeller. Downstream of the disk the pressure eventually returns to free stream conditions. But at the exit, the velocity is greater than free stream because the propeller does work on the airflow. We can apply Bernoulli’s equation to the air in front of the propeller and to the air behind the propeller. But we cannot apply Bernoulli’s equation across the propeller disk because the work performed by the engine violates an assumption used to derive the equation.
+
+## Simple Momentum Theory
+
+Turning to the math, from the basic thrust equation, the amount of thrust depends on the mass flow rate through the propeller and the velocity change through the propulsion system. Let us denote the free stream conditions by the subscript “0”, the conditions at the propeller by the subscript “p”, and the exit conditions by the subscript “e”. The thrust (F) is equal to the mass flow rate (\(\dot m\)) times the difference in velocity (V).
+
+\(\LARGE F = [\dot m * V]_e – [\dot m * V]_0\)
+
+The mass flow through the propulsion system is a constant, and we can determine the value at the plane of the propeller. Since the propeller rotates, we can define an area (A) that is swept out by the propeller of blade length (L). Through this area, the mass flow rate is density (r) times velocity (Vp), times area.
+
+\(\LARGE \dot m = r * V_p * A\)
+
+Substitute this value for the mass flow rate into the thrust equation to get the thrust in terms of the exit velocity, entrance velocity, and velocity through the propeller.
+
+\(\LARGE F = r * V_p * A * [V_e – V_0]\)
+
+We can use Bernoulli’s equation to relate the pressure and velocity ahead of and behind the propeller disk, but not through the disk. Ahead of the disk the total pressure (pt0) equals the static pressure (p0) plus the dynamic pressure (\(\frac{1}{2} * r * V_0 ^2\)).
+
+\(\LARGE p_{t0} = p_0 +\frac{1}{2} * r * V_0 ^2\)
+
+Downstream of the disk,
+
+\(\LARGE p_{te} = p_0 + \frac{1}{2} * r * V_e ^2\)
+
+At the disk itself the pressure jumps
+
+\(\LARGE \delta p = p_{te} – p_{t0}\)
+
+Therefore, at the disk,
+
+\(\LARGE Δp = \frac{1}{2} * r * [V_e ^2 – V_0 ^2]\)
+
+The force on the propeller disk is equal to the change in pressure times the area (force/area x area = force)
+
+\(\LARGE F = Δp * A\)
+
+If we substitute the values given by Bernoulli’s equation, we obtain:
+
+\(\LARGE F = \frac{1}{2} * r * A * [V_e ^2 – V_0 ^2]\)
+
+Combining the two expressions for the the thrust (F) and solving for Vp;
+
+\(\LARGE V_p = \frac{1}{2} [V_e + V_0]\)
+
+Note that this thrust is an ideal number that does not account for many losses that occur in practical, high-speed propellers (like tip losses). The losses must be determined by a more detailed propeller theory, which is beyond the scope of these pages. The complex theory also provides the magnitude of the pressure jump for a given geometry. The simple momentum theory, however, provides a good first cut at the answer and could be used for a preliminary design.

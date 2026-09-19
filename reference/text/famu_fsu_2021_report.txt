@@ -1,0 +1,1085 @@
+# ID: famu_fsu_2021_report
+# SOURCE: https://web1.eng.famu.fsu.edu/me/senior_design/2021/team507/docs_pdfs/Design_Report.pdf
+# ORIGINAL: reference/raw/famu_fsu_2021_report.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 30 pages | ~13533 tokens
+# NOTE: FAMU-FSU 2021 Regular design report: canard layout, payload prediction and margin section. Different mission year
+# FLAG img: pages 1,7-8,11-14,17-24
+# FLAG garbled: pages 3-5
+# FLAG lowtext: pages 26-28
+# TOC:
+#   Executive Summary -> PDF page 7
+#   Schedule Summary -> PDF page 8
+#   Referenced Documents, References, and Specifications -> PDF page 9
+#   Design Layout  Trades -> PDF page 10
+#     Overall Design Layout and Size -> PDF page 10
+#     Optimization -> PDF page 10
+#       Optimization and Sensitivity Analysis -> PDF page 10
+#     Design Features and Details (Subassembly Sizing) -> PDF page 11
+#       Major Design Elements -> PDF page 11
+#       Wing Layout -> PDF page 11
+#       Cargo Hold -> PDF page 12
+#       Airfoil Selection -> PDF page 12
+#       Propulsion System -> PDF page 13
+#       Landing Gear -> PDF page 14
+#   Loads and Environment Assumptions -> PDF page 15
+#     Design Load Derivatives -> PDF page 15
+#     Environmental Considerations -> PDF page 15
+#   Analysis -> PDF page 16
+#     Analysis Technique -> PDF page 16
+#       Analytical Tools -> PDF page 16
+#       Developed Models -> PDF page 16
+#     Performance Analysis -> PDF page 16
+#       Runway/Launch/Landing Performance -> PDF page 16
+#       Flight and Maneuver Performance -> PDF page 17
+#       Shading/Downwash -> PDF page 17
+#       Dynamic and Static Stability -> PDF page 19
+#       Aeroelasticity -> PDF page 20
+#       Lifting Performance, Payload Prediction, and Margin -> PDF page 20
+#     Structural Analysis -> PDF page 21
+#       Applied Loads and Critical Margins Discussion -> PDF page 21
+#       Mass Properties and Balance -> PDF page 23
+#   Assembly and Subassembly, Test, and Integration -> PDF page 23
+#   Manufacturing -> PDF page 25
+#   Conclusion -> PDF page 25
+#   Appendix A -> PDF page 26
+#   Appendix B -> PDF page 29
+#   Appendix C -> PDF page 30
+
+=== PAGE 1 | p.1 | img ===
+SAE Aero Design East Competiton 2021
+
+             Design Report
+
+  FAMU-FSU College of Engineering
+
+               Team 057
+
+              Group Members:
+                Lauren Chin
+               Joseph Figari
+           Michenell Louis-Charles
+               Adrian Moya
+                Jacob Pifer
+               Sasindu Pinto
+               Cameron Riley
+               Noah Wright
+
+=== PAGE 2 | p.1 ===
+STATEMENT OF COMPLIANCE
+Certification of Qualification
+ Team Name         The Geese                              Team Number       057
+
+ School            FAMU-FSU College of Engineering
+
+ Faculty Advisor    Chiang Shih
+
+ Faculty Advisor’s
+ Email             shih@eng.famu.fsu.edu
+
+Statement of Compliance
+As faculty Adviser:
+
+______ S  (Initial) I certify that the registered team members are enrolled in collegiate courses.
+
+______ S  (Initial) I certify that this team has designed and constructed the radio-controlled aircraft
+in the past nine (9) months with the intention to use this aircraft in the 2021 SAE Aero Design
+competition, without direct assistance from professional engineers, R/C model experts, and/or
+related professionals.
+
+______ S  (Initial) I certify that this year’s Design Report has original content written by members of
+this year’s team.
+
+  S
+______ (Initial) I certify that all reused content have been properly referenced and is in
+compliance with the University’s plagiarism and reuse policies.
+
+____ S (Initial) I certify that the team has used the Aero Design inspection checklist to inspect their
+aircraft before arrival at Technical Inspection and that the team will present this completed
+checklist, signed by the Faculty Advisor or Team Captain, to the inspectors before Technical
+Inspection begins.
+
+    Chiang Shih                                   1-22-2021
+ Signature of Faculty Advisor                    Date
+
+                                                  1/22/2021
+
+ Signature of Team Captain                       Date
+
+=== PAGE 3 | p.2 | garbled ===
+Contents
+
+1    Executive Summary                       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                        6
+
+2    Schedule Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                             7
+
+3    Referenced Documents, References, and Specifications                                                    . . . . . . . . . . . . . .                   8
+
+4    Design Layout Trades . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                             9
+
+     4.1      Overall Design Layout and Size . . . . . . . . . . . . . . . . . . . . . . . . . .                                                          9
+
+     4.2      Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                      9
+
+              4.2.1        Optimization and Sensitivity Analysis . . . . . . . . . . . . . . . . . .                                                      9
+
+     4.3      Design Features and Details (Subassembly Sizing)                                           . . . . . . . . . . . . . . .                  10
+
+              4.3.1        Major Design Elements . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                  10
+
+              4.3.2        Wing Layout . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                10
+
+              4.3.3        Cargo Hold              . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                    11
+
+              4.3.4        Airfoil Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                              11
+
+              4.3.5        Propulsion System                   . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                12
+
+              4.3.6        Landing Gear               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                   13
+
+5    Loads and Environment Assumptions . . . . . . . . . . . . . . . . . . . . . . . . .                                                                14
+
+     5.1      Design Load Derivatives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                       14
+
+     5.2      Environmental Considerations                              . . . . . . . . . . . . . . . . . . . . . . . . . .                             14
+
+6    Analysis           . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                             15
+
+     6.1      Analysis Technique                   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                    15
+
+              6.1.1        Analytical Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                               15
+
+              6.1.2        Developed Models                    . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                15
+
+     6.2      Performance Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                      15
+
+                                                                             2
+
+=== PAGE 4 | p.3 | garbled ===
+              6.2.1        Runway/Launch/Landing Performance                                          . . . . . . . . . . . . . . . .                   15
+
+              6.2.2        Flight and Maneuver Performance                                . . . . . . . . . . . . . . . . . . . .                       16
+
+              6.2.3        Shading/Downwash . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                     16
+
+              6.2.4        Dynamic and Static Stability . . . . . . . . . . . . . . . . . . . . . . . .                                                 18
+
+              6.2.5        Aeroelasticity             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                   19
+
+              6.2.6        Lifting Performance, Payload Prediction, and Margin                                             . . . . . . . . .            19
+
+     6.3      Structural Analysis                  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                    20
+
+              6.3.1        Applied Loads and Critical Margins Discussion                                          . . . . . . . . . . . .               20
+
+              6.3.2        Mass Properties and Balance                           . . . . . . . . . . . . . . . . . . . . . . .                          22
+
+7    Assembly and Subassembly, Test, and Integration                                               . . . . . . . . . . . . . . . . .                    22
+
+8    Manufacturing                  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                         24
+
+9    Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                       24
+
+     Appendix A               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . A-1
+
+     Appendix B               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . B-1
+
+     Appendix C               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . C-1
+
+                                                                             3
+
+=== PAGE 5 | p.4 | garbled ===
+List of Figures
+
+      1         Final Design of the plane                      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                       6
+
+      2         Fall Design Schedule . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                           7
+
+      3         Spring Design Schedule . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                             7
+
+      4         Functional Decomposition of the Project                                   . . . . . . . . . . . . . . . . . . . . . . . . .                            10
+
+      5         Plane Wing Dimensions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                            11
+
+      6         Xfoil Analysis of Airfoils: CL vs AoA Plot . . . . . . . . . . . . . . . . . . . . . . . . .                                                           12
+
+      7         Thrust Test Setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                        13
+
+      8         Xfoil Analysis of Airfoils: Aerodynamic Performance . . . . . . . . . . . . . . . . . .                                                                16
+
+      9         Ground Effects               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                           17
+
+      10        Downwash effects on the wings                              . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                 17
+
+      11        Turbulence from the fuselage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                           18
+
+      12        CM vs AoA plot about CG . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                            19
+
+      13        The set up for finding the moment and shear forces created by the main wing . . . .                                                                     20
+
+      14        Moment and shear forces plane wings must endure . . . . . . . . . . . . . . . . . . .                                                                  21
+
+      15        Bow tie used to connect pieces of the fuselage                                     . . . . . . . . . . . . . . . . . . . . . .                         22
+
+      16        Exploded view of the main wing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                             23
+
+      17        Woodworking technique used to connect the final pieces of the canards                                                            . . . . . . .          23
+
+      B-1       Payload Prediction Plot                     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . B-1
+
+List of Tables
+
+      1         Symbols and Acronyms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                               5
+
+      2         Table of References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                          8
+
+      3         Forces experienced by all wings                            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                 21
+
+      4         Material strength for forces applied in different directions                                            . . . . . . . . . . . . . . .                  22
+
+                                                                                    4
+
+=== PAGE 6 | p.5 ===
+      Table 1: Symbols and Acronyms
+
+ Symbol               Description
+    L                     Lift
+    D                    Drag
+  AoA                Angle of attack
+    V                   Velocity
+   CL               Coefficient of lift
+   CD              Coefficient of drag
+   CM             Coefficient of moment
+    θ               Aileron deflection
+    δ               Rudder deflection
+    Θ              Elevator deflection
+Acronym               Description
+                  Society of Automotive
+   SAE
+                       Engineers
+                 Florida Agricultural and
+ FAMU
+                  Mechanical University
+   FSU           Florida State University
+   RC               Radio Controlled
+  PLA                Polylactic Acid
+  CAD            Computer Aided Design
+  CFD         Computational Fluid Dynamics
+   CG               Center of Gravity
+  MAC           Mean Aerodynamic Chord
+   FBD             Free Body Diagram
+   NP                 Neutral Point
+MPH/mph              Miles per hour
+   LE                Leading Edge
+   TE                 Trailing Edge
+
+                   5
+
+=== PAGE 7 | p.6 | img ===
+1   Executive Summary
+
+The design report discusses the design and manufacturing process of the RC plane made for the
+
+SAE Aero Design Competition 2021 - East. We designed the plane to carry a size 5 soccer ball and a
+
+1 lb cargo plate. Our plane weighs 12.3 lb without cargo and is 64.4 inches long. The team expects
+
+the plane to take off within 60 ft. To make our plane innovative, the team decided to use a canard
+
+wing as a secondary lift-producing wing, which is unusual for a cargo plane. We also decided to
+
+use woodworking techniques and geometric connection methods instead of mechanical fasteners
+
+to connect certain wing sections. Our cargo bay is between the canard and the main wing, closer
+
+to the CG of the plane, which is near the LE of the main wing. We primarily used SolidWorks,
+
+MATLAB, and xFoil for designing, and Cura for 3-D printing. Our goal is to show a different
+
+approach to creating and constructing RC cargo planes instead of using a conventional design
+
+and assembly. The following is the final design of the airplane.
+
+                          Figure 1: Final Design of the plane
+
+                                           6
+
+=== PAGE 8 | p.7 | img ===
+2   Schedule Summary
+
+We focused on research of different aircraft configurations and manufacturing processes in Septem-
+
+ber and selected our concept in early December. While some team members were developing the
+
+CAD, others were focused on the electrical and mechanical components such as the motor circuit
+
+and control surface servo selection. Our main build material is slated to arrive by January 15th,
+
+following which we started printing the nose and fuselage. Assembly is slated to begin by the end
+
+of January, likely beginning with the fuselage and nose of the aircraft. Electronics installation and
+
+wing assembly will take place simultaneously. Assembly is expected to be finished by the third
+
+week of February.
+
+                            Figure 2: Fall Design Schedule
+
+                           Figure 3: Spring Design Schedule
+
+                                           7
+
+=== PAGE 9 | p.8 ===
+3   Referenced Documents, References, and Specifications
+
+                            Table 2: Table of References
+
+                Reference                               Description
+
+     Airfoiltools.com. (2020). Retrieved   Purpose(s): CM,CL and CD values for
+          November 2020, from:             airfoil profiles
+    http://airfoiltools.com/airfoil        Section(s): 4.3.2, 4.3.4, 6.2.1
+
+  Anderson, J.D. (2011). Fundamentals of   Purpose(s): Lift and drag equations,
+   Aerodynamics. 5th Edition New York,     static and dynamic stability
+   NY. The McGraw-Hill Companies, Inc.     Section(s): 5.1, 6.2.3, 6.2.4, 6.2.5, 6.2.6
+
+    ColorFabb: LW-PLA Natural. (2020).
+                                           Purpose(s): LW-PLA material properties
+   Retrieved October 2020, from: https:
+                                           Section(s): 6.3, 7, 8
+    //colorfabb.com/lw-pla-natural
+   Flite Test: How Ground Effect Vehicles
+   Work. (2018) Retrieved January 2021,    Purpose(s): Ground effect information
+    from https://www.flitetest.com/        Section(s): 6.2.3
+         articles/ground-effect
+   Lennon, A. (1999). Basics of RC model
+                                           Purpose(s): Wing design research,
+   aircraft design: practical techniques for
+                                           control surface configuration research
+   building better models. Ridgefiled, CT.
+                                           Section(s): 6.2.2, 6.2.5
+               Air Age Inc.
+
+   Sadraey, M.H. (2013). Aircraft Design:  Purpose(s) Control surface
+   A Systems Engineering Approach. 1st     configuration research, lift and drag
+   Edition. Nashua, NH. John Wiley and     equations
+                Suns Ltd.                  Section(s): 6.2.1, 6.2.2
+
+       The Engineering ToolBox: Air
+  Properties. (2020). Retrieved December
+                                           Purpose(s): Air pressure at different
+                2020, from
+                                           altitudes to calculate air density
+    https://www.engineeringtoolbox.
+                                           Section(s): 6.2.6
+  com/air-altitude-density-volume-d_
+                 195.html
+
+                                         8
+
+=== PAGE 10 | p.9 ===
+4   Design Layout Trades
+
+4.1   Overall Design Layout and Size
+
+Following research and calculations, we decided to use a canard - main wing - tail wing layout.
+
+Our team decided to install the canard as a mid wing to improve its effect on the CG, and the main
+
+wing as a high wing to reduce the effect of the wake from the canard. We decided to use a t-tail
+
+configuration for the tail section of the plane, as this would reduce the effect of the wake from the
+
+canard and the main wing on the horizontal section of the tail wing. While a bigger main wing
+
+would produce more lift, in have a canard layout, we needed the aspect ratio of the canard to be
+
+lower than the aspect ratio of the main wing. Lower aspect ratios result in a higher stall angle,
+
+which is what we desired with our canard. We decided to add ailerons to each main wing for roll
+
+control, a rudder to the horizontal part of the tail wing for yaw control, and an elevator that spans
+
+across the entire length of the horizontal part of the tail wing for pitch control. The Aileron span is
+
+12.25 in, while the elevator and rudder spans are 47.5 in and 8 in respectively. Our propeller size
+
+is 18 × 10E.
+
+4.2   Optimization
+
+4.2.1 Optimization and Sensitivity Analysis
+
+We decided to not taper the wings of our plane to maximize lift. This was possible as we have
+
+two lift producing wings, hence each one does not have to be very large. However, we decided
+
+to change the wingspans and the chord lengths to optimize the stability of our design and to fit
+
+our printer restrictions. We optimized the tail wing chord and wingspan to get the CG position to
+
+within 25% of the distance between the MAC of the canard and the main wing. Furthermore, we
+
+accounted the locations of the soccer ball and the 1 lb weight plate to ensure that the CG position
+
+will remain within the stability margin. For our design, the CG position had a margin of 2 in
+
+forward and 6 in backwards.
+
+                                           9
+
+=== PAGE 11 | p.10 | img ===
+4.3   Design Features and Details (Subassembly Sizing)
+
+                   Figure 4: Functional Decomposition of the Project
+
+We created the above functional decomposition to determine the systems we need to take into
+
+account in the design process.This was created following research on aircraft design and function-
+
+ality. The major systems of our plane describe the key functions of our plane: takeoff, cruising,
+
+landing, and carrying a payload. The minor systems describe the actions our plane need to do
+
+to achieve major system functions. Based on these major and minor systems, we continued our
+
+design work.
+
+4.3.1 Major Design Elements
+
+With an eye for innovation, the team decided to add a canard to the plane. Our university’s planes
+
+haven’t taken off in previous years so the team went outside the box to create extra lift. The team
+
+decided to model the plane after the Rutan Quickie Q2. Through research it was found that our
+
+original design of the plane was unstable. To solve this issue a tail wing was added, which will be
+
+discussed further in the Stability Section (6.2.4)
+
+4.3.2 Wing Layout
+
+Our team’s aircraft has three lift surfaces consisting of canards, a main wing, and a t-tail. The
+
+canards of our aircraft are straight and rectangular. We decided to add a canard to reduce the lift
+
+                                          10
+
+=== PAGE 12 | p.11 | img ===
+load of the main wing and also to create a positive moment from the front of the plane during
+
+takeoff, which will reduce the workload of the elevator. The canards are strictly lift surfaces so
+
+they do not include any control surfaces. Furthermore, the addition of the canard reduced the
+
+wingspan of the main wing, which makes the wing less susceptible for flexing. The main wing
+
+of our aircraft is also straight and rectangular in shape. This lift surface will include ailerons to
+
+control rotation about the roll axis. After running preliminary stability calculations, a t-tail was
+
+included in our aircraft’s design. The t-tail’s purpose is to increase the stability of our aircraft and
+
+to re-position the center of gravity closer to the back of the aircraft. This reduces the wake on the
+
+horizontal section of the tail wing.
+
+                            Figure 5: Plane Wing Dimensions
+
+4.3.3 Cargo Hold
+
+Due to the two wing layout, a top loading mechanism was designed. To do this a hatch was placed
+
+on top of the fuselage between the canards and the main wings. In putting it here, the cargo will
+
+placed at the plane’s CG. This in turn will not make the plane unstable.
+
+4.3.4 Airfoil Selection
+
+Given the canard-main wing-tail wing layout, we decided to use asymmetric profiles for the ca-
+
+nard and the main wing as they are predominant lifting wings, and a symmetric profile for the
+
+                                             11
+
+=== PAGE 13 | p.12 | img ===
+tail wing as it is a stabilizer. We decided to use high lift profiles for the canard and the main wing
+
+to increase lift, while making sure that the canard has a lower stall angle of attack and a lower
+
+zero-lift angle of attack compared to the main wing. For the tail wing, we decided to use a profile
+
+with a high angle of attack as the tail wing is designed to stabilize the plane even when the canard
+
+and/or the main wing are near stall. We decided to use Eppler E214 airfoil for the canard, Eppler
+
+E197 airfoil for the main wing, and Eppler 168 airfoil for the tail wing. Based on the CL vs AoA
+
+Plot below (figure 6), our canard goes into stall before the main wing. Therefore, our airfoil profile
+
+selection is valid for our wing layout.
+
+                  Figure 6: Xfoil Analysis of Airfoils: CL vs AoA Plot
+
+4.3.5 Propulsion System
+
+The battery and motor were the two most important parts assessed for propulsion. The Onyx
+
+22.2V 4000mAh 6S 30C LiPo Battery and E-flite 22.2V 5000mAh 6S 40C Thrust VSI LiPo Battery.
+
+These batteries have the same voltage, however the E-flite offers more current and a higher dis-
+
+charge rate. The Onyx is lighter, and was ultimately selected for financial reasons, as it is strong
+
+enough and was already owned by the college. Two motors were analyzed as well, the E-flite
+
+Power 90 Brushless Outrunner 325Kv and the E-flite Power 160 Brushless Outrunner 245Kv. Hav-
+
+ing the same manufacturer, the Power 160 is a stronger model, that comes with more weight at
+
+                                          12
+
+=== PAGE 14 | p.13 | img ===
+a higher price. The team believed the Power 90 strong enough for our plane, and was selected
+
+for budget reasons as well, because it was already owned by the university. Before finalizing the
+
+components a thrust test was conducted with our equipment, as shown in figure 7.
+
+                               Figure 7: Thrust Test Setup
+
+   This setup features our motor, *an E-Flite Power-90*, attached to a fulcrum with two identi-
+
+cal arms; one of the arms attached to the motor and the latter placed on a scale to measure the
+
+outputting thrust force. This was done to ensure that there was no mechanical advantage in play.
+
+Not shown in the figure but used in the setup were an electronic speed controller, a power lim-
+
+iter(limiting 1000 W to the motor as per the rule book), a receiver, and a red arming plug for safety.
+
+This setup was used to test a variety of different propellers to see which one generated the most
+
+thrust. Through this testing we found that the 18x10E propeller provided the most thrust at 222
+
+lbf, which is higher than our necessary thrust calculated in section 5.2.3.
+
+4.3.6 Landing Gear
+
+We considered tail-dragger and front tricycle landing gear configurations. Through considering
+
+what is required at the competition, we selected the front tricycle configuration. Since the com-
+
+petition requires the plane to be steerable on the ground, having the single wheel at the front of
+
+the plane will make this easier for the operator. Having the single wheel ahead of the planes CG
+
+                                            13
+
+=== PAGE 15 | p.14 ===
+also helps in keeping the plane from falling forward and breaking the propeller. The CG in this
+
+location helps correct the direction of the plane as well. If it is behind the single wheel, the iner-
+
+tia of the plane keeps it moving in the desired direction. We decided to distribute the weight 1:4
+
+between the front and rear landing gears, as the rear landing gear is closer to the CG.
+
+5    Loads and Environment Assumptions
+
+5.1   Design Load Derivatives
+
+Based on calculations, the team expect the plane to produce 31.4 lbf of drag. For our propeller,
+
+with the aforementioned drag, we expect an acceleration of 11.24 ft/s for our plane. We decided to
+
+use aluminum for our landing gears. With stall speed for our plane being 9.23 mph, with a safety
+
+factor of 1.3, our plane generates a total impact force of 465.84 lbf, with half of that applied to each
+
+rear landing gear, which We expect aluminum landing gears to withstand.
+
+5.2   Environmental Considerations
+
+We used typical cross-wind conditions expected in Lakeland,FL (9.6 mph average velocity) for yaw
+
+stability calculations during landing. However, given that the team does not expect to fly at a high
+
+altitude, air conditions considered for the majority of the calculations are standard air properties
+
+at sea level. Based on our thrust analysis, our plane can withstand a 10 mph headwind during
+
+takeoff. Therefore we expect our plane to withstand normal wind conditions in Lakeland.
+
+                                            14
+
+=== PAGE 16 | p.15 ===
+6   Analysis
+
+6.1   Analysis Technique
+
+6.1.1 Analytical Tools
+
+We decided to use MATLAB and Solidworks in conjunction for the analysis process, including the
+
+CFD tools in SolidWorks, and xFoil to evaluate lift and drag properties of the wings.
+
+6.1.2 Developed Models
+
+We used takeoff, flight maneuvering and landing models for the performance calculations done
+
+using MATLAB. The take off and landing model was analysed for standard sea level conditions,
+
+while maneuvering was done for equilibrium AoA of the plane at a 31.4 ft altitude.
+
+6.2   Performance Analysis
+
+6.2.1 Runway/Launch/Landing Performance
+
+For our aircraft CL/CD value, which is considered the aerodynamic performance value for an
+
+aircraft, is maximum around 5° as shown in figure 8 below. Hence, we decided to use 5° as the
+
+takeoff angle of attack for our plane. For the maximum drag generated by the plane (31.4 lbf at
+
+25 mph) we expect our plane to reach the desired 25 mph speed in 3.27 seconds, and 59.8 ft from
+
+the launch position. We have designed the plane to achieve its desired 5 ° AoA with 25 ° elevator
+
+deflection. The plane is expected to reach the desired flying altitude of 40 ft 12.48 seconds after
+
+launch. We included crosswind conditions expected in Lakeland, FL for landing analysis. Our
+
+plane takes 20.4 seconds to land, and travels 358.6 ft during approach. Once on the ground, we
+
+expect the plane to decelerate at 1.9 ft/s with just drag force, coming to a complete stop in 364.5 ft
+
+                                           15
+
+=== PAGE 17 | p.16 | img ===
+             Figure 8: Xfoil Analysis of Airfoils: Aerodynamic Performance
+
+   .
+
+6.2.2 Flight and Maneuver Performance
+
+We will be using ailerons on each main wing while the rudder can be used to supplement aileron
+
+motion. We decided to use differential control for our ailerons, to avoid yaw instability in roll
+
+motion. We designed for 1:2.5 differential setting, with the maximum deflection angle (upwards)
+
+of an aileron been 20 °. The roll rate of our plane is 8.7 deg/s.
+
+6.2.3 Shading/Downwash
+
+In ground effect, during takeoff as the angle of attack increases the coefficient of lift increases;
+
+however, as the angle of attack increases the coefficient of drag increases as a squared effect. To
+
+avoid our airplane abruptly sinking to the runway once ground effect is left, we had to ensure
+
+that our airplane was producing enough thrust to maintain stable airspeed for climbing. Based
+
+on figure 9 below, our plane has relatively low vortices causing airflow disturbances. Therefore,
+
+we determined that clearance between our propeller and the ground is sufficient. We estimate
+
+our propeller to produce 222 lbf of static thrust through testing. The required thrust to reach our
+
+desired takeoff speed is 154 lbf of thrust; and the net thrust we are able to produce including drag
+
+                                            16
+
+=== PAGE 18 | p.17 | img ===
+is 196 lbf. Based on these values, we concluded that there is sufficient thrust to escape ground
+
+effect using the reduced induced drag of the phenomena to our advantage.
+
+                                Figure 9: Ground Effects
+
+                       Figure 10: Downwash effects on the wings
+
+   To further analyse downwash effects, we studied CFD across the wings as shown in figure 10.
+
+The turbulence for our design is relatively small, with a turbulence intensity of under 2%. Even
+
+at that intensity, downwash effect from the canard on the main wing is not significant as shown
+
+above. We decided to analyse the flow over the fuselage to determine the turbulence created by
+
+the fuselage. The main turbulence region is behind the plane as shown below. Furthermore, this
+
+validates the design consideration in placing the tail wing on the top of the vertical section of the
+
+tail, as downwash from the canard and the main wing is not effecting the horizontal tail wing.
+
+                                           17
+
+=== PAGE 19 | p.18 | img ===
+                         Figure 11: Turbulence from the fuselage
+
+6.2.4 Dynamic and Static Stability
+
+We calculated stability about the center of gravity (CG) of the plane. We decided to vary the
+
+battery location to get CM vs AoA plot that has a positive trim and a negative gradient. Positive
+
+trim means that our plane will have a positive moment even when the AoA is zero. A negative
+
+gradient leads to a decrease in CM, which means that the moment about CG of the plane will be
+
+zero at a positive AoA. We plotted CM vs AoA initially for a canard-main wing layout without
+
+a tail wing. However, for the proportions and the design considered, we did not get a negative
+
+gradient for the plot. To get the desired value, we decided to add a tail wing for the plane. As the
+
+takeoff AoA was 5°, we desired a equilibrium angle of attack below that value. Following multiple
+
+adjustments to the tail wing and the battery location, we ended up with the following CM vs AoA
+
+plot for our design. Based on the plot below, we get a positive moment coefficient of 0.17 at 0°
+
+AoA. Our equilibrium AoA is 3.125°. For differential ailerons discussed in section 6.2.2, our plane
+
+reach roll stability at 10 ° roll angle. We added a dorsal fin to improve yaw stability (discussed in
+
+6.2.1). We calculated the neutral point (NP) of the plane at different angles of attack to ensure that
+
+the plane is stable, and NP for our design is behind the CG position before equilibrium AoA as
+
+desired.
+
+                                            18
+
+=== PAGE 20 | p.19 | img ===
+                          Figure 12: CM vs AoA plot about CG
+
+6.2.5 Aeroelasticity
+
+As our plane is light weight, and that our maximum Reynolds number is 1.8 × 106, we expect
+
+large aerodynamic forces on our plane. Aerodynamic forces could cause the AoA of our plane
+
+to change, which is called divergence. We considered this in pitch stability calculations, which
+
+led to the addition of a tail wing and adjusting the dimensions of the canard and the main wing,
+
+Control surface movement cause a change in induced drag, which would cause a aerodynamic
+
+moment, creating a yaw instability. We considered this control reversal in setting the control
+
+surface deflection angles, which led to the 2.5:1 differential setting for our ailerons’ deflection
+
+angles. Aerodynamic forces could cause vibrations on the plane, especially on the wings. We
+
+decided to include 2 spars going through the entire length on each wing to reduce this vibration
+
+effect, fluttering. Furthermore, this would reduce flexibility of the wings.
+
+6.2.6 Lifting Performance, Payload Prediction, and Margin
+
+We assumed that the lift generated by the fuselage is small relative to lift produced by the wings.
+
+We expect our plane to produce 15.9 lbf of lift at equilibrium (3.125° AoA) and 20.9 lbf of lift during
+
+take off (at 5° AoA). We predicted the payload for our plane using equilibrium AoA and air density
+
+                                            19
+
+=== PAGE 21 | p.20 | img ===
+at different altitudes. Lift from all 3 wings were considered as the plane AoA is not zero. As lift is
+
+a function of dynamic pressure, which is a function of air density, we used this varying air density
+
+to get payload prediction at different altitudes. Accordingly, we plotted payload prediction for our
+
+plane (in Appendix B). We expect our plane to can carry a 13 lb weight at about 100 ft. Therefore,
+
+we expect our plane to fly with our 2 lb cargo load at the 40 ft altitude we plan on flying.
+
+6.3   Structural Analysis
+
+6.3.1 Applied Loads and Critical Margins Discussion
+
+Figure 13: The set up for finding the moment and shear forces created by the main wing
+
+When using additive manufacturing to build something that must endure some sort of load, the
+
+direction the parts are printed must be heavily considered. 3D printing can be thought of as layers
+
+of filament that are stacked on top of each other. With this being the case it can be very easy to
+
+break a part when a force is applied perpendicular to the printing direction. All that would need
+
+to happen for failure to occur would be two layers separating. Because of this the direction parts
+
+were printed in was heavily considered throughout the design of the plane. Arguably the most
+
+vulnerable parts of the plane are the wings. To test the forces each set of wings must endure,
+
+the wings were modeled as beams attached to a wall, with a distributed load under the beam as
+
+                                            20
+
+=== PAGE 22 | p.21 | img ===
+shown in the force diagram above (figure 13). This was to simulate a single wing attached to the
+
+fuselage of the plane, with the distributed load (0.1101 lb/in)being the lift created by the wing. The
+
+setup for the main wings is shown above. Once the figures were created, the shear moment forces
+
+experienced at the connection point of the wing the fuselage were found.
+
+             Figure 14: Moment and shear forces plane wings must endure
+
+In the graphs, the x-axis is the length of the wing. 0 is the tip of the wing and 37.5 in the connection
+
+point at the fuselage. This calculation was made for each set of wings. The table below shows the
+
+magnitude of the forces each set will experience.
+
+                         Table 3: Forces experienced by all wings
+                        Wing:      Moment (lb x in): Shear (lb):
+                        Canard:          77.414           4.129
+                        Main:            38.938           3.115
+                        Tail:            19.178           1.615
+
+A three point bending test and a torsion test were both done on samples of our printing filament.
+
+These were done since these are the two main stresses the plane will have to endure. The tests were
+
+done using samples printed at the same settings the plane parts will be printed at. The results of
+
+the tests are shown bellow. The stress direction refers to the direction the stress was applied with
+
+                                            21
+
+=== PAGE 23 | p.22 | img ===
+respect to the printing direction of the sample.
+
+           Table 4: Material strength for forces applied in different directions
+           Stress Direction: Shear Strength (psi): Flexural Strength (psi):
+            Perpendicular             3,380                     471
+               Parallel               6,120                     552
+
+   As shown in the table, printing direction must be heavily considered. For easier assembly and
+
+more strength, the wings are also assembled using two 6061 Aluminum spars per wing set. With
+
+this being the case, the team is confident the wings will remain intact during flight.
+
+6.3.2 Mass Properties and Balance
+
+The weight of our plane without a cargo load is 10.8 lbs. and the CG position is 33 in from the
+
+leading edge of the nose and 3.3 in from the top of the fuselage. As the CG is just in front of the
+
+main wing, we expect the lift produced by the main wing of the plane to counter the majority of
+
+the weight of the plane, as desired during the planning stage.
+
+7   Assembly and Subassembly, Test, and Integration
+
+                Figure 15: Bow tie used to connect pieces of the fuselage
+
+Due to size constraints in 3D printing the plane, the aircraft was broken down into modular pieces.
+
+To connect pieces of the fuselage, small parts named bow ties were made to screw the parts to-
+
+gether. The figure above shows one. To use the bow tie, screw threads had to be soldered into the
+
+parts of the fuselage being connected. A screw was then put through the holes of the bow tie and
+
+                                           22
+
+=== PAGE 24 | p.23 | img ===
+screwed into the threads in the plane body. This added minimal weight to the plane and made
+
+it possible to assemble the fuselage. Each set of wings has 2 spars running from one tip to other
+
+other to increase rigidity of the wings as explained in section 6.3.1. Small crosses were also made
+
+to help lock the parts of the wings in place. These pieces again added minimal weight to the plane
+
+but helped in keeping the prints of the wing in place. This is shown in the exploded view below.
+
+                      Figure 16: Exploded view of the main wing
+
+   The same assembly method was done for the canard and the tail. We divided the main wing
+
+into 5 pieces on each side, and we divided the canard into 3 pieces on each side. As the tail wing is
+
+on top of the tail section of the plane, we divided the entire tail wing into 7 pieces. For the canards,
+
+the final piece of the wing was connected using a dove tail joint. This is a common woodworking
+
+technique, and the team decided to explore the possibility of doing this in making RC planes. The
+
+figure below shows how the pieces connected.
+
+   Figure 17: Woodworking technique used to connect the final pieces of the canards
+
+   The joint consists of a male female end on the parts. The male end is slid into place from the
+
+front of the wing. As the plane will only be moving forward during flight, this keeps the wing part
+
+                                           23
+
+=== PAGE 25 | p.24 ===
+locked in place. This connection method was only used on the final piece to validate its usability.
+
+8   Manufacturing
+
+Using additive manufacturing to build an RC airplane is a nontraditional construction method.
+
+When doing so, a person must make sure the parts designed to assemble the plane are printable.
+
+Arguably the most important decision is what filament to use. The team considered PLA and
+
+light weight PLA (LW-PLA). PLA is a very common material used in additive manufacturing, as
+
+it is easy to use, relatively cheap, and prints accurately, but heavy. LW-PLA is a newer printing
+
+material made by the company colorFabb that foams when it leaves the printing nozzle, reducing
+
+the density and weight of the part. As we want a lighter plane, LW-PLA was chosen for print-
+
+ing. This material however can be difficult to print with. If the wrong printing settings are used
+
+warping can occur, resulting in a bad print. colorFabb has recommendations regarding things like
+
+printing temperatures and print speed to keep warping from happening. Between the company’s
+
+recommendations and advice from last year’s team, the plane’s parts were printed at a tempera-
+
+ture of 230°C and a speed of 30 mm/s. The Lulzbot printers used for this project were also placed
+
+in plastic containers to keep changes room temperature or humidity from affecting the prints as
+
+well. In doing so parts we were able to print accurately with the benefits of LW-PLA.
+
+9   Conclusion
+
+Following research on various designs and initial calculations, we decided to go with a canard-
+
+main wing-tail wing layout. The dimensions were adjusted to improve stability of the plane, while
+
+staying within the stability margin. Other than the addition of a canard, we decided to use wood-
+
+working techniques for assembly. We decided to include the cargo plane between the canard and
+
+the main wing to further improve stability. Overall, we believe that these design decisions have
+
+made our plane unique while producing a stable plane that can fly.
+
+                                           24
+
+=== PAGE 26 | p.A-1 | lowtext ===
+Appendix A - Backup Calculations
+
+                      A-1
+
+=== PAGE 27 | p.A-2 | lowtext ===
+A-2
+
+=== PAGE 28 | p.A-3 | lowtext ===
+A-3
+
+=== PAGE 29 | p.B-1 ===
+Appendix B - Technical Data Sheet
+
+Team Name: The Geese                                       Team Number: 057
+
+School: FAMU-FSU College of Engineering
+
+The following is the payload prediction plot we generated. Steps we had taken to generate the
+
+plot and its outcomes are discussed in section 5.2.6
+
+                   Payload Prediction Curve Density Altitude
+
+           16
+           14
+           12
+        (lbs) 10
+            8
+        Payload
+            6
+            4
+            2
+            0
+               0        2000      4000       6000       8000      10000     12000
+                                      Density Altitude (ft)
+
+                          Figure B-1: Payload Prediction Plot
+
+                                          B-1
+
+=== PAGE 30 | p.C-1 ===
+Plane Drawing
+
+                                                       B                                                                                                                   A
+                                                                                                                                                                                                             REV 1 1
+                                                                                          A                                                                                                                             OF
+                                                                                                                                                                                                                        1
+                                    WEIGHTED                                                                                                                                                                            SHEET
+                       SOCCER           PLATE                                          DETAIL
+                           BALL                                                                                                                                                                                          10.8LBS
+                                                                                                                                                                                             Assembly          1
+1                                                                                                                                                                                                            NO.         WEIGHT: 1
+                                             3                                        4
+                                             SERVO                                                                                                                                                           DWG.       1:12
+                                                                                      SERVO                                                                                                                             SCALE:
+                     1                                                                                2                                                                                    TITLE:            SIZE B
+                     SERVO                                                                            SERVO                                                                         DATE 1/25/21                       OF
+                                                                                                                                                                                                           NUMBER: 57  COLLEGE
+                                                                                                                                                                                                                          ENGINEERING
+                                                                                                                                                                                    NAME AM                TEAM        FAMU-FSU
+                                                                                                                                                                                        BY BY BY BY BY NAME: GEESE  NAME:
+                                                                                                                                                                                        DRAWN REVISED REVISED REVISED REVISED TEAM THE  SCHOOL
+                                                                            A                                                                                                       SPECIFIED: INCHES       PLA
+                                                                                                                                                                                        IN in 0.08            ALUMINIUM
+                                                                                                                                                                                    OTHERWISE ARE           LIGHTWEIGHT
+                                                                                                                                                                                                              AND
+                                                                                                                                                                                    UNLESS DIMENSIONS TOLERANCES: FRACTIONAL  MATERIAL:
+2                                                                                                                                                                                                                            2
+                                                                                                                                                                                   DATUM
+                                                                                                                                      26.61                                        FROM (LB-IN) 2.175 2.175 3.763 3.831 0.580 0.061 2.470 51.0 23.3 45.1
+                                                                                             6                                                                                     MOMENT
+                                                   5
+                        3                                                                                                                                                            (LB)
+                                                                                                                                                                                     WEIGHT 0.0625 0.0625 0.0625 0.0625 0.1656 0.0175 0.9880 1.2750 1.000 1.000
+                                                                                                                                                                               BALANCE
+                                                                                                                64.30                                                          AND
+                                                                                                    4                                                                              FROM (IN)
+                                                                                                                                                                               WEIGHT  A
+                                                                                                                                                                                          34.8 34.8 60.2 61.3 3.5 3.5 2.5 40.0 23.3 45.1
+                         2                                                                                                                                                         DISTANCE DATUM
+3                                                                                                                                                                                  X                                         3
+
+                                          1                                                                                                            A                                                          BALL)  PLATE)
+                                                                                                                                                                                          1 2 3 4                 (SOCCER
+                                                                                                                     A                                                               ITEM SERVO SERVO SERVO SERVO ESC RECIEVER MOTOR BATTERY  PAYLOAD  Only.
+                                                                                                                                                                                                                        (WEIGHTED
+                                                       90                                                                 in in                                                                                   PAYLOAD        Use
+                                                   MAH                                                           LOCTION DATUM
+                                                       Power                                                              34.8 34.2
+                                                   4000             18X10E X10                                                                                                                                                   Instructional
+                                         75 23             BRUSHLESS 325                                         CG FROM
+                                                                    APC KST
+                                     DATA          LIPO E-FLIGHT                                                                                                                                                                 For
+                                                   6S                                                                                                                                                     WING          WING
+                                                                                                                   MARGIN                                                                   ITEM NOSE CANARD   FUSELAGE RUDDER   Product.
+                                     SUMMARY                                                                                                                                                              MAIN          TAIL
+                                                   CAPACITY    KV                                                         0.15 0.13
+                                              WEIGHT
+                                         WINGSPAN      MOTOR MAKE/MODEL  PROPELLER SERVO                           STATIC                                                               SUBASSEMBLIES                            Educational
+4                                                              MOTOR                                                                                                                                                         4
+                                              EMPTY BATTERY                                                                                                                                 #:
+                                                                                                                                                                                            BALLOON 1 2 3 4 5 6                  SOLIDWORKS
+                                                                                                                          UNLOADED LOADED
+
+                                                       B                                                                                                                   A
+                                                                                                       C-1

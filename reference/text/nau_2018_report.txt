@@ -1,0 +1,1245 @@
+# ID: nau_2018_report
+# SOURCE: https://ceias.nau.edu/capstone/projects/ME/2018/18F5_SAEAeroReg/Site%20docs/FINAL%20REPORT.pdf
+# ORIGINAL: reference/raw/nau_2018_report.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 39 pages | ~14542 tokens
+# NOTE: NAU Skyjacks 2018 Regular report: 72 in span, 18.6 lb empty, 28.3 lb loaded, payload prediction appendix. Different mission year
+# FLAG img: pages 1,5,12-17,20,22-25,28,36-39
+# FLAG math: pages 14-15,17-18
+# FLAG lowtext: pages 35,38-39
+
+=== PAGE 1 | img ===
+           SAE AERO
+
+DESIGN REPORT
+
+             Northern Arizona University
+
+                     Skyjacks Team 045:
+                         Caleb Hatcher
+                         Damian Lumm
+                         Angel Montiel
+                         James Seganti
+                         Braden Weiler
+
+                         2018-2019
+
+=== PAGE 2 ===
+Table of Contents
+List of Figures and Tables .............................................................................................................................. 3
+1.0 Executive Summary ................................................................................................................................. 4
+  1.1. System Overview................................................................................................................................ 5
+2.0 Schedule Summary.................................................................................................................................. 6
+3.0 Table of Referenced Documents, References, and Specifications ......................................................... 7
+4.0 Design Layout & Trades .......................................................................................................................... 8
+  4.1. Overall Design Layout and Size .......................................................................................................... 8
+  4.2 Competitive Scoring and Strategy Analysis ......................................................................................... 9
+5.0 Loads and Environments, Assumptions .................................................................................................. 9
+  5.1. Design Loads Derivations ................................................................................................................. 10
+6.0 Analysis ................................................................................................................................................. 11
+  6.1. Analysis Techniques ......................................................................................................................... 11
+  6.2 Performance Analysis........................................................................................................................ 12
+    6.2.1. Thrust Performance .................................................................................................................. 12
+    6.2.2. Drag Performance ..................................................................................................................... 14
+    6.2.3. Lift Performance ....................................................................................................................... 16
+    6.2.4. Takeoff Performance ................................................................................................................ 17
+  6.3. Structural Analysis............................................................................................................................ 20
+    6.3.1. Applied Loads and Critical Margins Discussion ......................................................................... 21
+7.0 Assembly and Subassembly, Test and Integration................................................................................ 25
+8.0 Manufacturing ...................................................................................................................................... 26
+9.0 Conclusion ............................................................................................................................................. 28
+List of Symbols and Acronyms .................................................................................................................... 34
+Appendix A – Figures Supporting Performance Analysis ............................................................................ 36
+Appendix B – Payload Prediction ................................................................................................................ 37
+Drawing 11X17 ............................................................................................................................................ 38
+
+=== PAGE 3 ===
+List of Figures and Tables
+Figure 1: Team Skyjacks’ final design without monokote............................................................................. 5
+Figure 2: Thrust test setup .......................................................................................................................... 13
+Figure 3: Dynamic thrust approximation for team Skyjacks’ design .......................................................... 14
+Figure 4: Plot of Drag vs Velocity for team Skyjacks’ airplane .................................................................... 15
+Figure 5: (a) Plot of dynamic thrust and drag with changing velocity, (b) Plot of the aircraft’s net thrust
+force with changing velocity ....................................................................................................................... 16
+Figure 6: Plot of the airplane’s lift vs velocity and plot showing the aircraft lift and net thrust at different
+velocities ..................................................................................................................................................... 17
+Figure 7: Contour Plot of Stress in Main Wing ............................................................................................ 20
+Figure 8: Contour Plot of Stress in Aluminum Spar Beam .......................................................................... 22
+Figure 9: Contour Plot of Nose Assembly and Aluminum Spar Beam ........................................................ 23
+Figure 10: Contour Plot of Stress in Single Leg of Landing Gear ................................................................. 23
+Figure 11: Contour Plot of Stress from the Landing Gear onto the Main Wing ......................................... 24
+Figure 12: CH10 airfoil small scale wind tunnel test ................................................................................... 25
+Figure 13: CH10 airfoil coefficients of lift and drag data plotted [2] .......................................................... 36
+Figure 14: δ as a function of taper ratio for different AR [5] ...................................................................... 36
+Figure 15: Payload Prediction Curve ........................................................................................................... 37
+
+Table 1: Referenced Documents, References, and Specifications ................................................................ 7
+Table 2: Static thrust test results ................................................................................................................ 12
+Table 3: Coefficients of drag for each of the major aircraft components .................................................. 14
+
+=== PAGE 4 ===
+1.0 Executive Summary
+The purpose of this report is to document the progress of the design and manufacturing of a
+
+fixed wing aircraft for the 2019 Society of Automotive Engineers (SAE) Aero Design West
+
+competition. Specifically, the report will layout the design process, the overall analysis of
+
+performance, testing and integration, and the manufacturing processes used. The design
+
+section of the report will include details about the optimization of the aircraft through multiple
+
+iterations of design that aimed to improve performance and scoring. Furthermore, reasoning
+
+for the selection of the dimensions and ratios from the Cessna 172 for the subassemblies will be
+
+described. Methods for analyzing the performance of the aircraft included finite element
+
+analysis, computational fluid dynamics, MATLAB programming, and excel worksheets. Through
+
+these methods the team ensured that the aircraft would be able to achieve the objectives of
+
+the competition with the goal in mind of maximizing scoring and competitiveness. The analyses
+
+described in this report have shown that the aircraft should be capable of flying and effectively
+
+completing the objectives of the competition. Furthermore, through finite element analysis the
+
+team has proved that the major structural members of the aircraft should hold up to the forces
+
+exerted on the system. For the testing of the aircraft, multiple flight sessions were used before
+
+the competition in order to adjust the design. Overall, by attending this competition it provides
+
+recognition for Northern Arizona University and the abilities of the students associated with
+
+this project.
+
+=== PAGE 5 | img ===
+1.1. System Overview
+The aircraft designed by the team is based off the Cessna 172 [1] as the overall design contains
+
+similar features to those on the Cessna. Furthermore, the team’s aircraft follows comparable
+
+ratios and dimensions from the Cessna since the design seemed to be a reliable model of
+
+aircraft design. By using the Cessna design as a template, the team was able to come up with a
+
+general design that was then modified to improve aspects such as weight, performance, and
+
+scoring. Along with that, the CH 10 airfoil [2] was selected for the main wing to maximize the lift
+
+of the aircraft with an angle of attack of zero degrees. The main structure of the aircraft lies
+
+within the aluminum spar that passes through the fuselage and is used for connection points
+
+for the tail and wing. Displayed below in Figure 1 is the final design of the aircraft.
+
+                         Figure 1: Team Skyjacks’ final design without monokote
+
+=== PAGE 6 ===
+2.0 Schedule Summary
+The team followed a strict schedule created in September at the beginning of the project. The
+
+schedule allowed for a significant amount of time to be allocated to in-depth analysis and
+
+design iterations based on the analysis. Through analyzing the failures of past year’s teams and
+
+following the schedule, team Skyjacks was able to successfully design an airplane.
+
+=== PAGE 7 ===
+   3.0 Table of Referenced Documents, References, and Specifications
+                           Table 1: Referenced Documents, References, and Specifications
+
+                       Reference                                        Specifications
+[1] “Skyhawk: Model 172R - Specification & Description.”
+Cessna: A Textron Company, Wichita, Mar-2011. Available at:
+https://web.archive.org/web/20110511100227/http://textron Dimensions, ratios, and data for the Cessna
+.vo.llnwd.net/o25/CES/cessna_aircraft_docs/single_engine/sky                 172
+hawk/skyhawk_s&d.pdf
+
+[2] U. o. Illinois, "CH10 (Smoothed)," [Online]. Available:
+http://airfoiltools.com/airfoil/details?airfoil=ch10sm-il.            CH 10 airfoil data
+[Accessed December 2018].
+[3] Georgia State University, "Newton's First Law," Department
+of Physics and Astronomy, [Online]. Available:           Explanation and derivation of Newton’s first
+http://hyperphysics.phy-astr.gsu.edu/hbase/Newt.html.                   law of motion
+[Accessed February 2019].
+[4] Staples, G. (2018). Propeller Static & Dynamic Thrust
+Calculation - Part 1 of 2. [online] Electricrcaircraftguy.com.
+                                                              Propeller static and dynamic thrust
+Available
+                                                                          equations
+at: https://www.electricrcaircraftguy.com/2013/09/propeller-
+static-dynamic-thrust-equation.html [Accessed 7 Nov. 2018].
+[5] J. Anderson, Fundamentals of Aerodynamics, 6th ed. New
+                                                          Rules of thumb for subassembly sizing and
+York, NY: McGraw-Hill Education, 2017.
+                                                                    equations for analysis
+
+[6] C. Gadd, "Servo Torque Calculator," Scale Flyers of
+Minnesota, [Online]. Available:                                Required servo torque equations
+http://www.mnbigbirds.com/Servo%20Torque%20Caculator.h                and assumptions
+tm. [Accessed 18 February 2019].
+[7] https://www.cefns.nau.edu/Groups/fabricationShop/
+                                                                 NAU machine shop website
+
+[8] Staples, G. (2018). Propeller Static & Dynamic Thrust
+Calculation - Part 2 of 2 - How Did I Come Up With
+This Equation?. [online] Electricrcaircraftguy.com. Available  Derivations of the propeller static and
+at: https://www.electricrcaircraftguy.com/2014/04/propeller-         dynamic equations
+static-dynamic-thrust-equation-background.html [Accessed 7
+Nov. 2018].
+[9] NeuMotors, "NeuMotors 4600 Series BLDC Motors,"
+[Online]. Available: https://neumotors.com/neumotors-4600-  Specifications for the motor used on the
+series-bldc-motors-500-to-2000-watt-bldc-multicopter-                      aircraft
+motors/. [Accessed October 2018].
+
+=== PAGE 8 ===
+[10] U. o. Illinois, "NACA 0012 AIRFOILS (n0012-il)," [Online].
+Available: http://airfoiltools.com/airfoil/details?airfoil=n0012-
+                                                               NACA 0012 airfoil data
+il. [Accessed December 2018].
+
+[11] Tretta, F. (2018). Tips for Manufacturing an RC Aircraft.  Advice for design changes and
+                                                              manufacturing processes
+
+   4.0 Design Layout & Trades
+   4.1. Overall Design Layout and Size
+   The final design of the aircraft is modeled after a Cessna 172 aircraft [1]. The physical
+
+   dimensions of the aircraft can be seen in Table 1 below.
+
+                                  Table 2: Physical Dimensions of Aircraft
+
+    Wingspan                                    120 inches
+    Airfoil chord length (wing)                 16.36 inches
+    Airfoil chord length (horizontal stabilizer)  12.7 inches
+    Horizontal Stabilizer Wingspan              32.7 inches
+    Length (nose to tail)                       72 inches
+    Propeller                                   18 x 8 inches
+    Empty Weight                                18.6 lb
+    Loaded weight                               28.29 lb
+   Furthermore, the main structural support system for the aircraft is a square tubing aluminum
+
+   beam which connects to the main wing, the fuselage bulkheads, and vertical and horizontal
+
+   stabilizers. To secure the wing, it is bolted to the aluminum spar through a large balsa
+
+   connection block that matches the profile of our wing’s airfoil. All fuselage bulkheads have a
+
+   square hole that the aluminum spar runs through, which gives the fuselage its main structural
+
+   integrity. Between the bulkheads, the payload plates are vertically attached to the aluminum
+
+   spar via bolts and nuts. The powertrain was set up based on the provided competition
+
+   specifications, using an 18x8 propeller and a 4625 brushless electric motor. The tail that was
+
+   chosen for the plane was a conventional design composed of a single horizontal and vertical
+
+=== PAGE 9 ===
+stabilizer. The elevator used in the horizontal stabilizer was made from one single piece rather
+
+than two to simplify circuitry. The “passenger” tennis balls sit in a separate compartment in the
+
+bottom of the fuselage, which does not share a space with the payload plates. This
+
+compartment is approximately 6 inches underneath the aluminum bar. All aircraft components
+
+will be attached to the aluminum bar because it is the strongest structural component of the
+
+plane. Lastly, a “Taildragger” landing gear was chosen for the final design to accommodate the
+
+center of gravity’s balance.
+
+4.2 Competitive Scoring and Strategy Analysis
+To score the maximum amount of points during the competition, the team optimized the
+
+amount of weight that our plane can carry. Twenty passengers will fit into the aircraft and an
+
+additional ten pounds in luggage, which combines for a total of 12.48 pounds of payload. In
+
+addition to this large payload, the team’s strategy includes attempting to complete two full
+
+flights during the allotted 5-minute time period.
+
+5.0 Loads and Environments, Assumptions
+In order to accurately perform calculations regarding the performance and strength of the
+
+aircraft, specific assumptions regarding the environment must be made to understand how it
+
+will affect the aircraft. Furthermore, applying the appropriate loads to the structure of the
+
+plane is important to ensure analysis on the strength of materials is properly done. Therefore,
+
+the following sections will examine the derivations for the loads that will be simulated in the
+
+analysis and the assumptions made during the analysis to determine how the aircraft will
+
+perform in conditions similar to those at the competition location.
+
+=== PAGE 10 ===
+5.1. Design Loads Derivations
+During the operation of the aircraft, the plane will experience several forces and impacts. The
+
+largest loads the aircraft will encounter that are likely to cause material failure are the impact
+
+forces from landing shock and pressure forces on the main wing.
+
+The landing gear on the plane allows for a controlled, safe and non-destructive way to bring the
+
+aircraft back down to the runway. Without this system, the plane would likely break every flight
+
+when attempting to land rendering the aircraft useless when multiple flights are required. The
+
+design of the landing gear gives the landing maneuver a suspension character as the aluminum
+
+legs bend under impact. Also, the wheels allow the plane to roll along the runway without
+
+damage to the rest of the plane. In the event of a hard landing the strength of the landing gear
+
+will be tested. To check the strength, the team conducted an Finite Element analysis (FEA) in
+
+ANSYS software assuming the impact force. The impact force was calculated using the impulse
+
+equation derived from Newton’s First Law [3].
+
+                                     FΔt=mv                                        (1)
+
+The mass of the aircraft was taken as the weight of the SolidWorks model which was 28.29
+
+pounds. Velocity was inputted as the vertical direction during impact which was assumed to be
+
+5 mph to simulate a poor landing. The time in which the landing gear was in contact with the
+
+ground was 0.1 seconds. The result of this calculation was an average force of 304 N. The team
+
+assumed this to be a slight overestimate of what will be encountered since the plane will
+
+hopefully impact at a vertical speed much less than 5 mph.
+
+The wing provides lift for the aircraft which allows the plane to get airborne and causes
+
+structural forces in the plane while accelerating. The lift force from the wing was modeled in
+
+ANSYS FEA software to test the strength of the wing and fuselage. The wing must be able to
+
+=== PAGE 11 ===
+withstand aerodynamic forces without yielding or breaking components of the aircraft. A
+
+pressure force was imposed along the length of the wing which was equivalent to the max
+
+theoretical lift of about 40 lb, as seen later in the report. The team decided to assume a worst-
+
+case scenario if the plane were to dive or bank exceptionally hard by adding a factor of safety of
+
+two. When computing the FEA operation a pressure of twice the expected lift force was used.
+
+5.2. Environmental Considerations
+When performing analysis and simulations, considerations of the environment in Van Nuys,
+
+California have been used since it is the location of the competition. Calculations and
+
+simulations have been assumed to be at sea level meaning the humidity is zero, pressure is 1
+
+atmosphere, and the temperature is roughly 55 °F. Additionally, it is assumed that the
+
+conditions for flying are optimal meaning that there would be no head wind affecting the speed
+
+of the aircraft. However, with test flights being done at nearly 7,000 feet in Flagstaff, Arizona,
+
+the aircraft will be tested in conditions that are harsher than those expected at the
+
+competition. Therefore, the aircraft should be optimized to perform well at the conditions of
+
+the competition if it is able to handle the conditions in Flagstaff.
+
+6.0 Analysis
+6.1. Analysis Techniques
+Experimental and theoretical techniques were used in the analyses of the final design of the
+
+aircraft. These techniques required multiple computer programs and software to yield accurate
+
+results that influenced the final design. These tools were used to analyze both the structural
+
+integrity and the performance of the plane. The tools that were used to conduct the theoretical
+
+techniques were Microsoft Excel, MATLAB, SolidWorks CAD, and ANSYS Workbench. All
+
+analyses were based on the 3D models that were created in SolidWorks, then the models were
+
+=== PAGE 12 | img ===
+converted into different file types in order to be imported into other software for further
+
+analysis. Once materials were ordered and delivered, experimental tests were able to be
+
+completed. Performance and strength aspects of the design were put to the test using
+
+experimental methods to optimize dimensions and materials for certain parts of the aircraft.
+
+Both techniques positively benefited the design to create a competitive plane for competition.
+
+6.2 Performance Analysis
+6.2.1. Thrust Performance
+To analyze the thrust performance of the design, team Skyjacks performed a test to determine
+
+what propeller should be used with the 1000 W motor and 22.2 V battery which had already
+
+been purchased. The motor, battery, ESC, receiver, and transmitter were all set up and
+
+connected to a Turnigy Thrust Stand. This thrust stand, when set up in the configuration shown,
+
+can measure the static thrust generated from a propeller connected to the motor. A variety of
+
+propellers were tested with different diameters and pitches which is shown in Table 2.
+
+Furthermore, the overall setup of the thrust test can be seen in Figure 2.
+
+                                Table 2: Static thrust test results
+
+=== PAGE 13 | img ===
+                                   Figure 2: Thrust test setup
+
+The team chose the 18x8 propeller in order to maximize the thrust produced at full throttle.
+
+With this setup, the battery life at full throttle was calculated to be approximately six minutes,
+
+enough time for the team to complete successful flights at the competition in the allotted two
+
+minutes.
+
+Since the airplane will be moving at a specific velocity, to properly estimate the in-flight thrust,
+
+dynamic thrust must be estimated. This is estimating the effect the airplane’s velocity has on
+
+the thrust the propeller produces. This estimation was done using an approximation developed
+
+by Gabriel Staples [4], a prominent RC aircraft enthusiast. Staples’ method estimates dynamic
+
+thrust from static thrust and the properties of the propeller. Dynamic thrust was estimated to
+
+be linearly decreasing with an increase in velocity from the maximum measured static thrust to
+
+zero thrust at some velocity. This velocity is estimated to be equal to the pitch speed of the
+
+propeller [4]. From the static thrust test performed on the 18x8 propeller, assuming constant
+
+RPM, the pitch speed was calculated to be 56.8 mph. From this dynamic thrust was estimated
+
+and plotted, the results can be seen in Figure 3.
+
+=== PAGE 14 | math, img ===
+                      Figure 3: Dynamic thrust approximation for team Skyjacks’ design
+
+6.2.2. Drag Performance
+To estimate the drag of the entire aircraft, the drag coefficient of each of the major
+
+components were calculated. These drag coefficients of components are shown in Table 3.
+
+                    Table 3: Coefficients of drag for each of the major aircraft components
+
+To calculate the coefficients of drag for the entire airplane, the angle of attack was assumed to
+
+be zero. Eqn. 2 was used to calculate the coefficient of induced drag, CD,i, of the wing [5].
+
+                                              CL 2
+                                       CD,i= πAR(1 + δ)                                 (2)
+
+In Eqn. 2, is the induced drag factor found in Figure 14 in Appendix A from the wing aspect
+
+ratio and taper ratio while CL is the coefficient of lift of the wing. From this the coefficient of
+
+induced drag of the wing was calculated to be 0.0644. By adding the coefficient of induced drag
+
+to the wing’s sectional coefficient of drag, cd, the wing’s coefficient of drag was found to be
+
+0.0850 [5].
+
+=== PAGE 15 | math, img ===
+To solve for the total drag on the airplane, the actual drag of each component was calculated
+
+through Eqn. 3. In Eqn. 3 CD is the coefficient of drag for each component, q∞ is
+
+the freestream dynamic pressure, and A is the relevant area of the component [5].
+
+                                     D= CDq∞A                                        (3)
+
+The drag on each component was then added together for the total drag on the airplane. By
+
+leaving freestream velocity variable in this calculation, the airplane’s total drag could be plotted
+
+with velocity as shown in Figure 4.
+
+                       Figure 4: Plot of Drag vs Velocity for team Skyjacks’ airplane
+
+Drag and dynamic thrust are opposing forces on the same axes of the aircraft both varying with
+
+velocity. These forces are plotted in Figure 5.
+
+=== PAGE 16 | img ===
+  Figure 5: (a) Plot of dynamic thrust and drag with changing velocity, (b) Plot of the aircraft’s net thrust force with changing
+                                           velocity
+
+By subtracting the aircraft drag from the predicted dynamic thrust, a net thrust force was
+
+calculated and plotted in Figure 5. This information is important because when the net thrust is
+
+zero (that is when the aircraft thrust and drag are equal), the airplane has reached its terminal
+
+velocity.
+
+6.2.3. Lift Performance
+With the CH10 airfoil at zero angle of attack, the sectional coefficient of lift, cl, is 1.175 (see
+
+Figure 13 of Appendix A) [2]. Because the wing design chosen is a constant airfoil, has a
+
+constant chord length, and a constant angle of attack the team chose to assume that, for
+
+=== PAGE 17 | math, img ===
+analytical purposes, the wing is uniformly loaded and therefore the wing coefficient of lift, CL,
+
+will be equal to the sectional coefficient of lift. From this, the lift on the wing is estimated using
+
+Eqn. 4., where S is the wing plan form area [5].
+
+                                     L= CLq∞S                                           (4)
+
+By leaving freestream velocity variable in this calculation, the aircraft’s lift could be plotted
+
+with velocity as shown in Figure 6.
+
+     Figure 6: Plot of the airplane’s lift vs velocity and plot showing the aircraft lift and net thrust at different velocities
+
+To visualize the forces acting on the aircraft, Figure 6 was created to clearly show what the lift
+
+and net thrust will be on the airplane at different velocities.
+
+6.2.4. Takeoff Performance
+An essential part of the aircraft’s performance is being able to take off and land successfully
+
+and safely. With a total aircraft weight of 28 lb, based on the lift analysis, the airplane will need
+
+a freestream velocity of 26.5 mph to have 28 lb of lift and therefore achieve liftoff.
+
+Based on the competition rules, the aircraft must achieve liftoff in 200 feet or less. To verify
+
+that team Skyjacks’ airplane was capable of this, the runway acceleration was estimated by
+
+Eqn. 5 where the net thrust force is variable with velocity as shown in Figure 5.
+
+=== PAGE 18 | math ===
+                                           Tnet                                         (5)
+                                arunway=
+                                          mtotal
+
+In Eqn. 5, arunway is the estimated runway acceleration, now as a function of velocity, Tnet is the
+
+net thrust force, and mtotal is the total aircraft mass. This acceleration assumes that the motor is
+
+already at full throttle from the starting line. Then to find the takeoff distance, the integral
+
+shown in Eqn. 6 was performed numerically. In Eqn. 6 s is the estimated distance to takeoff,
+
+and vtakeoff is the approximated takeoff speed.
+
+                                     vtakeoff  v
+                                s= ∫ 0      arunwaydv                                   (6)
+
+This calculation gave an estimated takeoff distance of 83.8 feet, safely within the 200 feet limit.
+
+This distance assumes that the aircraft is achieving its maximum possible thrust from the start
+
+line, so it is an underestimation. The estimation does not account for factors such as starting
+
+from no throttle and errors in the drag estimation.
+
+6.2.5. Flight and Maneuver Performance
+While in flight, the minimum freestream velocity the airplane must hold to avoid losing altitude
+
+is 26.5 mph. As shown in section 6.2.3 and section 6.2.4, this is the freestream velocity at which
+
+the airplane’s lift is equal to its weight. The terminal velocity of the aircraft at zero angle of
+
+attack, when the drag force and thrust force are equal, is 33.6 mph. This is based on the
+
+analysis done to produce the plot in Figure 5 in section 6.2.2.
+
+The aircraft utilizes a Spektrum AR6600T Six Channel receiver and a Spektrum DX6 transmitter
+
+to control the electronics. To ensure that the servos are sized appropriately for the ailerons,
+
+rudder, and elevator the following equation was implemented in a MATLAB program [6]:
+
+                                     ∗10−6( C2V2Lsin(s1)+tan(s1)
+                              T= 8.5                        )                           (7)
+                                                  tan(s2)
+
+=== PAGE 19 ===
+In this equation, T is the required torque for the servo (oz-in), C is the average chord of the
+
+control surface (cm), V is the velocity of the aircraft (mph), L is the length of the control surface
+
+(cm), S1 is the max control surface deflection, and S2 is the max servo deflection [6]. In order to
+
+perform this calculation, an airspeed of 45 miles per hour was assumed which is in the case of a
+
+dive situation to ensure the servos can handle the maximum speeds of the aircraft.
+
+Furthermore, the maximum deflections of the control surface and servo arm are assumed to be
+
+30 degrees and 45 degrees respectively as a conservative assumption. Through this equation,
+
+the team calculated that the required servo torque for the ailerons, elevator, and rudder are
+
+29.15 oz-in, 36.68 oz-in, and 20.84 oz-in respectively. These torque values should be able to
+
+handle any conditions that the aircraft encounters as a factor of safety is associated by using an
+
+airspeed over ten miles per hour faster than the expected speed. The servos that were
+
+purchased are rated at 130.53 oz-in at 6.0 volts which is considerably higher than needed, but
+
+there should be minimal chances of a failure.
+
+6.2.6. Aeroelasticity
+In order to analyze the aerodynamic forces imposed on the aircraft during flight, FEA was
+
+completed on the main wing. While the plane is airborne there will be air pressure
+
+forces and gravity forces acting over the entire body. It is important to verify that the wing will
+
+maintain structural integrity and keep shape so that the plane creates constant lift and
+
+the aircraft remains controllable.
+
+The Main wing was tested by applying an upward pressure force on the two main spars. The
+
+center connection block was held as a fixed support and a gravity force was applied to the
+
+entire model. This situation seen in Figure 7 imitates the uniform lifting force across the length
+
+of the wing. The loading from the air pressure force will not be uniform, but the constant cord
+
+=== PAGE 20 | img ===
+design makes a uniform loading an appropriate estimation. Also, the model was altered slightly
+
+to allow for easier meshing in the ANSYS software, however, the important geometries were
+
+kept. The pressure applied to the model applies 80 lb of force on the wing which is double the
+
+expected loading during constant velocity level flight. This is to account for accelerations such
+
+as turns and dives that can cause a spiked force.
+
+        Yield Strength (psi)   Max Equivalent Stress (psi)  Max Deformation (in)
+               4730                      1340.3                      0.84
+                            Figure 7: Contour Plot of Stress in Main Wing
+
+The max stress occurs in the basswood cross member which has a yield stress of 4730 psi.
+
+Based on the results, there will not be any components that will break. It was also found that
+
+there were very low amounts of stress in the Balsa airfoils. Lastly, each side of the wing will
+
+bend up 0.84 in. This deformation is not a concern because it will not affect the lift
+
+performance significantly and there was no noticeable twisting along the length of the wing.
+
+6.3. Structural Analysis
+Structural integrity of the aircraft was analyzed using ANSYS Workbench FEA software. Three
+
+case studies were completed to analyze the structure of the aircraft, one on the aluminum spar,
+
+=== PAGE 21 ===
+a second on the nose assembly attached to the aluminum spar, and a third study on the landing
+
+gear and the shock it creates on the main wing. Since the aluminum spar is the main structural
+
+support component of the aircraft, it will have many loads on it throughout the entire length of
+
+the beam. The spar with the nose assembly is where the main force that is propelling the
+
+aircraft is generated and if the nose assembly does not have the strength to pull the aircraft,
+
+the design would have been flawed and inadequate. The landing gear is critical to the scoring
+
+strategy of attempting to land and complete two full flights, and a failure to the landing gear
+
+would be detrimental to the aircraft.
+
+6.3.1. Applied Loads and Critical Margins Discussion
+The aluminum spar was analyzed with a total of 7 axial loads and 2 moments. The forces and
+
+moments are due to 4 components that experience loads during flight: the main wing, the
+
+vertical stabilizer, the horizontal stabilizer and the payload. In addition to approximating the
+
+flight loads, it was assumed that the front of the spar is a fixed end, and therefore has boundary
+
+conditions of no movements in the x, y, or z direction. The main wing and horizontal stabilizer
+
+created moments about the z-axis of the beam, the rudder created an axial force in the x
+
+direction of the beam, and the payload created forces due to weight in the y-axis of the
+
+plane. All forces and moments on the spar are assumptions based on results from the servo
+
+analysis as well as the weight and location of our payload plates. Each force was given a factor
+
+of safety of two to analyze the plane under maximum flight conditions.
+
+From the analysis, stresses and deformations in the beam were calculated. Figure 8 shows the
+
+contour plot of the stress in the beam, with the legend on the left-hand side of the figure. The
+
+highest stress points occur towards the FWD end of the beam with the highest stress in the
+
+beam being calculated at 2,778.2 psi. The yield stress of the beam is 40,611 psi so there are no
+
+=== PAGE 22 | img ===
+concerns about the beam failing during flight. Deformation of the beam was largest in the AFT
+
+end of the plane due to the assumption that the nose was a fixed support. This makes the back
+
+end of the beam a large moment and causes the most deflection. The highest total deformation
+
+in the beam was 0.40483 inches, but again this is under the absolute worst-case scenario
+
+possible which, given that it is a 7-foot-long beam, is not of great concern during flight.
+
+                        Figure 8: Contour Plot of Stress in Aluminum Spar Beam
+
+The second FEA was complete on the nose assembly in conjunction with the aluminum beam.
+
+Only one load, of 11.24 lbf, was placed on the motor shaft of the nose assembly. This is to
+
+simulate the force that the propeller will put on the nose assembly, refer to Figure 9. The force
+
+of 11.24 lbf was chosen because that is double the thrust force that the aircraft propeller and
+
+motor generate when tested with the Turnigy Thrust Stand. This is a crucial analysis because if
+
+the nose assembly is not strong enough to pull the full weight of the aircraft, then the design is
+
+flawed. Similarly, equivalent stress and total deformations were solved for the nose assembly.
+
+The maximum total stress in the beam is 1547.9 psi which is far from the yield stress of the
+
+assembly. The max total deformation of the nose and connecting pieces is 1.0593e-3 in, which
+
+is minimal compared to the overall size of the nose assembly.
+
+=== PAGE 23 | img ===
+                     Figure 9: Contour Plot of Nose Assembly and Aluminum Spar Beam
+
+The third Finite Element Method analysis was done on the landing gear because this
+
+component will experience high loads when the aircraft lands. Figure 10 below displays the
+
+applied force on the model which was 34.2 lb, this was calculated using Eqn. 1 and assuming
+
+the weight of the plane and a vertical landing speed of 5 mph. A 35 lb force was applied at the
+
+center of the wheel at an angle of 7.5° which is the angle the plane makes with the ground
+
+while at rest.
+
+        Yield Strength (psi)   Max Equivalent Stress (psi)   Max Deformation (in)
+
+              40611                      37179                       1.71
+                       Figure 10: Contour Plot of Stress in Single Leg of Landing Gear
+
+The results from this analysis show very high stresses in the shaft of the landing
+
+gear. The aluminum is very close to yielding and the wheel deflects 1.71in from its unloaded
+
+=== PAGE 24 | img ===
+position. ANSYS also provides tabulated results for an aluminum S-N curve which says the
+
+aluminum will yield after about 5000 cycles of this loading due to fatigue. The team decided
+
+to use this design anyways because the material has already been ordered. If problems arise in
+
+the landing gear during test flights, the team will manufacture new landing gear with a bigger
+
+diameter shaft.
+
+The impact from landing will also affect the wing since the landing gear is directly connected to
+
+the main wing. Figure 11 presents another analysis that was conducted on the wing in the
+
+event of an impact landing to view how stresses would translate to the wing. A 35 lb load was
+
+applied where the landing gear connects to the wing. The fixed support and gravity force were
+
+applied in the same way as the first FEA on the wing.
+
+       Yield Strength (psi)    Max Equivalent Stress (psi)   Max Deformation (in)
+
+              4730                       1608.3                      0.907
+
+                  Figure 11: Contour Plot of Stress from the Landing Gear onto the Main Wing
+
+The results show that the stresses in the wing are significantly less than the yield stress of
+
+Basswood which means there will not be any structural damage upon landing.
+
+=== PAGE 25 | img ===
+7.0 Assembly and Subassembly, Test and Integration
+The first testing procedure that the team integrated into the design process of the aircraft was
+
+the static thrust tests using the as Turnigy Thrust Stand described in section 6.2.1. Another
+
+testing procedure the team has implemented is creating a simulation of our aircraft in the Real
+
+Flight simulator to see how the dimensions and ratios of our plane work as an overall system.
+
+To create the model of the aircraft in the simulator, a plane with a comparable design is chosen
+
+and then the dimensions of the subassemblies can be changed to match the ones of the
+
+SolidWorks model. Before the plane is flown in the simulator the power generated is lowered
+
+to produce similar speeds that the team’s aircraft should achieve. With the use of the simulator
+
+the team has verified that the aircraft should be able to take off and maintain flight and
+
+information about the controllability of the aircraft has been provided. An additional procedure
+
+the team will implement is a small-scale lift and drag test verification of the CH 10 airfoil in a wind
+
+tunnel at the Northern Arizona University machine shop [7]. Figure 12 displays the team’s test setup of
+
+the 3D printed airfoil in the wind tunnel.
+
+                          Figure 12: CH10 airfoil small scale wind tunnel test
+
+=== PAGE 26 ===
+After extensive testing of the subassemblies associated with the aircraft, the test of the full
+
+system will be done at a dry lake bed near Flagstaff, Arizona. The reason for choosing the dry
+
+lake bed is to provide a large flat area where the aircraft can be landed at any time and to
+
+minimize the obstacles the aircraft could encounter. With the testing being done at a higher
+
+elevation than the competition, it will be more difficult to fly, but if it can perform effectively at
+
+7,000 feet then theoretically it should work better at sea level. Therefore, the test flights done
+
+near Flagstaff will be challenging, but informative as well as it will provide enough evidence of
+
+whether the aircraft will perform as expected.
+
+8.0 Manufacturing
+Following the design, analysis, and testing of the plane, the team was able to bring the design
+
+to life with the building processes. The aircraft design requires a variety of manufacturing
+
+processes including laser cutting, sanding, gluing, and milling.
+
+Laser cutting was one of the team’s most crucial tools when manufacturing the plane because it
+
+allowed for very accurate and irregular geometries to be cut out of sheets of wood. The airfoils
+
+for the main wing and horizontal stabilizer required the precision offered by the laser cutter
+
+because they produce the shape of the control surfaces which allow for flight. The analysis
+
+executed for the design of the aircraft relies on the specific lift and drag coefficients produced
+
+by the CH-10 and NACA 0012 profiles. Other components of the plane composed of Balsa and
+
+Birch Plywood were also cut with the laser cutter despite not requiring the accuracy. These
+
+parts included the fuselage bulkheads, tennis ball carrier, vertical stabilizer, and other small
+
+components. The laser cutter was utilized on these parts as well due to the simplicity especially
+
+since all the components of the plane were modeled in SolidWorks and could easily be
+
+=== PAGE 27 ===
+converted to a “.dxf” for laser cutting. Another reason for the extensive use of the laser cutter
+
+is the team’s free access to the local high school’s facilities.
+
+Although most of the plane components made from wood were manufactured with the laser
+
+cutter, the assembly process includes further refinement. There are several components of the
+
+plane that are made from wood and are not able to be laser cut. These pieces, which included
+
+the bulkier spars and blocks, need to be cut and sanded manually. The CA glue used to connect
+
+all the pieces together is a strong yet lightweight two-part epoxy. The tolerances set in the
+
+design of the aircraft, were made however knowing wood can be manipulated easily with
+
+sanding and bending. In addition, the grain of the wood while assembling was aligned in the
+
+same direction as any compressive or tensile forces for each piece.
+
+The design also includes a significant amount of aluminum parts which were machined at the
+
+NAU machine shop and purchased through online metal merchants [7]. All the metal used on
+
+the plane was 6061 Aluminum which was implemented on the aircraft’s landing gear, main
+
+fuselage spar, nose section, and hardware. The motor mount and landing gear bracket were
+
+modeled in SolidWorks and Autodesk Fusion 360 in order to generate 3-axis mill G-code to be
+
+run on a Tormach CNC. Other aluminum components did not require the same amount of
+
+accuracy and were manufactured using a manual mill, band saw, and sanders. The assembly of
+
+the nose and the landing gear required TIG welding while the aluminum spar and motor mount
+
+consisted of hardware connection points.
+
+The purchased components of the aircraft included the wheels, propeller, servo system,
+
+and monokote. These items required little to no manufacturing as they only needed to be
+
+mounted to the plane. The propeller was mounted on the motor shaft with a prop adaptor and
+
+=== PAGE 28 | img ===
+a safety nut. The servo assemblies for the control surfaces on the plane were glued into the
+
+main wing and aluminum spar. The wheels were attached to the landing gear with press fit
+
+bearings. Lastly, monokote was used to cover the aircraft allowing for pressure
+
+forces responsible for lift, which was shaped to the contours of the plane with a heating iron.
+
+9.0 Competition Results
+Team Skyjacks was able to bring their airplane to compete at the 2019 SAE Aero Design West
+
+competition in Van Nuys, California. The team completed one successful test flight in Flagstaff
+
+at the Flagstaff Flyers’ airfield before attending the competition to ensure that the design
+
+would be successful. At the competition, team Skyjacks competed with a full payload of 20
+
+tennis balls and 10 lbs of weights. Table 4 shows the result of each of the four rounds for the
+
+team.
+
+                             Table 4: The team’s results for each round
+
+The team was very successful after the first two rounds of the competition, sitting in fifth out of
+
+37 teams. Unfortunately, likely due to the changes the team made to the aircraft between
+
+rounds discussed in section 10, there was an electrical failure and the team was not able to
+
+compete in the third round. The team fixed the electrical problem but crashed in flight on the
+
+final round due to a combination of a cross wind and pilot error.
+
+Even though team Skyjacks did not receive a score in the final two rounds, the team believes
+
+that the represented the university exceptionally. The results of the first two rounds show that
+
+=== PAGE 29 ===
+the team was able to design and manufacture an airplane capable of placing very well at the
+
+international competition. Due to not being able to compete in the final two rounds, team
+
+Skyjacks ultimately finished in 15th place for flights and 22nd overall including the presentation
+
+and report score.
+
+10.0 Design Changes During Competition
+
+The 2019 SAE Aero rulebook, a successful flight is rewarded with maximum available points for
+
+your design as long as you do not skid off the runway and no components break off your
+
+aircraft in the event of a crash landing. During competition, our team had to troubleshoot the
+
+aircraft due to multiple successful crash landings as well as unforeseen challenges occurring to
+
+the design. Design changes included drilling out bolts that were sheared in a tapped hole, wires
+
+being rewired and soldered, replacing the power limiter, landing gear being reinforced,
+
+monokote patching the aircraft, and minor wood repairs. These were all changes that were able
+
+to take place on a small table with basic hand tools within 90 minutes.
+
+One of the first errors that the team encountered during competition was a bolt being bent and
+
+sheared into a tapped hole. The solution to this was to use an electric hand drill and a drill bit to
+
+drill away the sheared bolt as well as make the hole that the bolt goes through larger. This
+
+changed our design by no longer allowing the bolt to thread directly into the aluminum spar to
+
+secure our wing to our fuselage. The change was using a nut at the bottom of the spar to secure
+
+the bolt through the holes.
+
+Another design change that the team made during competition was having to rewire and solder
+
+wires that became damaged. The wires were damaged while drilling the sheared bolt from the
+
+=== PAGE 30 ===
+tapped hole, as previously discussed. The wires for our electronic circuit run through the center
+
+of the aluminum spar that we were drilling, and the drill bit went through the middle and
+
+ripped several wires in half. To fix this, backup wires were needed as well as a soldering iron,
+
+solder, wire cutters, electrical tape, and a power source. The damaged wires need to be spliced
+
+and the tip of the plastic needs to be removed exposing about an inch of the wire underneath.
+
+The same thing needs to happen to the backup wires, then the two sets of wires need to be
+
+twisted together, soldered, and wrapped with electrical tape. Any other damaged wires that
+
+have exposed metal should also be wrapped in electrical tape to avoid shorting the circuit.
+
+The power limiter of our circuit needed to be replaced due to exposed wires shorting the
+
+circuit. This was one of the easiest troubleshooting changes. After wires were replaced and
+
+wrapped in electrical tape, as previously discussed, the nose cone of the plane can be removed,
+
+and the power limiter can be replaced with a backup power limiter.
+
+Landing gear needed to be reinforced multiple times throughout the duration of competition.
+
+The first step to reinforce the landing gear is to bend it back into the original position. This may
+
+require two people to bend the metal and may be easier with large grip pliers. The reinforcing
+
+of the landing gear occurs inside the wing near the metal box. The solution is to cut two pieces
+
+of wood to fit on either side of the landing gear bracket and glue it in with lots of epoxy and
+
+wood glue. Let the epoxy and glue dry and it will be strengthened.
+
+The small design changes that occur to monokote and wood components of the plane are
+
+simple and often times completed in unison as last-minute changes before the next flight
+
+round. Wood fixes are made to any pieces that have been snapped or become damaged. The
+
+=== PAGE 31 ===
+solution is simply glue them back into place with fast drying CA glue. Monokote is the very last
+
+step to any design changes where a piece of monokote is cut to patch over any holes. It is then
+
+applied with the monokote iron and is flight ready.
+
+11.0 Lessons Learned
+After completing the project and attending competition, the team took away some valuable
+
+information that would be useful for future NAU Aero teams. There are design changes that
+
+would be made if our team was to repeat the project, as well as hints and tips that were
+
+learned from attending competition and seeing other teams succeed. The design changes
+
+would include; material changes, center of gravity adjustment, repositioning of control rods,
+
+and focusing on landing gear design. These changes would better our aircraft design, making it
+
+even more durable and would eliminate the need for a ballast.
+
+Beginning with material changes, during competition while attempting to attach the wing, one
+
+of the bolts used to secure the wing was sheared off and cross threaded into the aluminum
+
+spar. It was speculated that the aluminum bolt was not stronger than the threaded holes in the
+
+spar due to them being of the same material. As the bolt was screwed in at an angle, it was not
+
+strong enough to re-thread the spar and it sheared in two pieces as a result. Although the team
+
+was trying to be mindful of saving weight wherever we could, the choice to reduce weight by
+
+bolt material nearly costed us the first run during competition. The team should have used steel
+
+bolts of the same dimensions, ensuring that if a cross-threading situation occurred, the steel
+
+would be strong enough to withstand torsion from either direction. Another area where the
+
+material selection was not adequate for the experienced forces was the landing gear. Originally,
+
+aluminum was chosen due to its strength to weight properties but after our first landing it was
+
+=== PAGE 32 ===
+demonstrated that the material would not suffice. This could have been fixed by choosing solid
+
+rods over tubed or one’s with greater wall thickness. As stated above in the last section, the
+
+issue was resolved by enforcing the existing landing gear with steel rods inserted behind each
+
+main gear.
+
+Moving on to the adjustment of the center of gravity, after the construction of our aircraft was
+
+complete a standard CG test was conducted at a quarter of the chord length from the leading
+
+edge. With this is was noted that our CG was about an inch back from the intended position.
+
+This prompted the team to add a one and a half-pound ballast to the nose to rectify the CGs
+
+position and ensure the plane would have a stable flight. Although the aircraft had been
+
+designed in SOLIDWORKS with a correctly placed CG, the team believes that the shift occurred
+
+due to manufacturing techniques. All the glue and Monokote used on the plane was not
+
+accounted for due to the miniscule difference it would have on the overall weight. It may have
+
+not affected the CG shift too severely, but everything adds up and eventually does make a
+
+difference in the final product. Other sources of error stemmed from manufacturing the tail,
+
+more specifically while incorporating the tail landing gear. This was a custom piece that
+
+required heavy modification in order to incorporate the actuation of both the rudder and wheel
+
+into one system. In doing this, there was weight added to the tail that was not in the
+
+SOLIDWORKS model.
+
+The control (push/pull) rods are a crucial component that determine the degree of actuation for
+
+the control surfaces. The control surfaces are what allow our plane to manipulate its movement
+
+during flight. If control surfaces cannot create enough lift or drag in certain situations the
+
+plane’s performance can he heavily hindering during flight resulting in a crash. This potential
+
+=== PAGE 33 ===
+issue can be dealt with by placing control rods in appropriate orientations where they push
+
+rather than pull or vice versa. Specific to us, our team chose to place a push rod under the
+
+horizontal stabilizer to push the elevator up when trying to create lift. In this configuration, it
+
+was easier for our plane to create drag and pull down on the elevator, but it was still capable of
+
+creating lift. Had we placed the control rod on top of the horizontal stabilizer making it a “pull”
+
+rod, it would have given us a better actuation range for creating more lift. During competition,
+
+unexpected cross winds were encountered which caused our plan to lose altitude and control
+
+while performing a turn. Our “push” rod could not lift the elevator any further to create more
+
+lift during the turn which ultimately resulted in a crash. For future reference make sure that the
+
+control rod for the elevator is placed above the horizontal stabilizer to act as a “pull” rod.
+
+Lastly, the landing gear on our aircraft was under designed as a result of time constraints and
+
+focusing overall efforts on the fuselage. The landing gear worked perfectly when taxiing the
+
+plane on the ground however, when it came to performing a flight landing, the main landing
+
+gear yielded. As discussed previously in the materials portion of this section, we understood the
+
+strength flaw associated with using a hollow aluminum rod and how to reinforce it with steel.
+
+Again, reducing weight was always kept in mind which is what lead to aluminum being used
+
+over steel. However, even if the part was made from a hollow steel rod or solid rod the
+
+thickness would need to be increased to handle landing forces. This inherently mean that the
+
+weight would also increase. One thing that was noted from several aircrafts at competition was
+
+how other teams chose to integrate their landing gear. These teams with similar approaches all
+
+used a carbon-fiber or plastic bow as their main landing gear. The purpose of this is that the
+
+=== PAGE 34 ===
+“bow” mimics the mechanics of a leaf-spring when undergoing compression. The carbon-fiber
+
+material used would ensure strength and resilience during maximum deflection upon landing.
+
+12.0 Conclusion
+After multiple iterations in the design phase and different approaches for analysis and testing,
+
+Team Skyjacks is confident that the aircraft will complete all the objectives laid out by the
+
+competition. With a high lift airfoil, lightweight construction, and durable structural
+
+integrity, the aircraft should be successful and represent Northern Arizona
+
+University appropriately. While there have been setbacks and challenges throughout the
+
+project, the Skyjacks have overcome these through outside advice and skills learned at the
+
+university. Ultimately, the team believes that the aircraft reflects the hard work and countless
+
+hours that have been put in to represent the university in a positive manner and display the
+
+skills that have been learned throughout this project.
+
+List of Symbols and Acronyms
+
+F: Force                                        arunway: runway acceleration
+t: time                                         Tnet: net thrust
+m: mass                                         mtotal: total aircraft mass
+v: velocity                                     s: takeoff distance
+Cd,i: coefficient of induced drag               vtakeoff: liftoff velocity
+CL: total coefficient of lift                   T: torque
+cl :sectional coefficient of lift               C: control surface average chord
+AR: aspect ratio                                V: velocity
+δ: induced drag factor                          L: control surface length
+CD: total coefficient of drag                   s1: max control surface deflection
+cd: sectional coefficient of drag               s2: max servo deflection
+L: Lift                                         α: angle of attack
+D: Drag                                         NAU: Northern Arizona University
+q∞: dynamic pressure                            RPM: Rotations per minute
+A: area                                         CNC: Computer numerical control
+S: wing plan form area
+
+=== PAGE 35 | lowtext ===
+ct/cr: taper ratio, wing tip chord/wing root
+chord
+
+=== PAGE 36 | img ===
+Appendix A– Figures Supporting Performance Analysis
+
+                             Figure 13: CH10 airfoil coefficients of lift and drag data plotted [2]
+
+                                 Figure 14: δ as a function of taper ratio for different AR [5]
+
+=== PAGE 37 | img ===
+Appendix B – Payload Prediction
+The purpose of the payload prediction is for the team to observe what payloads are appropriate at
+
+specific altitudes. In order to produce the payload curve in Figure 15 seen below, the team began with
+
+analyzing lift performance data and linearizing it with altitude. Several variables were factored into this
+
+curve beginning with the idea that for a plane to carry a certain load, it would have to produce a far
+
+greater lift than its own weight to maintain flight. The density of air is another characteristic which is
+
+dependent of the altitude, this was kept in mind and compensated for. In Section 6.2.3, Figure 6
+
+presents net thrust and lift plotted against velocity. From this, a max velocity is found where net thrust
+
+is zero. The maximum velocity also indicated the point of maximum lift, this was done at sixteen
+
+different altitudes as the air density varied. The weight of the empty aircraft was then subtracted from
+
+each of the maximum lifts found to give the following payload prediction at differing altitudes.
+
+                                                                                      `
+                                   Figure 15: Payload Prediction Curve
+
+=== PAGE 38 | lowtext, img ===
+Appendix C - Statement of Compliance
+
+=== PAGE 39 | lowtext, img ===
+Drawing 11X17

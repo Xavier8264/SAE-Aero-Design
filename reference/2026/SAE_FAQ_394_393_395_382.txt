@@ -1,0 +1,74 @@
+Official SAE Aero Design FAQ answers (verbatim), fetched 2026-09-18 from
+https://saeaerodesign.com/cdsweb/rqa/ViewFAQ.aspx?faqnum=<N>
+
+======================================================================
+FAQ #394 
+ Regular Class 2026 - Increasing Bottle Payload 
+ Last Updated On
+ 2/17/2026 09:52:25 AM 
+ by
+ talmadge33 
+ Question
+ Can we remove two empty bottles and replace with one filled bottle?
+Example:
+Successful Flight 1: 2 empty + 2 filled
+Flight 2: 3 filled
+Please let us know if this incrementation strategy is acceptable. 
+ Answer
+ Total bottle count must be constant or increasing. Removing two empty bottles and adding one filled bottle is not allowed, even though the total payload weight might be increasing.
+Valid examples:
+Successful Flight 1: 2 empty + 2 filled (4 total bottles)
+Flight 2: 1 empty + 3 filled (4 total bottles)
+Successful Flight 1: 2 empty + 2 filled (4 total bottles)
+Flight 2: 3 empty + 2 filled (5 total bottles)
+ No Attachments
+ Rule Numbers
+ 2026:2026.7.4
+
+======================================================================
+FAQ #393 
+ Regular Class 2026: Density Altitude Breakpoints 
+ Last Updated On
+ 2/17/2026 09:52:37 AM 
+ by
+ talmadge33 
+ Question
+ In the Addendum to Section 4.5 of the TDS, Flight Score Prediction (Regular Class Only), point number 5 states that the file will be read directly by the software. From this, we understand that the density altitude will be provided as the input and the predicted flight score will be taken as the output.
+How precise does the CSV file need to be, and how will the software handle cases where the measured density altitude does not exactly match a value in the file? 
+ Answer
+ There is no requirement to have equal spacing in the density altitude breakpoints. You may elect to use 1 ft increments in some places and 100 ft increments in others, for example. Further, you may elect to duplicate density altitude breakpoints at a score transition point to prevent interpolation. The highest payload score prediction will be used in the case of duplicate density altitude breakpoints. Otherwise, the software will linearly interpolate between breakpoints.
+ No Attachments
+ Rule Numbers
+ 2026:2026.4.5
+
+======================================================================
+FAQ #395 
+ Regular Class 2027: Prop Diameter Constraint 
+ Last Updated On
+ 9/14/2026 10:39:44 AM 
+ by
+ talmadge33 
+ Question
+ Section 7.3 of the regular class rules state: "The aircraft shall be propelled by either two (2) or four (4) electric motors. There are no restrictions on the make or model of the electric motors." and "Maximum propeller diameter (per motor) shall be twelve (12) inches if two (2) motors are used or nine (9) inches if four (4) motors are used". 
+Is there a limit to the number of propellers that can be spun by one motor? 
+In an aircraft configuration utilizing two motors, if each motor spins two propellers, what is the allowed propeller diameter for each propeller? 
+ Answer
+ Based on team feedback over the last several years, we were asked to remove the power limiter as a requirement. Our solution to prevent abuse of propulsion power, was to heavily regulate the battery and propeller specification. The sum total propeller diameter for a 2 motor design choice is 12 inches per motor. That could be a single propeller with a 12 inch diameter per motor. Or you could drive two propellers per motor with 6 inch diameters each (6 + 6 = 12). Or three propellers with 4 inch diameters (4 + 4 + 4 = 12), etc. With the removal of the power limiter, we have very carefully specified the battery and propeller requirements to size the aircraft payload capability and potential scoring. We don't restrict the number of propeller blades on each propeller.
+ No Attachments
+ Rule Numbers
+ 2027:2027.7.3
+
+======================================================================
+FAQ #382 
+ All Classes: Controllability and Ground Steering 
+ Last Updated On
+ 12/13/2024 02:55:13 PM 
+ by
+ brett.foley 
+ Question
+ Can we use differential thrust as ground steering? 
+ Answer
+ No, as per rule 2.6, if an aircraft is equipped with a wheeled landing gear, the aircraft must have a ground steering mechanism for positive directional control during takeoffs and landings. Aircraft cannot rely solely on aerodynamic control surfaces for ground steering. 
+ No Attachments
+ Rule Numbers
+ 2025:2.6

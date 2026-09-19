@@ -1,0 +1,181 @@
+# ID: uiuc_propdb
+# SOURCE: https://m-selig.ae.illinois.edu/props/propDB.html
+# ORIGINAL: reference/raw/uiuc_propdb.html
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type html | 1 pages | ~1586 tokens
+# NOTE: UIUC Propeller Data Site index (wind-tunnel data, Vol 1-4); cross-check for APC simulated data
+
+=== PAGE 1 ===
+# UIUC Propeller Data Site
+
+#
+
+Home
+UIUC Propeller Data Site
+
+## UIUC Propeller Database
+
+John B. Brandt, Robert W. Deters, Gavin K. Ananda, Or D. Dantsker, and Michael S. Selig
+
+This webpage includes wind tunnel measurements for propellers used
+on small UAVs and model aircraft.
+
+The propeller database includes three volumes:
+
+- Volume 1 - UIUC MS
+thesis by John Brandt and following tests
+(2005-2008). Refs 7 and 8. Last updated 2/3/15
+(ver 3).
+
+- Volume 2 - UIUC PhD
+dissertation by Robert Deters and following tests (2009-2015).
+Refs 5 and 6.
+Last updated 5/27/15 (ver 1).
+
+- Volume 3 - Publication and tests by Or Dantsker (2020).
+Ref 2.
+Last updated 8/20/20 (ver 1).
+
+- Volume 4 - Publication and tests by Or Dantsker (2021-2022).
+Ref 1.
+Last updated 6/12/22 (ver 1).
+
+### Basic Relations
+
+The UIUC data use the standard definitions for propeller aerodynamic coefficients:
+
+Further, for the static performance data plots (C_T0, C_P0), the
+Reynolds number reported there (x-axis) is based on these
+quantities at the 75&percnt; blade station: propeller blade chord (c_75&percnt;)
+and rotational velocity (V_75&percnt; = 0.75 Ω R).
+
+For more information, a useful reference is:
+
+McCormick, B.W.,
+"Aerodynamics, Aeronautics, and Flight Mechanics,"
+Wiley, Second Edition, 1995.
+
+### APC Propeller Geometry
+
+Many of the propellers tested are APC brand propellers. The
+geometry information direct from APC is here:
+https://www.apcprop.com/technical-information/file-downloads/.
+The file to obtain is: PE0-FILES_WEB-202206.zipx (or latest). After unzipping,
+the files have the extension: ".peo". It is a text file. Changing
+the extension to ".txt" allows for the files to be easily opened in any
+text editor. MSS 6/27/2022
+
+### UIUC and Ohio State University Experimental Measurements - Comparison
+
+The figures below show a comparison
+between UIUC Volume 1 (V3)
+data and measurements taken at Ohio State (Ref 6). The results show good
+agreement, especially considering that the thrust and torque
+measurement techniques differ. For the UIUC data, the thrust is
+measured directly with a load cell attached to a pivot arm. The
+torque is measured through a torque cell attached to the fixture that
+holds the motor. For the OSU data, the measurements were taken using
+a multi-axis load cell attached directly to the motor (Ref 8).
+
+APC 10x5E and 10x7E "thin electric" propellers.
+
+Additional formats: .eps, .fig, and .pdf
+
+Credits: Graphics provided by Matthew McCrink and James Gregory,
+Ohio State University, June 2015.
+
+### Citation for Webpage
+
+The recommended way to cite this webpage in a publication is:
+
+- J.B. Brandt, R.W. Deters, G.K. Ananda, O.D. Dantsker, and M.S. Selig (insert date downloaded), UIUC Propeller
+Database, Vols 1-4,
+University of Illinois at Urbana-Champaign,
+Department of Aerospace Engineering,
+retrieved from https://m-selig.ae.illinois.edu/props/propDB.html.
+
+### References
+
+- Dantsker, O.D.,
+Caccamo, C., Deters, R.W., and Selig, M.S., "Performance Testing of APC Electric Fixed-Blade UAV Propellers," AIAA Aviation and Aeronautics Forum and Exposition (Aviation 2022), AIAA Paper 2022-4020, Chicago, IL, June 2022.
+
+- Dantsker, O.D.,
+Caccamo, C., Deters, R.W., and Selig, M.S., "Performance Testing of Aero-Naut CAM Folding Propellers," AIAA Aviation and Aeronautics Forum and Exposition (Aviation 2020), AIAA Paper 2020-2760, Virtual Event, June 2020.
+
+- McCrink, M.H. and Gregory, J.W., "Blade Element Momentum
+Modeling for Low-Re Small UAS Electric Propulsion Systems,"
+AIAA Aviation and Aeronautics Forum and Exposition (Aviation
+2015), AIAA Paper 2015-3296, Dallas, TX, June
+2015 | https://arc.aiaa.org/doi/10.2514/6.2015-3296
+| Also see https://arc.aiaa.org/doi/abs/10.2514/1.C033622, 2016.
+
+- Gregory, J.W., private communications, June 2015.
+
+- Deters, R.W., "Performance and Slipstream
+Characteristic of Small-Scale Propellers at Low Reynolds
+Numbers," Ph.D. Dissertation, Department of Aerospace
+Engineering, University of Illinois at Urbana-Champaign, Urbana,
+IL, 2014.
+
+- Deters,
+R.W., Ananda, G.K., and Selig, M.S., "Reynolds Number Effects
+on the Performance of Small-Scale
+Propellers," AIAA Aviation and
+Aeronautics Forum and Exposition (Aviation 2014), AIAA
+Paper 2014-2151, Atlanta, GA, June 2014.
+
+- Brandt,
+J.B. and Selig, M.S., "Propeller Performance Data at Low
+Reynolds Numbers," 49th AIAA Aerospace
+Sciences Meeting, AIAA Paper 2011-1255, Orlando, FL,
+January 2011.
+
+- Brandt, J. B., "Small-Scale Propeller Performance at Low
+Speeds," M.S. Thesis, Department of Aerospace Engineering,
+University of Illinois at Urbana-Champaign, Illinois,
+2005.
+
+### Download Archive
+
+Download the entire propeller
+database: UIUC-propDB.zip
+(md5sum: a41e484f1fd0fb6ff80b76e27410808b)
+
+### Useful Links
+
+- McDonald, R., "PropDBTools - Tools for Working with the UIUC
+Propeller Data Site Data in Matlab/Python," GitHub,
+2021. https://github.com/ramcdona/PropDBTools
+
+- PropFolio, "Modernized Propeller Performance Database,"
+2026. Searchable web interface for APC propeller performance data
+including specifications, interactive 3D geometry models
+(OpenVSP), and performance metrics across various RPM
+ranges. https://propfolio.live/
+
+### Release Notes
+
+- 6/27/22 - Added Volume 4 dataset and updated the zip file with the entire database.
+
+- 4/11/22 - On this main page, gave definition of Re used in the
+static performance plots. Same as Brandt M.S. Thesis.
+
+- 8/25/20 - Added Volume 3 dataset and updated the zip file with the entire database.
+
+- 11/29/15 - Added a link to download the entire database as a zip file.
+
+- 11/29/15 - Started these release notes. Separate release notes
+are included with the Volume 1 and Volume 2 datasets.
+
+© 1994 - 2026 UIUC Applied Aerodynamics Group
+
+Please send comments about this page to webmaster
+
+Department of Aerospace Engineering |
+University of Illinois at Urbana-Champaign
+
+## Document links on this page
+- https://m-selig.ae.illinois.edu/pubs/DantskerCaccamoDetersSelig-2022-AIAA-Paper-2022-4020-APCEPropTestsVol4.pdf
+- https://m-selig.ae.illinois.edu/pubs/DantskerCaccamoDetersSelig-2020-AIAA-Paper-2020-2762-CamPropsTesting.pdf
+- https://m-selig.ae.illinois.edu/pubs/DetersAnandaSelig-2014-AIAA-2014-2151.pdf
+- https://m-selig.ae.illinois.edu/pubs/BrandtSelig-2011-AIAA-2011-1255-LRN-Propellers.pdf
+- https://m-selig.ae.illinois.edu/props/download/UIUC-propDB.zip

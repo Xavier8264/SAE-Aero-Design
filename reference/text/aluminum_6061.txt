@@ -1,0 +1,225 @@
+# ID: aluminum_6061
+# SOURCE: https://www.aircraftmaterials.com/data/aluminium/6061.html
+# ORIGINAL: reference/raw/aluminum_6061.html
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type html | 1 pages | ~1222 tokens
+# NOTE: 6061-T6 properties by temper/form (vendor data page)
+
+=== PAGE 1 ===
+# Aluminium Alloy 6061 | Aircraft Materials
+
+# Aluminium Alloy 6061
+
+## Technical Data Sheet
+
+Aluminum Alloy 6061 is an extremely versatile heat treatable aluminum alloy due to its content of silicon and magnesium. Alloy 6061 has a wide range of mechanical and corrosion resistance properties as well as having most of the good qualities of aluminum. 6061 is used in a many applications from aircraft structures, yacht construction, truck bodies, bicycle frames to screw machine parts.
+
+| Chemical Composition Limits |
+
+| Weight% | Al | Si | Fe | Cu | Mn | Mg | Cr | Zn | Ti | Other Each | Others Total |
+
+| Alloy 6061 | Bal | 0.40 - 0.80 | 0.70 max | 0.15-0.40 | 0.15 | 0.8-1.2 | 0.04-0.35 | 0.25 max | 0.15 max | 0.05 max | 0.15 max |
+
+## Typical Mechanical Properties
+
+##
+
+| Material | Thickness (in) | Tensile Strength (ksi) | Yield Strength (ksi) | Elongation |
+
+| Alloy 6061 Sheet T6 | 0.020-0.500 | 42 | 35 | 10 |
+
+| Alloy 6061 Sheet T6 | 0.500-1.000 | 42 | 35 | 9 |
+
+| Alloy 6061 Sheet T6 | 1.00-2.00 | 42 | 35 | 8 |
+
+| Alloy 6061 Sheet T6 | 2.00-4.00 | 42 | 35 | 6 |
+
+| Alloy 6061 Sheet T6 | 4.00-6.00 | 40 | 35 | 6 |
+
+| Material | Temper | Diameter (in) | Tensile Strength (ksi) | Yield Strength (ksi) | Elongation |
+
+| Alloy 6061 Bar Cold Finished | T651 | All | 42 | 35 | 10 |
+
+| Alloy 6061 Bar Cold Finished | T6511 | <0.25" | 38 | 35 | 8 |
+
+| Alloy 6061 Bar Cold Finished | T6511 | >0.25" | 38 | 35 | 10 |
+
+| Alloy 6061 Bar - T651 / T6 condition and extruded T6511/T6 |
+
+Availability
+
+Aluminium Alloy 6061 Sheet, Plate, Wire, Rod, Bar (Hexagon, Round, Square), Tube and extrusions. 6061 Foil (Shim) is available in various thicknesses. View stock list for further information. Foil Stock List , Sheet Stock List, Plate Stock List. For all stock availability of Aluminium Alloy 6061 contact Sales.
+
+Specifications
+
+BS L117 Alloy 6061 Tube Drawn T6
+
+BS L118 Alloy 6061 Tube Drawn T6 Hydraulically Tested
+
+H20
+
+HE20 6061 Extrusions
+
+HP20 6061 Plate
+
+HS20 6061 Sheet
+
+AMS 4009 6061-0 Foil
+
+AMS 4021 6061-0 Alclad Sheet and Plate
+
+AMS 4022 6061 Alclad Sheet and Plate Cancelled
+
+AMS 4023 6061 Alclad Sheet and Plate Cancelled
+
+AMS 4025 6061-0 Sheet and Plate
+
+AMS 4026 6061-T4 Sheet T451 Plate
+
+AMS 4027 6061-T6 Sheet and T651 Plate
+
+AMS 4053 6061 Cancelled
+
+AMS 4079 6061-0 Tube Drawn Seamless Close Tolerence
+
+AMS 4080 6061-0 Tube Drawn Seamless
+
+AMS 4081 6081-T4 Tube Drawn Seamless Hydraulic
+
+AMS 4082 6061-T6 Tube Drawn Seamless
+
+AMS 4083 6061-T6 Tube Drawn Seamless Hydraulic
+
+AMS 4091 Superseded by AMS 4081
+
+AMS 4092 Superseded by AMS 4082
+
+AMS 4093 Superseded by AMS 4083
+
+AMS 4113 6061-T6 Extruded shapes
+
+AMS 4115 6061-0 Cold finished bars, rod, wire
+
+AMS 4116 6061-T4 Cold finished bars, rod, wire
+
+AMS 4117 6061-T6/T651 Cold finished bars, rod, wire
+
+AMS 4127 6061-T6 Forgings Rolled or Forged
+
+AMS 4128 6061-T451 Bars Rolled or Forged
+
+AMS 4129 6061-T651 Superseded by 4117
+
+AMS 4146 6061-T4 Forgings
+
+AMS 4150 6061-T6 Extrusions and Rings
+
+AMS 4160 6061-0 Extrusion
+
+AMS 4161 6061-T4 Extrusion
+
+AMS 4172 6061-T4511 Extrusion
+
+AMS 4173 6061-T6511 Extrusion
+
+QQ-A-200/8 6061-T6/T6511 Extruded bar, tube, section
+
+QQ-A-200/16 6061-T6 extruded stuctural shapes
+
+QQ-A-225/8 6061-T6 / T651 Cold finished bar, tube, section
+
+QQ-A-250/11 6061 Sheet and Plate
+
+WW-T-700/6 6061-T6 Seamless, drawn tube
+
+MIL-T-7081 6061-T6 Hydraulic tube
+
+QQ-A-367 6061 Forgings
+
+WS 3.3211
+
+WS 3.3214
+
+EN 2392 6061-T6 Tube
+
+EN 2694 6061-T6 Sheet, strip
+
+EN 3341 6061-T4 Sheet, strip
+
+EN 3342 6061-T4 Extruded bar
+
+EN 3557
+
+EN 4213 6061-T651 Plate
+
+AWCO-22
+
+Birmetal-016
+
+BA22
+
+Duricilium-Q
+
+Hiduminium-43
+
+LA 380
+
+ABM 2-3023
+
+ABM 2-3025
+
+ABM 2-3026
+
+ABS 5144
+
+ABS 5151
+
+BACM 123
+
+BACM 171 6061-0 Tube
+
+A-GSUC
+
+L-3453
+
+ASN-A-3277
+
+NCT 15-238-01
+
+AIR 9048.210 6061-0 Sheet
+
+AIR 9048.220 6061-T4 Sheet
+
+AIR 9048.230 6061-0 Sheet
+
+AIR 9048.240 6061-T6 Sheet
+
+AIR 9049
+
+Customer Reviews - What Customers Say About Us!
+
+"Just wanted to say thanks for your efforts and updates"
+
+"I always try you as you often keep stock that can't be found elsewhere"
+
+"Prompt answer & knowledge of available material, timescale & price within a good time"
+
+"Packaging is superb"
+
+"Thank you for your quick response"
+
+| | CLICK HERE TO VIEW OUR BROCHURE | |
+
+Disclaimer
+
+Every effort is made to ensure that technical specifications are accurate. However, technical specifications included herein should be used as a guideline only. All specifications are subject to change without notice.
+
+home - products - services - calculator - about us - contact us - privacy policy
+
+AircraftMaterialsUK.com Ltd Reg Co. in England and Wales 4141886 - Unit D, The Heights Business Park, Ibstone Road, Stokenchurch, Bucks, HP14 3BG.
+
+Tel: + 44(0) 1494 484844 Fax: 44(0) 1494 482155 Tel US: +1 714 735 4413
+
+Site © 2013 Aircraftmaterialsuk.com Ltd
+
+## Document links on this page
+- https://www.aircraftmaterials.com/AMUK Brochure.pdf

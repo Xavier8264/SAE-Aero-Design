@@ -1,0 +1,477 @@
+# ID: nws_density_altitude_calc
+# SOURCE: https://www.weather.gov/epz/wxcalc_densityaltitude
+# ORIGINAL: reference/raw/nws_density_altitude_calc.html
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type html | 1 pages | ~1136 tokens
+# NOTE: NWS density altitude calculator page (JS calculator; equations are in nws_density_altitude_formula)
+
+=== PAGE 1 ===
+# Density Altitude Calculator
+
+-
+
+HOME
+
+-
+
+FORECAST
+
+-
+Local
+
+-
+Graphical
+
+-
+Aviation
+
+-
+Marine
+
+-
+Rivers and Lakes
+
+-
+Hurricanes
+
+-
+Severe Weather
+
+-
+Fire Weather
+
+-
+Sunrise/Sunset
+
+-
+Long Range Forecasts
+
+-
+Climate Prediction
+
+-
+Space Weather
+
+-
+
+PAST WEATHER
+
+-
+Past Weather
+
+-
+Astronomical Data
+
+-
+Certified Weather Data
+
+-
+
+SAFETY
+
+-
+
+INFORMATION
+
+-
+Wireless Emergency Alerts
+
+-
+Weather-Ready Nation
+
+-
+Brochures
+
+-
+Cooperative Observers
+
+-
+Daily Briefing
+
+-
+Damage/Fatality/Injury Statistics
+
+-
+Forecast Models
+
+-
+GIS Data Portal
+
+-
+NOAA Weather Radio
+
+-
+Publications
+
+-
+SKYWARN Storm Spotters
+
+-
+StormReady
+
+-
+TsunamiReady
+
+-
+Service Change Notices
+
+-
+
+EDUCATION
+
+-
+
+NEWS
+
+-
+
+SEARCH
+
+-
+
+Search For
+
+NWS
+
+All NOAA
+
+-
+
+ABOUT
+
+-
+About NWS
+
+-
+Organization
+
+-
+For NWS Employees
+
+-
+National Centers
+
+-
+Careers
+
+-
+Contact Us
+
+-
+Glossary
+
+-
+Social Media
+
+-
+NWS Transformation
+
+Local forecast by
+"City, St" or ZIP code
+
+Sorry, the location you searched for was not found. Please try another search.
+
+Multiple locations were found. Please select one of the following:
+
+Location Help
+
+News Headlines
+
+- View the latest Drought Information Statement for September here
+
+Customize Your Weather.gov
+
+Enter Your City, ST or ZIP Code
+
+Remember Me
+
+Privacy Policy
+
+LOADING...
+
+El Paso, TX
+
+Weather Forecast Office
+
+# Density Altitude Calculator
+
+Weather.gov
+> El Paso, TX
+> Density Altitude Calculator
+
+-
+
+Current Hazards
+
+-
+Weather Briefing
+
+-
+Submit a Storm Report
+
+-
+Outlooks
+
+-
+Heat Risk
+
+-
+Enhanced Hazardous Weather Outlook
+
+-
+
+Current Conditions
+
+-
+Satellite
+
+-
+Observed Precipitation
+
+-
+Surface Observations
+
+-
+
+Radar
+
+-
+El Paso (KEPZ) Enhanced Radar
+
+-
+El Paso (KEPZ) Standard Radar (low bandwidth)
+
+-
+Holloman AFB (KHDX) Enhanced Radar
+
+-
+Holloman AFB (KHDX) Standard Radar (low bandwidth)
+
+-
+Regional Standard Radar (low bandwidth)
+
+-
+
+Forecasts
+
+-
+Probabilistic Precipitation
+
+-
+Forecaster's Discussion
+
+-
+Fire
+
+-
+Hourly View
+
+-
+Zone Forecast
+
+-
+Aviation
+
+-
+Winter Weather (Experimental)
+
+-
+Pronóstico del Tiempo en Español
+
+-
+
+Rivers and Lakes
+
+-
+*New* National Water Prediction Service (NWPS)
+
+-
+*New* NWPS - Local View
+
+-
+
+Climate and Past Weather
+
+-
+Climate Prediction
+
+-
+Drought
+
+-
+Climate Graphs
+
+-
+Monthly Climate Data
+
+-
+
+Local Programs
+
+-
+EspaÃ±ol
+
+-
+Weather Calculator
+
+-
+Weather Digests
+
+-
+Office Info
+
+-
+Research and Weather Events
+
+-
+Weather Radio
+
+-
+Spotter Training
+
+-
+Volunteer Programs
+
+-
+Weather Radio
+
+-
+Fire Weather
+
+-
+Aviation
+
+| Density Altitude by Tim Brice and Todd Hall Enter the air temperature and choose a unit: Density Altitude in feet: Fahrenheit Celsius Kelvin ft Enter the actual station pressure (not the altimeter setting) and choose a unit: Density Altitude in meters: in of mercury mm of mercury millibars (hPA) m Enter the dewpoint and choose a unit: Fahrenheit Celsius Kelvin What is the formula for the density altitude script? | | | Enter the air temperature and choose a unit: | Density Altitude in feet: | Fahrenheit Celsius Kelvin | ft | Enter the actual station pressure (not the altimeter setting) and choose a unit: | Density Altitude in meters: | in of mercury mm of mercury millibars (hPA) | m | Enter the dewpoint and choose a unit: | | Fahrenheit Celsius Kelvin | | | |
+
+Follow us on X
+
+Follow us on Facebook
+
+Follow us on YouTube
+
+EPZ RSS Feed
+
+Current Hazards
+
+Outlooks
+
+Hazardous Weather Outlook
+
+Local Storm Reports
+
+Public Information Statement
+
+National
+
+Heat Risk
+
+Current Conditions
+
+Rivers and Lakes
+
+Local Observations
+
+Satellite
+
+Drought Monitor
+
+Holloman AFB Radar
+
+Regional highs/lows/precip
+
+El Paso Radar
+
+Forecasts
+
+Forecast Discussion
+
+Graphical Forecast
+
+Hourly Forecast
+
+Activity Planner
+
+Fire Weather
+
+Aviation Weather
+
+Climate
+
+El Paso Climate Data
+
+Monthly Weather Digest
+
+Climate Graphs
+
+Monthly Climate Data
+
+Climate Prediction
+
+Storm Events Database
+
+Santa Teresa Climate Data
+
+Education
+
+Lightning Safety
+
+Monsoon Awareness
+
+Jetstream Weather Ed
+
+Heat Safety
+
+Weather Basics
+
+Flood Safety
+
+Weather Calculator
+
+SKYWARN Spotter Training
+
+Our Office
+
+Office Tour
+
+Past Events
+
+Office History
+
+Local Research
+
+About Our Office
+
+Contact Us
+
+US Dept of Commerce
+
+National Oceanic and Atmospheric Administration
+
+National Weather Service
+
+El Paso, TX
+7955 Airport Rd
+
+Santa Teresa, NM 88008
+
+(575) 589-4088
+
+Comments? Questions? Please Contact Us.
+
+Disclaimer
+
+Information Quality
+
+Help
+
+Glossary
+
+Privacy Policy
+
+Freedom of Information Act (FOIA)
+
+About Us
+
+Career Opportunities
+
+## Document links on this page
+- https://www.weather.gov/media/epz/wxcalc/densityAltitude.pdf

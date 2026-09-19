@@ -1,0 +1,1912 @@
+# ID: nau_2021_report
+# SOURCE: https://ceias.nau.edu/capstone/
+# ORIGINAL: reference/raw/nau_2021_report.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 71 pages | ~32480 tokens
+# NOTE: NAU 2021 Regular report. Exact URL not recorded; NAU capstone site. Different mission year
+# FLAG img: pages 1,14,16-20,22,27-28,30-36,38-41,43-44,48-53,57-58,60-61,66-67
+# FLAG lowtext: pages 33-35
+# FLAG math: pages 38-42
+
+=== PAGE 1 | img ===
+                   SAE Aero Regular
+
+                      Final Report
+
+                       Aiden Hudson
+                        Dylan Morgan
+                        Ryan Stratton
+                   Gajaba Wickramarathne
+
+                            2021
+
+Project Sponsor: Professor David Willy
+
+                             i
+
+=== PAGE 2 ===
+                                        DISCLAIMER
+This report was prepared by students as part of a university course requirement. While considerable effort
+has been put into the project, it is not the work of licensed engineers and has not undergone the extensive
+verification that is common in the profession. The information, data, conclusions, and content of this
+report should not be relied on or utilized without thorough, independent testing and verification.
+University faculty members may have been associated with this project as advisors, sponsors, or course
+instructors, but as such they are not responsible for the accuracy of results or conclusions.
+
+                                                  ii
+
+=== PAGE 3 ===
+                               EXECUTIVE SUMMARY
+       The team was tasked with designing a Remote Control (RC) aircraft in accordance with the SAE
+Aero Regular competition rules. The aircraft must be limited to 1000 Watts of power with a wingspan of
+120 inches or less and a weight of 55 lbs. or less while carrying a removable size 5 soccer ball. The
+aircraft must then be able to take off in 100 ft., fly in a loop, and land within 400 ft.
+       During the design process, the team started with a glider style design. Eventually this design was
+entirely changed in favor of a pusher bi-plane design with enhanced lift characteristics over the initial
+design. This design had an approximately similar weight and would be crafted with fiberglass instead of
+balsa wood. After further lift characteristic evaluations, the second wing was deemed unnecessary for
+successful flight and was left out from the final design as the team was far behind schedule at the time.
+       The aircraft ended up being well within the weight and wingspan constraints as well as meeting
+all the other competition pass/fail criteria. The aircraft also contained the required safety arming switch
+and a removable soccer ball.
+       During the testing process the team was not able to meet all the requirements for a successful
+flight as per the SAE Aero competition rules. The team’s final aircraft was too unstable and never
+achieved lift off speeds. After dealing with issues regarding the balance of the aircraft and the direction of
+the landing gear, the aircraft was able to move in a straight line, but once sufficient lift began to be
+generated, the aircraft would roll and crash. However, the aircraft’s structure was resilient enough to
+survive six or more such roll overs without substantial damage, requiring only the replacement of one
+servo and re-attachment of one other. Liftoff speeds maxed out at approximately 24 ft./s, where the
+required lift was achieved at 37.5 ft/s. with the single wing design. Had the team continued with the
+biplane design, the craft would have achieved liftoff at about 30 ft/s with the increased weight.
+       For future work, the team would improve the final landing gear design. The landing gear tended
+to bend whenever the craft rolled over. This resulted in constant adjustments to the landing gear. The
+fixture of the landing gear to the frame of the aircraft would also be improved, as this component was not
+rigid enough. The aircraft would also be better fiberglassed or a different material such as the original
+balsa wood design. This would increase the build quality and reduce the weight of the craft. The team
+would also increase the lifting area of the wings to increase lift at lower speeds and include the second
+wing. Due to time and budget constraints, this was not achievable at this time but would be done in future
+work.
+
+                                                 iii
+
+=== PAGE 4 ===
+                               ACKNOWLEDGEMENTS
+The team would like to acknowledge the assistance of Professor David Willy for all of his help and
+flexibility over the course of the semester, as well as his willingness to sponsor the project after the
+previous client left with little notice. The team also would like to acknowledge the help of student Gia
+Neve with all the challenges utilizing the new laser cutter for various components and providing the team
+with that learning opportunity. Finally, the team would like to acknowledge the help of the NAU
+purchasing staff, Shanay Barkley and Bryce Greenberg, who were always in contact with the budget
+liaison helping the team acquire purchased parts.
+
+                                                  iv
+
+=== PAGE 5 ===
+                             TABLE OF CONTENTS
+
+Contents
+DISCLAIMER .............................................................................................................................................. 2
+EXECUTIVE SUMMARY ........................................................................................................................... 3
+ACKNOWLEDGEMENTS .......................................................................................................................... 4
+TABLE OF CONTENTS .............................................................................................................................. 5
+1    BACKGROUND ................................................................................................................................ 1
+  1.1   Introduction .............................................................................................................................. 1
+  1.2   Project Description ................................................................................................................... 1
+2    REQUIREMENTS ............................................................................................................................. 2
+  2.1   Customer Requirements (CRs) ................................................................................................. 2
+  2.2   Engineering Requirements (ERs) ............................................................................................. 3
+  2.3   Functional Decomposition ........................................................................................................ 4
+     2.3.1   Black Box Model ........................................................................................................ 4
+     2.3.2   Functional Model/Work-Process Diagram/Hierarchical Task Analysis ...................... 5
+  2.4   House of Quality (HoQ) ........................................................................................................... 6
+  2.5   Standards, Codes, and Regulations ........................................................................................... 6
+3    DESIGN SPACE RESEARCH ........................................................................................................... 6
+  3.1   Literature Review ..................................................................................................................... 7
+  3.2   Benchmarking ........................................................................................................................... 7
+     3.2.1   System Level Benchmarking ...................................................................................... 7
+     3.2.2   Subsystem Level Benchmarking ............................................................................... 12
+4    CONCEPT GENERATION .............................................................................................................. 15
+  4.1   Full System Concepts ............................................................................................................. 15
+     4.1.1   Full System Design #1: Glider-Inspired Design with Mid Wings ............................ 15
+     4.1.2   Full System Design #2: Light GA with High Wings ................................................. 15
+     4.1.3   Full System Design #3: Icon A5 Inspired ................................................................. 15
+  4.2   Subsystem Concepts ............................................................................................................... 16
+     4.2.1   Subsystem #1: Landing Gear .................................................................................... 16
+     4.2.2   Subsystem #2: Fuselage ............................................................................................ 16
+     4.2.3   Subsystem #3: Wings ................................................................................................ 17
+5    DESIGN SELECTED – First Semester ............................................................................................ 19
+  5.1   Design Description ................................................................................................................. 19
+     5.1.1   Improvements from the previous CAD model .......................................................... 19
+     5.1.2   Current CAD Assembly – Detailed Description ....................................................... 19
+     5.1.3   Airfoil Selection Process and Engineering Analysis ................................................. 20
+     5.1.4   Landing Gear Forces and Factor of Safety ............................................................... 38
+  5.2   Implementation Plan ............................................................................................................... 39
+6    IMPLEMENTATION – Second Semester ........................................................................................ 41
+  6.1   Versions of the aircraft ............................................................................................................ 41
+     6.1.1   Version 1 ................................................................................................................... 41
+     6.1.2   Version 2 ................................................................................................................... 41
+     6.1.3   Version 3 ................................................................................................................... 42
+     6.1.4   Version 4 ................................................................................................................... 42
+     6.1.5   Version 5 ................................................................................................................... 43
+     6.1.6   Version 6 ................................................................................................................... 43
+  6.2   Design Changes in Second Semester ...................................................................................... 44
+     6.2.1   Design Iteration 1: Change in Propeller and Fuselage Design .................................. 44
+     6.2.2   Design Iteration: Change in Wing Design ................................................................ 44
+
+                                              v
+
+=== PAGE 6 ===
+     6.2.3   Design Iteration 1: Change in Aircraft Material ....................................................... 45
+7    RISK ANALYSIS AND MITIGATION ........................................................................................... 46
+  7.1   Potential Failures Identified First Semester ............................................................................ 46
+  7.2   Potential Failures Identified This Semester ............................................................................ 46
+  7.3   Risk Mitigation ....................................................................................................................... 46
+8    ER Proofs .......................................................................................................................................... 46
+  8.1   ER Proof #1 – Power (1000W) ............................................................................................... 47
+  8.2   ER Proof #2 – Weight (30lbs)................................................................................................. 47
+  8.3   ER Proof #3 – Cost ($1500 or less) ........................................................................................ 47
+  8.4   ER Proof #4 – Takeoff Distance (100ft) ................................................................................. 47
+  8.5   ER Proof #5 – Lift .................................................................................................................. 47
+  8.6   ER Proof #6 – Payload Capacity ............................................................................................ 47
+  8.7   ER Proof #7 – Amperage ........................................................................................................ 47
+  8.8   ER Proof #8 – Voltage (22.2V) ............................................................................................... 48
+  8.9   ER Proof #9 – Wingspan (<120 inches) ................................................................................. 48
+  8.10     ER Proof #10 – Cargo Capacity ......................................................................................... 49
+  8.11     ER Proof #11 – Speed ........................................................................................................ 49
+  8.12     ER Proof #12 – Lift greater than weight ............................................................................ 51
+  8.13     ER Proof #13 – Thrust greater than drag ........................................................................... 51
+9    LOOKING FORWARD .................................................................................................................... 52
+  9.1   Future Testing Procedures ...................................................................................................... 52
+     9.1.1   Testing Procedure 1: Weight ..................................................................................... 52
+     9.1.2   Testing Procedure 2: Test flight ............................................................................... 52
+     9.1.3   Testing Procedure 2: Electronics .............................................................................. 53
+  9.2   Future Work ............................................................................................................................ 53
+10   CONCLUSIONS .............................................................................................................................. 54
+  10.1     Reflection ........................................................................................................................... 54
+  10.2     Postmortem Analysis of Capstone ..................................................................................... 54
+     10.2.1    Contributors to Project Success ............................................................................ 54
+     10.2.2    Opportunities/areas for improvement ................................................................... 55
+11   References ........................................................................................................................................ 56
+12   APPENDICES .................................................................................................................................. 57
+  12.1     Appendix A: House of Quality ........................................................................................... 57
+  12.2     Appendix B: Design Concepts ........................................................................................... 58
+  12.3     Appendix C: Budget........................................................................................................... 59
+  12.4     Appendix C: Continued ..................................................................................................... 60
+  12.5     Appendix C: Continued ..................................................................................................... 62
+
+                                              vi
+
+=== PAGE 7 ===
+List of Tables
+
+Table 1: Table of CR and the ranking of impotence ..................................................................................... 3
+Table 2:Standards of Practice as Applied to this Project [2] ......................................................................... 6
+Table 3: Data imputed into XFLR5 ............................................................................................................. 22
+Table 4: Single wing design lift/drag .......................................................................................................... 28
+Table 5: Dual wing design lift/drag ............................................................................................................. 28
+Table 6: Break down of what was purchased by company ......................................................................... 59
+Table 7: Table of products purchased and where they came from .............................................................. 60
+Table 8: The different purchase and cost associated ................................................................................... 62
+
+                                              vii
+
+=== PAGE 8 ===
+List of Figures
+
+Figure 1: Black box model ............................................................................................................................ 5
+Figure 2: Functional Model .......................................................................................................................... 5
+Figure 3: Pondarosa’s final design for aircraft [2] ........................................................................................ 7
+Figure 4: Skyjacks' final design without monokote [4] ................................................................................ 8
+Figure 5: In Thin Air's final design [5] ......................................................................................................... 9
+Figure 6: Beluga XL aircraft inflight [7] ..................................................................................................... 10
+Figure 7: Beluga being loaded with fuselage of another aircraft [7] .......................................................... 10
+Figure 8: Icon A5 aircraft [7] ...................................................................................................................... 11
+Figure 9: C-5 unloading an Apache Helicopter [7] ..................................................................................... 11
+Figure 10: C-5 being loaded with a C-130 fuselage [7] .............................................................................. 11
+Figure 11: Basic Fuselage Design [6] ......................................................................................................... 13
+Figure 12: Wing Designs ............................................................................................................................ 18
+Figure 13:Current CAD model ................................................................................................................... 19
+Figure 14: NACA 1414 Pressure forces ...................................................................................................... 21
+Figure 15: NACA 1414 Pressure forces ...................................................................................................... 21
+Figure 16: NACA 2314 Pressure forces ...................................................................................................... 21
+Figure 17: NACA 2314 Pressure forces ...................................................................................................... 21
+Figure 18:NACA 2312 Pressure forces ....................................................................................................... 22
+Figure 19: Cl vs Cd and Cl vs Alpha .......................................................................................................... 23
+Figure 20: Graphs of Cl, Cd, Cm, Alpha .................................................................................................... 24
+Figure 21: Graphs of Cl, Cd, Cm, Alpha .................................................................................................... 25
+Figure 22: Airfoil design ............................................................................................................................. 26
+Figure 23:Screenshot of Matlab Landing gear analysis .............................................................................. 38
+Figure 24: Screenshot of Spring Semester Gantt chart ............................................................................... 39
+Figure 25: First semester expanded view of aircraft ................................................................................... 40
+Figure 26: First Prototype ........................................................................................................................... 40
+Figure 27: Version 1 of aircraft ................................................................................................................... 41
+Figure 28: Second Version of aircraft ......................................................................................................... 41
+Figure 29: Third iteration of aircraft ........................................................................................................... 42
+Figure 30: Version 4 of the aircraft ............................................................................................................. 42
+Figure 31: Fifth version of the aircraft ........................................................................................................ 43
+Figure 32: Final CAD of the aircraft ........................................................................................................... 43
+Figure 33: Build aircraft .............................................................................................................................. 44
+Figure 34: Graph of the top three airfoils the team had considered ............................................................ 45
+Figure 35: Battery purchased from project [7] ............................................................................................ 48
+Figure 37: Soccer ball enclosed in cargo bay .............................................................................................. 49
+Figure 37: Soccer ball Placed in cargo bay ................................................................................................. 49
+Figure 38: Aircraft speed during testing ..................................................................................................... 50
+Figure 39: Velocity required to achieve lift................................................................................................. 51
+Figure 40: Aircraft with wheels off the ground ........................................... Error! Bookmark not defined.
+Figure 41: Aircraft moving away from observer......................................................................................... 51
+Figure 42: Aircraft starting from rest .......................................................................................................... 51
+Figure 43: Aircraft farther away from observer .......................................................................................... 52
+Figure 44: House of Quality ....................................................................................................................... 57
+Figure 45: Third design concept ................................................................................................................. 58
+Figure 46: Second design concept .............................................................................................................. 58
+
+                                               viii
+
+=== PAGE 9 ===
+Figure 47: First design concept ................................................................................................................... 58
+
+                                                ix
+
+=== PAGE 10 ===
+1   BACKGROUND
+
+1.1 Introduction
+       In the following document, the Society of Automotive Engineers Aero Capstone (SAE Aero) team
+will be outlining our project thus far and give information to better explain how the team has arrived
+certain ideas and criteria. The team was tasked with creating and producing a prototype aircraft to
+improve on the previous models. In previous years Northern Arizona University Aero Club (Skyjacks)
+had participated in this competition. The Capstone team has been tasked with looking at these previous
+models and ideas and improving them. The team must identify some of the flaws and as well as identify
+some of the strengths of some of these designs. In doing so, the team will create an aircraft deemed to
+out-compete the previous iterations by producing a prototype and testing it.
+
+1.2 Project Description
+      The team’s original sponsor, Dr. Oman, gave the following description to the team in preparation for
+the project:
+
+      “The SAE Aero Regular Design competition is a real‐world design challenge designed to compress
+a typical aircraft development program into one calendar year, taking participants through the system
+engineering process of breaking down requirements. The goal of the challenge is to create an RC airplane
+no greater than 12 feet in wingspan that can compete in an international competition. The challenge this
+year will be to analyze last year 2019 design to determine how to optimize their system for flight and
+competition.  Prior to the 2019-20 team, the Aero Regular challenge was to create a system that could carry
+a payload of tennis balls. Last year’s 2019-20 rules were changed so that the payload is now a soccer ball.”
+
+                                                1
+
+=== PAGE 11 ===
+2   REQUIREMENTS
+       For the SAE Aero Capstone project, the team has been tasked with analyzing and improving the
+previous design from the 2020 SAE Aero Capstone team. This will require a detailed analysis of the existing
+design from the previous semester as well as determining the customer needs and requirements for the
+project. The team will be relating the customer requirements to the engineering requirements and presenting
+a house of quality in this section of the report.
+
+2.1 Customer Requirements (CRs)
+       The customer requirements are as follows: reliable design, durable and robust, cost, safety of
+operation, manufacturability, cargo capacity, flight maneuverability, ground maneuverability, lightweight,
+and stability. These customer requirements were determined by meeting with the client as well as reviewing
+the SAE Aero Competition rules for the 2020 competition. All customer requirements will be rated on a 1-
+10 scale with 10 being the most important.
+       The reliability and robustness and durability of the design are weighted at 7, 8 and 8 respectively.
+The aircraft will be scored on the best of several iterations of the flight competition, as well as intermediate
+testing and refinement. This means that the aircraft must be able to sustain multiple flights and landing
+cycles without critical component failures. The team has also determined that the aircraft should be able to
+determine non-ideal landing and takeoff cycles without critical failures that prevent the aircraft from
+performing.
+       Cost is rated at a 7. Funding is limited for the project budget, and additional funding can only be
+procured if the project physically cannot be completed within the budget, with a strong submission in
+writing to the client. This results in a high score, but not a 10 as the client is willing to provide more funds
+if the project cannot be completed within the budget constraints.
+       Safety is rated at a 9. Safety is a high priority for the team and the client and therefore is one of the
+highest rated customer requirements. If an aircraft that cannot safely perform the tasks required in the
+competition is created, it will not be used by the team in competition. This is a point of high concern for
+the team as well as the client and will be a consideration for the entire design of the aircraft. The team must
+be able to always maintain positive control over the aircraft.
+       Manufacturability is a 5 rating. The team will not be producing the aircraft on a large scale. The
+team must only be able to manufacture and fly one aircraft, so ease of production and mass manufacturing
+is not a high priority. The team must be able to manufacture the aircraft themselves and that is the only
+requirement from the client in this area.
+       Ground maneuverability, flight maneuverability, and stability are rated at 10, 7,
+and 10, respectively. This is because of the competition rules. The team must have control over the aircraft
+on the ground with steering wheels if equipped with landing gear and an effective rudder if otherwise
+equipped. This is due to the safety requirements of the customer needs and the competition rules, as well
+as the team’s requirement for safety. The aircraft also has a high-rating for-flight maneuverability and
+stability because the team must be able to control the aircraft in flight. Flight maneuverability has a lower
+score than ground maneuverability because once in the air, the aircraft must be controllable, but the aircraft
+does not have to be highly maneuverable to complete the assigned tasks. Stability is incredibly important
+because the team must create an aircraft that will maintain and complete multiple flights without crashing
+or other failures.
+       Cargo capacity and weight are the final two customer requirements rated at 2 and 7 respectively.
+This is because the other flight characteristics are more important to the team and the competition than the
+overall cargo capacity. The aircraft must only be able to carry a minimum payload, and anything extra
+would lead to a higher score in the overall competition. Weight is rated higher due to the constraints on the
+power allowed on the aircraft. To have enough power to maintain desired flight characteristics for the
+aircraft, the overall weight must be minimized so that the power available can be allocated effectively for
+the entire aircraft.
+                                                  2
+
+=== PAGE 12 ===
+       Customer requirements are unchanged from the previous semester as the fundamental project
+remains the same. All requirements come from the SAE Aero rules, and those rules remain the same as
+previously assessed, as have the needs of the client, even with the change in client.
+
+                       Table 1: Table of CR and the ranking of impotence
+                      Customer Requirements             Number of Importance
+                           Reliable design                         7
+                               Durable                             8
+                             Robustness                            8
+                                 Cost                              7
+                         Safety of operation                       9
+                          Manufacturability                        5
+                           Cargo Capacity                         10
+                       Flight Maneuverability                      7
+                      Ground Maneuverability                      10
+                               Stability                          10
+                           Cargo Capacity                          2
+                               Weight                              7
+
+2.2 Engineering Requirements (ERs)
+       The team defined engineering requirements to quantify goals for the customer requirements that
+the aircraft will be capable of achieving. The first of these engineering requirements is weight(lbs.). The
+team must have a final design that weighs 55 lbs. or less [1]. The design goal is to have an aircraft that
+weighs a maximum of 15lbs including the weight of the cargo. This goal weight is decided to maintain a
+minimum of 45 watts/lb. for the power to weight ratio of the aircraft. This requirement will not be allowed
+to exceed a tolerance of +2.5lbs. Anything over that will result in unacceptably poor flight characteristics
+based on the power to weight ratios. Less than 15lbs is acceptable.
+       Power in watts is the next requirement. The team has a limit of 1000W for the entire aircraft [1].
+The team will aim to be as close to 1000 max watts as possible to maximize the flight characteristics of the
+aircraft and its ability to take off and maintain control of the aircraft at all speeds. The team will aim to
+minimize the wattage for auxiliary servos and controls responsible for controlling the aircraft so that the
+team can use the most powerful electric motor system to maintain airspeeds and maneuverability.
+       Amperage(mAh) and voltage(V) are the next engineering requirement. The minimum allowable
+amperage is 3,000mAh and the allowable voltage is 22.5V [1]. These are specified by the competition rules
+and must be met. The only allowable voltage is 22.5V, so there is no tolerance for this parameter. The team
+will aim to minimize the overall amperage for the aircraft so that the team can use a smaller battery pack
+with minimal weight. 3,000mAh is the target parameter with an upper tolerance of 4,000mAh.
+       Takeoff distance(ft) and landing distance(ft) are the next engineering requirements. Per the
+competition rules, the aircraft must be able to take off in a maximum of 100ft and land in 400ft [1]. The
+aircraft must meet these requirements. The team aims to have a takeoff distance of 50ft and landing distance
+of 200ft, with 75ft and 300ft as the upper tolerance limits for each parameter.
+
+                                                3
+
+=== PAGE 13 ===
+       Wingspan will be measured in inches. This will not be allowed to exceed 120 inches [1]. The team
+aims to maximize the wingspan of the aircraft with the current selected design. The team will have a
+wingspan of 114 inches, with a tolerance of +/- 6 inches. This will allow for changes in the overall design
+and for ease of manufacture of the overall aircraft.
+       Cargo capacity will be measured in in^3. The minimum allowable size for the cargo bay is 729in^3
+if square and 382in^3 if spherical. This is the minimum allowable size that will accommodate one fully
+inflated size 5 soccer ball. The team aims to have a cargo bay within 50in^3 for the rectangular cargo bay
+and 30in^3 for a spherical cargo bay. This will allow for the free movement of the cargo inside the cargo
+bay without preventing it from exiting the aircraft. Staying within the specified tolerance will also prevent
+excessive movement of the cargo, potentially impacting the flight of the aircraft.
+       The speed of the aircraft will be measured in MPH. The target maximum speed of the aircraft will
+be 20 MPH, +/- 2.5 MPH. This is to maintain a sufficiently high speed so the aircraft will generate enough
+lift to fly effectively. This value is subject to change as the design develops.
+       Lift, drag, and thrust will be measured in lbf. Currently, the team does not have specified targets
+for each. The requirements are that the lift generated must be enough to fly the aircraft effectively at a
+maximum speed of 20 MPH. Drag force must not exceed the thrust generated by the motor and props. The
+target lift to drag ratio is 15. The tolerance is +/-5. This is to maintain enough lift to effectively fly the
+aircraft and maintain effective control.
+       Durability, reliability, and factor of safety will be measured with numeric values. The targets for
+each are 4, 4, and 1.2. The aircraft must be able to accomplish at least 4 flight cycles without a failure for
+both reliability and durability. This is to ensure that the aircraft will perform as expected and it will be
+capable of repeated testing and competition cycles. Factor of safety for all components will be 1.2 to ensure
+that each component will withstand initial and repeated cycles as well as being safe throughout each flight
+cycle.
+
+2.3 Functional Decomposition
+       In this section, the team is going to break down the main task of our project to understand what
+needs to be done in order for success. The black box will give a good overview of main objective of our
+project while the functional model will give a good in depth look at what components need to do what to
+make something happen.
+2.3.1 Black Box Model
+       In this section, the team will review the black box model for the team’s RC plane design. This is to
+help the team visualize the main process of our project. This helps identify the inputs and outputs of the
+design.
+
+                                                  4
+
+=== PAGE 14 | img ===
+                                  Figure 1: Black box model
+
+       The main goal designated by the competition is to transport a payload. As such, it is the focal point
+of the team’s black box model. The only input and output of the system is the payload (soccer ball, steel
+weight). The payload is the only material that is fully added and removed from the system before and after
+use. The energy inputs include electricity and human energy. Electricity is supplied by batteries to both the
+aircraft and the transmitter, and human energy is used to actuate the transmitter controls. Finally, the only
+signal input and output is the radio signal from and to the transmitter. This black box allowed the team to
+better understand how to construct a proper functional model for this device.
+
+2.3.2 Functional Model/Work-Process Diagram/Hierarchical Task Analysis
+       The functional model is a way for the team to see what is going on within the aircraft. This model
+provides a visual representation of how all the inputs and outputs stated in the black box model enter the
+system, change, and interact with each other before leaving the system.
+
+                                   Figure 2: Functional Model
+                                                 5
+
+=== PAGE 15 ===
+2.4 House of Quality (HoQ)
+      The house of quality, seen below in Appendix A, helps rate the customer requirements against the
+engineering requirements. It also helps relate engineering requirements to other engineering requirements.
+This is helpful as the team needs to evaluate how to relate the CR to the ER and by visually looking at them,
+and it makes sure the team can validate and focus on the ones that are more important than others. While
+all are important, there are always tradeoffs and you cannot always get one thing without sacrificing
+something else. The HoQ allows for a much easier and quicker visual as the team works on other parts of
+the project.
+2.5 Standards, Codes, and Regulations
+       There are not specific standards or codes that the team had to adhere to during the building
+process of the aircraft due to the hobby nature of building an RC aircraft. However, referencing previous
+teams and rules of the SAE Aero Regular competition rules, the team complied the following standards
+[2] [1]. The only other applicable standards or codes would be the NSPE Engineering Code of Ethics,
+which is applicable to all engineering projects.
+
+                   Table 2:Standards of Practice as Applied to this Project [2]
+   Standard
+  Number or            Title of Standard                     How it applies to Project
+     Code
+  ANSI-Y14.5
+                 Dimensioning and Tolerancing    Proper schematics of the aircraft with dimensions.
+    M 1994
+                    Mechanical and Material
+                                                  Aircraft nuts and bolts must be strong enough for
+   SAE J429       Requirements for Externally
+                                                            takeoff, flight and landing.
+                 Threaded Fasteners – Standard
+                    Composite manufacturing      This standard talks about composites which applied
+   SAE J452
+                            standard                       to our project using fiberglass
+   IEEE 750-       AIEEE Report on Aircraft       This standard is loosely used for how to wire the
+     1947            Electric System Guide                           aircraft
+
+3   DESIGN SPACE RESEARCH
+       This section of the report will cover relevant research the design team performed to evaluate and
+develop an aircraft design for the SAE Aero Competition. This research will consist of reviewing the
+previous competition designs including previous Northern Arizona University design teams and other
+colleges as needed.
+
+                                                6
+
+=== PAGE 16 | img ===
+3.1 Literature Review
+       During the literature review process, the team learned the basic fundamentals of flight and aircraft
+design necessary to designing a small aircraft. The team learned how to analyze airfoils and how to
+compare standard airfoil shapes. The team also reviewed extensively the SAE Aero rules as well as the
+fundamentals behind designing proper landing gear. The team members also investigated the principles of
+control surfaces and remote-control electronics. The team also researched previous competition designs
+and the materials from the previous NAU SAE Aero team.
+
+3.2 Benchmarking
+       During the design process of the aircraft, the team took into consideration previous team designs
+as well as other school designs. Due to the rules set forth by t SAE Aero there are not commercial RC
+aircraft that fit the parameters. Because of this most of the benchmarking is form other aircraft while
+inspiration for other designs comes from commercial aircraft.
+
+3.2.1 System Level Benchmarking
+       This section will discuss the designs of other successful and unsuccessful aircraft to help the team
+understand what is needed from the team’s design to allow it to reach peak performance. The team will
+investigate previous designs by looking at other SAE Aero teams from both NAU and from other schools.
+The team will also look at commercial aircraft that are well equipped to carry large payloads.
+3.2.1.1 Existing Design #1: Pondarosa Pilots (NAU’s 2020 Team)
+        The picture can't be displayed.
+
+             Figure 3: Pondarosa’s final design for aircraft [2]
+
+       This aircraft from last year’s SAE Aero team at NAU has a few characteristics that are worth
+mentioning. They had an extremely light aircraft due to the construction materials. They used foam to
+produce the fuselage, wings and tail of the aircraft. They found the final weight of the aircraft to be 9.5
+pounds unload with no payload on board. They also kept the wingspan to a minimum of 60 inches to
+                                                 7
+
+=== PAGE 17 | img ===
+better help their flight score during competition. All in all, they created a very light small aircraft for
+competition. While these attributes were beatifical to the aircraft, in the performance area there were a
+few downsides and flaws to this design. During testing, the team found that the wings were not generating
+enough lift during takeoff. This issue they resolved be changing the landing gear configuration. Another
+issue that they faced was due to the low speeds the aircraft inflight, it did not have enough horizontal
+authority during flight to control the aircraft. To remedy this issue, they enlarge the elevator control
+surface however this fix did not really solve the problem. The team also mentioned in their final report
+that while the lift to span ratio was satisfactory and they would not change it they would change the
+landing gear durability the control authority and the propeller optimization [3]. They went on to mention
+how the worst one was the control authority. These are all important things to keep in mind when working
+on our design [3].
+
+3.2.1.2 Existing Design #2: Skyjacks (NAU’s 2019 Team)
+       The second design to consider is the Skyjacks. This team that worked on the SAE Aero competition
+had a different set of parameters, so while it will be useful to look at their design it is important to keep in
+mind that the payload requirements and length of flight were different. Last year, in 2020, the competition
+changed the rules form carrying tennis balls to a soccer ball. This is the biggest difference but there are
+other. With this said their design consisted of a very large wingspan of 120 inches which is the max for
+competition [4]. The aircraft weighed empty at 18.6 pounds and fully loaded 28.3 pounds [4]. These
+parameters would not be helpful to duplicate as the way competition is scored has changed and the wingspan
+would be the biggest hinderance. Regardless they did some very insightful test on propeller to find the most
+thrust possible. The team ended up going with a propeller 18 inches in diameter with a pitch of 8 inches.
+They calculated with this design they would get a rough speed of 56.8 miles per hour [4]. While their design
+criteria were different information such as propeller size and thrust, calculations are something we can use
+as they electrical criteria have not changed.
+
+                  The picture can't be displayed.
+
+                     Figure 4: Skyjacks' final design without monokote [4]
+
+                                                 8
+
+=== PAGE 18 | img ===
+3.2.1.3 Existing Design #3: In Thin Air (NAU’s 2018 Team)
+        Once again just like the previous design the competition rules were different, and while there will
+be pieces of the project, one can see there are different payload requirements. Regardless, the aircraft they
+created was able to carry 34 tennis balls, giving them a large cargo bay￼￼￼￼ [5]￼￼. The aircraft had
+a wingspan of 141.5 inches and empty weight of 33.6 pounds￼￼￼￼ [5]￼￼. Fully loaded, the aircraft
+came in at 52 pounds. Once again, the team went with a very large propeller of 16 inches in diameter with
+a pitch of 6 inches￼￼￼￼ [5]￼￼. They calculated the static trust to be 16.7 pounds which gave them
+an inflight speed of 36.67 miles per hour￼￼￼￼ [5]￼￼. Due to the length of the cargo area there was a
+lot of increases drag on the aircraft due to the increase in surface area. This is something to consider when
+creating the new aircraft as the team is going to have a very large cargo bay to fit a soccer ball that will
+increase the amount of drag on the airframe. Regardless this design has a few things worth evaluating when
+designing our aircraft.
+
+                     The picture can't be displayed.
+
+                             Figure 5: In Thin Air's final design [5]
+
+                                                9
+
+=== PAGE 19 | img ===
+3.2.1.4 Existing Design #4: Airbus Beluga
+       When benchmarking, the team wanted to look at products that are already on the market that fulfill
+the large payload constraint that the team is faced with. One aircraft that has a very interesting shape and
+payload capacity is the Airbus Beluga. This aircraft was created to serve the purpose of moving other
+airplane components around Europe for final assembly of Airbus’s planes. The reason the company needed
+this plane was to create more economic method of move the cargo. The company has leading-edge spars
+being produced in the United Kingdom while also making lower wing skin in Spain and all these
+components need to merge together in France for final assembly. Due to the fact that this aircraft is carrying
+large payload and oddly shaped cargo at time the aircraft has a shape that resembled the head of a beluga
+whale hence its name.
+
+                            Figure 6: Beluga XL aircraft inflight [7]
+       This aircraft was an outside the box idea to what the aircraft could look like and something that is
+not your typical airframe set up. Even though this aircraft has only a few ever produced and flighting the
+idea is still something to keep in mind as the team tries to load abnormally large payload on a small airframe.
+To better illustrate this idea the following image is an airplane fuselage being loaded into the aircraft for
+travel.
+
+                               Figure 7: Beluga being loaded with
+                                 fuselage of another aircraft [7]
+
+                                               10
+
+=== PAGE 20 | img ===
+3.2.1.5 Existing Design #5: Icon A5
+       The next aircraft that is being benchmarked is the Icon A5. This aircraft has a unique design that
+                          The picture can't be displayed.
+
+                                  Figure 8: Icon A5 aircraft [7]
+the team looked at when doing concept generations. This aircraft has a nonconventional pusher propeller
+instead of a puller propeller. While there are other aircraft that have this design there are very few in
+production today with the design. One of the reasons the designer probably when with this design is to
+allow for the aircraft to be amphibious and having a propeller that would strike the water on landing would
+be a hazard. By placing the propeller where they did it limits the potential of hitting water during take of or
+landing. This aircraft also has winglets that turn down on the wing tips to decrease tip vortices. Based on
+the wind design and the slow flight characteristics this aircraft is made to go low and slow which is one
+attribute we will need to have in our design. This aircraft also has a large forward section where there is
+plenty of room for payload while decreasing surface area as you form stern to aft. This is a good way to
+reduce surface drag on the aircraft, however you do have a large front cross section that affects the airflow
+around the aircraft. Nevertheless, an interesting design that is worth considering.
+
+3.2.1.6 Existing Design #5: C-5 Galaxy
+       Another aircraft the team looked at is a heavy lift cargo plane called the Super Galaxy. This aircraft
+is similar to the beluga from airbus however this aircraft is operated by the military. Regardless, it has some
+incredible lift characteristics and payload ability, and therefore we looked at it. Our team is tasked with
+finding a way to carry a very load payload that is not very heavy, and you can see that something like a
+fuselage as cargo is similar. It has weight but mostly it is just big and filled with air. In the picture down
+below, you can see a C- 130 cargo plane fuselage being loaded into the C-5 Galaxy and this just show how
+big the cargo can be.
+ The picture can't be displayed.                      The picture can't be displayed.
+
+   Figure 10: C-5 being loaded with a C-                 Figure 9: C-5 unloading an Apache
+              130 fuselage [7]                                      Helicopter [7]
+
+                                                11
+
+=== PAGE 21 ===
+       The other picture on the right side is a full helicopter being unloaded from the cargo bay and this
+once again give use an idea of how much this plane can carry. This image also helps better depict how we
+might want the cargo door to open to access the cargo inside as part of our rules for competition are to be
+able to access the cargo quickly.
+
+3.2.2 Subsystem Level Benchmarking
+3.2.2.1 Subsystem #1: Landing Gear
+       This subsystem absorbs the landing forces from impact with the ground. It will prevent the fuselage
+from impacting the ground and will elevate the aircraft during takeoff and landing. Allows aircraft to safely
+land without damage to the aircraft.
+
+3.2.2.1.1 Existing Design #1: Tricycle Wheels
+       The tricycle design has three wheels placed in a triangle with wheels mounted on both wings and
+one in the nose of the aircraft. This design has an average weight and if designed properly can have large
+amounts of strength and is very common on large aircraft. It provides stability and low resistance while on
+the ground. This would allow for shorter takeoff and landing procedures, and the small size would minimize
+effects of friction and drag.
+
+3.2.2.1.2 Existing Design #2: Tail Dragger
+       This design has two primary wheels mounted on the wings of the aircraft and a tail mounted wheel
+that is typically halfway inside the fuselage of the aircraft. This design produces faster takeoff speeds and
+generates more lift on the ground at low speeds, which is important to the team as this will be a critical time
+for the team’s aircraft as this is a scored event. This design weighs less than the tricycle wheels design and
+is as good at absorbing impact forces.
+
+3.2.2.1.3 Existing Design #3: Floats/Skis
+       This existing design uses floats instead of wheels to support the aircraft during landing and takeoff.
+Typically applied to water landing aircraft, it can be utilized to a degree by other aircraft as well, in the
+proper conditions. This is the least effective existing design for the team’s evaluation because the team will
+not be performing a water landing, and the floats will increase drag and friction across a solid earth surface.
+The strength of the floats during landing would be high, but weight and resistive forces would also be
+increased.
+
+3.2.2.2 Subsystem #2: Fuselage
+       The fuselage is the main body of the aircraft where the payload and most of the electrical
+components are held. Without this component, there is nothing to hold the other subsystems together or to
+hold the payload and other contained components. The payload, a soccer ball and a varying number of metal
+weights in this case, must be fully enclosed by the cargo bay of the fuselage during transport according to
+the competition rules. However, there are no other restrictions to the fuselage dimensions other than that
+the fuselage may only have a single cargo bay, which may hold as many payloads as desired. There also is
+nothing in the competition rules that defines where the fuselage begins and ends, so the team will go forward
+assuming the fuselage begins at the tip of the nose and ends where the tail or tail-adjoining beam begins,
+depending on the final design of the aircraft. A few basic, potential designs for the fuselage are depicted
+
+                                                12
+
+=== PAGE 22 | img ===
+below in Figure 11.
+
+                              Figure 11: Basic Fuselage Design [6]
+       The fuselage is also typically the greatest source of drag in any aircraft, making the component one
+of the team’s main hindrances. As the drag coefficient of the aircraft increases, the overall velocity of the
+plane will decrease, leading to less lift. If drag becomes too great, the aircraft may not be able to achieve
+lift at all. This subsystem must be as aerodynamic as reasonably possible while still meeting all the
+requirements stated above. The fuselage will also be where most of the aircraft’s weight resides since it
+holds the payload, most of the electrical components, and will likely take up the most volume in the final
+design. As such, it is imperative that the weight of the fuselage be reduced as much as possible by using
+light materials and structuring the inside in a way that decreases material while maintaining a strong enough
+structure.
+
+3.2.2.2.1 Existing Design #1: Commercial Design
+       The commercial design, shown above in Figure 11, is the typical design used by major airline
+companies for transporting passengers and cargo. The design excels in its ability to transfer cargo but is
+much heavier than other designs. This type of aircraft could be imperative to the team’s goals if they decide
+to focus on transporting multiple or heavier payloads.
+
+3.2.2.2.2 Existing Design #2: Light GA
+       The light general aircraft, or light GA, is a smaller and simpler design used commonly by hobby
+pilots and remote-control aircraft flyers and builders. This fuselage design is easier to manufacture and
+repair than other designs. However, it cannot transport as much cargo as the commercial and as not as light
+aa the glider design, discussed in the next section. The light GA is ideal due to its simple design and build
+process, decreasing build time and allowing more time to develop and test prototypes.
+
+3.2.2.2.3 Existing Design #3: Glider
+        The glider is a design that uses its lightweight fuselage to allow for lift without the use of a motor.
+The glider is more complex to design, manufacture, and repair, but is ideal for the team’s applications. The
+glider is meant to glide along a long loop with a few tight turns without any tricky maneuvers. The main
+drawbacks include the previously stated complexity and the lack of a motor. However, the design can likely
+be redesigned to include a motor and propeller.
+3.2.2.3 Subsystem #3: Wings
+   The wings assembly is a highly important subsystem of the team’s aircraft as it would generate the
+most amount of lift while minimizing drag. Wings also contain most of the control surfaces of the aircraft
+such as flaps, spoilers and ailerons. There are countless predefined airfoils that the team can choose from,
+and the team decided on using a NACA 4-series airfoil in our design. The camber, thickness, chord length
+and pitch of the airfoil directly relates to the aircraft performance and should be fine-tuned to achieve
+                                                 13
+
+=== PAGE 23 ===
+maximum lift and efficiency. Initially, a NACA 0004 (symmetric) airfoil was selected and simulated
+under different Reynolds numbers and Mach numbers. However, after further inspection, the team
+decided on using a thicker airfoil than NACA 0004 for ease of fabrication and maintainability. Therefore,
+a NACA 0010 airfoil will be tweaked to meet our design criteria. The airfoil selection is further explained
+in Section 5 of this report. The wings generally have 3 main mounting positions. They are,
+   1. Low wing configuration
+   2. Mid wing configuration
+   3. High wing configuration
+   These configurations are further explored below.
+
+3.2.2.3.1 Existing Design #1: Low-wing configuration: American Curtiss P-40 Kittyhawk
+       A low wing configuration tends to make the aircraft more maneuverable while increasing the
+phenomenon of ground effect that tends to make the aircraft float farther before landing. In retrospect, this
+reduces the take-off distance of Low-wing aircraft. The visibility is also generally higher. However,
+visibility is not an issue in the team’s design as it will be unmanned and radio-controlled. The main cons of
+this configuration include the low center of lift and reduced ground clearance. The center of lift can be
+tweaked however the ground clearance cannot be tweaked. Having a low ground clearance means low
+debris protection and this could damage the wings and would require additional maintenance.
+
+3.2.2.3.2 Existing Design #2: Mid-wing configuration: Brewster SB2A Buccaneer
+       Mid-wing aircraft usually have a larger control surface area and maximizing control surface area
+is a direct engineering requirement of the team’s design. This configuration is very balanced as the wings
+are placed exactly at the midline of the airplane. However, this configuration requires additional spar
+structures for reinforcement and can reduce the fuselage volume right by the aircraft’s center of gravity.
+       Mid wing aircraft are highly maneuverable but can be unstable compared to other wing
+configurations. Due to this reason, many aerobatic aircraft utilize this configuration. Since the team’s
+aircraft FCS does not facilitate complex maneuvers, stability is the most important aspect. Mid wings
+attached to the rear side of a fuselage causes the center of mass to shift towards the rear side of the
+fuselage and this issue can be countered by using counterweights. However, minimizing weight is a direct
+requirement and adding extra weight to compensate for the aircraft itself poses a disadvantage.
+
+                                                 14
+
+=== PAGE 24 ===
+3.2.2.3.3 Existing Design #3: High-wing configuration: Lockheed C-130 Hercules
+
+      In this configuration, wings are attached to the upper surface of the fuselage or on top of it. This
+configuration is ideal for cargo and military transport aircraft. High wing aircraft does not require wing
+dihedrals for stability either. The ground effect is much reduced, but these aircraft tend to be very stable at
+slower speeds. Therefore, this is the perfect configuration for our team’s design.
+
+4   CONCEPT GENERATION
+
+4.1 Full System Concepts
+
+4.1.1 Full System Design #1: Glider-Inspired Design with Mid Wings
+       The first full design in mind is a glider-inspired fuselage with straight wings and taildragger landing
+gear. The wings are in the middle of the fuselage. The glider-inspired design provides a lightweight fuselage
+with a low surface area, allowing for less drag in flight and a lower velocity required to achieve lift. The
+glider design also works well with the team’s objective, as it is specifically for slow gliding without any
+special maneuvers. The straight wings are simpler to design and build than other types of wings as discussed
+below in Section 4.2.3. The taildragger design will allow the team to adjust the aircraft’s angle of attack on
+the runway, allowing for simple testing of the takeoff sequence. This design is depicted below in Figure 45
+under Appendix B.
+       The design is relatively complex overall, making designing, manufacturing, testing, and repair more
+difficult than other designs. The glider uses splines to lower aerodynamic drag, and while lower drag is
+beneficial to the aircraft, the splines are generally more difficult to build with. The mid wing design also
+introduces issues with weight and manufacturing. Mid wings are typically heavier than other wing positions
+and more difficult manufacture in terms of overall aircraft structure.
+4.1.2 Full System Design #2: Light GA with High Wings
+       The second design, shown in Figure 46 under Appendix B, is a simple GA fuselage with low,
+straight wings and taildragger landing gear. This design has most of the advantages of the glider inspired
+design. However, it trades out the lighter weight and aerodynamic splines of the fuselage for a simpler
+design that is easier to manufacture. Simpler building will allow for more time to prototype and test the
+design, potentially making for a better final design. High winds will also allow for more lift during flight
+and are slightly lighter than mid wings.
+       However, the light GA fuselage is longer and heavier than the glider-inspired fuselage, which will
+take away from the team’s score during competition. The high wings also have less lift during takeoff and
+have a greater frontal surface area, producing more drag in the design.
+4.1.3 Full System Design #3: Icon A5 Inspired
+       The final design, found below in Figure 47 under Appendix B, is heavily inspired by the Icon A5
+Light Sport Aircraft in Figure 8, which has a short fuselage that is similar to the light GA and high wings
+with taildragger landing gear. The design has most of the advantages of the previous design, but with a short
+fuselage that will reduce point deduction at the competition.
+       However, the Icon A5 is primarily for sport and made with tricks and maneuverability in mind,
+making it slightly over-designed for the team’s objectives and applications. The aircraft does not need to,
+and is in fact prohibited from, make certain extreme maneuvers, such as loops. The design is interesting
+                                                15
+
+=== PAGE 25 ===
+and would set the team apart at the competition, but it was not made with the goals the team has in mind.
+
+4.2 Subsystem Concepts
+
+4.2.1 Subsystem #1: Landing Gear
+
+4.2.1.1 Design #1: Tail Dragger
+       This design for the landing gear subsystem has three primary components consisting of two wing
+mounted wheeled landing gear and one rear mounted skid wheel or dragger. The purpose of this design is
+to allow the team to change the angle of attack of the aircraft while the aircraft is on the ground, providing
+for an easier takeoff in a shorter distance. This is important as it allows the team to optimize the airfoil
+design for flight characteristics and to modify the angle of attack so that the airfoil can generate enough lift
+at low takeoff speeds. This design also has a slightly higher cruising speed than a tricycle design [4]. The
+pros for this design include the ability to vary angle of attack, low complexity, easily replaceable parts, and
+low cost. Cons for this design include lower control on the ground, potential difficulty when landing (if
+slider, not rear wheel), and wheel height controls angle of attack.
+4.2.1.2 Design #2: Rear Steer
+       The rear steer concept involves two wing mounted wheels with one steering rear wheel at the rear
+of the aircraft. This is similar to the tail dragger concept but has a steerable rear wheel at the tail of the
+aircraft instead of a sliding skid or wheel. This increases the ability to control the aircraft on landing and
+takeoff as there is a wheel that can orient the movement of the aircraft. Pros of this design include the ability
+to steer the aircraft directly on the ground, relatively low cost, and good landing force absorption. Cons of
+the design include increased complexity, increased electrical demand, and increased weight.
+4.2.1.3 Design #3: Skis
+       The final subsystem design utilizes skis similar to snow skis. This design would decrease the rolling
+resistance of the aircraft on the ground. These skis would be mounted via a shaft to the frame of the aircraft
+and would be mounted on both wings and at the nose of the aircraft. This design would help the aircraft
+with an uneven or imperfect landing as well as to increase the area that landing forces are applied to. This
+design would require additional adaptation and fabrication, increasing complexity of building the aircraft
+relative to the other landing gear options. Pros of this design include increased landing area, reduced
+frictional forces, low complexity, and durability of landing gear. Cons include increased weight, high-cost
+relative to other options, reduced control, and additional custom fabrication work.
+
+4.2.2 Subsystem #2: Fuselage
+
+4.2.2.1 Design #1: Glider-Inspired Design
+       The first design considered for the fuselage is a design that is heavily inspired by traditional glider
+aircraft. The basic idea of this design is displayed above in Figure 11d. Gliders are designed to glide along
+long distances without the use of a motor. The design minimizes drag in the fuselage by reducing the overall
+volume of the cargo bay and curving the body with splines in a way that makes it lighter and more
+aerodynamic than other types of aircraft. By doing this, the glider does not need a large velocity to achieve
+lift and sustain flight with less lift than other potential fuselage designs. This type of fuselage is ideal for
+the team’s aircraft as it solves many issues the team is currently facing. The required power limiter and 1:1
+
+                                                 16
+
+=== PAGE 26 ===
+motor-to-propeller gear ratio are making it difficult to maintain enough velocity to hold a net positive
+weight. The current solution is to decrease weight as much as possible, which the glider-inspired design
+allows the team to do. This design is also ideal for the team’s objective, which is essentially to glide around
+a loop with an enclosed payload.
+       The main issue with the glider design is that the heavy use of splines in the fuselage makes the
+design difficult to manufacture and repair. The design also traditionally does not have a propeller or motor
+to maintain flight. However, the team believes the design can be reworked enough to allow a motor and
+propeller to be installed.
+
+4.2.2.2 Design #2: Light GA
+       The next design the team considered is the light general aircraft (light GA). This is the traditional
+type of design that is most often seen in hobby aircraft designs. The light GA, seen above Figure 11c, is
+much simpler and easier to manufacture than the glider. The design is reliable, with many iterations to draw
+inspiration from, making the designing and manufacturing processes much shorter and easier than other
+designs. However, this design also has a long fuselage, which will count against the team’s score in
+competition.
+4.2.2.3 Design #3: Icon A5 Inspired Design
+       Another design considered is a design based on the Icon A5 Light Sport Aircraft. This design is
+essentially a light general aircraft design, except the design has been cut short, making the fuselage shorter
+and lighter. The Icon A5 also uses a pusher propeller to gain velocity instead of a traditional propeller, so
+the aircraft pushes itself instead of pulling itself. This potential fuselage could work well with the team’s
+objective because of the lighter weight and shorter fuselage. As discussed earlier, the team’s aircraft will be
+scored on many factors of the design, including the length of the fuselage. As such, it is imperative to
+minimize the length of the fuselage to maximize the team’s score.
+       Although the Icon A5-inspired design is promising, it is not entirely what the team is looking for in
+an aircraft design. The Icon A5 is primarily a sport aircraft made to perform tight turns and tricky
+maneuvers, which is far from our objective. The team’s design only needs to fly the distance and is restricted
+from performing some maneuvers, such as loops, by the competition rules. This design is also an amphibian
+craft made for both land and water, which is unnecessary for the team’s design. Finally, the Icon A5 has a
+newsworthy history of crashes, and although these events are found to be mostly the fault of the pilots, it is
+still something the team is wary of.
+
+4.2.3 Subsystem #3: Wings
+
+4.2.3.1 Design #1: Straight Wings
+       The first wing type considered for the team’s design is the straight wing design. Straight wings,
+displayed below in Figure 12Error! Reference source not found., are the simplest to design and
+manufacture [. As such it costs the least and is the easiest to repair should the need arise.
+
+                                                 17
+
+=== PAGE 27 | img ===
+                                    Figure 12: Wing Designs
+
+4.2.3.2 Design #2: Swept Wings
+       The next wing types the team considered are wings with leading and swept angles, shown above in
+Figure 12. All these wing types are seen below in. Typically, these are useful for improving aerodynamic
+effects, such as the lift, drag, and pitching moment around the body of the aircraft. However, they are also
+all more difficult to manufacture and only have practical use at “transonic, subsonic, and hypersonic
+speeds”, which are all unreasonable for the team’s purposes.
+4.2.3.3 Design #3: Wing Number
+       The number of wings and wing positions are also to be considered. Generally increasing the number
+of wings increases the amount of lift the aircraft can get by increasing the surface area of the wings while
+maintaining a small wingspan [6]. However, having more wings also decreases the distance between wings’
+surface areas, forcing airflow through smaller areas. If these cross-sectional areas between wings become
+too small, turbulence can become a major issue.
+4.2.3.4 Design #3: Wing Positions
+The three wing positions currently being considered are the high wing, low wing, and mid wing. The high
+wing typically allows for the bottom of the fuselage to be more aerodynamic and produces a more laterally
+stable flight [6]. However, the wing will also usually have a greater frontal surface area, increasing drag,
+
+                                                18
+
+=== PAGE 28 | img ===
+and less lift during takeoff. The low wing has greater lift during takeoff, has less drag during flight, and is
+typically lighter than the high wing as it is more structurally sound [6]. But the wing also has less lift during
+flight. The mid wing finds a healthy middle between the high wing and low wing, and typically the most
+major drawback is that the wing is typically due to lack of structural integrity.
+
+5   DESIGN SELECTED – First Semester
+       The team had a different design selected for the aircraft at the beginning of the semester. This
+aircraft consisted of a glider approach instead of the current design with a forward mounted motor and
+propellor. This design was composed of balsa wood construction. It was a lighter design with less lift and
+less capacity for payload. Analysis of the design as well as CAD and implementation plans will be
+provided.
+5.1   Design Description
+
+5.1.1 Improvements from the previous CAD model
+
+       Illustrated above is the previous CAD model that gives a basic representation of the
+geometry of the team’s design. Illustrated below, is the improved CAD model with a complete
+wing and rib structure that includes the final airfoil. Changes to the airfoil will be discussed later in
+this chapter. The propeller is only modelled for display purposes as the team will be buying a
+propeller from the market. The landing gear is accurate, and the fuselage is currently an open body.
+In other words, the fuselage will be fully closed on a future update on the CAD model. For now,
+it only visualizes the fuselage geometry, positioning of the payload, and the center of mass of the
+model.
+
+                                Figure 13:Current CAD model
+
+5.1.2 Current CAD Assembly – Detailed Description
+       The aircraft’s fuselage and wings are sourced from Balsa Wood, as the material properties of Balsa
+Wood perform well under the aircraft operating parameters. The wings are based on a NACA 2412 airfoil,
+                                              19
+
+=== PAGE 29 ===
+and it includes 10 individual airfoils expanded and connected via a rib structure to get a maximum
+total wingspan of 6.56168 ft. The ailerons and elevators are not modelled on the CAD assembly yet and
+will be included in the future. The T-tail has two “tailerons” and connects to the top of the rudder. The
+payload will be between the wings to achieve the best center of gravity for the team’s aircraft. Stress
+concentrations will be high around this area and further improvements are being made to negate the stress
+concentrations at this location. The main landing gear consists of two wheels attached directly to the
+fuselage without any reinforcing bars. The secondary landing gear is a singular wheel connected to the tail
+of the aircraft to maintain structural integrity during taxiing, takeoff and landing. The propeller will be twin
+blade and it will be purchased from a commercial manufacturer.
+
+5.1.3 Airfoil Selection Process and Engineering Analysis
+       After a thorough airfoil batch analysis, the team selected a NACA 2412 airfoil. The analysis was
+initially done on OpenVSP and QBlade. Through the course of the project, the team’s airfoil engineer and
+wing design team lead moved on to using the software XFLR5 for the airfoil analysis. For the first part of
+this study, an individual analysis was conducted on NACA 2414, 2314, 2312, 1414 airfoils with the
+following conditions at standard atmospheric pressure.
+The purpose of this analysis was to graphically estimate the maximum and minimum angles of attack,
+alpha. Therefore, the angle of attack was varied from -5 degrees to +14 degrees with increments of 10
+degrees.
+Airfoil Wingspan: 1 meter(s)
+Chord Length: 0.2 meter(s)
+Reynolds Number: 107 000
+Mach Number: 0.044
+Ambient Temperature: 20 deg. C
+
+       The analysis was run on XFLR5 by using the vortex panel method with every airfoil being
+globally refined by 100 panels. The Reynolds number was calculated for a low, cruising altitude with
+constant velocity. The findings are as below. The boundary layer is displayed in red for some figures.
+
+                                                20
+
+=== PAGE 30 | img ===
+Figure 14: NACA 1414 Pressure forces
+                                       Figure 15: NACA 1414 Pressure forces
+
+Figure 17: NACA 2314 Pressure forces        Figure 16: NACA 2314 Pressure forces
+                                      21
+
+=== PAGE 31 | img ===
+                            Figure 18:NACA 2312 Pressure forces
+       For the batch study, multiple Reynolds numbers, Mach numbers and a range of attack angles were
+used to compare the performance of all the airfoils. The wingspan, chord length and ambient temperature
+is the same as before.
+                              Table 3: Data imputed into XFLR5
+                           Airfoil Wingspan: 1 meter(s)
+                              Chord Length: 0.2 meter(s)
+                         Reynolds Numbers: 50 000, 107 000, 150 000
+                             Mach Numbers: 0.0, 0.044
+                       Ambient Temperature: 20 deg. C
+                                     Alpha: -0.3 degrees to +13.9 degrees
+
+                                             22
+
+=== PAGE 32 | img ===
+                              Figure 19: Cl vs Cd and Cl vs Alpha
+
+       Notice how the Coefficients of Lift and Drag performs well under all the Reynolds numbers and
+Mach numbers for the NACA 2412 airfoil. If you observe how the Coefficient of Lift performs under an
+increasing angle of attack for the NACA 2412 airfoil, you can see that it’s the only airfoil that can
+withstand an angle of attack above 10 degrees. Additional graphs are displayed below for further
+
+                                              23
+
+=== PAGE 33 | lowtext, img ===
+Figure 20: Graphs of Cl, Cd, Cm, Alpha
+
+                24
+
+=== PAGE 34 | lowtext, img ===
+Figure 21: Graphs of Cl, Cd, Cm, Alpha
+
+                                         25
+
+=== PAGE 35 | lowtext, img ===
+Figure 22: Airfoil design
+
+          26
+
+=== PAGE 36 | img ===
+During the second semester, after the initial batch analysis has been done, the team decided on using two
+different airfoils in the XFLR5 model of the final assembly. The airfoils included NACA 0010 and AH 7-
+47-6. A schematic of this is illustrated below. `
+
+                               Airfoil placement on the XFLR5 model
+
+You can observe that the geometry has changed with the design shifting from a single, midplane wing
+design to using two sets of wings instead. This is due to the team’s calculations proving that the current
+design provides higher lift than the original single wing design. The difference between the lift and drag
+calculations of the previous design and the new design is tabulated below, and the mathematical
+background will be explored below.
+
+                                                27
+
+=== PAGE 37 ===
+                             Table 4: Single wing design lift/drag
+             Speed (mph) Speed (ft/s) Lift (lb.) Drag (lb.) Weight of Soccer ball
+                 6.82         10.00      0.64      0.00            -0.79
+                 10.22        15.00      1.45      0.01            0.01
+                 13.63        20.00      2.57      0.02            1.14
+                 17.04        25.00      4.02      0.04            2.58
+                 20.45        30.00      5.79      0.09            4.35
+                 23.86        35.00      7.88      0.16            6.44
+                 27.27        40.00      10.29     0.27            8.85
+                 27.95        41.00      10.81     0.30            9.37
+                 28.63        42.00      11.34     0.33            9.91
+                 29.31        43.00      11.89     0.36           10.45
+                 29.99        44.00      12.45     0.40           11.01
+                 30.67        45.00      13.02     0.43           11.59
+                 34.08        50.00      16.07     0.66           14.64
+
+                             Table 5: Dual wing design lift/drag
+             Speed (mph) Speed (ft/s) Lift (lb.) Drag (lb.) Weight of Soccer ball
+                 6.82         10.00      1.72      0.01            0.28
+                 10.22        15.00      3.86      0.04            2.43
+                 13.63        20.00      6.87      0.12            5.44
+                 17.04        25.00      10.73     0.30            9.30
+                 20.45        30.00      15.46     0.61           14.02
+                 23.86        35.00      21.04     1.13           19.60
+                 27.27        40.00      27.48     1.94           26.04
+                 27.95        41.00      28.87     2.14           27.43
+                 28.63        42.00      30.29     2.35           28.86
+                 29.31        43.00      31.75     2.58           30.32
+                 29.99        44.00      33.25     2.83           31.81
+                 30.67        45.00      34.77     3.10           33.34
+                 34.08        50.00      42.93     4.72           41.50
+
+From the above tables you can observe that the current wing design is much more robust with an average
+lift of 35 lbs of cargo at a flight speed of 31 mph compared to the meagre 6.5 lbs of cargo at a flight speed
+of 31 mph, with the previous design.
+
+XFLR5 calculates lift and drag via two main methods. Those methods are,
+                                             28
+
+=== PAGE 38 | math, img ===
+   1. Vortex Lattice Method
+   2. 3D Panel Analysis using nonlinear LLT (Lifting line theory)
+
+LLT hypothesis notes that (1) a lifting wing (airfoil) can be replaced by a lifting line, and the magnitude
+of the trailing vortices (linear, along the direction of free- stream velocity) is proportional to the rate of
+change of the lift along the span. This makes the effective angle of attack for every section of the wing is
+different from the geometric angle of attack of the airfoil in question. IE, (2) the effective α should be
+related to the 2D (NACA) lift data for each wing section. LLT denotes that both the above conditions
+should be satisfied to accurately calculate the lift in the wing. With the lift curves being linear, this
+relationship can be reduced to a single equation and the lift distribution Is calculated. Also, it’s important
+to note that with the linear relation Cl = f(α), the classic LLT is linear. IE, viscous drag, and wake effects
+are ignored. To override this limitation and to compensate for faulty lift/drag calculations at high angles
+of attack, XFLR5 uses a non-linear compensated LLT based on NACA technical databases. By using
+these methods, the coefficients of lift and drag for various angles of attacks were calculated and they are
+tabulated below.
+
+α= 0 deg, v= 52 ft/s
+
+                                      Figure 03: Visualization I
+
+             Cl/Cd                       Coeff. of Lift (Cl)               Coeff. of Drag (Cd)
+             8.578                             1.166                              0.136
+
+                                                  29
+
+=== PAGE 39 | math, img ===
+α= −5 deg, v= 52 ft/s
+
+                                  Figure 04: Visualization II
+
+            Cl/Cd                     Coeff. of Lift (Cl)           Coeff. of Drag (Cd)
+           10.123                          0.743                           0.073
+
+                                             30
+
+=== PAGE 40 | math, img ===
+α= 5 deg, v= 52 ft/s
+
+                                  Figure 05: Visualization III
+
+            Cl/Cd                     Coeff. of Lift (Cl)            Coeff. of Drag (Cd)
+            7.049                          1.567                           0.222
+
+                                              31
+
+=== PAGE 41 | math, img ===
+α= 10 deg, v= 52 ft/s
+
+                                  Figure 06: Visualization IV
+
+            Cl/Cd                     Coeff. of Lift (Cl)           Coeff. of Drag (Cd)
+            5.910                          1.937                           0.328
+
+                                             32
+
+=== PAGE 42 | math ===
+α= 13 deg, v= 52 ft/s
+The picture can't be displayed.
+
+                                   Figure 07: Visualization V
+
+            Cl/Cd                     Coeff. of Lift (Cl)            Coeff. of Drag (Cd)
+            5.384                          1.937                           0.328
+
+Finally, the lift/drag coefficient values are tabulated below for the various angles of attacks.
+
+       α (deg)                 Cl/Cd              Coeff. of Lift (Cl)    Coeff. of Drag (Cd)
+ -5                    10.123                  0.743                   0.073
+ 0                     8.578                   1.166                   0.136
+ 5                     7.049                   1.567                   0.222
+ 10                    5.910                   1.937                   0.328
+                                              33
+
+=== PAGE 43 | img ===
+ 13                     5.384                    2.141                     0.398
+
+                                   Table 03: Tabulated Results
+
+Mathematical Calculation of Lift and Drag
+
+       The main governing equation [1] for the calculation of lift and drag would be the Reynolds
+number calculation, given below. This is important as this value will determine whether the flow is
+laminar or turbulent based on the ratio of inertial forces and viscous forces.
+
+       The next important equation is the free stream velocity, which is calculated by the equation [2] ,
+[3] below.
+The picture can't be displayed.
+
+       With the free stream velocity and Reynolds number calculated, the lift and drag calculations [4a],
+[4b] will be determined. Lift coefficients are experimentally found and tabulated [1.1] and these values
+
+                                                34
+
+=== PAGE 44 | img ===
+can be used to validate the mathematical calculations.
+                    The picture can't be displayed.
+
+       With these calculated coefficients the actual lift and drag forces can be found by using the below
+equations [5], [6].
+
+       Per the results obtained above, it was observed that the best lift to drag ratio is achieved at a 5-
+degree angle, and at level flight, the value was still applicable at a good 8.578.
+
+       Further, the performance of NACA 0010 airfoil was experimentally tested using a subsonic wind
+tunnel. This was done by sampling a portion of the airfoil to find a scaled value of Cl/Cd. First, a test
+model was generated.
+The picture can't be displayed.
+
+                                                  35
+
+=== PAGE 45 ===
+                                XFLR5 Direct Airfoil Design: NACA 0010
+
+       First, a standard NACA 0010 airfoil was drafted on XFLR5. The operating points in Selig format
+coordinates are tabulated below.
+
+                          Table 1: NACA 0010 Selig format Coordinates
+                             x                 y
+                                            1            0.00105
+                                         0.95            0.00672
+                                          0.9            0.01207
+                                          0.8            0.02187
+                                          0.7            0.03053
+                                          0.6            0.03803
+                                          0.5            0.04412
+                                          0.4            0.04837
+                                          0.3            0.05002
+                                         0.25            0.04952
+                                          0.2            0.04782
+                                         0.15            0.04455
+                                          0.1            0.03902
+                                        0.075              0.035
+                                         0.05            0.02962
+                                        0.025            0.02178
+                                       0.0125            0.01578
+                                            0                  0
+                                       0.0125           -0.01578
+                                        0.025           -0.02178
+                                         0.05           -0.02962
+                                        0.075              -0.035
+                                          0.1           -0.03902
+                                         0.15           -0.04455
+                                          0.2           -0.04782
+                                         0.25           -0.04952
+                                          0.3           -0.05002
+                                              36
+
+=== PAGE 46 ===
+                                             0.4            -0.04837
+                                             0.5            -0.04412
+                                             0.6            -0.03803
+                                             0.7            -0.03053
+                                             0.8            -0.02187
+                                             0.9            -0.01207
+                                            0.95            -0.00672
+                                               1            -0.00105
+
+       From these values a CAD model was generated, and 3D printed. Observe the slat in the airfoil
+that was used to mount the airfoil to the model positioning system to measure normal force, axial force
+and pitch moment.
+
+                                                                                        The picture can't be displayed.
+
+                                  3D printed NACA 0010 with slat
+
+       Lift and drag values were calculated for multiple angles of attack until the airfoil reached stall
+angle at steady velocity. The observations are graphed below.
+
+                                                 37
+
+=== PAGE 47 ===
+                                                cl/cd
+ 100.00
+
+  50.00
+
+   0.00
+        0         2         4         6         8        10        12        14        16         18
+                                 Cl/Cd at increasing angles of attack
+
+       It was observed that the NACA 0010 airfoil reaches stall between 10-12 degrees, and this
+experimental data validates the batch analysis findings from above.
+
+5.1.4 Landing Gear Forces and Factor of Safety
+
+       The stress analysis for the landing gear was conducted on MATLAB. The figure below shows the
+program fully.
+        The picture can't be displayed.
+
+                     Figure 23:Screenshot of Matlab Landing gear analysis
+
+                                                 38
+
+=== PAGE 48 | img ===
+       The findings showed that the worst-case scenario would result in a 658 lbf landing impact, and a
+conservative factor of safety of 1.62 was made with the analyzed material being 2024-T3 Aluminum.
+It’s very important to note that the total expected weight has been reduced since the publication of the
+preliminary report. The material changes will also reduce the expected costs.
+
+5.2 Implementation Plan
+       Before entirely moving into prototyping, the team plans to continue analyzing how the aircraft
+will perform under expected and unexpected circumstances using NASA’s OpenVSP and XFLR5, which
+is an extension of x-foil. Doing so will ensure that the team absolutely should or should not continue
+moving forward with the proposed design. These analyses will be performed in the weeks leading up to
+the upcoming Individual Analytical Analysis, in which each team member will perform further analysis
+on each component they are working on. Once the team members are confident in their design and backed
+by their analyses. They will move forward with prototyping. Because the design is relatively complex in
+shape, the team will be requesting permission from Perry Wood, who overlooks all fabrication chop
+activity on campus, to gain access to Northern Arizona University’s laser cutter. The team currently plans
+to make a few proof-of-concept models of the airfoils with ailerons, fuselage, and the tail to see physical
+models of how these parts may move and fit together. The airfoils and fuselage will be made using some
+balsa wood and will likely be scaled down for now. The team wants to request access to the wind
+tunnel in the fabrication shop to get a real test of how the airfoil and fuselage will react in working
+conditions. If the team cannot make the complex shapes required by the design, then they may switch
+to 3D printed parts from the NAU Makerlab. If they cannot gain access to the wind tunnel, then they will
+move forward with full prototyping to figure out how they will apply the control surfaces to the frames.
+       The Gantt Chart below in Figure 24 displays the current projected schedule for next
+semester. This schedule shows that the team will start the next semester by making the jigs and cutouts
+for the aircraft and start producing the fuselage. After, the team will spread out to creating the airfoils for
+the wings and tail, start implementing the electronics that control the propeller and the ailerons and
+“tailerons”. The team will then work on adding the control surfaces, making the landing gear, and
+implementing the steering electronics and controls and in the back wheel. Finally, the team will begin
+flight testing around the end of September and fix and improve any aspects and issues as necessary before
+finalizing the final design.
+
+The picture can't be displayed.
+
+                      Figure 24: Screenshot of Spring Semester Gantt chart
+                                                 39
+
+=== PAGE 49 | img ===
+       The picture in Figure 28 shows what the current proposed design should look like, while the next
+picture below in Figure 25 shows an exploded view of the model. This view shows how all the parts
+should fit together as the team assembles the parts.
+
+                      Figure 25: First semester expanded view of aircraft
+
+       Below is a rough prototype of the design. This design will be revised.
+
+                                  Figure 26: First Prototype
+
+                                              40
+
+=== PAGE 50 | img ===
+6   IMPLEMENTATION – Second Semester
+       During the second semester of capstone there were many changes to the design. List below are
+the final design changes but there were many iterations in between the previous version and the version
+we finished with.
+6.1 Versions of the aircraft
+6.1.1 Version 1
+       Version one of the aircraft was present previously but due to the difficulty manufacturing this
+design this version was scraped.
+
+                                 Figure 27: Version 1 of aircraft
+
+6.1.2 Version 2
+       The second version of the aircraft was a more refined version of the first version but due to
+manufacturing issues this aircraft was scraped.
+
+                              Figure 28: Second Version of aircraft
+
+                                               41
+
+=== PAGE 51 | img ===
+6.1.3 Version 3
+
+                                                                    The next version of the aircraft
+was heavily based on the laser cutter and due to some issues getting access to the equipment the team
+chose not to peruse this path as it was not feasible to get the plane built with the time restraints the team
+had. Due to this the design was never finished but below shows what the aircraft was starting to look like.
+6.1.4 Version 4
+                               Figure 29: Third iteration of aircraft
+       The fourth iteration of the aircraft was to have parts cut out of wood and sandwich foam in
+
+                                Figure 30: Version 4 of the aircraft
+between the plates in order to create molds for the aircraft to be fiber glassed.
+
+                                                 42
+
+=== PAGE 52 | img ===
+6.1.5 Version 5
+       The next version of the aircraft was a continuation of version 4 but with the addition of wings.
+         The picture can't be displayed.
+
+                             Figure 31: Fifth version of the aircraft
+
+6.1.6 Version 6
+       As the team worked on getting version 5 created the deadline was getting closer and the team
+reverted to only going with 1 wing but using the mold and fiberglass idea.
+
+                              Figure 32: Final CAD of the aircraft
+
+                                                43
+
+=== PAGE 53 | img ===
+The final built aircraft can see below. This aircraft had lots of flaws but generally looked like the cad
+model of the aircraft.
+
+                                     Figure 33: Build aircraft
+
+6.2 Design Changes in Second Semester
+6.2.1 Design Iteration 1: Change in Propeller and Fuselage Design
+       The design following through the first semester of the capstone process was a more simple and
+typical aircraft design, detailing a propeller on the nose cone, fuselage, wings mounted on the midsection
+of the fuselage, and a T-tail. Toward the beginning of the second semester, the propeller was moved
+behind the fuselage and wings to reduce the effects of slipstream. One fault of the previous team’s design
+was that the plane was too easily influenced by strong winds and had the tendency to flip during flight.
+Although this was mostly due to how light the design was, slipstream likely also played a factor.
+Slipstream is essentially when air turns due to the motion of the propeller and pushes against the wings
+and drags against the fuselage, causing the plane to torque. Moving the propeller to a pushing position
+behind the wings reduces the effects of slipstream.
+6.2.2 Design Iteration: Change in Wing Design
+       During the first semester, the aircraft had the wings placed in the center of the fuselage to find a
+balance between takeoff lift and takeoff turbulence. Although mid-plane wings are harder to sully
+structure and attach to the fuselage, they provide a solid balance between maximum lift on takeoff and the
+amount of turbulence the plane experiences from air flowing across the ground into the wings. During the
+second semester, however, the team decided to make a biplane with larger wings mounted on top of the
+fuselage and smaller wings on the bottom. Although this introduces more turbulence on the lower wing
+set, the biplane design produces significantly more lift. However, during the build process, the team
+decided to remove the bottom set of wings because of how long the build process took, especially due to
+the amount of time it took to create the molds and fiberglass the parts. After recalculating with one set of
+wings and the new airfoil design, the plane should have still been able to achieve liftoff, but not able to
+carry as much weight.
+       As mentioned above, the team also changed the shape of the airfoils during the second semester.
+The original airfoil shape, the NACA 2412, generated much less lift than the new airfoil shape, the xf-
+ah7476-il-100000.
+
+                                                 44
+
+=== PAGE 54 ===
+                                          Airfoil Anylisis
+      1.8
+      1.6
+      1.4
+  light 1.2
+  of 1
+      0.8
+  Coefficent
+      0.6
+      0.4
+      0.2
+       0
+         0           2           4           6           8          10          12          14
+                                                   Alpha
+
+                                   goe164-il      ah6407-il      ah7476-il
+
+                Figure 34: Graph of the top three airfoils the team had considered
+
+6.2.3 Design Iteration 1: Change in Aircraft Material
+       Finally, the team changed from the use of balsa wood as the main structural material to fiberglass.
+Fiberglass reinforced with isophthalic resin has an ultimate tensile strength of about 117.5 MPa, whereas
+the ultimate tensile strength of balsa wood is only about 14.9 MPa. Although fiberglass with resin is
+heavier than balsa wood, being 0.0328lb/in^3 compared to 0.00578lb/in^3, the strength of fiberglass and
+resin would make up for it by allowing the team to use much less material.
+       The price of balsa wood has also increased drastically recently due to current events. Typically,
+balsa wood is very useful due to its price and light weight, but the price of balsa wood now rivals the
+price of fiberglass. This means the only downside to using fiberglass and resin is that fiberglass is more
+difficult to work with. At the time, the team had not considered the intense time and effort to use
+fiberglass, but the price and strength made fiberglass more considerable than balsa at the time.
+
+                                                  45
+
+=== PAGE 55 ===
+7   RISK ANALYSIS AND MITIGATION
+       This section will discuss potential failure modes established in the first semester of the design
+project and how they were mitigated during the testing process as well as how failure modes were limited.
+The team considered each potential failure during the testing process and took steps to avoid them. Safety
+of all team members was of the utmost importance during all stages of the process.
+7.1 Potential Failures Identified First Semester
+       Ten critical failure modes were identified in the first semester of the project. The critical failures
+all involved individual aircraft components failing at some point during the testing phase of the project.
+They are as follows: fuselage breach, fuselage hatch failure, structural rib failure, control surface failure,
+flight control systems failure, structural failure of wings, landing gear yielding, damaged fuselage, poor
+control surface assembly, and thrust. All the above failure would be considered critical failures resulting
+in a strong likelihood of destruction/heavy damage to the aircraft. A detailed list will be included in the
+appendices of this report.
+
+7.2 Potential Failures Identified This Semester
+       The failure modes remained the same as the previous semester’s FMEA, with the exception of
+one item. Steering failure was the new failure mode. During the aircraft testing, it became clear that the
+steering systems were ineffective at steering the aircraft, and the landing gear assembly caused some
+problems with the ability of the aircraft to steer straight. However, the landing gear was fixed, but the
+steering systems failure was not.
+
+7.3 Risk Mitigation
+       Risk mitigation is one of the team’s highest priorities and we are excited to share that no team
+members were badly hurt in the process of working on this project. Main areas of concern during the
+building process were the health hazards from the products being used. Due to the chemicals in the
+products, we were using we chose to do a lot of work outside where we could let the natural breeze help
+mitigate the harmful solvents. Some products like bondo, spray primer and fiberglass resin were on the
+list of high concern. But as previously mentioned these products were used in well ventilated spaces. The
+design change from balsa wood to fiberglass did increase the safety the team took during the construction
+process.
+       Aircraft safety during test flights. Our aircraft was equipped with both a kill switch on the aircraft
+as well as a kill switch on the remote control which allowed the aircraft to stop the motor from continuing
+to spin. This increases safety as the aircraft could safely be worked on without worry of the aircraft
+turning on. Other risk mitigation was standing a short distance away from the aircraft in case it happened
+to malfunction during testing.
+       Our team properly mitigated risk as not team members were hurt in the process of building or
+testing this aircraft.
+
+8   ER Proofs
+       The following section discusses how the team measured whether the established engineering
+requirements were met by the final product.
+
+                                                 46
+
+=== PAGE 56 ===
+8.1 ER Proof #1 – Power (1000W)
+       The power running throughout the aircraft is restricted to 1000 Watts by the power limiter
+required by SAE Aero. As such, there is no need to formally measure the power in the system so long as
+the circuit is functional. The power limiter runs directly from the battery to the rest of the system, so if the
+power limiter does not function, the electricity will not run to the rest of the system.
+8.2 ER Proof #2 – Weight (30lbs)
+       The team measured the weight of the final aircraft with a simple mechanical scale meant for a
+person. The team weighed one team member, recorded their weight, weighed the same member again
+while they were carrying the plane, and found the weight of the plane by subtracting the weight of the
+team member from the combined weight of the member and the plane. At the end of this process, the
+plane weighed about 15 lbs.
+8.3 ER Proof #3 – Cost ($1500 or less)
+       The budget was handled by the budget liaison in excel. The final budget spent on the aircraft
+came out to $1731.48. Although this would have originally been over budget, the extra cost over is
+actually due to a mistake made by the university on the team’s order of fiberglass. A mix-up in purchasing
+resulted in the school spending $640.10 on FibreGlast, the company the team used to acquire their
+fiberglass, instead of the projected $358.46. However, because this was the fault of the university, the
+team’s budget was increased by $302.50, bringing the actual allowed budget to $1802.50. As a result, the
+team is about $71.02 under budget. A full breakdown of the budget can be found in Appendix C.
+8.4 ER Proof #4 – Takeoff Distance (100ft)
+       The takeoff distance would have been estimated by having one member stand further down the
+runway far away from the plane’s path for safety, having that person mark approximately wear the aircraft
+achieved full liftoff, and measuring from there to the initial starting point with tape measures. However,
+the plane, unfortunately, did not achieve liftoff at all during testing, so there was no need to measure.
+8.5 ER Proof #5 – Lift
+       To estimate the lift of the aircraft, the team planned on running the aircraft several times with
+gradually increasing amounts of weight to approximate the maximum lift. When the aircraft could no
+longer gain altitude, the team would note the weight added to the aircraft and consider that the maximum
+lift. The only forces working in the y-direction on any aircraft are the weight and lift, so measuring the
+added weight on top of the aircraft’s initial weight would give lift. The team had calculated about 35lbs of
+lift at 45fps. However, the aircraft never achieved liftoff, so the team could not attempt to measure the lift
+this way.
+       The team measured the speed of the craft by measuring the speed of the air impacting the nose of
+the craft with a pitot tube and recording it with an Arduino.
+8.6 ER Proof #6 – Payload Capacity
+       The team would have measured the payload capacity the same way they measured the lift of the
+aircraft. The maximum lift would also signal the maximum payload capacity of the aircraft. The team
+aimed to carry about 20lbs, but, since the aircraft never achieved liftoff, the aircraft was determined to not
+be able to carry a payload.
+
+8.7 ER Proof #7 – Amperage
+       The team is required by the SAE Aero Regular Class competition to use a battery labeled at least
+                                               47
+
+=== PAGE 57 | img ===
+3000mAh. The team chose a battery at 3200mAh, just above the requirement, because it was the lightest
+battery the team could use that meets the requirements of the competition and the needs of the team’s
+aircraft.
+8.8 ER Proof #8 – Voltage (22.2V)
+      The aircraft battery was required to be 22.2 volts or greater. The team chose a Spektrum battery
+that stores 22.2V in 6 cells.
+
+                        Figure 35: Battery purchased from project [7]
+
+8.9 ER Proof #9 – Wingspan (<120 inches)
+      The wingspan was required to be 120 inches or less. During the testing phase, the team
+used a tape measure and measured the wing to ensure that the design met the requirements, even
+though in the CAD modeling the wing was well within parameters. The wings ended up slightly
+larger than the designed 60 inches due to the way the wings were mounted with fiberglass. The
+wings measured in at 61.375 inches which is well within the allowable parameters of the
+competition.
+
+                                            48
+
+=== PAGE 58 | img ===
+8.10 ER Proof #10 – Cargo Capacity
+      For the design of the aircraft, it must be able to hold a size 5 soccer ball at a minimum in
+an enclosed space. During the testing of the aircraft, a size 5 soccer ball that was fully inflated
+was inserted into the nose cone of the aircraft, and the nose cone closed fully while containing
+the payload. The fuselage was hollow behind the nose cone, so the craft could contain additional
+payload in the form of weight if desired. This was not done during the testing of the aircraft.
+Below are two images depicting how the soccer ball was enclosed into the aircraft.
+
+   Figure 37: Soccer ball Placed in cargo         Figure 37: Soccer ball enclosed in cargo
+                    bay                                            bay
+
+8.11 ER Proof #11 – Speed
+      From the pitot tube testing data, the hypothetical 37.5 ft/s velocity was not achieved
+before the aircraft would ultimately crash on the ground. Below are six different attempts to
+achieve flight. The aircraft best run had a max speed of just shy of 25 ft/s. This was 12 ft/s
+slower than the team was aiming to achieve during takeoff. As mentioned previously the aircraft
+would begin to lift off the ground but had too much drag on one of the wings and would cause a
+turning motion which led to the aircraft rolling. While flight was never achieved this information
+leads the team to believing that the aircraft was generating more lift then previously calculated in
+models. Another factor that affected this was the angle of attach of the wing was greater during
+testing then during the models. While revising the theoretical model would be beneficial the fact
+the aircraft never generated enough lift to fly means the aircraft would need to be rebuilt prior to
+changing the theoretical models to confirm this hypothesis. This ultimately is not possible due to
+time constraints which is why we will leave this difference in values alone.
+
+                                            49
+
+=== PAGE 59 ===
+                                    Aircraft Speed
+
+   25
+
+   20
+
+(ft/sec) 15
+
+Velocity 10
+
+    5
+
+    0
+      0        0.5       1       1.5       2        2.5       3       3.5       4        4.5
+                                            Time (sec)
+
+                        Run 1   Run 2   Run 3   Run 4   Run 5   Run 6
+
+                        Figure 38: Aircraft speed during testing
+
+                                               50
+
+=== PAGE 60 | img ===
+8.12 ER Proof #12 – Lift greater than weight
+       The lift must be greater than the weight of the aircraft to fly. For testing the required lift
+would be approximately 15 lbs. of lift. During testing the aircraft never managed to achieve
+flight. The aircraft would generate enough speed and once one wheel began to lift off the ground,
+the craft would roll over and fail to achieve takeoff. The team believes this failure to be due to
+instability in the design and components not being parallel, manufacturing issues. This resulted
+in an unequal lift being generated by the craft, causing it to begin to roll and then that roll leading
+to a rollover of the aircraft. Based on the airfoil data the team calculated the required velocity for
+a 15 lb. aircraft, needed to achieve a takeoff velocity of approximately 37.5 ft/s.
+
+                          Figure 39: Velocity required to achieve lift
+
+       While our aircraft did not fare well in the air below is proof that the aircraft did get off
+the ground and created enough lift to overcome weight.
+
+8.13 ER Proof #13 – Thrust greater than drag
+       During testing the aircraft did move which shows the aircraft had more thrust than drag, but to
+prove these the next three photos are is succession of the aircraft as it moves across the field.
+
+                                                      Figure 40: Aircraft moving away from
+ Figure 41: Aircraft starting from rest                              observer
+                                             51
+
+=== PAGE 61 | img ===
+                             Figure 42: Aircraft farther away from
+                                           observer
+
+9   LOOKING FORWARD
+       The future with our aircraft is very bleak. From the team’s perspective the aircraft needs to be
+rebuild from the ground up, while the electronics are reusable. Most of the aircraft has lots of
+manufacturing flaws and therefore is not worth salvaging, nor worth keeping.
+
+9.1 Future Testing Procedures
+9.1.1 Testing Procedure 1: Weight
+9.1.1.1 Testing Procedure 1: Objective
+       The objective of weighting the aircraft is to simply get the empty weight. This value allows the
+team to better understand the hypothetical payload and max takeoff weight.
+9.1.1.2 Testing Procedure 1: Resources Required
+       This test is very simple all one needs to do is get a scale and simply get the aircraft on it. Due to
+the size of our aircraft, it was easier to have a team member stand on the scale and use that as the datum
+then add the aircraft on and the person. From these two numbers the weight of the aircraft can be
+calculated.
+9.1.1.3 Testing Procedure 1: Schedule
+       This test takes less than 10 minutes and can be done at home.
+
+9.1.2 Testing Procedure 2: Test flight
+9.1.2.1 Testing Procedure 2: Objective
+       With doing test flight the validation of a lot of ERs can be crossed off the list. Therefore, this one
+test really encompasses all of our work.
+             Lift > weight
+             Thrust > Drag
+
+                                              52
+
+=== PAGE 62 ===
+              Take off distance
+              Landing distance
+
+9.1.2.2 Testing Procedure 2: Resources Required
+       All that is needed is the final aircraft, a tape measure and the proper electronics for the aircraft.
+9.1.2.3 Testing Procedure 2: Schedule
+       Testing the four parameters before, by starting at a line and measuring 100 ft away then starting
+the aircraft and running at full throttle, you can see if the aircraft if off the ground in the distance. For
+landing it is the optimist as the aircraft is going from air to land you will need to mark out a two-line
+400ft away from each other and land the aircraft in that zone.
+If the aircraft takes off, then the lift is greater than the weight and the thrust is greater than the drag.
+
+9.1.3 Testing Procedure 2: Electronics
+9.1.3.1 Testing Procedure 2: Objective
+       The ERs that have to do with the battery are easy to test individual and can be connected to
+multimeters and other devices to get the proper values with that said as a team we are more interested in
+the system as a whole.
+9.1.3.2 Testing Procedure 2: Resources Required
+       To test how long the aircraft can fly for the electronics can be placed either in the aircraft or on a
+test bench. Starting with a full battery the system is turned on and ran a full power with all of the
+electronics including servos being actuate. Using a stopwatch form the start of this experiment the time it
+takes for the battery to run out can be determined and therefore the run time.
+9.1.3.3 Testing Procedure 2: Schedule
+       This experiment takes some time to get set up and run but once it is going the system will drain
+out in under an hour so with set up and testing time you are looking at roughly an hour per trail. After one
+trial is complete the battery would need to be recharged for the next test which will add about an hour to
+this time. So three trials will take about six hours.
+
+9.2 Future Work
+       Future teams should learn from our mistakes. There were a lot of ideas that were brilliant but the
+skills and time to execute them were not always up to par. The idea of fiberglass was a great idea.
+However, the team ran into many issues with this. Some issues included weak fiberglass due to much
+resin being applied, not having a space on campus to work with the product, which led to using the
+outdoors which was problematic when the weather started to cool down as it was fall. Other issues
+include not having the design finalized in the first semester. This issue stemmed from Covid-19 and the
+lack of team participation in the first semester. The team also found this project to be hard from the lack
+of manpower available. The tried-and-true method of balsa wood is probably better than fiberglass. Our
+team had issue getting access to on campus laser cutter which pushed us to using other materials, when
+you run into this issue have your professor advocate for you to get access to the spaces you need. With a
+few of the many errors covered here, God speed to you.
+
+                                                53
+
+=== PAGE 63 ===
+10     CONCLUSIONS
+       The team did not complete all the team goals and the project was ultimately unsuccessful. The
+final aircraft was unable to fly. This was a failure, and the craft was incapable of completing the testing
+procedures and the competition. The team did learn a large amount from the final design, however. The
+team was not expecting many of the difficulties encountered in the second semester of the project, which
+contributed to the overall unsatisfactory result. While the project was not successful, it provided the team
+with an excellent learning opportunity.
+10.1 Reflection
+       Throughout the project the team had communication problems that were never resolved that led to
+tensions between team members and frequent miscommunications and repeat work/conversations. The
+engineering principles applied worked well in the design section to meet the requirements of the client in
+a safe fashion, however this did not translate into the actual constructed design. Every component was
+designed so that it would meet the requirements for each category. Factors of safety were used to ensure
+that the landing gear would be able to survive the absolute worst-case conditions, however that was not
+seen in the final design as the team didn’t have the time and resources to integrate the designed landing
+gear in the final design so materials that were already available and inadequate were used instead. Safety
+and welfare were the most important considerations in our project. The design was able to meet these in
+theory from the engineering principles. Control surfaces were implemented to increase safety and welfare,
+but they did not make it into the final design the way that the team had envisioned so they were mostly
+non-existent. The team did regard safety highly and did nothing to endanger others and ensured that all
+testing was performed in a controlled and safe manner. The team never took any risks with the aircraft
+and didn’t even do any testing before ensuring that the aircraft could do what was expected of it before
+attempting a full speed flight. The team killed any test run as soon as the aircraft began to lose control to
+ensure the safety of everyone present and nearby.
+
+10.2 Postmortem Analysis of Capstone
+
+       The biggest problem with last semester was the lack of access to facilities due to COVID-19.
+Analytically, the team was very successful last semester as well as this semester. However, it’s apparent
+that no amount of analytical validation would solve design problems that occur during the fabrication
+process. This semester, there were problems with miscommunication and the team suffered from
+scheduling issues with most of the team members having to work and their schedules not fitting the
+limited time slots the machine shop offered. Also, the client of the capstone changed from Dr. Sarah
+Oman to Mr. David Willy. Mr. David Willy was already our capstone coordinator. This sudden change
+during the second semester decreased the morale of the team even though our capstone coordinator (new
+client) tried his hardest to support the team.
+
+10.2.1         Contributors to Project Success
+
+       There were a lot of factors in this project that tore the team down, but the most recent morale loss
+was when we crashed the plane. While the aircraft did not perform overly well the enjoyment of seeing
+our design on the field actually attempting to do the thing, we set out to do was a huge morale booster.
+Throughout this project the team has had issue after issue and due to this it is hard to say a lot of good
+things however, the team is glad the semester is almost over but during the semester what really got things
+rolling was when a new box would come in with parts and the team was pretty excited to put them
+together. The team also got new bursts of energy when a new design was on the drawing board making
+                                                54
+
+=== PAGE 64 ===
+the project better iteration after iteration. All in all, the learning experiences were good, we enjoyed to
+project we picked and wish it came out better but at the end of the day we tried our best with the
+circumstances at play.
+
+10.2.2         Opportunities/areas for improvement
+
+       The biggest area for improvement in this project is manpower during fabrication as well as
+facilities to do said fabrication. If more resources were provided such as space to work on, this capstone
+would have been more success. Our team also did not have a finalized design until almost halfway
+through the second semester and that did not help things either. In retrospect, while we needed the
+iterations, we really need the plane to start being built, although the design was great on paper, we didn’t
+have the time to execute in real life and that hindered us.
+       Other areas of improvement would include better access to machinery on campus, we changed
+our design due to logistical issues and in retrospect this change should not have happened but at the time
+it was the right call for the team. Issues with purchasing was also high on the list as NAU purchasing
+department order over $300 more fiberglass than the team requested. While not directly the teams’ fault
+being more clear on the purchasing order would have eliminated this issue.
+       While the timeline was already mentioned here, we definitely got down to the wire and this issue
+is simple to fix but at the time we just got delayed. This lesson is beneficial though as members form our
+team oversee projects in the future.
+
+                                                 55
+
+=== PAGE 65 ===
+11     References
+
+[1] "SEA Aero Design - Rules," SAE Aero Design, [Online]. Available:
+   https://www.saeaerodesign.com/cdsweb/gen/DocumentResources.aspx. [Accessed 24 Jun 2021].
+[2] Ponderosa Pilots , "Final report," NAU , Flagstaff , 2021.
+[3] P. Pilots, "Final Report," NAU Capstone Team, Flagstaff, 2020.
+[4] Skyjacks Team 045, "SAE AERO," NAU Capstone Team , Flagstaff , 2019.
+[5] In Thin Air Team 034, "2018 SAE Aero Design West Competition," NAU Capstone Team , Flagstaff,
+   2018.
+[6] M. H. Sadraey, "AIRCRAFT DESIGN," in A Systems Engineering Approach, Nashua, Wiley A John
+   Wiley & Sons, Ltd., Publication, 2013, p. 800.
+[7] NAU Flight Division, "Prelim Report".
+
+                                              56
+
+=== PAGE 66 | img ===
+12   APPENDICES
+12.1 Appendix A: House of Quality
+
+                        Figure 43: House of Quality
+
+                                 57
+
+=== PAGE 67 | img ===
+12.2 Appendix B: Design Concepts
+
+                                  Figure 46: First design concept
+
+                                Figure 45: Second design concept
+
+                                 Figure 44: Third design concept
+
+                                              58
+
+=== PAGE 68 ===
+12.3 Appendix C: Budget
+
+                  Table 6: Break down of what was purchased by company
+                                                       Projected
+     Purchases      Expected Cost   Actual Cost
+                                                        Budget
+                                                           $
+   Horizon hobby    $      419.88   $   458.43                             original
+                                                        1,500.00
+                                                           $          compensation for
+     Amazon         $       49.32   $    36.43
+                                                        302.50              error
+                                                           $
+     FibreGlast     $      660.96   $   640.10
+                                                        1,802.50
+     Adafruit       $       76.01   $    70.14
+   Mcmaster Carr    $       24.56   $    23.12
+ Reimbursement 1    $      401.16   $   401.16
+ Reimbursement 2    $      102.10   $   102.10
+
+                                                           $
+       Total        $    1,733.99   $ 1,731.48
+                                                        1,802.50
+
+.
+                  Difference $      2.51 Remaining   $          71.02
+
+                                           59
+
+=== PAGE 69 ===
+12.4 Appendix C: Continued
+              Table 7: Table of products purchased and where they came from
+
+  Vendor       Item or   Size/Co Quanti Discount                   Shippi   Total
+   Name       Catalog #    lor     ty    Code       Cost     Tax   ng      Cost
+  Horizon                                           $        $      $       $
+   Hobby     SPMAR620      n/a      1               49.99   -      -       49.99
+  Horizon   SPMX32006S                              $        $      $       $
+   Hobby        30C        n/a      1               84.99   -      -       84.99
+  Horizon                                           $        $      $       $
+   Hobby     HRC57417      n/a      1               15.97   -      -       15.97
+  Horizon                                           $        $      $       $
+   Hobby     SPMXC1080     n/a      1               99.99   -      -       99.99
+  Horizon                                           $        $      $       $
+   Hobby     EFLM4060B     n/a      1               126.99  -      -       126.99
+                                                    $        $      $       $
+  Amazon                  Size 5    1               12.00   -      -       12.00
+                                                    $        $      $       $
+  Amazon                   n/a      1               10.99   2.54   5.99    19.52
+                                                    $                       $
+ FibreGlast     241       yards    25               5.75                   143.75
+                                                    $                       $
+ FibreGlast    90/69-A   Gallons    1               83.95                  83.95
+                                                    $        $      $       $
+ FibreGlast    582-C     5 yards    1               59.95   20.86  49.95   130.76
+  Horizon                                           $        $      $       $
+   Hobby     MAS1610TP     n/a      2               18.98   -      3.99    41.95
+                                                    $        $      $       $
+  Amazon                   n/a      1               10.38   1.43   5.99    17.80
+                                                    $        $      $       $
+  Adafruit      169        n/a      9               5.95    4.33   18.13   76.01
+ McMaster-                                          $        $      $       $
+    Carr     9314A831      25       1               8.94    -      -       8.94
+ McMaster-                                          $        $      $       $
+    Carr     93181A411     100      1               4.50    1.40   9.72    15.62
+
+                         Reimbursements
+  Home Depot                             2          $ 25.06               $   50.12
+  Home Depot                             2          $   4.27              $    8.54
+  Home Depot                             2          $   5.28              $   10.56
+  Home Depot                             1          $ 12.97               $   12.97
+  Home Depot                             1          $ 12.97               $   12.97
+  Home Depot                             2          $   4.97              $    9.94
+  Home Depot                             3          $   6.97              $   20.91
+                                         60
+
+=== PAGE 70 ===
+ Home Depot                            3          $    6.97             $    20.91
+ Home Depot                            2          $    7.75             $    15.50
+ Home Depot                            1          $ 31.98               $    31.98
+ Home Depot                            1          $ 24.88               $    24.88
+ Home Depot                            1          $    6.47             $     6.47
+ Home Depot                            1          $ 10.97   $ 15.68     $    26.65
+   Amazon                              1          $    5.99 $ 0.62      $     6.61
+   Amazon                              3          $ 24.92               $    74.76
+   Amazon                              1     2.24 $ 13.99   $ 8.98      $    22.97
+9 volts batteries                      1          $ 13.99               $    13.99
+  3/4 dowel                            4          $    3.64             $    14.56
+  3/8 dowel                            4          $    1.93             $    14.66
+   Bondo                               1          $ 16.47               $    38.20
+  3/8 dowel                            4          $    1.93             $    14.66
+ Home Depot                            1          $ 10.97   $ 15.68     $    26.65
+
+                                        61
+
+=== PAGE 71 ===
+12.5 Appendix C: Continued
+
+                    Table 8: The different purchase and cost associated
+               Order 1                       Received              Actual Value
+          $           409.45                                       $    437.73
+               Order 2                       Received
+          $           358.46                                       $    358.46
+               Order 3                       Received
+          $           135.76
+             Home Depot 1                    Approved
+          $           252.40                                       $    252.40
+               Amazon                        Approved
+          $           102.10                                       $    102.10
+             Home Depot 2                    Approved
+          $            43.21                                       $     43.21
+              Autozone 1                     Approved
+          $            38.20                                       $     38.20
+             Home Depot 3                    Approved
+          $            18.48                                       $     18.48
+               Digikey 1                     Approved
+          $            48.87                                       $     48.87
+
+                                            Actual Total           $ 1,299.45
+                                             Remaining             $    200.55
+
+                                         62

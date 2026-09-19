@@ -1,0 +1,1601 @@
+# ID: nau_2019_report
+# SOURCE: https://ceias.nau.edu/capstone/
+# ORIGINAL: reference/raw/nau_2019_report.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 56 pages | ~26586 tokens
+# NOTE: NAU 2019 Regular report (Ponderosa). Exact URL not recorded by the research agent; from the NAU capstone site. Different mission year
+# FLAG img: pages 1,8-11,13-14,21-29,31-35,38,40,44,51-56
+# FLAG lowtext: pages 40,51,53-55
+
+=== PAGE 1 | img ===
+      SAE Aero (Regular) Competition Team
+                   “Ponderosa Pilots”
+
+                       Final Report
+
+                          Jacob Cong
+                          Chris Galus
+                       Alex Klausenstock
+                       Nathan Valenzuela
+
+                             2020
+
+Project Sponsor: ​W.L. Gore and Associates
+Faculty Advisor: ​Dr. John Tester
+Instructor: ​Dr. Sarah Oman
+
+=== PAGE 2 ===
+                                        DISCLAIMER
+
+This report was prepared by students as part of a university course requirement. While considerable effort
+has been put into the project, it is not the work of licensed engineers and has not undergone the extensive
+verification that is common in the profession. The information, data, conclusions, and content of this
+report should not be relied on or utilized without thorough, independent testing and verification.
+University faculty members may have been associated with this project as advisors, sponsors, or course
+instructors, but as such they are not responsible for the accuracy of results or conclusions.
+
+                                                  1
+
+=== PAGE 3 ===
+                               EXECUTIVE SUMMARY
+
+The following report will summarize the work and achievements of NAU’s 2020 SAE Aero Competition
+Team (Regular Class). This team has completed a project that has fulfilled the NAU CEIAS capstone
+requirements of: research, design, analysis, prototyping, testing, and final product completion. This team,
+the “Ponderosa Pilots,” undertook an annual project sponsored by the Society of Automotive Engineers-
+the Aero Design Competition. As participants in this competition, the team was tasked with the design
+and manufacture of a small-scale, payload-carrying aircraft. For the 2020 competition, the design
+challenge was updated to include “oversized payload” (soccer balls), and a shorter runway (100 feet).
+SAE provided a long rulebook that explained how designs would be scored (a ratio of payload to aircraft
+size) and documented various requirements and restrictions on size, power, etc.
+
+The Ponderosa Pilots analyzed the scoring equation presented by SAE and determined a unique solution:
+building the smallest plane possible. Because the new scoring criteria rewards designs for payload
+capacity ​and ​small size, our team decided the easiest and most effective way to perform well at
+competition would be to minimize the size of our aircraft, while still carrying a moderate amount of
+weight. After preliminary research into aircraft design and aerodynamics, a preliminary design was drawn
+up. Using various analysis techniques, the design was modified and updated several times over to fully
+maximize payload capacity while maintaining the smallest size possible. The final design featured a
+9.5-pound aircraft with a 60-inch wingspan. It accommodated one soccer ball and an additional 6 pounds
+of weighted payload.
+
+Through a vigorous testing process that involved the testing of seven different prototypes, the team was
+able to further optimize their design for ease-of-manufacturing and flight success. Testing remained
+limited to indoor flights for the majority of this process, and by the time the team was ready to do
+full-scale, flight circuit testing, SAE announced that they would be cancelling the dynamic competition,
+instead opting for a “virtual” presentation competition, because of the circumstances surrounding the
+COVID19 pandemic. However; the Ponderosa Pilots were determined to see their project through, and
+were able to implement the final design at a private airfield in Maricopa county. This implementation saw
+the success of the aircraft in several areas: it could carry the expected payload of one soccer ball and 6
+pounds of steel weights, it could take off in 100 feet, and it could land within 400 feet. However, the
+team’s design was ​not able to complete a full flight circuit. Many straight-line flights yielded success, but
+the team found that their aircraft lacked the ability to turn effectively. This, we theorize, is attributed to
+the windy conditions of our testing environment, the undersizing of the aircraft’s control surfaces, and a
+lack of rigidity in the ailerons.
+
+While the team was disappointed at the turning failure of the design, we are, overall, very proud of the
+work we’ve been able to accomplish. Over the course of this project, we’ve gained valuable knowledge in
+the fields of aerodynamics and aircraft design, as well as insight into engineering processes such as design
+analysis and the prototyping process. Not only that, the team has also learned skills such as budget
+management, teamwork, and professional development. Our aircraft, Pine Patrol One, fulfilled nearly
+every engineering requirement laid forth at the start of the project, and we feel we would have represented
+NAU positively in a competition setting. This, combined with the skills and knowledge acquired over the
+course of the year, leads us to conclude that this project was a success.
+
+                                                 2
+
+=== PAGE 4 ===
+                             ACKNOWLEDGEMENTS
+
+The team would like to give a special thanks to some of the individuals and organizations that have
+helped us on our journey of aircraft design, manufacturing, and testing. In the early stages of design, we
+were fortunate to hear the advice of Ben Foster from Raytheon and Dr. Schafer from NAU, both of whom
+had worked on SAE Aero teams as undergrads. Dr. Schafer was also very courteous in his lending of a
+static thrust test bed that was used to determine propeller selection. Over the course of the design process
+for our aircraft, Professor David Willy was a bountiful source of information and advice. As NAU’s
+current Aerodynamics instructor, Prof. Willy was able to explain aerodynamics concepts and point the
+team towards softwares and analysis techniques that eventually informed the team’s final design. Our
+team was also very fortunate to have a line of communication with last year’s Aero team. While their
+direct help was minimal, the examination of their old design and procedures was instrumental in our
+process. Finally, when it came time for testing, the team could not have carried on without the support of
+local airfields. Preliminary testing was done at the Flagstaff Flyers’ airfield. We thank them for
+accommodating us. Final design implementation was done in Maricopa County at the RC Speedworld
+airfield after the SAE competition was cancelled. Al Pilon and his team were very generous in their
+offering of their facilities, their expertise, and even their pilots. We highly recommend that next year’s
+Aero team develops a relationship with their organization.
+
+                                                3
+
+=== PAGE 5 ===
+                                  TABLE OF CONTENTS
+
+Contents
+
+DISCLAIMER                                                                                                   1
+
+EXECUTIVE SUMMARY                                                                                            1
+
+ACKNOWLEDGEMENTS                                                                                             3
+
+TABLE OF CONTENTS                                                                                            3
+
+BACKGROUND                                                                                                   6
+    Introduction                                                                                             6
+    Project Description                                                                                      6
+
+REQUIREMENTS                                                                                                 6
+    Customer Requirements (CRs)                                                                              2
+    Engineering Requirements (ERs)                                                                           4
+    Functional Decomposition                                                                                 6
+        Black Box Model                                                                                      7
+        Functional Model                                                                                     7
+    House of Quality (HoQ)                                                                                   8
+    Standards, Codes, and Regulations                                                                        9
+
+Testing Procedures (TPs)                                                                                    11
+    Testing Procedure #1: Prototype Flight Trials                                                           11
+        Testing Procedure #1: Objective                                                                     11
+        Testing Procedure #1: Resources Required                                                            11
+        Testing Procedure #1: Schedule                                                                      12
+    Testing Procedure #2: Static Power Test                                                                 12
+        Testing Procedure #2: Objective                                                                     12
+        Testing Procedure #2: Resources Required                                                            12
+        Testing Procedure #2: Schedule                                                                      13
+
+DESIGN SPACE RESEARCH                                                                                       14
+    Literature Review                                                                                       14
+    Benchmarking                                                                                            14
+        System Level Benchmarking                                                                           14
+            Existing Design #1: NAU Skyjacks (2019 Team)                                                    14
+            Existing Design #2: NAU In Thin Air (2018 Team)                                                 15
+            Existing Design #3: NAU Aero (2016 Team)                                                        16
+        Subsystem Level Benchmarking                                                                        17
+            Subsystem #1: General Wing Shapes                                                               17
+                Existing Design #1: Rectangular Wing                                                        17
+                Existing Design #2: Elliptical Wing                                                         17
+                Existing Design #3: Tapered Wing                                                            18
+            Subsystem #2: Empennage Designs                                                                 18
+                Existing Design #1: Conventional Tail                                                       19
+                Existing Design #2: T-Tail                                                                  19
+                Existing Design #3: Cruciform Tail                                                          19
+                                                      4
+
+=== PAGE 6 ===
+             Subsystem #3: Landing Gear Designs                                                                20
+                 Existing Design #1: Tricycle                                                                  20
+                 Existing Design #2: Conventional (Taildragger)                                                21
+                 Existing Design #3: Tandem                                                                    21
+
+CONCEPT GENERATION                                                                                             22
+        Full System Design #1: Straight Wing, Tricycle Gear, One Ball                                          22
+        Full System Design #2: Tapered Wing, Tail Dragger, Two Ball                                            23
+        Full System Design #3: Tricycle, Suspension, Three ball                                                23
+
+DESIGN SELECTED – First Semester                                                                               25
+    Design Description – First Semester                                                                        25
+    Implementation Plan – First Semester                                                                       30
+
+IMPLEMENTATION – Second Semester                                                                               31
+    Manufacturing                                                                                              31
+    Discussion                                                                                                 31
+    Prototype                                                                                                  31
+    Final Product                                                                                             33
+    Design Changes                                                                                             33
+
+RISK ANALYSIS AND MITIGATION                                                                                   35
+    Critical Failures                                                                                          35
+        Potential Critical Failure 1: Airfoil Frame (Structural)                                               35
+        Potential Critical Failure 2: Landing Gear (Structural)                                                35
+        Potential Critical Failure 3: Airfoil (Foam)                                                           35
+        Potential Critical Failure 4: Lift Production (Functions)                                              35
+        Potential Critical Failure 5: Landing (Objectives)                                                     36
+        Potential Critical Failure 6: Ground Steering (Functions)                                              36
+        Potential Critical Failure 7: Empennage (Structural)                                                   36
+        Potential Critical Failure 8: Wingspan (Objectives)                                                    36
+        Potential Critical Failure 9: Aerial Steering (Functions)                                              36
+        Potential Critical Failure 10: Remote/Receiver (Functions)                                             36
+    Risks Mitigation and Trade-offs Analysis                                                                   36
+
+TESTING                                                                                                        38
+
+FUTURE WORK                                                                                                   39
+
+CONCLUSIONS                                                                                                    40
+    Contributors to Project Success                                                                            40
+    Opportunities/areas for improvement                                                                        41
+
+REFERENCES                                                                                                     43
+
+APPENDICES                                                                                                    45
+    Appendix A: House of Quality                                                                               45
+    Appendix B: FMEA                                                                                           46
+    Appendix C: Calculations                                                                                   50
+
+                                                        5
+
+=== PAGE 7 ===
+1   BACKGROUND
+
+1.1 Introduction
+The SAE Aero Design competition aims to challenge undergraduate and graduate engineering students to
+design, manufacture, and test a payload-carrying aircraft. As participants of this competition, this team
+has designed and constructed an electric, propeller-driven aircraft. This aircraft was ready to represent
+NAU in the annual SAE competition before its unfortunate cancellation due to the COVID19 pandemic.
+The objective of this competition was to successfully complete “flights,” which encompass take-off,
+airborne flight, and landing- all while carrying a payload. This payload consists of “oversized payload”
+(soccer balls), and “regular payload” (weighted plates). Primary stakeholders of this project included the
+university, the NAU College of Engineering, project sponsors, and the student team members themselves.
+The importance of the team’s project success cannot be understated. The team’s participation in the SAE
+competition (now virtual) will be a representation of the NAU College of Engineering, as well as the
+university itself. To reflect positively on these stakeholders, the team must be successful. Through many
+successes and failures, this project has additionally proven to be one of self-enrichment. Not only have
+team members gained valuable insight into the engineering process, but they have also been subject to
+lessons about engineering application in the real world, and the consequences of engineering failure.
+
+1.2 Project Description
+Following is the original project description provided by SAE.
+       The SAE Aero Design competition is intended to provide undergraduate and graduate
+       engineering students with a real-world design challenge. These rules were developed and
+       designed by industry professionals with the focus on educational value and hands-on
+       experience through exposure to today’s technical and technology advancement. These
+       rules were designed to compress a typical aircraft development program into one
+       calendar year, taking participants through the system engineering process of breaking
+       down requirements. It will expose participants to the nuances of conceptual design,
+       manufacturing, system integration/test, and sell-off through demonstration.The Regular
+       Class is an all-electric class intended to develop a fundamental understanding of aircraft
+       design. ​[1]
+
+After the events surrounding the COVID19 pandemic began to unfold, SAE issued the following
+update:
+
+       For this competition season, SAE will transition all non-dynamic event participation to a
+       virtual platform for the purpose of maintaining the significant educational components
+       that participation in SAE Collegiate Design Series events provides. ​[2]
+
+                                                 6
+
+=== PAGE 8 | img ===
+2   REQUIREMENTS
+
+The first item that the team had to complete was to assess the requirements for this project. First,
+customer requirements were pulled in from class requirements, team goals, and SAE’s rulebook. These
+customer requirements were converted into “Engineering Requirements.” These are quantifiable
+requirements that the team could test and assess for fulfillment. With the above requirements formulated,
+the team organized them into a Black Box Model, a Functional Model, and a House of Quality. These
+organizational aids assisted the team in the design of their final product.
+
+2.1 Customer Requirements (CRs)
+As mentioned above, the first step in understanding the requirements of this project was to read in
+requirements from the “customer.” In this case, the customer was the SAE Competition first and
+foremost, but additionally, the class instructor and the team itself. The following section will discuss the
+customer requirements that the Ponderosa Pilots adhered to, and the “weights” that ranked the importance
+of each of these requirements. ​Table 1​ below shows a summarizing table.
+
+                            Table 1​: Customer Requirements & Weights
+
+Before this report goes into detail about the specific requirements and weightings, it’s important to take a
+closer look at SAE’s scoring equation. This equation, shown below, gives an increase in score with an
+increase in payload capacity or a ​decrease​ in aircraft size.
+
+                                                 2
+
+=== PAGE 9 | img ===
+                                                                                                 (1)
+
+Ball Capacity (6) & Steel Weight Capacity (9)
+These are direct objectives of the flight vehicle. While these requirements are directly listed in the flight
+score, only one of them has high importance- Steel Weight Capacity. This is due to early analysis done by
+the team that revealed that ball capacity was not worth increasing if it meant increasing the length of the
+cargo bay. It was found that a one-ball design with a small cabin would score as well, or better, than a
+five- or ten-ball design with a larger cabin. This is why Ball Capacity is no longer as heavily weighted as
+it was previously.
+
+Short Wingspan (10) & Short Cargo Bay Length (10)
+These two criteria are also directly based on SAE’s scoring equation. The team decided to maximize their
+importance after conducting the analysis that led to our decision to create a small aircraft. The team found
+that minimizing the size of the aircraft would be more beneficial to our score than maximizing payload.
+For this reason, requirements based on size were weighted heavily,
+
+Lack of Crash (9)
+According to the SAE Rulebook, a crash will result in a massive point deduction. It may also damage the
+plane beyond repair, rendering it impossible for further flights. These two reasons informs the high
+importance of this customer requirement.
+
+Cargo Accessibility (5)
+The rules state that the team will only receive points for payload that can be unloaded within two minutes.
+This informed the Customer Need of “Cargo Accessibility.” This need has been weighted as moderate
+since it does not directly affect the end score. As long as the cabin is moderately accessible it will not
+have a negative impact on the score.
+
+Robust Design (8)
+The aircraft needs to be robust to survive unexpected conditions. After researching weather statistics at
+the competition field, the team found that conditions can vary widely. The aircraft needs to operate amid
+unexpected conditions in order to score points.
+
+Reliable Design (7)
+Reliability was of great importance to the team. Our design needed to be dependable so that we could
+accurately predict the payload capacity and fly the aircraft without worry of crashing or sustaining
+irreparable damage.
+
+Inside Budget (7)
+While this customer requirement is not explicitly noted by the competition, producing an aircraft to be
+                                                 3
+
+=== PAGE 10 | img ===
+able to compete to be able to score any points is a key requirement of the ME486C class. Because of this
+important role it has a high weight value.
+
+Safe to Operate (10)
+It is imperative that the aircraft is safe to operate, if the SAE staff deam the craft unsafe it will not be
+allowed to compete and earn points.
+
+Take-Off and Landing Capability (10)
+Take-off and Landing is an integral part of the flight process. It’s a crucial aspect of the competition, and
+because last year’s team encountered failures in these areas, our team made it a Customer Requirement of
+maximum importance.
+
+Control Authority (8)
+The aircraft must be capable of maneuvering predictably and reliably under varying conditions. This need
+is shown in the rules. It explains that the vehicle must be able to make a full 360 degree turn in the air
+before landing in order to obtain points for the payload it carried.
+
+Manufacturability (10)
+Manufacturability was a Customer Requirement that was devised by the team ourselves. In order to
+complete prototype testing and final product manufacturing on a short timeline, the team’s design needed
+to be highly manufacturable.
+
+2.2 Engineering Requirements (ERs)
+Once the above Customer Requirements were compiled, they were re-envisioned as “Engineering
+Requirements,” items that are quantifiable, and therefore test-able. Summarized in the chart below, these
+“ER’s” will be discussed along with their target values and how they’ll be tested.
+
+         Table 2​: Engineering Requirements, Importances, Target Values, Testing Procedures
+
+                                                 4
+
+=== PAGE 11 | img ===
+Weight (lbs) Target Value: 17 lbs
+This ER directly correlates to the CR’s regarding payload capacity. Benchmarking last year’s aircraft
+which had a wingspan of 10 feet and a loaded weight of about 35 pounds, our team decided the target
+value for our half-sized plane would be 17 pounds- about half the weight.
+Power (kW) Target Value: 1 kW
+Power is directly related to Take-off and Landing, which is one of the CR’s. Competition rules limit
+power to 1 kW, so we have designated this value as our target, with no tolerance, as we intend to fly with
+max power.
+Cost (USD) Target Value: 500 USD/unit
+This ER correlates to the “Inside Budget” CR. While the budget provided by our sponsor W.L. GORE
+and Associates was a full $3,000, the team set a target value of $500/plane. This will leave room for the
+prototyping process and the construction of at least two final products after the $1,100 competition fee is
+subtracted from the initial budget.
+Lift (lb) Target Value: 18 lb
+Lift will determine the success of our aircraft across many CR’s. Lift will need to be greater than or equal
+to the weight of the plane in order for it to fly, and we have assigned its target value accordingly.
+Low Drag (lb) Target Value: 4.23 lb
+This criterion is based off the amount of thrust our plane can generate. In order for the plane to continue
+on a forward trajectory, its drag will have to be less than or equal to its thrust. The value of 4.23 pounds
+was assigned after preliminary static thrust testing.
+Ease of Assembly / Repair (min) Target Value: 15 min
+Ease of Assembly / Repair is measurable in time and is related to the customer need of manufacturability.
+The time period of 15 min was chosen as the target value as it is the shortest potential time the team will
+have in between flights.
+Velocity (mph) Target Value: 15 mph
+The velocity is related to the gliding ratio which increases lift efficiency. Gliding ratio is the coefficient of
+lift over coefficient of drag. It also is related to the customer need of control authority and lack of crash.
+Essentially, if the aircraft velocity is close to the wind speed then the craft’s intended direction will not be
+the major component of the aircraft’s ground velocity (Ground velocity being the aircraft's velocity
+relative to the ground). The local average wind in Fort Worth is 11 mph [3] ; therefore it is ideal that the
+attainable velocity of the aircraft is slightly above this. This criteria is related to the lack of crash because
+if the pilot does not have control of the ground velocity component, it is more likely that the craft will
+collide with something.
+Turning (rad/s) Target Value: 0.8 rad/s
+Turning is also related to control authority. It is another component of control. This turning refers to
+turning about an axis normal to the ground. This turning target value is derived from the need to turn a
+full 180 degrees in a reasonable amount of time. At this target value the aircraft should be able to turn
+around in under 4 seconds. This target value was developed in conversation with the team’s pilot, whose
+                                                  5
+
+=== PAGE 12 ===
+experience informed how quickly an aircraft should be able to turn around.
+Load/Unload Time (s) Target Value: 60 s
+This engineering requirement directly ties to the customer need of “Cargo Accessibility.” The rules state
+that payload that must be loaded or unloaded in 120 seconds in order to be counted towards the flight
+score. In an attempt to ensure that this requirement is met, the team designated a target value of 60
+seconds.
+Cabin Length (in) Target Value: 8.75 in
+This ER relates to the CR of “Short Cargo Bay Length.” Once the team analyzed possible cargo
+configurations for scoring potential, it became clear that an ideal design would have a cabin length of one
+soccer ball, or 8.75 inches.
+Wing Span (in) Target Value: 60 in
+The wing span should be short to maximize the score but long to maximize the lifting capacity and
+therefore the score. After planform analysis was conducted with the help of NASA’s openVSP software,
+it was determined that 60 inches was the optimum wingspan for our design challenge.
+Success Rate (%) Target Value: 95%
+This aircraft needs to be reliable. If you want to analyze how many points your aircraft will be capable of
+earning, you must also consider how reliably it can earn those points. If the craft can earn 10 points but
+only earn them 50% of the time, then on average it is really only earning 5 points. This Engineering
+requirement will be weighed against others to determine if certain design risks are worth it and ties into
+the reliability customer need.
+
+Factor of Safety (%) Target Value: 115%
+This requirement is based on the Customer Needs for Reliability, Robust Design, Lack of Crash and Safe
+to Operate. The target value is derived from our discussions with our project advisor and faculty advisors
+who recommended this factor of safety as it still allows for some error but does not conflict too heavily
+with engineering needs to have the aircraft too heavy.
+
+As mentioned previously, all of these Engineering Requirements were chosen because they could be put
+to the test. Table ii lists those testing procedures which include Dynamic Flight Testing, Static Testing,
+Prototype Building, Static Thrust Testing, and Computational Analysis. More detail on these testing
+procedures will be discussed in Section 3.
+
+2.3 Functional Decomposition
+Using functional decomposition aided the team by outlining the main process of the product along with
+inputs, outputs, and the order by which objectives are accomplished. A black box model helped the team
+to identify the main process of the device as “transportation of payload” and a functional model outlines
+the functions of the aircraft from input to output while visually representing the different flows of energy
+in the system. Because the team’s design was well-established at the time that the following models were
+created, no modifications have been made on the figures. However, as the team moved through the
+prototyping process, certain elements of the functional decomposition were updated. For example, in an
+effort to reduce the dry weight of the aircraft, the battery was replaced with a smaller-capacity,
+lightweight battery. This will affect the “Store Energy” and “Supply Electricity” elements of the
+Functional Model, but without altering the flow path at all.
+
+                                                 6
+
+=== PAGE 13 | img ===
+2.3.1 Black Box Model
+To help the team visualize the main process along with inputs and outputs of this system, a black box
+model was created. The main process required by the competition is transportation of the payload.
+Although there are multiple processes, reducing them down to the core function simplifies the
+understanding of this device.
+
+                                     Figure 1:​ Black Box Model
+
+Because the device in question is a plane, the team initially considered flight to be the main process. Upon
+further consideration, the team realized that flight was merely the method by which the payload was
+transported; thus, the main process to consider is the transportation of the payload. Energy input is simply
+identified as electrical energy from the battery. It is output as mechanical rotational energy that becomes
+propulsion. Moving forward, material input includes the payload itself: soccer balls and weight plates, as
+well as hands operating the remote control. Material output is modeled as the payload having been
+transported along with movement of the actuators. Finally, radio signal is the signal input that helps the
+main process occur and is output as visual signals such as visual observation of the plane responding to
+said inputs. Overall, the black box model helped the team realize the main process in tandem with its
+necessary inputs and outputs.
+
+2.3.2 Functional Model
+The below functional model graphically depicts the operations the aircraft performs on the input material,
+energy and signals to transform them into reactions that are applied to the aircraft to effectively transport
+payload. The material, energy, and signal flows are represented by bold lines, standard lines, and dashed
+lines respectively. This model shows how each task interacts with one another. As can be seen, energy
+from a human hand, electromotive force, and radio signals will be used to operate this design. Movement
+of the vehicle, heat, and auditory signal will be resultant of the workflow.
+
+                                                  7
+
+=== PAGE 14 | img ===
+                                    Figure 2:​ Functional Model
+
+This graphical representation let the team easily visualize and clarify the way input flows are manipulated
+and converted into desired output flows. By breaking up the process into sub-functions that are easier to
+change, the overall operation can be more easily modified. Being able to visualize how the different types
+of energy in use by the aircraft will move through the system greatly aided the team in early concept
+generation as well. Initial designs were created and altered based on every component that utilized a form
+of energy.
+
+2.4 House of Quality (HoQ)
+The House of Quality is a matrix designed to outline Customer Needs and relate those needs to
+measurable aspects of a design. It also rates how important each Engineering Requirement is and
+references how each requirement will be tested to show the validity of our design.
+
+                               See ​Appendix A​ for​ House of Quality
+
+The House of Quality helped our team through the design process in a number of ways. First, it forced us
+to spend a significant amount of time defining the problem statement and understanding the challenges
+posed by the customer. Initially, the team viewed the SAE Competition as the sole “customer,” but after
+conversations with the professor about Customer Needs, the team realized we, the students, are also one
+of the customers. The team also has needs to meet before it can satisfy the SAE Aero competition needs;
+needs such as constructability. Making the House of Quality also helped the team understand another key
+Customer Need that is not explicitly listed in the rules: Reliability. Reliability is almost more important
+than the scoring capacity, since a large number of points can be lost. In addition, competition data reveals
+that more than 30% of the teams in the competition have problems with reliability. Every time the team
+worked on concept development, we could look to the House of Quality’s “Importance” values to
+determine how much time and resources should be spent developing certain concepts.
+
+                                                 8
+
+=== PAGE 15 ===
+As the team finished the Concept Generation phase of the project, the House of Quality became helpful in
+another field- prototyping and testing. By planning test procedures around being able to satisfy certain
+ER’s, the team was well-prepared to validate our design when the time came.
+
+2.5 Standards, Codes, and Regulations
+If competition were to have taken place, the team would have needed to adhere to many standards. The
+Society of Automotive Engineers (SAE) provides some standards in the competition rule document. SAE
+requires that the 2D technical drawing submitted to them must be in compliance with ANSI-Y14.5 M
+1994 on Dimensioning and Tolerancing. In addition to the standards from SAE, standards from the
+following organizations will also have to be followed. American Society of Mechanical Engineers
+standards pertaining to Aluminum will be used, Institute of Electrical and Electronics Engineers standard
+on aircraft electronics, and the American Welding Society standard of Aluminum welding. Generally
+flying objects would have to conform to Federal Aviation Administration (FAA) guidelines as well, but
+since this aircraft is being operated at the SAE competition, is less than 55 pounds in weight, will not be
+flown within five miles of an airport, and it is classified as a personal radio controlled device it does not
+have to abide by any FAA regulations. ​Table 3 below shows these standards and the reasoning behind
+using them.
+
+                      Table 3​: Standards of Practice as Applied to this Project
+  Standard
+ Number or            Title of Standard                    How it applies to Project
+    Code
+ANSI-Y14.5      Dimensioning and Tolerancing     2D Drawings must be submitted in this forma per
+   M 1994                                                      competition rules.
+ASME Y32.10       Graphic Symbols for Fluid        The team will need to implement the correct
+   - 1967              Power Diagrams           symbols so those in the industry can understand the
+                                                               teams deliverables.
+
+  SAE J429         Mechanical and Material       The fasteners used on the aircraft must not yield
+                 Requirements for Externally         during operation, and must stay in place.
+                Threaded Fasteners – Standard
+
+  SAE J452          General Information –        Material properties for 6XXX series Aluminum
+                   Chemical Compositions,       need to be known since it will be the main structure
+                   Mechanical and Physical       of the design and will have to have high enough
+                 Properties of SAE Aluminum                  strength for the design.
+                        Casting Alloys
+    IEEE          AIEEE Report on Aircraft           This will be a good guideline for how the
+  750-1947          Electric System Guide         electronics on board should be configured and
+                                                                   operated.
+
+  SAE G-14       Americas Aerospace Quality     Good to use when designing the final plane, if the
+                           Group                  design conforms to this it should have minimal
+                                                               unforeseen issues.
+
+                                                9
+
+=== PAGE 16 ===
+SAE G-23       Manufacturing Management       This standard will be useful when building the final
+                                                 aircraft and manufacturing processes are very
+                                                                 important.
+AWS D1.2      Structural welding (aluminum)    This standard needs to be followed to ensure that
+                                               the welded members of the main structure of the
+                                                             design are reliable.
+
+                                             10
+
+=== PAGE 17 ===
+3   Testing Procedures (TPs)
+
+The following section contains the executed testing procedures. These tests were conducted to verify
+satisfaction of aforementioned customer and engineering requirements of the design. The two major
+categories of testing that will be discussed are prototype flight trials, and static power bench testing.
+
+3.1 Testing Procedure #1: Prototype Flight Trials
+With the preliminary calculations that were performed and analysis as a basis, the team began conducting
+flight trials to confirm or negate the validity of those calculations. The construction of the initial prototype
+was made modular, so that many different configurations could be set up quickly providing the team with
+data on a large number of variables to verify how well each configuration satisfies the following
+engineering requirements. These tests demonstrated the satisfaction of produced lift, low drag intensity,
+velocity, take off distance, maneuverability, loading time, success rate, and factor of safety. Additionally,
+in the event of a crash, these tests also demonstrated the satisfaction of ease of assembly/repair. This
+testing took many attempts and spanned January up until the end of March.
+
+3.1.1 Testing Procedure #1: Objective
+Flight tests were run at a large airfield controlled by the local hobby flight club the Flagstaff Flyers.
+Before flights took place, loading and unloading of various amounts of cargo were timed and confirmed
+that it could be done in the competition time constraint. These attempts also confirmed cabin length to be
+correct by fitting the needed payload inside of the aircraft correctly. A team member acted as the sole
+pilot of the aircraft throughout the tests so that there was no additional variation created due to differing
+pilot styles. For the current geometry of the modular design, a predicted lift and acceleration ​with
+included factor of safety was set as the assumed flight performance. By including the factor of safety the
+team confirmed a cushion so that if something were to go wrong during competition, there is a chance the
+aircraft can still operate correctly. Velocity and acceleration were measured using a handheld timer to
+record time, graduations on the dirt landing strip to record distance, and the kinematic equations. Accurate
+velocity and acceleration data was needed to confirm requirement satisfaction as well as prove future
+calculations. Satisfaction of the predicted lift for a measured plane weight (structure and payload) was
+confirmed by the plane becoming airborne at the given velocity calculated. The correct lift at a specified
+velocity is important so that the team could accurately predict possible payload and adjust speed as
+necessary for a needed lifting force. Once in flight, actuation of differing control surfaces was done to
+confirm that the plane is maneuverable and can be controlled with relative precision in flight, this will be
+proven by the plane banking to turn 90 degrees within ten seconds. Each test also validated general
+performance in crosswinds and landings showed that the landing gear structure was sufficient for use but
+could have been improved. To demonstrate success rate and the design’s robustness, each preliminary
+configuration was tested for at least ten iterations, and the final design was tested 20 times so that the 95%
+success rate could be easily proven with 19 out of 20 successful flights. In practice, the final configuration
+took off easily 20/20 times and satisfied all of the above engineering requirements.
+
+3.1.2 Testing Procedure #1: Resources Required
+To complete the above test objectives the following was needed. An airfield and permission to utilize it
+before any testing could take place, this was done by contacting the Flagstaff Flyers. All team members
+needed to be present to operate the measurement equipment and fly the plane. A handheld timer as well as
+a walking measuring tape were needed for the velocity and acceleration measurements supplied by a team
+                                                 11
+
+=== PAGE 18 ===
+member’s mobile phone and home depot respectively. To document the testing and provide a method of
+evaluating the test at a later time, each test was recorded via a team member’s mobile phone. Due to the
+modularity of the design and team’s desire to test multiple configurations, hand tools were brought so that
+the attachment hardware (M8 bolts and nuts) could be removed and re-secured for each new
+configuration. To test the loading time steel plates and a soccer ball were needed. Additionally the aircraft
+and the radio controller (pre-programmed) were needed to communicate with the plane, along with that,
+the essential electronics such as the electronic speed controller, radio receiver, servo motors, and the
+battery.
+
+3.1.3 Testing Procedure #1: Schedule
+Before testing, the foam wing sections had to be wire cut and attached to each other. The team did the
+testing in segments spanning multiple months. Beginning in January, flight tests that resulted in crashes
+were followed by reconstruction and redesign and more testing. With each iteration, a growing number of
+flights could be done with each plane until reaching the final result that had a 100% take off rate. Due to
+the battery only having an estimated flight duration of six minutes, two extra batteries and a battery
+charger were brought to the test site. Each flight only took a short time, but the initial set up and taxiing
+took an appreciable amount of time, with modifications for each trial varying up to about 30 minutes
+each. The report for competition was due at the end of February, so agressive testing took place in the first
+weeks of February so that changes could be implemented before the report was due. After the final design
+was submitted, additional engineering change requests could be submitted to SAE, and so flight tests
+continued into mid-March to prove the best center of gravity and payload locations. After that, testing
+stopped because final product construction had to begin taking place.
+
+3.2 Testing Procedure #2: Static Power Test
+The test consisted of connecting the battery, engine speed controller, power limiter and propeller to a load
+cell. This load cell measured static force produced by the power train. Simultaneously an amp meter will
+be attached in line with the system to assure the power limiter is indeed limiting the power to 1 Kw as per
+our engineering requirements. This engineering requirement is noted in the House of Quality. (​See
+Appendix A​ for ​Table A1: House of Quality)
+
+3.2.1 Testing Procedure #2: Objective
+This test was run by hooking up the electronics of the propulsion system and testing it while measuring
+power draw. By doing this test it was proven that the power limiter and propulsion system are in
+compliance with the competition rules, and meets the House of Quality technical requirements (​See
+Appendix A for ​Table A1: House of Quality). ​With accurate power readings, the requirements of possible
+weight and resultant wingspan could be calculated, and then satisfaction of them could be confirmed
+qualitatively by making sure that the wingspan was less than 120 inches, and the total weight did not
+exceed 55 pounds.
+
+3.2.2 Testing Procedure #2: Resources Required
+The resources required to do this test were the propulsion system, one team member and an amp meter.
+The load cell that measured the thrust is consistent with preliminary static tests done by the team was
+requisitioned from Dr. Shafer. A large array of propellers were also needed to find the best performing
+geometry for the limited power usage.
+
+                                                12
+
+=== PAGE 19 ===
+3.2.3 Testing Procedure #2: Schedule
+The team had this procedure completed over the span of a single day and required the efforts of a single
+team member. This test occured in November when the new competition compliant power limiter was
+acquired by the team. Early testing had to be done so that the team had an accurate measurement for the
+power engineering requirement. With this number, the requirements pertaining to total weight and
+wingspan needed could be calculated.
+
+                                              13
+
+=== PAGE 20 ===
+4   DESIGN SPACE RESEARCH
+
+Perhaps the longest maintained process during this project was research. Most team members entered this
+capstone project with little to no aeronautical design experience. A preliminary literature review brought
+the team to an initial level of competence on the matter, and ongoing research was needed to deepen
+understanding and make more challenging design decisions. Additionally, the high amount of physical
+testing conducted by the team needed to be supported with specialized depth research.
+
+4.1 Literature Review
+The team produced a preliminary literature review that encompassed a number of sources and mediums,
+but maintained research throughout the design year. One of the first sources considered was the technical
+report from last year’s Aero team. Though the objectives of their design varied from this year’s, their
+design process was still very pertinent to our team’s challenge. Additionally, after the team had developed
+a firm understanding of the design challenge and the rules that came with it, the project advisor Dr. Tester
+was interviewed. This interview established realistic expectations for our design, as Dr. Tester had
+overseen many successful (and unsuccessful) Aero design attempts. The team’s most consulted textbook
+was Aircraft Design by Scholtz. It provided detailed equations and design processes for all aspects of
+aircraft design and was used throughout the design process. For browsing various airfoils, the team used
+Airfoiltools and compared the characteristic charts. This source was also useful as it provided DAT files
+of each airfoil that were later imported into SOLIDWORKS. Chapter 9 of ​Aircraft Design: A Systems
+Engineering Approach​, written by Dr Mohammad H. Sadraey; an associate professor and aeronautical
+engineer, proved useful for any landing gear considerations and calculations.
+
+4.2 Benchmarking
+Rather than starting the design process from scratch, it was useful to first survey what other designs have
+been used. The process of surveying existing designs and evaluating their successes and shortcomings is
+known as “Benchmarking.” Ideally, this would involve on-site visits to organizations, observation, and
+interviews with employees to see how others have approached this design problem. Because of the team’s
+lack of access to previous designs, much of the benchmarking so far has been done online through
+extensive research. We were; however, able to perform a dissection of the NAU Skyjacks existing design
+(see “Existing Design #1).
+
+System Level Benchmarking
+The following designs in the benchmarking process are full-system designs that completed similar
+objectives to the 2020 SAE Aero competition. Designs chosen include the aircraft from NAU’s 2016,
+2018, and 2019 Aero teams. These aircraft were designed with similar objectives in mind, and with
+similar resources available. For these reasons, they are the perfect candidates for full-system
+benchmarking.
+
+Existing Design #1: NAU Skyjacks (2019 Team)
+NAU’s 2019 team “Skyjacks” produced the aircraft seen below in ​Figure 3​. This craft features:
+shoulder-mounted wings, a conical nose cone, a U-shaped fuselage, and tail-dragging landing gear [4].
+Because this craft was built for similar objectives to our competition, it is important to understand this
+design’s successes and failures. The 2019 competition was broken into three rounds. During the first
+round, the Skyjacks’ craft was successful in transporting its payload through one 360​o loop. However,
+
+                                                14
+
+=== PAGE 21 | img ===
+upon landing, the landing gear was critically damaged. The Skyjacks accidentally contributed to electrical
+failure during the repair process and were unable to compete in the second round. During round three, the
+aircraft was taken by a gust of wind and was forced to crash. The design of this aircraft was used as a
+baseline design due to its early success, but in order for a new design to succeed, more research and
+design had to be conducted in areas of flight stability and landing gear.
+
+                     Figure 3​: Team Skyjacks’ Final Design without Monokote
+
+Existing Design #2: NAU In Thin Air (2018 Team)
+NAU’s 2018 team “In Thin Air” produced the aircraft seen below in ​Figure 4​. This craft features:
+body-mounted wings, a truncated pyramid nose cone, a rectangular fuselage, and a tricycle-style landing
+gear. Just like the previous existing design, the “In Thin Air” aircraft was designed for an SAE Aero
+competition with similar objectives to ours. Although competition data isn’t available like it was for the
+previous design, a video of a test take-off reveals that this craft was hard to control in the face of wind.
+Team member Alex Klausenstock volunteered to help this team two years ago. He recounted that the
+primary problems facing the “In Thin Air” craft were low speed capability and imperfect airfoil
+fabrication. Luckily, our team was able to make the necessary strides in those areas to ensure success.
+
+                                                15
+
+=== PAGE 22 | img ===
+                             Figure 4​: Team In Thin Air Final Design [4]
+
+Existing Design #3: NAU Aero (2016 Team)
+NAU’s 2016 Aero team produced the aircraft seen below in ​Figure 5​. This craft features:
+shoulder-mounted wings, truncated pyramid nose cone, rectangular fuselage, and a tricycle-style landing
+gear. Like the existing designs mentioned before, this craft was constructed to fulfill the needs of a SAE
+Aero competition. Because this competition took place several years ago, it is unclear whether or not the
+objectives were exactly the same. It is clear, however, that this plane was designed to transport some kind
+of payload in a 360 degree loop; very similar criteria to the other competitions. While competition data is
+not available, the 2016 team did document their testing process, which ended catastrophically. During the
+flight testing, the ailerons on the wings became damaged and the pilot lost control of the craft. Testing
+ended with a nosedive crash. This existing design influenced our team to take special care in designing
+control surfaces and the ways they are attached.
+
+                                Figure 5​: Aero 2016 Final Design [6]
+
+                                                 16
+
+=== PAGE 23 | img ===
+Subsystem Level Benchmarking
+In addition to analyzing full-system designs, benchmarking can also be used to evaluate subsystem
+designs. If a full system can be thought of as a sum of its parts, then it is critical that the best subsystems
+are chosen as parts. The following sections will aim to understand and analyze several subsystems:
+General Wing Shapes, Empennage Designs, and Landing Gear Configurations. An understanding of each
+of these systems will be vital to our team’s design process.
+
+Subsystem #1: ​General Wing Shapes
+There exist many types of general wing shapes, including: rectangular, elliptical, tapered, delta,
+trapezoidal, and others. The amount of lift an aircraft generates, control at different operating speeds,
+stability and balance all change as the aircraft wing’s shape is changed. Removing wing types used for
+supersonic and transonic flight, the following section will compare existing wing types and analyze the
+successes and shortcomings of each.
+
+Existing Design #1: ​Rectangular Wing
+The Rectangular Wing is the easiest-to-manufacture wing type. It is most often seen on small aircraft, like
+the Piper PA-38 pictured below. While it may be the easiest wing to manufacture, it is far from the most
+efficient in terms of aerodynamics [7]. Manufacturability is one of the team’s customer needs, but
+aerodynamic success is more important. Evaluating the risks associated with this wing will be crucial in
+the wing type selection process.
+
+                                       Figure 6:​ Piper PA-38
+
+Existing Design #2: ​Elliptical Wing
+In contrast to the rectangular wing, the elliptical wing is the most efficient straight wing for subsonic
+flight, but the hardest to manufacture. Low drag is induced due to elliptical spanwise lift distribution. The
+elliptical wing was used on WWII aircraft that required the thinnest possible wings [11]. One example of
+these aircraft is the Supermarine Spitfire pictured in ​Figure 7​. While this type of wing fulfills
+aerodynamic goals, our team will have to be mindful of our ability to manufacture complex wing types
+such as this.
+
+                                                 17
+
+=== PAGE 24 | img ===
+                        Figure 7:​ Supermarine Spitfire with Elliptical Wings
+
+Existing Design #3: ​Tapered Wing
+The compromise between the two previous wing designs is the tapered wing. This wing most closely
+resembles a rectangular wing, but its tapered trailing and/or leading edges allow for a near approximation
+of an elliptical wing. While this approximation does not meet or exceed the aerodynamic efficiency of the
+elliptical wing, tapered wings provide a compromise between manufacturability and efficiency [7]. This
+style of wing will be an important consideration in our decision process.
+
+                           Figure 8:​ Tapered Wings on the P51 Mustang
+
+Subsystem #2: ​Empennage Designs
+Equally important as wing design is empennage design. The “empennage” or “tail” of the aircraft consists
+of vertical and horizontal (pitch and yaw) stabilizers located at the rear of the aircraft. These stabilizers
+can take on various configurations. The most prevalent of these configurations are: conventional, t-tail,
+and cruciform. The following sections will study and analyze those designs in relation to our team
+objectives.
+
+                                                18
+
+=== PAGE 25 | img ===
+Existing Design #1: ​Conventional Tail
+As given by the name, the conventional tail is the most common arrangement of aircraft empennage, with
+an estimated 75% of all planes using this configuration [12]. This configuration consists of one vertical
+stabilizer that sits atop the fuselage, and one horizontal stabilizer which is split on either side of the
+fuselage. The reason this configuration is so widely used is because it offers adequate stability control at
+the lowest structural weight. As the project progressed, this design was considered first and foremost in
+our team’s design process.
+
+                                    Figure 9: ​Conventional Tail
+
+Existing Design #2: ​T-Tail
+The second-most popular tail design is the “t-tail.” This design is similar to the conventional tail, except it
+places the horizontal stabilizers at the top of the vertical member. In doing this, those stabilizers are
+placed far out of the way of engine exhaust or wing wake. With these stabilizers free from aerodynamic
+obstructions, they become more efficient and can be made smaller [12]. However, their placement puts a
+larger moment on the vertical member. To combat this, t-tails often have to be produced from stronger,
+heavier materials. Upon simulation, the team found that a conventional tail is not effective enough in our
+application to outweigh its weight detriment.
+
+                                         Figure 10: ​T-Tail
+
+Existing Design #3: ​Cruciform Tail
+Similarly to what was seen in the wing shape benchmarking, there is again a compromise solution. The
+                                                 19
+
+=== PAGE 26 | img ===
+Cruciform Tail, though rarely used in industry, offers a balance between tail efficiency and weight [8].
+The main design follows closely the very-manufacturable Conventional Tail design, but raises the
+horizontal stabilizers slightly, as to remove them from the wing wake. If done properly, this design will
+prove an efficient, yet manufacturable solution. That being said, the midsection mounting of the
+horizontal stabilizers is ​less stable than the fuselage-mounting seen in a Conventional Tail. Due to
+limited literature on Cruciform Tail dimensioning, along with the added manufacturing difficulty and
+loss of stability, this setup was not implemented.
+
+                                     Figure 11: ​Cruciform Tail
+
+Subsystem #3: ​Landing Gear Designs
+The third and final subsystem that this benchmarking analysis will look at is ​landing gear​. Landing gear
+is an integral part of the full system, and as mentioned before in the Original System Section, faulty gear
+has been the downfall of previous NAU teams (See Section 1.3). The following sections will detail the
+three standard landing gear layouts: tricycle, conventional (taildragger), and tandem.
+
+Existing Design #1: ​Tricycle
+Tricycle landing gear is the most common form of landing gear for small aircraft. This style of gear places
+its primary gear in the rear, and its secondary, turning gear in the front. This allows for a very stable and
+very controllable aircraft on the runway [13]. The downside to this design is that it places the propeller
+low to the ground. Any “tipping” could damage the propeller.
+
+                         Figure 12:​ Tricycle Landing Gear on a Cessna 172
+
+                                                20
+
+=== PAGE 27 | img ===
+Existing Design #2: ​Conventional (Taildragger)
+The other most common type of landing gear is the conventional, or “taildragger” configuration. This
+configuration is especially interesting to the team because it is often used on bush planes. This layout puts
+its main gear in the front and its secondary, turning gear in the rear. This design elevates the propeller
+which eliminates the possibility of damage due to tipping. However, this design is far less controllable on
+the runway due to its rear-placed turning gear.
+
+               Figure 13: ​Conventional (Taildragger) Landing Gear on a Piper J-3 Cub
+
+Existing Design #3: ​Tandem
+Another design for landing gear is the tandem design. This design utilizes two or more ​rows of wheels.
+This design is usually only used on large, heavy planes as a means to distribute the load. While load
+distribution would have been beneficial to the team’s aircraft design, it was not necessary. Tandem-style
+landing gear would have added more weight to the overall system and additional complexity to
+ground-steering capabilities [13]. This layout would have only been considered if weight distribution
+became a bigger challenge than control and it did not.
+
+                      Figure 14: ​Tandem Landing Gear on an Antonov AN225
+
+                                                21
+
+=== PAGE 28 | img ===
+5   CONCEPT GENERATION
+
+After completing its background research and analyzing the dynamic test flight scoring equation, the team
+produced three initial concepts. These concepts implemented various wing shapes, two landing gear
+configurations, and three payload size options. These ideas helped direct the team towards a single ball
+carrying design that focussed on reliability, but final design elements can be seen in both of the first two
+designs. These concepts that were purely based on knowledge derived from text evolved through further
+understanding of flight attributes and real world testing.
+Full System Design #1: Straight Wing, Tricycle Gear, One Ball
+
+               Figure 15​: Straight Wing, Tricycle gear, One Ball System CAD Model
+
+The first design that was considered was the base scoring option. It was an aircraft with a straight
+(rectangular) wing, tricycle landing gear, and a cabin designed to accommodate 1 ball and additional
+weighted payload. This design was conceived while designing the simplest and potentially most reliable
+aircraft. Its benefits were that it would have been very easy to combine the selected systems since the
+cabin was relatively small and structurally negligible. The tricycle gear would have born some negatives
+such as a shorter wheelbase. Another downside of this design was that it would have been prone to
+forward and diagonal tipping had it encountered a bump during landing due to its high center of gravity.
+The team knew initially that a straight wing design would be easiest to manufacture compared to a tapered
+wing or a wing with washout features. The lightweight, base-scoring design was expected to be the easiest
+to design and manufacture, with its reduced structural member complexity and weight.
+
+                                               22
+
+=== PAGE 29 | img ===
+Full System Design #2: Tapered Wing, Tail Dragger, Two Ball
+
+                         Figure 16​: Tapered wing, Tail Dragger, Two Ball
+
+The team’s second design explored a higher scoring option and combined the tapered wing layout with a
+tail dragger landing gear and featured a two ball payload cabin. The advantages of this design were the
+landing capabilities of the tail dragger configuration, higher scoring potential, along with improved
+structural mounting of the front gear that would mitigate the landing impact difficulties the 2019 team
+faced. The tapered wings would have less drag than straight wings and mitigate downwash effects.
+Additionally, the high angle of attack resulting from tail dragger landing gear would allow higher lift
+production on the ground. Foreseen disadvantages of this design were the difficulty of manufacturing
+wing taper. The two ball configuration would have increased score by one point, but incurred higher drag.
+Lastly, the tail dragger was known to be the most difficult to control on the ground during takeoff.
+
+Full System Design #3: Tricycle, Suspension, Three ball
+
+                Figure 17​: Straight Wing Planform, Tricycle landing Gear, Three Ball
+
+The third original concept design was conceived with the highest scoring potential in mind . It detailed the
+                                               23
+
+=== PAGE 30 ===
+combination of a straight (rectangular) wing, tricycle landing gear, and a three ball payload cabin with
+additional weighted cargo. The benefits of this configuration included: the highest scoring potential
+presented by the team as a result of more balls, high stability and effective control on take-off, as well as a
+suspension system to dampen the landing (suspension not pictured). This design came with its own list of
+drawbacks. Having three balls would have induced even more drag and made the plane significantly less
+aerodynamic. Additionally, the suspension system would have greatly increased the frame’s weight. This
+design was rejected as it suggested the least chance of reliable and repeatable success.
+
+                                                24
+
+=== PAGE 31 | img ===
+6   DESIGN SELECTED – First Semester
+
+Our selected design, affectionately nicknamed “Pine Patrol One,” features many of the components
+outlined in our preliminary report, including: rectangular wings, Conventional-style empennage, and
+tricycle landing gear. However, several significant changes have been made since filing the last report.
+Most notable was a scoring revelation. Recall that the scoring equation represents a ratio between
+carrying capacity and size (the smallest plane with the most payload wins). Our team’s earlier designs
+tried to maximize carrying capacity by considering three-, five-, or even ten-ball designs. What we have
+discovered is that we can score as good, or better, by focusing on the ​size ​aspect of the scoring. By
+building a smaller plane that can carry a fair amount of payload, our team can score exceptionally. This is
+why the team’s final design will employ a small, five-foot wingspan, and carry a singular soccer ball.
+Another change since the preliminary design is the cabin design. The team has begun work on an
+aerodynamic solution to the drag imposed by our earlier cabin designs: an airfoil-shaped cabin,
+nicknamed “Ballfoil.” Paired with an all-aluminum frame and a powerful thrust system, the short
+wingspan and the Ballfoil will come together to create a successful aircraft.
+
+                      Figure 18: ​CAD Model of Final Design (First Semester)
+
+Design Description – First Semester
+Frame
+The first major subsystem of our design will be the frame. An all-aluminum frame will run through all
+members of the plane and supply support and rigidity to the system. All components- wings, cabin, thrust
+system, empennage, and landing gear- will be mounted to this frame. Some components, such as the
+wings and the cabin will be modular across the frame, as different mounting positions have already been
+drilled.
+
+Thrust System
+The thrust system was the first system to be designed. Similar to the “drive-train” of an automobile, our
+thrust system is a system of moving power. Power will start in a 6-cell LiPo battery as specified by SAE,
+and move into a brushless, electric motor. Before reaching the motor, the power will be limited by a 1kW
+power limiter, which is mandated from SAE. The motor will use the 1kW of power to turn a size 16x6
+propeller at a speed regulated by an ESC controller. This propeller was selected based on the results of
+two static propeller tests.
+
+                                                25
+
+=== PAGE 32 | img ===
+           Figure 19:​ Thrust System (In the Context of the Team’s First Static Thrust Test)
+
+Aerodynamic Surfaces (Wing, Tail)
+Since the preliminary report, the design of the plane’s aerodynamic surfaces has not changed much. We
+will still employ a Conventional-style empennage, the sizing of which will be governed by
+industry-standard equations (See Appendix C) and a rectangular wing. Our wing will have a span of five
+feet, and a chord length of eighteen inches. The team has narrowed airfoil selection down to three airfoils:
+Eppler 61, NACA 2412, S1223. We’ve determined that these airfoils will provide us with adequate
+aerodynamic properties and will test each during the prototyping process before making a final selection.
+
+  Figure 20:​ (From Top to Bottom) Eppler 61, NACA 2412, and S1223 Airfoil Diagrams [9][10][11]
+
+All aerodynamic surfaces will be cut from EPS foam using a nichrome wire cutter that we have begun to
+assemble. EPS foam is extremely lightweight, and will serve us better than wooden wings, so long as the
+foam is properly supported by the aluminum frame.
+
+Cabin
+The team’s cabin design is arguably the most creative aspect of our design. Once the team realized that
+
+                                               26
+
+=== PAGE 33 | img ===
+only one soccer ball was necessary to score well, alternative cabin designs began to be formulated. The
+problem with designing a cabin was that most designs incurred a large amount of drag. Large drag forces
+will slow the aircraft down and render its lift and thrust forces inadequate. The problem of drag was
+solved when a team-member discovered the NASA Langley airfoil. This airfoil was thick enough to
+house a soccer ball, and aerodynamic enough to conserve the aircraft’s lift and thrust forces. Thus, the
+“Ballfoil” cabin was designed. In addition to its reduced effect of drag, preliminary simulations show that
+the Ballfoil will provide the aircraft with some additional lift.
+
+                                    Figure 21:​ Ballfoil Prototype
+Ideally, the Ballfoil will be constructed using the lightweight EPS foam that makes up the wings.
+However, the team has begun construction on a ​wooden cabin, due to the inaccessibility of large foam
+blocks.
+
+Landing Gear
+As explained in the Preliminary Report, our aircraft will best be served by Tricycle-Style landing gear.
+This type of gear places two, stationary wheels under the wings, and one, turning wheel under the nose.
+These wheels will be mounted to the aluminum frame for strength and will be tensioned into position with
+steel cable for stability. A team member is currently analysing the landing gear system for bending and
+yielding stress failures, but drop tests on our working prototype have shown us that the system is viable.
+
+Justification
+The justification for this design is three-pronged. The team’s analysis draws from simulated results, hand
+calculations, and physical testing. Hoping to get a head start on our project, we conducted thrust testing
+very early on- within the first few weeks of the semester. Additionally, we have already begun to build
+our first prototype- months ahead of schedule. The data we’ve collected from these processes, along with
+the computer-simulated and hand-calculated results has shown us that our final design will be successful.
+
+Thrust Testing
+As aforementioned, the team conducted static thrust tests early in the semester. By building our thrust
+system and measuring the thrust output of several different propellers, we were able to deduce which
+propeller would benefit our system the most, as well as discern as an estimate for the thrusting force we’ll
+have available during flight. It was these tests that informed our decision to select a 16x6 propeller. With
+this propeller, we estimate that our thrust system will deliver eight pounds of thrust on the ground, and at
+least two pounds of thrust in the air.
+
+                                                 27
+
+=== PAGE 34 | img ===
+                                    Figure 22:​ Thrust Testing
+Lift
+Plenty of hand-calculated lift-force values were evaluated, but after Ballfoil was created, the most
+effective way to determine lift came from Solidworks Flow Simulations. By imposing a 12-degree, 10 m/s
+airflow across our CAD model, we were able to analyze the aircraft’s interaction with the air and
+determine lift forces. The simulation gave us an estimated 12.1 pounds of lift, which is more than the 11.3
+pounds we need to combat our weight.
+
+                     Figure 23:​ Streamline Figure Output from Flow Simulation
+
+Weight
+As mentioned in the section above, the weight of our plane is an estimated 11.3 pounds. The team
+weighed all of the components we currently have, and estimated or researched the weights of the
+materials we don’t have. The tabulated weight data can be seen in Appendix D. This low value for weight
+works hand in hand with our lift value to justify our design. Because the aircraft weight is less than the
+aircraft lift, it ​will​ fly.
+
+                                               28
+
+=== PAGE 35 | img ===
+Drag Hand Calcs
+The simulations detailed earlier also provided the team with estimations for drag. These estimations
+varied between 1 and 2.5 pounds of force. For an aircraft as small as ours, ​induced ​drag is a primary
+concern. To validate the results given by the simulations, hand calculations for induced drag were
+produced. These calculations can be seen in Appendix E and show an overestimated induced drag value
+of 2 pounds and a direct drag value of 0.3 pounds. The total value of our drag is less than our predicted
+thrust, so this design will accelerate.
+
+Prototype
+In an effort to acquire palpable results in all the previously-mentioned categories, the team has begun to
+construct a prototype. Currently, the prototype features the aluminum frame, the thrust system, and half
+the landing gear. It also is equipped with last year’s empennage as a placeholder while we acquire the
+materials needed to construct a new one. The Ballfoil has begun to take shape, though it will not be
+completed until Monokote wrap is purchased. The team plans to cut the wings over the next few days.
+Through the course of this process, the team has learned how to operate many of the machines in the
+campus machine shop, and have become well-versed in precision hand-cutting. Over the next couple
+days, we expect to learn the foam cutting processes necessary for the manufacture of our wings. So far,
+the aircraft has been designed with easy manufacturing in mind. If any manufacturing processes turn out
+to be easier than anticipated, the team has a few designs that we’d like to try, including: tapered wings,
+trimmable stabilizers, etc.
+
+                                Figure 24:​ Current State of Prototype
+
+                                                29
+
+=== PAGE 36 ===
+Implementation Plan – First Semester
+As far as implementing our design, the primary mode of implementation will be the prototyping process.
+As a team, we’ve already conducted simulations and calculations for most aspects of our design. As our
+sponsor mentor told us, “Calculations will only get you so far. You need to prototype early to get a grasp
+on your project” [12]. The time has come for hands-on analysis.
+
+Plan: Prototype and Testing
+Because our competition takes place in early April, and we have to provide SAE with technical
+documents by February, our prototyping schedule is accelerated, as compared to other capstone teams.
+The schedule is as follows:
+
+   ● November 1st: Begin Construction of First Prototype
+   ● November 16th: Book Field Time with Flagstaff Flyers
+   ● November 22nd: Complete Construction of First Prototype
+   ● November 22nd: Static Testing of First Prototype
+   ● November 23rd-30th: Flight Testing of First Prototype on Flagstaff Flyers Field
+   ● December 1st: Begin Construction of Second Prototype
+   ● December 19th: Complete Construction of Second Prototype
+   ● December 19th: Static Testing of Second Prototype
+   ● January 11th-25th: Flight Testing of Second Prototype on Flagstaff Flyers Field
+   ● January 20th: SAE Technical Documents Due
+   ● February 1st: Begin Construction of Final Design
+   ● March 7th: Complete Construction of Final Design
+   ● March 7th: Static Testing of Final Design
+   ● March 7th-31st: Flight Testing of Second Prototype on Flagstaff Flyers Field
+   ● April 3rd-5th: SAE Competition
+
+                                                30
+
+=== PAGE 37 ===
+7   IMPLEMENTATION – Second Semester
+
+Plan: Prototype and Testing
+Because our competition was planned to take place in early April, and we had to provide SAE with
+technical documents by February, our prototyping schedule was accelerated, as compared to other
+capstone teams. The schedule proceeded as follows:
+
+   ● November 1st: Begin Construction of First Prototype
+   ● November 16th: Refine Manufacturing Processes
+   ● November 22nd: Complete Construction of First Prototype
+   ● November 22nd: Static Testing of First Prototype
+   ● December 19th: Flight Testing of First Prototype on South Field
+   ● January 8th: Begin Modify Second Prototype
+   ● January 12th: Complete Construction of Second Prototype
+   ● January 12th: Static Testing of Second Prototype
+   ● January 13th: Modify for third Prototype
+   ● January 13th: Test Indoors at Field House
+   ● January 14th: Flight Testing of Second Prototype on Flagstaff Flyers Field
+   ● January 20th: SAE Technical Documents Due
+   ● February 1st: Begin Construction of Final Design (Version 4)
+   ● February 16th:Finish Construction of Final Design
+   ● February 17th: Test Final Design at Flagstaff Flyers Field (Crashed)
+   ● February 18th: Revise Pitch Equation
+   ● March 1st: Begin Manufacture of Final Design
+   ● March 7th: Complete Construction of Final Design
+   ● March 7th: Static Testing of Final Design Indoors
+   ● March 10th: Order back up components
+   ● March 18th:University closes & SAE competition is canceled
+   ● April 24th: Start Modification for Final Test
+   ● April 25th: Fullscale Test at Altitude at Speedworld Maricopa County
+
+Manufacturing
+The team found themselves with a calculation-proven and prototype-tested design. The following
+section will detail the manufacturing process, both for the prototypes and for the final design.
+
+Discussion
+
+A materials analysis led to the team’s decision to craft their aircraft’s aerodynamic surfaces from
+foam. EPS foam is easily accessible and has an incredibly low density of 15-50 kg/m​3​. Because
+of EPS’ tendency to fracture, all of the plane’s foam surfaces are supported by a lightweight
+aluminum frame. All other aircraft components are fabricated with PLA plastic. All members are
+held together with adhesive or aluminum bolts.
+
+Prototype
+
+Construction of the aluminum frame and landing gear components was simple, fortunately. Most
+                                              31
+
+=== PAGE 38 | img ===
+members of the team had been trained in aluminum fabrication at the University’s machine shop,
+and the team had access to the required equipment (drill presses, band saws, end mills, lathes) in
+their or the University’s possession. Members for the plane’s frame were cut to size using a
+horizontal band saw, and aluminum flat beams were bent to shape using vices and mechanical
+advantage. These aluminum components had all mounting holes drilled with a drill press.
+
+The EPS foam aerodynamic surfaces took more time to construct. The most effective and easiest
+way to shape EPS foam is with a hot-wire cutter. Because the team did not have access to a
+professional-grade hot-wire cutter, one was constructed by the team. The hot wire cutter features
+a tensioned, nichrome wire, through which an electrical current is run from an off-the-shelf
+power supply. By manipulating the voltage and amperage through the wire, the team could heat
+the wire to the necessary temperature to melt foam.
+
+                        Figure 25​: Homemade Hot-Wire Cutter in Use
+Other parts, such as the motor mount and the battery compartment were modelled in Solidworks
+and submitted to the University’s “Maker Lab” for 3-D Printing. Tapered wing tip sections were
+also constructed using 3D printed template sections.
+
+Finally, all components were assembled. Most connections were established with nut-and-bolt
+fasteners. All nuts were positive locking or coated in Lock-Tite to prevent slipping due to
+vibration. Foam connections were made with adhesives. After finding that many glues melted the
+EPS, the team discovered that JB Weld epoxy successfully held foam members together.
+
+                                           32
+
+=== PAGE 39 ===
+Final Product
+
+The team’s final product was manufactured using similar methods to the ones for the prototype
+described above. Due to the Corona Virus Outbreak many added features were not added which
+were planned like a carbon fiber landing gear which would be purchased as per SAE Aero rules,
+and a magnetically sealed cargo enclosure.
+
+Design Changes
+The aircraft had pitch moment issues. The issues would not allow the aircraft to take off or would cause
+the craft to uncontrollably pitching up one in the air. To resolve these problems the team tested a number
+of payload positions. We also tried to make the elevator bigger in two seperate ways. One, we increased
+the size of the actuating flap. Two we made the whole elevator surface actuate. The first method proved to
+not be powerful enough to overcome the pitch moment issue. The second faced serious structural and
+actuation issues. On take off when the full horizontal stabilizer elevator was actuated down, the air sucked
+it down and caught on the ground, resulting in the plane flipping on the runway, the moment was
+calculated to make sure this did not happen ahead of time but we did not account for ground effect.
+Finally the team went back and completed some detailed calculations to understand the moment in the
+pitch direction. It was found that our default angle of the elevator was too high, it was moved to a zero
+angle and the payload was moved to a new location to set the moment to net neutral. This worked and the
+elevator was moved to a default zero angle of attack and returned to a normal hinged actuator design.
+Testing proved that it resolved our issues. The moment calculator is included in appendix C (See Figure
+C2).
+Additionally flow simulations showed that changing the wing tips to be a taper showed that it would
+increase lifting performance by 10% and they were added. See the appendix C Figure C1 for the flight
+characteristics based on simulation results example excel sheet.
+
+                                               33
+
+=== PAGE 40 | lowtext, img ===
+Figure 26​: Wing Tip Configuration Simulation Results
+
+                      34
+
+=== PAGE 41 ===
+8   RISK ANALYSIS AND MITIGATION
+
+In order to prepare the best functioning final design, potential critical failures were considered through
+FMEA. Forseeing the product's potential shortcomings helped the team during the design process.
+Scoring these possible failures on the basis of severity, likelihood of occurrence, and detectability has
+allowed the team to identify potential critical failures of greatest concern.
+
+8.1 Critical Failures
+In order to prepare the best functioning final design, potential critical failures were considered through
+FMEA. Forseeing the product's potential shortcomings helped the team during the design process.
+Scoring these possible failures on the basis of severity, likelihood of occurrence, and detectability has
+allowed the team to identify potential critical failures of greatest concern.
+
+The selection of subsystems for this product includes functions, structural, objectives, and components.
+This is because the team fears failures that result in damage to the plane as well as failures that result in
+loss of points during competition. The highest RPN ranking possible critical failures come most notably
+from the structural subsystem and are listed in order below.
+
+                               See Appendix X: Graphs 1-4 of FMEA
+
+       Potential Critical Failure 1: Airfoil Frame (Structural)
+This member lies in the structural critical subsystem. The airfoil’s purpose is to produce a pressure
+differential across the top and bottom control surfaces; producing lift. This means that there is a force
+gradient across the wing and that this member is loaded in shear. The team’s initial foam airfoil
+reinforcement member was planned to be wooden, but vetoed in favor of an aluminum beam.
+
+       Potential Critical Failure 2: Landing Gear (Structural)
+Because the competition requires the regular class to take-off from the ground and land post-circuit, the
+landing gear is an essential component. It also receives high impact forces on landing and must also act as
+a spring to dampen the momentary upwards acceleration on touchdown. The main gear was constructed
+from aluminum to keep the weight low and was bent to shape to save on manufacturing costs. The team’s
+research and FEA proved that a carbon fiber gear should be implemented, but cancellation of the SAE
+event terminated further progress on that ground.
+
+       Potential Critical Failure 3: Airfoil (Foam)
+The surface of the airfoil receives pressure from lift production and must be capable of resisting
+translation. Because the team has selected EPS foam airfoils, a potential critical failure is more likely. A
+failure by this method would be shearing at some point along the wingspan. The cause would likely be a
+lack of support and ability to transfer forces. The foam sections were supported with a hollow square
+aluminum tube inside the entire wingspan.
+
+       Potential Critical Failure 4: Lift Production (Functions)
+This failure scored the highest in the functions subsystem. The team fears that the plane wouldn’t be able
+to produce enough lift force to overcome gravity. This failure comes in the form of airfoil damage or
+unpredictable weather conditions. Indoor testing showed lift to be sufficient, but outdoor testing struggled
+                                                35
+
+=== PAGE 42 ===
+under all dynamic flow conditions.
+
+       Potential Critical Failure 5: Landing (Objectives)
+Competition requirements dictate that the aircraft must land within 400 feet. A failure to complete this
+requirement is deemed to be semi-critical in fear of point loss either by exceeding 400 feet or stepping out
+of bounds. This failure would be prompted by the plane landing with excess energy or having too low of
+control authority. This was addressed with the tail-dragger configuration as it is the easiest to land.
+
+       Potential Critical Failure 6: Ground Steering (Functions)
+During the competition, the plane must stay within the specified runway during take-off and landing
+procedures to prevent penalization. The ground steering gear will require more force to change direction
+considering the weight of the plane. The simple servo and linkage implemented in the design proved
+successful during testing.
+
+       Potential Critical Failure 7: Empennage (Structural)
+The empennage design requires deliberate balancing of lift forces. Should this member be poorly
+designed it would reduce control authority over the craft and could compromise the effectiveness of the
+design. A critical failure would be classified as an empennage that alters the angle of attack in a negative
+way. The team struggled with this aspect in the middle stages of design, but after moment the equation of
+lift forces was computed and zeroed, the plane was proven to function properly.
+
+       Potential Critical Failure 8: Wingspan (Objectives)
+One of the team’s greatest fears was a potential critical failure by reducing the wingspan too short. One of
+the most notable competition scoring rules this year is that a shorter wingspan merits a higher score. The
+team feared that in effort of scoring the most possible points; the wingspan would be reduced to an
+inoperable point. An iterative excel calculator and extensive testing mitigated this fear.
+
+       Potential Critical Failure 9: Aerial Steering (Functions)
+The purpose of the ailerons, elevator, and rudder are to provide aerial steering. A potential critical failure
+would result from the loss of any one of these steering components. Potential effects of this failure
+include flying out of the safe flying zone and being forced to cut power and crash the plane. This would
+likely result in a total loss of aircraft. In an attempt to reduce the likelihood of this occurrence, the team
+has redesigned the servo placement and linkage to prove more reliable.
+
+       Potential Critical Failure 10: Remote/Receiver (Functions)
+The remote and receiver communicate the actions and inputs of the user to the plane. Loss of control
+authority, even momentarily, would result in the inability to compete or crash. The team has begun
+addressing this shortcoming by retiring the old faulty controller and purchasing a new one in addition to
+replacing the plane’s receiver.
+
+8.2 Risks Mitigation and Trade-offs Analysis
+The above critical failures rarely conflict with each other and together lead to a more effective design.
+The main conflict arose from increasing the factor of safety on all structural components due to the
+increasing weight. This meant that the mitigation of structural subsystem potential critical failures directly
+                                                 36
+
+=== PAGE 43 ===
+conflicted with lift production of the functions subclass as higher lift would be needed. Methods of
+mitigating risks included usage of strong aluminum support members, lift force calculations, cabin shape
+to reduce drag, and foam wings. Additionally, early examples of prototyping and testing can be viewed
+proving that these fears were addressed with the various iterations of the craft.
+
+                                                 37
+
+=== PAGE 44 | img ===
+9   TESTING
+
+The team carried out more than 100 tests with far too much detail and changes to go over here so we will
+discuss a few of the tests that resulted in design changes rather than just manufacturing tweaks like adding
+loctite.
+
+Mark I did not take off. At the time we did not have strong calculations to prove it would take off but
+rough approximations that indicated that it would. We theorised that the plane did not take off because the
+elevator was not strong enough to push the tail down and create the angle of attack needed to generate lift.
+Therefore we decided to add a default angle of attack by increasing the length of the front landing gear.
+
+Mark II had these changes incorporated and managed to take off. However it could not carry as much
+weight as the team anticipated. It was also unstable due to the long front steering landing gear. It also did
+not seem stable in flight.
+
+Mark III. By this time full simulations had been carried out to prove that the craft not only could fly but
+that its aerodynamic shape was optimal. Therefore we continued by adding leading edge slats which
+would increase the velocity of the air over the top surface and further optimize the lift. It worked and the
+plane took off in a shorter distance.
+
+Mark V. Since we had proof the plane would fly, it was decided to reduce weight. The team moved to
+change the landing gear to a taildragger to maintain the default angle of attack on the ground, but cut
+down the steering landing arm and place it in the rear instead. This improved ground stability and
+increased payload capacity, however at this stage the team moved to full scale flight tests and it was
+discovered that the plane could not pull up when in full flight, this resulted in a crash. To reconcile this
+problem, the team created a pitch moment calculator (see Appendix C) to determine how to fix the
+problem.
+
+Mark VII. It was determined based on pitch moment calculations that the payload would need to be
+moved backward and the elevators default angle of attack would have to be decreased from 15 to 0 to
+make the moment equation equal zero. These changes were implemented and this indoor test showed that
+it was capable of stable flight and carrying a significant payload. Later tests would show us that while it
+was stable indoors with no wind, that the wind could roll it over and the control surfaces were not
+powerful enough.
+
+                                      Table 4​: Testing Status
+
+10     FUTURE WORK
+
+In the end the wind could push the plane over and cause it to crash. Control and dynamic stability need to
+                                                38
+
+=== PAGE 45 ===
+be improved. The plane was dynamically unstable because the cargo weight CG was above the center of
+lift, so as soon as the plane rolled, the length between these two points became a moment arm pulling the
+plane upside down. In fact the plane landed upside down a number of times during final testing. The Pitch
+control was sufficient. However the yaw and roll controls could be enhanced to help combat wind forces.
+They could be enhanced by either increasing the speed by decreasing payload weight or decreasing drag.
+They also could be increased in size slightly, though according to some rules of thumb, our aleron size
+was almost at its limit, alternatively the control surface could be made more rigid or the boundary layer
+could be manipulated to enhance control surface performance, either by employing vortex generators or
+dynamically variable gaps between the aleron and the wing.
+
+                                               39
+
+=== PAGE 46 ===
+11     CONCLUSIONS
+
+The preceding report has documented the entirety of the Ponderosa Pilots’ project process, from research,
+to design, to analysis, to testing, and finally the presentation of a final product. An analysis of our
+implementation performance will show success across many of the primary engineering requirements,
+such as payload capacity, size minimization, and short take-off/landing. The design also fulfilled all
+secondary requirements, such as manufacturability, load/unload time, cost, and robust design. While it
+failed to establish control authority and turn successfully, the team views the design as a success. It was
+successful in fulfilling nearly all engineering requirements, and it would have represented NAU positively
+in a competition setting. The team’s unique answer to the design challenge would be fully effective with
+minor improvements to mitigate known failures. The following sections will detail contributors to the
+success of the project as well as areas for improvement.
+
+Contributors to Project Success
+The first large contributor to success was that the team adhered to the purpose and goals stated in the team
+charter. The primary purpose set by the team was to attend competition with a working aircraft. This
+remained the primary purpose, and the team positioned itself well with meeting deadlines even though the
+competition was canceled. The original understanding of goals was simplified, but they detail overall
+successfulness in meeting competition requirements as well as a positive representation of NAU. Again,
+the team believes this was maintained throughout the project. Primary ground rules set by the team outline
+team meeting requirements such as specific meeting days of the week along with set times. The team
+quickly changed its meeting schedule to Tuesdays, Thursdays, and frequently on weekends during
+manufacturing intensive portions of the semester. Additionally, members not present for any of those
+meetings were required to stay active in the Aero group chat should questions arise during the meeting.
+Set meeting dates and expectation of team member attendance helped the team throughout the design
+process. The charter was less specific about responses to divergent team members, as all members agreed
+that verbal confrontation about issues was the best method for resolving issues. This method worked
+sufficiently, and team members were generally on track. The successes of the team were due to several
+methodologies and practices. As far as overarching themes of the team go, one could attribute team
+cohesion to two areas: Organization and Drive. The team was able to stay very organized and
+on-schedule. This was due to the multi-weekly meetings mentioned above and instant communication
+through a group messaging system. Minutes, notes, and lists of action items were compiled and stored in
+an online sharing platform; all members were on top of the “to-do” lists. Drive was also an integral part of
+the team’s success. Every member of the team wanted to work hard and perform well. It was this
+determination that informed the team’s decision to stay in Flagstaff over the winter break and continue
+work on the project. These work-weeks often translated to 30-40+ hour week loads. The team would not
+be where it is today without that drive to push the design process hard. More specific elements of the
+team’s success include the practices of specialized knowledge and shared knowledge. In order to expedite
+the design process, the team decided to have each member specialize in different subsystems. One
+member specialized in aerodynamics and became well-versed in flow simulations; another specialized in
+control surface sizing and became the lead on ratio-based CAD design; etc. By the time the team
+members each finished their sub-systems, it was possible to piece together a full-system design efficiently
+and effectively. When it came time for manufacturing, however, the team found it beneficial to share all
+knowledge. By making sure that each team member knew how parts of the plane were manufactured and
+mounted, it was ensured that the team wouldn’t have to solely rely on one person to make certain parts.
+Everyone knew the basics of wire cutting, everyone knew how the landing gear was mounted, etc.
+Because of this distribution of knowledge on assembly, the team was able to keep the manufacturing
+                                                40
+
+=== PAGE 47 ===
+process moving along smoothly. The team performed exceptionally in terms of cohesion, efficiency, and
+collaboration when regarding manufacturing matters. This is especially relevant because a large amount
+of effort and time went into figuring out how to manufacture with the desired material, EPS foam. There
+were a number of hurdles that the team overcame in this department. Time management also went quite
+well and the team stayed on schedule over the course of last semester, though some minor deviations were
+required moving from initial plans. The gantt chart was a fairly accurate model of how progress preceded.
+With the original setup, dates were created to meet deadlines set by SAE, but due to some late changes in
+their dates, the team had a somewhat difficult time adjusting to new deadlines. Although since physical
+full scale prototyping began so early, the team was ahead of schedule and able to accommodate changes.
+
+While working on the accelerated timeline of the project team members quickly learned about 3D wing
+flow effects, thrust calculations, flow simulations and 3D printing manufacturability which were useful
+late in the process. These were all new technical concepts to most of the team members, and grasping
+them was instrumental to the team’s design success. 3D flow effects are an important consideration when
+designing a wing of finite span. These effects can induce lower lift and higher drag characteristics near
+the tips of wings. Thrust calculations are also a pivotal part of the flight dynamics equation, and therefore
+important to our team. While working with these equations the team learned a lot about the relationships
+relating propeller metrics to dynamic thrust performance. Flow simulations were a key component of the
+design process. Flows around lifting bodies are complicated and could not have been analytically
+determined in the given time frame. Therefore, having conceptual understanding of lifting phenomena
+paired with simulation data helped guide the overall design of the aircraft. Finally 3D print manufacturing
+concepts were important because they led to shorter prototype turnaround time and allowed for
+lightweight functional mounting components to be made in less time than if these components were to be
+made by hand or out of harder materials such as aluminum.
+
+Opportunities/areas for improvement
+There a large number of areas our aircraft could improve on, and pure lifting potential is not one of them.
+It is quite likely despite all its failings that our aircraft was as effective as it could be in pure lift per span
+performance as it could ever be.
+
+The landing gear durability, control authority, propeller optimization and the dynamic stability could all
+be improved. First let's discuss the control. Control authority was the largest issue our team faced. Our
+aircraft had enough control to maneuver in flight indoors, but not enough to mitigate wind which would
+cause the plane to roll uncontrollably. Our ailerons were as large as we could make them. We believe the
+airspeed and dynamic instability were responsible for these issues. The aircraft had a low airspeed. This
+was by design, drag increases with velocity squared, and with a limited 100 ft long runway and 1 kilowatt
+of power it did not make sense to make the craft fast or we would risk taking too long to take off. More
+speed gives more flow that the control surfaces see that they can convert into pressure and then moment
+to exert control. Our final test had a cross wind of about eight miles per hour, we expected as much as
+fifteen mile per hour of wind at competition. To overcome these issues next year's team could utilize the
+control surfaces analysis tool in Open VSP. In last year's competition (2019) about 75% (61 out of 80) of
+the aircraft did not get a flight score above zero because they crashed before completing their first full
+flight loop. A team could place in the top 15% just by carrying the smallest payload and being reliable.
+Therefore we recommend next year's team should focus on control first and payload capacity second,
+carry less to fly faster and have more control. Another aspect of control is dynamic stability. Our cargo
+was carried above the wings, it became apparent during our final tests that whenever the plane was not
+                                                41
+
+=== PAGE 48 ===
+perfectly upright it wanted to flip itself over as the weight acted as a moment arm. This resulted in a
+number of upside down landings. There are two things that can be done to help make the craft stable
+rather than inherently unstable. First move the cargo under the wing, even if it means adding structure
+weight. Secondly adding dihedral or anhedral, depending on where the wings are relative to the body.
+This may help with cross wind.
+
+The next opportunity for improvement would be in propeller optimization. We believe there are tools in
+Open VSP or J-blade that can help the team optimize the propeller for the specific designed aircraft.
+
+Finally the landing gear we manufactured was a bent aluminum bar and was used like a leaf spring, it was
+very easy to repair in the field, but it would be better if it simply never bent. Our team believes a carbon
+fiber spring landing gear in the same configuration would improve landing gear reliability.
+
+                                                42
+
+=== PAGE 49 ===
+REFERENCES
+
+[1] Society of Automotive Engineers (2019). 2020 SAE Aero Design Rules. 2020 Collegiate Design
+       Series. SAE.
+
+[2] SAEaerodesign.com (2020). SAE Aero Design West Virtual 2020. SAE Aero Design News. SAE.
+
+[3] Weather Underground (2018). Fort Worth Meacham International Airport, TX. [online]
+       www.wunderground.com. Available at:
+       https://www.wunderground.com/history/monthly/us/tx/fort-worth/KFTW/date/2018-4 [Accessed
+       2 Oct. 2019].
+
+[4] Seganti, J., Weiler, B., Hatcher, C., Lumm, D. and Montiel, A. (2019). SAE AERO DESIGN
+       REPORT. Undergraduate. Northern Arizona University.
+
+[5] Veto, Lucas et. al. (2018). SAE AERO DESIGN REPORT. Undergraduate. Northern Arizona
+       University.
+
+[6] Santaro, J., Goettl, S., Frankenberger, D., Alqalaf, A. and Cao, D. (2016). SAE AERO DESIGN
+       REPORT. Undergraduate. Northern Arizona University.
+
+[7] Myplane.nl. (2019). [online] Available at:
+       http://www.myplane.nl/cherrydocs/THEORETICAL_ASPECTS_AND_PRACTICAL_US_AGE.
+       pdf [Accessed 16 Oct. 2019].
+
+[8] Foster, Ben. (2019). Project Advisement Three.
+
+[9] Airfoiltools.com. (2019). E61 (5.64%) (e61-il). [online] Available at:
+       http://airfoiltools.com/airfoil/details?airfoil=e61-il#polars [Accessed 16 Oct. 2019].
+
+[10] Airfoiltools.com. (2019). NACA2412 (5.64%) (NACA2412-il). [online] Available at:
+       http://airfoiltools.com/airfoil/details?airfoil=NACA2412-il#polars [Accessed 8 Nov. 2019].
+
+[11] Airfoiltools.com. (2019). S1223 (5.64%) (S1223-il). [online] Available at:
+       http://airfoiltools.com/airfoil/details?airfoil=S1223-il#polars [Accessed 8 Nov. 2019].
+
+[12] Tester, J. (2019). Project Advisement Five.
+
+[13] Faa.gov. (2019). Recreational Flyers & Modeler Community-Based Organizations. [online]
+       Available at: https://www.faa.gov/uas/recreational_fliers/ [Accessed 14 Nov. 2019].
+
+[14] Sae.org. (2019). [online] Available at: https://www.sae.org/standards/ [Accessed 14 Nov. 2019].
+
+[15] Asme.org. (2019). Technical Resources - ASME. [online] Available at:
+       https://www.asme.org/membership/membership-benefits/technical-resources [Accessed 14 Nov.
+       2019].
+
+                                                43
+
+=== PAGE 50 ===
+[16] Standards.ieee.org. (2019). IEEE SA - The IEEE Standards Association - Home. [online] Available
+       at: http://standards.ieee.org/ [Accessed 14 Nov. 2019].
+
+[17] Aws.org. (2019). American Welding Society. [online] Available at: https://www.aws.org/ [Accessed
+       14 Nov. 2019].
+
+[18] AeroToolbox.net. (2019). Horizontal and Vertical Tail Design | AeroToolbox.net. [online] Available
+       at: https://aerotoolbox.net/design-aircraft-tail/ [Accessed 1 Oct. 2019].
+
+[19] M. Sadraey, "Chapter 9: Landing Gear Design," in Aircraft Design: A Systems Engineering
+       Approach, Wiley, 2012, pp. 479-544.
+
+                                               44
+
+=== PAGE 51 | lowtext, img ===
+APPENDICES
+1.1 Appendix A: House of Quality
+
+                              45
+
+=== PAGE 52 | img ===
+1.2 Appendix B: FMEA
+                          Table B1​: Functions FMEA
+
+                                   46
+
+=== PAGE 53 | lowtext, img ===
+Table B2​: Structural FMEA
+
+          47
+
+=== PAGE 54 | lowtext, img ===
+Table B3​: Objectives FMEA
+
+          48
+
+=== PAGE 55 | lowtext, img ===
+Table B4​: Components FMEA
+
+           49
+
+=== PAGE 56 | img ===
+1.3 Appendix C: Calculations
+
+               Table C1​: Flight Characteristic Calculator Based off Simulation Results
+
+                               Table C2​: Pitch Moment Calculator
+
+                                               50

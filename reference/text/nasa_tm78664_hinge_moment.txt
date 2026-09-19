@@ -1,0 +1,1067 @@
+# ID: nasa_tm78664_hinge_moment
+# SOURCE: https://ntrs.nasa.gov/api/citations/19780023100/downloads/19780023100.pdf
+# ORIGINAL: reference/raw/nasa_tm78664_hinge_moment.pdf
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type pdf | 27 pages | ~12723 tokens
+# NOTE: NASA TM-78664 hinge-moment calculation method (full-scale case; use method, not numbers). For servo sizing
+# FLAG img: pages 1-27
+# FLAG garbled: pages 19,22
+
+=== PAGE 1 | img ===
+NASA Technical Memorandum 78664
+
+Control-Surface Hinge-Moment
+Calculations for a High-Aspect-
+Ratio Supercritical Wing
+
+Boyd Perry III
+
+SEPTEMBER 1978
+
+NASA
+
+         PROPERTY OF HGRUP UNIVERSITY
+
+=== PAGE 2 | img ===
+NASA Technical Memorandum 78664
+
+Control-Surface             Hinge-Moment
+Calculations         for a High-Aspect-
+Ratio      Supercritical         Wing
+
+Boyd Perry III
+Langley Research Center
+Hampton, Virginia
+
+NASA
+National Aeronautics
+and Space Administration
+Scientific and Technical
+Information Office
+1978
+
+=== PAGE 3 | img ===
+                                    SUMMARY
+
+     An analytical investigation has been conducted to estimate the hinge
+moments, at selected flight conditions, resulting from deflecting two
+trailing-edge control surfaces (one inboard and one midspan) on a high-
+aspect-ratio, swept, fuel-conservative wing with a supercritical airfoil.
+This report gives hinge-moment results obtained from procedures which employ a
+recently developed transonic analysis.  In this procedure a three-dimensional
+inviscid transonic aerodynamics computer program is combined with a two-
+dimensional turbulent-boundary-layer program in order to obtain an interacted
+solution. These results indicate that trends of the estimated hinge moment as
+a function of deflection angle are similar to those from experimental hinge-
+moment measurements made on wind-tunnel models with swept supercritical wings
+tested at similar values of free-stream Mach number and angle of attack.
+
+                                  INTRODUCTION
+
+     The Drones for Aerodynamics and Structural Testing (DAST) Project is a
+NASA flight program which uses a modified Firebee II target drone vehicle as a
+test-bed aircraft for testing aeroelastic research wings (ARW). In the inte-
+grated design of the second wing (designated ARW-2), the structural integrity
+of the wing depends on the successful operation of several active control sys-
+tems. The ARW-2 design includes active controls for maneuver load alleviation
+(MLA), gust load alleviation (GLA), and flutter suppression (FS). All of these
+active control systems use trailing-edge control surfaces either to reduce or
+to redistribute the aerodynamic loads on the wing.
+
+     As part of the preliminary design of the hydraulic actuation system, which
+will be used to deflect these control surfaces, it was necessary to estimate
+the maximum control-surface hinge moments at critical design conditions.   There-
+fore, hinge-moment calculations were made for two selected trailing-edge control
+surfaces using two iteratively interacted computer programs: a recently devel-
+oped three-dimensional transonic aerodynamics computer program (refs. 1 and 2)
+and a two-dimensional turbulent boundary-layer computer program (refs. 3, 4,
+and 5). The procedure employed in interacting these programs is described in
+reference 6. The control surfaces analyzed represent an inboard surface
+intended for use with both the MLA and GLA systems and a midspan surface which
+was a candidate surface for the GLA system. The hinge moments were calculated
+for one control surface deflected at a time, and each control surface was ana-
+lyzed at a separate flight condition. The hinge moments for the inboard sur-
+face were calculated at the design condition for the GLA system (the condition
+which sizes the hydraulic actuator). The hinge moments for the midspan surface
+were calculated at the design-cruise flight condition. The study was limited
+to one flight condition for each surface.
+
+     This paper presents the results of an analytical investigation to estimate
+the control-surface hinge moments for two control surfaces (one inboard and one
+
+=== PAGE 4 | img ===
+midspan) on a high-aspect-ratio supercritical wing. Two trailing-edge-down
+deflections, zero deflection, and one trailing-edge-up deflection were ana-
+lyzed for each control surface. This paper includes (1) a brief discussion of
+the analytical methods used; (2) presentation of chordwise pressure distribu-
+tions and spanwise load distributions at the four deflection angles for both
+control surfaces; (3) plots of hinge moment and total wing lift as a function
+of deflection angle for both control surfaces; and (4) a comparison of results
+with experimental data.
+
+                                    SYMBOLS
+
+     Values are given- in both SI and U.S. Customary Units. Calculations were
+made in U.S. Customary Units.
+
+b         wing span, m (ft)
+
+Cft       hinge-moment coefficient, HAloSfCav
+CL        wing lift coefficient
+
+Cp        pressure coefficient
+
+c         local wing chord, m (ft)
+
+cav       average control-surface chord, m (ft)
+
+GI        section lift coefficient
+
+c*        product of local wing chord and cosine of local surface slope angle,
+            m (ft)
+
+g         acceleration due to gravity, 9.80 m/sec^ (32.2 ft/sec^)
+
+H         hinge moment, positive for down load, N-m (in-lb)
+
+h         hinge moment per unit span, positive for down load, N (Ib)
+
+M OO      free-stream Mach number
+
+q^        free-stream dynamic pressure, Pa (Ib/in^)
+
+R         Reynolds number per meter (per foot)
+
+Sf        control-surface area, m^ (ft^)
+
+x         chordwise dimension, m (ft)
+
+xn        chordwise location of hinge, m (ft)
+
+xte       chordwise location of trailing edge, m (ft)
+
+=== PAGE 5 | img ===
+y         spanwise dimension, m (ft)
+a         angle of attack, deg
+6         control-surface deflection angle, positive trailing edge down, deg
+6*        boundary-layer displacement thickness, m (ft)
+3         relaxed boundary layer
+Subscripts:
+i         current iteration (see fig. 2)
+I         lower surface
+u         upper surface
+
+                     CONFIGURATIONS AND ANALYSIS CONDITIONS
+     The wing analyzed in this paper is fuel-conservative; that is, one with a
+high aspect ratio, moderate sweep angle, and supercritical airfoil. The geo-
+metric properties of the wing are listed in table I. For the study described
+in this paper, two trailing-edge control surfaces were analyzed, each at a dif-
+ferent flight condition. Figure 1 shows the relative sizes and locations of
+both the inboard and midspan control surfaces. The following sections and
+table II describe the geometry of each control surface and the flight condi-
+tions at which the control-surface hinge moments were calculated.
+
+                            Inboard Control Surface
+     The selected inboard control surface is indicated in figure 1(a). The
+control surface has a chord of 15 percent of the local wing chord (which
+includes the trailing-edge extension) and a span of 1 5 percent of the wing
+semispan; it extends from 12.5 percent to 27.5 percent of the semispan. The
+flight condition chosen for calculating the hinge moments for the inboard con-
+trol surface is the design condition for the GLA system. The Mach number and
+altitude are 0.60 and 2134 m (7000 ft), respectively, conditions which result
+in a dynamic pressure of 19.70 kPa (411.3 psf) and a Reynolds number of
+1.15 x 107 per meter (3.52 x 106 per foot). The angle of attack is 1.63°,
+which is the angle of attack required for a 2.5g pull-up maneuver at a vehicle
+gross weight of 11 121 N (2500 Ib). The control-surface deflection angles
+selected for the investigation were 6 = -5°, 0°, 5°, and 10°.
+
+                            Midspan Control Surface
+     The selected midspan control surface is indicated in figure 1(b). It had
+a chord of 20 percent of the local wing chord, a span of 25 percent of the wing
+semispan, and extended from 47.5 percent to 72.5 percent semispan. The flight
+
+=== PAGE 6 | img ===
+condition chosen for calculating the hinge moments for the midspan control
+surface is the design-cruise flight condition. The Mach number and altitude
+are 0.80 and 14 021 m (46 000 ft), respectively; these conditions result in
+a dynamic pressure of 6.312 kPa (131.8 psf) and a Reynolds number of
+3.74 x 106 per meter (1.14 x TO6 per foot). The angle of attack is 1.10°,
+which is the angle of attack required for lg level flight at a wing lift coef-
+ficient of 0.53.  The control-surface deflection angles selected for the inves-
+tigation were & = -5°, 0°, 5^, and 12°.
+
+                               ANALYTICAL METHODS
+     Two computer programs were employed in performing the analysis described
+in this paper: an aerodynamics program and a boundary-layer program. The pro-
+cedure for interacting these two programs had been developed (ref. 6) in order
+to estimate (1) the angle of attack required for the wing at the design-cruise
+flight condition and (2) the resulting detailed load distributions for the
+basic wing without control surfaces. The reasonable agreement of these pre-
+dictions with experimental data obtained subsequently encouraged the present
+application for control surfaces.
+     The aerodynamics program (FLO 22, refs. 1 and 2) analyzes inviscid, isen-
+tropic, transonic flow past three-dimensional swept-wing configurations. No
+provisions are included for modeling a fuselage. FLO 22 calculates chordwise
+pressure distributions on both the upper and lower surfaces of the wing. For
+a fine-grid computational mesh (192 x 24 x 32), 21 stations are used along the
+semispan (stations are spaced in increments of 5 percent semispan, starting at
+the root). The following description of the program is taken from the summary
+of reference 2: "The free-stream Mach number is restricted only by the isen-
+tropic assumption. Weak shock waves are automatically located wherever they
+occur in the flow. The finite-difference form of the full equation for the
+velocity potential is solved by the method of relaxation, after the flow exte-
+rior to the airfoil is mapped to the upper half plane. The mapping procedure
+allows exact satisfaction of the boundary conditions and use of supersonic
+free-stream velocities. The finite-difference operator is 'locally rotated1 in
+supersonic flow regions so as to properly account for the domain of dependence.
+The relaxation algorithm has been stabilized using criteria from a time-like
+analogy."
+     The boundary layer is calculated using the two-dimensional integral-method
+boundary-layer formulation of Nash and Macdonald (ref. 3). The specific pro-
+gram used was extracted from a recent two-dimensional airfoil analysis program
+(ref. 4) and is basically the same as the boundary-layer program (NASHMAC)
+found in the airfoil program described in reference 5. NASHMAC calculates
+the boundary-layer displacement thickness along streamwise-oriented strips at
+11 stations on the semispan. These 11 stations are, for convenience, picked
+from among the 21 output stations of FLO 22. Experience indicates that the
+boundary-layer calculation should begin in front of the assumed transition in
+order to approximate the laminar boundary-layer thickness. The locations for
+the start of the boundary-layer calculations are the same for both the upper
+and lower surfaces on the wing. Table III shows, for three stations along the
+span, the chordwise locations of the assumed transition (based on oil-flow
+
+=== PAGE 7 | img ===
+photographs from a similar configuration) and the start of the boundary layer.
+These locations varied linearly along the span in two segments: from the root
+to 42,6 percent semispan and from 42,6 percent semispan to the tip.
+
+                          Assumptions and Limitations
+
+     Although the iterative-interactive procedure was used to investigate the
+effects of deflecting trailing-edge control surfaces, the procedure (ref, 6)
+was not developed specifically for that application. Consequently, some
+theoretical assumptions are less valid when the procedure is used to analyze
+deflected control surfaces. There are other assumptions which are less valid
+when the flight condition is changed from the design-cruise flight condition.
+As was stated earlier, the purpose of this paper is to provide analytical esti-
+mates of control-surface hinge moments. It is believed that none of the assump-
+tions and limitations in the procedure are severe enough to alter trends or
+cloud results, and it is believed also that the purpose of performing these
+calculations was met, A brief discussion of the major assumptions and limita-
+tions follows,
+
+     Wing flexibility,- Because the wing used in this analysis is a high-aspect-
+ratio highly flexible wing, the effects of wing flexibility should be considered
+when the wing is analyzed at off-design flight conditions. However, because of
+the preliminary status of the ARW-2 integrated design, estimations of the wing
+shape (in the form of airfoil coordinates) at off-design conditions were not yet
+available. As a result, the wing shape used for all cases in this paper was
+the design-cruise shape. It is assumed that the differences in the pressure
+distributions (especially in the neighborhood of the control surfaces) caused
+by the differences between the off-design and design shapes are small. It is
+also assumed that the differences in control-surface hinge moments due to these
+small differences in pressure distributions are small.
+
+     Boundary layer.- Assumptions have been made regarding the method used to
+include viscous effects in this analysis. The two most important are (1) the
+two-dimensional boundary-layer displacement thicknesses calculated by NASHMAC
+adequately represent the actual three-dimensional boundary layer and (2) the
+empirically determined monotonic condition and the empirical separation cri-
+terion within NASHMAC still apply when the airfoil has a deflected control
+surface.
+
+                              Iteration Procedure
+
+     The aerodynamics and boundary-layer computer programs are run in an
+iterative-interactive fashion, with the output of each one used as the input to
+the other one. The details of this application differ somewhat from those cited
+in reference 6, For example, in the present procedure the angle of attack was
+held constant. The first (inviscid) iteration starts and ends with a single
+running of FLO 22, Succeeding iterations start with the running of NASHMAC and
+end with the running of FLO 22, Iterations stop, and the solution is considered
+converged, when the total lift coefficient on the wing is within 1 percent of
+the lift coefficient from the previous iteration. For the relaxation scheme
+
+=== PAGE 8 | img ===
+used, the lift coefficient was found to decrease with each successive iteration,
+so that convergence is reached when CL ^ > 0.99CL i_i . A detailed description
+of the iteration procedure is illustrated in figure 2 and described in this
+section.
+
+     To start the first iteration, the airfoil coordinates at the 11 defining
+stations are used as input to FLO 22, The output from FLO 22 (completing the
+first iteration) consists of chordwise pressure distributions (referred to
+collectively as Cpj)   at the 21 output stations and the total lift coefficient
+of the wing (CL -|) ,
+
+     To start the second iteration, the Cp -\ are used as input to NASHMAC.
+The output from NASHMAC consists of the boundary-layer displacement thicknesses
+(referred to collectively as 6]*) at the 11 defining stations. Within this
+iteration, the 6-| * values are then multiplied by a weighting (relaxation)
+factor of 0,25, after which they are referred to as the relaxed boundary layer
+(&1 *) . The relaxed boundary layer (6-\ *) is then added to the original air-
+foil coordinates at the 11 defining stations, resulting in new airfoil coordi-
+nates which are used as input to FLO 22. The output of FLO 22 (completing the
+second iteration) consists of the new chordwise pressure distributions (Cp 2)
+and the new lift coefficient (CL 2)
+     If the convergence criterion is not met, the third iteration starts with
+the Cp?2 used as input to NASHMAC. The output from NASHMAC, again, consists
+of new boundary-layer displacement thicknesses (62*) at tne 11 defining sta-
+tions. For this iteration, the new boundary-layer displacement 62* is a
+weighted average of 62* with 61 * according to the following (relaxation)
+scheme:
+
+          62* = 0.25 x 62* + 0,75 x <$"i *
+
+(This form_of weighted average, combining the 6i* of the current iteration
+with the 6 i-i from the previous iteration, is used in all successive
+iterations.) Then 62     *s added to the original airfoil coordinates at the
+11 defining stations, resulting in modified airfoil coordinates which are used
+as input to FLO 22, The output of FLO 22 (completing the third iteration) con-
+sists of the new chordwise pressure distributions (Cp 3) and the new lift coef-
+ficient (CL 3) .
+
+     The procedure described in the previous paragraph is repeated until the
+convergence criterion is met. When the convergence criterion is met, the
+control-surface hinge moments are calculated by integrating the product of the
+appropriate moment arm and the chordwise pressure distributions at those output
+stations corresponding to the control-surface location.
+
+                            Hinge-Moment Calculation
+
+     Control-surface hinge moments are obtained in two steps: (1) chordwise
+integrations of the products of pressure distributions and appropriate moment
+arms to obtain a distribution of hinge moments per unit span; (2) a spanwise
+integration to obtain the total hinge moment. Both integration steps employed
+
+=== PAGE 9 | img ===
+a trapezoidal numerical integration. The limits of the chordwise integration
+are from the hinge line to the trailing edge. The hinge moment per unit span
+h is
+
+                 f*te
+          h =                - CpfZ)(x - xh) dx
+                  xh
+For a given control surface and a given deflection angle, repeated operations
+of this type result in hinge moments per unit span at stations within, and imme-
+diately inboard and outboard of the spanwise extent of the control surface as
+shown in the following sketch:
+
+                                              Control-surface location
+
+Because the inboard and outboard edges of the control surface lie between out-
+put stations, the values of h at these locations must be interpolated. The
+form of the spanwise integration is
+
+          H =    outboard
+                          h dy
+               yinboard
+Control-surface hinge moments are nondimensionalized by the product of the area
+and average chord of the control surface and the free-stream dynamic pressure
+to give
+
+                  H
+               <J«>Sfcav
+
+=== PAGE 10 | img ===
+                             RESULTS AND DISCUSSION
+
+     This section contains analytical results and comparisons of some of the
+results with experiment.
+
+                               Analytical Results
+
+     The following results are presented for each control surface: chordwise
+pressure distributions and chordwise boundary-layer displacement thicknesses
+for each control-surface deflection angle, spanwise load distributions with the
+deflection angle as a parameter, and plots of hinge-moment coefficient and lift
+coefficient as functions of control-surface deflection angle.
+
+     Inboard control surface.- Chordwise pressure distributions along the cen-
+         / y        \
+ter line I    = 0.20 of the control surface are presented in figure 3 for each
+
+deflection angle. The + symbols represent the pressures on the upper surface
+and the * symbols represent the pressures on the lower surface. The abscissa
+                                                         y
+of each plot contains a sketch of the airfoil shape at      = 0.20 and includes
+                                                        b/2
+the boundary layer and the deflected control surface. The hinge location is
+indicated by the dashed line on both the sketch and the pressure distribution.
+Figure 3 contains a typical representation of chordwise pressure distributions
+within the spanwise extent of the control surface and illustrates the effect on
+the pressures of changing the deflection angle. As expected, the lifting pres-
+sures increase with increasing deflection angle. For the three nonzero deflec-
+tion angles, there are obvious kinks in the pressure distributions which occur
+at the points of discontinuity in slope on the upper and lower surfaces of the
+airfoil; that is, at the hinge location.
+     Plots of boundary-layer displacement thickness as a function of x/c for
+                                       y
+both the upper and lower surfaces at      = 0.20 are contained in figure 4.
+                                      b/2
+The displacement thicknesses have been nondimensionalized by the product of the
+local wing chord and the cosine of the local surface slope angle. The boundary
+layer on the upper surface becomes thicker at the trailing edge as the control-
+surface deflection angle is increased. As the deflection angle increases, so
+does the effective section camber. This increase accounts for the more pro-
+nounced peak in the displacement thickness on the lower surface. Examination
+of the output from the boundary-layer program indicates that the parameter
+which predicts possible flow separation had reached its threshold value for the
+two positive deflection angles. Thus flow separation and the accompanying loss
+of lift may occur at either of the two positive deflection angles.
+
+     Spanwise load distributions are presented in figure 5 for the four deflec-
+tion angles of the investigation. The quantity cci is the product of the
+local chord and the section lift coefficient (the integral of the chordwise
+pressure distributions), and within the neighborhood of the control surface,
+8
+
+=== PAGE 11 | img ===
+ccj exhibits the same trends as the hinge moments per unit span (the integral
+of the product of the chordwise pressure distributions and the appropriate
+moment arms). Within the spanwise extent of the control surface there is a
+greater than 50-percent increase in ccj in going from 6 = -5° to <5 = 10°.
+Even though the control surface is located well inboard and is only 1 5-percent-
+semispan wide, the effect of deflecting the control surface is felt over the
+entire semispan.
+
+     Plots of hinge-moment coefficient and lift coefficient as functions of
+control-surface deflection angle are contained in figure 6. On the right side
+of the hinge-moment coefficient plot are scales indicating the dimensional
+values of the hinge moment in units of N-m and in-lb. The scale on the left
+side of the same plot has zero at the top of the scale and increases negatively
+down the scale. The results in figure 6 indicate that in going from <5 = -50
+to 6 = 10°, the total lift increases 25 percent, but the increase is achieved
+at the expense of an almost 140-percent increase in hinge moment.
+
+     Midspan control surface.- Chordwise pressure distributions along the cen-
+         / y       \
+ter line      = 0.60 of the control surface are presented in figure 7. The
+         \b/2      )
+hinge location is indicated by the dashed line. The higher Mach number and
+changes in airfoil shape account for distinct differences between these pres-
+sure distributions and those for the inboard control surface - the existence of
+a shock wave on the upper surface of the wing, for example. For the -5° deflec-
+tion, the shock wave is located at about 35 percent chord and is evidenced by
+the abrupt decrease in suction pressures on the upper surface at that location.
+The shock wave moves aft with increasing deflection angle, and the calculations
+indicate that, for the 12° deflection, the shock wave moves onto the control
+surface.  (The presence of the shock wave on the control surface could lead to
+problems such as loss of control-surface effectiveness and control-surface
+buzz.) The pressure distributions for all deflection angles exhibit similar
+kinks at the hinge location, and the lifting pressures increase with increasing
+deflection angle.
+     Plots of boundary-layer displacement thickness as a function of x/c for
+                                       y
+both the upper and lower surfaces at      = 0.60 are contained in figure 8.
+                                      b/2
+The boundary layers for the midspan control surface exhibit the same trends as
+those for the inboard control surface. They become thicker with increasing
+deflection angle, and they are significantly thicker than indicated for the
+inboard surface due, in part, to a two-thirds reduction in Reynolds number. In
+addition, the parameter which predicts possible flow separation reached its
+threshold value earlier along the chord than it did for the inboard control
+surface. This condition indicates possible separation at a chordwise location
+closer to the leading edge of the control surface.
+
+     Spanwise load distributions are presented in figure 9 for the four deflec-
+tion angles of the investigation. Again, within the neighborhood of the control
+surface, ccj exhibits the same trends as the hinge moments per unit span. The
+quantity ccj increases by more than 100 percent in going from 6 = -5° to
+
+=== PAGE 12 | img ===
+6 = 12°. Because of its midspan location and increased span, the midspan con-
+trol surface has a larger influence on the load distributions over the entire
+span than the inboard control surface does.
+     Plots of hinge-moment coefficient and lift coefficient as functions of
+control-surface deflection angle are contained in figure 10. In going from
+deflection angles of 6 = -5° to 6 = 12°, the total lift increases 44 percent
+with a corresponding increase in hinge moment of over 100 percent. Although the
+hinge-moment coefficients are larger for the midspan control surface because of
+a significantly lower dynamic pressure, the actual hinge moments are only about
+half as large as those for the inboard control surface at all deflection angles.
+
+                           Comparison With Experiment
+     The following discussion compares experimental measurements of control-
+surface hinge moments with the analytical results just presented. The measure-
+ments were obtained from wind-tunnel models with swept supercritical wings
+equipped with trailing-edge control surfaces.
+     Plots of experimental hinge-moment coefficients as functions of control-
+surface deflection angle are contained in figure 11 for the configurations
+reported in references 7 and 8. The planforms on the right side of the figure
+illustrate the relative locations and sizes of the control surfaces. The wing
+and control-surface geometry of both models differed from the geometry of the
+ARW-2 configuration (as illustrated in table IV), and they were tested at dif-
+ferent (but similar) values of angle of attack and Mach number. Even with
+these differences, both the hinge-moment magnitudes (-0.4 < C^ < 0) and trends
+(Cn becomes more negative with increasing deflection angle) of the data in
+figure 11 are consistent with the analytical results presented in figures 6
+and 10. However, the experimental measurements do exhibit a noticeable change
+in slope in going from negative to positive deflections, which the analysis of
+the ARW-2 configuration did not predict.
+     Figure 12 contains plots of measured and calculated hinge-moment coeffi-
+cients for the ARW-2 configuration as functions of control-surface deflection
+angle. The calculations are those presented in figure 6 and the measurements
+were obtained from a recent wind-tunnel investigation conducted by Thomas A.
+Byrdsong in the Langley 8-foot transonic pressure tunnel. The investigation
+measured control-surface hinge moments on a rigid 0.237-scale model of the
+ARW-2 configuration with some candidate active-control surfaces. Results are
+for the inboard control surface at the same values of Mach number and angle of
+attack. These results show excellent agreement over the range of deflection
+angles used. There were no measurements made on the midspan control surface
+for comparison with the calculations presented in figure 10.
+
+                               CONCLUDING REMARKS
+     An analytical investigation has been conducted to estimate the hinge
+moments resulting from deflecting two trailing-edge control surfaces (one
+inboard and one midspan) on a high-aspect-ratio, swept, fuel-conservative wing
+10
+
+=== PAGE 13 | img ===
+with a supercritical airfoil. The results of this investigation indicate that
+within the spanwise extent of the control surfaces, the magnitudes of the
+chordwise pressure distribution aft of the hinge line increase with increasing
+control-surface deflection angle. In addition, due to the higher free-stream
+Mach number selected for the midspan control surface, the pressure distribu-
+tions show the presence of a shock wave on the upper surface. For both control
+surfaces, the effect on the spanwise load distribution of deflecting the control
+surface is felt over the entire semispan, and significant local effects are felt
+in the neighborhood of the control surface. The trends of the estimated hinge
+moments as functions of deflection angle are consistent with experimental hinge-
+moment measurements made on wind-tunnel models with swept supercritical wings
+tested at similar values of free-stream Mach number and angle of attack. At the
+same free-stream Mach number and angle of attack, a comparison of the calculated
+hinge-moment coefficients with coefficients measured on a 0.237-scale model of
+the configuration analyzed showed excellent agreement over the range of deflec-
+tion angles considered.
+
+Langley Research Center
+National Aeronautics and Space Administration
+Hampton, VA 23665
+July 28, 1978
+
+                                                                              11
+
+=== PAGE 14 | img ===
+                                   REFERENCES
+
+1. Jameson, Antony; and Caughey, D. A.: Numerical Calculation of the Transonic
+     Flow Past a Swept Wing. NASA CR-1 53297, 1977.
+
+2. Jameson, Antony; Caughey, David A.; Newman, Perry A.; and Davis, Ruby M.:
+     A Brief Description of the Jameson-Caughey NYU Transonic Swept-Wing Com-
+     puter Program - FLO 22. NASA TM X-73996, 1976.
+
+3. Nash, J. F.; and Macdonald, A. G. J.: The Calculation of Momentum Thickness
+     in a Turbulent Boundary Layer at Mach Numbers up to Unity. C.P. No. 963,
+     British A.R.C., 1967.
+
+4. Carlson, Leland A.: TRANDES: A FORTRAN Program for Transonic Airfoil
+     Analysis or Design. NASA CR-2821 , 1977.
+
+5. Bauer, Francis; Garabedian, Paul; Korn, David; and Jameson, Antony: Super-
+     critical Wing Sections II. Volume 108 of Lecture Notes in Economics and
+     Mathematical Systems, Springer-Verlag, 1975.
+
+6. Newman, Perry A.; Carter, James E.; and Davis, Ruby M.: Interaction of a
+     Two-Dimensional Strip Boundary Layer With a Three-Dimensional Transonic
+     Swept-Wing Code. NASA TM-78640, 1978.
+
+7. Re, Richard J.: Stability and Control Characteristics, Including Aileron
+     Hinge Moments, of a Model of a Supercritical-Wing Research Airplane. NASA
+     TM X-2929, 1974.
+
+8. Mann, Michael J.; and Langhans, Richard A.: Transonic Aerodynamic Character-
+     istics of a Supercritical-Wing Transport Model With Trailing-Edge Controls.
+     NASA TM X-3431, 1977.
+
+12
+
+=== PAGE 15 | img ===
+                      TABLE I.- WING GEOMETRIC PROPERTIES
+
+Aspect ratio                                                               10.30
+Taper ratio                                                                 0.400
+Planform area, m2 (ft 2)                                                3.25 (35)
+Span, m (ft)                                                         5.79 (18.99)
+Mean aerodynamic chord, m (ft)                                       0.596 (1.96)
+Sweep (O.SOc), deg                                                             25
+Trailing-edge extension:
+       y
+  At      =0                                                               0.400c
+      b/2
+
+  At      = 0.426                                                               0
+      b/2
+
+Thickness:
+  At      = 0.106                                                          0.144c
+      b/2
+
+  At      = 0 . 4 2 6                                                      0.1 20c
+      b/2
+
+  At      = 1.00                                                           0.106c
+      b/2
+
+Twist, deg:
+  At      = 0.106                                                             2.0
+      b/2
+
+  At      = 0.426                                                            -0.5
+      b/2
+       y
+  At      = 1 .00                                                            -1.6
+      b/2
+
+                                                                               13
+
+=== PAGE 16 | img ===
+          TABLE II.- ANALYSIS CONDITIONS FOR SELECTED CONTROL SURFACES
+
+                                                  Control surface
+            Quantity
+                                          Inboard                 Midspan
+ Mach number, M^ . . . .                             0.60                     0.80
+ Angle of attack, a, deg                             1 .63                    1 .10
+ Altitude, m (ft)    ....                     2134 (7000)         14 021 (46 000)
+ Dynamic pressure,
+   kPa (lb/ft2)                             19.70 (411.3)           6.312 (131.8)
+ Reynolds number, R,
+   m-1 (ft'1)                    1 .15 x 107 (3.52 x T O 6 ) 3.74 x 106 (1 .14 x 106)
+ Deflection angles, <S,
+   deg                                       -5, 0, 5, 10            -5, 0, 5, 12
+
+                 TABLE III.-  ASSUMED BOUNDARY-LAYER TRANSITION
+
+                                    Assumed transition, Boundary-layer start,
+           Span station                                    percent local chord
+                                    percent local chord
+                                           10.6                    8. 5
+  42.6 percent semispan     .....          30.0                   24.0
+                                           10.0                    8.0
+
+                TABLE IV.- COMPARISON OF CONFIGURATION GEOMETRY
+
+                                               Configuration
+         Quantity
+                                  ARW-2             Reference 7      Reference 8
+                                       Wing
+                                  10.30                6.78             7.50
+ Taper ratio . . . . . .           0.400               0.364            0.418
+ Sweep (0.25c), deg . . .           27                  42               33
+
+                                 Control surface
+                            Inboard   Midspan       1         2          3
+                            0.1 50c   0.200c    0.250c     0.250c     0.219c
+                            0.150b/2 0.250b/2 0.200b/2 0.200b/2       0.102b/2
+14
+
+=== PAGE 17 | img ===
+.125 b/2
+
+                      (a,) Inboard control surface.
+
+                      (b) Midspan control surface.
+        Figure 1.- Planform views of wing showing locations of
+                selected trailing-edge control surfaces.
+
+                                                                         15
+
+=== PAGE 18 | img ===
+                    FLO 22
+                                                           File containing -
+                              Interaction
+                                 loop            0         Original airfoil
+                                                           coordinates
+                  NASHMAC
+                                                 0         Chordwise pressure
+                                                           distributions, C
+
+             Relax boundary layer                0         Boundary-layer
+                                                           displacement
+                                                           thicknesses, 6*
+
+                                                           Relaxed_ boundary
+                                                 0         layer, 6*
+             Add boundary layer
+             to airfoil coordinates
+                                                           Modified airfoil
+                                                 0         coordinates
+
+                                                           Chordwise pressure
+                                                 0         distributions,
+                                                                       CP
+
+                  Calculate
+                hinge moments
+
+   Figure 2.- Flow chart for iterative-interactive procedure.         Subscripts   i
+       and   i-1 refer to the current and previous iterations, respectively.
+
+16
+
+=== PAGE 19 | garbled, img ===
+                                               + Upper surface
+— j. . u —                          -J..D —     x Lower surface
+
+-1.2 - *\            $ = -5°       -1.2                   6 = 0°
+         •i +-                               -t-
+         4-                                   +
+       T +.
+ -.8                                 -.8
+       *                                          %i*'-+
+                 +
+ -.4 - ^           *^*+^             -.4                      +
+                                                     ++t^^ +' +
+CP                                   P
+                                           + /x*          k
+   0 -V                \    *^+       0 —                '       !'
+                                                             •    i
+  .4
+    "~ *    Hinge line — "*"               -H<
+  .8 - J                              .8   t
+
+ 1.2                                 1.2 —
+       d_         ^^r=^=                   CI^_____3IIi^=
+
+-1.6                                -1.6
+                                           •M-
+                                           "*" -h
+-1.2 -  \             6 = 5 °     -1.2 -     \ 4-         6 = 10°
+         -f-
+          -t-
+-.8                                  -.8 —
+       *                                              "*""*' 4- _
+-.4              -•--.,.,.
+CP         xx,,-o-x - .,    ^L      C
+                                           •*•  X1"*   V "
+   0 - " /           "'•. -            o
+                                        ~ ./
+                                      :      4
+  .4 -1                  '"'*"-,,-' — *-" -                    "
+                                           ~H                     1
+  .8 _ *                              .8   {
+
+ 1.2 -                              1.2
+      CT_         ^^I^^-^                  ^^~.            __— — — H~
+
+                                                             / Y
+                                                                  = 0.20
+                                                              b/2
+  of inboard control surface. M^ = 0.60; a = 1.63°; q^ = 19.70 kPa
+  (411.3 lb/ft2).
+                                                                         17
+
+=== PAGE 20 | img ===
+                             6 = -5°                                             6 = 0°
+         .015
+
+         .010              Upper surface                                       Upper surface
+     11
+     c*
+         .005
+
+         .010
+
+                           Lower surface                                       Lower surface
+         **
+
+                    J       I                                                  J       I
+                               x/c                                                 x/c
+
+         .015 r-              6 = 5"
+
+         .010
+                            Upper surface                                     Upper surface
+     l!
+     c*
+         .005
+
+           01—
+
+         .010
+                            Lower surface                                     Lower surface
+     fr -005
+
+                               x/c                                                x/c
+
+     Figure 4.- Chordwise boundary-layer displacement thickness distributions
+                                  / y           \
+         along center line               = 0.20) of inboard control surface.               M^ = 0.60;
+
+         a = 1.63°;       q   = 19.70 kPa (411.3 lb/ft2).
+
+18
+
+=== PAGE 21 | img ===
+                 cm
+                  70
+             in.
+             25
+
+             20
+
+             15
+         cc,
+             10
+
+                   — Control-surf ace location
+                         I      1
+                        i    I    i    i
+                                                                   1.0
+                                           y
+                                           wz
+
+Figure 5.- Spanwise load distribution for inboard control surface deflected.
+           M^ = 0.60; a = 1.63°; q^ = 19.70 kPa (411.3 lb/ft2).
+
+                            N-m      in-lb
+      u                       U      - u                  .8
+
+                              -10     -100
+           Q
+     -.1                                                  .6 —           ^c
+                                                                       JD
+               T              -20                                  e Y^
+                A.x                   -200 H                   cr
+     -.2 —                    -30                    CL   .4 -
+                                     - -300
+                            - -40
+     -.3 —                           - -400               .2 —
+
+     -.4    I        i   i                                n             i    i
+           - 5  0   5   1 0                                     - 5 0 5 1
+                6 , deg                                             6 , deg
+
+Figure 6.- Hinge-moment and lift coefficients for inboard control surface.
+           M^ = 0.60; a = 1.63°; q^ = 19.70 kPa (411.3 lb/ft2).
+
+                                                                               19
+
+=== PAGE 22 | garbled, img ===
+                                                  + Upper surface
+    -l.b r—                             -J..O —    x Lower surface
+
+                           6 = ~5°    -1.2                      6 = 0°
+    -1.2
+                                                   ***>
+     -.8 - *     ~"\                      -.8    ^        4
+                                                           •t
+           *-        t                          *"          4
+                                                             4 + *+ . +
+     -.4 - f           ^ + T + + .      -•*
+    cP          ^, • • • " ' " ' " " •  +  £                         *'
+           + ,.-X''"        •              P    •+ ,v^"X*      "      1
+       0 - ;'                • x *l* * .    o _ /               **   \
+           *                   x 1   *~                               1
+           *"                  ^^•1"   I        ^
+      .4 - '     Hinge line ^      * ' '     -4 - .                 "I"
+           •5                                   \
+      .8 - i                               .8 jf
+
+     1.2 -                               1.2 —
+           cH7          __—- - -^===^           CH^" __^^
+
+    -1.6 r-                             -1.6 —
+
+                           6   5°                               6 = 12°
+    -1.2                     =        -1.2
+
+     -.8                                  -.8 —
+                            ^ +  4- I '
+     -.4 -                               -.4 —
+    Cp                                   CP     +
+       0 -  .--'' "       ' ,         *      0
+           t-x               .        *         *- *            *
+                                            4
+      .4                      " " " . . '  - r— "
+           .                                                          r
+        - :                               -8 -t
+      .8                                        *
+
+    1.2                                   1.2 —
+                           ,    |
+                                                C^~~"        ____^ — -- 4-
+   1 1 mi V t                                                     / Y
+        a T • ^V^^\*"^t.TT ^^ 1"4 1" ^fC«ll*»^k ^1 ^'^•••^V'Vtlti ^x»
+                                                                  \b/2
+      of midspan control surface. M^ = 0.80; a = 1.10°; q^ = 6.31 kPa
+      (131 .8 lb/ft2) .
+20
+
+=== PAGE 23 | img ===
+          .020                         6 = -5"                                                              6 = 0°
+
+          .015
+                                   Upper surface                                                        Upper surface
+
+          -010
+
+          .005
+
+                                   J          I
+
+          .010i-
+
+                                   Lower surface                                                        Lower surface
+   c*     -005 nos
+
+            OL_
+                                                                                     I         I          I         I         I         I
+                                       x/c                                                                    x/c
+
+          .020                      6 = 5°                                                                   6 = 12°
+
+          .015
+
+                                  Upper surface                                                         Upper surface
+   £ -010
+
+          .005
+
+          .010
+                                  Lower surface                                                        Lower surface
+      r .005
+
+             Ol—
+                         j         I         i         I
+                                       x/c
+
+Figure 8.- Chordwise boundary-layer displacement thickness distributions
+                                        I y                  \
+     along center line                    -       = 0.601 of midspan control surface.                                     M^ = 0.80;
+                                          b/2
+     a = 1.10°;                        6.31     kPa (1 31 .8 lb/ft2) .
+
+                                                                                                                                                21
+
+=== PAGE 24 | img ===
+            in.  cm
+            25
+                 60 r-
+
+            20
+
+            15
+        cc,
+            10
+
+            OL
+                                            y
+                                           b/2
+
+ Figure 9.- Spanwise load distribution for midspan control surface deflected.
+             M^ = 0.80; a = 1.10°; q = 6.31 kPa (131.8 lb/ft2).
+
+                               N~m     jn-lb
+        Or-                                              .8r
+
+       -.1                      -5                       .6
+                                         -50
+
+                                -10                      .4
+                                         -100
+
+      ~ 3 —                                              .2
+                                         -150
+      -.4-L
+                           12                                 -5   0   5     12
+                                                                   6 , deg
+
+  Figure 10.- Hinge-moment and lift coefficients for midspan control surface.
+             M^ = 0.80; a= 1.10°; q^ = 6.31 kPa (131.8 lb/ft2).
+
+22
+
+=== PAGE 25 | img ===
+                                                         Reference 7
+
+        -.1
+
+        -.3
+
+        -.4
+            -15 -10 -5   5 10 15
+                     6 , deg
+
+Figure 11.- Hinge-moment coefficient as a function of control-surface
+               deflection angle for references 7 and 8.
+
+                                            O Calculated
+                                            D Measured
+
+                   -.2
+
+                   -.3   L
+                        -15 -10
+
+   Figure 12.- Calculated and measured hinge-moment coefficients
+       for inboard control surface. M^ = 0.60; a = 1.63°.
+       (Measurements were obtained by Thomas A. Byrdsong in
+      Langley 8-foot transonic pressure tunnel.)
+                                                                        23
+
+=== PAGE 26 | img ===
+1 Report No.                   2 Government Accession No       3 Recipient's Catalog No
+  NASA TM-78664
+4 Title and Subtitle                                           5 Report Date
+   CONTROL-SURFACE HINGE-MOMENT CALCULATIONS FOR A               September 1 978
+   HIGH-ASPECT-RATIO SUPERCRITICAL WING                        6 Performing Organization Code
+
+7 Author(s)                                                    8 Performing Organization Report No
+   Boyd Perry III                                                L-12219
+                                                               10. Work Unit No
+9 Performing Organization Name and Address                       516-53-03-21
+   NASA Langley Research Center
+   Hampton, VA 23665                                           11 Contract or Grant No
+
+                                                               13 Type of Report and Period Covered
+12 Sponsoring Agency Name and Address                            Technical Memorandum
+   National Aeronautics and Space Administration
+   Washington, DC 20546                                        14 Sponsoring Agency Code
+
+15 Supplementary Notes
+
+16 Abstract
+   An analytical investigation has been conducted to estimate the hinge moments, at
+   selected flight conditions, resulting from deflecting two trailing-edge control
+   surfaces (one inboard and one midspan) on a high-aspect-ratio, swept, fuel-
+   conservative wing with a supercritical airfoil. This report gives hinge-moment
+   results obtained from procedures which employ a recently developed transonic
+   analysis.  In this procedure a three-dimensional inviscid transonic aerodynamics
+   computer program is combined with a two-dimensional turbulent-boundary-layer
+   program in order to obtain an interacted solution.   These results indicate that
+   trends of the estimated hinge moment as a function of deflection angle are similar
+   to those from experimental hinge-moment measurements made on wind-tunnel models
+   with swept supercritical wings tested at similar values of free-stream Mach number
+   and angle of attack.
+
+17 Key Words (Suggested by Author(sl)         18 Distribution Statement
+   Transonic flow                                Unclassified - Unlimited
+   Compressible flow
+   Control-surface hinge moments
+   Trailing-edge controls
+                                                                      Subject Category 02
+19 Security Classif (of this report)  20 Security Classif (of this page)  21 No of Pages  22. Price'
+   Unclassified               Unclassified                 23          §4.00
+                  * For sale by the National Technical Information Service, Springfield, Virginia 22161
+                                                                              NASA-Langley, 1978
+
+=== PAGE 27 | img ===
+National Aeronautics and             THIRD-CLASS BULK RATE            Postage and Fees Paid
+                                                                      National Aeronautics and
+Space Administration                                                  Space Administration
+                                                                      NASA-451
+Washington, D.C.
+20546
+Official Business
+Penalty for Private Use, $300
+
+                         14    1 10,ft,          082178 S00673HO
+                       NORTHBOP UNIV
+                       ATTN: ALOHBI LIBRARY
+                        1155 BEST ARBOR VITAE ST
+                       INGLEHOOD CA 90306
+
+NASA                                                             POSTMASTER:    If Undeliverable (Section 158
+                                                                                Postal Manual) Do Not Return

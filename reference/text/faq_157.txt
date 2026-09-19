@@ -1,0 +1,42 @@
+# ID: faq_157
+# SOURCE: https://saeaerodesign.com/cdsweb/rqa/ViewFAQ.aspx?faqnum=157
+# ORIGINAL: reference/raw/faq_157.html
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type html | 1 pages | ~156 tokens
+
+=== PAGE 1 ===
+# SAE Aero Design
+
+Menu
+
+Click the button to view more details of the error.
+
+Click here to see what went wrong
+Dismiss
+
+FAQ #157
+
+Student Member Affiliation
+
+Last Updated On
+12/13/2024 02:54:17 PM
+by
+
+brett.foley
+
+Question
+
+Do members need to be affiliated on both the www.sae.org site and the www.saeaerodesign.com site?
+
+Answer
+
+Only students that need to submit documents and ask rules questions must be affiliated on www.saeaerodesign.com. Otherwise, all team members and faculty advisors must be affiliated on www.sae.org.
+
+No Attachments
+
+| Rule Numbers |
+
+| 2016:1.2.2 |
+
+| 2025:1.2 |
+
+SAE International Privacy Policy

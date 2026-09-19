@@ -1,0 +1,975 @@
+# ID: wood_handbook_ch12
+# SOURCE: https://www.fpl.fs.usda.gov/documnts/fplgtr/fplgtr282/chapter_12_fpl_gtr282.pdf
+# ORIGINAL: reference/raw/wood_handbook_ch12.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 18 pages | ~22236 tokens
+# NOTE: Wood Handbook ch12 mechanical properties of plywood/panels (shear-web design)
+# FLAG lowtext: pages 16
+# TOC:
+#   Contents -> PDF page 1
+#   Elastic Properties -> PDF page 2
+#     Modulus of Elasticity -> PDF page 2
+#     Shear Modulus -> PDF page 3
+#   Strength Properties -> PDF page 3
+#   Panel Products -> PDF page 3
+#     Plywood -> PDF page 3
+#     Oriented Strandboard (OSB) -> PDF page 4
+#     Particleboard -> PDF page 4
+#     Hardboard -> PDF page 4
+#     Medium-Density Fiberboard -> PDF page 5
+#   Timber Elements/Structural Composite Lumber -> PDF page 6
+#     Glued-Laminated Timber -> PDF page 6
+#     Structural Composite Lumber -> PDF page 6
+#     Cross-Laminated Timber -> PDF page 7
+#   Wood–Nonwood Composites -> PDF page 10
+#     Wood–Plastic Composite -> PDF page 10
+#     Inorganic-Bonded Composites -> PDF page 11
+#   Testing Standards -> PDF page 11
+#   Literature Cited -> PDF page 12
+
+=== PAGE 1 ===
+                                                                                   CHAPTER 12
+
+Mechanical Properties of Wood-Based
+
+Composite Materials
+
+Zhiyong Cai, Project Leader
+C. Adam Senalik, Research General Engineer
+Robert J. Ross, Supervisory Research General Engineer
+
+    Contents                                                The term composite is used to describe any wood material
+                                                            bonded together with adhesives. The current product mix
+    Elastic Properties  12–2                                ranges from fiberboard to laminated beams and components.
+      Modulus of Elasticity   12–2                          For this chapter, wood-based composite materials are
+      Shear Modulus  12–3                                   classified into the following categories: panel products
+                                                            (plywood, oriented strandboard (OSB), particleboard,
+    Strength Properties  12–3                               fiberboard, medium-density fiberboard (MDF), hardboard);
+    Panel Products  12–3                                    structural timber products (glued-laminated timber (glulam),
+      Plywood   12–3                                        laminated veneer lumber (LVL), laminated strand lumber,
+      Oriented Strandboard (OSB)  12–4                      parallel strand lumber); and wood–nonwood composites
+                                                            (wood fiber–thermoplastics, inorganic-bonded composites).
+      Particleboard  12–4
+      Hardboard  12–4                                       Wood-based composites are used for a number of structural
+                                                            and nonstructural applications. Product lines include panels
+      Medium-Density Fiberboard  12–5                       for both interior and exterior uses, furniture components,
+    Timber Elements/Structural Composite Lumber  12–6       and support structures in buildings. Knowledge of the
+      Glued-Laminated Timber  12–6                          mechanical properties of these products is of critical
+      Structural Composite Lumber  12–6                     importance to their proper use.
+      Cross-Laminated Timber  12–7                          Wood-based composites are made from a wide range of
+    Wood–Nonwood Composites  12–10                          materials—from fibers obtained from underutilized small-
+                                                            diameter or plantation trees to structural lumber. Regardless
+      Wood–Plastic Composite  12–10                         of the raw material used in their manufacture, wood-based
+      Inorganic-Bonded Composites  12–11                    composites provide uniform and predictable in-service
+    Testing Standards  12–11                                performance, largely as a consequence of standards used
+    Literature Cited  12–12                                 to monitor and control their manufacture. The mechanical
+                                                            properties of wood composites depend upon a variety of
+                                                            factors, including wood species, forest management regimes
+                                                            (naturally regenerated, intensively managed), the type of
+                                                            adhesive used to bind the wood elements together, geometry
+                                                            of the wood elements (fibers, flakes, strands, particles,
+                                                            veneer, lumber), and density of the final product (Cai 2006).
+                                                            A wide range of engineering properties are used to
+                                                            characterize the performance of wood-based composites.
+                                                            Mechanical properties are typically the most frequently
+                                                            used to evaluate wood-based composites for structural and
+                                                            nonstructural applications. Elastic and strength properties
+                                                            are the primary criteria to select materials or to establish
+                                                            design or product specifications. Elastic properties include
+                                                            modulus of elasticity (MOE) in bending, tension, and
+                                                            compression. Strength properties usually reported include
+                                                            modulus of rupture (bending strength), compression
+                                                            strength parallel to surface, tension strength parallel to
+                                                            surface, tension strength perpendicular to surface (internal
+
+                                                                                                               12–1
+
+=== PAGE 2 ===
+                                                                        General Technical Report FPL–GTR–282
+
+               Table 12–1. Static bending properties of different wood and wood-based composites
+                                                                    Static bending properties
+                                           Specific    Modulus of elasticity      Modulus of rupture
+               Material                     gravity    GPa      (×106 lb in–2)   MPa           (lb in–2)
+               Clear wood
+                White oak                    0.68     12.27        (1.78)       104.80         (15,200)
+                Red maple                    0.54     11.31        (1.64)        92.39         (13,400)
+                Douglas-fir (Coastal)        0.48     13.44        (1.95)        85.49         (12,400)
+                Western white pine           0.38     10.07        (1.46)        66.88          (9,700)
+                Longleaf pine                0.59     13.65        (1.98)        99.97         (14,500)
+               Panel products
+                Hardboard                  0.9–1.0   3.10–5.52   (0.45–0.80)   31.02–56.54  (4,500–8,200)
+                Medium-density fiberboard  0.7–0.9     3.59        (0.52)        35.85          (5,200)
+                Particleboard              0.6–0.8   2.76–4.14   (0.40–0.60)   15.17–24.13  (2,200–3,500)
+                Oriented strandboard       0.5–0.8   4.41–6.28   (0.64–0.91)   21.80–34.70  (3,161–5,027)
+                Plywood                    0.4–0.6   6.96–8.55   (1.01–1.24)   33.72–42.61  (4,890–6,180)
+               Structural timber products
+                Glued-laminated timber     0.4–0.6   9.00–14.50 (1.30–2.10)    28.61–62.62   (4,150–9,080)
+                Laminated veneer lumber    0.4–0.7   8.96–19.24 (1.30–2.79)    33.78–86.18  (4,900–12,500)
+               Wood–nonwood composites
+                Wood plastic                         1.53–4.23   (0.22–0.61)   25.41–52.32   (3,684–7,585)
+
+bond strength), shear strength, fastener holding capacity,    materials and corresponding changes in design information.
+and hardness. Model building codes in the United States       Consequently, this chapter primarily focuses on presenting
+stipulate that plywood used for structural applications such  fundamental mechanical property information for wood-
+as subflooring and sheathing must meet the requirements       based composite materials. For design procedures and
+of certain U.S. Department of Commerce standards.             values, the reader is encouraged to contact appropriate
+Voluntary Product Standard PS 1–07 for construction and       industry trade association or product manufacturers. Current
+industrial plywood (NIST 2007) and Performance Standard       design information can be readily obtained from their
+PS 2–04 for wood-based structural-use panels (NIST 2004)      websites, technical handbooks, and bulletins.
+spell out the ground rules for manufacturing plywood and      The organization of this chapter follows closely that of
+establishing plywood or OSB properties, respectively. These   Chapter 5. Basic mechanical property information is
+standards have evolved over time from earlier documents       presented following a brief background discussion of these
+(O’Halloran 1979, 1980; APA 1981) and represent a             products. A discussion of performance and testing standards
+consensus opinion of the makers, sellers, and users of        covering their manufacture and use is also presented.
+plywood products as well as other concerned parties.
+Many of the questions that arise with wood-based              Elastic Properties
+composites have to do with their mechanical properties,
+especially how properties of one type of material compare     Modulus of Elasticity
+with those of clear wood and other wood products.             Elasticity implies that deformations produced by low stress
+Although an extensive review that compares all properties     below the proportional limit are completely recoverable
+of wood-based materials and products is beyond the scope      after loads are removed. When loaded to stress levels
+of this chapter, Table 12–1 provides some insight to how      above the proportional limit, plastic deformation or failure
+static bending properties of these materials vary and         occurs. Typically, the stress–strain curve for wood-based
+how their properties compare with those of solid, clear       composites is linear below the proportional limit. The slope
+wood. Although the mechanical properties of most wood         of the linear curve is called the MOE. In compression or
+composites might not be as high as those of solid wood,       tensile tests, this slope is sometime referred to as Young’s
+they provide very consistent and uniform performance.         modulus to differentiate it from bending MOE. Bending
+The mechanical property data presented in this chapter        MOE is a measure of the resistance to bending deflection,
+were obtained from a variety of reports of research           which is relative to the stiffness. Young’s modulus is a
+conducted to develop basic property information for a         measure of resistance to elongation or shortening of a
+wide range of wood-based composite materials. The             member under tension or compression. The procedure to
+wood-based composites industry is very dynamic, with          determine MOE is fully described in ASTM D1037 for
+changes occurring frequently in the manufacture of these      fiber- and particle-based panel products, ASTM D3043 for
+
+12–2
+
+=== PAGE 3 ===
+CHAPTER 12 | Mechanical Properties of Wood-Based Composite Materials
+
+structural wood-based panels, ASTM D5456 for structural       to determine the strength in each of the primary panel
+composite lumber products, ASTM D7031 for wood–plastic        directions.
+composites, and ASTM D7341 for glulam products.               Tension strength perpendicular-to-surface (internal bond
+Shear Modulus                                                 strength) is the maximum stress sustained by a specimen
+                                                              from a test with tension forces applied perpendicular to the
+Shear modulus, also called modulus of rigidity, indicates     surface. Tests are made on specimens in the dry condition
+the resistance to deflection of a member caused by            to determine the resistance of the specimen to delamination
+shear stresses. Shear stress is different from tension or     or splitting in the direction perpendicular to the plane of the
+compression stress in that it tends to make one side of a     board.
+member slip past the other side of a member adjacent to
+it. There are two main types of shear in different planes     Compression strength parallel-to-surface is the maximum
+of wood-based panels: interlaminar shear and edgewise         stress sustained by a specimen from a test with compression
+shear or shear through-the-thickness. Interlaminar shear      forces applied parallel to the surface. Tests are made with
+is also commonly called planar shear (or rolling shear, or    the long dimension of the specimen cut both parallel
+horizontal shear) in plywood panels to describe stress that   and perpendicular to the long dimension of the board to
+acts between the veneers that are glued with grain direction  determine the material’s resistance to crushing in each of the
+in adjacent pieces perpendicular to one another. For          primary panel directions.
+example, when the plywood panel is loaded in the middle       Interlaminar shear (planar shear) indicates the ability to
+with its two ends simply supported, the layers or veneers     resist internal slipping of one layer upon another within
+tend to slip horizontally past each other as the panel bends.  the panel. It is used to describe the glue line or bonding
+The glue-bonding between the laminates of veneers resists     performance inside or between the test materials.
+the slipping and often dictates the panel stiffness. Edgewise
+shear is also commonly called racking shear. The moduli of    Hardness is measured as resistance to indentation using a
+rigidity vary within and between species, resin application,  modified Janka hardness test, measured by the load required
+moisture content, and specific gravity. The procedure to      to embed an 11.3-mm (0.444-in.) diameter ball to one-half
+determine different shear moduli for fiber- and particle-     its diameter.
+based panels is described in ASTM D1037 and for structural    Fastener holding strength is the maximum resistance to
+panels in ASTM D3044.                                         separate or withdraw a fastener in a plane normal to the
+                                                              testing face. It usually contains three tests: nail withdrawal,
+Strength Properties                                           nail-head pull-through, and direct screw withdrawal.
+Strength refers to the maximum stress that can be
+developed in a member due to applied loads prior to           Panel Products
+failure. Mechanical properties most commonly measured         Plywood
+and represented as “strength properties” for design include
+modulus of rupture in bending, tension strength parallel-     Plywood is separated in to two general classes:
+to-surface, tension strength perpendicular-to-surface,        (a) construction and industrial plywood and (b) hardwood
+compression strength parallel-to-surface, shear strength,     and decorative plywood. Construction and industrial
+fastener holding strength, and hardness. Strength tests are   plywood are covered by Product Standard PS 1–07
+typically made on specimens at moisture equilibrium under     (NIST 2007), and hardwood and decorative plywood
+prescribed conditions or after soaking. The procedures        are covered by American National Standard ANSI/
+to determine strengths for wood-based composites are          HPVA–1–2004 (HPVA 2004). Each standard recognizes
+described in ASTM D1037, ASTM D3044, ASTM D5456,              different exposure durability classifications, which are
+ASTM D3737, and ASTM D7031.                                   primarily based on moisture resistance of the adhesive
+                                                              and the grade of veneer used. In addition, model building
+Modulus of rupture reflects the maximum load-carrying         codes require that plywood manufacturers be inspected
+capacity of a member in bending and is proportional to        and their products certified for conformance to PS 1–07,
+maximum moment borne by the specimen. Modulus of              PS 2–04, APA PRP–108, or TECO PRP–133 (TECO 1991)
+rupture is an accepted measure of strength, although it is not  by qualified independent third-party agencies on a periodic
+a true stress because the formula by which it is computed is  unannounced basis. With PS 1–07, as long as a plywood
+valid only to the elastic limit (McNatt 1973).                panel is manufactured using the veneer grades, adhesive,
+Tension strength parallel-to-surface is the maximum           and construction established in the standard’s prescriptive
+stress sustained by a specimen from a test with tension       requirements, the panel is by definition acceptable.
+forces applied parallel to the surface. Tests are made with   All hardwood plywood represented as conforming to
+the long dimension of the specimen cut both parallel          American National Standard ANSI/HPVA–1–2004 (HPVA
+and perpendicular to the long dimension of the board          2004) is identified by one of two methods: by marking each
+
+                                                                                                                  12–3
+
+=== PAGE 4 ===
+                                                                        General Technical Report FPL–GTR–282
+             Table 12–2. Selected properties of plywood sheathing productsa
+                                                  Static bending
+                                                                Fiber stress at
+                                                                proportional    Rail shear   Glue line shear
+                                       MOE           MOR            limit        strength       strength
+                           Specific       (×106
+             Species       gravity GPa lb in–2)   MPa (lb in–2) GPa (lb in–2) MPa (lb in–2) MPa (lb in–2)
+             Baldcypress    0.50   7.58   (1.10)  39.23 (5,690) 29.4 (4,260) 5.6       (805)   2.7   (389)
+             Douglas-fir    0.53   7.45   (1.08)  41.37 (6,000) 39.3 (5,700) 3.8       (556)   1.4   (207)
+             Lauan          0.44   7.43   (1.08)  33.72 (4,890) 28.1 (4,070) 4.3       (628)   1.3   (192)
+             Western        0.41   8.55   (1.24)  37.37 (5,420) 33.3 (4,830) 4.6       (674)   1.7   (240)
+              redcedar
+             Redwood        0.41   6.96   (1.01)  42.61 (6,180) 37.4 (5,420) 5.3       (769)   1.5   (220)
+             Southern Pine  0.57   7.70   (1.12)  37.09 (5,380) 26.2 (3,800) 5.5       (800)   1.6   (233)
+             aFrom Biblis (2000).
+
+panel with the Hardwood Plywood & Veneer Association          Particleboard
+(HPVA) plywood grade stamp or by including a written          Particleboard is typically made in three layers. The faces
+statement with this information with the order or shipment.   of the board consist of fine wood particles, and the core
+If design calculations are desired, a design guide is provided  is made of the coarser material (Chap. 11). Particleboard
+by the APA–The Engineered Wood Association in Plywood         is used for furniture cores and case goods, where it is
+Design Specification (PDS) and APA Technical Note N375B       typically overlaid with other materials for decorative
+(APA 1995a,b). The design guide contains tables of grade      purposes. Particleboard can be used in flooring systems, in
+stamp references, section properties, and allowable stresses  manufactured houses, for stair treads, and as underlayment.
+for plywood used in construction of buildings and similar     Requirements for grades of particleboard and particleboard
+structures. Table 12–2 shows selected properties of various   flooring products are specified by the American National
+species of plywood.                                           Standard for Particleboard A208.1-1999 (CPA 1999).
+                                                              Table 12–4 represents some of selected properties of
+Oriented Strandboard (OSB)                                    different particleboard manufacturers.
+Oriented strandboard is an engineered, structural-use panel
+manufactured from thin wood strands bonded together           Hardboard
+with water-resistant adhesive under heat and pressure. It     Basic hardboard physical properties for selected products
+is used extensively for roof, wall, and floor sheathing in    are presented in ANSI A135.4–2004 (CPA 2004a).
+residential and commercial construction. Design capacities    The uses for hardboard can generally be grouped as
+of performance-rated products, which include OSB and          construction, furniture and furnishings, cabinet and store
+waferboard, can be determined by using procedures outlined    work, appliances, and automotive and rolling stock.
+in Technical Note N375B (APA 1995a). In this reference,       Typical hardboard products are prefinished paneling (ANSI
+allowable design strength and stiffness properties, as well   A135.5–2004 (CPA 2004b)), house siding (ANSI A135.6–
+as nominal thickness and section properties, are specified    2006 (CPA 2006)), floor underlayment, and concrete form
+based on the span rating of the panel. Additional adjustment  board. Table 12–5 shows selected physical and mechanical
+factors based on panel grade and construction are also        properties of hardboard from different manufacturers.
+provided. Table 12–3 shows selected properties of OSB         Hardboard siding products come in a great variety of
+obtained from the literature.                                 finishes and textures (smooth or embossed) and in different
+                                                              sizes. For application purposes, the Composite Panel
+Under PS 2–04, a manufacturer is required to enter into an
+                                                              Association (CPA) classifies siding into three basic types:
+agreement with an accredited testing agency to demonstrate
+that its panels conform to the requirements of the chosen     Lap siding—boards applied horizontally, with each board
+standard. The manufacturer must also maintain an in-plant     overlapping the board below it
+quality control program in which panel properties are         Square edge panels—siding intended for vertical
+regularly checked, backed by a quality assurance program      application in full sheets
+administered by an independent third-party. The third-party
+agency must visit the mill on a regular unannounced basis.    Shiplap edge panel siding—siding intended for vertical
+The agency must confirm that the in-plant quality control     application, with the long edges incorporating shiplap joints
+program is being maintained and that panels meet the          The type of panel dictates the application method. The CPA
+minimum requirements of the standard.                         administers a quality conformance program for hardboard
+
+12–4
+
+=== PAGE 5 ===
+CHAPTER 12 | Mechanical Properties of Wood-Based Composite Materials
+
+      Table 12–3. Selected properties of oriented strandboard (OSB) products
+                                                     Bending MOE                    Bending MOR
+                                                                                                              Internal
+                                                Parallel     Perpendicular      Parallel    Perpendicular      bond
+                               Mill Specific         (×106          (×106
+      Reference      Species   no.   gravity GPa    lb in–2)  GPa   lb in–2)  MPa (lb in–2) MPa (lb in–2) MPa (lb in–2)
+      Biblis        Southern    1     0.80   4.41   (0.640) 2.89   (0.419)   23.8 (3,445) 24.2 (3,515) 0.57       (83)
+      (1989)          Pine      2     0.70   4.78   (0.694) 2.61   (0.378)   26.0 (3,775) 22.1 (3,205) 0.28       (41)
+                                3     0.68   5.75   (0.834) 3.17   (0.460)   32.0 (4,645) 23.8 (3,445) 0.32       (47)
+      Pu and        Southern    4     0.51   4.41   (0.640) 2.40   (0.348)   21.8 (3,161) 25.4 (3,685) 0.23       (34)
+      others          Pine      5     0.60   5.67   (0.822) 2.61   (0.378)   27.8 (4,039) 27.1 (3,925) 0.28       (41)
+      (1992)                    6     0.58   4.41   (0.640) 2.97   (0.431)   23.9 (3,473) 28.7 (4,165) 0.26       (38)
+                     Aspen      7     0.65   6.28   (0.911) 2.03   (0.294)   32.2 (4,672) 30.4 (4,405) 0.43       (62)
+                                8     0.66   5.69   (0.825) 1.92   (0.278)   31.6 (4,584) 32.0 (4,645) 0.41       (60)
+                                9     0.74   6.31   (0.915) 2.79   (0.404)   34.7 (5,027) 33.7 (4,885) 0.34       (50)
+      Wang and      Southern   10     0.63   5.01   (0.726) 2.26   (0.327)   30.2 (4,379) 16.8 (2,436) 0.36       (52)
+      others          Pine     11     0.66   5.30   (0.769) 2.32   (0.336)   28.1 (4,075) 14.4 (2,088) 0.43       (62)
+      (2003a)                  12     0.67   5.12   (0.742) 2.56   (0.371)   30.7 (4,452) 21.1 (3,060) 0.32       (46)
+                               13     0.66   4.91   (0.712) 2.24   (0.325)   28.3 (4,104) 19.8 (2,871) 0.38       (55)
+                   Hardwood 14        0.68   5.15   (0.747) 1.77   (0.257)   26.9 (3,901) 11.8 (1,711) 0.28       (40)
+                     mixture   15     0.67   5.87   (0.851) 1.40   (0.204)   33.9 (4,916)   7.8 (1,131) 0.23      (33)
+                               16     0.70   6.73   (0.976) 2.25   (0.326)   36.9 (5,351) 15.8 (2,291) 0.45       (66)
+                     Aspen     17     0.63   6.50   (0.943) 3.10   (0.450)   38.0 (5,510) 21.5 (3,118) 0.28       (41)
+                               18     0.62   7.90   (1.146) 3.10   (0.450)   38.8 (5,626) 23.2 (3,364) 0.46       (66)
+                               19     0.61   6.10   (0.885) 2.50   (0.363)   30.7 (4,452) 19.7 (2,857) 0.34       (49)
+                               20     0.61   6.50   (0.943) 1.80   (0.261)   35.5 (5,148) 13.7 (1,987) 0.25       (36)
+                               21     0.66   6.75   (0.979) 2.45   (0.356)   37.3 (5,409) 19.3 (2,799) 0.38       (55)
+                               22     0.63   5.80   (0.840) 2.40   (0.348)   26.9 (3,901) 17.9 (2,596) 0.40       (58)
+
+        Table 12–4. Selected properties of industrial particleboard productsa
+                                        Static bending properties                     Tensile properties
+                                     Modulus of       Modulus of       Modulus of     Ultimate tensile
+                                      elasticity        rupture         elasticity         stress        Internal bond
+               Moisture
+                content   Specific          (×106                             (×106
+        Mill      (%)     gravity   GPa    lb in–2)  MPa    (lb in–2)  GPa   lb in–2)  MPa    (lb in–2)  MPa (lb in–2)
+        A         8.7       0.71    3.0     (0.44)   16.8    (2,430)   2.2    (0.32)   7.72   (1,120)   0.79    (115)
+        B         9.1       0.72    3.5     (0.51)   20.6    (2,990)   2.6    (0.38)   9.38   (1,360)   1.07    (155)
+        C         9.8       0.76    3.5     (0.51)   18.9    (2,740)   2.3    (0.34)   8.27   (1,200)   1.00    (145)
+        H         8.0       0.77    4.0     (0.58)   22.8    (3,310)   3.0    (0.44)  10.89   (1,580)   1.17    (170)
+        J         8.5       0.72    3.0     (0.43)   17.2    (2,500)   1.9    (0.28)   7.45   (1,080)   0.45     (65)
+        K         9.1       0.68    2.8     (0.40)   15.2    (2,206)   1.6    (0.23)   5.58     (810)   0.31     (45)
+        L         9.3      0.62     3.2     (0.46)   17.0    (2,470)   1.8    (0.26)   6.69     (970)   0.48     (70)
+        M         9.7       0.65    3.6     (0.52)   18.9    (2,740)   2.2    (0.32)   8.07   (1,170)   0.69    (100)
+        N         8.3       0.60    3.1     (0.45)   17.0    (2,470)   3.7    (0.54)   8.00   (1,160)   0.31     (45)
+        aFrom McNatt (1973).
+
+for both panel and lap siding. Participation in this program      Medium-Density Fiberboard
+is voluntary and is open to all (not restricted to CPA            Minimum property requirements for MDF are specified
+members). Under this program, hardboard siding products           by the American National Standard for MDF, ANSI
+are tested by an independent laboratory in accordance with        A208.2-2002 (CPA 2002), and some of selected properties
+product standard ANSI A135.6.                                     are given in Table 12–6 from different manufacturers.
+                                                                  Medium-density fiberboard is frequently used in furniture
+                                                                  applications. It is also used for interior door skins, moldings,
+                                                                  flooring substrate, and interior trim components (Cai and
+                                                                  others 2006, Youngquist and others 1993).
+
+                                                                                                                          12–5
+
+=== PAGE 6 ===
+                                                                          General Technical Report FPL–GTR–282
+         Table 12–5. Selected properties of hardboard productsa
+                                                   Modulus of      Modulus of      Ultimate tensile
+                                                    elasticity       rupture           stress        Internal bond
+                             Moisture
+                 Type of     content    Specific         (×106
+         Mill   hardboard      (%)       gravity  GPa    lb in–2)  MPa   (lb in–2)  MPa    (lb in–2)  MPa (lb in–2)
+         A        1/8-in.      4.6       0.9      3.83    (556)   31.44  (4,560)   23.24   (3,370)  1.24    (180)
+         B       standard      6.5       1.02     4.36    (633)   33.92  (4,920)   23.17   (3,360)  2.76    (400)
+         C                     5.2       0.94     4.20    (609)   45.85  (6,650)   37.58   (5,450)  2.17    (315)
+         D                     5.6       0.9      3.32    (482)   38.75  (5,620)   28.61   (4,150)  1.55    (225)
+         E                     6.5       0.95     3.55    (515)   47.50  (6,890)   32.96   (4,780)  3.52    (510)
+         F                     7.7       0.91     3.23    (468)   37.85  (5,490)   25.72   (3,730)  1.93    (280)
+         B        1/4-in.      6.4       1.02     4.45    (645)   33.85  (4,910)   22.61   (3,280)  1.86    (270)
+         E       standard      6.0       0.90     3.88    (563)   38.96  (5,650)   23.65   (3,430)  1.65    (240)
+         A        1/4-in.      4.9       0.99     5.30    (768)   53.02  (7,690)   31.58   (4,580)  1.79    (260)
+                 tempered
+         F        1/4-in.      6.9       0.98     5.14    (745)   55.57  (8,060)   30.61   (4,440)  1.86    (270)
+                 tempered
+         aFrom McNatt and Myers (1993).
+                  Table 12–6. Selected properties of medium-density fiberboard productsa
+                                                                                 Screw-
+                                   Modulus of      Modulus of                    holding
+                                     rupture        elasticity   Internal bond    edge      Capacity face
+                  Mill Density                           (×106
+                  no.   (g cm–3) MPa     (lb in–2)  GPa lb in–2) MPa (lb in–2) kg     (lb)   kg    (lb)
+                  1       0.73    33.6   (4,873)  3.21   (466)   0.86    (125) 117 (257)    148 (326)
+                  2       0.90    34.0   (4,932)  3.97   (576)   0.94    (136) 147 (325)    185 (407)
+                  3       0.79    23.2   (3,366)  2.98   (432)   1.94    (282) 150 (330)    202 (445)
+                  4       0.82    39.3   (5,703)  4.38   (635)   0.83    (121) 114 (252)    148 (326)
+                  5       0.95    24.6   (3,565)  3.56   (517)   0.92    (133) 184 (405)    231 (509)
+                  6       0.80    36.4   (5,278)  3.99   (578)   0.71    (103) 143 (315)    183 (404)
+                  7       0.77    37.4   (5,421)  3.94   (572)   1.23    (179) 163 (360)    210 (464)
+                  8       0.71    35.2   (5,107)  3.34   (485)   1.09    (158) 147 (324)    189 (416)
+                  aFrom Suchsland and others (1979).
+Timber Elements/Structural                                      Structural Glued-Laminated Timber” (AITC 2007). This
+                                                                specification contains design values and recommended
+Composite Lumber                                                modification of stresses for the design of glulam timber
+                                                                members in the United States. The National Design
+Glued-Laminated Timber
+                                                                Specification for Wood Construction (NDS) summarizes
+Structural glued-laminated timber (glulam) is an engineered,    the design information in ANSI/AITC 190.1 and defines
+stress-rated product that consists of two or more layers of     the practice to be followed in structural design of glulam
+lumber that are glued together with the grain of all layers,    timbers (AF&PA 2005). APA–The Engineered Wood
+which are referred to as laminations, parallel to the length.   Association has also developed design values for glulam
+Table 12–7 provides some selected properties of glulam          under National Evaluation Report 486, which is recognized
+products from different research studies.                       by all the building codes.
+Douglas–Fir–Larch, Southern Pine, yellow-cedar, Hem–Fir,
+and Spruce–Pine–Fir are commonly used for glulam in the         Structural Composite Lumber
+United States. Nearly any species can be used for glulam        Structural composite lumber (SCL) products are
+timber, provided its mechanical and physical properties are     characterized by smaller pieces of wood glued together
+suitable and it can be properly glued. Industry standards       into sizes common for solid-sawn lumber. One type of
+cover many softwoods and hardwoods, and procedures are          SCL product is manufactured by laminating veneer with all
+in place for using other species.                               plies parallel to the length. This product is called laminated
+                                                                veneer lumber (LVL) and consists of specially graded
+Manufacturers of glulam timber have standardized the target
+                                                                veneer. Another type of SCL product consists of strands of
+design values in bending for beams. For softwoods, these
+                                                                wood or strips of veneer glued together under high pressures
+design values are given in “Standard for Wood Products:
+                                                                and temperatures. Depending upon the component material,
+
+12–6
+
+=== PAGE 7 ===
+CHAPTER 12 | Mechanical Properties of Wood-Based Composite Materials
+
+                    Table 12–7. Selected properties of glulam products
+                                                                         Static bending properties
+                                                                      Modulus of       Modulus of
+                                              Moisture                 elasticity        rupture
+                                              content    Number of           (×106
+                    Reference      Species      (%)     laminations   GPa   lb in–2)  MPa   (lb in–2)
+                    Manbeck       Red maple     12           8       12.3    (1.78)  62.6   (9,080)
+                    and others                  12          12       12.2    (1.77)  55.0   (7,980)
+                    (1993)                      12          16       12.3    (1.78)  54.2   (7,860)
+                    Moody          Yellow        8.2         8       13.0    (1.89)  55.6   (8,060)
+                    and others      poplar       7.5        12       13.4    (1.94)  52.1   (7,560)
+                    (1993)                       8          17       12.3    (1.79)  45.3   (6,570)
+                    Shedlauskus    Red oak      12.8         8       13.0    (1.88)  60.5   (8,770)
+                    and others                  11.1        18       12.8    (1.86)  46.0   (6,670)
+                    (1996)
+                    Janowiak      Red maple     12.6        12       12.2    (1.77)  55.0   (7,980)
+                    and others                   8.9         5       12.8    (1.86)
+                    (1995)                       8.9         5       12.9    (1.87)  45.7   (6,630)
+                    Hernandez     Ponderosa      8.8         8        9.44   (1.37)  31.4   (4,560)
+                    and others       pine        8.8        13        9.07   (1.32)  29.6   (4,290)
+                    (2005)
+                    Hernandez      Southern      —          10       14.1    (2.04)  61.7   (8,950)
+                    and Moody        Pine        —          17       13.5    (1.96)  49.8   (7,230)
+                    (1992)
+                    Marx and       Southern     10        4, 8, 10   11.2    (1.63)  46.5   (6,740)
+                    Moody            Pine       10        4, 8, 11   10.8    (1.56)  33.9   (4,920)
+                    (1981 a,b)   Douglas-fir–   11        4, 8, 12   13.9    (2.02)  47.2   (6,840)
+                                    larch       11        4, 8, 13   13.6    (1.97)  40.7   (5,910)
+                    Moody          Southern     11.8        17        9.3    (1.35)  28.6   (4,150)
+                    (1974)           Pine       11.9        17       10.3    (1.49)  31.4   (4,560)
+
+this product is called laminated strand lumber (LSL),         Cross-Laminated Timber
+parallel strand lumber (PSL), or oriented strand lumber       Cross-laminated timber (CLT) is described in U.S. editions
+(OSL).                                                        of the CLT Handbook (Karacabeyli and Douglas 2013).
+In contrast with sawn lumber, the strength-reducing           CLT panels are composed of three or more layers of lumber
+characteristics of SCL are dispersed within the veneer        boards fixed together with differing grain orientations. The
+or strands and have much less of an effect on strength        panels provide an alternative to some building applications
+properties. Thus, relatively high design values can be        that currently use concrete, masonry, or steel. Often the
+assigned to strength properties for both LVL and PSL.         panels contain an odd number of layers with the grain
+Whereas both LSL and OSL have somewhat lower design           angle alternating by 90° between consecutive layers. The
+values, they have the advantage of being produced from a      outer layers are oriented in the direction of gravity loads
+raw material that need not be in a log size large enough for  or major spans. The wide faces of the lumber boards abut
+peeling into veneer.                                          between layers, and the layers are connected by glue, nails,
+                                                              or dowels. When glue is used, the narrow face of the boards
+All types of SCL products can be substituted for sawn
+                                                              abutting within a layer may also be glued.
+lumber products in many applications. Laminated veneer
+lumber is used extensively for scaffold planks and in the     In the United States and Canada, softwood species are
+flanges of prefabricated I-joists. Both LVL and PSL beams     the primary source of lumber used in the construction of
+are used as headers and major load-carrying elements in       CLT products. All seven stress classes of CLT listed in
+construction. The LSL and OSL products are used for band      the CLT Handbook are composed of softwood species.
+joists in floor construction and as substitutes for studs and  The CLT Handbook presents an extensive history of
+rafters in wall and roof construction. Various types of SCL   CLT development in North America; therefore, only a
+are also used in a number of nonstructural applications,      summary is provided here. The current standard describing
+such as the manufacture of windows and doors. Table 12–8      construction of CLT in the United States is ANSI/APA
+provides some selected properties of LVL products from        PRG 320 (APA 2019). Softwood species with a minimum
+different research studies.                                   specific gravity of 0.35 as specified in the National
+
+                                                                                                                   12–7
+
+=== PAGE 8 ===
+                                                                                                                                                General Technical Report FPL–GTR–282
+
+                                                                in–2) (4,205)   (4,080– 5,650) (2,660– 5,520) (5,500– 6,700) (6,435)  —  (5,450) (5,025) —    —              —         (3,020– 7,100) (5,310– 7,430)
+                                                 tensile        (lb
+                                                     stress
+                                                 Ultimate       MPa              28.1–39.0  18.3–38.1  37.9–46.2         —                     —              —              —         20.8–49.1  36.6–51.2
+                                      properties                       28.99                                   44.4                 37.6 34.6
+
+                                      Tensile               (×106 in–2) (2.20)   (2.03–2.17)  (1.61–1.80)  (2.27–2.94)  (2.04)  —   (2.07) (1.96) —           —              —         (1.24–1.86)  (1.39–1.97)
+                                                 of             lb
+                                                 Modulus elasticity
+                                                                GPa 15.2         14.0–15.0  11.1–12.4  15.6–20.3  14.1   —          14.3 13.5 —               —              —         8.5–12.8  9.6–13.6
+                               products                         in–2)
+                                                                       —         —                  (7,860– 9,060) (11,430)  —      — — (12,480)              —              —         (4,900– 9,270) (6,940– 9,650)
+                                                                (lb
+                               lumber                Flat
+                                             rupture            MPa —            —                  54.2–62.5  78.8      —          — — 86.0                  —              —         33.8–63.9  47.8–66.5
+                               composite     of
+                                             Modulus            in–2) —          —                  (8,420– 10,400) —    (9,310)    — — (11,720)              (12,081)       —         (5,500– 9,850) (7,530– 10,190)
+                                                                (lb
+                                                     Edge
+                               structural                                                           58.0–71.7            64.2                  80.8           83.3           —         37.9–67.9  51.9–70.3
+                                      properties                MPa —            —                             —                    — —
+                               for
+                                      bending                   in–2)                               (2.23–2.80)  (2.34)  0.00                  (2.13)         (1.64)         (2.54)    (1.30–1.98)  (1.27–1.89)
+                               lumber                       (×106      —         —                                                  — —
+                                      Static                    lb
+                                                     Flat
+                               veneer                                                               15.4–19.3            0.0                                                           9.0–13.7  8.8–13.0
+                                             elasticity         GPa —            —                             16.1                 — — 14.7                  11.3           17.4
+                               laminated     of
+                                             Modulus        (×106 in–2) —        —                  (2.25–2.79)  (2.31)  (1.91)     — — (2.04)                (1.56)         (2.29)    (1.30–1.86)  (1.34–1.98)
+                               of                               lb
+                                                     Edge
+                               properties                       GPa —            —                  15.5–19.2  15.9      13.2       — — 14.1                  10.8           15.8      9.0–12.8  9.8–13.7
+                                                                                                                         Pine           Pine Pine             maple          Pine               Pine
+                               Selected                         Species Douglas-fir  Douglas-fir    Douglas-fir  Douglas-fir        Douglas-fir                                        Douglas-fir
+                                                                                                                         Southern       Southern Southern     Red            Southern           Southern
+                               12–8.                                                                                                                                         and (2006)
+                                                                                 Youngquist others                                                 Peters     and                      Kretschmann others
+                               Table                            Reference Bohlen (1974)   (1984)    Jung (1982) Kunesh (1978) Koch (1973) Moody (1972) Moody  (1972) Wang others (2003b) Hindman others  (1993)
+                                                                                      and                                                          and                                      and
+
+12–8
+
+=== PAGE 9 ===
+CHAPTER 12 | Mechanical Properties of Wood-Based Composite Materials
+
+Design Specification for Wood Construction (NDS) and        of CLT constructed from Canadian hemlock. Vessby and
+recognized under the American Softwood Lumber Standard      others (2009) examined the properties of panels constructed
+PS 20 (ASLS 2020) by the American Lumber Standards          of Norway spruce, but with a focus on evaluation of
+Committee can be used in the manufacture of CLT.            fasteners. One of the few studies available to the public
+The reference design values provided in ANSI/APA PRG        regarding mechanical properties of softwood CLT was
+320 were predominantly developed using experience gained    conducted by Hindman and Bouldin (2015), who present
+from European usage and manufacturing, known material       experimental test values for Southern Pine that include
+properties of dimension lumber, and composite material      bending strength, bending stiffness, shear strength, moisture
+models. CLT manufacturers produce product in accordance     content, and specific gravity.
+with the standard. Both the manufacturing facility and the  Slavid (2013) noted that softwoods have dominated CLT
+CLT product undergo rigorous qualification scrutiny. Yeh    panel construction because of density, stiffness, and strength
+and others (2012) provide background information on the     requirements. In recent years, greater attention has been paid
+development of the standard, including the quality assurance  to the use of hardwoods in CLT panels. The overlapping
+procedures. Quality assurance requirements within the       layup construction of CLT reduces the deleterious effect
+standard specify testing for bending strength, bending      of individual knots on the overall panel strength, opening
+stiffness, and interlaminar shear in both major and minor   the potential use of lower grade timber in CLT construction
+directions. Qualification testing plans are plant, product,  without loss of quality or strength.
+and equipment specific (SmartLam 2019). Samples of the      Stauder (2013) provided an overview of CLT and briefly
+CLT product are produced in accordance with the plan and    discussed the benefits of using undervalued hardwood
+tested for conformance with the standard. Other than the    in CLT panels. Hardwood as a base material for CLT
+documentation that the product meets the reference design   construction is becoming more widely investigated.
+standard, the testing data are not available to the public.  Hardwoods may allow CLT panels to be constructed
+There is limited information on fundamental mechanical      with higher bending stiffness and greater shear resistance
+properties of CLT in the United States. Given the high cost  without increasing the overall dimensions, and in some
+of CLT production, confidence in the composite material     cases reducing the thickness of the panels. CLT panels
+model used to estimate strength, and input from industry,   could have vertically oriented layers made of softwoods for
+government, academia, and manufactures (Williamson and      compressive strength and transverse layers of hardwoods
+Ross 2016, Zelinka and others 2019), research funding       to take advantage of superior rolling shear and bending
+on full-sized softwood CLT panels has been focused on       stiffness. Finger jointing can be used to overcome potential
+seismic performance, fire resistance, moisture behavior, and  feedstock dimension limitations, and low-grade wood can
+response to agents of degradation. van de Lindt and others  be used in CLT. As demand for low-grade wood increases,
+(2016) describe the development of seismic performance      the potential to use undervalued hardwoods becomes more
+factors in accordance with the FEMA P695 methodology.       viable.
+Zelinka and others (2020) provide an overview of North      Callegari and others (2010) described a project of
+American CLT fire testing and code adoption. Schmidt        constructing CLT panels made of chestnut (Castanea sativa
+and Riggio (2019) and Riggio and others (2019) present      Mill.) and poplar wood (Popolus × euroamericana) using
+information on monitoring CLT moisture during extended      the industrial framework then available locally in the area
+exposure periods during building construction. Kordziel     of Piedmont, Italy. The focus of the project was increasing
+and others (2018) explored both monitoring and modeling     the value of the local construction timber supply chain. Two
+of moisture content in mass timber structures. Stokes and   industrial partners were identified: a sawmill that worked
+others (2019) provide an overview of current research       with chestnut wood and a plywood company capable of
+related to termite attack on CLT panels.                    producing the panels. The project confirmed the feasibility
+Although limited, some mechanical testing research on       of producing reduced size CLT panels using equipment
+softwood CLT panels is available. Serrano and Enquist       available in the plywood sector. A notable problem with
+(2010) examined compression strength perpendicular to       the process was the presence of shakes. Prior to panel
+grain for CLT and noted that modeling the performance       construction, shakes were not evident and within allowable
+of CLT was best achieved when a nonlinear plasticity        tolerance. After board production, excessively large shakes
+model was used in conjunction with a fracture mechanics     could develop during the panel conditioning phase.
+model. Bogensperger and others (2011) found that            Brandner (2013) described the use of hardwood in CLT in
+orthogonal cross layers of CLT resulted in compression      Brucknerstrasse, Graz, Austria. A three-story building was
+properties perpendicular to the plane of the panel that were  constructed of CLT panels composed of silver birch (Betula
+significantly better than those of comparable glulam beams.  pendula). Several other hardwoods were identified as
+Both research projects were conducted in Europe. He and     possible candidates for use in CLT because of their physical
+others (2018) examined bending and compressive properties   characteristics, availability, and economic viability including
+
+                                                                                                               12–9
+
+=== PAGE 10 ===
+                                                                      General Technical Report FPL–GTR–282
+poplar (Populus spp.) and ash (Fraxinus excelsior). The use  failure testing, complete delamination occurred between
+of hardwoods in CLT may allow for additional optimization   some panel layers; at some point during the testing, there
+of CLT properties by utilizing hardwoods in transverse      was no bonding between adjacent layers. As tested, the
+layers and exploiting the higher rolling shear of such species  sample performance was close to meeting standard levels.
+or using species with high bending strength as outer CLT    It was theorized that improved panel manufacturing would
+layers.                                                     prevent delamination during testing and the resulting panels
+Ehrhart and others (2015) examined the rolling shear        would exceed standard requirements. The preliminary study
+properties of several European hardwood species for use in  showed that aspen had potential to be used in CLT panels,
+CLT. The performance of hardwood species birch (Betula      but additional testing was needed due to the delamination
+pendula Roth), beech (Fagus sylvatica L.), poplar (Populus  and small sample size before a conclusion could be drawn.
+spp.), and ash (Fraxinus excelsior L.) were compared with   Kramer (2014) and Kramer and others (2014) demonstrated
+those of softwood species Norway spruce (Picea abies (L.)   the viability of using plantation-grown, low-density hybrid
+Karst.) and pine (Pinus sylvestris L.). When all species    poplar (Pacific albus) in performance-rated CLT panels.
+were examined together, a strong correlation was found      The shear and bending performance of the panels used in
+between both density and rolling shear modulus and density  the study was evaluated against ANSI/APA PRG-320-2012
+and rolling shear strength. With respect to the rolling shear  (APA 2012). The available supply of hybrid poplar in the
+properties, poplar was comparable to both softwood species,  Pacific Northwest has increased because of decreasing use
+birch slightly exceeded both softwoods, and ash and beech   by the pulp and paper industry. Panels constructed of hybrid
+had property values between two to three times those of     poplar will likely meet or exceed bending and shear strength
+either Norway spruce or pine. The findings indicated that   requirements, but the panels did not meet stiffness (MOE)
+beech, ash, birch, and poplar all had great potential for use  requirements. Hybrid poplar could be used in conjunction
+in CLT.                                                     with higher density wood species to create panels with
+Beagley and others (2014) examined the use of yellow-       greater property efficiency that fully comply with standard
+poplar (or tulipwood) (Liriodendron tulipifera) for potential  requirements.
+use in CLT panels. Yellow-poplar has a specific gravity that
+meets the current CLT requirements (APA 2019). In this      Wood–Nonwood Composites
+study, six five-layer CLT panels were constructed using
+yellow-poplar. Preliminary results from nondestructive      Wood–Plastic Composite
+tests of CLT panels constructed of yellow-poplar indicate   The use of wood–plastic composite lumber in North
+that they met requirements for bending and shear stiffness  America has experienced tremendous growth in the
+as dictated by ANSI/APA PRG 320-2019 (APA 2019). The        past decade, largely because of residential construction
+research showed that yellow-poplar had great potential as a  applications. Common applications in North America
+feed material for CLT construction. Slavid (2013) explained  include decking, railings, window profiles, roof tiles, and
+that yellow-poplar is a hardwood of particular interest for  siding. These lumber products are generally manufactured
+CLT construction because it has mechanical properties close  using profile extrusion. The properties of wood–plastic
+to many softwoods, grows tall and straight, and has fewer   composite lumber can vary greatly depending upon
+knots than many other hardwoods. Yellow-poplar is one       such variables as type, form, and weight fractions of
+of the fastest drying hardwoods as well, meaning that less  the constituents, types of additives, and processing
+time is required to kiln dry it than for other wood types. It is  history. Because the formulations from each commercial
+also abundant in the United States and relatively low cost.  manufacturer are proprietary, design data should be obtained
+Stauder (2013) noted that yellow-poplar was likely to be    directly from the manufacturer.
+among the first hardwoods accepted for CLT construction,    Some generalizations can be made regarding the
+and research has been conducted on use of yellow-poplar in  performance of wood–plastic composites, but there are
+CLT (Mohamedzadeh and Hindman 2015).                        exceptions. Flexural and tensile properties of wood–plastic
+Vetsch (2015) constructed CLT panels from aspen (Populus    composite lumber generally fall between those of solid
+tremuloides), which is a locally abundant and underutilized  wood lumber and unfilled plastics. Most commercial
+wood in Minnesota. Panels were constructed using locally    wood–plastic composites are considerably less stiff than
+acquired aspen wood. The panels were tested in accordance   solid wood but are stiffer than unfilled plastic (Clemons
+with ASTM D198-09 Standard Test Methods of Static Tests     2002). Compared with solid wood lumber, wood–plastic
+of Lumber in Structural Sizes and ANSI/APA PRG 320-         composites have better decay resistance and dimensional
+2012. The maximum loads from the aspen panels exceeded      stability when exposed to moisture. Compared with unfilled
+those required in the standards; however, the modulus       plastics, wood–plastic composites are stiffer and have
+of elasticity (MOE) and modulus of rupture (MOR) fell       better dimensional stability when exposed to changes in
+below standard levels. It was noted by Vetsch that during   temperature.
+
+12–10
+
+=== PAGE 11 ===
+CHAPTER 12 | Mechanical Properties of Wood-Based Composite Materials
+
+    Table 12–9. Selected properties of wood–plastic productsa
+                                    Tensile properties               Flexural properties           Izod impact
+                                                                                                      energy
+                                Strength        Modulus          Strength         Modulus            (J m–1)
+                    Specific                          (×106                            (×106
+    Composite       gravity  MPa    (lb in–2)  GPa   lb in–2)  MPa    (lb in–2)  GPa  lb in–2)  Notched Unnotched
+    Polypropylene    0.90     28.5   (4,134)  1.53   (0.22)   38.30   (5,555)  1.19    (0.17)    20.9       656
+    (PP)
+    PP + 40% wood    1.05     25.4   (3,684)  3.87   (0.56)   44.20   (6,411)  3.03    (0.44)    22.2        73
+    flour
+    PP + 40% wood    1.05     32.3   (4,685)  4.10   (0.59)   53.10   (7,702)  3.08    (0.45)    21.2        78
+    flour + 3%
+    coupling agent
+    PP + 40% wood    1.03     28.2   (4,090)  4.20   (0.61)   47.90   (6,947)  3.25    (0.47)    23.2        91
+    fiber
+    PP + 40% wood    1.03     52.3   (7,585)  4.23   (0.61)   72.40  (10,501)  3.22    (0.47)    21.6       162
+    fiber + 3%
+    coupling agent
+    aFrom Stark and Rowlands (2003).
+Table 12–9 shows mechanical properties of unfilled           Inorganic binders fall into three main categories: gypsum,
+polypropylene and several wood–polypropylene composites.     magnesia cement, and Portland cement. Gypsum and
+One of the primary reasons to add wood filler to unfilled    magnesia cement are sensitive to moisture, and their use
+plastics is to improve stiffness. Strength of the unfilled   is generally restricted to interior applications. Composites
+plastic can also increase but only if the wood component     bonded with Portland cement are more durable than those
+acts as reinforcement with good bonding between the two      bonded with gypsum or magnesia cement and are used in
+components. Table 12–9 illustrates how wood–plastic          both interior and exterior applications. Inorganic-bonded
+composite properties can vary with changing variables.       composites are made by blending proportionate amounts of
+For example, adding wood fiber instead of wood flour         lignocellulosic fiber with inorganic materials in the presence
+to polypropylene improved the strength and stiffness.        of water and allowing the inorganic material to cure or
+Generally, adding a coupling agent to the mix also improved  “set up” to make a rigid composite. All inorganic-bonded
+mechanical properties. Adding wood to polypropylene was      composites are very resistant to deterioration, particularly by
+not without tradeoffs. Impact resistance of such composites  insects, vermin, and fire. Typical properties of low-density
+decreased compared with that of unfilled polypropylene.      cement–wood composite fabricated using an excelsior-type
+                                                             particle are shown in Table 12–11.
+Inorganic-Bonded Composites
+Inorganic-bonded wood composites are molded products or      Testing Standards
+boards that contain between 10% and 70% by weight wood
+particles or fibers and conversely 90% to 30% inorganic      The physical and mechanical properties of wood-based
+binder. Acceptable properties of an inorganic-bonded wood    composite materials are usually determined by standard
+composite can be obtained only when the wood particles       ASTM test methods. The following are the commonly used
+are fully encased with the binder to make a coherent         methods described in ASTM (2009):
+material. This differs considerably from the technique used     ASTM C208–08. Standard specification for cellulosic
+to manufacture thermosetting-resin-bonded boards, where         fiber insulating board.
+flakes or particles are “spot welded” by a binder applied       ASTM D1037–06a. Standard test methods for evaluating
+as a finely distributed spray or powder. Because of this        the properties of wood-based fiber and particle panel
+difference and because hardened inorganic binders have a        materials.
+higher density than that of most thermosetting resins, the
+required amount of inorganic binder per unit volume of          ASTM D2718–00 (2006). Standard test method for
+composite material is much higher than that of resin-bonded     structural panels in planar shear (rolling shear).
+wood composites. The properties of inorganic-bonded wood        ASTM D2719–89 (2007). Standard test methods for
+composites are significantly influenced by the amount and       structural panels in shear through-the-thickness.
+nature of the inorganic binder and the woody material as
+well as the density of the composites.                          ASTM D3043–00 (2006). Standard test methods of
+                                                                testing structural panels in flexure.
+
+                                                                                                                 12–11
+
+=== PAGE 12 ===
+                                                                        General Technical Report FPL–GTR–282
+
+Table 12–10. Selected properties of extruded wood–plastic products
+                                     Compression                                                            Dowel bearing
+                   Tensile strength    strength      Bending strength   Bending modulus    Shear strength      strength
+Composite          (MPa (lb in–2))  (MPa (lb in–2))  (GPa (×106 lb in–2))  (MPa (lb in–2))  (MPa (lb in–2))  (MPa (lb in–2))
+Polypropylene       20.0 (2,900)     55.2 (8,000)       3.49–5.97           22.2–60.8       22.0 (3,190)    84.8 (12,300)
+(PP)a, b                                              (0.506–0.866)       (3,220–8,820)
+High-density          5.5–15.2        11.7–26.9         1.79–5.17           10.3–25.5        7.79–10.3       35.7 (5,180)
+polyethylene        (800–2,200)     (1,700–3,900)     (0.260–0.750)       (1,500–3,700)    (1,130–1,500)
+(HDPE)c
+Polyvinylchloride   25.1 (3,640)     61.2 (8,880)       4.81–7.58           35.9–54.5       20.2 (2,930)     72.4–128.2
+(PVC)c                                                (0.697–1.100)       (5,200–7,900)                    (10,500–18,600)
+aFrom Slaughter (2004).
+bFrom Kobbe (2005).
+cFrom Wolcott (2001).
+     Table 12–11. General properties of low-                     ASTM D7341–09. Standard practice for establishing
+     density cement–wood composite fabricated                    characteristic values for flexural properties of structural
+     using an excelsior-type particlea,b                         glued laminated timber by full-scale testing.
+                        Value range (MPa (lb in–2))              ASTM E1333–96 (2002). Test method for determining
+     Property             Low            High                    formaldehyde concentration in air and emission rate from
+     Bending strength    1.7 (250)       5.5 (800)               wood products using a large chamber.
+     Modulus of        621 (90,000)  1,241 (180,000)
+      elasticity                                              Literature Cited
+     Tensile strength    0.69 (100)      4.1 (600)
+     Compression         0.69 (100)      5.5 (800)            AF&PA. 2005. Guideline—wood I-joist ASD manual for
+      strength                                                engineering wood construction. ANSI/AF&PA NDS–2005.
+     Shearc              0.69 (100)      1.4 (200)            National Design Specification® (NDS®) for Wood
+     E/G ratiod         40.0           100.0
+     aData present compilation of raw data from a variety of  Construction. Washington, DC: American Forest & Paper
+     sources for range of board properties. Variables include  Association.
+     cement–wood mix, particle configuration, density, and    AITC. 2007. Standard for wood products: structural glued-
+     forming and curing method.
+     bSpecific gravity range from 0.5 to 1.0.                 laminated timber. ANSI/AITC 190.1–2007. Centennial, CO:
+     cShear strength data are limited to small samples having a  American Institute of Timber Construction.
+     specific gravity of 0.5 to 0.65.
+     bE/G is ratio of bending modulus of elasticity to shear  ASLS. 2020. American softwood lumber standard,
+     modulus. For wood, this ratio is about 16.               voluntary product standard PS 20-20. Washington, DC: U.S.
+                                                              Department of Commerce.
+  ASTM D3044–94 (2006). Standard test method for shear
+  modulus of wood-based structural plywood.                   APA. 1981. Performance standards and policies for APA
+                                                              structural use panels. Tacoma, WA: American Plywood
+  ASTM D3500–90 (2003). Standard test methods for             Association. 1 p.
+  structural panels in tension.
+                                                              APA. 1991. Performance standards and policies for
+  ASTM D3501–05a. Standard test methods of testing            structural use panels. APA PRP–108. Tacoma, WA: APA–
+  plywood in compression.                                     The Engineered Wood Association.
+  ASTM D3737–08. Standard practice for establishing           APA. 1995a. Design capacities of APA performance-rated
+  allowable properties for structural glued laminated timber  structural-use panels. Tech. Note N375 B. Tacoma, WA:
+  (glulam).                                                   APA–The Engineered Wood Association. 12 p.
+  ASTM D5456–09. Specification for evaluation of              APA. 1995b. Plywood design specification. Tacoma, WA:
+  structural composite lumber products.                       APA–The Engineered Wood Association. 10 p.
+  ASTM D7031–04. Standard guide for evaluating                APA. 2019. Standard for performance-rated cross-laminated
+  mechanical and physical properties of wood-plastic          timber. ANSI/APA PRG 320-2019. Tacoma, WA: APA–The
+  composite products.                                         Engineered Wood Association.
+  ASTM D7032–08. Standard specification for establishing      ASTM. 2007. Annual book of ASTM standards.
+  performance ratings for wood-plastic composite deck         Philadelphia, PA: American Society for Testing and
+  boards and guardrail systems.                               Materials.
+
+12–12
+
+=== PAGE 13 ===
+CHAPTER 12 | Mechanical Properties of Wood-Based Composite Materials
+
+Beagley, K.S.M.; Loferski, J.R.; Hindman, D.P.; Bouldin,   species with focus on cross laminated timber (CLT): test
+J.C. 2014. Investigation of hardwood cross-laminated timber  configuration and parameter study. Doctoral dissertation,
+design. In: Proc., World Conference on Timber Engineering:  Andrea Frangi.
+Renaissance of Timber Construction, August 10–14, 2014.    He, M.J.; Sun, X.F.; Li, Z. 2018. Bending and compressive
+Biblis, E.J. 1989. Properties of commercial OSB from three  properties of cross-laminated timber (CLT) made from
+Southern Pine mills. Forest Products Journal. 39(1): 55–57.  Canadian hemlock. Construction and Building Materials.
+Biblis, E.J. 2000. Effect of weathering on surface quality  185: 175–183.
+and structural properties of six species of untreated      Hernandez, R.; Moody, R.C. 1992. Improved performance
+commercial plywood siding after 6 years of exposure in     of Southern Pine structural glued-laminated timber. Res.
+Alabama. Forest Products Journal. 50(5): 47–50.            Pap. FPL–RP–514. Madison, WI: U.S. Department of
+Bogensperger, T.; Augustin, M.; Schickhofer, G. 2011.      Agriculture, Forest Service, Forest Products Laboratory.
+Properties of CLT-panels exposed to compression            22 p.
+perpendicular to their plane. In: Proceedings to International  Hernandez, R.; Green, D.W.; Kretschmann, D.E.; Verrill,
+Council for Research and Innovation in Building and        S.P. 2005. Improved utilization of small-diameter ponderosa
+Construction, Working Commission W18—Timber                pine in glulam timber. Res. Pap. FPL–RP–625. Madison,
+Structures: 1–15.                                          WI: U.S. Department of Agriculture, Forest Service, Forest
+Bohlen, J.C. 1974. Tensile strength of Douglas-fir         Products Laboratory. 38 p.
+laminated-veneer lumber. Forest Products Journal. 24(1):   Hindman, D.P.; Bouldin, J.C. 2015. Mechanical
+54–58.                                                     properties of southern pine cross-laminated timber.
+Brandner, R. 2013. Production and technology of cross      Journal of Materials in Civil Engineering. 27(9):
+laminated timber (CLT): a state-of-the-art report. In: COST  04014251. http://ascelibrary.org/doi/abs/10.1061/(ASCE)
+Action FP1004, Focus STS–European Conference on Cross-     MT.1943-5533.0001203
+Laminated Timber (CLT): 2–36.                              HPVA. 2004. American national standard for hardwood and
+Cai, Z. 2006. Selected properties of MDF and flakeboard    decorative plywood. ANSI/HPVA–1–2004. Reston, VA:
+overlaid with fiberglass mats. Forest Products Journal.    Hardwood Plywood & Veneer Association. 35 p.
+56(11/12): 142–146.                                        Janowiak, J.J.; Manbeck, H.B.; Hernandez, R.; Moody,
+Cai, Z.; Muehl, J.H.; Winandy, J.E. 2006. Effects of panel  R.C.; Blankenhorn, P.R.; Labosky, P. 1995. Efficient
+density and mat moisture content on processing medium      utilization of red maple in glued-laminated timber beams.
+density fiberboard. Forest Products Journal. 56(10): 20–25.  Res. Pap. FPL–RP–541. Madison, WI: U.S. Department of
+                                                           Agriculture, Forest Service, Forest Products Laboratory.
+Callegari, G.; Cremonini, C.; Rocco, V.M.; Spinelli, A.;   23 p.
+Zanuttini, R. 2010. The production of hardwood X-Lam
+panels to valorize the forest-wood chain in Piemonte       Jung, J. 1982. Properties of parallel-laminated veneer from
+(Italy). In: Proceedings of the World Conference on Timber  stress-wave tested veneers. Forest Products Journal. 32(7):
+Engineering.                                               30–35.
+Clemons, C.M. 2002. Wood-plastic composites in the         Karacabeyli, E.; Douglas, B., eds. 2013. CLT handbook:
+United States: the interfacing of two industries. Forest   cross-laminated timber: U.S. edition. Special publication.
+Products Journal. 52(6): 10–18.                            ISSN 1925-0495; SP-529E. Pointe-Claire, QC, Canada: FP
+                                                           Innovations and Binational Softwood Lumber Council.
+CPA. 1999. Particleboard standard. ANSI A 208.1–1999.
+Leesburg, VA: Composite Panel Association.                 Koch, P. 1973. Structural lumber laminated from 1/4-inch
+                                                           rotary-peeled Southern Pine veneer. Forest Products Journal.
+CPA. 2002. MDF standard. ANSI A 208.2–2002. Leesburg,      23(7):17–25.
+VA: Composite Panel Association.
+                                                           Kordziel, S.; Glass, S.V.; Pei, S.; Zelinka, S.L.; Tabares-
+CPA. 2004a. Basic hardboard. ANSI A 135.4–2004.            Velasco, P.C. 2018. Moisture monitoring and modeling of
+Leesburg, VA: Composite Panel Association.                 mass-timber building systems. In: Proceedings, WCTE
+CPA. 2004b. Prefinished hardboard paneling. ANSI A         2018-World conference on timber engineering. Seoul,
+135.5–2004. Leesburg, VA: Composite Panel Association.     Republic of South Korea: Korean Institute of Forest
+                                                           Science. 7 p.
+CPA. 2006. Hardboard siding. ANSI A 135.6–2006.
+Leesburg, VA: Composite Panel Association.                 Kramer, A. 2014. Cross-laminated timber engineering:
+                                                           improvement and application. M.S. thesis. Corvallis, OR:
+Ehrhart, T.; Brandner, R.; Schickhofer, G.; Frangi, A.     Oregon State Univ.
+2015. Rolling shear properties of some European timber
+
+                                                                                                            12–13
+
+=== PAGE 14 ===
+                                                                     General Technical Report FPL–GTR–282
+Kramer, A.; Barbosa, A.; Sinha, A. 2014. Viability of      Moody, R.C.; Hernandez, R.; Davalos, J.F.; Sonti, S.S.
+hybrid poplar in ANSI approved cross-laminated timber      1993. Yellow poplar glulam timber beam performance.
+applications. Journal of Materials in Civil Engineering.   Res. Pap. FPL–RP–520. Madison, WI: U.S. Department of
+26(7): 10.                                                 Agriculture, Forest Service, Forest Products Laboratory.
+Kretschmann, D.E.; Moody, R.C.; Pellerin, R.F.; Bendtsen,  30 p.
+B.A.; Cahill, J.M.; McAlister, R.H.; Sharp, D.W. 1993.     NIST. 2004. Voluntary product standard PS 2–04.
+Effect of various proportions of juvenile wood on laminated  Performance standard for wood-base structural-use
+veneer lumber. Res. Pap. FPL–RP–521. Madison, WI: U.S.     panels. National Institute of Standards and Technology.
+Department of Agriculture, Forest Service, Forest Products  Gaithersburg, MD: U.S. Department of Commerce.
+Laboratory. 35 p.                                          NIST. 2007. Voluntary product standard PS 1–07.
+Kunesh, R.H. 1978. MICRO-LAM: structural laminated         Construction and industrial plywood. National Institute
+veneer lumber. Forest Products Journal. 28(7): 41–44.      of Standards and Technology. Gaithersburg, MD: U.S.
+Manbeck, H.B.; Janowiak, J.J.; Blankenhorn, P.R.; Labosky,  Department of Commerce.
+P.; Moody, R.C.; Hernandez, R. 1993. Red maple glulam      O’Halloran, M.R. 1979. Development of performance
+timber beam performance. FPL–RP–519. Madison, WI:          specifications for structural panels in residential markets.
+U.S. Department of Agriculture, Forest Service, Forest     Forest Products Journal. 29(12): 21–26.
+Products Laboratory. 32 p.                                 O’Halloran, M.R. 1980. The performance approach to
+Marx, C.M.; Moody, R.C. 1981a. Bending strength of         acceptance of building products. In: Proceedings, 14th
+shallow glued-laminated beams of a uniform grade. Res.     Washington State University particleboard symposium.
+Pap. FPL–RP–380. Madison, WI: U.S. Department of           Pullman, WA: 77–84.
+Agriculture, Forest Service, Forest Products Laboratory.   Pu, J.; Tang, R.C.; Davis, W.C. 1992. Creep behavior
+19 p.                                                      of commercial oriented strandboard under high relative
+Marx, C.M.; Moody, R.C. 1981b. Strength and stiffness      humidity. Forest Products Journal. 42(4): 49–54.
+of small glued-laminated beams with different qualities    Riggio, M.; Schmidt, E.; Mustapha, G. 2019. Moisture
+of tension laminations. Res. Pap. FPL–RP–381. Madison,     monitoring data of mass timber elements during prolonged
+WI: U.S. Department of Agriculture, Forest Service, Forest  construction exposure: the case of the forest science
+Products Laboratory. 48 p.                                 complex (Peavy Hall) at Oregon State University. Frontiers
+McNatt, J.D. 1973. Basic engineering properties of         in Built Environment. 5: 98. doi:10.3389/fbuil.2019.00098
+particleboard. Res. Pap. FPL–206. Madison, WI: U.S.        Schmidt, E. Riggio, M. 2019. Monitoring moisture
+Department of Agriculture, Forest Service, Forest Products  performance of cross-laminated timber building elements
+Laboratory.                                                during construction. Buildings. 9: 144. doi:10.3390/
+McNatt, J.D. Myers, G. 1993. Selected properties of        buildings9060144
+commercial high-density hardboards. Forest Products        Serrano, E.; Enquist, B. 2010. Compression strength
+Journal. 43(4): 59–62.                                     perpendicular to grain in cross-laminated timber (CLT). In:
+Mohamedzadeh, M.; Hindman, D. 2015. Mechanical             World Conference on Timber Engineering (WCTE), Riva
+performance of yellow-poplar cross laminated timber.       del Garda, 2010.
+Report no. CE/VPI-ST-15-13. Blacksburg, VA: Virginia       Shedlauskas, J.P.; Manbeck, H.B.; Janowiak, J.J.;
+Polytechnic Institute and State University. 34 p.          Hernandez, R.; Moody, R.C.; Labosky, P., Jr.; Blankenhorn,
+Moody, R.C. 1972. Tensile strength of lumber laminated     P.R. 1996. Efficient use of red oak for glued-laminated
+from 1/8-inch-thick veneers. Res. Pap. FPL–RP–181.         beams. Transactions of ASAE. 39(1): 203–209.
+Madison, WI: U.S. Department of Agriculture, Forest        Slavid, R. 2013. Endless stair—a towering Escher-
+Service, Forest Products Laboratory. 28 p.                 like structure made from American tulipwood CLT
+Moody, R.C.; Peters, C.C. 1972. Strength properties of     for the London Design Festival 2013. https://www.
+rotary knife-cut laminated Southern Pine. FPL–RP–178.      americanhardwood.org/sites/default/files/publications/
+Madison, WI: U.S. Department of Agriculture, Forest        download/2017-04/AHEC%20The%20Endless%20Stair_
+Service, Forest Products Laboratory. 1 p.                  pages.pdf (Accessed February 24, 2020.)
+Moody, R.C. 1974. Flexural strength of glued-laminated     SmartLam. 2019. SmartLam V1M2 CLT qualification. APA
+timber beams containing coarse-grain Southern Pine lumber.  supplied CLT qualification test plan. (Reference not for
+Res. Pap. FPL–222. Madison, WI: U.S. Department of         public distribution.)
+Agriculture, Forest Service, Forest Products Laboratory.   Stark, N.M.; Rowlands, R.E. 2003. Effects of wood
+42 p.                                                      fiber characteristics on mechanical properties of wood/
+
+12–14
+
+=== PAGE 15 ===
+CHAPTER 12 | Mechanical Properties of Wood-Based Composite Materials
+
+polypropylene composites. Wood Fiber Science. 35(2):       Youngquist, J.A.; Laufenberg, T.L.; Bryant, B.S. 1984.
+167–174.                                                   End jointing of laminated veneer lumber for structural use.
+Stauder, C. 2013. Cross-laminated timber—an analysis of    Forest Products Journal. 34(11/12): 25–32.
+the Austrian industry and ideas for fostering its development  Youngquist, J.A.; Myers, G.E.; Muehl, J.M. 1993.
+in America. Austrian Marshall Plan Foundation. September.  Composites from recycled wood and plastics. Final
+Stokes, C.E.; França, T.S.F.A.; Tang, J.D. 2019. Ongoing   Rep., U.S. Environmental Protection Agency, Project
+termite studies on cross laminated timber (CLT) panels.    IAG DW12934608–2. Madison, WI: U.S. Department of
+In: Proceedings, American Wood Protection Association,     Agriculture, Forest Service, Forest Products Laboratory. 3 p.
+Orlando, FL: 173–178.                                      Zelinka, S.L.; Williamson, T.; Martinson, K.L.; Ritter,
+Suchsland, O.; Lyon, D.E.; Short, P.E. 1979. Selected      M.A. 2019. Research needs assessment for the mass
+properties of commercial medium-density fiberboard. Forest  timber industry: Proceedings of the 2nd North American
+Products Journal. 29(9): 45–49.                            mass timber research needs workshop. General Technical
+                                                           Report FPL–GTR–273. Madison, WI: U.S. Department of
+TECO. 1991. Performance standards and policies for         Agriculture, Forest Service, Forest Products Laboratory.
+structural-use panels. TECO PRP–133. Eugene, OR: Timber    41 p.
+Engineering Company.
+                                                           Zelinka, S.L.; Hasburgh, L.E.; Bourne, K.J. 2020. Overview
+van de Lindt, J.; Amini, M.O.; Rammer, D.; Line, .; Pei,   of North American CLT fire testing and code adoption.
+S.; Popovski, M. 2016. Developing seismic performance      Wood & Fire Safety. 2020: 232–237.
+factors for cross laminated timber in the United States. In:
+Proceedings, the 11th Canadian conference on earthquake
+engineering. Vancouver, BC: Canadian Association for
+Earthquake Engineering: 1–10.
+Vessby, J.; Enquist, B.; Petersson, H.; Alsmarker, T. 2009.
+Experimental study of cross-laminated timber wall panels.
+European Journal of Wood Products. 67: 211–218.
+Vetsch, N. 2015. A performance evaluation of cross-
+laminated timber manufactured with aspen. University
+of Minnesota Digital Conservancy. http://hdl.handle.
+net/11299/172229
+Wang, S.; Gu, H.; Neimsuwan, T.; Wang, S.G. 2003. Layer
+thickness swell and related properties of commercial
+OSB products: a comparative study. In: Proceedings,
+37th international particleboard and composite materials
+symposium. 2003 April 7–10. Pullman, WA: Washington
+State University. 65–76.
+Wang, X.; Ross, R.J.; Brashaw, B.K.; Verhey, S.A.;
+Forsman, J.W.; Erickson, J.R. 2003. Flexural properties of
+laminated veneer lumber manufactured from ultrasonically
+rated red maple veneer. A pilot study. Res. Note FPL–RN–
+0288. Madison, WI: U.S. Department of Agriculture, Forest
+Service, Forest Products Laboratory. 5 p.
+Williamson, T.; Ross, R.J., eds. 2016. Proceedings:
+mass timber research workshop 2015. General Technical
+Report FPL–GTR–241. Madison, WI: U.S. Department of
+Agriculture, Forest Service, Forest Products Laboratory.
+364 p.
+Yeh, B.; Gagnon, S.; Williamson, T.; Pirvu, C.; Lum,
+C.; Kretschmann, D. 2012. The North American product
+standard for cross-laminated timber. Wood Design Focus.
+22(2): 13–21.
+
+                                                                                                            12–15
+
+=== PAGE 16 | lowtext ===
+
+
+=== PAGE 17 ===
+  Wood Handbook
+
+      Wood as an Engineering Material
+
+Forest Products Laboratory | United States Department of Agriculture Forest Service | Madison, Wisconsin
+
+=== PAGE 18 ===
+Abstract
+Summarizes information on wood as an engineering
+material. Presents properties of wood and wood-based
+products of particular concern to the architect and engineer.
+Includes discussion of designing with wood and wood-based
+products along with some pertinent uses.
+Keywords: wood structure, physical properties (wood),
+mechanical properties (wood), lumber, wood-based
+composites, plywood, panel products, design, fastenings,
+wood moisture, drying, gluing, fire resistance, finishing,
+decay, preservation, wood-based products, heat sterilization,
+sustainable use
+
+                                                                           Pesticide Precautionary Statement
+                                                                           This publication reports research involving pesticides.
+March 2021                                                                 It does not contain recommendations for their use, nor
+Forest Products Laboratory. 2021. Wood handbook—wood as an                 does it imply that the uses discussed here have been
+engineering material. General Technical Report FPL-GTR-282. Madison,       registered. All uses of pesticides must be registered by
+WI: U.S. Department of Agriculture, Forest Service, Forest Products        appropriate State and/or Federal agencies before they
+Laboratory. 543 p.
+                                                                           can be recommended.
+A limited number of free copies of this publication are available to the
+public from the Forest Products Laboratory, One Gifford Pinchot Drive,     Caution: Pesticides can be injurious to humans,
+Madison, WI 53726-2398. This publication is also available online at
+www.fpl.fs.fed.us. Laboratory publications are sent to hundreds of libraries  domestic animals, desirable plants, and fish or other
+in the United States and elsewhere.                                        wildlife, if they are not handled or applied properly.
+The Forest Products Laboratory is maintained in cooperation with the       Use all pesticides selectively and carefully. Follow
+University of Wisconsin.                                                   recommended practices for the disposal of surplus
+The use of trade or firm names in this publication is for reader information  pesticides and pesticide containers.
+and does not imply endorsement by the United States Department of
+Agriculture (USDA) of any product or service.
+
+In accordance with Federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, the USDA, its Agencies,
+offices, and employees, and institutions participating in or administering USDA programs are prohibited from discriminating based on race, color, national
+origin, religion, sex, gender identity (including gender expression), sexual orientation, disability, age, marital status, family/parental status, income derived
+from a public assistance program, political beliefs, or reprisal or retaliation for prior civil rights activity, in any program or activity conducted or funded by
+USDA (not all bases apply to all programs). Remedies and complaint filing deadlines vary by program or incident.
+Persons with disabilities who require alternative means of communication for program information (e.g., Braille, large print, audiotape, American Sign
+Language, etc.) should contact the responsible Agency or USDA’s TARGET Center at (202) 720–2600 (voice and TTY) or contact USDA through the
+Federal Relay Service at (800) 877–8339. Additionally, program information may be made available in languages other than English.
+To file a program discrimination complaint, complete the USDA Program Discrimination Complaint Form, AD-3027, found online at http://www.ascr.usda.
+gov/complaint_filing_cust.html and at any USDA office or write a letter addressed to USDA and provide in the letter all of the information requested in
+the form. To request a copy of the complaint form, call (866) 632–9992. Submit your completed form or letter to USDA by: (1) mail: U.S. Department of
+Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250–9410; (2) fax: (202) 690–7442; or
+(3) email: program.intake@usda.gov.
+USDA is an equal opportunity provider, employer, and lender.

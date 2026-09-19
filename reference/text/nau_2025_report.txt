@@ -1,0 +1,842 @@
+# ID: nau_2025_report
+# SOURCE: https://ceias.nau.edu/capstone/
+# ORIGINAL: reference/raw/nau_2025_report.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 27 pages | ~8507 tokens
+# NOTE: NAU 2025 Regular report (Aerojacks). Exact URL not recorded; NAU capstone site. Mission year before the bottle mission
+# FLAG img: pages 1-2,5-8,15-22,26-27
+# FLAG lowtext: pages 2,27
+# FLAG math: pages 9-10,13,16
+# TOC:
+#   1.0 Executive Summary   -> PDF page 4
+#     1.1 System Overview  -> PDF page 4
+#     1.2 Discriminators  -> PDF page 5
+#   2.0 Schedule Summary  -> PDF page 6
+#   3.0 Design Layout & Trades  -> PDF page 7
+#     3.1 Overall Design Layout and Size  -> PDF page 9
+#     3.2 Optimization  -> PDF page 9
+#     3.3 Design Features and Details (Subassembly Sizing)   -> PDF page 10
+#   4.0 Loads and Environments, Assumptions   -> PDF page 12
+#   5.0 Analysis  -> PDF page 13
+#     5.1 Analysis Techniques   -> PDF page 14
+#       5.1.1 Developed Models   -> PDF page 14
+#       -> PDF page 15
+#     5.2 Performance Analysis   -> PDF page 15
+#       5.2.1 Takeoff Performance  -> PDF page 16
+#       5.2.2 Payload Prediction  -> PDF page 17
+#     5.3 Structural Analysis  -> PDF page 17
+#       5.3.1 Wing Analysis  -> PDF page 17
+#       5.3.2 Fuselage Analysis  -> PDF page 18
+#   6.0 Assembly & Sub-Assembly, Test and Integration  -> PDF page 19
+#     6.1 Wing Assembly and Integration  -> PDF page 20
+#     6.2 Fuselage and Tail Integration  -> PDF page 20
+#     6.3 Landing Gear and Control System  -> PDF page 21
+#     6.4 Testing and Validation  -> PDF page 21
+#       6.4.1 Structural and Load Testing  -> PDF page 21
+#       6.4.2 Control Surface Calibration  -> PDF page 21
+#       6.4.3 Electrical System and Thrust Testing  -> PDF page 22
+#   7.0 Manufacturing  -> PDF page 22
+#   8.0 Conclusion  -> PDF page 24
+#   9.0 References  -> PDF page 24
+#     -> PDF page 25
+#   Appendix A - Technical Data Sheet  -> PDF page 26
+#   Appendix B - 2D Drawing  -> PDF page 27
+
+=== PAGE 1 | img ===
+         SAE AERO
+
+DESIGN REPORT
+
+      Northern Arizona University
+
+                 AeroJacks Team #316
+                    Chazz Coppa
+                  Matthew Espinoza
+                    Jayden Glaus
+                   Colton Tutrone
+                    Tesla Ventsam
+                     2024-2025
+
+                                                            1
+
+=== PAGE 2 | lowtext, img ===
+2
+
+=== PAGE 3 ===
+Table of Contents
+
+1.0 Executive Summary............................................................................................................................... 3
+   1.1 System Overview...............................................................................................................................4
+   1.2 Discriminators................................................................................................................................... 5
+2.0 Schedule Summary.................................................................................................................................6
+3.0 Design Layout & Trades........................................................................................................................7
+   3.1 Overall Design Layout and Size........................................................................................................9
+   3.2 Optimization...................................................................................................................................... 9
+   3.3 Design Features and Details (Subassembly Sizing)........................................................................ 10
+4.0 Loads and Environments, Assumptions.............................................................................................12
+5.0 Analysis................................................................................................................................................. 13
+   5.1 Analysis Techniques........................................................................................................................14
+       5.1.1 Developed Models................................................................................................................. 14
+   5.2 Performance Analysis......................................................................................................................15
+       5.2.1 Takeoff Performance..............................................................................................................16
+       5.2.2 Payload Prediction................................................................................................................. 17
+   5.3 Structural Analysis.......................................................................................................................... 18
+       5.3.1 Wing Analysis........................................................................................................................18
+       5.3.2 Fuselage Analysis.................................................................................................................. 19
+6.0 Assembly & Sub-Assembly, Test and Integration.............................................................................20
+   6.1 Wing Assembly and Integration...................................................................................................... 20
+   6.2 Fuselage and Tail Integration...........................................................................................................21
+   6.3 Landing Gear and Control System.................................................................................................. 22
+   6.4 Testing and Validation..................................................................................................................... 22
+       6.4.1 Structural and Load Testing................................................................................................... 22
+       6.4.2 Control Surface Calibration................................................................................................... 22
+       6.4.3 Electrical System and Thrust Testing.....................................................................................22
+7.0 Manufacturing......................................................................................................................................23
+8.0 Conclusion.............................................................................................................................................25
+9.0 References............................................................................................................................................. 25
+Appendix A - Technical Data Sheet..........................................................................................................26
+2D DRAWING............................................................................................................................................ 27
+
+                                                                                                3
+
+=== PAGE 4 ===
+1.0 Executive Summary
+
+This document outlines the processes the Northern Arizona University team used to design and
+
+manufacture a remote-controlled (RC) aircraft for the Society of Automotive Engineers (SAE)
+
+Aero Design West 2025 micro competition. The methodology, overall design, analysis,
+
+performance, and manufacturing process are all explained to build the aircraft. The main goal of
+
+the project is to build a lightweight plane that can transport 67 fluid ounces of water. The current
+
+design can transport 67 fluid ounces and has been optimized within the SAE design
+
+requirements.
+
+1.1 System Overview
+
+The aircraft is a monoplane with a blended wing body. To keep a lightweight design, the fuselage
+
+has a truss structure and was laser-cut from pine wood with a tricycle, front-steering landing
+
+gear. The propulsion system is a tractor configuration RC motor with a single three blade
+
+propeller. The wings and stabilizers are made of balsa, laser-cut ribs of a clark-y airfoil with two
+
+3.1x3.1” carbon fiber spars, balsa wood leading and trailing edges, and wrapped in shrink wrap.
+
+This airfoil was chosen to maximize lift with an angle of attack of fifteen degrees. The electric
+
+circuit has a 450 Watt power limiter and a red arming plug. Figure 1 displays the final design of
+
+the aircraft.
+
+                                                                                        4
+
+=== PAGE 5 | img ===
+                               Figure 1: AeroJacks Final Design
+
+1.2 Discriminators
+
+The fuselage provides a light-weight design, as unnecessary materials and weight are removed
+
+from the aircraft. The use of pine and balsa wood also decrease the design’s weight without
+
+losing durability. Laser-cutting each piece of the fuselage and spars allowed for precise, easily
+
+replicable manufacturing. The blended wing body provides added security to the wings,
+
+providing support in critical areas. The wings are located high on the body (nearing a high-wing
+
+configuration) which increases stability and enhances lift at low speeds. The tractor
+
+configuration of the propeller allows for better efficiency, as airflow is not disrupted by the
+
+fuselage. The front-mounted engine also provides a natural shift forward of the center of gravity
+
+and improves stability.
+
+                                                                                            5
+
+=== PAGE 6 | img ===
+2.0 Schedule Summary
+
+The team started working on this project in September 2024. The first four months of the process
+
+focused on research and prototype development. Each team member completed preliminary
+
+research on the overall components of an RC airplane, then researched specific subsystems such
+
+as the wings, fuselage, horizontal and vertical stabilizers, thrust, landing gear, and electronic
+
+system. After completing research the team worked on designing prototype airplanes, then
+
+refining and optimizing the early designs to become competition ready for April 2025. Figures 2
+
+and 3 display the fall and spring Gantt Charts of the team schedule. The fall schedule focused on
+
+initial research, beginning iterative plane designs, and completing calculations for the goal
+
+takeoff speed and plane dimensions. Once these designs were known, iterative designing and
+
+testing began. The spring schedule focused on finalization and construction of the aircraft design.
+
+                                                                                       ​
+
+                         Figure 2: AeroJacks Fall Schedule Gantt Chart
+
+                                                                                         6
+
+=== PAGE 7 | img ===
+                                                                                           ​
+
+                        Figure 3: AeroJacks Spring Schedule Gantt Chart
+
+3.0 Design Layout & Trades
+
+When starting the design process, the team created a functional decomposition to better
+
+understand the inputs and outputs of the aircraft system. This was created with the researched
+
+knowledge of RC airplanes and broken down into the base steps for plane control. Figure 4
+
+shows the team’s functional decomposition.
+
+                                                                                          7
+
+=== PAGE 8 | img ===
+                                                                                   ​
+
+                              Figure 4: Functional Decomposition
+
+The team also created an electrical diagram in order to understand each aspect of the plane’s
+
+control system and power. The electrical diagram is shown in Figure 5. After deciding the
+
+foundational requirements of the plane, the team moved forward with iterative design.
+
+                                                                                ​
+
+                                 Figure 5: Electrical Diagram
+
+                                                                                           8
+
+=== PAGE 9 | math ===
+3.1 Overall Design Layout and Size
+
+The dimensions of the aircraft can be seen in Table 1.
+
+                                 Table 1: Plane Dimensions
+
+ Component                                    Dimension
+
+ Wingspan                                     54.0 inches
+
+ Chord Length                                 11.0 inches
+
+ Wing Area                                    594.0 inches2
+
+ Airfoil                                      Clark Y
+
+ Propellor Size                               Master Airscrew 13 x 8 inch
+
+ Landing Gear                                 12.59 inches (width)
+                                              6.29 inches (height)
+                                              1.10 inches (depth)
+
+ Nose to Tail Length                          41 inches
+
+3.2 Optimization
+
+A MATLAB code was created to optimize the dimensions of the plane. Initial parameters were
+
+first set as a starting point, being the wing, horizontal tail, and vertical tail dimensions (including
+
+the airfoil, the maximum angle of attack, wing density, half-span, root chord, taper ratio, aspect
+
+ratio, and more), the fuselage dimensions (the length, width, height, and density of the fuselage),
+
+and the payload parameters. Some dimensions were set to be unchanging, such as the density of
+
+materials used and the payload parameters, then the code was run with the goal of optimizing the
+
+score shown in equation 1, which was the scoring equation for the competition.
+
+                         Final Flight Score = 3 * Wpayload* M+ Z ​        ​      ​      (1)
+
+                                M =          11     ​​      ​      ​      ​      ​      (2)
+                                       (Wempty−1) 4+8.9
+
+                                                                                          9
+
+=== PAGE 10 | math ===
+                                                 1.5 ​​    ​      ​     ​      ​      (3)
+                               Z = Btakeoff−S
+
+Wpayload = Payload Weight (lbs)
+
+Wempty = Empty Weight (lbs)
+
+S = Wingspan (ft)
+
+                                        20 0 ≤x≤20 ft
+
+                                        15 10 < x≤25 ft
+                   Btakeoff   {
+                           =
+                                        9   25 < x≤50 ft
+
+                                        0   50 < x≤100 ft
+
+The code analyzed possible scores and depicted the score optimization. The parameters with the
+
+highest output score were then presented in code and used in the team design.
+
+3.3 Design Features and Details (Subassembly Sizing)
+
+SAE Aero25 aircraft subassemblies were structured based on strength, weight limit, and
+
+aerodynamic efficiency. All of the components were clearly laid out to offer optimal performance
+
+in competitive environments while achieving strength versus light-weight construction balance.
+
+The fuselage is structured to accommodate the payload water tank without affecting its
+
+aerodynamic shape and therefore minimal drag. Laser-cut plywood panels supported by metal
+
+brackets are primarily employed to construct it. The design achieves maximum balance between
+
+strength and lightness, with sufficient structural support without excessive weight. Pre-drilled
+
+slots were made available for the attachment of electronics, the motor, and landing gear. The
+
+fuselage structure was also strengthened in high-stress areas to prevent deflection under load.
+
+                                                                                       10
+
+=== PAGE 11 ===
+Additional bracing was incorporated at subassembly connection points to offer structural
+
+integrity during flight and landing.
+
+The wingspan is 54 inches with 11-inch ribs to provide maximum lift while maintaining an
+
+efficient scoring size. The structure is constructed from balsa wood ribs, a carbon fiber wing
+
+spar, and shrink wrap covering to achieve a light yet resilient surface. A 2-inch control surface
+
+was incorporated to enhance maneuverability. Design for the wing involved iterations with
+
+designs aiming at maximum aerodynamic efficiency, minimum structure weight, and the ease of
+
+assembling. Wing attach method was purposely chosen for permitting rapid as well as rigid
+
+fixing so the flight loads are not weakening the structure.
+
+The tail assembly comprises a horizontal stabilizer and a vertical stabilizer, each with a control
+
+surface (the rudder and the elevator). The control surfaces are a hinged elevator and rudder with
+
+smooth motion, operated through servo systems. For greater stability of flight, the attachment
+
+points of the tail assembly were reinforced with wood glue and metal hardware, reducing
+
+misalignment at high-speed flight. The horizontal stabilizer is made up of balsa ribs and spruce
+
+spars. The control surfaces consist of a hinged elevator and rudder, with accurate movement,
+
+controlled through servo mechanisms. For increased stability during flight, the tail assembly
+
+mounting points were reinforced to reduce the likelihood of misalignment during high-speed
+
+flight.
+
+The water tank is 67 fl oz in capacity and is constructed to evenly distribute weight inside the
+
+fuselage. It is 3D-printed from PLA with a waterproof treatment to avoid leakage. The mounting
+
+system has a reinforced cradle to secure the tank to avoid movement during flight. Particular
+
+attention was paid to where the tank would be placed so that its center of gravity is optimal under
+
+varying flight conditions
+
+                                                                                         11
+
+=== PAGE 12 ===
+4.0 Loads and Environments, Assumptions
+
+The following subsections details the various loads that the aircraft will experience. The loads
+
+that have the greatest impact on the plane are the takeoff, landing, and payload loads. While
+
+loads on the aircraft are important to analyze, the environmental conditions need to be
+
+considered to provide the team with a general idea of how the plane will fly.
+
+4.1 Design Loads
+
+High aerodynamic loads are encountered during takeoff due to increased angles of attack. The
+
+wings and fuselage must withstand lift and drag forces as the plane accelerates to achieve
+
+takeoff. Landing generates significant forces on the fuselage and landing gear. These forces are
+
+analyzed to ensure durability and survivability during hard landings. The water payload induces
+
+additional weight, affecting wing bending moments and fuselage stresses. Structural
+
+reinforcement ensures safe operation under full and partial payload conditions.
+
+4.2 Environmental Conditions
+
+The competition is being held in Van Nuys California, where weather conditions differ to
+
+Flagstaff Arizona. The team collected data from historical atmospheric conditions to obtain
+
+average temperature, pressure, and density for a comparison of Reynolds numbers between Van
+
+Nuys and Flagstaff.
+
+                                                                                         12
+
+=== PAGE 13 | math ===
+                          Table 2: Parameters and Reynolds Numbers
+
+              μ (slug/ft.s)  V (ft/s)  ⍴ (slug/ft^3)   P (psi)       T (F)         Re
+Sea Level      3.74E-07       49.2       0.00237        14.7          60       286524.27
+Van Nuys       3.75E-07       49.2       0.00234        14.73         62       280729.53
+Flagstaff      3.68E-07       49.2       0.00204        14.68         49       249677.24
+
+To calculate Reynolds number, the above parameters are used in equation 4 below.
+
+           ​      ​      ​      ​      Re = ρVl ​    ​      ​      ​      ​      ​      (4)
+                                               μ
+
+Where V is the velocity, l is the characteristic length, ρ is the fluid density, and μ is the absolute
+
+viscosity coefficient. The viscosity is determined using Sutherland’s equation (equation 5):
+
+                                                   3 T0+S
+                                        μ = ( T ) 2 (      ​ ​     ​      ​      ​      (5)
+                                        μ0     T0     T+S)
+
+where T is the temperature, T0 ​ is the reference temperature at sea level, μ0 is the absolute
+
+viscosity at sea level, and S is the Sutherland constant.
+
+5.0 Analysis
+
+The analysis of the plane structure, design, and aerodynamic properties were done primarily in
+
+computer software programs. The software programs included XFLR5, MATLab, and
+
+SOLIDWorks. The team performed various analyses to maximize the theoretical performance of
+
+the plane as well as to maximize the score received during competition. The primary focus of the
+
+analyses were to ensure that the plane could meet the competition specified payload
+
+requirements and have the smallest wingspan possible. The various software programs allowed
+
+for an iterative design process which made changing small details simpler and easier.
+
+                                                                                         13
+
+=== PAGE 14 ===
+5.1 Analysis Techniques
+
+The analysis techniques used during the design of this plane were an optimization program using
+
+MATLab, a flow simulation and 3D model in SOLIDWorks, ANSYS, and Pradtl’s lifting line
+
+theory and the 3D panel method in XFLR5. Using the optimization code, a starting point for
+
+dimensions of the wings and fuselage could be conducted. The code used the competition rules
+
+as a way to maximize the points received. The flow simulation in SOLIDWorks was used to see
+
+forces acting on the fuselage due to airflow. The most extensive analyses were done using
+
+XFLR5. The lifting line theory and the 3D panel method were already built into XFLR5. Using
+
+both techniques, the coefficient of lift and drag were calculated according to the airfoil and wing
+
+shape. ANSYS, provided a method to complete a finite element analysis on the plane wings.
+
+ANSYS used the imported SOLIDWORKS CAD model of the wings and after setting the
+
+materials and forces the wings endured, a finite element analysis was completed.
+
+5.1.1 Developed Models
+
+Figures 6 and 7 are the products of the XFLR5 calculations. Using the coefficients of lift and
+
+drag generated by the software, a graphical representation can be shown for both lift and drag of
+
+the designed wing. The wing was set at a permanent angle of attack based on these graphs. The
+
+chosen angle is +7°. This was done to get the most lift without inducing an unacceptable amount
+
+of drag.
+
+                                                                                       14
+
+=== PAGE 15 | img ===
+                                                                             ​
+
+                       Figure 6: Coefficient of Lift versus Angle of Attack
+
+                       Figure 7: Coefficient of Drag versus Angle of Attack
+
+5.2 Performance Analysis
+
+The performance analysis that was conducted was a lift versus velocity analysis. Using the data
+
+collected from the XFLR5 software the coefficients of lift and drag were calculated and then
+
+were plugged into the lift and drag equations.
+
+                                                                                           15
+
+=== PAGE 16 | math, img ===
+                                        1         ​  ​
+                                L =       ρv 2CLS           ​      ​       ​      ​      (6)
+                                        2
+L = Lift
+ρ = Air Density
+v = Velocity
+S = Wing Area
+CL = Lift Coefficient
+
+                                         1       ​   ​
+                                D =       v 2CDS            ​      ​       ​      ​      (7)
+                                         2
+D = Drag
+CD= Drag Coefficient
+
+From these equations, a model to predict the needed velocity to get a certain lift could be created.
+
+This was used to predict payload capacity and takeoff velocity and are shown in section 5.2.1.
+
+5.2.1 Takeoff Performance
+
+Figures 8 and 9 show the lift and drag at various velocities. The method was that in order to lift a
+
+certain amount of weight, then the plane needs to move at a certain speed. The plane was initially
+
+estimated to be around 35N (7.86 lbs) in weight. Given this, the speed necessary to lift this
+
+weight can be seen. The graph depicting drag as a function of velocity was used to see how much
+
+drag would be acting on the aircraft at its takeoff speed.
+
+                            Figure 8: Lift [N] versus Velocity [m/s]
+
+                                                                                         16
+
+=== PAGE 17 | img ===
+                           Figure 9: Drag [N] versus Velocity [m/s]
+
+5.2.2 Payload Prediction
+
+Similar to predicting maximum takeoff weight, figure 8 can be used to predict the payload that
+
+can be carried depending on the airspeed. The velocity on the graph represents the speed of the
+
+air and not the speed of the wing. From this, it can be seen that if headwinds are strong enough,
+
+the plane can exceed its normal takeoff weight prediction of 35N (including full payload) and
+
+perform well while under around 10-20N more load than expected.
+
+5.3 Structural Analysis
+
+A structural analysis of both the wings and fuselage were performed to ensure the design would
+
+be able to withstand the forces that they will be subjected to. The stress across the wings/fuselage
+
+and maximum stress points were calculated using SOLIDWorks. These values were critical to
+
+ensuring a safe design.
+
+5.3.1 Wing Analysis
+
+To simplify the analysis, half of the wing is demonstrated as a beam shown in figure 10, with a
+
+maximum lift force of 20 lbf. The wing experiences a maximum stress of 4.734 kpsi on the back
+
+                                                                                        17
+
+=== PAGE 18 | img ===
+spar with a minimum factor of safety of 1.689. To replicate the strength of carbon fiber, 6061
+
+aluminum alloy was used in place for the spars. The wing experiences 0.039 inches of
+
+displacement and has the most strain at the max stress point shown in figure 11.
+
+                                                                                       ​
+
+                               Figure 10: Stress analysis of wing
+
+                              Figure 11: Wing’s Max Stress Point
+
+5.3.2 Fuselage Analysis
+
+The fuselage is primarily made of balsa wood and withstands aerodynamic and payload loads. It
+
+experiences a maximum stress of 1.158 kpsi with a minimum factor of safety of 2.503. Figure 12
+
+shows a displacement of 0.291 inches and experiences the most strain at the max stress point
+
+shown in figure 13.
+
+                                                                                           18
+
+=== PAGE 19 | img ===
+                             Figure 12: Fuselage Stress Analysis
+
+                            Figure 13: Fuselage’s Max Stress Point
+
+6.0 Assembly & Sub-Assembly, Test and Integration
+
+This section outlines assembly, integration, and testing procedures for structural integrity,
+
+performance, and safety. The aircraft is made of carbon fiber, balsa wood, light plywood, and
+
+3D-printed PETG components, prioritizing weight, efficiency, and durability
+
+                                                                                        19
+
+=== PAGE 20 | img ===
+6.1 Wing Assembly and Integration
+
+The wings feature 5/16 inch square pultruded carbon fiber spars, 1/8-inch laser-cut balsa ribs,
+
+and balsa leading and trailing edges. The ribs are held in a form while they are glued to the spars.
+
+Once bonded to the spar and edges, the ribs are covered with 1/16-inch balsa sheeting and
+
+Monokote for aerodynamics. Both wing halves slide through the fuselage and are clamped
+
+together for easy disassembly and transport.
+
+                             Figure 14: Partially constructed wing
+
+6.2 Fuselage and Tail Integration
+
+The fuselage is made of 1/8-inch laser-cut plywood with interlocking joints and metal braces.
+
+The 3D-printed PETG water tank is securely mounted inside for stability. The horizontal and
+
+vertical stabilizers are constructed similarly to the wings but with wooden dowel spars.
+
+                                                                                         20
+
+=== PAGE 21 | img ===
+                                                                         ​
+
+                            Figure 15: Partially assembled fuselage
+
+6.3 Landing Gear and Control System
+
+The steerable front wheel links to the rudder controls for ground maneuverability, while
+
+lightweight carbon fiber struts make up the rear landing gear. Independent battery systems
+
+provide reliable power for propulsion and avionics.
+
+6.4 Testing and Validation
+
+6.4.1 Structural and Load Testing
+
+Static load testing verified the carbon fiber spars’ ability to distribute aerodynamic forces
+
+without deformation. Ground tests confirmed the landing gear’s durability and responsiveness.
+
+6.4.2 Control Surface Calibration
+
+The control surfaces were tested for full range of motion and adequate servo response time. All
+
+mechanical linkages were checked for reliable performance.
+
+                                                                                        21
+
+=== PAGE 22 | img ===
+6.4.3 Electrical System and Thrust Testing
+
+Extensive circuit testing was conducted to ensure the proper operation of the motor, batteries,
+
+and propellers. Thrust stand tests were performed using various motors, propellers, and batteries.
+
+The maximum thrust achieved was approximately 2,400 grams at an altitude of 7,000 feet above
+
+sea level. The calculated thrust at the competition altitude is expected to be around 2,800 grams.
+
+                              Figure 16: Thrust measuring stand
+
+7.0 Manufacturing
+
+The manufacturing process followed a systematic approach for accuracy and speed. Each
+
+component was built using specialized techniques to provide accuracy and consistency,
+
+minimizing wastage of material.
+
+The fuselage was built using precision laser-cut plywood panels designed to interlock. Wood
+
+glue was applied to the critical joints and metal brackets were used at stress points for
+
+reinforcement. The motor mount was a bespoke plywood bracket that securely fastened the
+
+motor at the front of the fuselage. In addition, structural reinforcements were added at high-stress
+
+                                                                                        22
+
+=== PAGE 23 ===
+junctions to prevent warping under long-term loading. Assembly was meticulously planned to be
+
+systematic to ensure alignment and minimize potential errors.
+
+The wings were constructed from laser-cut balsa wood ribs, which were laid along carbon fiber
+
+spars. Prefabricated leading and trailing edges were fitted into the ribs to provide structural
+
+strength. Heat-treated shrink wrap was applied to provide an aerodynamic surface with minimum
+
+weight and yet be strong. Attention was taken to maintain uniform rib spacing to ensure that
+
+aerodynamic forces would be evenly distributed across the wing surface. Additional tests were
+
+carried out to examine the strength of the wing under simulated flight loading.
+
+The tail assembly was constructed from pre-cut balsa wood ribs and spars and was cemented into
+
+the fuselage for a solid and permanent bond. The rudder and elevator were fitted with hinge
+
+mechanisms for attachment and were connected to servo motors for precise control. Guides were
+
+used during assembly to ensure correct positioning of the control surfaces. Mechanical testing
+
+was done to ensure that the hinge attachments had free and smooth movement under load.
+
+Alignment guides were used during assembly to ensure proper alignment of the control surfaces.
+
+Mechanical testing was done to ensure that the hinge attachments had free and smooth
+
+movement under load.
+
+The water tank was 3D printed using PLA filament and reinforced in stress-prone areas. It was
+
+sealed using a waterproofing sealant and underwent leak testing for durability. The tank was
+
+attached within the fuselage using a custom-designed bracket to maintain center-of-mass
+
+balance.
+
+Final aircraft assembly involved integrating the fuselage, wings, and tail using dedicated
+
+mounting points. Motor, receiver, battery, and servos were wired and tested for proper
+
+                                                                                       23
+
+=== PAGE 24 ===
+functionality. Control surfaces were calibrated and center of gravity was checked prior to flight
+
+testing. Additional weight distribution tests were conducted to verify that the handling qualities
+
+of the aircraft were as anticipated in design. The completed assembly was subjected to a series of
+
+ground-based tests to assess the structural integrity and responsiveness of control mechanisms.
+
+This systematic approach ensured that subassemblies were all built and assembled with
+
+precision, optimizing the performance for SAE Aero25 competition. Combining thorough
+
+testing, precise manufacturing, and material selection strategy created an aircraft design that not
+
+only wowed competition specifications but also engineering best practices.
+
+8.0 Conclusion
+
+The NAU Aero Jacks aircraft has gone through many iterations of design, analysis, and testing.
+
+The plane features a high wing blended body design with a laser cut fuselage and laser cut wing
+
+and tail ribs. The water tank was 3D printed with baffles on the inside for payload oscillation
+
+damping. The design of the RC plane is designed to optimize stability while decreasing design
+
+weight. The plane is projected to have a stable flight in competition and efficiently deliver the 67
+
+ounce water payload.
+
+9.0 References
+
+[1] Model, “Model Aircraft Design Optimization with MATLAB,” YouTube, Dec. 13, 2022.
+      https://youtu.be/ipjsxi04euA?si=2-yd1c7OWuIMlSOz (accessed Oct. 04, 2024).
+
+[2] SAE Aero Design - Rules" "SAE Aero Design - Rules," SAE Aero Design,
+      https://www.saeaerodesign.com/cdsweb/gen/DocumentResources.aspx.
+[3] J. D. Anderson, “Aircraft Performance and Design”. Boston, Mass. Mcgraw-Hill Higher
+      Education, 2012.
+[4] Daniel P. Raymer “Aircraft Design-A Conceptual Approach”, American Institute of
+
+                                                                                       24
+
+=== PAGE 25 ===
+      Aeronautics and Astronautics
+[5] J. D. Anderson, Fundamentals of Aerodynamics, 6th ed., New York, NY: McGraw-Hill
+      Education, 2017
+[6] Kroo, “Drag Due to Lift: Concepts for Prediction and Reduction,” Annual Review of Fluid
+      Mechanics, vol. 33, pp. 587-617, 2001. doi: 10.1146/annurev.fluid.33.1.587.
+[7] OpenVSP (Version 3.40.1) [Software]. (2023) National Aeronautics and Space
+      Administration. https://openvsp.org/
+[8] SAE University Programs. “SAE Aero Design”, Youtube, Sept 5, 2024. [57 Video Viles].
+      Available: https://youtu.be/TH40KCVfFkQ?si=AvlQY_qM_U-qS5uI
+[9] N. Harris, “Static stability and control derivatives for light aircraft,” AIAA Journal of
+      Aircraft, vol. 45, no. 3, pp. 845–857, 2008.
+[10] E. Torenbeek, “Estimating the aerodynamic center and static margin for conceptual aircraft
+      design,” Aerospace Science and Technology, vol. 12, no. 4, pp. 289–296, 2008.
+
+                                                                                        25
+
+=== PAGE 26 | img ===
+Appendix A - Technical Data Sheet
+
+Team Name: Aero Jacks
+
+School Name: Northern Arizona University
+
+Team Number: 316
+
+The figures below show the plots of the neutral point and center of gravity versus the angle of
+
+attack and the static margin versus the angle of attack. The center of gravity shifts further back
+
+from the neutral point as the angle of attack increases, as the water’s center of gravity will
+
+slightly shift as the angle increases as well. There is not a large change, as the water tank
+
+includes baffles to decrease the center of gravity shift and dampen oscillations in the water
+
+during flight. The minimum static margin is 2.23% and the maximum is 3.01%. Given the low
+
+static margin, the plane will require small control inputs due to higher maneuverability.
+
+                                                                                    ​
+
+     Figure 17: Neutral Point and Center of Gravity Positions (inches) versus Angle of Attack (°)
+
+                                                                                 ​
+
+                                 Figure 18: Static Margin (%)
+
+                                                                                           26
+
+=== PAGE 27 | lowtext, img ===
+Appendix B - 2D Drawing
+
+                                                         27

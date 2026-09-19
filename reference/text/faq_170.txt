@@ -1,0 +1,52 @@
+# ID: faq_170
+# SOURCE: https://saeaerodesign.com/cdsweb/rqa/ViewFAQ.aspx?faqnum=170
+# ORIGINAL: reference/raw/faq_170.html
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type html | 1 pages | ~404 tokens
+
+=== PAGE 1 ===
+# SAE Aero Design
+
+Menu
+
+Click the button to view more details of the error.
+
+Click here to see what went wrong
+Dismiss
+
+FAQ #170
+
+All Classes: Pilot Eligibility
+
+Last Updated On
+12/13/2024 02:55:50 PM
+by
+
+brett.foley
+
+Question
+
+Our team pilot is a member of my countries national aeromodeling organization. Do they also have to be a member of the AMA, the Academy of Model Aeronautics, to fly at Aero Design?
+
+Answer
+
+As per rule 1.3, valid Academy of Model Aeronautics (AMA) membership cards must be presented at the flying field prior to flying any team’s aircraft.
+
+All pilots must be AMA members, with one exception. Members of the Model Aircraft Association of Canada do not have to join the AMA, as the AMA has a reciprocal arrangement with the MAAC. One reason for this requirement is the liability insurance provided by the AMA.
+
+You can become an Affiliate member of the AMA, if you are not a USA resident. However, you must apply using a mailed-in form, well in advance of your need for membership. You cannot obtain an Affiliate membership on line. This link the the mail in form mentions Affiliate membership:
+
+https://www.modelaircraft.org/files/902.pdf
+
+If you want a full AMA membership and you are not a US resident, you must also apply using a mailed-in as stated on the online registration web site. US residents can join the AMA on the main web site as a full member. They do take credit cards and they send an email confirmation of membership right away.
+
+https://www.modelaircraft.org/joinrenew.aspx
+
+No Attachments
+
+| Rule Numbers |
+
+| 2017:1.3.5 |
+
+| 2025:1.3 |
+
+SAE International Privacy Policy

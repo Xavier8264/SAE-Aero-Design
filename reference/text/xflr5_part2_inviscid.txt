@@ -1,0 +1,426 @@
+# ID: xflr5_part2_inviscid
+# SOURCE: https://flow5.tech/xflr5/docs/
+# ORIGINAL: reference/raw/xflr5_part2_inviscid.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 31 pages | ~3829 tokens
+# NOTE: XFLR5 official docs Part II inviscid/wing analysis (exact URL unrecorded; see flow5.tech/xflr5/docs)
+# FLAG lowtext: pages 1,4-5,9,13
+# FLAG img: pages 2,4-10,12,16-19,22-28
+# TOC:
+#   Slide 1 -> PDF page 1
+#   Slide 2 -> PDF page 2
+#   Slide 3 -> PDF page 3
+#   Slide 4 -> PDF page 4
+#   Slide 5 -> PDF page 5
+#   Slide 6 -> PDF page 6
+#   Slide 7 -> PDF page 7
+#   Slide 8 -> PDF page 8
+#   Slide 9 -> PDF page 9
+#   Slide 10 -> PDF page 10
+#   Slide 11 -> PDF page 11
+#   Slide 12 -> PDF page 12
+#   Slide 13 -> PDF page 13
+#   Slide 14 -> PDF page 14
+#   Slide 15 -> PDF page 15
+#   Slide 16 -> PDF page 16
+#   Slide 17 -> PDF page 17
+#   Slide 18 -> PDF page 18
+#   Slide 19 -> PDF page 19
+#   Slide 20 -> PDF page 20
+#   Slide 21 -> PDF page 21
+#   Slide 22 -> PDF page 22
+#   Slide 23 -> PDF page 23
+#   Slide 24 -> PDF page 24
+#   Slide 25 -> PDF page 25
+#   Slide 26 -> PDF page 26
+#   Slide 27 -> PDF page 27
+#   Slide 28 -> PDF page 28
+#   Slide 29 -> PDF page 29
+#   Slide 30 -> PDF page 30
+#   Slide 31 -> PDF page 31
+
+=== PAGE 1 | lowtext ===
+        Why does a plane fly:
+     the inviscid potential flow
+Rev. 1.1 – © André Deperrois – March 2019
+
+=== PAGE 2 | img ===
+                                Navier-Stokes equations
+                    Inviscid fluid                                Time averaged
+                                                                   turbulence              CFD « RANS »
+                                                                                           Reynolds Averaged
+              Euler’s equations                              Reynolds equations           Navier-stokes solvers
+
+       irrotational flow
+                                                                                       Viscosity models, uniform
+                                                            3d Boundary Layer eq.   pressure in BL thickness, Prandlt
+               Potential flow                                                          mixing length hypothesis.
+                                                                    2d BL equations
+   Time independent,
+  incompressible flow
+             Laplace’s Laplace’s equation equation             1d BL Integral                 2d BL differential
+                                                                 equations                       equations
+                                            2d
+                                                                       mixed empirical + theoretical
+2d, 3d                                                               turbulence and transition models
+
+                          2d viscous results
+                            interpolation
+
+=== PAGE 3 ===
+               Potential flow: Scope of validity
+
+         Viscosity is                             The theory will be preferably
+          omitted                                   applied where the viscous
+                                                     effects are negligible.
+
+ The Reynolds number can be                       The theory will be preferably
+seen as a measure of the ratio of               applied to high Reynolds number
+inertia forces to viscous forces                             flows
+
+ Flow separation on an airfoil                    The theory will be preferably
+      is a viscous effect                        applied at low angles of attack
+                                                    without flow separation
+
+=== PAGE 4 | lowtext, img ===
+Solving Laplace’s equation
+
+=== PAGE 5 | lowtext, img ===
+Solving Laplace’s equation
+
+=== PAGE 6 | img ===
+                             Solving Laplace’s equation
+
+                                 In electrostatics, the elementary
+
+                                             solutions are
+
+            the point charge                           the doublet
+
+       By Geek3 - Own work, CC BY-SA 3.0,          By Geek3 - Own work, CC BY-SA 3.0,
+https://commons.wikimedia.org/w/index.php?curid=10568674  https://commons.wikimedia.org/w/index.php?curid=10568742
+
+=== PAGE 7 | img ===
+                                 Solving Laplace’s equation
+
+                                     In fluid dynamics, the fundamental
+
+                                                    solutions are
+
+            the source and sink                                 the doublet                           the vortex
+
+        By Geek3 - Own work, CC BY-SA 3.0,                  By Geek3 - Own work, CC BY-SA 3.0,     NASA / JPL-Caltech / Space Science Institute -
+https://commons.wikimedia.org/w/index.php?curid=10568674  https://commons.wikimedia.org/w/index.php?curid=10568742  http://www.ciclops.org/view/7436/Saturn_Rev_17
+                                                                                                  5_Raw_Preview_2
+
+=== PAGE 8 | img ===
+                                  Solving Laplace’s equation
+
+                                                                                               The vortex strength is called
+                                                                                                      the “circulation”
+
+            the source and sink                                 the doublet                            the vortex
+
+        By Geek3 - Own work, CC BY-SA 3.0,                  By Geek3 - Own work, CC BY-SA 3.0,      NASA / JPL-Caltech / Space Science Institute -
+https://commons.wikimedia.org/w/index.php?curid=10568674  https://commons.wikimedia.org/w/index.php?curid=10568742  http://www.ciclops.org/view/7436/Saturn_Rev_17
+                                                                                                   5_Raw_Preview_2
+
+=== PAGE 9 | lowtext, img ===
+Solving Laplace’s equation
+
+=== PAGE 10 | img ===
+           Solving Laplace’s equation
+
+Dirichlet BC:
+   Mathematical concept, no simple physical interpretation
+
+Neumann BC:
+●    is the specification of the velocity vector on given surfaces
+●    for solid surfaces, this is      , i.e. the velocity is tangent to the surface
+
+=== PAGE 11 ===
+           Solving Laplace’s equation
+
+The idea is to
+ 1. Search for a solution which is a linear combination of N elementary
+   solutions
+ 2. Define N appropriate boundary conditions
+ 3. Include Kutta’s condition in the case of the panel method
+ 4. Solve the problem of N equations = the BC, for N variables = the
+   elementary solutions
+
+=== PAGE 12 | img ===
+                              Kutta’s condition
+
+               ●A wing produces lift by deflecting the flow downwards
+               ●It can be shown that this occurs if a vortex forms around the wing
+                 and adds its velocity field to the freestream velocity.
+               ●Kutta’s condition states that, to have physical sense, the vortex
+                 must be such that the total flow, i.e. freestream + vortex, leaves
+                 the wing smoothly at the trailing edge
+
+freestream
+                                      Wing                                     deflected
+                                      vortex                                     flow
+
+                                                         Stagnation point at the trailing edge,
+                                                     The flow leaves the airfoil in the direction given
+                                                        by the TE, Kutta’s condition is satisfied
+
+=== PAGE 13 | lowtext ===
+        A wing is a vortex generator
+
+A wing produces lift by deflecting the freestream flow downwards
+
+=== PAGE 14 ===
+                            A wing is a vortex generator
+
+          Fluids                                                                    Electromagnetism
+
+   Helmholtz theorems                                                           1.Along an electric wire, the
+1.The circulation Γ of a                                                          current intensity is constant.
+ vortex filament is                                                             2.An electric current cannot
+ constant along its length.                                                       begin or end abruptly.
+2.A vortex filament cannot
+ end in a fluid; it must
+ either:
+    i. extend to infinity
+    ii. form a closed path.
+
+=== PAGE 15 ===
+                           A wing is a vortex generator
+
+         Fluids
+   Helmholtz theorems
+1.The circulation Γ of a
+ vortex filament is
+ constant along its length.
+2.A vortex filament cannot
+ end in a fluid; it must
+ either:
+    i. extend to infinity
+    ii. form a closed path.
+
+                                     ●In 3d, this implies the existence of tip vortices, lost kinetic
+                                       energy in the cross-flow, and induced drag
+                                     ●In 2d, no tip vortices and no induced drag; this is the reason
+                                       why the drag calculate by XFoil is pure viscous/profile drag
+
+=== PAGE 16 | img ===
+                     A wing is a vortex generator
+
+      Fluids                                                        Electromagnetism
+Kutta-Joukowski’s theorem                                      Lorenz/Laplace force
+
+The force acting on a                                          The force acting on a wire
+vortex is the cross-product                                    is the cross-product of
+of the velocity by the                                         the electric current by the
+circulation vector.                                            magnetic field.
+l is the vortex’s length                                       l is the wire’s length
+
+                   Similarly to the force on an electric wire in a magnetic
+                 field, a freestream flow creates on a vortex a radial force
+                               normal to the velocity vector
+
+=== PAGE 17 | img ===
+              The Kutta-Joukowski theorem
+
+The topspin ball                                             The rotor boat
+                           The ball and rotor
+                           mast act as vortex
+                              generators
+
+                   The Magnus effect is an example of the
+                         Kutta-Joukowski theorem
+
+=== PAGE 18 | img ===
+                     A wing is a vortex generator
+
+      Fluids
+Kutta-Joukowski’s theorem
+
+The force acting on a
+vortex is the cross-product
+of the velocity by the
+circulation vector.
+l is the vortex’s length                          Since the trailing vortices are aligned
+                                                        with the free-stream,
+
+                                                       “The wake carries no load”
+
+=== PAGE 19 | img ===
+                     Why does a wing produce lift
+
+ The CFD point of
+                        freestream
+      view:
+  pressure forces
+
+The mechanical point   freestream                                    deflected
+      of view:                                                        flow
+ Action and reaction
+
+The mathematical       freestream
+ point of view:                          Wing vortex
+ Kutta-Joukowski
+    theorem
+
+=== PAGE 20 ===
+            Solving Laplace’s equation
+
+        3D             Elementary solutions  Boundary Condition
+
+ Lifting Line Theory
+                             Vortices             Neumann
+       (LLT)
+
+Vortex Lattice Method
+                             Vortices             Neumann
+       (VLM)
+
+                          Source/sink and       Dirichlet and/or
+       Panel
+                          doublet sheets          Neumann
+
+=== PAGE 21 ===
+                        The LLT
+
+       One linear horseshoe vortex shedding it’s strength
+       incrementally in the wake
+
+   One linear horseshoe vortex → wing only, no dihedral, no sweep
+xflr5 implements the non-linear LLT described in report NACA TN-1269
+
+=== PAGE 22 | img ===
+                      The VLM
+
+One horseshoe or ring vortex located on each elementary panel
+One tangential flow condition on each elementary panel
+                                                       VLM1: horseshoe
+                                                           vortices
+
+                                 VLM2: ring + horseshoe vortices
+
+                         Highly versatile
+                   Multiple lifting thin surfaces
+
+=== PAGE 23 | img ===
+                                   The VLM
+Main limitation of the VLM:
+→ the wing’s trailing vortices must not intersect the elevator and fin vortices
+→ the wing panels should not intersect
+In such case it is preferable to “cheat” a little and offset vertically the
+elevator and fin to remove the intersections.
+Otherwise there is a high risk of numerical instability and erroneous results.
+
+                      interference of the main                           interference of
+                     wing’s trailing vortices with                      elevator and fin
+                         the elevator panels                                 panels
+
+=== PAGE 24 | img ===
+                       The Panel method
+Implements the method described in B. Maskew’s
+report NASA 4023 “Program VSAERO Theory
+Document”.
+The only exception is that the lift and drag are
+calculated in the far-field plane and not by adding
+panel forces
+
+=== PAGE 25 | img ===
+                         The Panel method
+One doublet and one source/sink sheet located on each elementary panel
+One Dirichlet BC “just inside each panel”
+ → Twice as many unknowns as there are equations : extra d.o.f. available to
+    model surface thickness
+ → The source strengths are fixed at the outset
+
+                                                                       wake panels
+
+                                              unknown doublet
+ uniform source
+                                                  sheet μ
+     sheets
+                              Highly versatile
+                       Multiple lifting thick surfaces
+
+=== PAGE 26 | img ===
+                         The Panel method
+Things to note about the panel method:
+●The source and doublet densities are uniform on each panel; higher order
+ methods with linear or quadratic densities are recommended for higher accuracy
+●The vortices are hidden in the doublet sheets: a rectangular doublet sheet is
+ mathematically equivalent to a ring vortex
+●The Kutta condition is implemented by adjusting the doublet density
+ on the wake panels
+                                                                       wake panels
+
+                                              unknown doublet
+                                                  sheet μ
+                              Highly versatile
+                       Multiple lifting thick surfaces
+
+=== PAGE 27 | img ===
+                         The Panel method
+Limitation of the the panel method:
+●same limitation as for the VLM
+●+ all volumes should be closed and non-intersecting
+This second limitation is the reason why the thick wing option is
+disabled in xflr5 v6: wing, fuselage, elevator and fin cannot be merged
+or connected without the help of a CAD software.
+
+                            Invalid mesh
+                            intersection
+
+=== PAGE 28 | img ===
+                    Solving the problem
+                           The linear system
+
+Whatever the method, the problem is reduced to solving a linear system
+
+The aij coefficients are the potential influence of one panel on another.
+In the case of the non-linear LLT, a viscous loop is added until convergence.
+The last thing to do is to calculate the lift and drag from the source &
+doublet densities or vortex circulations.
+
+=== PAGE 29 ===
+                            Solving the problem
+                                  Induced lift and drag      The
+                                                               far-field
+                                                                    plane
+The most straightforward method is to sum
+the forces acting on each panel. Over time
+however, numerical tests have shown that this
+method is imprecise.
+The preferred method is to determine lift and
+drag in the far-field Trefftz plane. Since
+ i. the vortex must form a closed filament
+ ii.the circulation is constant along the
+   vortex
+the lift on the wing is the lift in the FF plane
+calculated using Kutta-Joukowski’s theorem.
+This is recommended for panel methods in
+general and is implemented by default in xflr5
+
+=== PAGE 30 ===
+            Solving the problem
+         Flow chart of a potential flow analysis
+
+          Discretize the geometry
+
+       Define the source strengths and the BC
+
+Write and solve the linear system, including the Kutta condition
+
+         Calculate lift, drag and other quantities of interest
+
+                 Proceed to the Boundary-Layer analysis
+
+                       BL analysis is the object of the next
+                                  presentation
+
+=== PAGE 31 ===
+                           - up next -
+
+         Why does an airfoil drag:
+              the viscous problem
+
+Rev. 1.1 – © André Deperrois – March 2019

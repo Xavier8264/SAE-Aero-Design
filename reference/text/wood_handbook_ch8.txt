@@ -1,0 +1,1764 @@
+# ID: wood_handbook_ch8
+# SOURCE: https://www.fpl.fs.usda.gov/documnts/fplgtr/fplgtr282/chapter_08_fpl_gtr282.pdf
+# ORIGINAL: reference/raw/wood_handbook_ch8.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 30 pages | ~40500 tokens
+# NOTE: Wood Handbook ch8 fastenings (bolts/screws in wood; wing attach, gear blocks)
+# FLAG img: pages 2-4,6-7,9-10,13-17,19-21,23-26
+# TOC:
+#   Contents -> PDF page 1
+#   Nails -> PDF page 1
+#     Withdrawal Resistance -> PDF page 2
+#     Lateral Resistance -> PDF page 6
+#   Spikes -> PDF page 9
+#   Staples -> PDF page 9
+#   Drift Bolts -> PDF page 10
+#   Wood Screws -> PDF page 10
+#     Withdrawal Resistance -> PDF page 10
+#     Lateral Resistance -> PDF page 11
+#   Lag Screws -> PDF page 12
+#     Withdrawal Resistance -> PDF page 12
+#     Lateral Resistance -> PDF page 13
+#   Bolts -> PDF page 14
+#     Bearing Stress of Wood under Bolts -> PDF page 14
+#     Loads at an Angle to the Grain -> PDF page 15
+#     Steel Side Plates -> PDF page 15
+#     Bolt Quality -> PDF page 15
+#     Effect of Member Thickness -> PDF page 15
+#     Two-Member, Multiple-Member Joints -> PDF page 16
+#     Spacing, Edge, and End Distance -> PDF page 16
+#     Effect of Bolt Holes -> PDF page 16
+#     Pre-1991 Allowable Loads -> PDF page 17
+#     Post-1991 Yield Model -> PDF page 17
+#   Connector Joints -> PDF page 19
+#     Parallel-to-Grain Loading -> PDF page 19
+#     Perpendicular-to-Grain Loading -> PDF page 20
+#     Design Loads -> PDF page 20
+#     Modifications -> PDF page 20
+#     Net Section -> PDF page 23
+#     End Distance and Spacing -> PDF page 23
+#     Placement of Multiple Connectors -> PDF page 23
+#     Cross Bolts -> PDF page 24
+#     Multiple-Fastener Joints -> PDF page 24
+#   Metal Plate Connectors -> PDF page 25
+#   Joist Hangers -> PDF page 25
+#   Fastener Head Embedment -> PDF page 26
+#   Literature Cited -> PDF page 27
+#   Additional References -> PDF page 27
+
+=== PAGE 1 ===
+                                                                                    CHAPTER 8
+
+Fastenings
+
+Douglas R. Rammer, Research General Engineer
+
+    Contents                                                 The strength and stability of any structure depend heavily
+                                                             on the fastenings that hold its parts together. One prime
+    Nails  8–1                                               advantage of wood as a structural material is the ease with
+      Withdrawal Resistance  8–2                             which wood structural parts can be joined together with
+      Lateral Resistance  8–6                                a wide variety of fastenings—nails, spikes, screws, bolts,
+    Spikes  8–9                                              lag screws, drift pins, staples, and metal connectors of
+                                                             various types. For utmost rigidity, strength, and service,
+    Staples  8–9                                             each type of fastening requires joint designs adapted to the
+    Drift Bolts  8–10                                        strength properties of wood along and across the grain and
+    Wood Screws  8–10                                        to dimensional changes that may occur with changes in
+      Withdrawal Resistance  8–10                            moisture content.
+      Lateral Resistance  8–11                               Maximum lateral resistance and safe design load values
+    Lag Screws  8–12                                         for small-diameter (nails, spikes, and wood screws) and
+                                                             large-diameter dowel-type fasteners (bolts, lag screws,
+      Withdrawal Resistance  8–12                            and drift pins) were based on an empirical method prior
+      Lateral Resistance  8–13                               to 1991. Research conducted during the 1980s resulted in
+    Bolts  8–14                                              lateral resistance values that are currently based on a yield
+      Bearing Stress of Wood under Bolts  8–14               model theory. This theoretical method was adapted for
+      Loads at an Angle to the Grain  8–15                   the 1991 edition of the National Design Specification for
+                                                             Wood Construction (NDS). Because literature and design
+      Steel Side Plates  8–15                                procedures exist that are related to both the empirical and
+      Bolt Quality  8–15                                     theoretical methods, we refer to the empirical method
+      Effect of Member Thickness  8–15                       as pre-1991 and the theoretical method as post-1991
+      Two Member, Multiple Member Joints  8–16               throughout this chapter. Withdrawal resistance methods
+      Spacing, Edge, and End Distance  8–16                  have not changed, so the pre- and post-1991 refer only to
+                                                             lateral resistance.
+      Effect of Bolt Holes  8–16
+      Pre-1991 Allowable Loads  8–17                         The information in this chapter represents primarily
+                                                             Forest Products Laboratory research results. A more
+      Post-1991 Yield Model  8–17                            comprehensive discussion of fastenings is given in the
+    Connector Joints  8–19                                   American Society of Civil Engineers Manuals and Reports
+      Parallel-to-Grain Loading  8–19                        on Engineering Practice No. 84, Mechanical Connections
+      Perpendicular-to-Grain Loading  8–20                   in Wood Structures. The research results of this chapter
+                                                             are often modified for structural safety, based on judgment
+      Design Loads  8–20                                     or experience, and thus information presented in design
+      Modifications  8–20                                    documents may differ from information presented in this
+      Net Section  8–23                                      chapter. Additionally, research by others serves as a basis
+      End Distance and Spacing  8–23                         for some current design criteria. Allowable stress design
+      Placement of Multiple Connectors  8–23                 and limit states design criteria are presented in the National
+                                                             Design Specification for Wood Construction published by
+      Cross Bolts  8–24                                      the American Forest and Paper Association.
+      Multiple-Fastener Joints  8–24
+    Metal Plate Connectors  8–25                             Nails
+    Joist Hangers  8–25                                      Nails are the most common mechanical fastenings used in
+    Fastener Head Embedment  8–26                            wood construction. There are many types, sizes, and forms
+    Literature Cited  8–27                                   of nails (Fig. 8–1). Most load equations presented in this
+    Additional References  8–27                              section apply for bright, smooth, common steel wire nails
+
+                                                                                                                  8–1
+
+=== PAGE 2 | img ===
+                                                                        General Technical Report FPL–GTR–282
+
+                                                                       Table 8–1. Sizes of bright common wire
+                                                                       nails
+                                                                                         Length       Diameter
+                                                                       Size   Gauge     (mm (in.))    (mm (in.))
+                                                                       6d     11-1/2   50.8   (2)    2.87 (0.113)
+                                                                       8d     10-1/4   63.5 (2-1/2)  3.33 (0.131)
+                                                                       10d      9      76.2   (3)    3.76 (0.148)
+                                                                       12d      9      82.6 (3-1/4)  3.76 (0.148)
+                                                                       16d      8      88.9 (3-1/2)  4.11 (0.162)
+                                                                       20d      6     101.6   (4)    4.88 (0.192)
+                                                                       30d      5     114.3 (4-1/2)  5.26 (0.207)
+                                                                       40d      4     127.0   (5)    5.72 (0.225)
+                                                                       50d      3     139.7 (5-1/2)  6.20 (0.244)
+Figure 8–1. Various types of nails: (left to right) bright             60d      2     152.4   (6)    6.65 (0.262)
+smooth wire nail, cement coated, zinc-coated, annularly
+threaded, helically threaded, helically threaded and barbed,
+and barbed.                                                            Table 8–2. Sizes of smooth box nails
+                                                                                         Length      Diameter
+driven into wood when there is no visible splitting. For nails         Size  Gauge     (mm (in.))    (mm (in.))
+other than common wire nails, the loads can be adjusted by             3d    14-1/2     31.8 (1-1/4) 1.93 (0.076)
+factors given later in the chapter.                                    4d      14       38.1 (1-1/2) 2.03 (0.080)
+                                                                       5d      14       44.5 (1-3/4) 2.03 (0.080)
+Nails in use resist withdrawal loads, lateral loads, or a              6d    12-1/2     50.8  (2)    2.49 (0.099)
+combination of the two. Both withdrawal and lateral                    7d    12-1/2     57.2 (2-1/4) 2.49 (0.099)
+resistance are affected by the wood, the nail, and the                 8d    11-1/2     63.5 (2-1/2) 2.87 (0.113)
+condition of use. In general, however, any variation in                10d   10-1/2     76.2  (3)    3.25 (0.128)
+these factors has a more pronounced effect on withdrawal               16d     10       88.9 (3-1/2) 3.43 (0.135)
+resistance than on lateral resistance. The serviceability of           20d      9      101.6  (4)    3.76 (0.148)
+joints with nails laterally loaded does not depend greatly
+on withdrawal resistance unless large joint distortion is                   Table 8–3. Sizes of helically
+                                                                            and annularly threaded nails
+tolerable.
+                                                                                     Length        Diameter
+The diameters of various penny or gauge sizes of bright                     Size    (mm (in.))     (mm (in.))
+common nails are given in Table 8–1. The penny size                         6d     50.8  (2)     3.05 (0.120)
+designation should be used cautiously. International nail                   8d     63.5 (2-1/2)  3.05 (0.120)
+producers sometimes do not adhere to the dimensions of                      10d    76.2  (3)     3.43 (0.135)
+Table 8–1. Thus penny sizes, although still widely used,                    12d    82.6 (3-1/4)  3.43 (0.135)
+are obsolete. Specifying nail sizes by length and diameter                  16d    88.9 (3-1/2)  3.76 (0.148)
+dimensions is recommended. Bright box nails are generally                   20d   101.6  (4)     4.50 (0.177)
+                                                                            30d   114.3 (4-1/2)  4.50 (0.177)
+of the same length but slightly smaller diameter (Table 8–2),               40d   127.0  (5)     4.50 (0.177)
+whereas cement-coated nails such as coolers, sinkers, and                   50d   139.7 (5-1/2)  4.50 (0.177)
+coated box nails are slightly shorter (3.2 mm (1/8 in.)) and                60d   152.4  (6)     4.50 (0.177)
+of smaller diameter than common nails of the same penny                     70d   177.8  (7)     5.26 (0.207)
+size. Helically and annularly threaded nails generally have                 80d   203.2  (8)     5.26 (0.207)
+smaller diameters than common nails for the same penny                      90d   228.6  (9)     5.26 (0.207)
+size (Table 8–3).
+                                                                          p = 54.12G5/2 DL    (metric)            (8–1a)
+Withdrawal Resistance                                                     p = 7,850G5/2 DL    (inch–pound)        (8–1b)
+The resistance of a nail shank to direct withdrawal from
+a piece of wood depends on the density of the wood, the       where p is maximum load (N, lb), L depth (mm, in.) of
+diameter of the nail, and the depth of penetration. The       penetration of the nail in the member holding the nail point,
+surface condition of the nail at the time of driving also     G specific gravity of the wood based on ovendry weight and
+influences the initial withdrawal resistance.                 volume at 12% moisture content (see Chap. 5, Tables 5–2 to
+                                                              5–5), and D diameter of the nail (mm, in.). (The NDS uses
+For bright common wire nails driven into the side grain       ovendry weight and volume as a basis.)
+of seasoned wood or unseasoned wood that remains wet,
+the results of many tests have shown that the maximum         The loads expressed by Equation (8–1) represent average
+withdrawal load is given by the empirical equation            data. Certain wood species give test values that are
+                                                              somewhat greater or less than the equation values. A typical
+
+8–2
+
+=== PAGE 3 | img ===
+                                                              In seasoned wood that is not subjected to appreciable
+                                                              moisture content changes, the withdrawal resistance of
+                                                              nails may also diminish due to relaxation of the wood fibers
+                                                              with time. Under all these conditions of use, the withdrawal
+                                                              resistance of nails differs among species and shows
+                                                              variation within individual species.
+                                                              Effect of Nail Form
+                                                              The surface condition of nails is frequently modified
+                                                              during the manufacturing process to improve withdrawal
+                                                              resistance. Such modification is usually done by surface
+                                                              coating, surface roughening, or mechanical deformation of
+                                                              the shank. Other factors that affect the surface condition
+                                                              of the nail are the oil film remaining on the shank after
+                                                              manufacture or corrosion resulting from storage under
+                                                              adverse conditions; but these factors are so variable
+  Figure 8–2. Typical load–displacement curve for direct      that their influence on withdrawal resistance cannot be
+  withdrawal of a nail.                                       adequately evaluated.
+                                                              Surface Modifications—A common surface treatment
+load–displacement curve for nail withdrawal (Fig. 8–2)        for nails is the so-called cement coating. Cement coatings,
+shows that maximum load occurs at relatively small values     contrary to what the name implies, do not include cement
+of displacement.                                              as an ingredient; they generally are a composition of resin
+Although the equation for nail-withdrawal resistance          applied to the nail to increase the resistance to withdrawal
+indicates that the dense, heavy woods offer greater           by increasing the friction between the nail and the wood.
+resistance to nail withdrawal than do the lower density       If properly applied, they increase the resistance of nails to
+ones, lighter species should not be disqualified for uses     withdrawal immediately after the nails are driven into the
+requiring high resistance to withdrawal. As a rule, the less  softer woods. However, in the denser woods (such as hard
+dense species do not split as readily as the denser ones, thus  maple, birch, or oak), cement-coated nails have practically
+offering an opportunity for increasing the diameter, length,  no advantage over plain nails, because most of the coating
+and number of the nails to compensate for the wood’s lower    is removed in driving. Some of the coating may also be
+resistance to nail withdrawal.                                removed in the side member before the nail penetrates the
+                                                              main member.
+The withdrawal resistance of nail shanks is greatly affected
+by such factors as type of nail point, type of shank, time the  Good-quality cement coatings are uniform, not sticky
+nail remains in the wood, surface coatings, and moisture      to the touch, and cannot be rubbed off easily. Different
+content changes in the wood.                                  techniques of applying the cement coating and variations
+                                                              in its ingredients may cause large differences in the relative
+Effect of Seasoning                                           resistance to withdrawal of different lots of cement-
+With practically all species, nails driven into green wood    coated nails. Some nails may show only a slight initial
+and pulled before any seasoning takes place offer about the   advantage over plain nails. In the softer woods, the increase
+same withdrawal resistance as nails driven into seasoned      in withdrawal resistance of cement-coated nails is not
+wood and pulled soon after driving. However, if common        permanent but drops off significantly after a month or so.
+smooth-shank nails are driven into green wood that is         Cement-coated nails are used primarily in construction of
+allowed to season, or into seasoned wood that is subjected    boxes, crates, and other containers usually built for rough
+to cycles of wetting and drying before the nails are pulled,  handling and relatively short service.
+they lose a major part of their initial withdrawal resistance.  Nails that have galvanized coatings, such as zinc, are
+The withdrawal resistance for nails driven into wood that     intended primarily for uses where corrosion and staining
+is subjected to changes in moisture content may be as low     resistance are important factors in permanence and
+as 25% of the values for nails tested soon after driving. On  appearance. If the zinc coating is evenly applied, withdrawal
+the other hand, if the wood fibers deteriorate or the nail    resistance may be increased, but extreme irregularities
+corrodes under some conditions of moisture variation and      of the coating may actually reduce it. The advantage
+time, withdrawal resistance is erratic; resistance may be     that uniformly coated galvanized nails may have over
+regained or even increased over the immediate withdrawal      nongalvanized nails in resistance to initial withdrawal is
+resistance. However, such sustained performance should not    usually reduced by repeated cycles of wetting and drying.
+be relied on in the design of a nailed joint.
+
+                                                                                                                     8–3
+
+=== PAGE 4 | img ===
+                                                                        General Technical Report FPL–GTR–282
+Nails have also been made with plastic coatings. The
+usefulness and characteristics of these coatings are
+influenced by the quality and type of coating, the
+effectiveness of the bond between the coating and base
+fastener, and the effectiveness of the bond between the
+coating and wood fibers. Some plastic coatings appear to
+resist corrosion or improve resistance to withdrawal, while
+others offer little improvement.
+Fasteners with properly applied nylon coating tend to retain
+their initial resistance to withdrawal compared with other
+coatings, which exhibit a marked decrease in withdrawal
+resistance within the first month after driving.
+A chemically etched nail has somewhat greater withdrawal
+resistance than some coated nails, as the minutely pitted
+surface is an integral part of the nail shank. Under impact
+loading, however, the withdrawal resistance of etched nails    Figure 8–3. Typical load–displacement curves deformed
+is little different from that of plain or cement-coated nails  and smooth shank for direct withdrawal of a nail.
+under various moisture conditions.
+                                                              four times greater for annularly and helically threaded
+Sand-blasted nails perform in much the same manner as         nails of the same diameter. This is especially true of nails
+chemically etched nails.                                      driven into green wood that subsequently dries. In general,
+Shape Modifications—Nail shanks may be varied from            annularly threaded nails sustain larger withdrawal loads, and
+a smooth, circular form to give an increase in surface        helically threaded nails sustain greater impact withdrawal
+area without an increase in nail weight. Special nails with   work values than do the other nail forms (Fig. 8–3).
+barbed, helically or annularly threaded, and other irregular  Nails with deformed shanks are sometimes hardened by heat
+shanks (Fig. 8–1) are commercially available.                 treatments for use where driving conditions are difficult or
+The form and magnitude of the deformations along the          to obtain improved performance, such as in pallet assembly.
+shank influence the performance of the nails in various       Hardened nails are brittle and care should be exercised to
+wood species. In wood remaining at a uniform moisture         avoid injuries from fragments of nails broken during
+content, the withdrawal resistance of these nails is generally  driving.
+somewhat greater than that of common wire nails of the        Nail Point—A smooth, round shank nail with a long, sharp
+same diameter. From tests in which nails were driven in the   point will usually have a greater withdrawal resistance,
+side grain of seasoned wood, bright annularly threaded nails,  particularly in the softer woods, than the common wire nail
+with shank-to-thread-crest diameter difference greater than   (which usually has a diamond point). However, sharp points
+0.2 mm (0.008 in.) and thread spacing between 1.27 mm         accentuate splitting in certain species, which may reduce
+(0.05 in.) and 1.96 mm (0.077 in.), the immediate maximum     withdrawal resistance. A blunt or flat point without taper
+withdrawal load is given by the empirical equation            reduces splitting, but its destruction of the wood fibers when
+          p = 77.57G2 DL     (metric)              (8–2a)     driven reduces withdrawal resistance to less than that of the
+                                                              common wire nail. A nail tapered at the end and terminating
+          p = 11,250G2 DL (inch–pound)             (8–2b)     in a blunt point will cause less splitting. In heavier woods,
+where p is maximum load (N, lb), L depth (mm, in.) of         such a tapered, blunt-pointed nail will provide about the
+penetration of the nail in the member holding the nail point,  same withdrawal resistance, but in less dense woods, its
+G specific gravity of the wood based on ovendry weight        resistance to withdrawal is less than that of the common
+and volume and oven dry moisture content (see Chap. 5,        nail.
+Tables 5–2 to 5–5), and D shank diameter of the nail (mm,     Nail Head—Nail head classifications include flat, oval,
+in.). The expression is valid only for the threaded portion of  countersunk, deep-countersunk, and brad. Nails with all
+the nail. Comparison of Equations (8–1) and (8–2) indicates   types of heads, except the deep-countersunk, brad, and some
+that the bright annularly threaded nail can have withdrawal   of the thin flathead nails, are sufficiently strong to withstand
+resistances that are double the values of common nails.       the force required to pull them from most woods in direct
+For galvanized annularly threaded nails, the immediate        withdrawal. One exception to this statement is for annularly
+withdrawal strength is slightly lower. However, under         threaded nails. Due to the increased withdrawal capacity
+conditions involving changes in moisture content of the       for these type nails, nail head can be pulled into or through
+wood, some special nail forms provide considerably greater    wood members. The deep-countersunk and brad nails are
+withdrawal resistance than the common wire nail—about         usually driven below the wood surface and are not intended
+
+8–4
+
+=== PAGE 5 ===
+to carry large withdrawal loads. In general, the thickness    in the end grain; therefore the resulting end- to side-grain
+and diameter of the heads of the common wire nails increase   ratio is larger.
+as the size of the nail increases.                            Toe nailing, a common method of joining wood framework,
+The development of some pneumatically operated portable       involves slant driving a nail or group of nails through the
+nailers has introduced nails with specially configured heads,  end or edge of an attached member and into a main member.
+such as T-nails and nails with a segment of the head cut off.  Toe nailing requires greater skill in assembly than does
+                                                              ordinary end nailing but provides joints of greater strength
+Corrosion and Staining                                        and stability. Tests show that the maximum strength of
+In the presence of moisture, metals used for nails may        toenailed joints under lateral and uplift loads is obtained
+corrode when in contact with wood treated with certain        by (a) using the largest nail that will not cause excessive
+preservative or fire-retardant treatments (Chaps. 15 and 18).  splitting, (b) allowing an end distance (distance from the
+Use of certain metals or metal alloys will reduce the amount  end of the attached member to the point of initial nail entry)
+of corrosion. Nails of copper, silicon bronze, and 300 series  of approximately one-third the length of the nail, (c) driving
+stainless steels have performed well in wood treated with     the nail at a slope of 30° with the attached member, and
+ammoniacal copper arsenate and chromated copper arsenate.     (d) burying the full shank of the nail but avoiding excessive
+Similarly, 300 series stainless steel nails have performed    mutilation of the wood from hammer blows.
+well in wood treated with copper azole and alkaline copper
+                                                              The results of withdrawal tests with multiple nail joints in
+quaternary. The choice of metals for use with fire-retardant-
+                                                              which the piece attached is pulled directly away from the
+treated woods depends upon the particular fire-retardant
+                                                              main member show that slant driving is usually superior to
+chemical.
+                                                              straight driving when nails are driven into dry wood and
+With the greater use of metal connecters, such as joist       pulled immediately, and decidedly superior when nails are
+hangers, in outdoor environments, an additional corrosion     driven into green or partially dry wood that is allowed to
+concern is possible. Both the joist hanger and fastener       season for a month or more. However, the loss in depth of
+should be of the same metal type; if not, the corrosion rate  penetration due to slant driving may, in some types of joints,
+of either the fastener or hanger may increase due to galvanic  offset the advantages of slant nailing. Cross slant driving of
+(mixed metal) corrosion between the hanger and fastener.      groups of nails through the side grain is usually somewhat
+Organic coated fasteners, such as polymer coatings, resist    more effective than parallel-slant driving through the end
+corrosion on the principle of isolation. Any damage that      grain.
+occurs to the coating during insertion can give the corrosive  Nails driven into lead holes with a diameter slightly smaller
+environment a path to the substrate, and pitting or crevice   (approximately 90%) than the nail shank have somewhat
+corrosion will occur at these sites.                          greater withdrawal resistance than nails driven without lead
+Staining caused by the reaction of certain wood extractives   holes. Lead holes also prevent or reduce splitting of the
+(Chap. 3) and steel in the presence of moisture is a problem  wood, particularly for dense species.
+if appearance is important, such as with naturally finished   Clinching
+siding. Use of stainless steel, aluminum, or hot-dipped
+galvanized nails can alleviate staining.                      The withdrawal resistance of smooth-shank, clinched nails
+                                                              is considerably greater than that of unclinched nails. The
+In general, the withdrawal resistance of copper, other        point of a clinched nail is bent over where the nail protrudes
+alloy, and polymer-coated nails is comparable with that of    through the side member. The ratio between the loads for
+common steel wire nails when pulled soon after driving.       clinched and unclinched nails varies enormously, depending
+                                                              upon the moisture content of the wood when the nail is
+Driving                                                       driven and withdrawn, the species of wood, the size of nail,
+The resistance of nails to withdrawal is generally greatest   and the direction of clinch with respect to the grain of the
+when they are driven perpendicular to the grain of the wood.  wood.
+When a bright nail is driven parallel to the wood fibers (that
+is, into the end of the piece) withdrawal resistance in wood  In dry or green wood, a clinched nail provides 45% to 170%
+ranges between 50% to 75% of the resistance obtained          more withdrawal resistance than an unclinched nail when
+when the nail is driven perpendicular to the grain. The ratio  withdrawn soon after driving. In green wood that seasons
+between the immediate end- and side-grain withdrawal          after a nail is driven, a clinched nail gives 250% to 460%
+loads is nearly constant for all specific gravities. In contrast  greater withdrawal resistance than an unclinched nail.
+to the immediate withdrawal case, nails pulled after a time   However, this improved strength of a clinched-nail joint
+interval or after moisture content changes experience a       does not justify the use of green lumber, because the joints
+decreased load in both side and end grain. For most species   may loosen as the lumber seasons. Furthermore, laboratory
+the decrease in the side grain withdrawal load is greater than  tests were made with single nails, and the effects of drying,
+                                                              such as warping, twisting, and splitting, may reduce the
+
+                                                                                                                     8–5
+
+=== PAGE 6 | img ===
+                                                                        General Technical Report FPL–GTR–282
+efficiency of a joint that has more than one nail. Clinching    Table 8–4. Coefficients for computing test loads for
+of nails is generally confined to such construction as boxes    fasteners in seasoned wooda (pre-1991)
+and crates and other container applications.                               Lateral load coefficient K (metric (inch–pound))
+                                                                Specific
+Nails clinched across the grain have approximately 20%          gravity                                      Lag
+more resistance to withdrawal than nails clinched along the     rangeb         Nailsc        Screws         screws
+grain.                                                                                Hardwoods
+                                                                0.33–0.47  50.04 (1,440)  23.17 (3,360)  26.34 (3,820)
+Fastening of Plywood                                            0.48–0.56  69.50 (2,000)  31.99 (4,640)  29.51 (4,280)
+The nailing characteristics of plywood are not greatly          0.57–0.74  94.52 (2,720)  44.13 (6,400)  34.13 (4,950)
+different from those of solid wood except for plywood’s                               Softwoods
+greater resistance to splitting when nails are driven near an   0.29–0.42  50.04 (1,440)  23.17 (3,360)  23.30 (3,380)
+edge. The nail withdrawal resistance of plywood is 15% to       0.43–0.47  62.55 (1,800)  29.79 (4,320)  26.34 (3,820)
+30% less than that of solid wood of the same thickness. The     0.48–0.52  76.45 (2,200)  36.40 (5,280)  29.51 (4,280)
+reason is that fiber distortion is less uniform in plywood      aWood with a moisture content of 15%.
+than in solid wood. For plywood less than 12.5 mm (1/2 in.)     bSpecific gravity based on ovendry weight and volume at
+                                                                12% moisture content.
+thick, the greater splitting resistance tends to offset the     cCoefficients based on load at joint slip of 0.38 mm (0.015 in.)
+lower withdrawal resistance compared with solid wood.
+The withdrawal resistance per unit length of penetration
+decreases as the number of plies per unit length increases.
+The direction of the grain of the face ply has little influence
+on the withdrawal resistance from the face near the end or
+edge of a piece of plywood. The direction of the grain of the
+face ply may influence the pull-through resistance of staples
+or nails with severely modified heads, such as T-heads.
+Fastener design information for plywood is available from
+APA–The Engineered Wood Association.
+Allowable Loads
+The preceding discussion dealt with maximum withdrawal
+loads obtained in short-time test conditions. For design,
+these loads must be reduced to account for variability,
+duration-of-load effects, and safety. A value of one-sixth     Figure 8–4. Typical relation between lateral load and slip
+the average maximum load has usually been accepted as the      in the joint and 5% offset definition.
+allowable load for long-time loading conditions. For normal
+duration of load, this value may be increased by 10%.         The ultimate lateral nail loads for softwoods may approach
+Normal duration of load is defined as a load of 10-year       3.5 times the loads expressed by the equation, and for
+duration.                                                     hardwoods they may be 7 times as great. The joint slip at
+                                                              maximum load, however, is more than 20 times 0.38 mm
+Lateral Resistance                                            (0.015 in.). This is demonstrated by the typical load–slip
+                                                              curve shown in Figure 8–4. To maintain a sufficient ratio
+Pre-1991                                                      between ultimate load and the load at 0.38 mm (0.015 in.),
+Test loads at joint slips of 0.38 mm (0.015 in.) (approximate  the nail should penetrate into the member holding the
+proportional limit load) for bright common wire nails in      point by not less than 10 times the nail diameter for dense
+lateral resistance driven into the side grain (perpendicular  woods (specific gravity greater than 0.61) and 14 times
+to the wood fibers) of seasoned wood are expressed by the     the diameter for low-density woods (specific gravity less
+empirical equation                                            than 0.42). For species having densities between these
+                                                              two ranges, the penetration may be found by straight line
+                        p = KD3/2                    (8–2)    interpolation.
+where p is lateral load per nail, K a coefficient, and D
+diameter of the nail. Values of coefficient K are listed in   Post-1991
+Table 8–4 for ranges of specific gravity of hardwoods and     The yield model theory selects the worst case of yield
+softwoods. The loads given by the equation apply only         modes based on different possibilities of wood bearing
+where the side member and the member holding the nail         and nail bending. It does not account for nail head effects,
+point are of approximately the same density. The thickness    friction between the main and side member, or axial forces
+of the side member should be about one-half the depth of      transmitted along the length of the fastener. A description
+penetration of the nail in the member holding the point.      of the various combinations is given in Figure 8–5.
+
+8–6
+
+=== PAGE 7 | img ===
+Figure 8–5. Various combinations of wood-bearing and fastener-bending yields for (a) two-member connections and
+(b) three-member connections.
+
+Table 8–5. The 5% offset lateral yield strength (Z)           Mode I is a wood bearing failure in either the main or side
+for nails and screws for a two-member joint                   member; mode II is a rotation of the fastener in the joint
+Mode       Z value for nails      Z value for screws          without bending; modes III and IV are a combination of
+Is         Dt sF                  Dt sF                       wood bearing failure and one or more plastic hinge yield
+               es                     es                      formations in the fastener. Modes Im and II have not been
+IIIm       k 1 DpF em
+            1 + 2 R               —                           observed in nail and spike connections. The yield model
+                 e                                            theory is applicable to all types of dowel fasteners (nails,
+IIIs       k 2 Dt s F em          k 3 Dt s F em
+             2  R                  2  R                     screws, bolts, lag screws), and thus the wood bearing
+                 e                      e                     capacity is described by a material property called the dowel
+IV           2 2 F em F yb          2 .1 75 F em F yb
+           D                      D                           bearing strength.
+               3 1(  R e )             3 1(  R e )
+Definitions                                                   The yield mode equations (Table 8–5) are entered with
+  D   nail, spike, or screw diameter, mm (in.) (for           the dowel bearing strength and dimensions of the wood
+      annularly threaded nails, D is thread-root diameter;    members and the bending yield strength and diameter of the
+      for screws, D is either the shank diameter or the root  fastener.
+      diameter if the threaded portion of the screw is in the
+      shear plane)                                            The dowel bearing strength of the wood is experimentally
+  Fem dowel bearing stress of main member                     determined by compressing a dowel into a wood member.
+      (member holding point), MPa (lb in–2)                   The strength basis is the load representing a 5% diameter
+  Fes dowel bearing stress of side member, MPa (lb in–2)      offset on the load–deformation curve (Fig. 8–4). Dowel
+  Fyb bending yield stress of nail, spike, or screw, MPa      bearing strength Fe (MPa, lb in–2) is empirically related to
+      (lb in–2)
+  p   penetration of nail or spike in main member, mm (in.)   specific gravity G by
+  ts  thickness of side member, mm (in.)                                      114.5G1 84
+  Z   offset lateral yield strength                                      Fe =               (metric)               (8–3a)
+  Re = Fem/Fes                                                           Fe = 16,600G1 84   (inch–pound)           (8–3b)
+                      2 F 1(  2 R ) D 2                      where specific gravity is based on ovendry weight and
+    k   1  2 1(  R )   yb  e                             volume.
+     1            e       3 F p 2
+                            em
+                                                              Bending yield strengths for the common nails are
+                                  2                           determined by ASTM F1575 tests with typical values
+             2 1(  R e ) 2 F yb ( 2  R e ) D                                                     in–2)
+    k 2   1                2                              ranging between 551 MPa (80,000 lb        and 689 MPa
+                R e       3 F em t s                          (100,000 lb in–2) for common nails. Smaller diameter nails
+                                                              have higher bending yield strength due to surface hardening
+             2 1(  R )  F ( 2  R e ) D 2                    during fabrication.
+    k 3   1     e  yb
+                R e       2 F t 2
+                            em s                              Spacing
+                                                              End distance, edge distance, and spacing of nails should be
+                                                              such as to prevent unusual splitting. As a general rule, nails
+                                                              should be driven no closer to the edge of the side member
+                                                              than one-half its thickness and no closer to the end than the
+
+                                                                                                                     8–7
+
+=== PAGE 8 ===
+                                                                         General Technical Report FPL–GTR–282
+thickness of the piece. Smaller nails can be driven closer                Table 8–6. Expressions for factors
+to the edges or ends than larger ones because they are less               in Equation (8–4)
+likely to split the wood.                                                 Factor            Expressiona
+Grain Direction Effects                                                   L     1 sinh  1 a cosh  1 a  sin  1 a cos  1 a
+                                                                           1   k       sinh 2  a  sin 2  a
+The lateral load for side-grain nailing applies whether the                     1            1       1
+load is in a direction parallel to the grain of the pieces                L     2 sinh  2 b cosh  2 b  sin  2 b cos  2 b
+                                                                            2  k        sinh 2  b  sin 2  b
+joined or at right angles to it. When nails are driven into the                  2            2       2
+end grain (parallel with the wood fibers), limited data on                      1 2 sinh 2  1 a + sin 2  1 a
+                                                                          J 1        2        2
+softwood species indicate that their maximum resistance to                     k 1 sinh  1 a  sin  1 a
+lateral displacement is about two-thirds that for nails driven                  2 2 sinh 2  2 b + sin 2  2 b
+into the side grain. Although the average proportional limit              J 2        2        2
+                                                                               k 2 sinh  2 b  sin  2 b
+loads appear to be about the same for end- and side-grain                       3 sinh  a cosh  a + sin  a cos  a
+nailing, the individual results are more erratic for end-grain            K 1   1     1       1      1     1
+                                                                               k 1     sinh 2  1 a  sin 2  1 a
+nailing, and the minimum loads approach only 75% of
+corresponding values for side-grain nailing.                                    3 2 sinh  2 b cosh  2 b + sin  2 b cos  2 b
+                                                                          K 2              2        2
+                                                                               k 2      sinh  2 b  sin  2 b
+Moisture Content Effects
+Nails driven into the side grain of unseasoned wood give                  a k1 = k01d and k2 = k02d, where k1 and k2 are
+maximum lateral resistance loads approximately equal to                   the foundation moduli of members 1 and 2,
+those obtained in seasoned wood, but the lateral resistance               respectively.
+loads at 0.38 mm (0.015 in.) joint slip are somewhat less.     One theoretical model, which considers the nail to be a
+To prevent excessive deformation, lateral loads obtained for   beam supported on an elastic foundation (the wood),
+seasoned wood should be reduced by 25% for unseasoned          describes the initial slope of the curve:
+wood that will remain wet or be loaded before seasoning                                                 2 
+                                                                                                 ( J 1 − J 2 )       (8–4)
+takes place.                                                                 δ = P  2( L 1 + L 2 ) −      
+                                                                                               ( K 1 + K 2 )  
+When nails are driven into green wood, their lateral
+proportional limit loads after the wood has seasoned are       where P is the lateral load and δ is the joint slip. The factors
+also less than when they are driven into seasoned wood         L1, L2, J1, J2, K1, and K2 (Table 8–6) are combinations of
+and loaded. The erratic behavior of a nailed joint that has    hyperbolic and trigonometric functions of the quantities λ1a
+undergone one or more moisture content changes makes it        and λ1b in which a and b are the depth of penetration of the
+difficult to establish a lateral load for a nailed joint under  nail in members 1 and 2, respectively. For smooth round
+these conditions. Structural joints should be inspected at     nails,
+intervals, and if it is apparent that the joint has loosened                               4   k
+                                                                                     λ = 2      0                    (8–5)
+during drying, the joint should be reinforced with additional                                π ED 3
+nails.
+                                                               where k0 is elastic bearing constant, D nail diameter, and
+Deformed-Shank Nails                                           E modulus of elasticity of the nail. For seasoned wood, the
+Deformed-shank nails carry somewhat higher maximum             elastic bearing constant k0 (N mm–3, lb in–3) has been shown
+lateral loads, for monotonic loading, than do the same         to be related to average species specific gravity G if no lead
+pennyweight common wire nails, but both perform similarly      hole is used by
+at small distortions in the joint. For cyclic loading, it should
+be noted that the same pennyweight deformed-shank nail                  k0 = 582G            (metric)               (8–6a)
+has a different diameter than that of the common wire nail.             k0 = 2,144,000G      (inch–pound)           (8–6b)
+These nails often have higher bending yield strength than
+common wire nails, resulting in higher lateral strength in     If a prebored lead hole equal to 90% of the nail diameter is
+modes III and IV. As a result of the technique to achieve      used,
+higher bending yield strength, a significant reduction of
+ductility is observed for cyclic loading conditions.                    k0 = 869G            (metric)               (8–7a)
+                                                                        k0 = 3,200,000G      (inch–pound)           (8–7b)
+Lateral Load–Slip Models
+A considerable amount of work has been done to describe,       Other empirically derived models attempt to describe the
+by mathematical models, the lateral load–slip curve of nails.  entire load–slip curve. Two such expressions are
+These models have become important because of their need                          P = A      (1 + Bδ)               (8-8a)
+                                                                                        log10
+as input parameters for advanced methods of structural
+analysis.                                                      where the parameters A and B are empirically fitted, and
+                                                               a second model, which includes a load reducing behavior,
+
+8–8
+
+=== PAGE 9 | img ===
+                                                             between force and deformation. Unloading off the envelope
+                                                             curve follows a path such as AB with stiffness r3K0. Here,
+                                                             both the connector and wood are unloading elastically.
+                                                             Under continued unloading, the response moves onto path
+                                                             BC, which has reduced stiffness r4K0. Along this path, the
+                                                             connector loses partial contact with the surrounding wood
+                                                             because of permanent deformation that was produced by
+                                                             previous loading, along path OA in this case. The slack
+                                                             response along this path characterizes the pinched hysteresis
+                                                             displayed by dowel connections under cyclic loading.
+                                                             Loading in the opposite direction for the first time forces
+                                                             the response onto the envelope curve CD. Unloading off
+                                                             this curve is assumed elastic along path DE, followed by a
+                                                             pinched response along path EF, which passes through the
+                                                             zero-displacement intercept FI, with slope r4K0. Continued
+                                                             reloading follows path FG with degrading stiffness Kp.
+                                                             Hysteretic fastener models are not single analytical
+                                                             expressions and are typically used in computer models.
+  Figure 8–6. Load deformation curve for nails for a
+  specific cyclic loading protocol.                          Spikes
+                                                             Common wire spikes are manufactured in the same manner
+         Table 8–7. Sizes of common wire                     as common wire nails. They have either a chisel point or
+         spikes                                              a diamond point and are made in lengths of 76 to 305 mm
+                      Length       Diameter                  (3 to 12 in.). For corresponding lengths in the range of 76 to
+         Size       (mm (in.))     (mm (in.))                152 mm (3 to 6 in.), they have larger diameters (Table 8–7)
+         10d        76.2 (3)      4.88 (0.192)               than common wire nails, and beyond the 60d size they are
+         12d        82.6 (3-1/4)  4.88 (0.192)               usually designated by diameter.
+         16d        88.9 (3-1/2)  5.26 (0.207)               The withdrawal and lateral resistance equations and
+         20d       101.6 (4)      5.72 (0.225)
+         30d       114.3 (4-1/2)  6.20 (0.244)               limitations given for common wire nails are also applicable
+         40d       127.0 (5)      6.68 (0.263)               to spikes, except that in calculating the withdrawal load for
+         50d       139.7 (5-1/2)  7.19 (0.283)               spikes, the depth of penetration is taken as the length of the
+         60d       152.4 (6)      7.19 (0.283)               spike in the member receiving the point, minus two-thirds
+         5/16 in.  177.8 (7)      7.92 (0.312)               the length of the point.
+         3/8 in.   215.9 (8-1/2)  9.53 (0.375)
+                             − K δ P                         Staples
+        P = ( P 0 + r 1 K 0 δ )(1 − e  0  0 )  δ ≤ δ u
+                                                   (8–8b)    Different types of staples have been developed with various
+                                                             modifications in points, shank treatment and coatings,
+         P = P u + r 2 K 0 [ δ − δ u ]  δ u ≤ δ ≤ δ F        gauge, crown width, and length. These fasteners are
+where the parameters K0, r1, r2, and P0 are empirically      available in clips or magazines for use in pneumatically
+determined; δu is deformation at ultimate load, and δF is    operated portable staplers. Most factors that affect the
+deformation at failure.                                      withdrawal and lateral loads of nails similarly affect the
+                                                             loads on staples. The withdrawal resistance, for example,
+The previous two expressions represent fastener loading      varies almost directly with the circumference and depth of
+deformation response for monotonic loading. Recently, the    penetration when the type of point and shank are similar
+load–deformation behavior of nails subjected to cyclic load  to nails. Thus, Equation (8–1) has been used to predict the
+has become of interest. The behavior of wood structures      withdrawal load for one leg of a staple, but no verification
+to dynamic or repeated loading condition from high wind      tests have been done.
+or earthquakes is strongly linked to nail fastener models
+that consider the reversal of loading as an extension of the  The load in lateral resistance varies approximately as the
+previous monotonic fastener load deformation model to a      3/2 power of the diameter when other factors, such as
+specific cyclic loading protocol as shown in Figure 8–6,     quality of metal, type of shank, and depth of penetration, are
+where load–displacement paths OA and CD follow the           similar to nails. The diameter of each leg of a two-legged
+monotonic envelope curve as expressed by Equation (8–8b).    staple must therefore be about two-thirds the diameter
+All other paths are assumed to exhibit a linear relationship  of a nail to provide a comparable load. Equation (8–2)
+
+                                                                                                                   8–9
+
+=== PAGE 10 | img ===
+                                                                        General Technical Report FPL–GTR–282
+                                                             thickness of the main member in a joint. Thus the depth of
+                                                             penetration of the drift bolt must be greater than or equal to
+                                                             the main-member thickness on which the bolt design value
+                                                             is based. However, the drift bolt should not fully penetrate
+                                                             its joint.
+
+                                                             Wood Screws
+                                                             The common types of wood screws have flat, oval, or round
+                                                             heads. The flathead screw is most commonly used if a flush
+                                                             surface is desired. Ovalhead and roundhead screws are
+                                                             used for appearance, and roundhead screws are used when
+Figure 8–7. Common types of wood screws: A, flathead;        countersinking is objectionable. The principal parts of a
+B, roundhead; and C, ovalhead.
+                                                             screw are the head, shank, thread, and core (Fig. 8–7). The
+has been used to predict the lateral resistance of staples.  root diameter for most sizes of screws averages about two-
+However, yield model theory equations have not yet been      thirds the shank diameter. Wood screws are usually made of
+experimentally verified for staples.                         steel, brass, other metals, or alloys, and may have specific
+                                                             finishes such as nickel, blued, chromium, or cadmium. They
+In addition to the immediate performance capability of       are classified according to material, type, finish, shape of
+staples and nails as determined by test, factors such as     head, and diameter or gauge of the shank.
+corrosion, sustained performance under service conditions,
+and durability in various uses should be considered in       Current trends in fastenings for wood also include tapping
+evaluating the relative usefulness of a stapled connection.  or self-drilling screws. Tapping screws have threads the
+                                                             full length of the shank and may have some advantage for
+Drift Bolts                                                  certain specific uses. Self-drilling screws have a drill-shaped
+                                                             tip to cut through both wood and steel material, eliminating
+A drift bolt (or drift pin) is a long pin of iron or steel, with  the need for pre-drilling.
+or without head or point. It is driven into a bored hole
+through one timber and into an adjacent one, to prevent the  Withdrawal Resistance
+separation of the timbers connected and to transmit lateral
+load. The hole in the second member is drilled sufficiently  Experimental Loads
+deep to prevent the pin from hitting the bottom.             The resistance of wood screw shanks to withdrawal from
+                                                             the side grain of seasoned wood varies directly with the
+The ultimate withdrawal load of a round drift bolt or pin    square of the specific gravity of the wood. Within limits,
+from the side grain of seasoned wood is given by             the withdrawal load varies directly with the depth of
+          p = 45.51G2 DL     (metric)              (8–9a)    penetration of the threaded portion and the diameter of
+                                                             the screw, provided the screw does not fail in tension. The
+          p = 6,600G2 DL     (inch–pound)          (8–9b)    screw will fail in tension when its strength is exceeded
+where p is the ultimate withdrawal load (N, lb), G specific  by the withdrawal strength from the wood. The limiting
+gravity based on the ovendry weight and volume at 12%        length to cause a tension failure decreases as the density
+moisture content of the wood, D diameter of the drift bolt   of the wood increases since the withdrawal strength of the
+(mm, in.), and L length of penetration of the bolt (mm, in.).  wood increases with density. The longer lengths of standard
+(The NDS uses ovendry weight and volume as a basis.)         screws are therefore superfluous in dense hardwoods.
+This equation provides an average relationship for all       The withdrawal resistance of type A tapping screws,
+species, and the withdrawal load for some species may be     commonly called sheet metal screws, is in general about
+above or below the equation values. It also presumes that    10% greater than that for wood screws of comparable
+the bolts are driven into prebored holes having a diameter   diameter and length of threaded portion. The ratio between
+3.2 mm (1/8 in.) less than the bolt diameter.                the withdrawal resistance of tapping screws and wood
+                                                             screws varies from 1.16 in denser woods, such as oak, to
+Data are not available on lateral resistance of drift bolts.  1.05 in lighter woods, such as redwood.
+The yield model should provide lateral strength prediction,
+but the model has not been experimentally verified for drift  Ultimate test values for withdrawal loads of wood screws
+bolts. Designers have used bolt data and design methods      inserted into the side grain of seasoned wood may be
+based on experience. This suggests that the load for a drift  expressed as
+bolt driven into the side grain of wood should not exceed,            p = 108.25G2 DL      (metric)             (8–10a)
+and ordinarily should be taken as less than, that for a bolt          p = 15,700G2 DL      (inch–pound)         (8–10b)
+of the same diameter. Bolt design values are based on the
+
+8–10
+
+=== PAGE 11 ===
+where p is maximum withdrawal load (N, lb), G specific                        Table 8–8. Screw sizes
+gravity based on ovendry weight and volume at 12%                             appropriate for
+moisture content, D shank diameter of the screw (mm, in.),                    Equation (8–10)
+and L length of penetration of the threaded part of the screw                 Screw length  Gauge
+(mm, in.). (The NDS uses ovendry weight and volume as a                       (mm (in.))     limits
+basis.) These values are based on reaching ultimate load in                    12.7 (1/2)    1 to 6
+5- to 10-min.                                                                  19.0 (3/4)   2 to 11
+                                                                               25.4   (1)   3 to 12
+This equation is applicable when screw lead holes have a                       38.1 (1-1/2) 5 to 14
+diameter of about 70% of the root diameter of the threads in                   50.8   (2)   7 to 16
+softwoods, and about 90% in hardwoods.                                         63.5 (2-1/2) 9 to 18
+                                                                               76.2   (3)   12 to 20
+The equation values are applicable to the screw sizes listed
+in Table 8–8. (Shank diameters are related to screw gauges.)
+                                                             Withdrawal resistance of screws from particleboard is not
+For lengths and gauges outside these limits, the actual      significantly different for lead holes of 50% to 90% of
+values are likely to be less than the equation values.       the root diameter. A higher setting torque will produce a
+The withdrawal loads of screws inserted in the end grain of  somewhat higher withdrawal load, but there is only a slight
+wood are somewhat erratic, but when splitting is avoided,    difference (3%) in values between 60% to 90% setting
+they should average 75% of the load sustained by screws      torques (Eq. (8–11)). A modest tightening of screws in many
+inserted in the side grain.                                  cases provides an effective compromise between optimizing
+                                                             withdrawal resistance and stripping threads.
+Lubricating the surface of a screw with soap or similar
+lubricant is recommended to facilitate insertion, especially  Equation (8–12) can also predict the withdrawal of screws
+in dense woods, and it will have little effect on ultimate   from fiberboard with K = 57.3 (metric) or 3,700 (inch–
+withdrawal resistance.                                       pound) for the face and K = 44.3 (metric) or 2,860 (inch–
+                                                             pound) for the edge of the board.
+Fastening of Particleboard
+Tapping screws are commonly used in particleboard where      Lateral Resistance
+withdrawal strength is important. Care must be taken         Pre-1991
+when tightening screws in particleboard to avoid stripping   The proportional limit loads obtained in tests of lateral
+the threads. The maximum amount of torque that can be        resistance for wood screws in the side grain of seasoned
+applied to a screw before the threads in the particleboard are  wood are given by the empirical equation
+stripped is given by
+                                                                                     p = KD2                   (8–13)
+        T = 3.16 + 0.0096X   (metric)            (8–11a)
+                                                             where p is lateral load, D diameter of the screw shank, and
+        T = 27.98 + 1.36X    (inch–pound)        (8–11b)     K a coefficient depending on the inherent characteristics
+where T is torque (N–m, in–lb) and X is density of the       of the wood species. Values of screw shank diameters for
+particleboard (kg m–3, lb ft–3). Equation (8–11) is for      various screw gauges are listed in Table 8–9.
+8-gauge screws with a depth of penetration of 15.9 mm        Values of K are based on ranges of specific gravity of
+(5/8 in.). The maximum torque is fairly constant for lead    hardwoods and softwoods and are given in Table 8–4.
+holes of 0% to 90% of the root diameter of the screw.        They apply to wood at about 15% moisture content. Loads
+Ultimate withdrawal loads P (N, lb) of screws from           computed by substituting these constants in the equation
+particleboard can be predicted by                            are expected to have a slip of 0.18 to 0.25 mm (0.007 to
+                                                             0.010 in.), depending somewhat on the species and density
+               P = KD1/2(L – D/3)5/4G2            (8–12)     of the wood.
+where D is shank diameter of the screw (mm, in.), L depth    Equation (8–13) applies when the depth of penetration of
+of embedment of the threaded portion of the screw (mm,       the screw into the block receiving the point is not less
+in.), and G specific gravity of the board based on ovendry   than seven times the shank diameter and when the side
+weight and volume at current moisture content. For metric    member and the main member are approximately of the
+measurements, K = 41.1 for withdrawal from the face          same density. The thickness of the side member should be
+of the board and K = 31.8 for withdrawal from the edge;      about one-half the depth of penetration of the screw in the
+for inch–pound measurements, K = 2,655 for withdrawal        member holding the point. The end distance should be no
+from the face and K = 2,055 for withdrawal from the edge.    less than the side member thickness, and the edge distances
+Equation (8–12) applies when the setting torque is between   no less than one-half the side member thickness.
+60% to 90% of T (Eq. (8–11)).
+
+                                                                                                                8–11
+
+=== PAGE 12 ===
+                                                                       General Technical Report FPL–GTR–282
+               Table 8–9. Screw shank                        to fasten a bolt or where a nut on the surface would be
+               diameters for various screw                   objectionable. Commonly available lag screws range from
+               gauges                                        about 5.1 to 25.4 mm (0.2 to 1 in.) in diameter and from
+               Screw number     Diameter                     25.4 to 406 mm (1 to 16 in.) in length. The length of the
+                  or gauge     (mm (in.))                    threaded part varies with the length of the screw and ranges
+                     4         2.84 (0.112)                  from 19.0 mm (3/4 in.) with the 25.4- and 31.8-mm (1- and
+                     5         3.18 (0.125)                  1-1/4-in.) screws to half the length for all lengths greater
+                     6         3.51 (0.138)                  than 254 mm (10 in.). Lag screws have a hexagonal-shaped
+                     7         3.84 (0.151)                  head and are tightened by a wrench (as opposed to wood
+                     8         4.17 (0.164)
+                     9         4.50 (0.177)                  screws, which have a slotted head and are tightened by a
+                    10         4.83 (0.190)                  screw driver). The following equations for withdrawal and
+                    11         5.16 (0.203)                  lateral loads are based on lag screws having a base metal
+                    12         5.49 (0.216)                  average tensile yield strength of about 310.3 MPa
+                    14         6.15 (0.242)                  (45,000 lb in–2) and an average ultimate tensile strength of
+                    16         6.81 (0.268)                  530.9 MPa (77,000 lb in–2).
+                    18         7.47 (0.294)
+                    20         8.13 (0.320)                  Withdrawal Resistance
+                    24         9.45 (0.372)
+                                                             The results of withdrawal tests have shown that the
+This depth of penetration (seven times shank diameter)       maximum direct withdrawal load of lag screws from the
+gives an ultimate load of about four times the load obtained  side grain of seasoned wood may be computed as
+by the equation. For a depth of penetration of less than            p = 125.4G3/2 D3/4 L   (metric)            (8–14a)
+seven times the shank diameter, the ultimate load is reduced
+about in proportion to the reduction in penetration, and            p = 8,100G3/2 D3/4 L   (inch–pound)        (8–14b)
+the load at the proportional limit is reduced somewhat       where p is maximum withdrawal load (N, lb), D shank
+less rapidly. When the depth of penetration of the screw     diameter (mm, in.), G specific gravity of the wood based
+in the holding block is four times the shank diameter,       on ovendry weight and volume at 12% moisture content,
+the maximum load will be less than three times the load      and L length (mm, in.) of penetration of the threaded
+expressed by the equation, and the proportional limit load   part. (The NDS use ovendry weight and volume as a
+will be approximately equal to that given by the equation.   basis.) Equation (8–14) was developed independently of
+When the screw holds metal to wood, the load can be          Equation (8–10) but gives approximately the same results.
+increased by about 25%.
+                                                             Lag screws, like wood screws, require prebored holes of the
+For these lateral loads, the part of the lead hole receiving the  proper size (Fig. 8–8). The lead hole for the shank should
+shank should be the same diameter as the shank or slightly   be the same diameter as the shank. The diameter of the
+smaller; that part receiving the threaded portion should be  lead hole for the threaded part varies with the density of
+the same diameter as the root of the thread in dense species  the wood: For low-density softwoods, such as the cedars
+or slightly smaller than the root in low-density species.    and white pines, 40% to 70% of the shank diameter; for
+Screws should always be turned in. They should never be      Douglas-fir and Southern Pine, 60% to 75%; and for
+started or driven with a hammer because this practice tears  dense hardwoods, such as oaks, 65% to 85%. The smaller
+the wood fibers and injures the screw threads, seriously     percentage in each range applies to lag screws of the smaller
+reducing the load carrying capacity of the screw.            diameters and the larger percentage to lag screws of larger
+                                                             diameters. Soap or similar lubricants should be used on the
+Post-1991                                                    screw to facilitate turning, and lead holes slightly larger than
+Screw lateral strength is determined by the yield model      those recommended for maximum efficiency should be used
+theory (Table 8–5). Modes I, III, and IV failures may occur  with long screws.
+(Fig. 8–5). The dowel bearing strength values are based on   In determining the withdrawal resistance, the allowable
+the same specific gravity equation used to establish values  tensile strength of the lag screw at the net (root) section
+for nails (Eq. (8–3)). Further discussion of screw lateral   should not be exceeded. Penetration of the threaded part
+strength is found in ASCE Manual No. 84, Mechanical          to a distance about seven times the shank diameter in the
+Connections in Wood Structures.                              denser species (specific gravity greater than 0.61) and 10
+                                                             to 12 times the shank diameter in the less dense species
+Lag Screws                                                   (specific gravity less than 0.42) will develop approximately
+Lag screws are commonly used because of their                the ultimate tensile strength of the lag screw. Penetrations
+convenience, particularly where it would be difficult        at intermediate densities may be found by straight-line
+                                                             interpolation.
+
+8–12
+
+=== PAGE 13 | img ===
+                                                                               Table 8–10. Multiplication
+                                                                               factors for loads computed
+                                                                               from Equation (8–15)
+                                                                               Ratio of thickness of
+                                                                               side member to shank
+                                                                               diameter of lag screw  Factor
+                                                                                        2             0.62
+                                                                                        2.5           0.77
+                                                                                        3             0.93
+                                                                                        3.5           1.00
+                                                                                        4             1.07
+                                                                                        4.5           1.13
+                                                                                        5             1.18
+                                                                                        5.5           1.21
+                                                                                        6             1.22
+                                                                                        6.5           1.22
+
+Figure 8–8. A, Clean-cut, deep penetration of thread made                      Table 8–11. Multiplication
+by lag screw turned into a lead hole of proper size, and                       factors for loads applied
+B, rough, shallow penetration of thread made by lag screw                      perpendicular to grain
+turned into oversized lead hole.                                               computed from
+                                                                               Equation (8–15) with lag
+The resistance to withdrawal of a lag screw from the end-                      screw in side grain of
+                                                                               wood
+grain surface of a piece of wood is about three-fourths as
+great as its resistance to withdrawal from the side-grain                       Shank diameter
+surface of the same piece.                                                       of lag screw
+                                                                                  (mm (in.))      Factor
+Lateral Resistance                                                                4.8 (3/16)       1.00
+                                                                                  6.4 (1/4)        0.97
+Pre-1991                                                                          7.9 (5/16)       0.85
+The experimentally determined lateral loads for lag screws                        9.5 (3/8)        0.76
+                                                                                 11.1 (7/16)       0.70
+inserted in the side grain and loaded parallel to the grain of a                 12.7 (1/2)        0.65
+piece of seasoned wood can be computed as                                        15.9 (5/8)        0.60
+                        p = KD2                    (8–15)                        19.0 (3/4)        0.55
+                                                                                 22.2 (7/8)        0.52
+where p is proportional limit lateral load (N, lb) parallel to                   25.4 (1)          0.50
+the grain, K a coefficient depending on the species specific
+gravity, and D shank diameter of the lag screw (mm, in.).     Hankinson formula for determining the bearing strength of
+Values of K for a number of specific gravity ranges can be    wood at various angles to the grain,
+found in Table 8–4. These coefficients are based on average                                 PQ
+results for several ranges of specific gravity for hardwoods                    N =                               (8–16)
+                                                                                    P sin 2 θ + Q cos 2 θ
+and softwoods. The loads given by this equation apply when
+the thickness of the side member is 3.5 times the shank       where P is load or stress parallel to the grain, Q load or
+diameter of the lag screw, and the depth of penetration in    stress perpendicular to the grain, and N load or stress at an
+the main member is seven times the diameter in the harder     inclination θ with the direction of the grain.
+woods and 11 times the diameter in the softer woods. For
+other thicknesses, the computed loads should be multiplied    Values for lateral resistance as computed by the preceding
+by the factors listed in Table 8–10.                          methods are based on complete penetration of the
+                                                              unthreaded shank into the side member but not into the main
+The thickness of a solid wood side member should be about     member. When the shank penetrates the main member, the
+one-half the depth of penetration in the main member.         permitted increases in loads are given in Table 8–12.
+When the lag screw is inserted in the side grain of wood and  When lag screws are used with metal plates, the lateral loads
+the load is applied perpendicular to the grain, the load given  parallel to the grain may be increased 25%, provided the
+by the lateral resistance equation should be multiplied by the  plate thickness is sufficient so that the bearing capacity of
+factors listed in Table 8–11.                                 the steel is not exceeded. No increase should be made when
+For other angles of loading, the loads may be computed        the applied load is perpendicular to the grain.
+from the parallel and perpendicular values by using the
+
+                                                                                                                   8–13
+
+=== PAGE 14 | img ===
+                                                                        General Technical Report FPL–GTR–282
+
+           Table 8–12. Permitted increases in
+           loads when lag screw unthreaded
+           shank penetrates foundation
+           member
+             Ratio of penetration of
+              shank into foundation  Increase
+                member to shank       in load
+                   diameter            (%)
+                      1                 8
+                      2                17
+                      3                26
+                      4                33
+                      5                36
+                      6                38
+                      7                39
+                                                              Figure 8–9. Variation in bolt-bearing stress at the
+                                                              proportional limit parallel to grain with L/D ratio. Curve A,
+Lag screws should not be used in end grain, because           relation obtained from experimental evaluation; curve B,
+splitting may develop under lateral load. If lag screws are so  modified relation used for establishing design loads.
+used, however, the loads should be taken as two-thirds those
+for lateral resistance when lag screws are inserted into side  bearing stress was based on test results at the proportional
+grain and the loads act perpendicular to the grain.           limit; since 1991, bearing stress is based on test results at a
+The spacings, end and edge distances, and net section for lag  yield limit state, which is defined as the 5% diameter offset
+screw joints should be the same as those for joints with bolts  on the load–deformation curve (similar to Fig. 8–4).
+(discussed later) of a diameter equal to the shank diameter   The bearing stress at proportional limit load is largest
+of the lag screw.                                             when the bolt does not bend, that is, for joints with small
+Lag screws should always be inserted by turning with a        L/D values. The curves of Figures 8–9 and 8–10 show the
+wrench, not by driving with a hammer. Soap, beeswax, or       reduction in proportional limit bolt-bearing stress as L/D
+other lubricants applied to the screw, particularly with the  increases. The bearing stress at maximum load does not
+denser wood species, will facilitate insertion and prevent    decrease as L/D increases, but remains fairly constant,
+damage to the threads but will not affect performance of the  which means that the ratio of maximum load to proportional
+lag screw.                                                    limit load increases as L/D increases. To maintain a fairly
+                                                              constant ratio between maximum load and design load for
+Post-1991                                                     bolts, the relations between bearing stress and L/D ratio
+Lag screw lateral strength is determined by the yield         have been adjusted as indicated in Figures 8–9 and 8–10.
+model theory table similar to the procedure for bolts.        The proportional limit bolt-bearing stress parallel to grain
+Modes I, III, and IV yield may occur (Fig. 8–5). The dowel    for small L/D ratios is approximately 50% of the small clear
+bearing strength values are based on the same parallel- and   crushing strength for softwoods and approximately 60% for
+perpendicular-to-grain specific gravity equations used to     hardwoods. For bearing stress perpendicular to the grain,
+establish values for bolts.                                   the ratio between bearing stress at proportional limit load
+For other angles of loading, the dowel bearing strength       and the small clear proportional limit stress in compression
+values for use in the yield model are determined by the       perpendicular to grain depends upon bolt diameter
+Hankinson equation, where P and Q are the values of dowel     (Fig. 8–11) for small L/D ratios.
+bearing parallel and perpendicular to grain, respectively.    Species compressive strength also affects the L/D ratio
+                                                              relationship, as indicated in Figure 8–10. Relatively higher
+Bolts                                                         bolt proportional-limit stress perpendicular to grain is
+                                                              obtained with wood low in strength (proportional limit
+Bearing Stress of Wood under Bolts                            stress of 3,930 kPa (570 lb in–2) than with material of
+The bearing stress under a bolt is computed by dividing the   high strength (proportional limit stress of 7,860 kPa
+load on a bolt by the product LD, where L is the length of a  (1,140 lb in–2)). This effect also occurs for bolt-bearing
+bolt in the main member and D is the bolt diameter. Basic     stress parallel to grain, but not to the same extent as for
+parallel-to-grain and perpendicular-to-grain bearing stresses  perpendicular-to-grain loading.
+have been obtained from tests of three-member wood joints     The proportional limit bolt load for a three-member joint
+where each side member is half the thickness of the main      with side members half the thickness of the main member
+member. The side members were loaded parallel to grain for    may be estimated by the following procedures.
+both parallel- and perpendicular-to-grain tests. Prior to 1991,
+
+8–14
+
+=== PAGE 15 | img ===
+Figure 8–10. Variation in bolt-bearing stress at the          Figure 8–12. Variation in the proportional limit bolt-bearing
+proportional limit perpendicular to grain with L/D ratio.     stress parallel to grain with L/D ratio. Curve A, bolts with
+                                                              yield stress of 861.84 MPa (125,000 lb in–2); curve B, bolts
+Relations obtained from experimental evaluation for           with yield stress of 310.26 MPa (45,000 lb in–2).
+materials with average compression perpendicular stress
+of 7,860 kPa (1,140 lb in–2) (curve A–1) and 3,930 kPa
+(570 lb in–2) (curve A–2). Curves B–1 and B–2, modified       Loads at an Angle to the Grain
+relations used for establishing design loads.                 For other angles of loading, the dowel bearing strength
+                                                              values for use in the yield model are determined by the
+                                                              Hankinson equation, where P and Q are the values of dowel
+                                                              bearing parallel and perpendicular to grain, respectively.
+                                                              Steel Side Plates
+                                                              When steel side plates are used, the bolt-bearing stress
+                                                              parallel to grain at joint proportional limit is approximately
+                                                              25% greater than that for wood side plates. The joint
+                                                              deformation at proportional limit is much smaller with
+                                                              steel side plates. If loads at equivalent joint deformation
+                                                              are compared, the load for joints with steel side plates is
+                                                              approximately 75% greater than that for wood side plates.
+                                                              Pre-1991 design criteria included increases in connection
+                                                              strength with steel side plates; post-1991 design criteria
+                                                              include steel side plate behavior in the yield model
+                                                              equations.
+                                                              For perpendicular-to-grain loading, the same loads are
+Figure 8–11. Bearing stress perpendicular to the grain as     obtained for wood and steel side plates.
+affected by bolt diameter.
+                                                              Bolt Quality
+For parallel-to-grain loading, (a) multiply the species small  Both the properties of the wood and the quality of the bolt
+clear compressive parallel strength (Tables 5–3, 5–4, or 5–5)  are factors in determining the strength of a bolted joint. The
+by 0.50 for softwoods or 0.60 for hardwoods, (b) multiply     percentages given in Figures 8–9 and 8–10 for calculating
+this product by the appropriate factor from Figure 8–9 for    bearing stress apply to steel machine bolts with a yield
+the L/D ratio of the bolt, and (c) multiply this product by   stress of 310 MPa (45,000 lb in–2). Figure 8–12 indicates the
+LD.                                                           increase in bearing stress parallel to grain for bolts with a
+                                                              yield stress of 862 MPa (125,000 lb in–2).
+For perpendicular-to-grain loading, (a) multiply the species
+compression perpendicular-to-grain proportional limit stress  Effect of Member Thickness
+(Tables 5–3, 5–4, or 5–5) by the appropriate factor from      The proportional limit load is affected by the ratio of the
+Figure 8–11, (b) multiply this product by the appropriate     side member thickness to the main member thickness
+factor from Figure 8–10, and (c) multiply this product by     (Fig. 8–13).
+LD.
+                                                              Pre-1991 design values for bolts are based on joints with
+                                                              the side member half the thickness of the main member.
+
+                                                                                                                   8–15
+
+=== PAGE 16 | img ===
+                                                                        General Technical Report FPL–GTR–282
+                                                              When a joint is in tension, the bolt nearest the end of a
+                                                              timber should be at a distance from the end of at least
+                                                              seven times the bolt diameter for softwoods and five times
+                                                              for hardwoods. When the joint is in compression, the
+                                                              end margin may be four times the bolt diameter for both
+                                                              softwoods and hardwoods. Any decrease in these spacings
+                                                              and margins will decrease the load in about the same ratio.
+                                                              For bolts bearing parallel to the grain, the distance from the
+                                                              edge of a timber to the center of a bolt should be at least
+                                                              1.5 times the bolt diameter. This margin, however, will
+                                                              usually be controlled by (a) the common practice of having
+                                                              an edge margin equal to one-half the distance between
+                                                              bolt rows and (b) the area requirements at the critical
+Figure 8–13. Proportional limit load related to side member   section. (The critical section is that section of the member
+thickness for three-member joints. Center member              taken at right angles to the direction of load, which gives
+thickness was 50.8 mm (2 in.).                                the maximum stress in the member based on the net area
+                                                              remaining after reductions are made for bolt holes at that
+The usual practice in design of bolted joints is to take no   section.) For parallel-to-grain loading in softwoods, the
+increase in design load when the side members are greater     net area remaining at the critical section should be at least
+than half the thickness of the main member. When the          80% of the total area in bearing under all the bolts in the
+side members are less than half the thickness of the main     particular joint under consideration; in hardwoods it should
+member, a design load for a main member that is twice the     be 100%.
+thickness of the side member is used. Post-1991 design
+                                                              For bolts bearing perpendicular to the grain, the margin
+values include member thickness directly in the yield model
+                                                              between the edge toward which the bolt pressure is acting
+equations.
+                                                              and the center of the bolt or bolts nearest this edge should
+Two-Member, Multiple-Member Joints                            be at least four times the bolt diameter. The margin at the
+                                                              opposite edge is relatively unimportant.
+In pre-1991 design, the proportional limit load was taken as
+half the load for a three-member joint with a main member     The aforementioned prescriptive spacing recommendations
+the same thickness as the thinnest member for two-member      are based on experimental information and have been found
+joints.                                                       to be sufficient for a majority of designed connections.
+                                                              There is still a need to validate the design spacing using a
+For four or more members in a joint, the proportional limit   mechanics-based method that considers wood strength. The
+load was taken as the sum of the loads for the individual     prescriptive spacing requirement may not agree with the
+shear planes by treating each shear plane as an equivalent    strength-based method, and the large spacing requirement
+two-member joint.                                             should be used. One method for the design of fastener
+Post-1991 design for joints with four or more members         joints loaded in tension parallel to grain is highlighted in
+also results in values per shear plane. Connection strength   appendix E of the National Design Specification for Wood
+for any number of members is conservatively found by          Construction.
+multiplying the value for the weakest shear plane by the
+number of shear planes.                                       Effect of Bolt Holes
+                                                              The bearing strength of wood under bolts is affected
+Spacing, Edge, and End Distance                               considerably by the size and type of bolt holes into which
+The center-to-center distance along the grain should be       the bolts are inserted. A bolt hole that is too large causes
+at least four times the bolt diameter for parallel-to-grain   nonuniform bearing of the bolt; if the bolt hole is too small,
+loading. The minimum center-to-center spacing of bolts in     the wood will split when the bolt is driven. Normally, bolts
+the across-the-grain direction for loads acting through metal  should fit so that they can be inserted by tapping lightly
+side plates and parallel to the grain need only be sufficient  with a wood mallet. In general, the smoother the hole, the
+to permit the tightening of the nuts. For wood side plates,   higher the bearing values will be (Fig. 8–14). Deformations
+the spacing is controlled by the rules applying to loads      accompanying the load are also less with a smoother bolt-
+acting parallel to grain if the design load approaches the    hole surface (Fig. 8–15).
+bolt-bearing capacity of the side plates. When the design     Rough holes are caused by using dull bits and improper
+load is less than the bolt-bearing capacity of the side plates,  rates of feed and drill speed. A twist drill operated at
+the spacing may be reduced below that required to develop     a peripheral speed of approximately 38 m min–1
+their maximum capacity.                                       (1,500 in min–1) produces uniformly smooth holes at
+
+8–16
+
+=== PAGE 17 | img ===
+                                                               Pre-1991 Allowable Loads
+                                                               The following procedures are used to calculate allowable
+                                                               bolt loads for joints with wood side members, each half the
+                                                               thickness of the main member.
+                                                               Parallel to Grain—The starting point for parallel-to-grain
+                                                               bolt values is the maximum green crushing strength for the
+                                                               species or group of species. Procedures outlined in ASTM
+                                                               D2555 are used to establish a 5% exclusion value. The
+                                                               exclusion value is divided by a factor of 1.9 to adjust to
+                                                               a 10-year normal duration of load and provide a factor
+                                                               of safety. This value is multiplied by 1.20 to adjust to a
+                                                               seasoned strength. The resulting value is called the basic
+Figure 8–14. Effect of rate of feed and drill speed on the     bolt-bearing stress parallel to grain.
+surface condition of bolt holes drilled in Sitka spruce.       The basic bolt-bearing stress is then adjusted for the effects
+A, hole was bored with a twist drill rotating at a peripheral
+speed of 7.62 m min–1 (300 in min–1); feed rate was            of L/D ratio. Table 8–13 gives the percentage of basic
+1.52 m/min (60 in min–1). B, hole was bored with the same      stress for three classes of species. The particular class for
+drill at a peripheral speed of 31.75 m min–1 (1,250 in min–1);  the species is determined from the basic bolt-bearing stress
+feed rate was 50.8 mm min–1 (2 in min–1).                      as indicated in Table 8–14. The adjusted bearing stress is
+                                                               further multiplied by a factor of 0.80 to adjust to wood side
+                                                               plates. The allowable bolt load in pounds is then determined
+                                                               by multiplying by the projected bolt area, LD.
+                                                               Perpendicular to Grain—The starting point for
+                                                               perpendicular-to-grain bolt values is the average green
+                                                               proportional limit stress in compression perpendicular to
+                                                               grain. Procedures in ASTM D2555 are used to establish
+                                                               compression perpendicular values for groups of species. The
+                                                               average proportional limit stress is divided by 1.5 for ring
+                                                               position (growth rings neither parallel nor perpendicular to
+                                                               load during test) and a factor of safety. This value is then
+                                                               multiplied by 1.20 to adjust to a seasoned strength and by
+                                                               1.10 to adjust to a normal duration of load. The resulting
+                                                               value is called the basic bolt-bearing stress perpendicular to
+                                                               grain.
+                                                               The basic bolt-bearing stress is then adjusted for the effects
+                                                               of bolt diameter (Table 8–15) and L/D ratio (Table 8–13).
+Figure 8–15. Typical load–deformation curves showing the
+effect of surface condition of bolt holes, resulting from      The allowable bolt load is then determined by multiplying
+a slow feed rate and a fast feed rate, on the deformation      the adjusted basic bolt-bearing stress by the projected bolt
+in a joint when subjected to loading under bolts. The          area, LD.
+surface conditions of the bolt holes were similar to those
+illustrated in Figure 8–14.                                    Post-1991 Yield Model
+                                                               The empirical design approach used prior to 1991 was based
+moderate feed rates. The rate of feed depends upon the         on a tabular value for a single bolt in a wood-to-wood,
+diameter of the drill and the speed of rotation but should     three-member connection where the side members are each
+enable the drill to cut, rather than tear, the wood. The drill  a minimum of one-half the thickness of the main member.
+should produce shavings, not chips.                            The single-bolt value must then be modified for any
+Proportional limit loads for joints with bolt holes the same   variation from these reference conditions. The theoretical
+diameter as the bolt will be slightly higher than for joints   approach, after 1991, is more general and is not limited to
+with a 1.6-mm (1/16-in.) oversized hole. However, if drying    these reference conditions.
+takes place after assembly of the joint, the proportional limit  The theoretical approach is based on work done in Europe
+load for snug-fitting bolts will be considerably less due to   (Johansen 1949) and is referred to as the European Yield
+the effects of shrinkage.                                      Model (EYM). The EYM describes a number of possible
+                                                               yield modes that can occur in a dowel-type connection
+                                                               (Fig. 8–5). The yield strength of these different modes is
+
+                                                                                                                    8–17
+
+=== PAGE 18 ===
+                                                                          General Technical Report FPL–GTR–282
+
+                      Table 8–13. Percentage of basic bolt-bearing stress used for calculating
+                      allowable bolt loads
+                                                      L/D adjustment factor by classa
+                       Ratio of bolt          Parallel                      Perpendicular
+                         length to            to grain                         to grain
+                         diameter
+                          (L/D)        1        2         3         1         2         3        4
+                            1       100.0    100.0     100.0       100.0    100.0     100.0    100.0
+                            2       100.0    100.0     100.0       100.0    100.0     100.0    100.0
+                            3       100.0    100.0       99.0      100.0    100.0     100.0    100.0
+                            4        99.5      97.4      92.5      100.0    100.0     100.0    100.0
+                            5        95.4      88.3      80.0      100.0    100.0     100.0    100.0
+                            6        85.6      75.8      67.2      100.0    100.0     100.0     96.3
+                            7        73.4      65.0      57.6      100.0    100.0      97.3     86.9
+                            8        64.2      56.9      50.4      100.0     96.1      88.1     75.0
+                            9        57.1      50.6      44.8       94.6     86.3      76.7     64.6
+                           10        51.4      45.5      40.3       85.0     76.2      67.2     55.4
+                           11        46.7      41.4      36.6       76.1     67.6      59.3     48.4
+                           12        42.8      37.9      33.6       68.6     61.0      52.0     42.5
+                           13        39.5      35.0      31.0       62.2     55.3      45.9     37.5
+                      aClass determined from basic bolt-bearing stress according to Table 8–14.
+
+                 Table 8–14. L/D adjustment class associated with basic bolt-bearing stress
+                                             Basic bolt-bearing stress for species group (MPa (lb in–2))
+                                                                                            L/D adjustment
+                 Loading direction          Softwoods                  Hardwoods             (Table 8–13)
+                 Parallel            <7.93 (<1,150)              <7.33 (<1,063)                   1
+                                      7.93–10.37 (1,150–1,504)    7.33–9.58 (1,063–1,389)         2
+                                    >10.37 (>1,504)              >9.58 (>1,389)                   3
+                 Perpendicular       <1.31 (<190)                <1.44 (<209)                     1
+                                      1.31–2.00 (190–290)         1.44–2.20 (209–319)             2
+                                      2.00–2.59 (291–375)         2.21–2.84 (320–412)             3
+                                     >2.59 (>375)                >2.84 (>412)                     4
+
+            Table 8–15. Factors for adjusting                   determined from a static analysis that assumes the wood
+            basic bolt-bearing stress                           and the bolt are both perfectly plastic. The yield mode that
+            perpendicular to grain for bolt                     results in the lowest yield load for a given geometry is the
+            diameter when calculating                           theoretical connection yield load.
+            allowable bolt loads
+            Bolt diameter          Adjustment                   Equations corresponding to the yield modes for a three-
+            (mm (in.))               factor                     member joint are given in Table 8–16. (Equations for
+               6.35 (1/4)             2.50                      two-member allowable values are given in the NDS.)
+               9.53 (3/8)             1.95                      The nominal single-bolt value is dependent on the joint
+              12.70 (1/2)             1.68                      geometry (thickness of main and side members), bolt
+              15.88 (5/8)             1.52                      diameter and bending yield strength, dowel bearing
+              19.05 (3/4)             1.41                      strength, and direction of load to the grain. The equations
+              22.23 (7/8)             1.33
+              25.40 (1)               1.27                      are equally valid for wood or steel side members, which is
+              31.75 (1-1/4)           1.19                      taken into account by thickness and dowel bearing strength
+              38.10 (1-1/2)           1.14                      parameters. The equations are also valid for various load-to-
+              44.45 (1-3/4)           1.10                      grain directions, which are taken into account by the Kθ and
+              50.80 (2)               1.07                      Fe parameter.
+              63.50 (2-1/2)           1.03
+             >76.20 (>3 or over)      1.00                      The dowel bearing strength of the wood members is
+                                                                determined from tests that relate species specific gravity and
+                                                                dowel diameter to bearing strength. Empirical equations for
+                                                                these relationships are as follows:
+
+8–18
+
+=== PAGE 19 | img ===
+  Table 8–16. The 5% offset yield lateral strength (Z)
+  for three-member bolted joints
+                                     Z value for three-
+  Mode                             member bolted joint
+                                  Dt m F em
+  Mode Im                           K 
+                                  2 Dt s F es
+  Mode Is                           K 
+                                  2 k 4 D t s F em
+  Mode IIIs                       ( 2  R e )K 
+                                  2 D 2 2 F em F yb
+  Mode IV                         K    3 1(  R )
+                                    θ        e
+  Definitions
+     D   nominal bolt diameter, mm (in.)
+     Fem dowel bearing strength of main (center)
+         member, MPa (lb in–2)
+     Fes dowel bearing strength of side members,
+         MPa (lb in–2)
+     Fyb bending yield strength of bolt, MPa (lb in–2)
+     K 1 + /360                                              Figure 8–16. Joint with split-ring connector showing
+     tm  thickness of main (center) member, mm (in.)           connector, precut groove, bolt, washer, and nut.
+     ts  thickness of side member, mm (in.)
+     Z   nominal single bolt design value                                                              Figure 8–17. Joints
+      angle of load to grain (degrees)                                                                with shear-plate
+     Re = Fem/Fes                                                                                      connectors
+                                    2                                                                  with (A) wood side
+               2 1(  R e ) 2 F yb ( 2  R e ) D                                                       plates and (B) steel
+     k 4   1                2
+                 R e       3 F em t s                                                                  side plates.
+
+Parallel to grain
+           Fe = 77.2G       (metric)               (8–17a)
+           Fe = 11,200G     (inch–pound)          (8–17b)
+Perpendicular to grain
+      Fe = 212.0G1 45D–0 5   (metric)              (8–18a)
+      Fe = 6,100G1 45D–0 5   (inch–pound)          (8–18b)
+where Fe is dowel bearing strength (MPa, lb in–2), G
+specific gravity based on ovendry weight and volume, and
+D bolt diameter (mm, in.).                                    from the end of the member, the spacing of the connectors,
+For other angles of loading, the dowel bearing strength       the direction of application of the load with respect to the
+values for use in the yield model are determined by the       direction of the grain of the wood, and other factors. Loads
+Hankinson equation, where P and Q are the values of dowel     for wood joints with steel connectors—split ring (Fig. 8–16)
+bearing parallel and perpendicular to grain, respectively.    and shear plate (Fig. 8–17)—are discussed in this section.
+                                                              These connectors require closely fitting machined grooves
+                                                              in the wood members.
+Connector Joints
+Several types of connectors have been devised that increase   Parallel-to-Grain Loading
+joint bearing and shear areas by utilizing rings or plates    Tests have demonstrated that the density of the wood is a
+around bolts holding joint members together. The primary      controlling factor in the strength of connector joints. For
+load-carrying portions of these joints are the connectors; the  split-ring connectors, both maximum load and proportional
+bolts usually serve to prevent transverse separation of the   limit load parallel to grain vary linearly with specific gravity
+members but do contribute some load-carrying capacity.        (Figs. 8–18 and 8–19). For shear plates, the maximum
+The strength of the connector joint depends on the type and   load and proportional limit load vary linearly with specific
+size of the connector, the species of wood, the thickness     gravity for the less dense species (Figs. 8–20 and 8–21). In
+and width of the member, the distance of the connector        the higher density species, the shear strength of the bolts
+
+                                                                                                                    8–19
+
+=== PAGE 20 | img ===
+                                                                        General Technical Report FPL–GTR–282
+                                                              becomes the controlling factor. These relations were
+                                                              obtained for seasoned members, approximately 12%
+                                                              moisture content.
+                                                              Perpendicular-to-Grain Loading
+                                                              Loads for perpendicular-to-grain loading have been
+                                                              established using three-member joints with the side
+                                                              members loaded parallel to grain. Specific gravity is a
+                                                              good indicator of perpendicular-to-grain strength of timber
+                                                              connector joints. For split-ring connectors, the proportional
+                                                              limit loads perpendicular to grain are 58% of the parallel-
+Figure 8–18. Relation between load bearing parallel to        to-grain proportional limit loads. The joint deformation at
+grain and specific gravity (ovendry weight, volume at         proportional limit is 30% to 50% more than for parallel-to-
+test) for two 63.5-mm (2-1/2-in.) split rings with a single   grain loading.
+12.7-mm (1/2-in.) bolt in air-dry material. Center member
+was thickness 101.6 mm (4 in.) and side member thickness      For shear-plate connectors, the proportional limit and
+was 50.8 mm (2 in.).                                          maximum loads vary linearly with specific gravity
+                                                              (Figs. 8–22 and 8–23). The wood strength controls the
+                                                              joint strength for all species.
+                                                              Design Loads
+                                                              Design loads for parallel-to-grain loading have been
+                                                              established by dividing ultimate test loads by an average
+                                                              factor of 4. This gives values that do not exceed five-eighths
+                                                              of the proportional limit loads. The reduction accounts for
+                                                              variability in material, a reduction to long-time loading, and
+                                                              a factor of safety. Design loads for normal duration of load
+                                                              are 10% higher.
+                                                              For perpendicular-to-grain loading, ultimate load is given
+Figure 8–19. Relation between load bearing parallel to grain  less consideration and greater dependence placed on load
+and specific gravity (ovendry weight, volume at test) for two  at proportional limit. For split rings, the proportional limit
+101.6-mm (4-in.) split rings and a single 19.1-mm- (3/4-in.-)  load is reduced by approximately half. For shear plates,
+diameter bolt in air-dry material. Center member thickness
+was 127.0 mm (5 in.) and side member thickness was            the design loads are approximately five-eighths of the
+63.5 mm (2-1/2 in.).                                          proportional limit test loads. These reductions again account
+                                                              for material variability, a reduction to long-time loading,
+                                                              and a factor of safety.
+                                                              Design loads are presented in Figures 8–18 to 8–23. In
+                                                              practice, four wood species groups have been established,
+                                                              based primarily on specific gravity, and design loads
+                                                              assigned for each group. Species groupings for connectors
+                                                              are presented in Table 8–17. The corresponding design
+                                                              loads (for long-continued load) are given in Table 8–18.
+                                                              The National Design Specification for Wood Construction
+                                                              gives design values for normal-duration load for these and
+                                                              additional species.
+                                                              Modifications
+                                                              Some factors that affect the loads of connectors were taken
+Figure 8–20. Relation between load bearing parallel to        into account in deriving the tabular values. Other varied and
+grain and specific gravity (ovendry weight, volume at test)   extreme conditions require modification of the values.
+for two 66.7-mm (2-5/8-in.) shear plates in air-dry material
+with steel side plates. Center member thickness was
+76.2 mm (3 in.).                                              Steel Side Plates
+                                                              Steel side plates are often used with shear-plate connectors.
+                                                              The loads parallel to grain have been found to be
+                                                              approximately 10% higher than those with wood side plates.
+                                                              The perpendicular-to-grain loads are unchanged.
+
+8–20
+
+=== PAGE 21 | img ===
+                                                              Table 8–17. Species groupings for connector loadsa
+                                                              Connector               Species or species group
+                                                              Group 1   Aspen           Basswood           Cottonwood
+                                                                        Western         Balsam fir         White fir
+                                                                         redcedar
+                                                                        Eastern hemlock Eastern white pine Ponderosa pine
+                                                                        Sugar pine      Western white pine Engelmann
+                                                                                                            spruce
+                                                              Group 2   Chestnut        Yellow-poplar      Baldcypress
+                                                                        Yellow-cedar    Port-Orford-cedar  Western
+                                                                                                            hemlock
+                                                                        Red pine        Redwood            Red spruce
+                                                                        Sitka spruce    White spruce
+Figure 8–21. Relation between load bearing parallel to grain  Group 3   Elm, American   Elm, slippery      Maple, soft
+and specific gravity (ovendry weight, volume at test) for               Sweetgum        Sycamore           Tupelo
+two 101.6-mm (4-in.) shear plates in air-dry material with              Douglas-fir     Larch, western     Southern Pine
+steel side plates. Center member thickness was 88.9 mm        Group 4   Ash, white      Beech              Birch
+(3-1/2 in.).                                                            Elm, rock       Hickory            Maple, hard
+                                                                        Oak
+                                                              aGroup 1 woods provide the weakest connector joints; group 4 woods, the
+                                                              strongest.
+                                                              Exposure and Moisture Condition of Wood
+                                                              The loads listed in Table 8–18 apply to seasoned members
+                                                              used where they will remain dry. If the wood will be more
+                                                              or less continuously damp or wet in use, two-thirds of the
+                                                              tabulated values should be used. The amount by which the
+                                                              loads should be reduced to adapt them to other conditions
+                                                              of use depends upon the extent to which the exposure
+                                                              favors decay, the required life of the structure or part, the
+                                                              frequency and thoroughness of inspection, the original cost
+                                                              and the cost of replacements, the proportion of sapwood
+Figure 8–22. Relation between load bearing perpendicular      and durability of the heartwood of the species (if untreated),
+to grain and specific gravity (ovendry weight, volume at      and the character and efficacy of any treatment. These
+test) for two 66.7-mm (2-5/8-in.) shear plates in air-dry     factors should be evaluated for each individual design.
+material with steel side plates. Center member thickness      Industry recommendations for the use of connectors when
+was 76.2 mm (3 in.).                                          the condition of the lumber is other than continuously
+                                                              wet or continuously dry are given in the National Design
+                                                              Specification for Wood Construction.
+                                                              Ordinarily, before fabrication of connector joints, members
+                                                              should be seasoned to a moisture content corresponding as
+                                                              nearly as practical to that which they will attain in service.
+                                                              This is particularly desirable for lumber for roof trusses and
+                                                              other structural units used in dry locations and in which
+                                                              shrinkage is an important factor. Urgent construction needs
+                                                              sometimes result in the erection of structures and structural
+                                                              units employing green or inadequately seasoned lumber
+                                                              with connectors. Because such lumber subsequently dries
+                                                              out in most buildings, causing shrinkage and opening the
+                                                              joints, adequate maintenance measures must be adopted.
+                                                              The maintenance for connector joints in green lumber
+Figure 8–23. Relation between load bearing perpendicular      should include inspection of the structural units and
+to grain and specific gravity (ovendry weight, volume
+at test) for two 101.6-mm (4-in.) shear plates in air-dry     tightening of all bolts as needed during the time the units are
+material with steel side plates. Center member thickness      coming to moisture equilibrium, which is normally during
+was 88.9 mm (3-1/2 in.).                                      the first year.
+
+                                                                                                                   8–21
+
+=== PAGE 22 ===
+                                                                          General Technical Report FPL–GTR–282
+
+  Table 8–18. Design loads for one connector in a jointa
+                                                                                   Load (N (lb))
+                      Minimum thickness of wood
+                          member (mm (in.))                Group 1 woods    Group 2 woods  Group 3 woods   Group 4 woods
+                                    With two   Minimum    At 0     At 90    At 0   At 90    At 0   At 90   At 0   At 90
+                        With one  connectors in  width all  angle  angle    angle   angle   angle  angle   angle   angle
+                        connector opposite faces, members   to      to       to      to      to      to     to      to
+  Connector               only      one boltb  (mm (in.))  grain   grain    grain   grain   grain  grain   grain   grain
+  Split ring
+    63.5-mm (2-1/2-in.)  25 (1)     51 (2)     89 (3-1/2)  7,940   4,693    9,274   5,471  11,032  6,561  12,789   7,673
+    diameter, 19.0 mm                                     (1,785)  (1,055)  (2,085) (1,230) (2,480) (1,475) (2,875) (1,725)
+    (3/4 in.) wide, with
+    12.7-mm (1/2-in.)
+    bolt
+    101.6-mm (4-in.)     38 (1-1/2)  76 (3)   140 (5-1/2) 15,324   8,874   17,726  10,275  21,262 12,344  24,821 14,390
+    diameter, 25.4 mm                                     (3,445)  (1,995)  (3,985) (2,310) (4,780) (2,775) (5,580) (3,235)
+    (1 in.) wide, with
+    19.0-mm (3/4-in.)
+    bolt
+  Shear plate
+    66.7-mm (2-5/8-in.)  38 (1-1/2)  67 (2-5/8)  89 (3-1/2)  8,407  4,871   9,742   5,649  11,699  6,784  11,854   7,918
+    diameter, 10.7 mm                                     (1,890)  (1,095)  (2,190) (1,270) (2,630) (1,525) (2,665) (1,780)
+    (0.42 in.) wide,
+    with 19.0-mm
+    (3/4-in.) bolt
+    101.6-mm (4-in.)     44 (1-3/4)  92 (3-518) 140 (5-1/2) 12,677  7,362  14,701   8,518  17,637 10,231  20,573 11,943
+    diameter, 16.2 mm                                     (2,850)  (1,655)  (3,305) (1,915) (3,965) (2,300) (4,625) (2,685)
+    (0.64 in.) wide, with
+    19.0-mm or 22.2-mm
+    (3/4- or 7/8-in.) bolt
+  aThe loads apply to seasoned timbers in dry, inside locations for a long-continued load. It is also assumed that the joints are properly designed with
+  respect to such features as centering of connectors, adequate end distance, and suitable spacing. Group 1 woods provide the weakest connector joints,
+  group 4 woods the strongest. Species groupings are given in Table 8–17.
+  bA three-member assembly with two connectors takes double the loads indicated.
+Grade and Quality of Lumber                                     can be obtained by the percentage reductions indicated in
+The lumber for which the loads for connectors are               Figure 8–24. Thicknesses below those indicated by the
+applicable should conform to the general requirements in        curves should not be used.
+regard to quality of structural lumber given in the grading     When one member contains a connector in only one face,
+rule books of lumber manufacturers’ associations for various    loads for thicknesses less than those listed in Table 8–18
+commercial species.                                             can be obtained by the percentage reductions indicated in
+The loads for connectors were obtained from tests of joints     Figure 8–24 using an assumed thickness equal to twice the
+whose members were clear and free from checks, shakes,          actual member thickness.
+and splits. Cross grain at the joint should not be steeper than
+1 in 10, and knots in the connector area should be accounted    Width of Member
+for as explained under Net Section.                             The width of member listed for each type and size of
+                                                                connector is the minimum that should be used. When the
+Loads at Angle with Grain                                       connectors are bearing parallel to the grain, no increase
+The loads for the split-ring and shear-plate connectors for     in load occurs with an increase in width. When they are
+angles of 0° to 90° between direction of load and grain may     bearing perpendicular to the grain, the load increases about
+be obtained by the Hankinson equation (Eq. (8–16)).             10% for each 25-mm (1-in.) increase in width of member
+                                                                over the minimum widths required for each type and size
+Thickness of Member                                             of connector, up to twice the diameter of the connectors.
+The relationship between loads for different thicknesses of     When the connector is placed off center and the load is
+lumber is based on test results for connector joints. The least  applied continuously in one direction only, the proper load
+thickness of member given in Table 8–18 for the various         can be determined by considering the width of member as
+sizes of connectors is the minimum to obtain optimum load.      equal to twice the edge distance (the distance between the
+The loads listed for each type and size of connector are the    center of the connector and the edge of the member toward
+maximum loads to be used for all thicker lumber. The loads      which the load is acting). The distance between the center
+for wood members of thicknesses less than those listed          of the connector and the opposite edge should not, however,
+
+8–22
+
+=== PAGE 23 | img ===
+                    Figure 8–24. Effect of thickness of wood member on the optimum load capacity of a
+                    timber connector.
+
+be less than half the permissible minimum width of the        multiplying the loads in Table 8–18 by the appropriate
+member.                                                       strength ratio given in Table 8–19. For example, the load
+                                                              for a 102-mm (4-in.) split-ring connector bearing parallel
+Net Section                                                   to the grain, when placed 178 mm or more (7 in. or more)
+The net section is the area remaining at the critical section  from the end of a Douglas-fir tension member that is
+after subtracting the projected area of the connectors and    38 mm (1-1/2 in.) thick is 21.3 kN (4,780 lb). When the
+bolt from the full cross-sectional area of the member. For    end distance is only 133 mm (5-1/4 in.), the strength ratio
+sawn timbers, the stress in the net area (whether in tension  obtained by direct interpolation between 178 and 89 mm
+or compression) should not exceed the stress for clear wood   (7 and 3-1/2 in.) in Table 8–19 is 0.81, and the load equals
+in compression parallel to the grain. In using this stress, it  0.81 times 21.3 (4,780) or 17.2 kN (3,870 lb).
+is assumed that knots do not occur within a length of half
+the diameter of the connector from the net section. If knots  Placement of Multiple Connectors
+are present in the longitudinal projection of the net section  Preliminary investigations of the placement of connectors
+within a length from the critical section of one-half the     in a multiple-connector joint, together with the observed
+diameter of the connector, the area of the knots should be    behavior of single-connector joints tested with variables that
+subtracted from the area of the critical section.             simulate those in a multiple-connector joint, are the basis for
+In laminated timbers, knots may occur in the inner            some suggested design practices.
+laminations at the connector location without being apparent  When two or more connectors in the same face of a member
+from the outside of the member. It is impractical to ensure   are in a line at right angles to the grain of the member and
+that there are no knots at or near the connector. In laminated  are bearing parallel to the grain (Fig. 8–25C), the clear
+construction, therefore, the stress at the net section is limited  distance c between the connectors should not be less than
+to the compressive stress for the member, accounting for the  12.7 mm (1/2 in.). When two or more connectors are acting
+effect of knots.                                              perpendicular to the grain and are spaced on a line at right
+                                                              angles to the length of the member (Fig. 8–25B), the rules
+End Distance and Spacing                                      for the width of member and edge distances used with one
+The load values in Table 8–18 apply when the distance of      connector are applicable to the edge distances for multiple
+the connector from the end of the member (end distance e)     connectors. The clear distance c between the connectors
+and the spacing s between connectors in multiple joints are   should be equal to the clear distance from the edge of the
+not factors affecting the strength of the joint (Fig. 8–25A).  member toward which the load is acting to the connector
+When the end distance or spacing for connectors bearing       nearest this edge.
+parallel to the grain is less than that required to develop   In a joint with two or more connectors spaced on a line
+the full load, the proper reduced load may be obtained by     parallel to the grain and with the load acting perpendicular
+
+                                                                                                                   8–23
+
+=== PAGE 24 | img ===
+                                                                        General Technical Report FPL–GTR–282
+                                                              members, where E is modulus of elasticity and A is gross
+                                                              cross-sectional area, (b) the fastener spacing, (c) the number
+                                                              of fasteners, and (d) the single-fastener load–deformation
+                                                              characteristics.
+                                                              Theoretically, the two end fasteners carry a majority of the
+                                                              load. For example, in a row of six bolts, the two end bolts
+                                                              will carry more than 50% of the total joint load. Adding
+                                                              bolts to a row tends to reduce the load on the less heavily
+                                                              loaded interior bolts. The most even distribution of bolt
+                                                              loads occurs in a joint where the extensional stiffness of
+                                                              the main member is equal to that of both splice plates.
+                                                              Increasing the fastener spacing tends to put more of the
+                                                              joint load on the end fasteners. Load distribution tends to be
+                                                              worse for stiffer fasteners.
+                                                              The actual load distribution in field-fabricated joints
+                                                              is difficult to predict. Small misalignment of fasteners,
+                                                              variations in spacing between side and main members,
+                                                              and variations in single-fastener load–deformation
+                                                              characteristics can cause the load distribution to be different
+                                                              than predicted by the theoretical analyses.
+                                                              For design purposes, modification factors for application
+                                                              to a row of bolts, lag screws, or timber connectors have
+                                                              been developed based on the theoretical analyses. Tables
+Figure 8–25. Types of multiple-connector joints: A, joint     are given in the National Design Specification for Wood
+strength depends on end distance e and connector              Construction.
+spacing s; B, joint strength depends on e, clear c, and
+edge a distances; C, joint strength depends on end e and      A design equation was developed to replace the double
+clear c distances; D, joint strength depends on end e,        entry required in the National Design Specification for
+clear c, and edge a distances.                                Wood Construction
+                                                                                 tables. This equation was obtained by
+to the grain (Fig. 8–25D), the available data indicate that the  algebraic simplification of the Lantos analysis that these
+load for multiple connectors is not equal to the sum of the   tables are based on:
+loads for individual connectors. Somewhat more favorable                                            
+results can be obtained if the connectors are staggered so                      m (1 − m 2 n )         1 + R  
+                                                               C =                                        EA    (8–19)
+that they do not act along the same line with respect to the    g               n              2 n    1 − m 
+                                                                     n (1 + R EA m )(1 + m ) −+ 1 m          
+grain of the transverse member. Industry recommendations                                          
+for various angle-to-grain loadings and spacings are given in  where Cg is modification factor, n number of fasteners in
+the National Design Specification for Wood Construction.      a row, REA the lesser of (EsAs)/(EmAm) or (EmAm)/(EsAs),
+Cross Bolts                                                   Em modulus of elasticity of main member, Es modulus of
+                                                              elasticity of side members, Am gross cross-sectional area of
+Cross bolts or stitch bolts placed at or near the end of      main member, As sum of gross cross-sectional areas of side
+members joined with connectors or at points between                                2
+connectors will provide additional safety. They may also      members, m = u − u −, 1 u = 1 + γ(s/2)(1/EmAm +
+be used to reinforce members that have, through change        1/EsAs), s center-to-center spacing between adjacent
+in moisture content in service, developed splits to an        fasteners in a row, and γ load/slip modulus for a single
+undesirable degree.                                           fastener connection. For 102-mm (4-in.) split-ring or shear-
+                                                              plate connectors,
+Multiple-Fastener Joints                                                  γ = 87,560 kN m–1 (500,000 lb in–1)
+When fasteners are used in rows parallel to the direction     For 64-mm (2-1/2-in.) split ring or 67-mm (2-5/8-in.) split
+of loading, total joint load is unequally distributed among   ring or shear plate connectors,
+fasteners in the row. Simplified methods of analysis have
+been developed to predict the load distribution among                     γ = 70,050 kN m–1 (400,000 lb in–1)
+the fasteners in a row below the proportional limit. These    For bolts or lag screws in wood-to-wood connections,
+analyses indicate that the elastic load distribution is a                                   5
+function of (a) the extensional stiffness EA of the joint                     γ = 246.25 D1     (metric)
+                                                                               = 180,000 D1 5 (inch–pound)
+
+8–24
+
+=== PAGE 25 | img ===
+             Table 8–19. Strength ratio for connectors for various longitudinal spacings and end
+             distancesa
+                                                                    End distanceb (mm (in.))
+             Connector
+             diameter              Spacingc         Spacing       Tension         Compression     End distance
+             (mm (in.))           (mm (in.))      strength ratio  member            member       strength ratio
+             Split-ring
+                63.5 (2-1/2)    171.4+ (6-3/4+)       100       139.7+ (5-1/2+)  101.6+ (4+)          100
+                63.5 (2-1/2)     85.7 (3-3/8)          50        69.8 (2-3/4)     63.5 (2-1/2)         62
+               101.6 (4)        228.6+ (9+)           100       177.8+ (7+)      139.7+ (5-1/2+)      100
+               101.6 (4)        123.8 (4-7/8)          50        88.9 (3-1/2)     82.6 (3-1/4)         62
+             Shear-plate
+                66.7 (2-5/8)    171.4+ (6-3/4+)       100       139.7+ (5-1/2+)  101.6+ (4+)          100
+                66.7 (2-5/8)     85.7 (3-3/8)          50        69.8 (2-3/4)     63.5 (2-1/2)         62
+               101.6 (4)        228.6+ (9+)           100       177.8+ (7+)      139.7+ (5-1/2+)      100
+               101.6 (4)        114.3 (4-1/2)          50        88.9 (3-1/2)     82.6 (3-1/4)         62
+             aStrength ratio for spacings and end distances intermediate to those listed may be obtained by interpolation and multiplied
+             by the loads in Table 8–18 to obtain design load. The strength ratio applies only to those connector units affected by the
+             respective spacings or end distances. The spacings and end distances should not be less than the minimum shown.
+             bEnd distance is distance from center of connector to end of member (Fig. 8–25A).
+             cSpacing is distance from center to center of connectors (Fig. 8–25A).
+
+Figure 8–26. Some typical metal plate connectors.
+                                                                Figure 8–27. Typical load–slip curves for two types of
+For bolts or lag screws in wood-to-metal connections,           metal plate connectors loaded in tension.
+               γ = 369.37 D1 5     (metric)
+                                                                shown in Figure 8–27. Design values are expressed as load
+                 = 270,000 D1 5    (inch–pound)                 per tooth, nail, plug, or unit area of plate. The smallest value
+where D is diameter of bolt or lag screw.                       as determined by two different means is the design load
+                                                                for normal duration of load: (1) the average load of at least
+                                                                five specimens at 0.38-mm (0.015-in.) slip from plate to
+Metal Plate Connectors                                          wood member or 0.76-mm (0.030-in.) slip from member to
+Metal plate connectors, commonly called truss plates, have      member is divided by 1.6; (2) the average ultimate load of at
+become a popular means of joining, especially in trussed        least five specimens is divided by 3.0.
+rafters and joists. These connectors transmit loads by means    The strength of a metal plate joint may also be controlled by
+of teeth, plugs, or nails, which vary from manufacturer         the tensile or shear strength of the plate.
+to manufacturer. Examples of such plates are shown in
+Figure 8–26. Plates are usually made of light-gauge
+galvanized steel and have an area and shape necessary           Joist Hangers
+to transmit the forces on the joint. Installation of plates     Joist hangers have become a popular means of joining
+usually requires a hydraulic press or other heavy equipment,    wood-based joists to header beams or columns. Hangers are
+although some plates can be installed by hand.                  usually made of light-gauge steel or welded from plate steel
+Basic strength values for plate connectors are determined       with shape and configuration necessary to transmit forces
+from load–slip curves from tension tests of two butted wood     through the joint. Loads are transmitted from the joist to
+members joined with two plates. Some typical curves are         the hanger primarily through direct bearing of the joist, but
+                                                                for the uplift forces, load transfer is due to lateral loading
+
+                                                                                                                      8–25
+
+=== PAGE 26 | img ===
+                                                                       General Technical Report FPL–GTR–282
+
+                Figure 8–28. Typical joist hanger connectors.
+
+of fasteners. How loads are transferred from the hanger to
+the header differs depending on whether the joist hanger is
+a face mount or top mount. Face-mount hangers transmit
+loads through lateral loading of dowel-type fasteners;
+top-mount hangers transmit loads by bearing on the top of
+the header and lateral loading of the dowel type fasteners.
+Design of the joist hanger varies from manufacturer to
+manufacturer. Examples of such plates are shown in
+Figure 8–28.
+Design loads are limited to the lowest values determined by
+experiment or by calculations. By experiment, design loads
+for joist hangers are determined from tests in which a joist
+is loaded at midspan and supported by two joist hangers
+attached to headers, following ASTM D7147 procedures.        Figure 8–29. Relation between maximum embedment
+The smallest value as determined by two different means      load and fastener perimeter for several species of wood.
+is the test design load for normal duration of load: (1) the
+average load at 3.2-mm (0.125-in.) deformation between the
+joist and header of at least six specimens and (2) the average
+ultimate load of at least six specimens divided by 3.0 or the
+least ultimate load for lower than six replicates divided by
+3.0. Design loads for calculations are also highlighted in
+ASTM D7147.
+
+Fastener Head Embedment
+The bearing strength of wood under fastener heads is
+important in such applications as the anchorage of building
+framework to foundation structures. When pressure tends
+to pull the framing member away from the foundation, the
+fastening loads could cause tensile failure of the fastenings,
+withdrawal of the fastenings from the framing member,
+or embedment of the fastener heads in the member. The        Figure 8–30. Relation between load at 1.27-mm (0.05-in.)
+                                                             embedment and fastener bearing area for several species.
+fastener head could even be pulled completely through.
+The maximum load for fastener head embedment is related
+to the fastener head perimeter, whereas loads at low
+embedments (1.27 mm (0.05 in.)) are related to the fastener
+head bearing area. These relations for several species at
+10% moisture content are shown in Figures 8–29 and 8–30.
+When annularly threaded nails are used for withdrawal
+applications, fastener head embedment or pull-through can
+be a limiting condition and should be considered in design.
+
+8–26
+
+=== PAGE 27 ===
+CHAPTER 8 | Fastenings
+
+Literature Cited                                           Folz, B.; Filiatrault, A. 2001. Cyclic analysis of wood shear
+                                                           walls. ASCE Journal of Structural Engineering. 127(4):
+Johansen, K.W. 1949. Theory of timber connections. Zurich,  433–441.
+Switzerland: Publication of International Association for
+Bridge and Structural Engineering. 9: 249–262.             FPL. 1962. General observations on the nailing of wood.
+                                                           FPL Tech. Note 243. Madison, WI: U.S. Department of
+Additional References                                      Agriculture, Forest Service, Forest Products Laboratory.
+                                                           FPL. 1964. Nailing dense hardwoods. Research Note
+AF&PA. 2005. National design specification for wood
+                                                           FPL–037. Madison, WI: U.S. Department of Agriculture,
+construction. Washington, DC: American Forest & Paper
+                                                           Forest Service, Forest Products Laboratory.
+Association.
+                                                           FPL. 1965. Nail withdrawal resistance of American woods.
+Anderson, L.O. 1959. Nailing better wood boxes and crates.
+                                                           Res. Note FPL–RN–033. Madison, WI: U.S. Department of
+Agric. Handb. 160. Washington, DC: U.S. Department of
+                                                           Agriculture, Forest Service, Forest Products Laboratory.
+Agriculture.
+                                                           Goodell, H.R.; Philipps, R.S. 1944. Bolt-bearing strength
+Anderson, L.O. 1970. Wood-frame house construction.
+                                                           of wood and modified wood: effect of different methods
+Agric. Handb. 73 (rev.). Washington, DC: U.S. Department
+                                                           of drilling bolt holes in wood and plywood. FPL Report
+of Agriculture.
+                                                           1523. Madison, WI: U.S. Department of Agriculture, Forest
+ASCE. 1996. Mechanical connections in wood structures.     Service, Forest Products Laboratory.
+Washington, DC: American Society of Civil Engineers.
+                                                           Jordan, C.A. 1963. Response of timber joints with metal
+ASTM. [Current edition]. West Conshohocken, PA: ASTM       fasteners to lateral impact loads. FPL Rep. 2263. Madison,
+International.                                             WI: U.S. Department Agriculture, Forest Service, Forest
+  ASTM D1761–88. Standard test methods for mechanical      Products Laboratory.
+  fasteners in wood.                                       Kuenzi, E.W. 1951. Theoretical design of a nailed or bolted
+  ASTM D2555–96. Standard methods for establishing         joint under lateral load. FPL Rep. 1951. Madison, WI: U.S.
+  clear wood strength values.                              Department of Agriculture, Forest Service, Forest Products
+                                                           Laboratory.
+  ASTM D5652–95. Standard test methods for bolted
+  connections in wood and wood-base products.              Kurtenacker, R.S. 1965. Performance of container fasteners
+                                                           subjected to static and dynamic withdrawal. Res. Pap.
+  ASTM D7147–05 Standard specifications for testing and    FPL 29. Madison, WI: U.S. Department of Agriculture,
+  establishing allowable loads of joist hangers.           Forest Service, Forest Products Laboratory.
+  ASTM F547. Standard terminology of nails for use with    Lantos, G. 1969. Load distribution in a row of fasteners
+  wood and wood-base materials.                            subjected to lateral load. Madison, WI: Wood Science.
+  ASTM F1575–03 Standard test method for determining       1(3): 129–136.
+  bending yield moment of nails.                           Markwardt, L.J. 1952. How surface condition of nails
+  ASTM F1667. Specification for driven fasteners: nails,   affects their holding power in wood. FPL Rep. D1927.
+  spiker, staples.                                         Madison, WI: U.S. Department of Agriculture, Forest
+                                                           Service, Forest Products Laboratory.
+Cramer, C.O. 1968. Load distribution in multiple-bolt
+tension joints. Proc. Pap. 5939. Journal of Structural     Markwardt, L.J.; Gahagan, J.M. 1930. Effect of nail points
+Division, American Society of Civil Engineers. 94(ST5):    on resistance to withdrawal. FPL Rep. 1226. Madison, WI:
+1101–1117.                                                 U.S. Department of Agriculture, Forest Service, Forest
+                                                           Products Laboratory.
+Doyle, D.V.; Scholten, J.A. 1963. Performance of bolted
+joints in Douglas-fir. Res. Pap. FPL 2. Madison, WI: U.S.  Markwardt, L.J.; Gahagan, J.M. 1952. Slant driving of nails.
+Department of Agriculture, Forest Service, Forest Products  Does it pay? Packing and Shipping. 56(10): 7–9,23,25.
+Laboratory.                                                McLain, T.E. 1975. Curvilinear load-slip relations in
+Eckelman, C.A. 1975. Screw holding performance in          laterally-loaded nailed joints. Fort Collins, CO: Department
+hardwoods and particleboard. Forest Products Journal.      of Forestry and Wood Science, Colorado State University.
+25(6): 30–35.                                              Ph.D. dissertation.
+Fairchild, I.J. 1926. Holding power of wood screws.        Newlin, J.A.; Gahagan, J.M. 1938. Lag screw joints: their
+Technol. Pap. 319. Washington, DC: U.S. National Bureau    behavior and design. Tech. Bull. 597. Washington, DC:
+of Standards.                                              U.S. Department of Agriculture.
+
+                                                                                                              8–27
+
+=== PAGE 28 ===
+                                                                      General Technical Report FPL–GTR–282
+NPA. 1968. Screw holding of particleboard. Tech. Bull. 3.   Wilkinson, T.L. 1971. Bearing strength of wood under
+Washington, DC: National Particleboard Association.         embedment loading of fasteners. Res. Pap. FPL 163.
+Perkins, N.S.; Landsem, P.; Trayer, G.W. 1933. Modern       Madison, WI: U.S. Department of Agriculture, Forest
+connectors for timber construction. Washington, DC: U.S.    Service, Forest Products Laboratory.
+Department of Commerce, National Committee on Wood          Wilkinson, T.L. 1971. Theoretical lateral resistance of
+Utilization, and U.S. Department of Agriculture, Forest     nailed joints. Proceedings of American Society of Civil
+Service.                                                    Engineering. Journal of Structural Division. ST5(97):
+Rammer, D.R.; Mendez, A.M. 2008. Withdrawal strength of     (Pap. 8121): 1381–1398.
+post-frame ring shank nails. Frame Building News. April.    Wilkinson, T.L. 1978. Strength of bolted wood joints with
+p. 59–67.                                                   various ratios of member thicknesses. Res. Pap. FPL 314.
+Rammer, D.R.; Zelinka, S.L. 2004. Review of end grain       Madison, WI: U.S. Department of Agriculture, Forest
+nail withdrawal research. Gen. Tech. Rep. FPL–GTR–151.      Service, Forest Products Laboratory.
+Madison, WI: U.S. Department of Agriculture, Forest         Wilkinson, T.L. 1980. Assessment of modification factors
+Service, Forest Products Laboratory.                        for a row of bolts or timber connectors. Res. Pap.
+Rammer, D.R.; Winistorfer, S.G.; Bender, D.A. 2001.         FPL 376. Madison, WI: U.S. Department of Agriculture,
+Withdrawal strength of threaded nails. Journal of Structural  Forest Service, Forest Products Laboratory.
+Engineering. 127(4): 442–449. April.                        Wilkinson, T.L. 1991. Bolted connection allowable loads
+Scholten, J.A. 1944. Timber-connector joints, their strength  based on the European yield model. Madison, WI: U.S.
+and design. Tech. Bull. 865. Washington, DC: U.S.           Department of Agriculture, Forest Service, Forest Products
+Department of Agriculture.                                  Laboratory.
+Scholten, J.A. 1946. Strength of bolted timber joints.      Wilkinson, T.L. 1991. Dowel bearing strength. Res. Pap.
+FPL Report R1202. Madison, WI: U.S. Department of           FPL–RP–505. Madison, WI: U.S. Department of
+Agriculture, Forest Service, Forest Products Laboratory.    Agriculture, Forest Service, Forest Products Laboratory.
+Scholten, J.A. 1950. Nail-holding properties of southern    Wilkinson, T.L.; Laatsch, T.R. 1970. Lateral and withdrawal
+hardwoods. Southern Lumberman. 181(2273): 208–210.          resistance of tapping screws in three densities of wood.
+                                                            Forest Products Journal. 20(7): 34–41.
+Scholten, J.A.; Molander, E.G. 1950. Strength of
+nailed joints in frame walls. Agricultural Engineering.     Zahn, J.J. 1991. Design equation for multiple-fastener
+31(11): 551–555.                                            wood connections. New York, NY: Journal of Structural
+                                                            Engineering, American Society of Civil Engineers.
+Skulteti, M.J.; Bender, D.A.; Winistorfer, S.G.; Pollock,   Vol. 117(11): 3477–3485. November.
+D.G. 1997. Withdrawal strength of ring-shank nails
+embedded in southern pine lumber. Transactions of the       Zelinka, S.L.; Rammer, D.R. Corrosion rates of fasteners in
+ASAE, American Society of Agricultural Engineers. 40(2):    treated wood exposed to 100% relative humidity. Journal of
+451–456. February.                                          Materials in Civil Engineering, American Society of Civil
+                                                            Engineers. 21(12): 758–763. December.
+Soltis, L.A.; Wilkinson, T.L. 1987. Bolted connection
+design. Gen. Tech. Rep. FPL–GTR–54. Madison, WI: U.S.
+Department of Agriculture, Forest Service, Forest Products
+Laboratory.
+Stern, E.G. 1940. A study of lumber and plywood joints
+with metal split-ring connectors. Bull. 53. State College,
+PA: Pennsylvania Engineering Experiment Station.
+Stern, E.G. 1950. Nails in end-grain lumber. Timber News
+and Machine Woodworker. 58(2138): 490–492.
+Trayer, G.W. 1932. Bearing strength of wood under bolts.
+Tech. Bull. 332. Washington, DC: U.S. Department of
+Agriculture.
+Truss Plate Institute. [N.d.] Design specification for metal
+plate connected wood trusses. TPI–78. Madison, WI: Truss
+Plate Institute.
+
+8–28
+
+=== PAGE 29 ===
+  Wood Handbook
+
+      Wood as an Engineering Material
+
+Forest Products Laboratory | United States Department of Agriculture Forest Service | Madison, Wisconsin
+
+=== PAGE 30 ===
+Abstract
+Summarizes information on wood as an engineering
+material. Presents properties of wood and wood-based
+products of particular concern to the architect and engineer.
+Includes discussion of designing with wood and wood-based
+products along with some pertinent uses.
+Keywords: wood structure, physical properties (wood),
+mechanical properties (wood), lumber, wood-based
+composites, plywood, panel products, design, fastenings,
+wood moisture, drying, gluing, fire resistance, finishing,
+decay, preservation, wood-based products, heat sterilization,
+sustainable use
+
+                                                                           Pesticide Precautionary Statement
+                                                                           This publication reports research involving pesticides.
+March 2021                                                                 It does not contain recommendations for their use, nor
+Forest Products Laboratory. 2021. Wood handbook—wood as an                 does it imply that the uses discussed here have been
+engineering material. General Technical Report FPL-GTR-282. Madison,       registered. All uses of pesticides must be registered by
+WI: U.S. Department of Agriculture, Forest Service, Forest Products        appropriate State and/or Federal agencies before they
+Laboratory. 543 p.
+                                                                           can be recommended.
+A limited number of free copies of this publication are available to the
+public from the Forest Products Laboratory, One Gifford Pinchot Drive,     Caution: Pesticides can be injurious to humans,
+Madison, WI 53726-2398. This publication is also available online at
+www.fpl.fs.fed.us. Laboratory publications are sent to hundreds of libraries  domestic animals, desirable plants, and fish or other
+in the United States and elsewhere.                                        wildlife, if they are not handled or applied properly.
+The Forest Products Laboratory is maintained in cooperation with the       Use all pesticides selectively and carefully. Follow
+University of Wisconsin.                                                   recommended practices for the disposal of surplus
+The use of trade or firm names in this publication is for reader information  pesticides and pesticide containers.
+and does not imply endorsement by the United States Department of
+Agriculture (USDA) of any product or service.
+
+In accordance with Federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, the USDA, its Agencies,
+offices, and employees, and institutions participating in or administering USDA programs are prohibited from discriminating based on race, color, national
+origin, religion, sex, gender identity (including gender expression), sexual orientation, disability, age, marital status, family/parental status, income derived
+from a public assistance program, political beliefs, or reprisal or retaliation for prior civil rights activity, in any program or activity conducted or funded by
+USDA (not all bases apply to all programs). Remedies and complaint filing deadlines vary by program or incident.
+Persons with disabilities who require alternative means of communication for program information (e.g., Braille, large print, audiotape, American Sign
+Language, etc.) should contact the responsible Agency or USDA’s TARGET Center at (202) 720–2600 (voice and TTY) or contact USDA through the
+Federal Relay Service at (800) 877–8339. Additionally, program information may be made available in languages other than English.
+To file a program discrimination complaint, complete the USDA Program Discrimination Complaint Form, AD-3027, found online at http://www.ascr.usda.
+gov/complaint_filing_cust.html and at any USDA office or write a letter addressed to USDA and provide in the letter all of the information requested in
+the form. To request a copy of the complaint form, call (866) 632–9992. Submit your completed form or letter to USDA by: (1) mail: U.S. Department of
+Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250–9410; (2) fax: (202) 690–7442; or
+(3) email: program.intake@usda.gov.
+USDA is an equal opportunity provider, employer, and lender.

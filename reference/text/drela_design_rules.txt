@@ -1,0 +1,332 @@
+# ID: drela_design_rules
+# SOURCE: https://web.mit.edu/16.unified/www/SPRING/systems/Lab_Notes/desrules.pdf
+# ORIGINAL: reference/raw/drela_design_rules.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 8 pages | ~4265 tokens
+# NOTE: Drela MIT 16.Unified Basic Aircraft Design Rules: wing loading, CLmax choice, tail volumes, stability margin, structure rules of thumb. KEY first-pass sizing source; short, OK to read whole
+
+=== PAGE 1 ===
+Lab 11 Notes – Basic Aircraft Design Rules                                       16 Apr 09
+
+Nomenclature
+ x, y longitudinal, spanwise positions         Sh    horizontal tail area
+ S     reference area (wing area)              Sv    vertical tail area
+ b     wing span                               lh    horizontal tail moment arm
+ c     average wing chord ( = S/b )            lv    vertical tail moment arm
+ AR    wing aspect ratio                       ARh horizontal tail aspect ratio
+ CL    lift coefficient                          Vh    horizontal tail volume coefficient
+ Υ     wing dihedral angle                     Vv    vertical tail volume coefficient
+ β     sideslip angle                          B     spiral stability parameter
+ φ     bank angle                              α     angle of attack
+ R     turn radius                             V     velocity
+
+Role of Simple Design Rules
+Aircraft must have a certain amount of inherent stability and controllability to be flyable. It
+is therefore important to consider these characteristics when designing a new aircraft. Accurate
+evaluation of the stability characteristics of any given aircraft is a fairly complicated process, and
+is not well suited for preliminary or intermediate design. Fortunately, we have alternative criteria
+which give reasonable estimates and are vastly simpler to apply.
+The criteria involve basic dimensions, shown in Figure 1. Longitudinal x locations are typically
+
+                                 y
+
+                                   MAC     c
+
+                        x
+
+                         b
+
+                               c                                                      S
+                                                                                       v
+                 S                                 lv
+
+                                                                                    Sh
+                         x cg                      l h
+                           xnp
+              Figure 1: Lengths, areas, and angles used in simple stability criteria.
+
+                                              1
+
+=== PAGE 2 ===
+  measured relative to the leading edge of the wing’s Mean Aerodynamic Chord, or MAC, which is
+  the root-mean-square average chord. For most wings this is very nearly equal to the simple-average
+  chord c.
+  The lh and lv tail moment arms are the distances between the Center of Gravity (CG) and the
+  average quarter-chord locations of the horizontal and vertical tail surfaces. The criteria which will
+  use these dimensions are estimates, so it’s acceptable to estimate the CG position and to “eyeball”
+  the tail average quarter-chord locations when measuring lh and lv.
+
+  Center of Gravity Position
+  An aircraft’s horizontal tail size and position, and the CG position are the dominant factors con-
+  trolling the aircraft’s pitch stability, which is the tendency to automatically maintain an angle of
+  attack and airspeed. The basic effects of moving the CG position are:
+
+     Decrease xcg/c (move CG fwd.):      increased stability; more resistance to α and V changes.
+     Increase xcg/c (move CG back): decreased stability; less resistance to α and V changes.
+
+  There is one particular CG position which gives neutral stability, which is called the Neutral Point
+  (NP). This is shown as xnp in Figure 1. The degree of pitch stability or instability is traditionally
+  specified by the Stability Margin, sometimes also called the Static Margin.
+                                                  xnp −xcg
+                                         S.M. =                                                (1)
+                                                      c
+  Figure 2 illustrates the natural behaviors of an airplane after a pitch disturbance, for different
+  values of S.M. The unstable behavior occurs when S.M. is negative, i.e. when the CG is behind
+  the NP. Because pitch instability makes the aircraft very difficult or impossible to control, the NP
+  position is considered to be a practical aft CG limit.
+
+                                                           strongly unstable
+            neutral                 weakly unstable         (S.M. = −0.4)
+           (S.M. = 0)                (S.M. = −0.05)
+
+weakly stable                                                          nose−up
+(S.M. = +0.05)                                                        pitch upset
+
+                                strongly stable
+                                (S.M. = +0.4)
+                                                                                   trimmed level flight
+                                strongly stable
+                                (S.M. = +0.4)
+
+weakly stable                                                         nose−down
+(S.M. = +0.05)                                                        pitch upset
+
+            neutral                 weakly unstable
+           (S.M. = 0)                (S.M. = −0.05)       strongly unstable
+                                                            (S.M. = −0.4)
+
+  Figure 2: Natural aircraft responses to a pitch disturbance, for different amounts of pitch stability.
+
+  Making the S.M. strongly positive by moving the CG far forward will give plenty of pitch stability
+  and a strong resistance to pitch upsets, but it also has undesirable side effects. One large drawback
+
+                                                 2
+
+=== PAGE 3 ===
+ of a large S.M. is that it causes large (and annoying) pitch trim changes with changing airspeed.
+ Figure 3 shows the flight paths of airplanes with different nonnegative S.M., immediately after an
+ airspeed increase caused by a power increase. The straight-ahead acceleration of the weakly stable
+ or neutral airplane is more desirable for the pilot.
+
+                               strongly stable
+                               (S.M. = +0.4 )
+
+ weakly stable
+ (S.M. = +0.05)
+
+    neutral                                        speed increased                 trimmed level flight
+   (S.M. = 0)
+     Figure 3: Pitch-up behavior from an airspeed increase, for large and small Static Margin.
+
+ More specifically, the strongly stable airplane shown in Figure 3 requires a relatively large elevator
+ angle change commanded by the pilot to restore it to level flight. Figure 4 compares the situation
+ for the strongly and weakly stable airplanes. In effect, a large positive S.M. degrades the pitch trim
+ authority of the elevator, since large trim deflections are needed to maintain level flight in response
+ to airspeed changes.
+
+                Fast flight
+ strongly
+  stable                                                                     Large elevator trim change
+(S.M. = +0.4)                                                                required with airspeed change
+               Slow flight
+
+                Fast flight
+  weakly
+   stable                                                                    Small elevator trim change
+(S.M. = +0.05)                                                               required with airspeed change
+                Slow flight
+
+   Figure 4: Elevator trim adjustment with changing airspeed, for large and small Static Margin.
+
+ This situation illustrates the benefit of reducing the S.M., by moving the CG closer to the NP.
+ However, if the CG is moved behind the NP, the airplane will now have a negative S.M., and be
+ unstable in pitch to some degree, with the results illustrated in Figure 2. This makes it difficult
+ or even impossible to fly. In general, the small positive S.M. suggested by rule (2) is the ideal
+ situation.
+                                   ≡xnp −xcg
+                             S.M.                = +0.05 . . . + 0.15                         (2)
+                                          c
+
+                                                3
+
+=== PAGE 4 ===
+Horizontal Tail Sizing Criteria
+The Neutral Point location xnp is primarily controlled by size of the horizontal tail and its moment
+arm from the CG. A measure of this tail effectiveness is the horizontal tail volume coefficient:
+
+                                           ≡Sh lh
+                                       Vh                                                  (3)
+                                               S c
+A well-behaved aircraft typically has a Vh which falls in the following range:
+
+                                     Vh = 0.30 . . . 0.60                                  (4)
+
+If Vh is too small, the aircraft’s pitch behavior will be very sensitive to the CG location. It will
+also show poor tendency to resist gusts or other upsets, and generally “wander” in pitch attitude,
+making precise pitch control difficult.
+The Vh also directly affects the NP location xnp, which can be estimated by the following expression.
+
+                          xnp ≃1        1 + 2/AR     −     4
+                                     +             1             Vh                        (5)
+                           c      4     1 + 2/ARh       AR + 2
+
+The derivation of this formula is beyond scope here, but it is straighforward to evaluate for any
+aircraft configuration. With xnp estimated via (5), the CG location xcg can be positioned at a good
+and safe location using rule (2).
+
+Vertical Tail Sizing Criteria
+The primary role of the vertical tail is to provide yaw damping, which is the tendency of yaw
+oscillations of the aircraft to subside. The vertical tail also provides yaw stability, although this
+will be almost certainly ensured if the yaw damping is sufficient. One measure of the vertical tail’s
+effectiveness is the vertical tail volume coefficient:
+
+                                           ≡Sv lv
+                                       Vv                                                  (6)
+                                               S b
+Most well-behaved aircraft typically have a Vv which falls in the following range:
+
+                                      Vv = 0.02 . . . 0.05                                 (7)
+
+If Vv is too small, the aircraft will tend to oscillate or “wallow” in yaw as the pilot gives rudder
+or aileron inputs. This oscillation, shown in Figure 5, is called Dutch Roll, and makes precise
+directional control difficult. A Vv which is too small will also give poor rudder roll authority in an
+aircraft which uses only the rudder to turn.
+Picking suitable Vh and Vv values for any new aircraft design is partly a matter of experience.
+One common approach is to simply duplicate the Vh and Vv values of an existing aircraft which is
+known to have good stability and control characteristics.
+
+Dihedral Sizing Criteria – Spiral Stability
+The dihedral angle of the wing, denoted by Υ in Figure 1, provides some degree of natural spiral
+stability. A spirally-unstable aircraft tends to constantly increase its bank angle at some rate, and
+therefore requires constant attention by the pilot. Conversely, a spirally-stable aircraft will tend to
+
+                                              4
+
+=== PAGE 5 ===
+         Figure 5: Dutch roll oscillation tendency from insufficient vertical tail volume.
+
+                       spiral                                               spiral
+                       instability                                          stability
+
+       Figure 6: Spiral instability and spiral stability, depending on amount of dihedral.
+
+roll upright with no control input from the pilot, and thus make the aircraft easier to fly. Figure 6
+compares the two types of behavior.
+
+Whether an aircraft is spirally stable or unstable can be determined via the spiral parameter B
+(named after its originator Blaine Rawdon, from Douglas Aircraft):
+
+                               ≡ lv Υ
+                           B                        (Υ in degrees)                        (8)
+                                   b CL
+
+                                B > 5 , spirally stable
+                                B = 5 , spirally neutral                                  (9)
+                                B < 5 , spirally unstable
+
+                                              5
+
+=== PAGE 6 ===
+The main parameter which is used to adjust B in the design phase is the dihedral angle Υ.
+Spiral stability is not a hard requirement, and most aircraft are in fact spirally unstable. Level
+flight is then ensured either by the pilot, or by a wing-levelling autopilot, provided the instability
+is slow enough. RC aircraft which can fly stably hands-offmust be spirally stable, although a small
+amount of instability (B = 3 . . . 4, say) does not cause major difficulties for an experienced pilot.
+
+Dihedral Sizing – Roll Control
+On rudder/elevator aircraft, the rudder acts to generate a sideslip angle β, which then combines
+with dihedral to generate a roll moment and thus provide roll control. The effect is shown in Figure
+7. A criterion for adequate roll authority is obtained by the product of Vv and B:
+
+                                    VvB = 0.10 . . . 0.20                                (10)
+
+The 0.10 value will likely give marginal roll control, while 0.20 will give very effective control.
+
+                     Myaw
+                  from rudder
+                  deflection
+
+                                     V
+
+                                           β
+                                         sideslip angle
+                     L’
+                                                             L’
+
+          increased local α                             decreased local α
+
+                                                    Mroll result
+
+    Figure 7: Rudder causes sideslip angle β, which acts with dihedral to create roll moment.
+
+Dihedral Sizing Criteria – Steady Sideslip in Turns
+An aircraft in a steady level turn must have a bank angle φ, equal to
+                                                   V 2
+                                       φ = arctan
+                                                   gR
+
+                                              6
+
+=== PAGE 7 ===
+where R is the turn radius. The turning aircraft also sees a linear relative velocity variation
+u(y) = V (1 −y/R) across the span, as shown in Figure 8. This increases the lift on the outboard
+tip relative to the inboard tip, and causes a roll moment tending to increase the bank angle and
+thus steepen the turn.
+
+                                       "inside track"                            "outside track"
+
+                                R                      y
+
+                                                   u(y)
+                                                                    V
+                                                                                   L’ ~ u 2
+
+                                               L’ ~ u 2
+                                                                                            φ
+
+                                                    Mroll
+
+Figure 8: Curved flight path in a turn causes a relative velocity u(y) variation across the span,
+which produces an inward rolling moment from the resulting lift imbalance.
+
+On most airplanes, the inward rolling moment is normally cancelled by a very slight outward aileron
+deflection, as shown in Figure 9.
+
+                            Maileron   Mroll
+
+                                                             Maileron
+
+Figure 9: Outward roll moment from ailerons cancels inward roll moment from curved flight path.
+
+                                             7
+
+=== PAGE 8 ===
+On aircraft without ailerons, this inward rolling moment can only be neutralized by a steady sideslip
+angle with the nose pointing outside of the flight circle, as shown in Figure 10. The sideslip angle
+
+                                                                           βturn
+                   βturn
+
+Figure 10: Outward roll moment from sideslip angle βturn cancels inward roll moment from curved
+flight path. Smaller dihedral Υ requires larger βturn.
+
+necessary to cancel the roll moment effect of the u(y) variation is approximately
+
+                        ≃ 1     CL     b
+                  βturn                   sin φ           (β, Υ in radians)
+                           Υ dCL/dα 2R
+
+and for a typical wing we have dCL/dα ≃2π/(1 + 2/AR).
+
+Flying at a constant nonzero sideslip angle in the turn can produce a large drag increase if the
+sideslip is excessive, mainly due to the fuselage being partly broadside to the oncoming flow.
+Hence, it it desirable to choose Υ so that βturn doesn’t exceed some maximum acceptable upper
+limit (βturn)max at the tightest expected turn radius R, especially if it’s power-limited in the turn.
+This maximum tolerable upper limit is difficult to estimate, but for most aircraft it falls within the
+following range of values.
+
+                               βturn < (βturn)max ≃5◦. . . 15◦                           (11)
+
+Note that βturn is inversely proportional to Υ. So to ensure βturn < (βturn)max, especially in a slow
+turn at high CL, the dihedral must be made sufficiently large.
+
+                                              8

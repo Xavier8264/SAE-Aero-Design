@@ -1,0 +1,1649 @@
+# ID: nau_2026_report1
+# SOURCE: https://www.ceias.nau.edu/capstone/projects/ME/2026/F25toSp26_Aero26/images/Report%201.pdf
+# ORIGINAL: reference/raw/nau_2026_report1.pdf
+# CONVERTED: 2026-09-18 21:13 UTC-0500 | type pdf | 51 pages | ~30314 tokens
+# NOTE: NAU 2026 initial design report; EARLIER DRAFT of nau_2026_report2, prefer report2
+# FLAG img: pages 1,8,22-23,26-35,38-43,45,51
+# FLAG math: pages 7,22-26,28,44
+# TOC:
+#   DISCLAIMER -> PDF page 2
+#   EXECUTIVE SUMMARY -> PDF page 3
+#   TABLE OF CONTENTS -> PDF page 4
+#   1  BACKGROUND -> PDF page 6
+#     1.1  Project Description -> PDF page 6
+#     1.2  Deliverables -> PDF page 6
+#   2  REQUIREMENTS -> PDF page 9
+#     2.1  Customer Requirements (CRs) -> PDF page 9
+#     2.2  Engineering Requirements (ERs) -> PDF page 10
+#     2.3  House of Quality (HoQ) -> PDF page 11
+#   3  Research Within Your Design Space -> PDF page 15
+#     3.1  Benchmarking -> PDF page 15
+#       3.1.1  2025 Competition -> PDF page 15
+#       3.1.2  Winning Aircrafts -> PDF page 15
+#       3.1.3  Dynam Cessna 310 Grand Cruiser -> PDF page 15
+#     3.2  Literature Review -> PDF page 15
+#       3.2.1  William Alcorn -> PDF page 15
+#       3.2.2  Dom Belasquez -> PDF page 16
+#       3.2.3  Gavin Georgiou -> PDF page 18
+#       3.2.4  Tyler Milne -> PDF page 19
+#       3.2.5  Tylee Thornley -> PDF page 20
+#     3.3  Mathematical Modeling -> PDF page 21
+#       3.3.1  Wing sub-assembly – Gavin Georgiou -> PDF page 22
+#       3.3.4  Theoretical Lift/Drag + Lift Distribution Wing subassembly - William Alcorn -> PDF page 25
+#       3.3.5  Theoretical Landing Force Calculations – Tyler Milne -> PDF page 28
+#   4  Design Concepts -> PDF page 28
+#     4.1  Functional Decomposition -> PDF page 29
+#     4.2  Concept Generation -> PDF page 30
+#       4.2.1  Fuselage/Cargo Bay -> PDF page 30
+#       4.2.2  Wing Configuration -> PDF page 31
+#       4.2.3  Wing Geometry -> PDF page 31
+#       4.2.4  Airframe -> PDF page 32
+#       4.2.5  Rudder -> PDF page 32
+#       4.2.6  Ailerons -> PDF page 33
+#       4.2.7  Elevators -> PDF page 33
+#       4.2.8  Propellers -> PDF page 34
+#       4.2.9  Landing Gear -> PDF page 34
+#       4.2.10  Tail -> PDF page 35
+#     4.3  Selection Criteria -> PDF page 35
+#       4.3.1  Fuselage -> PDF page 35
+#       4.3.2  Airframe -> PDF page 36
+#       4.3.3  Elevators -> PDF page 36
+#       4.3.4  Tail -> PDF page 37
+#       4.3.5  Wing Configuration -> PDF page 37
+#       4.3.6  Propellors -> PDF page 37
+#     4.4  Concept Selection -> PDF page 37
+#       4.4.1  Fuselage -> PDF page 37
+#       4.4.2  Airframe -> PDF page 38
+#       4.4.3  Wing -> PDF page 40
+#       4.4.4  Tail -> PDF page 41
+#       4.4.5  Motor and Propellor -> PDF page 42
+#       4.4.6  Electrical CAD and Battery Life Calculation -> PDF page 43
+#       4.4.7  Computer Aided Drawing (CAD) of Preliminary Final Concept -> PDF page 45
+#   5  CONCLUSIONS -> PDF page 46
+#   6  REFERENCES -> PDF page 47
+#   7  APPENDICES -> PDF page 51
+#     7.1  Appendix A: Full House of Quality -> PDF page 51
+
+=== PAGE 1 | img ===
+           SAE Aero Design Regular Class
+
+                   Initial Design Report
+
+           William Alcorn, Project Manager & FEA analyst
+     Dom Belasquez, Computer-Aided-Engineering Tool Lead &
+                        SolidWorks Expert
+    Gavin Georgiou, Manufacturing Lead & Propulsion Engineer
+            Tyler Milne, Budget Liaison & Electrical Lead
+ Tylee Thornley, Website Developer & Aerodynamic Design Engineer
+                       Fall 2025-Spring 2026
+
+Project Sponsor: Salt River Project (SRP), Society of Automotive Engineers (SAE), Northern
+Arizona University Steve Sanghi College of Engineering (SCE)
+Faculty Advisor: Dr. Peter Vedaz
+Sponsor Mentor: Flagstaff Flyers
+Instructor: David Willy
+
+=== PAGE 2 ===
+                                        DISCLAIMER
+       This report was prepared by students as part of a university course requirement. While
+considerable effort has been put into the project, it is not the work of licensed engineers and has not
+undergone the extensive verification that is common in the profession. The information, data,
+conclusions, and content of this report should not be relied on or utilized without thorough, independent
+testing and verification. University faculty members may have been associated with this project as
+advisors, sponsors, or course instructors, but as such, they are not responsible for the accuracy of results
+or conclusions.
+
+                                                  i
+
+=== PAGE 3 ===
+                               EXECUTIVE SUMMARY
+       The SAE AERO design competition looks to build engineering skills in aviation, aeronautics, and
+aircraft design in students participating in the competition. This year’s AERO design project involves
+students to design a remote-controlled aircraft that will take off, cruise, and land while delivering a
+volumetric payload, which this year has been designated to be 2-liter, commercially available bottles. The
+SAE organization has also stated several rules and regulations that each team must abide by. Key design
+parameters are guided by SAE competition rules, emphasizing payload mass, takeoff distance, and overall
+mission score. The final design will achieve a takeoff within the required distance while carrying a payload
+with stable and controllable flight characteristics verified through ground and flight tests. The design
+process is driven by both engineering analysis and competition requirements, guiding key design decisions
+in aerodynamics, structures, propulsion, and controls. Using computational tools such as SolidWorks for
+structural modeling and XFLR5 for aerodynamic performance evaluation, the team optimized the airfoil
+selection, aspect ratio, and wing loading to achieve efficient lift and stable flight characteristics under
+varying payload conditions. The propulsion system was selected through thrust-to-weight analysis to ensure
+reliable takeoff performance within the prescribed takeoff distance limits.
+       After considering the rules for this year’s competition, we wanted to start benchmarking against the
+previous year’s winning designs. This allows us to understand what worked and what didn’t, thus allowing
+for better decision making. California State University has consistently won multiple years in the past
+decade, while universities such as Georgia Tech, have presented various creative designs. We’ve also looked
+at remote controlled (RC) aircraft available on the market to see what these companies have perfected in
+terms of cost saving measures and general production. We then took all the presented information and broke
+into subsystems to begin concept generation. The subsystems were chosen through the use of a black box
+model. Initial starting with 3 functions of flight, pitch, steering and lift, then we could decompose those
+into smaller systems until only a basic component was left. Each component broke the aircraft into much
+more manageable parts to allow studying of specific aspects and determining the pros and cons of each
+idea. Additionally, calculations and mathematical modeling for specific systems were required to fully rank
+and compare the concepts effectively in our concept selection. After each criterion was fully considered we
+developed our preliminary CAD design to begin prototyping.
+       For research, our team split into various sections close to the area chosen for concept creation to
+better and more accurately rate the designs. Each team member was tasked with gathering at least seven
+literature sources, to perform research within the design space. This research revolves around setting up
+mathematical models to aid in the design and selection process of aircraft components. Specific areas of
+concern such as aerodynamic drag/lift, structural bending, thrust/weight ratio, and landing forces were the
+primary equations we studied, as they will be the most crucial to our preliminary development of the
+aircraft.
+
+                                                 ii
+
+=== PAGE 4 ===
+                             TABLE OF CONTENTS
+
+Contents
+DISCLAIMER .............................................................................................................................................. 1
+EXECUTIVE SUMMARY ........................................................................................................................... 2
+TABLE OF CONTENTS .............................................................................................................................. 3
+1    BACKGROUND ................................................................................................................................ 1
+  1.1   Project Description ................................................................................................................... 1
+  1.2   Deliverables .............................................................................................................................. 1
+  1.3   Success Metrics ........................................................................................................................ 2
+2    REQUIREMENTS ............................................................................................................................. 4
+  2.1   Customer Requirements (CRs) ................................................................................................. 4
+  2.2   Engineering Requirements (ERs) ............................................................................................. 5
+  2.3   House of Quality (HoQ) ........................................................................................................... 6
+3    Research Within Your Design Space ................................................................................................ 10
+  3.1   Benchmarking ......................................................................................................................... 10
+     3.1.1    2025 Competition ................................................................................................... 10
+     3.1.2    Winning Aircrafts .................................................................................................... 10
+     3.1.3    Dynam Cessna 310 Grand Cruiser .......................................................................... 10
+  3.2   Literature Review ................................................................................................................... 10
+     3.2.1    William Alcorn ........................................................................................................ 10
+     3.2.2    Dom Belasquez ....................................................................................................... 11
+     3.2.3    Gavin Georgiou ....................................................................................................... 13
+     3.2.4    Tyler Milne ............................................................................................................. 14
+     3.2.5    Tylee Thornley ........................................................................................................ 15
+  3.3   Mathematical Modeling .......................................................................................................... 16
+     3.3.1    Wing sub-assembly – Gavin Georgiou ................................................................... 17
+     3.3.2    Airframe + Fuselage sub-assembly – Dom Belasquez ........................................... 19
+     3.3.3    Wings and Tail Sub assembly – Tylee Thornley ..................................................... 19
+     3.3.4    Theoretical Lift/Drag + Lift Distribution Wing subassembly - William Alcorn ..... 20
+     3.3.5    Theoretical Landing Force Calculations – Tyler Milne .......................................... 23
+4    Design Concepts ............................................................................................................................... 23
+  4.1   Functional Decomposition ...................................................................................................... 24
+  4.2   Concept Generation ................................................................................................................ 25
+     4.2.1    Fuselage/Cargo Bay ................................................................................................ 25
+     4.2.2    Wing Configuration ................................................................................................ 26
+     4.2.3    Wing Geometry ....................................................................................................... 26
+     4.2.4    Airframe .................................................................................................................. 27
+     4.2.5    Rudder ..................................................................................................................... 27
+     4.2.6    Ailerons ................................................................................................................... 28
+     4.2.7    Elevators ................................................................................................................. 28
+     4.2.8    Propellers ................................................................................................................ 29
+     4.2.9    Landing Gear .......................................................................................................... 29
+     4.2.10   Tail .......................................................................................................................... 30
+  4.3   Selection Criteria .................................................................................................................... 30
+     4.3.1    Fuselage .................................................................................................................. 30
+     4.3.2    Airframe .................................................................................................................. 31
+     4.3.3    Elevators ................................................................................................................. 31
+     4.3.4    Tail .......................................................................................................................... 32
+     4.3.5    Wing Configuration ................................................................................................ 32
+
+                                             iii
+
+=== PAGE 5 ===
+     4.3.6     Propellors ................................................................................................................ 32
+  4.4   Concept Selection ................................................................................................................... 32
+     4.4.1     Fuselage .................................................................................................................. 32
+     4.4.2     Airframe .................................................................................................................. 33
+     4.4.3     Wing ........................................................................................................................ 35
+     4.4.4     Tail .......................................................................................................................... 36
+     4.4.5     Motor and Propellor ................................................................................................ 37
+     4.4.6     Electrical CAD and Battery Life Calculation ......................................................... 38
+     4.4.7     Computer Aided Drawing (CAD) of Preliminary Final Concept ........................... 40
+5    CONCLUSIONS .............................................................................................................................. 41
+6    REFERENCES ................................................................................................................................. 42
+7    APPENDICES .................................................................................................................................. 46
+  7.1   Appendix A: Full House of Quality ........................................................................................ 46
+
+                                                iv
+
+=== PAGE 6 ===
+1   BACKGROUND
+This chapter reviews the background of the project being reviewed in this report. This begins with a
+description of the project and the AERO design competition, before moving on to the key deliverables
+along with the project timeline, and the matrices for achieving success in the project.
+
+1.1 Project Description
+This project entails participation in the SAE AERO 2026 design competition, which requires the design of
+a “regular class aircraft” whose specifications are defined in the 2026 Collegiate Design Series SAE Aero
+Design Rules. The objective of the regular class aircraft is to design a cargo aircraft, utilizing electric
+propulsion, that can maximize flight performance associated with payload delivery. The payload itself
+consists of commercially available 2L cylindrical plastic bottles, which will be carried on each flight.
+These bottles may not be modified and may be either empty or filled. It is required that the team be able
+to predict the payload capacity of our aircraft, as well as be able to incrementally increase the payload that
+the aircraft carries in each subsequent attempt during competition.
+The project schedule is portrayed with a Gantt chart, which organizes the project timeline in terms of the
+key deliverables for the NAU capstone and SAE AERO competition. These deliverables are broken down
+into the required efforts for those deliverables, which are assigned to a team member or several team
+members.
+This year, the project was donated an initial $5000 from SRP, with a fundraising goal of an additional
+$5000 for the regular class aircraft, to cover extra costs from competition, travel, required documentation,
+software & hardware, etc. Currently, the team is relying on the GoFundMe fundraiser, which has a goal of
+$10,000 that will be split between the two teams participating in the AERO Design competition this year.
+Currently, the GoFundMe has reached 64% of its goal, at $6390.
+The importance of this project lies in its mimicry of problems and scenarios present in the real-world
+aircraft industry. The ruleset, aircraft requirements, and competition deliverables are designed to take a
+typical aircraft development program and compress it into the timeframe of a single academic year.
+Through participation in the capstone and competition, students will be exposed to conceptual design,
+manufacturing processes, systems integration and testing, and verification of results & design through
+demonstration of the aircraft performance at the competition.
+1.2 Deliverables
+Major capstone deliverables for this project are in four cycles, ending each cycle with a peer evaluation.
+The first cycle consisted of the deliverable presentation one, which was focused on setting the project for
+the year. Detailing the different requirements that the project will follow, a literature review having team
+members become more prepared for the scope of the project, and beginning calculations, to help set up the
+next cycle of major deliverables. Along with this, the focus was planned by laying out a schedule for the
+semester by breaking out major deadlines, creating a rough budget, and anticipating fundraising options.
+The second cycle included an individual skill building assignment, presentation two, and the team made
+the requirement of building the first prototype in this cycle. Each member learning a new skill is a way for
+the team to have more technical specialties and do more analysis. Presentation two has the focus on design,
+starting with a functional decomposition identifying the important sub-systems, then creating many sub-
+system designs, doing calculations to finalize designs, then making a rough CAD of this full system. For
+the first glider prototype, the goal was to look into wing configuration and airfoil shapes, experimentally
+finding trends of where our designs may perform better.
+                                                                                          1 | P a g e
+
+=== PAGE 7 | math ===
+For the third cycle, deliverables include report one, website check one, presentation three and prototype
+demo one. This cycle focuses on proof of concept of the theoretical and pushing for proving calculations
+through testing. Report one summarizes what has happened through the semester up to this point,
+compiling work. Website check one is the proof of concept of a functioning website with necessary pages
+and navigation features. Presentation three is making more detailed models of a final design, detailing out
+the different components to the project, how they will all work together, and looking into the failure points
+in the design. Prototype demonstration one, will consist of two prototypes, each answering important
+questions. A scaled physical glider prototype to test overall design, thrust/weight and lift. Then a virtual
+prototype in computational fluid dynamics software, looking into the sizing of important actuation surfaces
+like the ailerons, elevators, rudder, also finding the pressures they must withstand. Cycle four consists of
+the deliverables: homework four an analytical analysis, report two, second prototype demonstration,
+finalized CAD and bill of materials (BoM), and a second website check. This focuses on finalizing designs,
+and preparing for manufacturing in the second semester, with the fourth homework, having each team
+member focus on parts and doing full analysis on it to ensure it is suitable for a final design. Report two
+follows a similar summarization, but incorporating scheduling, finances, bill of materials, prototyping,
+failure points, and future testing. The second prototype demonstration also consists of two prototypes,
+focusing again will be led by guiding questions. The finalized CAD and BoM are the designs and lists
+guiding second semester and the manufacturing of the final product. Website check two will focus on
+appearance, and completeness, needing detailed documents and full galleries of the work being done so
+far.
+Major competition deliverables in the first semester are affiliated to one team, entering the lottery, and
+when selected for competition, paying the registration. The important deliverables during second semester
+are the technical design report, and the competition itself. The technical design report will be taking our
+finalized CAD and submitting the drawings of this design that the final plane will be compared against.
+Our plane must be certified that it is compliant with rules and regulations and will be able to compete. A
+flight score prediction must be made to show how theoretically our plane will be able to hold. For the
+competition itself, safe travel of the plane will be necessary, and planning the logistics of two SAE Aero
+teams travel will also need to be considered. In addition, for the competition the plane will need to be in
+fully functioning condition ready to compete, with many back-up parts that can be used to repair as needed.
+Lastly, flying training is an important factor for competition, with the pilots beginning training during the
+first semester and early as possible.
+
+1.3 Success Metrics
+Our team has determined that success comes from competition. We want to compete and place well in
+competitions. To achieve this goal, we first looked at the rules of the competition and how the scoring
+occurred. Our final flight score at competition is based on this equation.
+                            FFFFFFFFFF FFFFFFFFhtt SSSSSSSSSS= (FFFF1+FFFF2+FFFF3) + PPPPPP  Equation 1
+                                                         3
+Where:
+                           FFFF= 4(EEEEEEEEEE BBBBBBBBBBBBBB) + 15(FFFFFFFF BBBBBBBBBBBBBB)  Equation 2
+                                PPPPPP= MMMMMM(10 −(FFFF−PPPP)2, 0)                      Equation 3
+                           PPPP= PPPPPPPPPPPPPPPPPP MMMMMMMMMMMMMM FFFFFFFFhtt SSSSSSSSSS
+The competition determines a full bottle having a weight of 4lbs or more and an empty bottle as anything
+                                                                                          2 | P a g e
+
+=== PAGE 8 | img ===
+between 1-4lbs. After comparing the potential flight score of each combination of bottles compared to
+their specific volume (volume/weight ratio), we generated this graph.
+
+                          Figure 1: Flight Score Study for Varying Payloads
+After analysis and planning, we have determined that we must attempt to target full bottles for our max
+flight score attempt to ensure we can receive the most possible points while ensuring we can hold that
+much weight and volume in our cargo space. The predicted maximum flight score is a factor determined
+by a theoretical flight score based on a “density altitude” approximation. This will be explored and
+calculated by the team closer to competition time so we can base our vehicle’s performance on the final
+design. We must also look to receive zero deductions in points. These come by means of either technical
+or physical deductions. Late submissions of technical reports, deviations in reports, or
+unprofessional/unsportsmanlike actions shall result in point technical deductions. Physical deductions
+result from actions such as material falling off the aircraft, improper flying in designated zones, or
+dimensional limit violations. These will be crucial to limit, as we want to retain the maximum points
+possible.
+
+                                                                                          3 | P a g e
+
+=== PAGE 9 ===
+2   REQUIREMENTS
+This chapter of the report details the customer requirements and engineering requirements designated by
+the SAE organization. The customer requirements review the restrictions on mechanical and electrical
+components, as well as the competition & flight requirements. This is followed by the engineering
+requirements of the aircraft, which determine/restrict the geometric and mechanical properties of the
+aircraft, many of which are binary constraints. Lastly is the house of quality, where customer requirements
+and engineering requirements are related to each other and previous benchmarking in order to begin
+determining optimal design values.
+2.1 Customer Requirements (CRs)
+Through Quality Function Development, 16 Customer/Competition requirements were identified. These
+requirements, their descriptions, and corresponding weights of importance are organized and detailed
+below in Table 1. Weight of importance was biased towards methods of maximizing flight score.
+               Table 1: Customer/Competition Requirements, Weighting, and Descriptions
+  Customer/Competition Requirement    Weight of                    Requirement Description
+                                     Importance
+         Wingspan restriction            4             Planform wingspan must be between 72 & 120 inches
+      Maximum length restriction         5              Aircraft body axis length may not exceed 120 inches
+      Maximum weight restriction         5           Gross takeoff weight of aircraft may not exceed 55 pounds
+        Minimum chord length             2                Wing chord length must be greater than 4 inches
+      Propeller sizing restriction       2                 Propellers must be either 9 inches or 12 inches
+        Motor count restriction          4          Aircraft may only utilize 2 or 4 electric motors for propulsion
+      Receiver/controls restriction      1           Receiver and controls require a separate power system and
+                                                                          frequency
+         Safety requirements             1               Aircraft requires arming plugs, propeller nuts, etc.
+   Team Identification Vehicle Badges    1            Team number and name must be visible on aircraft wings.
+     Empty weight center of gravity      1            A marking for the center of gravity of the empty weight is
+              markings                                                    required.
+        Steerable landing gear           2          Aerodynamic features may not be primary system used to steer
+          Takeoff Distance               5         Aircraft must achieve takeoff without bouncing within the takeoff
+                                                                          distance
+       Flight attempt time limit         2        Aircraft must achieve takeoff within 60 seconds of being called on
+                                                                         the runway
+          Landing distance               5          Aircraft must achieve landing within a certain distance without
+                                                                          bouncing
+          Cargo requirement              5            Cargo must be 2L bottles that are fully enclosed within the
+                                                                          fuselage
+  Propulsion system battery restriction  4           Aircraft must use a commercially available 4-cell (14.8 volt)
+                                                      Lithium-Polymer battery pack w/ a minimum 2200 mAh
+
+                                                                                                4 | P a g e
+
+=== PAGE 10 ===
+2.2 Engineering Requirements (ERs)
+For our capstone design project, it is heavily competition-based and thus all engineering requirements are
+derived from the 2026 SAE Aero rulebook for the regular class [1]. The competition requires that our
+planform wingspan is between six and ten feet. For our design, we found that the longer the wingspan,
+the more effective our aircraft's performance would be in lift. Thus, our target goal is to have a wingspan
+as close to ten feet as possible. One other factor that is very important to generate lift is wing chord length.
+For this competition, we are required to have our wing chord at any point along the wing be greater than
+4 inches. This includes the ends of the wing if they have a taper. We are still running preliminary designs,
+but so far, our goal is to have the chord be greater than one foot. In future work, we will be analyzing drag
+values to see if a taper is required. Another requirement from SAE is that our vehicle must be under ten
+feet long. We initially thought that increasing our fuselage length closer to ten feet would be beneficial,
+however upon further analysis it was found to be incorrect. We should minimize the length to reduce
+weight and maintain flyability. Thus, for our design we are hoping to minimize this length, which based
+on our preliminary analysis in section 4.3 the length should be around four feet. Expanding upon this
+flyability requirement, the gross takeoff weight must be less than 55 pounds based on the rulebook.
+However, our preliminary calculations in section 4.3 show that we should stay around 30 pounds to stay
+flyable with the other competition constraints. The final major geometric constraint from the competition
+is that we must choose between two and four propulsion motors. This selection requires having either a
+12-inch or 9-inch propeller to be used for the 2 motor and 4 motor setups respectively. From our
+calculations we are predicting that having two motors with 12-inch propellers would generate more
+effective thrust.
+Along with geometric constraints, there are also extensive electrical equipment constraints that are
+acceptable for the competition. The first major and most limiting constraint is that our propulsion system
+must run off a single four cell LiPo battery that must have a capacity of at most 2200 mAh. The logical
+solution here was to select a battery with 2200 mAh as this will give us the most amount of operation time
+for high discharge rates. The next important engineering constraint is that for our controls system, receiver
+and servos, we must run off a separate battery that has minimum capacity of at least 1000 mAh. Our goal
+is to have a battery of at least 3000 mAh as this will provide additional safety in case of propulsion failure.
+Expanding on propulsion safety, the competition requires that we also place an arming plug that disengages
+the propulsion system, and it must be placed at a minimum 9-inches away from any propeller. Our goal
+is to have a safe competition; thus, our goal is to aim towards 12-inches. The final major electrical
+equipment requirement is the receiver, and transmitter must operate on a 2.4 GHz frequency band. Thus,
+our system will communicate at this frequency.
+The rulebook also lays out some major scoring requirements for our team to score any flight points. The
+first major requirement is our cargo restriction. The regular class competition requires that we carry two-
+liter commercially available bottle cargo to earn any flight points. For our target, we initially wanted to
+carry six bottles (12 liters), but after our preliminary analysis, see section 4.3, it seems that we need to
+target four bottles (8 liters). Another requirement for our flight score is we must take off within 60 seconds
+of getting on the runway. Take off is defined as all wheels leave the ground completely. We are also
+required to take off within 100 feet of the starting location. For these requirements we are targeting 50
+seconds and 80 feet respectively. Once our flight path is complete, we must also land within a 400-foot
+landing strip. A complete landing is defined as controlling the vehicle to the ground safely on the landing
+gear and coming to a complete stop. Our goal is to land within 100 feet of the end of the 400-foot landing
+strip. This would be the 300-foot mark on the runway.
+
+                                                                                        5 | P a g e
+
+=== PAGE 11 ===
+2.3 House of Quality (HoQ)
+Below is the broken-down preliminary House of Quality for our design project thus far. Our full HoQ can
+be found within Appendix C of this report. Table 2 is weighted with positive and negative relations
+represented as a + or a –, respectively. Table 3 is weighed from 1-5, representing the least and most
+important for increasing flight score. Table 4 is weighted as 1, 3, or 9 to show a weak to strong correlation
+between the customer and engineering requirements. Table 6 is weighed from 1-5, which shows poor to
+excellent incorporation of the respective customer requirements into those benchmarked designs.
+                      Table 2: Engineering Requirement Correlations HoQ
+                                  Engineering Requirement Correlations
+    Wingspan (6' < L < 10')
+    Vehicle Length (< 10')  +
+    Gross Weight (≤ 55lbs)  +  +
+      Wing Chord (> 4")  +           +
+   Propeller Diameter (9" or
+           12")
+   Propulsion Battery 4 Cell                     -
+     14.8V (≤ 2200 mAh)
+   Reciever Battery LiPo or
+     LiFE (≥ 1000 mAh)
+  Arming Plug (≤ 9" from any  -            -     -     +
+        Propeller)
+   Landing Distance (≤ 400')  +  +   +     +
+  Take-Off Distance (≤ 100')  +  -   -     +     +     +                 +
+  Flight Attempt Time Limit (≤       -           +     +     +     +          +
+          60s)
+  Radio Control System (2.4                            +     +                      +
+          GHz)
+    Cargo Volume (2 Liter      +     -
+          Bottle)
+
+                                                                                           6 | P a g e
+
+=== PAGE 12 ===
+Table 3: Customer Requirements of HoQ
+
+    Competition &        Weight of
+       Customer         Importance
+    Requirements         for Scoring
+
+   Wingspan Restriction       4
+      Aircraft Length         5
+    Weight Restriction        5
+   Airfoil Chord Length       2
+       Restriction
+Propeller Sizing Restriction  2
+   Motor Count (2 or 4)       4
+ Receiver/Control System      1
+       Restriction
+   Safety Requirements        1
+Team Identification Vehicle   1
+        Badges
+  Empty Weight Center of      1
+     Gravity Markings
+  Steerable Landing Gear      2
+    Take-Off Distance         5
+ Flight Attempt Time Limit    2
+    Landing Distance          5
+   Cargo Requirements         5
+ Propulsion System Battery    4
+       Restriction
+
+                                                      7 | P a g e
+
+=== PAGE 13 ===
+               Table 4: Engineering Requirements and ER/CR Correlations of HoQ
+                                             Engineering Requirements
+                                            Propulsion Reciever
+                                                                Arming                     Flight   Radio    Cargo
+Wingspan Vehicle   Gross    Wing    Propeller Battery 4  Battery        Landing Take-Off
+                                                               Plug (≥ 9"                 Attempt  Control Volume (2
+(6' < L < Length (< Weight (≤ Chord (> Diameter Cell LiPo  LiPo or      Distance Distance
+                                                               from any                  Time Limit System    Liter
+  10')     10')    55lbs)    4")   (9" or 12") 14.8V (≤  LiFE (≥        (≤ 400')  (≤ 100')
+                                                              Propeller)                   (≤ 60s)  (2.4 GHz) Bottles)
+                                            2200 mAh) 1000 mAh)
+   9        3        3        1                 3                 3
+   3        9        3        1        1                          1
+   3        9        9        3        1        3
+   3        1        3        9        9                          3
+                     3                 9                          9
+            1        3                 3                          9        1        1                 1        3
+                                       1                 9                 1                          9
+   1        3                 1        1        1        1        9                          3        3        1
+            1
+            1        1                                                                       1                 9
+   1        1                 1        3                                   1        9        1        1
+            3                          1                                            9        1        1
+                                       1        1                                   3        9        1        3
+   1        3                                                              9                 3        1
+            9        9                                                                       1                 9
+                     1                          9        3                                            3        1
+
+                                       Table 5: Bottom Floor of HoQ
+                                                Bottom Floor                                                  Totals
+ Importance Weight Score  80  190    146    45     73    66     22     86    52     73     49    42     77    1001
+   Importance Weight
+                       7.99% 18.98% 14.59% 4.50% 7.29% 6.59% 2.20% 8.59% 5.19% 7.29% 4.90% 4.20% 7.69% 100.00%
+      Percentage
+                                                                                         second
+   Measurement Units    feet  feet   lbs   inch   inch   mAh   mAh    inch   feet  feet          GHz   liter
+                                                                                           s
+ NAU Team 1 Target Value  ~10  4     30     ≥12    12   2200   3000    12    300    80     50    2.4    8
+   2023 Georgia Tech
+                        ~11    ~8    N/A   ~18     ~2    N/A    N/A   N/A    ~30   ~50    N/A    N/A   N/A
+    (Advanced Class)
+                                                                                                                -
+Dynam Cessna 310 Grand
+Cruiser V2 Blue Twin Motor  4.25  3.67  2.65  ~6   8    2200    N/A   N/A    ~30   ~20    N/A    2.4   N/A
+     RC Scale Plane
+  2023 California State
+  University Northridge  ~12   ~3    N/A   ~24    ~1.5   N/A    N/A   N/A    N/A    N/A   N/A    N/A   N/A
+    (Advanced Class)
+
+                                                                                                       8 | P a g e
+
+=== PAGE 14 ===
+                    Table 6: Benchmarking of HoQ
+                          Benchmarking
+
+                                  Dynam Cessna 310
+2026 NAU Team 1                                   2023 California State
+                 2023 Georgia Tech  Grand Cruiser V2
+ Target (Regular                                  University Northridge
+                 (Advanced Class)  Blue Twin Motor RC
+    Class)                                          (Advanced Class)
+                                    Scale Plane
+
+      5                5                 1                5
+      4                4                 3                2
+      5                2                 2                2
+      3                4                 3                4
+      3                1                 1                1
+      3                1                 3                1
+      4                4                 4                4
+      5                5                 3                5
+      2                5                 1                5
+      4                5                 1                3
+      3                1                 3                3
+      4                5                 5                4
+      3                5                 1                4
+      4                5                 5                4
+      5                2                 1                2
+      5                5                 5                5
+
+                                                              9 | P a g e
+
+=== PAGE 15 ===
+3   Research Within Your Design Space
+3.1 Benchmarking
+      To get a better understanding of the type of aircraft we are trying to construct, we benchmarked
+against a few different models to get an idea for different components. The 2025 AERO competition, past
+winning aircraft, and a Dynam Cessna 310 Grand Cruiser V2 Blue Twin RC Plane are the aircraft we based
+our benchmarking on. From this benchmarking, goals were identified for each part performance.
+3.1.1 2025 Competition
+       The 2025 Aero regular class competition planes were looked at to get a start on what velocity and
+Reynolds number we would be designing for. From a video of the competition, how long it took each plane
+to travel a specific distance was recorded. The velocity of takeoff, cruise, and landing were estimated and
+used in our calculations. The aircraft that were chosen to be in our data for the velocities were all regular
+class planes who took off and landed successfully. The distances were estimated based on the rules for last
+year's competition. [2]
+3.1.2 Winning Aircrafts
+       Previous winning aircrafts from Georgia Tech and California State University were looked at
+because they won the competition in a previous year. The aircraft of these two teams were then compared
+against our ideal design in our QFD. These designs related very well in our QFD accept within rule
+requirements as the rules change yearly. By comparing the physical geometry of the plane, we may build
+a similar aircraft assuming this is partly why their plane was successful. [3] [4]
+3.1.3 Dynam Cessna 310 Grand Cruiser
+      This aircraft was selected because it uses the same electronics that fit within our constraints.
+Understanding how this aircraft performs can help us with electronic selection. This plane performed
+poorly in the QFD, but that was expected due to the fact that this plane was not designed for our
+competition. The starting point of our electronics research and dual propeller planes came from the
+performance and benchmarking done from this plane. [5]
+3.2 Literature Review
+Each student in the Aero 1 team completed research within their chosen design category to better
+understand the project at hand. A list of sources and a description of how it is being used is listed below.
+3.2.1 William Alcorn
+[6] John D. Anderson Jr., “NACA Airfoil Nomenclature" in Aircraft Performance and Design
+  5th ed., 2012. [Online]. Available:
+  https://soaneemrana.org/onewebmedia/AIRCRAFT%20PERFORMANCE%20AND%20DESI
+  GN1.pdf
+  This section in the textbook gives insight and explanation into the geometric properties of wing airfoils.
+  Additionally, it explains how the NACA nomenclature system communicates the airfoil geometry
+  through the 4 digits present in the NACA designation. The ultimate intention behind using this literature
+  piece was to expand the conceptual understanding of aircraft geometry, so that it may be further applied
+  in mathematical modeling.
+[7] Martin Simmons, “Factors affecting lift and drag", in Model Aircraft Aerodynamics 5th ed.,
+  2015, pp. 27-44
+                                                                                      10 | P a g e
+
+=== PAGE 16 ===
+  This literature piece involves discussion on the factors contributing to lift and drag air reaction forces,
+  air density, model size, velocity, angle of attack and trim, airfoils and lift coefficients, wing loading,
+  coefficient of lift of an entire airfoil vs an airfoil section, Bernoulli’s theorem, etc. This conceptual
+  background behind lift and drag was essential in the 1st mathematical modeling process.
+[8] Martin Simmons, “Airfoils: 1 Camber", in Model Aircraft Aerodynamics 5th ed., 2015, pp. 119-
+  136
+  This reference builds off what was learned from the 1st literature review and serves the same purpose
+  of giving insight into a specific geometric property of airfoils: camber. It was learned what camber was,
+  how it is portrayed as a curved midline through the airfoil, and how it ultimately affected the airfoil
+  geometry.
+[9] John D. Anderson Jr., “Aerodynamic lift, drag, and moments" in Aircraft Performance and
+  Design 5th ed., 2012. [Online]. Available:
+  https://soaneemrana.org/onewebmedia/AIRCRAFT%20PERFORMANCE%20AND%20DESI
+  GN1.pdf
+  This source is directed towards providing the locations of lift, drag, and resultant aerodynamic force,
+  as well as the bending moments along a wing section. Like the previous references, the purpose of this
+  review is to learn basic concepts surrounding aerodynamic forces, to ultimately aid in the mathematical
+  modeling process.
+[10] John D. Anderson Jr., “Lift, Drag, and Moment Coefficients: How They Vary" in Aircraft
+  Performance and Design 5th ed., 2012. [Online]. Available:
+  https://soaneemrana.org/onewebmedia/AIRCRAFT%20PERFORMANCE%20AND%20DESI
+  GN1.pdf
+  This reference provides further conceptualization of the lift and drag coefficients. It gives insight into
+  the many complexities that affect these coefficients, such as geometry, angle of attack, Reynolds
+  number, Mach Number, etc. These concepts allowed for proper assumptions and parameters to be set
+  for the 1st mathematical process.
+[11] Sighard F. Hoerner, Henry V. Borst, “Lift Characteristics of foil sections" in Fluid Dynamic
+  Lift 2nd ed., 1985. [Online]. Available:
+  https://ia801507.us.archive.org/20/items/FluidDynamicLiftHoerner1985/Fluid-
+  dynamic_lift__Hoerner__1985_text.pdf
+  This reference is focused on relating the geometric properties of airfoil sections to their lift
+  characteristics. Ultimately, this review has the same objective as previous references: developing a
+  conceptual understanding of wing design
+[12] "NACA 0012 AIRFOILS (n0012-il)," Airfoil Tools, 2025. [Online]. Available:
+   http://airfoiltools.com/airfoil/details?airfoil=n0012-il
+   This source is used as a tool in the preliminary mathematical modeling process, in which it was desired
+   to determine the theoretical lift forces acting on the aircraft during flight. This site was used to select
+   the NACA 0012 and determine the optimal angle of attack, which was further used for mathematical
+   modeling.
+3.2.2 Dom Belasquez
+[1] SAE International, "Regular Class Design Requirements," in 2026 Collegiate Design Series
+  SAE Aero Design Rules, 2026, pp. 31-33.
+                                                                                       11 | P a g e
+
+=== PAGE 17 ===
+  This source is the foundation of our competition as this is the Regular Class rules and competition
+  requirements. This was essential for the creation of our HoQ and understanding how we will be scored
+  at the competition. This source also lays out the content required for submission such as design reports,
+  flight studies, CAD, and presentations.
+[13] Aircraft Owners and Pilots Association, "Density Altitude," AOPA, 2025. [Online]. Available:
+  Density Altitude – AOPA
+  One of the requirements for submission to SAE is a flight study of how our vehicle theoretically
+  performs the best at different altitudes. This performance is based on how much cargo we can
+  theoretically carry at certain density altitudes. Its importance is crucial in gaining additional points in
+  the Payload Prediction Bonus section of the rulebook [8]. Thus, this source explores the theory behind
+  density altitude for pilots and how to calculate it.
+[14] A. K. Mitra, "Propeller Airplanes," in Aircraft Performance and Design - An Introduction to
+   Principles and Practice, 2nd ed., Library of Congress, 2020, pp. 115-132
+   During our preliminary design phase this book provided necessary resources for our team to
+   understand and calculate multiple critical characteristics. These include steepest climb rate, minimum
+   power requirement, takeoff and landing ground run, angle of approach, and stall speed. These
+   equations helped verify the quality of the MATLAB Optimization programs outputs. These equations
+   also showed us that we will need some form of braking during landing such as electric brakes or
+   reverse thrust capabilities.
+[15] A. K. Mitra, "Static Stability," in Aircraft Performance and Design - An Introduction to
+   Principles and Practice, 2nd ed., Library of Congress, 2020, pp. 156-174
+   This source provided a background on multiple important fundamentals of stability. It provides
+   recommended static coefficients for cargo planes along with guidelines for wing and tail placement.
+   The source also goes into the theory and how to calculate moment stability which also helped verify
+   the content of the MATLAB Optimizer program used in our preliminary design.
+[16] “Trainer Design," RCPlanes, 2025. [Online]. Available: https://rcplanes.online/design.htm
+   This source provides multiple helpful guidelines for designing a propeller remote-controlled aircraft.
+   The website has a built-in calculator that recommends multiple geometric features on an aircraft based
+   on some basic inputs of desired wingspan. As we continue to utilize the MATLAB Optimizer
+   explained in section 3.3.2, we will use this resource to double check if the geometric features the
+   Optimizer creates are reasonable. The source also provides some recommendations for increasing
+   flight stability and good power to weight ratios for desired aerobatics.
+[17] M. V. Cook, "Static Equilibrium and Trim," in Flight Dynamics Principles, 2nd ed.,
+   Massachusetts: Elsevier Ltd., 2007, pp. 32-57
+   This source extends off the static stability source previously listed and provides a more in-depth
+   discussion of the theory behind static equilibrium. One important addition to this source is that it
+   covers lateral stability which is essential for cargo planes since they typically do not have the power
+   to pull out of a roll stall. This source does also cover control trims within aircraft which is not directly
+   applicable to our design but does help understand controls stability.
+[18] Omron, "Technical Explanation for Servomotors and Servo Drives," [Online]. pp. 1-19
+   Available: https://www.ia.omron.com/data_pdf/guide/14/servo_tg_e_1_1.pdf
+   Although this source is directed towards promoting its own product, it does provide essential
+                                                                                       12 | P a g e
+
+=== PAGE 18 ===
+   information for the selection criteria of servomotors. Our aircraft will have ailerons, elevators,
+   steerable landing gear, and a rudder which will all utilize servomotors. Ensuring that we select the
+   correct servomotor is crucial to ensuring safe and controllable flight.
+[19] ASME Dimensioning and Tolerancing, ASME Standard Y.14M, 1994
+   This standard plays multiple important roles for our team. The competition requires that we provide
+   an industry standard CAD drawing of our vehicle that must follow this standard. Furthermore, we
+   will likely be partnering with the metal 3D printing team to optimize some subsystems of our design
+   along with placing orders with the NAU machine shop and Idea Lab. All these services require we
+   provide them with proper dimensions and tolerances.
+3.2.3 Gavin Georgiou
+[20] Richard Von Mises, “Propellor and Engine” in Theory of Flight, First Edition, pp. 285-309
+   This source served as a learning resource about the thrust to weight ratio calculation that was being
+   conducted, including the important equations, and the variable breakdown of the different variables.
+   Along with this the source highlighted how to interpret the results of the thrust to weight ratio
+   calculations, giving examples of real aircrafts ranges. This source also explained how different
+   propellor will affect design, describing benefits and drawbacks of number of blades and pitch angles.
+[21] BadAss BA-2315-1480 “Performance Test Data”. [Online] Available:
+    https://innov8tivedesigns.com/pub/propcharts/BA2315-1480-Specs.htm
+   This specification sheet is for the BadAss BA-2315-1480 motor which initial thrust vs weight
+   calculations were being taken against. The specification sheet outlines how the motor performs with
+   different battery connections and with different propellers used. Using these sheets served as a check
+   as they had thrust values, and it ensured that proper calculations were being taken place to ensure
+   similar thrust values. In addition, it provided the necessary information to perform the thrust-to-
+   weight ratio on the motor.
+[22] Rcgroups, “Thrust to Weight Ratio”. [Online] Available:
+    https://www.rcgroups.com/forums/showthread.php?2024770-thrust-to-weight-ratio
+   This online forum is a conversation of RC aircraft hobbyists, discussing the different optimum thrust
+   to weight ratio ranges they have found through their experience. The ranges that were detailed
+   describe how fast RC planes will need to be far above 1, and slow aircraft must be, more often than
+   not, above 0.3, as no-one seemed to find success taking off with a thrust to weight ratio below 0.3.
+   This is important for the project as it details ranges that the project will aim for and ensure we have a
+   successful flight.
+[23] A. K. Mitra, “Thrust Required” & “Endurance" in Aircraft Performance and Design - An
+    Introduction to Principles and Practice, 2nd ed., Library of Congress, 2020, pp. 202-228 &
+    293-296
+   This source explains thrust-to-weight ratios taken for other aircraft and details many different
+   assumptions that can be taken to perform the calculation. This helped create the project's thrust-
+   weight-ratio calculation, having proper assumptions. It also explained other important factors that
+   need to be considered in the overall design, such as endurance, and how thrust vs drag will affect
+   necessary torque from the motors, leading to less battery life for larger motors. This is important for
+   design considerations and motor selection.
+[24] A. K. Mitra, "Estimation of the Critical Performance Parameters" in Aircraft Performance
+                                                                                      13 | P a g e
+
+=== PAGE 19 ===
+   and Design - An Introduction to Principles and Practice, 2nd ed., Library of Congress, 2020,
+   pp. 406-418
+   This source describes different constraint requirements and considerations that need to be considered
+   for the overall aircraft design. These constraints assist with future constraints calculations that are
+   performed on the aircraft and influence the overall design considerations. It details how wing area
+   and thrust vs weight ratios can be affected by a variety of different constraints.
+[25] John D. Anderson, Jr., "Effect of Aspect Ratio" in Fundamentals of Aerodynamics, 6th ed.,
+    Mc-Graw Hill, pp. 450-464
+   This source explained aspect ratios and how they influence the overall design of the aircraft, as the
+   aircraft does not need to be very maneuverable, a higher aspect ratio can be used for the aircraft.
+   This will decrease the induced drag, helping reduce the necessary thrust and lift. Which influences
+   design considerations and equipment sizing for the aircraft.
+[26] Daniel P. Raymer, “Sizing from a Conceptual Sketch" in Aerodynamic Design: A Conceptual
+    Approach, 6th ed., AIAA Educational Series, pp. 11-31
+   This source details many commercial aircraft with different designs, describing the benefits and
+   drawbacks of how these components and overall designs work together. This is beneficial to the
+   project, as this description of benefits and drawbacks helps design considerations on what the
+   project's design should be related to. It additionally describes many important calculations for
+   relating a sketch and model of the aircraft to real-life conditions, which will help influence the team's
+   design considerations and future calculations.
+[27] E. Oberg, F. D. Jones, H. L. Horton, and H. H. Ryffel, "Rivets and Riveted Joints“
+    Machinery’s Handbook, 29th ed. New York, NY: Industrial Press, 2012. pp. 1729-1745
+   This source describes the standards that are in place around rivets and riveted joints. This resource
+   will be very important during design, so the project ensures that it is following the proper standards
+   that are in place for the different components in our project. In addition, it is important during
+   design, so designs are created with manufacturing in mind, and are able to be connected using rivets.
+3.2.4 Tyler Milne
+[28] D. Chandra Shil, T. Ahmed, R. Mia, and N. Bej, “Design, Fabrication and Aerodynamic
+    Analysis of a RC Airplane,” Radware bot manager Captcha,
+    https://iopscience.iop.org/article/10.1088/1742-6596/2856/1/012002/meta (accessed Sep. 13,
+    2025).
+   Useful for the design factors of airplanes, such as drag and lift coefficients, remote control
+   frequencies, stability, and angles of attack. Provides a detailed discussion on aerodynamic design
+   parameters such as lift, drag, and stability. Includes experimental and simulated results for drag and
+   lift coefficients. Discusses control surface configuration, remote-control frequencies, and angle of
+   attack optimization. Useful for understanding overall RC airplane design methodology and
+   validation approaches.
+[29] D. J. Auld and K. Srinivas, “Resources,” Aerodynamics for Students,
+    https://www.aerodynamics4students.com/aircraft-performance/take-off-and-landing.php
+    (accessed Sep. 13, 2025).
+   Useful equations for takeoff and landing calculations, thrust and power formulas, as well as
+   maneuvering methods for the aircraft. Contains fundamental equations for takeoff distance, ground
+                                                                                      14 | P a g e
+
+=== PAGE 20 ===
+   roll, and climb performance. Provides thrust, power, and drag relationship formulas used in aircraft
+   performance analysis. Offers maneuver and performance methods applicable to RC aircraft scaling.
+[30] “Landing performance,”
+    https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/class18-2012.pdf
+    (accessed Sep. 13, 2025).
+   Explains theoretical and practical aspects of aircraft landing performance. Includes mathematical
+   modeling for rolling resistance, braking distance, and deceleration forces. Highlights ideal landing
+   procedures to minimize the risk of crash or instability. Valuable for simulating and validating RC
+   aircraft landing behavior.
+[31] M. H. Sadraey, “Chapter 9,” in Aircraft Design: A Systems Engineering Approach, 1st ed, vol.
+   1, Chichester, United Kingdom, 2013, pp. 508–581 (accessed Sep. 13, 2025).
+   Covers landing gear design, structural analysis, and load distribution. Provides detailed formulas for
+   impact force and gear reaction forces. Discusses wheel geometry, tire selection, and landing
+   approach angle optimization. Essential for ensuring safe and efficient landing gear configuration in
+   small-scale aircraft.
+[32] A. C. Watts, V. G. Ambrosia, and E. A. Hinkley, “Unmanned Aircraft Systems in remote
+   sensing and scientific research: Classification and considerations of use,” MDPI,
+   https://www.mdpi.com/2072-4292/4/6/1671 (accessed Sep. 13, 2025).
+   Reviews types and classifications of unmanned aerial systems (UAS). Discusses control and
+   communication systems used in remote or autonomous flight. Highlights operational considerations
+   for stability, navigation, and environmental applications. Useful for improving control architecture
+   and exploring autonomous features for RC aircraft.
+[33] A. Gupta, V. Soni, D. Shah, and A. Lakdawala, “Generative design of main landing gear for a
+   remote-controlled aircraft - sciencedirect,” ScienceDirect
+   Focuses on weight reduction and topology optimization for landing gear structures. Demonstrates
+   use of generative design to enhance structural efficiency. Provides insights into materials selection
+   and geometry refinement for small aircraft applications. Helpful for optimizing the strength-to-
+   weight ratio in RC aircraft landing systems.
+[34] “FAA regulations,” FAA Regulations | Federal Aviation Administration,
+    https://www.faa.gov/regulations_policies/faa_regulations (accessed Sep. 17, 2025).
+   Outlines regulations governing the operation of aircraft, including unmanned and model aircraft.
+   Defines safety, airspace, and operational compliance requirements. Useful for ensuring adherence to
+   legal flight standards during RC testing and competition events.
+3.2.5 Tylee Thornley
+[35] R. W. Fox and J. W. Mitchell, Fox and McDonald’s introduction to fluid mechanics. Hoboken:
+   Wiley, 2019.
+   This is the book I used in my fluid dynamics class. It has tables and equations for lift and drag that
+   are relevant to aircraft design. I also used tables for properties like the density of air. This book is a
+   useful source for equations that deal with the air around the plane.
+[36] NASA, “Reynolds Number,” Nasa.gov, 2019. https://www.grc.nasa.gov/www/k-
+                                                                                      15 | P a g e
+
+=== PAGE 21 ===
+   12/airplane/reynolds.html
+   NASA created this website to calculate the Reynolds number given certain information. This was
+   used at first to find a preliminary Reynolds number that we are looking for, which helped with initial
+   airfoil selection.
+[37] SAE International, “SAE Aero Design East 2025 Flight Attempts Day 1 Sponsored by the
+   Gene Haas Foundation,” www.youtube.com, May 03, 2025.
+   https://www.youtube.com/watch?v=gandHr7aDDc (accessed Sep. 11, 2025).
+   This YouTube video is of the competition from 2025. It was used to find the velocities of aircraft in
+   the competition to see what we need to design for. The design of previous aircraft was also looked at
+   to get an idea of what we wanted.
+[38] C. Reyes, RC Advisor’s Model Airplane Design Made Easy, 1st ed. Albuquerque, N.M.:
+    Rcadvisor.com, 2009, pp. 35–53.
+   This book is a preliminary on how to start building an R/C aircraft. It has tips for airfoil selection
+   and Reynolds numbers for R/C aircraft. Using this book as a reference, a preliminary airfoil was
+   chosen for the first round of calculations.
+[39] John David Anderson, Fundamentals of Aerodynamics, 5th ed. New York: Mcgraw-Hill, 2011,
+   pp. 313–407.
+   This online book has several calculations that can be used in the future for lift and drag as well as
+   thrust to weight, based on the Reynolds number.
+[40] L. Nicolai, “Estimating R/C Model Aerodynamics and Performance,” Lockheed Martin
+    7Aeronautical Company, Jun. 2019.
+    This paper, written by an engineer at Lockheed Martin, compares an R/C plane to a Cessna 172.
+    This was used in research for benchmarking, as our benchmarking was done against another Cessna
+    plane.
+[41] J. G. Leishman, “Mach Number & Reynolds Number,” eaglepubs.erau.edu, p. Ch.16, Aug.
+    2022, doi: https://doi.org/10.15394/eaglepub.2022.1066.n13.
+    Lift to drag relationship to Reynolds number
+[42] C. Locke, “Amateur-Built Aircraft and Ultralight Flight-Testing Handbook,” Federal Aviation
+    Administration, Feb. 2023.
+    This site by the FAA lists standards for flight testing of amateur airplanes and tips for takeoff,
+    which is crucial when researching how we will test our aircraft and what size is required to test at
+    an airstrip.
+3.3 Mathematical Modeling
+Each member of the team completed calculations and modeling for different subsystems to optimize our
+design and compare different configurations. The process and results of our findings are listed below.
+                                                                                   16 | P a g e
+
+=== PAGE 22 | math, img ===
+3.3.1 Wing sub-assembly – Gavin Georgiou
+The first calculation is the thrust vs weight calculation; details of the motor mentioned in reference [21]
+were used. The equation:
+                                            TT= KKTTρρnn2DD4                              Equation 4
+was used to find the theoretical thrust of the motor [20]. In this equation, T stands for thrust in newtons,
+KKTT stands for the unitless coefficient of thrust, ρρ stands for the density of the fluid, so in this case, air at
+~20°C and 2,000ft of elevation, measured in kilograms per meter cubed. The variable n stands for the
+rotational speed in revolutions per second, and D is the diameter of the propeller in meters. This equation
+was then coded into MATLAB, along with a conversion to English units. After this, it was divided over a
+series of weights ranging from 20 to 55 lbs. Repeating this code for both the two-propeller and four-
+propeller configuration, a plot comparing their thrust/weight ratio to the weight of the overall plane.
+
+                           Figure 2: Thrust/Weight Ratio vs Weight Graph
+The second calculation was a calibration curve, which was used to find an acceptable region for flight,
+on a thrust/weight vs wing loading graph. The equations used for this were the stall constraint:
+
+                                             ඨ 2∗WW SS
+                                       VVss=                                              Equation 5
+                                               ρρ∗CCLL,mmmmmm
+V represents velocity in feet per second, WW represents wing loading in pounds per square foot, ρρ
+                                       SS
+represents density in pounds per foot cubed, CCLL represents the coefficient of lift. Rate of climb constraint:
+                                 ddh dddd= (TT−DD) ∗ WW−( VV  gg gg)( dddd dddd)          Equation 6
+
+                                                                                         17 | P a g e
+
+=== PAGE 23 | math, img ===
+ddh represents the rate of climb in feet per second, T represents thrust in pound force, D represents drag
+dddd
+in pound force, W represents weight in pound force, g represents the gravity constant in feet per second
+squared, and t represents time in seconds. Take-off distance constraint:
+                                  mm dddd dddd= TT−DD−μμ(WW−LL)                            Equation 7
+
+m represents mass in pounds, μμ represents dynamic viscosity in pound force second per foot squared,
+and L represents lift in pound force. Constant velocity turn constraint:
+                                   TT = qqCCDD + kk WWqq( LL  WW SS)( DD) LL               Equation 8
+                                   WW     WW
+                                           SS
+CCDD represents the coefficient of drag, k represents the induced drag factor, and q represents dynamic
+pressure in pound force per square foot. The final equation used in the calculation was the cruise seed
+constraint:
+
+                                               ඨ    2∗WW SS
+                                    VVCCCCCCCCCCCC=                                        Equation 9
+                                                 ρρ∗CCLL,CCCCCCCCCCCC
+These equations were coded into MATLAB and graphed together to find an acceptable region, as
+highlighted in green.
+
+                             Figure 3: Performance Constraints Diagram
+
+                                                                                          18 | P a g e
+
+=== PAGE 24 | math ===
+3.3.2 Airframe + Fuselage sub-assembly – Dom Belasquez
+The engineering tools most heavily utilized for designing and studying the airframe and fuselage were
+ANSYS Discovery and MATLAB. The MATLAB community created an optimizer for regular class Aero
+competitors to utilize for their designs [43]. In the early stages of our design, we took this program and
+modified the code to match the competition criteria for the 2026 SAE competition. This included
+importing all of the engineering/customer requirements from the rulebook, along with importing some
+important equations. Equation (10) was imported and is the flight score calculation that will be used by
+SAE to find our flight score [1].
+                                         FFFF= 4EEEE+ 15FFFF                            Equation 10
+Here, EB and FB are the number of empty and full bottle cargo, respectively. The next equation, equation
+(11), was imported was the thrust equation found above in section 3.3.1. Further review of this equation
+can be found above in 3.3.1.
+                                            TT= KKTTρρnn2DD4                            Equation 11
+The next set of equations was important to import because these were used for calculating stability within
+the aircraft based on different fuselage and cargo bay setups. These are the moment of inertia equations
+for a hollow cylinder (12-13) and a rectangular cargo setup (14-16) [44]. We simplified the geometry of
+the cargo as a rectangular prism to simplify our calculations.
+                                           IIxx= mm (ddoo2 + ddii 2)                   Equation 12
+                                                 8
+                                      IIyy= IIzz= mm (3ddoo2 + 3ddii 2 + 4ll2)         Equation 13
+                                                48
+                                            IIxx= mm (aa2 + bb2)                       Equation 14
+                                                 12
+                                            IIyy= mm (aa2 + cc2)                       Equation 15
+                                                 12
+                                            IIzz= mm (bb2 + cc2)                       Equation 16
+                                                 12
+The m is the mass. The do and di are the outer and inner diameters. The l is the length of the cylinder. The
+a, b and c are the width, height and length of the rectangular prism respectively. The final major equation,
+equation (9), was imported into the MATLAB Optimizer, which was the landing ground run equation [45].
+                                               1.323(WWLLLL SS)
+                                     ssgg=                                             Equation 17
+                                          ρρρρCCLL,mmmmmm,LLLL{൬TTRR WWLLLL൰+μ}
+For this equation sg is the ground run distance, ( WWLLLL SS) is the wing loading, ρ is the air density, g is the
+gravity acceleration constant, CCLL,mmmmmm,LLLL is the stall lift coefficient during landing, ቀ WWLLLLቁ TTRR  is the reverse
+thrust to weight ratio, and μ is the rolling friction of the wheels and the ground.
+For ANSYS FEA, there were no equations applied as they were already built into the program. However,
+it was the main tool used to analyze the main frame of the aircraft and optimize it. The material used for
+those designs were standard-size aluminum alloy tubes that are commercially available [46].
+3.3.3 Wings and Tail Sub assembly – Tylee Thornley
+To assess the different tail designs, first, a Reynolds number calculation was done. The velocities of aircraft
+from the 2025 competition were analyzed to find the velocity at takeoff, cruise, and landing. Ten aircraft
+                                                                                        19 | P a g e
+
+=== PAGE 25 | math ===
+from the regular class were looked at to get these velocities. The average velocities were 4m/s for cruise,
+5.5 m/s for takeoff, and 7 m/s for landing. The average Reynolds number is around 50,000, which means
+an airfoil designed for a low Reynolds number is needed.
+                                           RRRR  =   ρρ⋅VV⋅cc                        Equation 18
+                                                   μμ
+This is the equation to find the Reynolds number based on the velocities that were found. From the
+Reynolds number calculations, an analysis was done using OpenVSP on the design ideas for the tails and
+wings. The Mach number is set to 0.014, the Reynolds number of 50,000, the velocity is 5 m/s, angle of
+attack varied from 0 –10, and the air density is set to 1.225 kg/m^3. The analysis done on OpenVSP as
+well as a qualitative analysis of each design, was used to decide which wing and tail would be selected.
+Equations 18, 19, 20, and 21 were used to calculate the numbers for the software. The lift and drag for
+each design were found and compared, and the design that generated the best lift and L/D ratio was
+selected. Based on this, a semi-T-tail cruciform mix and a rectangular wing will be used in our design.
+                                           MMMM   =   VV                             Equation 19
+                                                   cc
+                                      LL  =  CCCC⋅ 1 ⋅AA⋅ρρ⋅VV2                      Equation 20
+                                               2
+                                      DD  =  CCCC⋅ 1 ⋅AA⋅ρρ⋅VV2                      Equation 21
+                                                2
+3.3.4 Theoretical Lift/Drag + Lift Distribution Wing subassembly - William Alcorn
+The calculation for theoretical lift and drag began by taking the liftoff, cruise, and landing velocities, as
+well as the average Reynolds number, found from Tylee’s analysis, and then applying them in the lift
+equation and drag equation for each stage. This was done to determine which stage of flight the maximum
+lift and drag forces occurred. Values of the coefficients of lift and drag were taken from airfoiltools.com,
+for a NACA 0012 airfoil, an average Reynolds number of 50000, and an angle of attack of 5 degrees. The
+wing area used was determined using the minimum chord length and maximum wing length, and the
+density used was the density of air at standard temperature and pressure
+
+                      LLLLLLLL  =  CCdd⋅ 1 ⋅AAwwwwwwww⋅ρρaaaaaa⋅VVtttttttttttttt,cccccccccccc,llllnnnnnnnnnn 2  Equation 22
+                                   2
+                     DDDDDDDD  =  CCdd⋅ 1 ⋅AAwwwwwwww⋅ρρaaaaaa⋅VVtttttttttttttt,cccccccccccc,llllllllllllll 2  Equation 23
+                                    2
+Theoretical lift and drag across all 3 flight stages were determined and plotted for comparison using
+MATLAB. From Figures 4 and 5, it was determined that the maximum theoretical lift and drag forces
+occurred during the landing stage of the aircraft flight. Additionally, it was determined that Reynold’s
+number and lift & drag forces had a quadratic relationship with each other.
+Following this analysis, it was then desired to determine the lift distribution across 4 selected wing
+configurations to determine which one performed the best. The four configurations were a straight
+rectangular wing, a swept rectangular wing, a tapered straight wing, and a half straight half tapered wing.
+These configurations may be observed in Figures 12 and 13. Using XFLR 5, the performance data of the
+Selig 1223 airfoil, iterating from -5 to 5 degrees of attack in 1-degree increments, and iterating from 10000-
+90000 Reynolds numbers, was obtained.
+XFLR 5 then took the performance data and applied it to the four wing configurations previously
+mentioned, using Prandtl’s lifting line theory and the Kuta-Joukowski theorem to determine the
+                                                                                      20 | P a g e
+
+=== PAGE 26 | math, img ===
+distribution of lift coefficient across the wingspan of each configuration. Once all 4 configurations had
+been analyzed, their coefficient of lift distribution data were imported into MATLAB to determine the
+actual lift force distribution for each wing configuration. This data was then plotted in MATLAB to
+compare the lift performance of each configuration, where it was finally determined from Figure 6 that the
+straight rectangular wing had the best performance.
+
+                                                                                     −1
+                αα(yy0) =   ΓΓ(yy0)  + ααLL=0(yy0) + 1/4ππ∗VV∞∫ቆቀ dddd ddddቁdddd(yy0 −yy)ቇ  Equation 24
+                          ππ∗∞∗cc(yy0)
+                                      LL` = ρρ∞∗VV∞∗ΓΓ(yy0)                             Equation 25
+
+                       Figure 4: Lift V Reynolds number across 3 flight stages
+
+                                                                                         21 | P a g e
+
+=== PAGE 27 | img ===
+       Figure 5: Drag V Reynolds number across 3 flight stages
+
+Figure 6: Spanwise lift distribution across 4 different wing configurations
+
+                                                                     22 | P a g e
+
+=== PAGE 28 | math, img ===
+3.3.5 Theoretical Landing Force Calculations – Tyler Milne
+To determine the potential landing gear, we had to investigate the forces that would occur. Data such as
+speed was estimated by reviewing footage or last year’s SAE AERO competition videos. While these may
+be slightly inaccurate due to the measuring system, they give a good baseline to perform calculations. The
+driving equations we used were based on impulse and momentum calculations
+                                            PP= mm∗vv                                Equation 26
+                                               II= PP                                Equation 27
+                                                   tt
+Where P = momentum, m is mass (total weight of aircraft), v = velocity vector (pointing toward the
+ground), and t represents time for the impact energy to be dispersed completely. This also assumes no
+dampening from springs or shocks to provide the “worst case” scenarios. We used 55lbs as the weight of
+the aircraft, as that is the competition’s max takeoff weight, as well as using a 5-degree angle of approach
+relative to the ground. An angle of 3.5 degrees or more is commonly used for pilots to determine a “rough”
+approach. This allows us to calculate the velocity descent based on initial speeds of 3-10 m/s. Additionally,
+two times 0.01s and 0.1s were used to represent a fast and slow energy dissipation, respectively. The result
+of the test is presented in this graph.
+
+                                  Figure 7: Hard vs Soft Landing
+We would like to design for the worst possible outcomes, which means a total of 1.2kN must be supported
+by each wheel, landing gear and any support structures.
+4   Design Concepts
+This chapter looks at how we decomposed our design problem into multiple subfunctions/subsystems
+and generated initial concept variants for our analysis and selection.
+
+                                                                                      23 | P a g e
+
+=== PAGE 29 | img ===
+4.1 Functional Decomposition
+
+                             Figure 8: Pitch Functional Decomposition
+Pitch is one of the three key functions of the project, as it is responsible for changing the planes’ orientation,
+in a manner of changing the angle the plane is relative to the head wind. It is necessary for take-off and
+landing so the plane’s orientation can be in ideal positions. Elevators being the main component to change
+pitch, ailerons helping to provide some pitch change, and motors being able to throttle up and down to
+help change the pitch.
+
+                            Figure 9: Steering Functional Decomposition
+Steering is another key function, as it will allow the plane to traverse on the ground with steerable landing
+gear, and steer in the sky with the rudder and ailerons. The main sky-steering components are both steering
+the plane, and inducing roll, to assist the plane in turning while in the air.
+
+                                                                                         24 | P a g e
+
+=== PAGE 30 | img ===
+                              Figure 10: Lift Functional Decomposition
+Lift is the last key function of the plane, with wing design and thrust being the biggest components
+affecting lift. Wings are important, as the swept area and placement of the wings will influence lift with
+the amount of area creating lift, and the wings' airfoil will influence the coefficient of lift that the wings
+will have. Thrust influences lift due to thrust creating a force against the headwind, allowing the plane to
+travel forward. The propellers will affect how much air is moving with each rotation of the motors. Motors
+will determine how fast the propellers spin and the amount of thrust that will then be created by the system,
+depending on how fast the motor is able to spin under the load of the propeller.
+The functional decomposition was important to this project, as it served as the basis for concept generation,
+highlighting the different subsystems that the project has. In addition, it highlighted the systems that the
+team will need to purchase instead of manufacturing, allowing us to make specification tables of the
+project's different electronic components.
+4.2 Concept Generation
+From the functional decomposition, two subsystems were assigned to each individual to generate different
+concepts to review for our final design. Listed below are all the subsystems and the pros and cons of each
+selection.
+4.2.1 Fuselage/Cargo Bay
+
+                              Figure 11: Fuselage Concepts Generation
+The designs for our fuselage are combinations of two different cross-sectional areas and two styles of
+fuselage bodies. The two cross sections are based on a circular and chamfered square. The circular design
+is seen in many commercial aircraft, due to its low coefficient of drag, weight, and its improved stability.
+                                                                                         25 | P a g e
+
+=== PAGE 31 | img ===
+However, it has drawbacks in storage and its complexity which are both solved with the chamfer squared
+design. Ideally, a mix of the two designs using the chamfered square as a base, while rounding the edges,
+would provide a perfect balance. Additionally, we need to select either a tapered straight back design or a
+squared boom tail design. The design with a “boom tail” or the two straight back connectors has a very
+simple creation, improved stability for the rudders, and a simple storage space for the required payload.
+The taped design compromises on these factors by its aerodynamic efficiency.
+4.2.2 Wing Configuration
+
+                            Figure 12: Wing Configuration Generations
+The first sketch shows a wing configuration of a converging wing, ending in a winglet, and this design
+consisted of ailerons, front, and back flaps. Pros of this are increased control, stability, and lift at high
+speeds. Its cons are the design consisting of very complex manufacturing, excessive controls, increased
+drag and weight, decreased lift at low speeds, and would require a much higher cost to manufacture. The
+second sketch is a swept wing configuration, ending in a winglet with ailerons. Pros of this design are an
+increased possible wing area within the competition requirements, increased ability to roll, increased
+stability, and it handles crosswinds better. Cons of this design are complex manufacturing, an increase in
+the drag, decreased lift at low speeds, increased weight, and an increase in the complexity and amount of
+bonding needed. The third sketch is a rectilinear wind converging from the aileron, with larger ailerons to
+also act as possible flaps. The pros of this are simpler manufacturing, greater lift at lower speeds, less
+weight, less drag, and easier bonding complexity with less required bonding. Cons of this design are a
+smaller wing area, decreasing the stability of the plane, with larger ailerons, roll caused by the ailerons is
+less significant, and this design performs worse with crosswinds.
+4.2.3 Wing Geometry
+
+                              Figure 13: Wing Geometry Generations
+The first sketch shows a rectangular, straight wing planform geometry, with ailerons and flaps to
+complement. The main pros of this concept are that it is more stable than the other two considerations, as
+well as being very cheap and easy to manufacture. The main con, however, is that stability comes at the
+cost of better maneuverability and handling in flight.
+The second sketch shows a straight wing with a constantly tapering airfoil profile. This wing configuration
+is considerably more maneuverable than a straight rectangular wing; however, this unfortunately comes at
+the cost of lowered stability. Additionally, it is much more complex to manufacture, and expensive to
+produce.
+The third sketch shows an elliptical wing planform profile, which is the most difficult configuration of the
+                                                                                       26 | P a g e
+
+=== PAGE 32 | img ===
+three to manufacture. Additionally, elliptical wings struggle to perform at the low speeds our aircraft is
+expected to perform at, as they are prone to stall in the Reynolds number range at which the aircraft is
+expected to operate. Because of this, it was ruled out.
+4.2.4 Airframe
+
+                             Figure 14: Airframe Concept Generations
+For the airframe there were three major design concepts considered. The first concept on the left in Figure
+14 above is a design where the wings are swept and it utilizes a square channel tube for the mainframe.
+For the subframe it uses laser cut balsa wood to form the structure. The next design uses another
+mainframe and subframe system, but the wings are not swept. The mainframe also uses round channel
+tubing rather than square and the subframe can also use 3D printed material. The last design, which was
+eliminated early on in our design process. It had no mainframe and was only to be held together from the
+subframe material. The reason for this elimination was because it would likely be much weaker than the
+other options and thus require excessive reinforcement. One pro of the first design over the second is that
+it can utilize more effective wingspan/area since the competition only has a restriction on the planform
+wingspan. Another benefit is that since it is a square channel it is much easier to mount the subframe and
+drill holes compared to the round channel frame. Another pro with the first design over the second is there
+would likely be less drag production since the wings are swept. The downside to this however is square
+channels require advanced and expensive equipment to properly bend compared to round channels.
+Another downside to the first is it would require more material for both the subframe, and the mainframe
+compared to the second because it has longer effective wings. This means it would be heavier by nature.
+4.2.5 Rudder
+
+                              Figure 15: Rudder Concept Generation
+For the rudder there were three systems considered for design as seen in Figure 15. The first design was
+the design that was eliminated early on. The reason for this elimination was because with the servo being
+placed in the rudder towards the trailing edge, it would require an excessively thick rudder. Also, it would
+limit the size of servo that could be selected. For the second design, this utilizes a bevel gear set that
+allows the servo to be placed in the thicker, leading-edge region of the rudder. The last design is like the
+first as it is also a direct drive, but the main difference here is that the servo is placed within the fuselage
+or mainframe of the aircraft with an extended rod. Both the second and third design allow for larger servos,
+but the main benefit with the third design is that it avoids another set of gears that would reduce efficiency.
+Gears are already in servomotors and thus already have friction and energy losses. The third design would
+avoid these additional losses. Another benefit the last has over the 2nd is it would be easier to mount the
+
+                                                                                       27 | P a g e
+
+=== PAGE 33 | img ===
+servo as it would have a direct connection to the mainframe. The drawback of the last design is that the
+servo could interfere with the mainframe rod that supports the horizontal stabilizer. Another downside is
+that for larger loads, since there is only a direct drive for the servo to the rudder it would likely require a
+large servomotor.
+4.2.6 Ailerons
+
+                          Figure 16: Aileron Actuation Concept Generation
+The concern for aileron design lies mostly in the method by which they are actuated. The first concept
+shows a single servo extended out of the center of the fuselage, meant to actuate both ailerons
+simultaneously. This method is elegant in that it only requires a single servo; however, it becomes
+impractical in that the connector rods are quite long and will induce significant drag and extra weight.
+Because of this, this concept has been dropped from consideration.
+The second concept utilizes two servos that serve each wing. Though more costly by requiring two servos,
+it is the most practical to manufacture, and requires much smaller connector rods, which will drive down
+weight and cost compared to the first generation.
+The third concept describes an actuation system where the servos lie internally in the wing, rather than
+outside. These servos then directly drive the aileron, which will increase the torque applied, which thus
+may allow for more extreme aileron geometry, resulting in better stability. It is a complex system and
+expensive, though worthwhile to consider, as it may greatly improve performance.
+4.2.7 Elevators
+
+                                  Figure 17: Hinges for the Elevator
+For the design of the elevators, different hinges were looked at which would be paired with a servo to
+actuate. The first design is a hinge actuator that attaches directly to the elevator to actuate it. It is light
+weight and requires one servo per hinge. Its biggest con is that it attaches directly to the elevator increasing
+drag. The second is a magnetic actuator that moves the elevator using the magnet when it is activated. It
+requires more programming to implement and more electronic parts, making it more expensive. The last
+design is an in-hinge actuator that uses a bar to move the elevator. It also increases drag because it is
+attached to the outside of the elevator. The bar would provide direct control of the elevator, making it have
+a fast response time.
+
+                                                                                          28 | P a g e
+
+=== PAGE 34 | img ===
+4.2.8 Propellers
+
+                                Figure 18: Propellor Configurations
+The first sketch is detailing a two bladed propellor, that is twelve inches in diameter and has a six-inch
+pitch. The pros of this design are its lightweight, cheaper, more efficient, requires less torque, and will
+have faster cruising speeds. Cons for this design is that the smaller pitch requires much more rpm due to
+the propellor producing less thrust per rotation, due to these higher speeds, stability would decrease, and
+the planes rate of climb would decrease. The second sketch is detailing a three blade propellor with a
+twelve-inch diameter, and eight-inch pitch. Pros of this design are the higher pitch creating more thrust
+per rotation, this propellor has a higher rate of climb, and would help increase the planes’ stability. The
+cons of this design are its heavier nature requires more torque, which leads to slower cruising speeds, these
+propellers are less efficient and are more expensive. The third sketch details a four blade propellor with a
+twelve-inch diameter, and eight-inch pitch. The pro of this design is the most thrust per rotation from the
+highest pitch, the highest climb rate and most stability. The cons of this design are the great amount of
+torque needed for these propellors due to their much higher weight, leading to the slowest cruising speeds,
+and these would be very costly propellors.
+4.2.9 Landing Gear
+
+                               Figure 19: Landing Gear Generations
+For landing gear three various were chosen, varying in wheel count and spacing. The first design has a
+two-wheel front wheel design with two rear wheels close to the centered axis. This allows for the easiest
+ground maneuvering and connectivity to the frame fuselage. However, due to this connection point in the
+frame we will lose potential cargo space. The second design shares most all aspects of the first design,
+however, it only has one front wheel as opposed to two. This will allow for less ground friction when
+rolling which could be advantageous during takeoff, however, it puts much more stress on the singular
+front wheel. The third design attempts to push the rear wheels out farther from the center and positioned
+near the wing connection point. This requires more structural complexity and will create more drag;
+however, the landing gear can potentially distribute the load more effectively and doesn’t have the
+drawback of cutting into potential cargo space.
+
+                                                                                         29 | P a g e
+
+=== PAGE 35 | img ===
+4.2.10 Tail
+
+                                   Figure 20: Tail Configurations
+The criterion for selecting a tail is to choose a design that was most functional and stable with our design.
+Since we are doing a dual propeller plane, a T-tail design was looked at for two concepts. These
+configurations were compared to a conventional tail design to see if they would be more useful. The first
+design is a cruciform tail which provides good stability but adds more weight. The second design is a
+conventional tail. This tail is the simplest to manufacture since the horizontal stabilizer would attach to the
+airframe. The biggest con of this design is that it can stall due to it being in the wake of the propellers. The
+final design is a mix between a T-tail and a cruciform tail. This design adds the most flexibility to optimize
+where the horizontal stabilizer is placed. It also has the benefits of a T-tail without added weight.
+4.3 Selection Criteria
+A set of quantitative design studies were run for the analysis of each of the concept subfunctions.
+Selection for these variants were based upon highest performing characteristics set upon by the team.
+The results were placed within decision tools such as decision matrices and specification charts for the
+final decision of these variants thus far.
+4.3.1 Fuselage
+With our project being rooted in maximizing our flight score, our selection criteria were clear. Choose the
+designs that give the best performance and allow the highest flight score. To study this, we used the
+MATLAB Optimizer and modified it to our competition specifications [43]. For comparing between the
+fuselage types, round or square, we compared this using the results of the MATLAB Optimizer. The
+optimizer attempts to maximize our flight score while staying within the constraints and still being a
+flyable plane. Below in Table 7 are the results of the two fuselage types. One of the preliminary
+assumptions that we had before this study was that the square fuselage would be better since a square
+fuselage allows for more space for cargo. For this competition, more cargo equates to more flight points.
+However, the results showed us that with our current constraints and weight assumptions, we will only be
+able to have 4 full bottles across both designs. This meant that additional parameters had to be explored.
+                 Table 7: MATLAB Optimizer Results Between Fuselage Types
+
+                                                                                       30 | P a g e
+
+=== PAGE 36 ===
+                         Quantity           Units Round Fuselage Square Fuselage
+                    Empty Bottle Count      Count                0               0
+                     Full Bottle Count      Count                4               4
+                  Cargo Bay Start Location    m             0.1587          0.1016
+                Leading Edge Wing Location    m             0.2809          0.1899
+                  Horizontal Tail Half Span   m             0.3428            0.25
+                   Vertical Tail Half Span    m             0.3902          0.3048
+                      Wing Half Span          m             1.3438           1.359
+                   Horizontal Tail Chord      m             0.1549          0.1016
+                    Vertical Tail Chord       m             0.1131          0.1016
+                     Wing Root Chord          m             0.4523           0.453
+                    Length of Fuselage        m             1.0731          0.8445
+                     Wing Taper Ratio        m/m             0.771               1
+                        Max Score           Points              60              60
+The next step within the study was to compare the MATLAB results across additional parameters. These
+parameters included gross weight, take off distance, and flight score to weight ratio. The most important
+parameter that we agreed to study was the flight score to weight ratio because this defined the effectiveness
+of our design. Having a higher value for this parameter meant that we were getting more flight points for
+less vehicle weight. When it comes to cargo planes the most important parameter is their weight. If it is
+too heavy, we will be unable to fly or must excessively run our motors where we would run out of electrical
+fuel. This continuation of the study and its results can be found below is section 4.4.1.
+4.3.2 Airframe
+For analyzing the airframe, it utilized the geometric features presented in Table 7 above for a round
+fuselage from the MATLAB Optimizer results. Aluminum alloy was selected as the material of choice
+because of low density and high strength performance. We avoided any fiber composite because it is
+prohibited for the regular class this year [1]. Furthermore, we extended the study to include swept and
+non-swept wings to round channel tubes and only including non-swept square channel bars. This was
+because upon further investigation, round bars are much easier to bend, and the machine shop at NAU has
+a round tube bender. A square channel would require an additional excessively expensive purchase. For
+our study with the airframes, we utilized finite element analysis within ANSYS Discovery to obtain our
+selection criteria quantities. To stay conservative early on, we used a wing loading of 75 lbf uplift and for
+the horizontal stabilizer we used 15 lbf downforce. We understand that it is likely that the wing loading
+will be much less, but as stated, we wanted to stay conservative in the preliminary design stage.
+4.3.3 Elevators
+A qualitative analysis was done to figure out which type of hinge would be used. Servo selection and the
+electronic configuration used will also be a factor when selecting which hinge to use. A magnetic hinge is
+more complicated, expensive, and requires a lot of research to implement, so it will not be used. The
+simplest one is a hinge that connects directly onto the elevator. This one will most likely be used due to its
+simplistic design.
+
+                                                                                       31 | P a g e
+
+=== PAGE 37 ===
+4.3.4 Tail
+Different tail designs were looked at that are used in commercial aircrafts. A T-tail adds more weight and
+as we have a weight constraint of 55 lbs it will not be used in our design. The conventional tail is a solid
+option and performed well in the OpenVSP analysis but is expected to cause stalling with our dual
+propeller design, so it was not selected. A cruciform tail is the last option which performed similar to a
+conventional tail as well as is expected to work well with a dual propeller plane as it sits above the wakes
+generated by the propellers.
+4.3.5 Wing Configuration
+Final wing configuration-based designs on ease of manufacturing, weight added to the plane, necessary
+controls, and chord length. The first design had triple the necessary controls, to fully operate, due to triple
+the control surfaces that it had, with these additional controls, it adds weight in motors. Qualitatively it
+was determined to decrease aerodynamics due to having more surfaces, causing small gaps, and the level
+of manufacturing would increase to the wing’s winglet. The second design helped to optimize within the
+allowed space, having more wing area, with this it would increase the overall weight of the plane.
+Qualitatively it drastically increases the complexity of the wing’s manufacturing, as it will require the
+frame to be swept to match, also supporting a winglet at the end. The final design was chosen due to its
+matched simpler control complexity to design two, decreased weight in comparison to the other designs,
+and qualitatively it’s less complex manufacturing.
+4.3.6 Propellors
+The different propellors were analyzed based on specification from the manufacturer, as this will be a
+purchased part. This analysis mainly focuses on the efficiency of the propellors and rate of climb, as these
+influence the overall engineering requirements the most. Efficiency is important due to the limit on battery
+supplying power to the motors and rate of climb is important due to the limited take-off distance. So, the
+two bladed propellor, while having the highest efficiency would lead to the most take-off distance. The
+four-bladed propeller would lead to the smallest required take-off distance but would lead to the least
+efficient use of the motors. So the three bladed propellor was selected due to the balance of efficiency and
+rate of climb that the design possesses.
+4.4 Concept Selection
+For our concept selection, we took each design listed in our concept generation and performed various
+calculations or market specification research. We compare these results to our engineering and customer
+requirements to determine which design was superior.
+4.4.1 Fuselage
+Compiling the parameters previously listed in section 4.3.1 into a decision matrix along with the MATLAB
+results, it was clear that in our case the round fuselage performed the best as can be seen below in Table 8.
+One other preliminary note is we are also assuming that a round fuselage will reduce our drag values
+significantly since it avoids sharp angles that could induce wakes. One extremely important discovery
+from this study was that we found we will need some form of reverse thrust or braking. This is because
+we are required to land within a 400-foot landing strip. Based on the results, our ground run is almost 4
+times that distance which is completely unacceptable. Below in Figure 21, it also shows the proposed
+setups for the cargo within the cargo bay, which as can be seen both will have enough room for the 4
+bottles. However, based on Table 8 we will continue forward with the round fuselage for additional design.
+                                Table 8: Fuselage Decision Matrix
+
+                                                                                       32 | P a g e
+
+=== PAGE 38 | img ===
+                                   Decision Matrix - Based on Fuselage
+                                 Results from MATLAB Optimizer Program
+Engineering Requirements Units   Target Value                    Concept Designs
+                                            A1 - Round Fuselage/Cargo Bay A2 - Square Fuselage/Cargo Bay
+       Wingspan           Feet      <10                 9.9                          10
+    Fuselage Length       Feet       <9                 3.52                        2.76
+      Gross Weight        lbf       <50                32.13                        33.27
+      Wing Chord          Inch       >4                17.81                        16.13
+   Propeller Diameter     Inch       12                  12                          12
+    Takeoff Distance      Feet      <100               78.08                         80
+    Landing Distance      Feet      <400                1585                        1515
+Cargo Volume (2L Bottles)  Liters    12                  8                            8
+      Flight Score       Points   Maximum                60                          60
+   Flight Score/Weight  Points/lbf Maximum          1.867413632                  1.80342651
+       Choosen Fuselage Based on Matrix               Fuselage: A1 - Round Fuselage/Cargo Bay
+
+               Figure 21: Fuselage Layouts with Preliminary Theoretical Cargo Setup
+4.4.2 Airframe
+The airframe studies can be seen summarized below in Table 9 for the airframe decision matrix. For our
+essential comparison criteria, we agreed that comparing a Factor of Safety to airframe weight ratio would
+be appropriate. This is because for our preliminary design we will likely have to optimize much further
+in the future which means reducing the weight of the airframe. Having a higher value for this ratio means
+we are allowed higher reductions without compromising the aircraft’s structural integrity. From this table
+the square channel tube airframe performed the best with the highest factor of safety and factor of safety
+to weight ratio. This means for optimization, this will be the best choice for our design. One other note
+is that square channels allow for the easiest subframe attachment with little adhesive/reinforcement since
+the square shape will naturally oppose torsional bending of the subframe in all directions. Figure 22 below
+also displays the different frame layouts along with the selected concept for the airframe.
+                                 Table 9: Airframe Decision Matrix
+
+                                                                                       33 | P a g e
+
+=== PAGE 39 | img ===
+                                         Decision Matrix - Based on Airframes
+                   Results from ANSYS Explore FEA - 75lbf Loading on Wing, 15lbf Loading on Horizontal Tail
+                                                                       Concept Designs
+Engineering Requirements Units  Target Value
+                                            D2 - No Sweep Round Bars D1 - Sweep Round Bars D2 - No Sweep Square Bars
+       Wingspan          Feet       <10               9.9                    9.9                     9.9
+       HTail Span        Feet      >2.5              3.33                    3.33                   3.33
+         VTail           Feet      >1.5              1.03                    1.03                   1.03
+    Fuselage Length      Feet       <9               3.52                    3.52                   3.52
+    Airframe Weight       lbf       <10              6.42                    6.43                    7.2
+     Max Deflection      inch     Minimum            2.18                    2.21                   1.31
+      Max Stress          psi     Minimum          1.73E+04               1.73E+04                1.12E+04
+       Material           N/A    Aluminum          Aluminum               Aluminum                Aluminum
+  Factor of Safety (FOS)  N/A     Minimum            2.18                    2.17                   3.36
+      FOS/Weight         1/lbf   Maximum         0.339563863             0.33748056             0.466666667
+       Choosen Airframe Based on Matrix                        Airframe: D2 - No Sweep Square Bars
+
+                               Figure 22: Airframe Layouts Involved in Study
+
+                                                                                                     34 | P a g e
+
+=== PAGE 40 | img ===
+4.4.3 Wing
+The geometry and coefficients found from OpenVSP are listed in the decision matrix below. The green
+cells are the options that performed the best for that engineering requirement. The yellow cells are the next
+best option, and the red is the worst option. During this analysis it was found that the original airfoil we
+selected, the NACA 0012, does not produce enough lift for our design requirements. The Selig 1223
+performed the best and will be the airfoil we are going to use. From the matrix design B3 and C1 are the
+best options with a similar rectangular wing design.
+                                 Table 10: Wing Decision Matrix
+
+                     Figure 23: Wing Designs from OpenVSP (B2, B3, C1, C2)
+
+                                                                                     35 | P a g e
+
+=== PAGE 41 | img ===
+4.4.4 Tail
+The decision matrix for the tail design uses geometry and engineering requirements to compare the two
+designs. A NACA 0012 is used as the tail is for stability. Based on these numbers of wing loading and a
+qualitative analysis the J3 design was chosen as the tail design.
+                               Table 11: Decision Matrix for the Tail
+
+                                                                                      36 | P a g e
+
+=== PAGE 42 | img ===
+                       Figure 24: Tail Concept Design from OpenVSP (J2, J3)
+
+4.4.5 Motor and Propellor
+The specification tables for the motors and propellors list available information about each of the different
+parts. This information reflects the engineering requirements of gross weight and take-off distance, in the
+figure below, the highlighted sections indicate the chosen parts. The selected motor was due to its fast
+speeds while maintaining higher torque, potential thrust with selected propellors, and potential efficiency
+during flight. The propellor was chosen due to its increase to rate of climb compared to a two bladed
+propellor, while maintaining more efficiency than a four bladed propellor.
+
+                                                                                        37 | P a g e
+
+=== PAGE 43 | img ===
+                      Figure 25: Motor and Propellor Specification Tables
+
+    4.4.6 Electrical CAD and Battery Life Calculation
+
+                            Figure 26: Electrical Engineering CAD
+Our preliminary circuit diagram has been modeled with all necessary components for flight. We have 1
+speed controller, 2 DC motors, with a 2200mAh 14.8V and a 1000mAh 6V LiPo battery. There will also
+                                                                                38 | P a g e
+
+=== PAGE 44 | math ===
+be five servomotors to control ailerons, elevators and ruder respectively along with the receiver/transmitter
+housing. The 2200mAh battery will power the motors and speed controller only, while the extra 1000mAh
+battery will power every other component, this is required by the competition as a safety concern that
+would allow us in the event of emergency to return the plane to the ground without the motor systems. For
+our designs we need our battery to last for two minutes. This was the maximum flight time viewed of past
+years competitions. We used equation 28 and equation 29 to calculate the max amperage possible
+continuous amperage power draw.
+                                    IImmmmmm= CC∗120ss∗ 1h                            Equation 28
+                                                        3600ss
+                                       PPmmmmmm= IImmmmmm∗VV                          Equation 29
+Where IImmmmmm is the max amperage draw [A], C is the batteries capacity [Ah], PPmmmmmm is the max power output
+(W) and V is the voltage. We found that our max continuous power output could be no more than 976.8W
+for 2 minutes straight. However, we understand that our plane will not fly at 100% power for the entire
+duration of flight so we may be able to push past this limit temporarily for specific states of flight such as
+takeoff.
+
+                                                                                       39 | P a g e
+
+=== PAGE 45 | img ===
+4.4.7 Computer Aided Drawing (CAD) of Preliminary Final Concept
+
+                                     Figure 27: Preliminary Final Concept CAD
+
+                                                                                                        40 | P a g e
+
+=== PAGE 46 ===
+5   CONCLUSIONS
+The SAE AERO regular design project entails conceptualization, design, manufacturing, and flight of an
+aircraft for the SAE AERO 2026 Design competition. This aircraft, classified as “regular class”, must be
+capable of deliverable a volumetric payload of 2-liter bottles, through an all-electric propulsion system,
+while displaying proper and safe flight performance. The project deliverables are binary, where there are
+two groups of deliverables throughout the project: Capstone deliverables and competitions deliverables.
+The Capstone deliverables make up the bulk of the deliverables throughout the project, consisting of
+presentation, reports, and website checks throughout the fall and spring semester. The single major
+competition deliverable is the technical design report, wherein all technical information about the project
+is contained. The ultimate goal of this project is to succeed in competition, where in section 1.3 it is detailed
+how flight scores are achieved, followed by a study on how our team can maximize our score during
+competition.
+The regular class aircraft is also subject to several competition requirements, as well as engineering
+requirements. These requirements restrict, regulate, or otherwise govern design decisions our team may
+make. These include, but are not limited to, the geometric features of our aircraft, the allowable materials
+of the aircraft, the allowable batteries, takeoff and landing requirements, and other competition specific
+requirements. Through the use of a house-of-quality, customer requirements and engineering requirements
+are related to each other and the previously identified benchmarked in order to weigh the positive and
+negative relationships that each identified requirement has corresponding to the benchmarks.
+This project requires extensive research to develop the working design decisions of the aircraft. The process
+of research began with literature review, in which each member of the team found, at minimum, 7 legitimate
+sources to develop conceptual understanding of the problem, and build mathematical models to answer the
+make determinations about design through the problem, such as propeller count, aircraft geometry, thrust-
+to-weight/propulsion characteristics, etc.
+The design process began with a functional decomposition of 3 functions of the aircraft: pitch, steering, and
+lift. These functions were then broken down using a black box model in order to identify the components
+required to develop these functions successfully. Using these functional decompositions, each member of
+the team then generated 3 concepts for different elements and sub-components of the aircraft, such as the
+wings (geometry and ailerons), tail (geometry, rudder, and elevators), and fuselage (geometry). Once this
+was completed, the team deliberated and ruled out a single concept for each category. The remaining two
+concepts were evaluated through several mathematical modeling processes until a single concept for each
+function category remained. These final components comprise the preliminary, final design. Of course, this
+preliminary design will continue to be iterated on and improved as we continue our development and
+analysis.
+
+                                                                                         41 | P a g e
+
+=== PAGE 47 ===
+6   REFERENCES
+
+[1] SAE International, "Regular Class Design Requirements," in 2026 Collegiate Design Series SAE Aero
+Design Rules, 2026, pp. 31-33.
+[2] SAE International, “SAE Aero Design East 2025 Flight Attempts Day 1 Sponsored by the Gene Haas
+Foundation,” www.youtube.com, May 03, 2025. https://www.youtube.com/watch?v=gandHr7aDDc
+(accessed Sep. 11, 2025).
+[3] A. Sprague, “A&A's Design Build Fly team soars to new heights with historic...,” UW William E.
+Boeing Department of Aeronautics & Astronautics, Seattle, WA, June 14, 2024. [Online]. Available:
+https://www.aa.washington.edu/news/article/2024-06-14/dbf-soars-to-best-finish-ever.
+[4] M. White, "Apollo XI Model Aircraft Field located at 6201 Woodley Avenue in the Sepulveda Basin,"
+Valley Relics Museum, Facebook, Sep. 02, 2023. [Online]. Available:
+https://www.facebook.com/valleyrelics/posts/apollo-xi-model-aircraft-field-located-at-6201-woodley-
+avenue-in-the-sepulveda-b/958691826435336/
+[5] Dynam Hobby, "C-310 Grand Cruiser V2 Blue Twin Motor Scale Plane," Dynam RC, [Online].
+Available: https://www.dynamrc.com/products/c-310-grand-cruiser-v2-blue-dy8935bl
+[6] John D. Anderson Jr., “NACA Airfoil Nomenclature" in Aircraft Performance and Design 5th ed.,
+2012. [Online]. Available:
+https://soaneemrana.org/onewebmedia/AIRCRAFT%20PERFORMANCE%20AND%20DESIGN1.pdf
+[7] Martin Simmons, “Factors affecting lift and drag", in Model Aircraft Aerodynamics 5th ed., 2015, pp.
+27-44
+[8] Martin Simmons, “Airfoils: 1 Camber", in Model Aircraft Aerodynamics 5th ed., 2015, pp. 119-136
+[9] John D. Anderson Jr., “Aerodynamic lift, drag, and moments" in Aircraft Performance and Design 5th
+ed., 2012. [Online]. Available:
+https://soaneemrana.org/onewebmedia/AIRCRAFT%20PERFORMANCE%20AND%20DESIGN1.pdf
+[10] John D. Anderson Jr., “Lift, Drag, and Moment Coefficients: How They Vary" in Aircraft
+Performance and Design 5th ed., 2012. [Online]. Available:
+https://soaneemrana.org/onewebmedia/AIRCRAFT%20PERFORMANCE%20AND%20DESIGN1.pdf
+[11] Sighard F. Hoerner, Henry V. Borst, “Lift Characteristics of foil sections" in Fluid Dynamic Lift 2nd
+ed., 1985. [Online]. Available:
+https://ia801507.us.archive.org/20/items/FluidDynamicLiftHoerner1985/Fluid-
+dynamic_lift__Hoerner__1985_text.pdf
+[12] "NACA 0012 AIRFOILS (n0012-il)," Airfoil Tools, 2025. [Online]. Available:
+http://airfoiltools.com/airfoil/details?airfoil=n0012-il
+[13] Aircraft Owners and Pilots Association, "Density Altitude," AOPA, 2025. [Online]. Available:
+                                                                                     42 | P a g e
+
+=== PAGE 48 ===
+Density Altitude – AOPA
+[14] A. K. Mitra, "Propeller Airplanes," in Aircraft Performance and Design - An Introduction to
+Principles and Practice, 2nd ed., Library of Congress, 2020, pp. 115-132
+[15] A. K. Mitra, "Static Stability," in Aircraft Performance and Design - An Introduction to Principles
+and Practice, 2nd ed., Library of Congress, 2020, pp. 156-174
+[16] “Trainer Design," RCPlanes, 2025. [Online]. Available: https://rcplanes.online/design.htm
+[17] M. V. Cook, "Static Equilibrium and Trim," in Flight Dynamics Principles, 2nd ed., Massachusetts:
+Elsevier Ltd., 2007, pp. 32-57
+[18] Omron, "Technical Explanation for Servomotors and Servo Drives," [Online]. pp. 1-19 Available:
+https://www.ia.omron.com/data_pdf/guide/14/servo_tg_e_1_1.pdf
+[19] ASME Dimensioning and Tolerancing, ASME Standard Y.14M, 1994
+[20] Richard Von Mises, “Propellor and Engine” in Theory of Flight, First Edition, pp. 285-309
+[21] BadAss BA-2315-1480 “Performance Test Data”. [Online] Available:
+https://innov8tivedesigns.com/pub/propcharts/BA2315-1480-Specs.htm
+[22] Rcgroups, “Thrust to Weight Ratio”. [Online] Available:
+https://www.rcgroups.com/forums/showthread.php?2024770-thrust-to-weight-ratio
+[23] A. K. Mitra, “Thrust Required” & “Endurance" in Aircraft Performance and Design - An
+Introduction to Principles and Practice, 2nd ed., Library of Congress, 2020, pp. 202-228 & 293-296
+[24] A. K. Mitra, "Estimation of the Critical Performance Parameters" in Aircraft Performance and
+Design - An Introduction to Principles and Practice, 2nd ed., Library of Congress, 2020, pp. 406-418
+[25] John D. Anderson, Jr., "Effect of Aspect Ratio" in Fundamentals of Aerodynamics, 6th ed., Mc-Graw
+Hill, pp. 450-464
+[26] Daniel P. Raymer, “Sizing from a Conceptual Sketch" in Aerodynamic Design: A Conceptual
+Approach, 6th ed., AIAA Educational Series, pp. 11-31
+[27] E. Oberg, F. D. Jones, H. L. Horton, and H. H. Ryffel, "Rivets and Riveted Joints“ Machinery’s
+Handbook, 29th ed. New York, NY: Industrial Press, 2012. pp. 1729-1745
+[28] D. Chandra Shil, T. Ahmed, R. Mia, and N. Bej, “Design, Fabrication and Aerodynamic Analysis of a
+RC Airplane,” Radware bot manager Captcha, https://iopscience.iop.org/article/10.1088/1742-
+6596/2856/1/012002/meta (accessed Sep. 13, 2025).
+[29] D. J. Auld and K. Srinivas, “Resources,” Aerodynamics for Students,
+https://www.aerodynamics4students.com/aircraft-performance/take-off-and-landing.php (accessed Sep.
+13, 2025).
+                                                                                      43 | P a g e
+
+=== PAGE 49 ===
+[30] “Landing performance,”
+https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/class18-2012.pdf (accessed Sep.
+13, 2025).
+[31] M. H. Sadraey, “Chapter 9,” in Aircraft Design: A Systems Engineering Approach, 1st ed, vol. 1,
+Chichester, United Kingdom, 2013, pp. 508–581 (accessed Sep. 13, 2025).
+[32] A. C. Watts, V. G. Ambrosia, and E. A. Hinkley, “Unmanned Aircraft Systems in remote sensing and
+scientific research: Classification and considerations of use,” MDPI, https://www.mdpi.com/2072-
+4292/4/6/1671 (accessed Sep. 13, 2025).
+[33] A. Gupta, V. Soni, D. Shah, and A. Lakdawala, “Generative design of main landing gear for a
+remote-controlled aircraft - sciencedirect,” ScienceDirect
+[34] “FAA regulations,” FAA Regulations | Federal Aviation Administration,
+https://www.faa.gov/regulations_policies/faa_regulations (accessed Sep. 17, 2025).
+[35] R. W. Fox and J. W. Mitchell, Fox and McDonald’s introduction to fluid mechanics. Hoboken: Wiley,
+2019.
+[36] NASA, “Reynolds Number,” Nasa.gov, 2019. https://www.grc.nasa.gov/www/k-
+12/airplane/reynolds.html
+[37] SAE International, “SAE Aero Design East 2025 Flight Attempts Day 1 Sponsored by the Gene Haas
+Foundation,” www.youtube.com, May 03, 2025. https://www.youtube.com/watch?v=gandHr7aDDc
+(accessed Sep. 11, 2025).
+[38] C. Reyes, RC Advisor’s Model Airplane Design Made Easy, 1st ed. Albuquerque, N.M.:
+Rcadvisor.com, 2009, pp. 35–53.
+[39] John David Anderson, Fundamentals of Aerodynamics, 5th ed. New York: Mcgraw-Hill, 2011, pp.
+313–407.
+[40] L. Nicolai, “Estimating R/C Model Aerodynamics and Performance,” Lockheed Martin
+7Aeronautical Company, Jun. 2019.
+[41] J. G. Leishman, “Mach Number & Reynolds Number,” eaglepubs.erau.edu, p. Ch.16, Aug. 2022, doi:
+https://doi.org/10.15394/eaglepub.2022.1066.n13.
+[42] C. Locke, “Amateur-Built Aircraft and Ultralight Flight-Testing Handbook,” Federal Aviation
+Administration, Feb. 2023.
+
+[43] MATLAB. “Aircraft Design Optimization with the Fixed-Wing Object,” (2025). [Online]. Available:
+   https://www.mathworks.com/help/aerotbx/ug/aircraft-design-optimization-with-the-fixed-wing-
+   object.html
+[44] R. G. Budynas and J.K. Nisbett, “Appendixes A – Useful Tables,” in Shigley’s Mechanical
+                                                                                     44 | P a g e
+
+=== PAGE 50 ===
+   Engineering Design, 11th ed., New York: McGraw Hill, 2020, pp. 1052-1054.
+[45] A. K. Mitra, "Landing," in Aircraft Performance and Design - An Introduction to Principles and
+   Practice, 2nd ed., Library of Congress, 2020, pp. 99
+[46] MetalsDepot. “MetalsDepot – America’s Metal Superstore,” (2025). [Online]. Available:
+   https://www.metalsdepot.com/#
+
+                                                                                     45 | P a g e
+
+=== PAGE 51 | img ===
+7 APPENDICES
+7.1 Appendix A: Full House of Quality
+                                                          Table 1C: Full HoQ Zoomed Out
+
+                                                                                                                                    46 | P a g e

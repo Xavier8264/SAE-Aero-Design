@@ -1,0 +1,48 @@
+# ID: faq_list
+# SOURCE: https://saeaerodesign.com/cdsweb/rqa/BrowseFAQs.aspx
+# ORIGINAL: reference/raw/faq_list.html
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type html | 1 pages | ~362 tokens
+# NOTE: List of all official FAQs; re-fetch with --force to check for new ones
+
+=== PAGE 1 ===
+# SAE Aero Design
+
+Menu
+
+Click the button to view more details of the error.
+
+Click here to see what went wrong
+Dismiss
+
+## Browse FAQs
+
+Display by
+
+Most Viewed
+Recently Added
+
+| FAQ# | Title | Views | Status | Created on | Actions |
+
+| 170 | All Classes: Pilot Eligibility | 5661 | Published | 3/23/2017 3:15:33 PM ET | View |
+
+| 157 | Student Member Affiliation | 4341 | Published | 3/3/2016 11:40:42 AM ET | View |
+
+| 379 | Advanced Class 2025: Weight Limit | 1688 | Published | 11/20/2024 10:29:18 AM ET | View |
+
+| 392 | Advanced Class 2026: Red arming plug spacing requirement | 1484 | Published | 10/28/2025 10:42:03 AM ET | View |
+
+| 380 | Advanced Class 2025: Designated Landing Zone | 1341 | Published | 11/20/2024 10:36:38 AM ET | View |
+
+| 384 | Advanced Class 2025: Receiver System Battery Pack | 1332 | Published | 11/20/2024 11:50:22 AM ET | View |
+
+| 382 | All Classes: Controllability and Ground Steering | 1284 | Published | 11/20/2024 10:55:30 AM ET | View |
+
+| 394 | Regular Class 2026 - Increasing Bottle Payload | 561 | Published | 2/17/2026 9:44:25 AM ET | View |
+
+| 393 | Regular Class 2026: Density Altitude Breakpoints | 506 | Published | 2/2/2026 1:11:52 PM ET | View |
+
+| 395 | Regular Class 2027: Prop Diameter Constraint | 33 | Published | 9/14/2026 10:39:11 AM ET | View |
+
+| 396 | Micro Class 2027: Drag article attachment mechanism | 26 | Published | 9/14/2026 10:53:20 AM ET | View |
+
+SAE International Privacy Policy

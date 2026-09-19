@@ -1,0 +1,1163 @@
+# ID: famu_fsu_2020_report
+# SOURCE: https://eng-web1.eng.famu.fsu.edu/me/senior_design/2020/team513/docs_pdfs/Design_Report.pdf
+# ORIGINAL: reference/raw/famu_fsu_2020_report.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 30 pages | ~12706 tokens
+# NOTE: FAMU-FSU 2020 Regular design report (East): density altitude payload prediction method, no composites. Different mission year
+# FLAG img: pages 1-2,7,9,12-15,18-21,23-25,30
+# FLAG lowtext: pages 2,29
+# FLAG garbled: pages 3-5
+# TOC:
+#   Executive Summary -> PDF page 7
+#   Schedule Summary -> PDF page 8
+#   Table of Referenced Documents, References, and Specifications -> PDF page 8
+#   Design Layout & Trades -> PDF page 9
+#     Overall Design Layout and Size -> PDF page 10
+#     Design Details and Features -> PDF page 10
+#       Propulsion System -> PDF page 10
+#       Airfoil -> PDF page 11
+#       Wing Planform -> PDF page 12
+#       Landing Gear -> PDF page 13
+#     Optimization -> PDF page 14
+#       Optimization and Sensitively Analysis -> PDF page 14
+#     Interfaces and Attachments -> PDF page 16
+#   Loads and Environments Assumptions -> PDF page 16
+#     Design Loads Derivations -> PDF page 16
+#     Environmental Considerations -> PDF page 17
+#   Analysis -> PDF page 17
+#     Analytical Tools -> PDF page 18
+#     Performance Analysis -> PDF page 18
+#       Runway/Launch/Landing Performance -> PDF page 19
+#       Flight and Maneuver Performance (Incl. Surface Sizing) -> PDF page 20
+#       Dynamic & Static Stability -> PDF page 22
+#       Aeroelasticity -> PDF page 23
+#       Lifting Performance, Payload Prediction, and Margin -> PDF page 24
+#       Applied Loads and Critical Margins Discussion -> PDF page 24
+#   Assembly, Test and Integration -> PDF page 25
+#     Assembly -> PDF page 25
+#     Test and Integration -> PDF page 26
+#   Manufacturing -> PDF page 27
+#   Innovation -> PDF page 27
+#   Conclusion -> PDF page 28
+
+=== PAGE 1 | p.1 | img ===
+SAE AERO DESIGN REPORT
+
+FAMU-FSU College of Engineering
+            Team #37
+
+          Group Members:
+           Nestor Aguirre
+            Leah Evans
+        Martina Kvitkovicova
+            David Litter
+           Hebert Lopez
+             Zac Silver
+
+=== PAGE 2 | p.1 | lowtext, img ===
+
+
+=== PAGE 3 | p.1 | garbled ===
+Contents
+
+1    Executive Summary                       . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                            5
+
+2    Schedule Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                                 6
+
+3    Table of Referenced Documents, References, and Specifications                                                          . . . . . . . . . . . . .                  6
+
+4    Design Layout & Trades . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                                 7
+
+     4.1      Overall Design Layout and Size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                              8
+
+     4.2      Design Details and Features                         . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                     8
+
+              4.2.1        Propulsion System                   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                      8
+
+              4.2.2        Airfoil        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                             9
+
+              4.2.3        Wing Planform                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                      10
+
+              4.2.4        Landing Gear               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                       11
+
+     4.3      Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                        12
+
+              4.3.1        Optimization and Sensitively Analysis . . . . . . . . . . . . . . . . . . . . . .                                                        12
+
+     4.4      Interfaces and Attachments                          . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                   14
+
+5    Loads and Environments Assumptions . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                                     14
+
+     5.1      Design Loads Derivations                         . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                    14
+
+     5.2      Environmental Considerations                              . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                 15
+
+6    Analysis           . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                 15
+
+              6.0.1        Analytical Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                   16
+
+     6.1      Performance Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                          16
+
+              6.1.1        Runway/Launch/Landing Performance                                          . . . . . . . . . . . . . . . . . . . .                       17
+
+              6.1.2        Flight and Maneuver Performance (Incl. Surface Sizing) . . . . . . . . . . . .                                                           18
+
+              6.1.3        Dynamic & Static Stability . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                     20
+
+              6.1.4        Aeroelasticity             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                       21
+
+              6.1.5        Lifting Performance, Payload Prediction, and Margin                                             . . . . . . . . . . . . .                22
+
+              6.1.6        Applied Loads and Critical Margins Discussion                                          . . . . . . . . . . . . . . . .                   22
+
+                                                                                   1
+
+=== PAGE 4 | p.2 | garbled ===
+7    Assembly, Test and Integration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                               23
+
+     7.1      Assembly . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                        23
+
+     7.2      Test and Integration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                        24
+
+8    Manufacturing                  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                             25
+
+9    Innovation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                           25
+
+10 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                             26
+
+                                                                                   2
+
+=== PAGE 5 | p.3 | garbled ===
+List of Figures
+
+     1        CAD model of airplane with modular pieces secured together                                                      . . . . . . . . . . . .                 5
+
+     2        Functional Decomposition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                              7
+
+     3        Airfoil data at a Re of 200,000 over a range of angles of attack that were analyzed
+
+              to select the best airfoil for competition . . . . . . . . . . . . . . . . . . . . . . . . . .                                                        10
+
+     4        The CL/CD as a function of the angle of attack for different leading edge taper ratios 12
+
+     5        Spanwise distribution of lift on a rectangular and tapered wing                                                    . . . . . . . . . . .              13
+
+     6        Thrust stand             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                            16
+
+     7        Performance Prediction: Drag and Thrust versus Velocity . . . . . . . . . . . . . . .                                                                 17
+
+     8        Performance Prediction: Generated Lift versus Velocity                                              . . . . . . . . . . . . . . . .                   18
+
+     9        Servo torque that is necessary for different control surfaces on the airplane . . . . .                                                               19
+
+     10       Moment coefficient vs. alpha that shows airplanes dynamic stability with chang-
+
+              ing the center of gravity position on the airplane                                      . . . . . . . . . . . . . . . . . . . .                       21
+
+     11       Free Body Diagram (FBD) wing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                              22
+
+     12       Shear Force Diagram                     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                       23
+
+     13       Bending Body Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                            23
+
+     14       3D printed modular Wing                          . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                    23
+
+List of Tables
+
+     1        List of Symbols and Acronyms                              . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                   4
+
+     2        Table of References                  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                          6
+
+     3        Overall Airplane Design Specifications . . . . . . . . . . . . . . . . . . . . . . . . . .                                                               8
+
+     4        Comparison of Landing Gear Style                                . . . . . . . . . . . . . . . . . . . . . . . . . . . .                               11
+
+                                                                                   3
+
+=== PAGE 6 | p.4 ===
+Nomenclature
+
+                         Table 1: List of Symbols and Acronyms
+                Symbol                    Description
+                   L               Lift & control surface length
+                   T                        Torque
+                   F                      Static thrust
+                   C                     Control surface
+                   V                        Velocity
+                   α                     Angle of attack
+                 Cl, CL                 Coefficient of lift
+                 Cd, CD                Coefficient of drag
+                Cm , CM              Coefficient of moment
+                 CLmax           Maximum coefficient of moment
+                   s1          Maximum control surface deflection
+                   s2              Maximum servo deflection
+               Acronym                    Description
+                  SAE            Society of Automotive Engineers
+                 FAMU     Florida Agricultural and Mechanical University
+                  FSU                Florida State University
+                  3D                   Three-dimensional
+                  RC                    Radio controlled
+                  PLA                    Polylactic Acid
+                 CAD                Computer Aided Drafting
+                  FFF              Fused Filament Fabrication
+                  CG                    Center of Gravity
+                  CL                      Center Line
+                  CD                    Drag Coefficient
+                 MAC               Mean Aerodynamic Chord
+                  FBD                  Free Body Diagram
+
+                                          4
+
+=== PAGE 7 | p.5 | img ===
+1   Executive Summary
+
+The following report outlines the processes the team used to design and manufacture a radio
+
+controlled (RC) airplane for the Society of Automotive Engineers (SAE) Aero Design East com-
+
+petition. The airplane is predicted to able to carry a size five soccer ball, one pound of cargo, and
+
+takeoff in under 60 ft. The short takeoff distance is achieved by using an Eppler 423, a high-lift
+
+airfoil, for the airplane’s 6-foot wing. To be innovative, the 5.3-foot-long, 12.75 pound airplane
+
+is primarily constructed out of light weight polylactic acid (PLA) filament, a 3D printing mate-
+
+rial. This material is 50% less dense than regular PLA filaments, reducing the total weight of the
+
+airplane to increase its performance. 3D printing also allowed the team to create the airplane
+
+with a printed internal structure and external skin in modular parts. Modular parts make it
+
+easier to repair and assemble than a traditional RC airplane. The design also features a front
+
+loading cargo bay, accessible by a hinged nose cone. We used various programs to determine
+
+the data needed to create an airplane that is successful at competition and to also design the
+
+airplane itself: SOLIDWORKS, XFLR5, MATLAB, PropCalc 3.0, and Cura. The team’s design
+
+focuses on using additive manufacturing to prove that the technologies are applicable to the RC
+
+airplane community. The team’s primary focus for the competition was to showcase this innova-
+
+tive approach to design and manufacture an RC airplane with as much additive manufacturing
+
+as possible, realizing that this is not the conventional approach to the competition. The team’s
+
+airplane design can be seen in Figure 1.
+
+           Figure 1: CAD model of airplane with modular pieces secured together
+
+                                            5
+
+=== PAGE 8 | p.6 ===
+2    Schedule Summary
+
+The team, composed of four mechanical engineering students and two electrical engineering
+
+students, was assigned to this project in September 2019. Roughly one third of the available
+
+time until competition was devoted to each stage of the design process: research, develop, and
+
+implement. The schedule was created after preliminary research and development was done
+
+based off of the major components of the airplane. Each team member was then assigned to
+
+research a specific component of the airplane such as: wings, fuselage, tail, thrust, landing gear,
+
+and electronics. Once research was underway, we adjusted the schedule to allow time to design,
+
+3D print, assemble, and test the airplane before traveling to the competition in March 2020.
+
+3    Table of Referenced Documents, References, and Specifica-
+
+     tions
+
+                                         Table 2: Table of References
+
+                          Reference                                                  Description
+ (n.d.). Servo Torque Calculator. Retrieved January 18, 2020, from Purpose: Formula for calculating servo torque
+ http://www.mnbigbirds.com/Servo Torque Caculator.htm         Section(s): 6.2.2
+ Airfoiltools.com.(2020).   Retrieved  October  2019,  from Purpose: Airfoil database for analysis
+ http://airfoiltools.com/airfoil                              Section(s): 4.2.2
+ Benson, T. (2014, June 12).       Earth Atmosphere Model Purpose: Density Altitude calculation for payload prediction
+ - English Units.       Retrieved January 20,   2020,  from Section(s): 6.2.5
+ https://www.grc.nasa.gov/WWW/K-12/rocket/atmos.html
+ Drive Calculator. (n.d.). Retrieved from http://www.drivecalc.de/  Purpose: Thrust calculations
+                                                              Section(s): 6.2
+ Lennon, A. (1999). Basics of RC model aircraft design: practical tech- Purpose: Vehicle design configuration research, wing sizing cal-
+ niques for building better models. Ridgefiled, CT: Air Age Inc.  culations, and center of gravity calculations.
+                                                              Section(s): 4.2.2, 4.2.3, 4.2.4, 4.3.1, 4.3.2, 6.2.1, 6.2.3
+ Model     Aircraft    Power     System     Selection    Us- Purpose: Thrust calculations
+ ing   Your   Computer.        (n.d.).      Retrieved  from Section(s): 6.2
+ http://www.motocalc.com/tutorial/index.htmldifficult
+ Nicolai, L. M., and Carichner, G. (2010). Fundamentals of aircraft Purpose: Lift, drag, and takeoff calculations.
+ and airship design Volume 1, Aircraft design. Reston, VA: American Section(s): 6.2.2, 6.2.3
+ Institute of Aeronautics and Astronautics.
+ Past     Weather     in    Lakeland,      Florida,     USA Purpose: Past weather averages for comparison of location
+ -   March    2019.          (n.d.).        Retrieved  from Section(s): 5.2
+ https://www.timeanddate.com/weather/usa/lakeland/historic?
+ month=3&year=2019
+ Staples, G. (1970, January 1).      Propeller Static & Dy- Purpose: Thrust calculations
+ namic Thrust Calculation - Part 2 of 2 - How Did Section(s): 6.2
+ I Come Up With This Equation?               Retrieved from
+ https://www.electricrcaircraftguy.com/2014/04/propeller-static-
+ dynamic-thrust-equation-background.html
+
+                                                         6
+
+=== PAGE 9 | p.7 | img ===
+4   Design Layout & Trades
+
+To gain a better understanding of the nuances of designing an RC airplane, the team completed a
+
+functional decomposition. We collaborated to create the functional decomposition utilizing our
+
+knowledge of physics and RC airplanes. This collaboration occurred as a team brainstorming
+
+session using a whiteboard to transcribe ideas. First, the major systems were identified by con-
+
+sidering what the airplane must do fundamentally; that is to takeoff, land, and maintain flight
+
+all while carrying the designated payload. These fundamental tasks were identified as the major
+
+systems of the airplane. The minor systems were then identified based on the actions required
+
+to carry out the major functions. Highlights of the minor systems include the need to acceler-
+
+ate, generate lift, maneuver in flight, and carry a payload. Figure 2 displays the hierarchy chart
+
+created from the functional decomposition.
+
+          Figure 2: Functional decomposition hierarchy of airplane for competition
+
+We deemed that the mission critical design metrics of the airplane are the wingspan, gross take-
+
+off weight, coefficient of lift, and the thrust requirement. Each of these variables are dependent
+
+on each other and must balance as a system to achieve a successful takeoff, flight, and landing.
+
+Keeping the wing span of the airplane to less than 7 ft, the empty airplane weight to less than
+
+20 lbs, and obtaining a lift coefficient greater than 1.0 are taken to be the mission critical targets.
+
+These targets, along with the thrust force, of the airplane are interdependent as the weight of
+
+the plane dictates the minimum values of the other targets. The necessary thrust force and the
+
+coefficient of lift targets were determined through external resources, such as textbooks about
+
+                                            7
+
+=== PAGE 10 | p.8 ===
+aerodynamics and aircraft design (Lennon, 1999; see also Nicolai 2010). The aforementioned de-
+
+sign requirements were translated to a mission profile for each major component of the aircraft.
+
+The process used to achieve these design requirements as well as the resulting airplane design
+
+is outlined in the following subsections.
+
+4.1 Overall Design Layout and Size
+
+The dimensions of the overall airplane can be seen in Table 3.
+
+                      Table 3: Overall Airplane Design Specifications
+
+                    Component:               Dimension:
+                    Wingspan                 72.0 inches
+                    Wing Root Chord Length 14.0 inches
+                    Wing Tip Chord Length    10.0 inches
+                    Propeller to Tail Length  63.5 inches
+                    Propeller Size           18x10E
+                    Airfoil                  Eppler 423
+                    Wing Area                936 in2
+                    Landing Gear             Non-retractable Tricycle
+
+4.2 Design Details and Features
+
+The following section further describes our design process and selected features of the airplane.
+
+4.2.1 Propulsion System
+
+The process to design the propulsion system started with picking a motor. Per the rules of the
+
+competition, it was known that the airplane could only have a single electric motor. It was also
+
+known that the motor was limited to a maximum of 1000 W of power. With these specifications,
+
+the team did some research and narrowed down the possible electric motors to two options: The
+
+Power 60 Brushless Outrunner Motor 400 Kv and the Power 90 Brushless Outrunner Motor 325
+
+Kv. The primary factor used to pick the motor was the Kv rating. Low Kv motors are good
+
+for slower flying airplanes because a lower kV rating corresponds to a higher output torque. A
+
+higher output torque allows the team to use a larger propeller with a relatively small pitch; this
+
+is typical in short take off and landing airplanes. It was determined that the Power 90 Brushless
+
+                                           8
+
+=== PAGE 11 | p.9 ===
+Outrunner Motor 325 Kv is the best option due to its lower Kv rating which is appropriate for
+
+for our application.
+
+With the motor known, a suitable battery was researched. Per the rules of the competition, it was
+
+known that the battery had to be a commercially available 6S Lithium-Polymer battery and have
+
+a current carrying capacity of at least 3,300 mAh. With the power known (power limited to 1000
+
+W by the power limiter) and knowing that the battery must be 6S (22.2 V), it was determined
+
+that the maximum required current is 45.05 A. The battery must be able to deliver this much
+
+current to the airplane. With these constraints, the team came up with two options for batteries:
+
+(1) Onyx 22.2 V, 4000 mAh, 6S 30 C, LiPo Battery, and (2) an Admiral 4500 mAh, 6S, 22.2 V,
+
+40C LiPo Battery. Generally, a higher discharge rate is good because it gives a higher maximum
+
+discharge current, however, it is not necessary since the power is limited to 1000 W. Therefore, a
+
+lower discharge rate is preferred since it will deliver the amount of power needed. Additionally,
+
+to keep the weight down, only the essential amperage of the battery is desired since a higher
+
+mAh causes the battery to be heavier; sometimes up to a half pound heavier. Based on this,
+
+the team decided to use the Onyx 22.2 V, 4000 mAh, 6S, 30 C LiPo Battery. By multiplying the
+
+C rating with the 4 A it was calculated that this battery can deliver a maximum of 120 A. It is
+
+predicted that this battery will allow for 5.33 minutes of flight time. If 20% of the charge is left
+
+within the battery, as recommended, the airplane will have a flight time of 4.26 minutes.
+
+4.2.2 Airfoil
+
+The team researched the airfoil tools database for airfoils that would satisfy the mission profile
+
+of preforming well in low Reynolds numbers and having a gentle stall, high lift, and a moderate
+
+pitching moment. Two under-cambered airfoils, the Selig 1223 and Eppler E423, and two mod-
+
+ified flat bottom airfoils, the Clark-Y and NACA 4412, were analyzed at a Reynolds number of
+
+200,000. Figure (3) below compares the behavior of the selected airfoils for Cl/Cd, and Cm versus
+
+α. Symmetric airfoils were not considered because aerobatic maneuvers will not be performed.
+
+                                           9
+
+=== PAGE 12 | p.10 | img ===
+Figure 3: Airfoil data at a Re of 200,000 over a range of angles of attack that were analyzed to
+select the best airfoil for competition
+
+   From Figure 3, it can be seen that the under-cambered airfoils’ maximum lift coefficient is
+
+nearly double the modified flat bottom when the airfoils are plotted against their Cd values. De-
+
+spite displaying the desired quality of a moderate pitching moment and gentle stall, the Clark-Y
+
+and NACA 4412 airfoils were eliminated because of their low lift coefficient. When the Cl/Cd
+
+versus α data of the airfoils were compared, the Eppler E423 and Selig 1123 had a compara-
+
+ble maximum Cl/Cd. When the moment coefficient versus alpha of the airfoils is compared in
+
+Figure 3, the Eppler E423 is found to have a more positive and favorable Cm by approximately
+
+0.05. Although a small difference, this behavior affects the sizing of the horizontal stabilizer to
+
+balance the moment of the airplane; the more negative Cm is, the larger the horizontal stabilizer
+
+must be, thus increasing the weight of the airplane. Considering manufacturing needs, the Ep-
+
+pler E423 is also favorable because it has thicker trailing edge which increases the success of a
+
+strong 3D printed cross section. Ultimately, the Eppler E423 airfoil was chosen because it fit the
+
+teams competitive needs the best.
+
+4.2.3 Wing Planform
+
+Research through Andy Lennon’s ”Basics of RC Aircraft Design” provided insight on perfor-
+
+mance differences between various wing planform styles. The wing planform has a mission
+
+                                           10
+
+=== PAGE 13 | p.11 | img ===
+profile of uniform lift, stable flight, and low drag. Five wing planforms were researched: (1)
+
+rectangular, (2) leading edge taper, (3) trailing edge taper, (4) leading and trailing edge taper,
+
+and (5) elliptical. For the benefit of increased stability and maneuverability a high wing was
+
+selected.
+
+From research and analysis, it was found that the elliptical wing met the mission profile with the
+
+highest CL/CD value of 27 at 0 degrees alpha; however, it was eliminated as a choice due to the
+
+variable chord length that increases the design and manufacturing complexity. A rectangular
+
+wing yields the opposite result with the lowest CL/CD value of 21 at 0 degrees alpha, but the
+
+constant chord length simplifies design and manufacturing complexity. The tapered wings are
+
+considered to be a mix of the extremes of a rectangular and an elliptical wing. Furthermore, we
+
+found that the rectangular and tapered wings produced smaller CM values. This lead the team
+
+to research and select a sixth wing planform for our design: a combination of a rectangular and
+
+tapered wing. Discussion of the optimization of wing planform is further detailed in Section
+
+4.3.1.
+
+4.2.4 Landing Gear
+
+The type of landing gear an airplane utilizes effects its performance and controllability during
+
+takeoff and landing. Therefore, it was critical to gain an understanding of these effects through
+
+research using Andy Lennon’s ”Basics of RC Aircraft Design”. The team considered two styles of
+
+landing gear: (1) tricycle and (2) tail-dragger landing gear. We then analyzed which would yield
+
+better performance and controllability during takeoff and landing. A summary of our research
+
+is shown below in Table 4.
+
+                        Table 4: Comparison of Landing Gear Style
+
+                                           11
+
+=== PAGE 14 | p.12 | img ===
+A tricycle landing gear configuration was selected for the advantages of increased stability dur-
+
+ing takeoff due to the position of the wheels in relation to the CG. This in combination with
+
+having the ability to steer without using the control surfaces was deemed as an advantage over
+
+the tail-dragger configuration.
+
+4.3  Optimization
+
+4.3.1 Optimization and Sensitively Analysis
+
+After selecting the wing planform design, further optimization was required to meet the mission
+
+profile and manufacturing requirements. A wing with 50% rectangular and 50% trailing taper
+
+wing results in a straight leading edge which allows the usage of a support spar at the mean
+
+aerodynamic center for the span of the wing. Furthermore, it optimizes the 3D printing process
+
+by reducing the number of unique wing sections that need to be created. Using the program
+
+XFLR5, we performed an analysis on several taper ratios for a 50% rectangular and 50% trailing
+
+edge taper wing planform. Figures 4 and 5 below display these results.
+
+Figure 4: The CL/CD as a function of the angle of attack for different leading edge taper ratios
+
+                                           12
+
+=== PAGE 15 | p.13 | img ===
+          Figure 5: Spanwise distribution of lift on a rectangular and tapered wing
+
+Figure 4 shows how a more significant taper increases CL/CD from a value of 12 to 15 across
+
+lower angles of attack; however, this increase in CL/CD results in an increase in the speed that is
+
+needed to take-off and cruise because the overall lift that is generated by the wing is decreased.
+
+. Research by Lennon also suggests this more gradual taper will yield better performance by
+
+means of more stable flight. Sharp taper ratios typically result in aerobatic airplanes, which is
+
+not our mission profile. Because of this, the 14 in to 10 in taper that begins at half of the wing was
+
+found to be an ideal balance between lift and efficiency. Figure 5 shows how the lift value at the
+
+wing tip increases from 0.2 to 0.8, displaying the spanwise distribution of lift as more uniform
+
+on a tapered wing compared to a rectangular wing.
+
+With the wing planform selected, a MatLab script was created for optimizing the wingspan for
+
+a competitive takeoff performance. An iterative process was used to solve for the chord length,
+
+wingspan, and wing planform required to achieve the target gross takeoff weight of 15 lbs and
+
+under 100 ft takeoff distance. Wing planform area, which is a product of wingspan and chord
+
+length, was found to be the most sensitive variable for satisfying takeoff requirements because it
+
+is included in the equation for lift and takeoff velocity. Our team is constrained in chord length
+
+by the 3D printing manufacturing process because of the size of the 3D printing bed; therefore,
+
+we were restricted to a maximum chord length of 14 inches to avoid printing a separate leading
+
+and trailing edge airfoil rib. Desiring to design an airplane fitting the mission profile of a stable
+
+                                            13
+
+=== PAGE 16 | p.14 ===
+slow flying airplane resulted in a target of wing loading of 20 oz/ft2. Due to the the constraints
+
+of 3D printing, our design has a wing loading of 36 oz/ft2. However, with a wingspan of 72
+
+inches we predict our airplane will still perform to a satisfactory standard of maneuverability.
+
+4.4  Interfaces and Attachments
+
+To create the larger components of the airplane, the 3D modular pieces are secured together us-
+
+ing several different methods. The modular pieces of the airplane vary in both size and shape
+
+and use different connections throughout the plane to construct different components of the air-
+
+plane. The wings, as mentioned before, use two aluminum spars to secure the 9 in sections of the
+
+wing together under compression with the use of fasteners at each wing tip. The wing as a whole
+
+is secured to the fuselage through a form fit on top of the fuselage along with fasteners. The ser-
+
+vos within the wings are secured within their housings using screws that are tightened directly
+
+in 3D printed holes within the servo housing. Other smaller modular pieces are also secured
+
+with small screws that are screwed into 3D printed material. Glue is used sparingly around the
+
+airplane; this was done in an effort to make it easy to replace components if components are
+
+damaged.
+
+5   Loads and Environments Assumptions
+
+The following subsections explain the various design loads that the airplane will be subjected to
+
+in flight. Detailing the loads that will have the greatest impact on the airplane. Moreover, there
+
+is another section of the report that considers the weather conditions to provide the team with a
+
+general idea of the weather.
+
+5.1  Design Loads Derivations
+
+There are multiple loads acting on an aircraft such as lift, weight, drag, and thrust. The thrust
+
+performance was analyzed to confirm that the airplane will have enough force to move the
+
+airplane in air and produce lift. Thrust must overcome the drag and weight of an airplane. The
+
+                                           14
+
+=== PAGE 17 | p.15 ===
+lift characteristics was obtained using thrust calculations to find the velocity needed for takeoff.
+
+The strongest impact that will be done to the airplane while in flight will be due to the landing
+
+as the force will have to be absorbed by the landing gear. This can cause a failure and potential
+
+risk to the plane. Due to this, students have chosen a durable material to represent the landing
+
+gear that will be able to withstand a hard landing. During takeoff, the wings will have to absorb
+
+a lot of force while producing lift, therefore, as mentioned previously, the team decided for a
+
+structural addition in the form of an aluminum spar running along both wings and through the
+
+fuselage.
+
+5.2  Environmental Considerations
+
+The competition is being held in the same state as where the team is from, therefore similar
+
+weather conditions are anticipated. The past weather conditions between Tallahassee and Lake-
+
+land were looked at for the month of March. In March, the weather averages show only a few
+
+degrees difference with one less rainy day recorded (TimeandDate.com, 2019). The students
+
+assume the conditions for the competition will not have any crosswind, headwind, tailwind, or
+
+downdraft. Due to the aircraft being roughly 15 lbs, it is suitable for outdoor flight under normal
+
+wind conditions. The aircraft will undergo a series of tests for correct working condition after
+
+construction, therefore it will be able to perform to the highest standard while at the competition.
+
+6   Analysis
+
+The analysis of the airplane structure and its performance were analyzed using computer soft-
+
+ware, hand calculations, and physical testing. Different analyses were used to verify the theoret-
+
+ical performance of the airplane. Throughout the analysis, factors of safety were used to ensure
+
+that the airplane would satisfy the competition requirements, even in adverse conditions. The
+
+various analysis tools and methods allowed for us to iterate the size, shape of different compo-
+
+nents of the airplane.
+
+                                            15
+
+=== PAGE 18 | p.16 | img ===
+6.0.1 Analytical Tools
+
+Various programs such as SOLIDWORKS, XFLR5, MATLAB, PropCalc 3.0, and Cura were used
+
+when needed. XFLR5 was used to compare various airfoils and generate graphs regarding co-
+
+efficients of lift, drag, and moment. PropCalc 3.0 was used to determine the thrust provided
+
+based on motor values and various propellers. MATLAB was used to calculate the expected take
+
+off distance, drag, lift produced, the weight of the airplane, for stability and controls. SOLID-
+
+WORKS was used as the CAD program to design the entire airplane; the center of gravity was
+
+calculated using SOLIDWORKS. Cura was used to slice the segments of the airplane to be 3D
+
+printed on the team’s Lulzbot printer.
+
+6.1  Performance Analysis
+
+In order to get a more accurate idea of the propulsion system of the airplane, we built a thrust
+
+stand to test the entire system functionality and to identify which propeller generates the most
+
+static thrust given our electrical setup. Prior to testing all propellers were balanced. Figure 6
+
+shows the thrust stand that was used to test different propeller pitches and sizes. Three pro-
+
+pellers manufactured by APC were tested using this setup: (1) 16x8E, (2) 18x8E, and (3) 18x10E.
+
+                                  Figure 6: Thrust stand
+
+The thrust stand consists of two arms with a common pivot. The motor is located on the vertical
+
+arm and a scale is located below the horizontal arm. The distance of where the scale and thrust
+
+stand meet is the same distance from the pivot point as the center of thrust. This simplified the
+
+                                           16
+
+=== PAGE 19 | p.17 | img ===
+analysis as the thrust generated by the motor can be assumed to be the reading on the scale. The
+
+static thrust test was performed with all the electronic components that will be used in the air-
+
+plane, including the power limiter. From the test it was found that the maximum static thrust at
+
+full throttle for the 16x8E, 18x8E, and 18x10E was 7.694 lbs, 9.331 lbs, and 10.011 lbs, respectively.
+
+Once the static thrust was determined, equation 1 was used to determine how thrust varies with
+
+increasing velocity (Gabriel Staples – Propeller Static Dynamic Thrust Calculation). The results
+
+of this analysis is discussed in the next section.
+
+                        1.225(0.0225d)2                               2
+                   F =                   (RPM)(0.0225)(pitch)(1min                      (1)
+                               4                               60sec
+
+6.1.1 Runway/Launch/Landing Performance
+
+With the output of the propulsion system known, an estimation of takeoff performance can be
+
+found. The net thrust of our airplane was found by subtracting drag force from the dynamic
+
+thrust. Figure 7 shows our airplane theoretical performance, it assumed to be a close approxi-
+
+mation of the flight performance of our selected 18x10E propeller.
+
+             Figure 7: Performance Prediction: Drag and Thrust versus Velocity
+
+Finding the equilibrium point of the forces of thrust and drag results in the maximum obtain-
+
+able velocity of our airplane in flight: 53.5 ft/s or 36.5 mph. This value is important because it
+
+                                            17
+
+=== PAGE 20 | p.18 | img ===
+showcases the maximum capability of our design.
+
+Referencing Lee Nicolai’s White paper and the thrust calculations from the previous section, the
+
+lift and velocity required for takeoff was determined. The required equation and result of these
+
+calculations is shown in Figure 8 below (Lennon, 1999; see also Nicolai 2010).
+
+              Figure 8: Performance Prediction: Generated Lift versus Velocity
+
+When the generated lift force equals the weight of the airplane, takeoff will occur. Our airplane
+
+is designed to have a total loaded weight of nearly 15 lbs and takeoff at a velocity of 35.7 ft/s
+
+or 24.3 mph after traveling 53.4 ft. The required takeoff distance includes almost a 50% safety
+
+margin to account for added weight as a result of manufacturing while providing the option of
+
+carrying more steel plates, if feasible.
+
+6.1.2 Flight and Maneuver Performance (Incl. Surface Sizing)
+
+To be able to control the aircraft to the highest precision during flight, a performance analysis
+
+was made to ensure the 3D printed airplane will be able to maneuver correctly while both in air
+
+and on the ground. For optimum performance of an airplane, the servos must be sized correctly.
+
+The team obtained the servo’s torque from the given technical data table that came with the
+
+servo motors. The torques on the data sheet were confirmed through calculations. The torque
+
+                                            18
+
+=== PAGE 21 | p.19 | img ===
+values needed to move the control surfaces were calculated using the equation 2.
+
+                                         C2V2Lsin(s1)tan(s1)
+                          T = 8.5 ∗10−6                                               (2)
+                                               tan(s2)
+
+The equation represents C for control surface chord in cm, V for speed in mph, L for control
+
+surface length in cm, s1 for maximum control surface deflection in degrees, and s2 for maximum
+
+servo deflection in degrees. The equation produces a numerical answer in oz-in. and automati-
+
+cally converts centimeters to inches. The maximum control surface deflection is 35 degrees and
+
+maximum servo deflection is 40 degrees.
+
+     Figure 9: Servo torque that is necessary for different control surfaces on the airplane
+
+The following results for aileron, elevator, and rudder are 20.2, 21.6, and 9.19 oz-in, respectively
+
+under normal conditions. During flight, the expected speed is roughly 30 mph, however, during
+
+a windy day, the speed could increase up to 45 mph. The torque values necessary to move the
+
+control surfaces would change to 45.4, 48.5, and 20.0 oz-in for aileron, elevator, and rudder, re-
+
+spectively. The calculated torques ensure that the servos were sized correctly and should handle
+
+any situation they face during flight. In the graph above (Figure 9), the team shows a compari-
+
+son of servo torque needed during various speed conditions including wind and free-fall which
+
+would occur at 55 mph. The servos used are rated to 83.3 oz-in and are powered by a separate
+
+6 V battery. While the airplane is in air flying, all four forces are acting on it, meaning that the
+
+                                           19
+
+=== PAGE 22 | p.20 ===
+lift needs to balance its weight and the thrust produced balances the drag. At this condition, the
+
+airplane is flying at a non-variable speed in a straight pattern. During flight, the forces change
+
+as the plane changes direction. The plane must fly at a minimum speed of 25 mph for the ve-
+
+locity to maintain the current flight altitude while the maximum velocity in flight is 36.5 mph.
+
+Verification of these values is shown in the plots from Section 6.1.1
+
+6.1.3 Dynamic & Static Stability
+
+Figure 10 shows how the airplane’s stability changes with varying the location of the center of
+
+gravity (CG); this plot was made using XFLR5. From Figure 4, we explored moving the location
+
+around 30% of the mean aerodynamic chord (MAC). From the Figure 10, we see that all three
+
+locations of the CG are stable to some degree as the slope of the lines are negative. We found
+
+that locating the CG at 35% would yield a positive moment coefficient at zero angle of attack.
+
+This is not ideal as this would cause the nose of the airplane to pull upwards while the airplane
+
+is level at cruising speed which could result in the airplane going into a stall. When the CG is
+
+25% of MAC (red dashed line), we saw that the airplane has a negative moment coefficient. A
+
+negative moment coefficient is considered stable to a certain degree as the nose of the airplane
+
+naturally wants to tilt downwards. This is stable as when their is no input from the user, the nose
+
+of airplane will slightly tilt downwards and gain speed rather than going into a stall. However,
+
+a moment coefficient that is too negative will result in an airplane that is difficult to fly. A
+
+certain balance is needed to be achieved so that a great degree of user input is not needed to
+
+fly the airplane level. We decided to place our CG at 30% of the MAC because of this. We
+
+believe this will result in an airplane that is stable and easy to fly as the moment coefficient is
+
+slightly negative at zero angle of attack. The location of the CG will allow us to make slight trim
+
+adjustments to get the ideal stability of the airplane.
+
+                                            20
+
+=== PAGE 23 | p.21 | img ===
+Figure 10: Moment coefficient vs. alpha that shows airplanes dynamic stability with changing
+the center of gravity position on the airplane
+
+6.1.4 Aeroelasticity
+
+An aeroelasticity study was carried out to ensure that the airplane would be able to withstand
+
+the fluid flow when in a static and dynamic environment. This is important because lightweight
+
+airplanes are exposed to larger aerodynamic forces. When designing our airplane we had to take
+
+into account divergence, control reversal, and flutter. Divergence occurs when the aerodynamic
+
+forces causes the wings angle of attack to change resulting in increased forces. Control reversal
+
+occurs when the activation of the control surfaces causes the inverse aerodynamic moment to
+
+occur. If this occurs, the control surfaces can reduce the effectiveness of the control. Finally, flut-
+
+ter is excessive vibrations that the airplane cannot handle resulting in the failure of the airplane.
+
+To test for fluttering of the wing design; the team plans to use one of the wind tunnels available
+
+to them on campus. We can use this test to determine the speed at which fluttering will begin
+
+to occur. Knowing the speed at which fluttering occurs helps us learn the limitations of our
+
+airplane.
+
+                                            21
+
+=== PAGE 24 | p.22 | img ===
+6.1.5 Lifting Performance, Payload Prediction, and Margin
+
+As previously mentioned in Section 5.2, the team has the advantage of similar environmental
+
+conditions between our university and location of the competition. This translates to roughly the
+
+same elevation between our location than the location of competition. However, if our airplane
+
+is required to fly at another elevation it is desirable to predict the expected performance by
+
+means of how much payload it can carry. To do this, the team found the linear relationship
+
+between payload weight and density altitude. The resulting plot does not account for local
+
+weather conditions or factors that may affect takeoff performance and is shown in Appendix A.
+
+6.1.6 Applied Loads and Critical Margins Discussion
+
+To simplify our analysis, the wing was simulated as a beam. The wing could generate a max-
+
+imum of 22.5 lbs of lift traveling at maximum velocity. With a factor of safety of 1.2; the wing
+
+can generate up to 27 lbs of lift. The lift generated is distributed in two sections of the wing and
+
+the fuselage. The section of the fuselage that is connected to the wing varies in thickness, so we
+
+approximated an average thickness of 4 inches in between this two supports. Figure 11 shows
+
+the free body diagram of the wing. The weight of the fuselage which is around 15 lb acts on the
+
+two supports located at x = 34 in and x = 38 in
+
+                        Figure 11: Free Body Diagram (FBD) wing
+
+With the free body diagram we generated a shear force diagram that shows that the maximum
+
+shear force is 13.501 lb and a bending diagram with maximum bending of 229.524 lb-in
+
+                                           22
+
+=== PAGE 25 | p.23 | img ===
+     Figure 12: Shear Force Diagram                 Figure 13: Bending Body Diagram
+
+                                                Allowable
+                     Margin o f Sa f ety =                                           (3)
+                                        (Sa f ety Factor ∗Actual)−1
+
+7   Assembly, Test and Integration
+
+7.1 Assembly
+
+The airplane consists of modular pieces that need to be assembled together. Beginning with the
+
+wing; each piece is slid onto two aluminum spars that area used as supports. Half of the entire
+
+wing can be seen in Figure 14 below. The wings are put into compression by bolting end caps
+
+                           Figure 14: 3D printed modular Wing
+
+on each end of the wing. The bolts will go into the two aluminum spars. Next, the fuselage
+
+consists of three pieces. Each piece of the fuselage will have a lip that goes over the piece it
+
+                                          23
+
+=== PAGE 26 | p.24 ===
+connects to. Glue will be placed under the lip which will ensure a good connection from piece to
+
+piece. Once the fuselage has been glued and is secured together. The wings will be slid through
+
+these cut out sections on the fuselage. The wings will then be bolted down to the fuselage to
+
+ensure that they are safely secured. The boom will be constructed by screwing the 3D printed
+
+modular cylinders together. The boom will be connected to the fuselage and tail by screwing it
+
+in with the spar running slightly into both parts. The tail will be printed in seven pieces. The
+
+horizontal tail will consists of three pieces with the elevator being the fourth. The three pieces
+
+will be screwed together and the elevator will be held in place by a 3D printed male and female
+
+hinge. The vertical tail will be three pieces. Two of the pieces will be the vertical tail that is
+
+split horizontally in half. The rudder will be attached to the vertical tail. The vertical tail and
+
+horizontal tail will be bolted together.
+
+7.2  Test and Integration
+
+The test and integration of the RC airplane involves a materials test, circuit test, and flight test.
+
+The materials test involves printing tensile specimens at variable infill to determine mechanical
+
+properties such as yield strength, ultimate tensile strength, and failure point. This will help us
+
+gain an understanding of the limitation of the material for RC airplane manufacturing. A circuit
+
+test has been conducted to ensure that all electrical components are fully operational and up
+
+to safety standards as stated by SAE. The test was done using a multi-meter to ensure that the
+
+correct currents and voltages are being measured all throughout the circuit. We also made sure
+
+the red arming plug is fully functional within our circuit. A flight test will be conducted once
+
+the airplane has been fully printed and completely assembled. The flight test will show us that
+
+the airplane was accurately designed and manufactured. We will check the manoeuvrability of
+
+the airplane. We will ensure the control surfaces are fully functional.
+
+                                            24
+
+=== PAGE 27 | p.25 ===
+8   Manufacturing
+
+Manufacturing the airplane out of 3D filament was found to have as many advantages as it did
+
+disadvantages over typical RC construction techniques. The filament that is used to make the
+
+airplane was found to be more difficult than expected to dial in the settings for the 3D printers
+
+that we were provided (Lulzbot Taz 6). The lightweight PLA filament that we used to construct
+
+our airplane foams to different degrees as it printed at different nozzle temperatures. To decrease
+
+the density of the 3D printed parts we wanted to maximize the degree to which the material
+
+foamed while it was printed. We found that at 230oC the lightweight PLA increased its volume
+
+by 110% (temperature will vary based on the 3D printer that is used). Since the volume of
+
+filament extruded from the nozzle was increased, the flow rate of the filament fed through the
+
+nozzle needed to be decreased to ensure that our 3D printed parts would be dimensionally
+
+accurate. We found that by decreasing the flow rate of the filament through the nozzle by 50%
+
+resulted in parts that were dimensionally accurate. By reducing the flow rate of filament, a
+
+weight reduction of 50% is seen in all of the parts printed using the lightweight PLA filament
+
+over normal PLA.
+
+Designing is a major challenge of using additive manufacturing techniques for production of
+
+the airplane. Designing parts that can be 3D printed is difficult because you must take into
+
+consideration how it will be printed, how the walls will print, how steep the angles are, and how
+
+the parts can be placed on the print bed to be printed. To design these parts requires thinking in
+
+negative space, which is not conventional.
+
+9   Innovation
+
+We approached this competition with the mindset of innovation. The decision of using the ad-
+
+ditive manufacturing technique — fused filament fabrication — created a new challenge when
+
+it came to designing. The material used to create the airplane is lightweight PLA. A major chal-
+
+lenge of going with this method is that our airplane has to be constructed in modular pieces.
+
+Each modular piece needs to be able to be 3D printed and assembled. Therefore, when design-
+
+                                           25
+
+=== PAGE 28 | p.26 ===
+ing it is necessary to account for the print-ability. Moreover, the cargo bay features a guppy
+
+design. A guppy design involves a split of the fuselage from the nose to wing that swings open
+
+parallel to the ground once unconstrained. This is not a common method for accessing cargo
+
+when it comes to RC airplanes. We used this access method to be as innovative as possible and
+
+push the boundaries of RC airplane design.
+
+10    Conclusion
+
+This RC airplane has gone through multiple iterations of design, analysis, and soon testing. The
+
+airplane features a unique swinging hatch for front loading the cargo bay, a wing that slides
+
+through the fuselage, and a 3D printed internal structure and external skin. We believe that our
+
+airplane represents the culmination of our learning here at the FAMU-FSU College of Engineer-
+
+ing. The design of this RC airplane is meant to highlight the techniques of additive manufactur-
+
+ing for airplane manufacturing. We hope to show that 3D printing is a valid technique and aim
+
+to inspire others to take on the challenge.
+
+                                           26
+
+=== PAGE 29 | p.27 | lowtext ===
+27
+
+=== PAGE 30 | p.28 | img ===
+Appendix A - Technical Data Sheet
+
+Team Name: FAMU/FSU College of Engineering
+
+School Name: FAMU-FSU College of Engineering
+
+Team Number: 37
+
+Shown below is the plot of density altitude versus weight of the airplane, depicting the predicted
+
+payload capacity of the airplane. The steps taken to create this plot are discussed in Section 6.1.5.
+
+               Payload Prediction: Cargo Capacity as a Function of Altitude

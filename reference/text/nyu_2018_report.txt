@@ -1,0 +1,1282 @@
+# ID: nyu_2018_report
+# SOURCE: https://raw.githubusercontent.com/m-roz/SAE-Aero/master/SAE%20Aero%20Technical%20Design%20Report.pdf
+# ORIGINAL: reference/raw/nyu_2018_report.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 29 pages | ~16377 tokens
+# NOTE: NYU WingingIt 2018 Regular report: payload prediction curve, takeoff analysis. 141 in span (old rules)
+# FLAG img: pages 1,5-7,9-10,12-13,15-17,19-20,23-24
+# FLAG math: pages 6,13,15-20,27-28
+# FLAG lowtext: pages 29
+
+=== PAGE 1 | img ===
+      TECHNICAL
+
+DESIGN REPORT
+
+   TEAM WingingIt - #30
+
+   Luciana Jaalouk – Team Captain     Eduardo Hernandez
+   Juhi Singh                         Justin Talevski
+   Marc Rozman                        Shivam Suleria
+
+=== PAGE 2 ===
+                                                                                                1
+
+TABLE OF CONTENTS
+
+1.  OVERVIEW ............................................................................................................................................. 2
+  1.1   ABOUT NYU ....................................................................................................................................... 2
+  1.2   DISCRIMINATORS/INNOVATIONS.......................................................................................................... 2
+2.  EXECUTIVE SUMMARY ........................................................................................................................ 2
+3.  SCHEDULE SUMMARY .......................................................................................................................... 3
+4.  DESIGN LAYOUT AND TRADES ........................................................................................................... 3
+  4.1   WINGS................................................................................................................................................ 4
+    4.1.1 Airfoil ................................................................................................................................................ 4
+    4.1.2 Wing Planform .................................................................................................................................. 5
+    4.1.3 Chord Length and Mean Aerodynamic Chord ..................................................................................... 5
+    4.1.4 Aspect Ratio, Surface Area and Mean Standard Chord Length ............................................................. 5
+    4.1.5 Wing Tips .......................................................................................................................................... 6
+  4.2   FUSELAGE .......................................................................................................................................... 6
+  4.3   TAIL ................................................................................................................................................... 6
+    4.3.1 Horizontal Stabilizer ........................................................................................................................... 6
+    4.3.2 Vertical stabilizer ............................................................................................................................... 7
+  4.4   CONTROL SURFACE SIZING ................................................................................................................. 7
+  4.5   LANDING GEAR .................................................................................................................................. 8
+    4.5.1 Configuration Selection ...................................................................................................................... 8
+    4.5.2 Layout Design and Wheel Size ............................................................................................................ 8
+5.  ELECTRONICS ....................................................................................................................................... 9
+  5.1   BATTERY ............................................................................................................................................ 9
+  5.2   SPEED CONTROLLER AND WIRING ....................................................................................................... 9
+  5.3   SERVOS ............................................................................................................................................ 10
+  5.4   RADIO SYSTEM ................................................................................................................................. 10
+6.  POWER AND PROPULSION ................................................................................................................. 10
+  6.1   MOTOR ............................................................................................................................................ 10
+  6.2   PROPELLER ...................................................................................................................................... 11
+  6.3   THRUST ............................................................................................................................................ 11
+7.  LOADS ................................................................................................................................................... 13
+8.  FLIGHT ANALYSIS AND AIRCRAFT PERFORMANCE .................................................................... 13
+  8.1   LIFT AND DRAG ANALYSIS ................................................................................................................ 13
+    8.1.1 Lift on Airfoil and Wing ................................................................................................................... 13
+    8.1.2 Drag Analysis .................................................................................................................................. 15
+    8.1.3 Full Model CFD Simulation ............................................................................................................. 16
+  8.2   GROUND RUN AND TAKEOFF ............................................................................................................. 16
+  8.3   MASS PROPERTIES AND BALANCE ...................................................... ERROR! BOOKMARK NOT DEFINED.
+  8.4   PAYLOAD PREDICTION CURVE .......................................................................................................... 17
+  8.5   STRUCTURAL ANALYSIS ..................................................................... ERROR! BOOKMARK NOT DEFINED.
+9.  STABILITY AND CONTROL ................................................................................................................ 18
+  9.1   STATIC STABILITY ............................................................................................................................ 18
+  9.2   WEIGHT BALANCING AND BALLAST .................................................................................................. 20
+10.   MANUFACTURING ........................................................................................................................... 20
+  10.1  WINGS AND EMPENNAGE .................................................................................................................. 20
+  10.2  FUSELAGE ........................................................................................................................................ 21
+  10.3  ELECTRONICS ................................................................................................................................... 21
+  10.4  LANDING GEAR ................................................................................................................................ 21
+  10.5  ASSEMBLY ........................................................................................................................................ 22
+11.   CONCLUSION ................................................................................................................................... 23
+12.   REFERENCES .................................................................................................................................... 24
+APPENDIX A – LIST OF SYMBOLS AND ABBREVIATIONS ..................................................................... 26
+
+=== PAGE 3 ===
+                                                                                               2
+
+APPENDIX B – TECHNICAL DATA SHEET: PAYLOAD PREDICTION .................................................... 27
+APPENDIX C – 2D DRAWING ...................................................................................................................... 28
+
+   1. OVERVIEW
+
+   1.1 About NYU
+
+       Over the past decade, Mechanical and Aerospace Engineering students from New York
+
+University (NYU) have teamed up to compete in the Society of Automotive Engineers’ (SAE) Aero
+
+Design Series. NYU has traditionally done admirably well, even placing first overall in 2011 under the
+
+Advanced Class. This year, the 2018 NYU SAE Aero Design team, WingingIt, plans on maintaining the
+
+legacy and achieving a formidable rank within the Regular Class.
+
+   1.2 Discriminators/Innovations
+
+      A study of previous aircrafts enabled the team to compile their successes and apply them to this
+
+year’s design. The team chose to design large and thick wings with mixed taper in order to maximize the
+
+aspect ratio, lift and wetted area. The tapered section of the wing encompasses the ailerons. The fuselage
+
+has a unique cross-section, combining the benefits of a circular (aerodynamic) and rectangular (easy to
+
+manufacture) cross-section. The upper half is a rectangle for easy access to the cargo and passenger bays
+
+as well as wing attachment. The bottom portion is a nonagon which mimics a circular cross section,
+
+keeping mindful of manufacturing and assembly.
+
+   2. EXECUTIVE SUMMARY
+
+      The fuselage is 93.5 in long with taper in both front and back. The wings have a span of 141 in.
+
+The wings are tapered for about half of the length and have a NACA 6415 airfoil. The weight of the fully
+
+loaded aircraft containing 30 passengers is 51 lb. The maximum static thrust generated by the propeller is
+
+11 lb. With such setup and no penalties, the team is expected to achieve a score of 93.75 points in the
+
+flight portion of the competition.
+
+=== PAGE 4 ===
+                                                                                              3
+
+   3. SCHEDULE SUMMARY
+
+      The team’s formation commenced in early September and each member’s roles and
+
+responsibilities were assigned. Brainstorming and research was conducted to formulate an optimal design.
+
+Basic hand calculations solidified initial ideas and designs, serving as sanity check. 3D CAD models were
+
+build and simulated in ANSYS. The initial aircraft design was finalized in November but was continuously
+
+updated as new considerations were brought about. The materials were procured by the end of January.
+
+Manufacturing began in January and was finished by mid-February. Mechanical and Electrical tests were
+
+conducted in February. A flight test was scheduled for mid-March to ensure the airworthiness of the
+
+aircraft before it is shipped out for the competition. Below is a table of the major deliverables.
+
+                          Table 1: Schedule of Major Deliverables
+
+                            Major Deliverable           Date (mm/dd/yyyy)
+                          Airfoil Determinations            09/30/2017
+                           Initial CAD Models               10/20/2017
+                            Initial Simulations             10/31/2017
+                          Revised CAD Models                11/20/2017
+                   Final Simulations and CAD Revisions      12/30/2017
+                      Final procurement of materials        01/30/2018
+                     Wing and Empennage Fabrication         01/25/2018
+                           Fuselage Fabrication             02/05/2018
+                     Mechanical and Electrical Testing      02/15/2018
+                                Test Flight                 03/10/2018
+
+   4. DESIGN LAYOUT AND TRADES
+
+      The flowchart below provides a brief overview of the research process and trade-offs.
+
+=== PAGE 5 | img ===
+                                                                                                    4
+
+                              Figure 1: Design Process Flowchart
+
+   4.1 Wings
+       The wings are the most important component of an aircraft since they generate almost all the lift.
+
+The wings also contribute towards most of the drag in the form of both viscid and inviscid drag. For the
+
+team’s design, the wing leading edge was placed 18 in away from the front of fuselage. A high wing
+
+design relative to the fuselage was chosen because it increases lateral stability since a lower center of
+
+gravity relative to the wings helps produce a keel effect, laterally stabilizing the aircraft after a disturbance.
+
+   4.1.1 Airfoil
+       4-series NACA airfoils are were widely used in propeller driven aircrafts. Since the team’s aircraft
+
+is also, propeller driven, several NACA airfoils were simulated in the CFD package Fluent. A preliminary
+
+pool of airfoils was narrowed down to four promising airfoils based on lift and drag plots. The airfoils
+
+were tested for optimum camber, the position of the maximum camber and the thickness of the airfoil.
+
+MATLAB was used to generate the geometry of airfoils. Eventually, the NACA 6415 was selected as it
+
+provides high values of lift coefficients at low AoA and has a thick cross-section that increases mechanical
+
+strength.
+
+=== PAGE 6 | math, img ===
+                                                                                                    5
+
+   4.1.2 Wing Planform
+       The elliptical wing planform has optimal pressure distribution over the wing, resulting in minimal
+
+loss of lift over the span. However, such a shape is difficult to manufacture. An easier way to produce a
+
+similar effect is by using a wing with taper. A combination of rectangular and tapered shape with a straight
+
+leading edge was used. For the first 37.5 in, the wing is rectangular. After that, the wing starts tapering
+
+while maintaining straight leading edge. The taper ratio is 0.7 and the tapered section spans 33 in on each
+
+side. The combination also helped in retaining a higher surface area.
+
+       Three different wing planforms were simulated: fully rectangular, fully tapered (λ= 0.7) and
+
+mixed   taper (described    above). The
+
+distribution of pressure over the wing
+
+surface was estimated from simulations.
+
+The results were interpreted in terms of lift
+
+generated. The planform that showed
+
+minimum    change    in  pressure   when     Figure 2: Pressure Distribution Over the Wing
+
+following wingspan was selected. Figure 2 shows the contour plot of static pressure on the surface of the
+
+wing for the selected planform. It is observed that for most of the span, the static pressure is constant.
+
+Closer to the tip, the static pressure becomes less negative. Hence, less lift is generated at the tip. This is
+
+primarily due to the vortices. The Oswald efficiency factor, e, of such planform is assumed to be 0.85.
+
+   4.1.3 Chord Length and Mean Aerodynamic Chord
+       The chord length of the root airfoil was decided to be 24 in for achieving high surface area. Since
+
+the input power is limited, a slow speed flight was expected. Therefore, to maximize lift, surface area was
+
+increased by increasing chord length. The mean aerodynamic chord was calculated to be 22.55 in. The tip
+
+airfoil chord length is 16.8 in. The thickness of airfoil is 15% of the chord length.
+
+   4.1.4 Aspect Ratio, Surface Area and Mean Standard Chord Length
+       The overall surface area of the wing was calculated to be 21.85 ft2. The corresponding Aspect
+
+Ratio (AR) becomes 6.32. It is not surprising since the wingspan is limited. The corresponding mean
+
+standard chord length becomes 22.31 in.
+
+=== PAGE 7 | img ===
+                                                                                                    6
+
+   4.1.5 Wing Tips
+       At the end of each wing, air escapes from the high-pressure region at the bottom of the wing to the
+
+                                                      low-pressure region at the top of the wing. This
+
+                                                      produces vortices at the tips which leads to
+
+                                                      induced drag. The wing tip shape affects the
+
+                                                      spacing of these vortices. A hoerner tip increases
+
+                                                      the distance between vortex points, while
+
+Figure 3: Vortices Around the Aircraft             keeping the same span length. It is indeed the most
+
+ideal low-drag tip; however, it is difficult to manufacture. Instead, a simple flat tip was used.
+
+   4.2 Fuselage
+       A cross-sectional view of the team’s fuselage shown in
+
+Figure 4 illustrates how it facilitates manufacturing and access
+
+to various chambers, while maintaining an aerodynamical
+
+shape. The fuselage is made of 13 rings of variable size that is
+
+defined by taper of the fuselage. The rings are held together by
+
+walls. The rings, plates and other components interlock with
+                                                               Figure 4: Cross Section View
+each other like puzzle pieces. A length of the 93.5 in was chosen, which approximately 70% of the
+
+wingspan is. The upper portion of the fuselage is flat. The fuselage has a cap that comes off, allowing
+
+placement of passengers, luggage and other electronics.
+
+   4.3 Tail
+       The purpose of a tail is to counter the moments produced by the wing. The tail effectiveness is
+
+directly proportional to the lift produced by the tail and length of the tail moment arm from the center of
+
+gravity. During sizing, 65 in moment arm was used. A conventional tail arrangement was chosen because
+
+of its structural simplicity.
+
+   4.3.1 Horizontal Stabilizer
+       The horizontal stabilizer must counter pitching moments. It must be designed so that it must stall
+
+after the wings at any point during flight. The horizontal tail was set in line with the wings. The horizontal
+
+=== PAGE 8 ===
+                                                                                                    7
+
+tail has a negative incidence angle of 2 ° to trim the wing pitching moment. NACA 0013 airfoil was
+
+selected for the horizontal stabilizer. This is a symmetrical airfoil which provides both positive and
+
+negative lift throughout flight if needed. The horizontal stabilizer was sized using Raymer’s Tail volume
+
+coefficient method. The horizontal tail volume coefficient was assumed to be 0.7. The reference area was
+
+then found to be 756 in2. With the aspect ratio of 4, the span was calculated to be 55 in. A taper ratio of
+
+0.6 was chosen. The corresponding root and tip airfoil chord length becomes 17.2 in and 10.3 in.
+
+   4.3.2 Vertical stabilizer
+       The vertical stabilizer must counter yawing moments, which are most directly related to the wing
+
+mean chord. Symmetric NACA 0015 airfoil was selected to have equal yaw in both directions. The
+
+thickness ratio of this airfoil is same as that of the wings. The vertical stabilizer was also sized using
+
+Raymer’s method. A volume coefficient of 0.04 was used. The vertical stabilizer is mounted directly
+
+above the horizontal stabilizer. Hence, the moment length becomes 65 in. Thus, the area was calculated
+
+to be 273 in2. An aspect ratio of 1.5 was selected and the taper ratio was same as that of horizontal
+
+stabilizer. Hence, the height becomes 20.2 in. The root and tip chord lengths were found to be 16.9 in and
+
+10.1 in.
+
+   4.4 Control Surface Sizing
+       The control surfaces were sized according guidelines provided by Raymer. Ailerons are typically
+
+15-25% of the wing chord, located outward toward the tips to produce the greatest moment about the
+
+longitudinal axis. The ailerons for this aircraft span the entire outward tapered region with a constant chord
+
+length of 5 in. While ailerons at the outward 10% length of the wing provide little control effectiveness
+
+due to tip vortices, it was decided to extend them all the way out for aesthetic purposes.
+
+       Rudders and elevators are typically 25-50% of the tail chord. The elevators of the aircraft have 4.5
+
+in chord and span the whole length of the horizontal surfaces. Two servo motors were used in elevators to
+
+minimize the flutter. The rudder spans the entire height of the horizontal stabilizer, with a constant chord
+
+of 4.5 in that extends into a notched aerodynamic balance towards the top. An aerodynamic balance is an
+
+=== PAGE 9 | img ===
+                                                                                                  8
+
+optimized control surface geometry that extends in front of the hinge line. It is used to lessen the force
+
+required to deflect the surface and to reduce flutter tendencies.
+
+       With the servo and push rod configuration, the ailerons can deflect 25° up and 15° down. The
+
+elevators can deflect 20° up, and 15° down, while the rudder deflects up to 25° on either side.
+
+   4.5 Landing Gear
+   4.5.1 Configuration Selection
+       The positioning and design of the landing gear was determined comparing two most common
+
+configurations; the tail dragger and tricycle arrangement. Where a taildragger has two main wheels slightly
+
+forward of the aircraft’s center of gravity, and a steerable tailwheel attached to the plane’s rudder, a tricycle
+
+has a forward nose wheel used for steering, and two rear wheels. The image below shows both
+
+configurations for better understanding.
+
+                           Figure 5: Landing Gear Configurations
+       The taildragger arrangement was chosen over the tricycle arrangement because it provides greater
+
+propeller clearance, reduced parasitic drag, an increased AoA during takeoff. Thus reducing take off
+
+velocity. The trade-offs display a greater difficulty with takeoff, landing and ground steering compared to
+
+a tricycle setup.
+
+   4.5.2 Layout Design and Wheel Size
+       In order to implement this design on the team’s plane, the focus was concentrated on addressing
+
+issues that most commonly result from a tailwheel configuration. To prevent the aircraft from overturning,
+
+the main wheels were placed laterally and separately beyond a 25° angle off the center of gravity. This
+
+detail is important in the event that the center of gravity is too far behind the main wheels, the aircraft will
+
+ground loop. Similarly, if it is too forward, it may nose over. The tail down angle was designed to be about
+
+15° with the gear in its static position.
+
+=== PAGE 10 | img ===
+                                                                                                  9
+
+       To determine what size the wheels should be, maximum weight of the aircraft was first estimated
+
+to be 50 lb. The team decided that the aft tires should be about a quarter to a third of the size of the main
+
+wheels. The table below was used to select main wheels. The diameter of main wheel chosen is 4.5 in
+
+with 1.47 in width, and diameter of tailwheel is 1.67 in and 1 in width. From a simple static analysis, it is
+
+estimated that the front wheels are take about 42 lb, or 83% of the total weight at rest.
+
+                     Table 2: Wheel Appropriate Widths and Diameters
+
+   5. ELECTRONICS
+
+   5.1 Battery
+
+       A Turnigy Graphene 6S 6000 mAh lithium polymer battery with a 65C rating was chosen in
+
+accordance with competition rules. The 65C rating ensures a safe continuous discharge well above the
+
+required 45 A during flight with the power limiter installed. It also ensures that the battery will stay cool
+
+throughout operation. The battery is able to operate at maximum voltage for a long time. The 2.5 lb weight
+
+of the battery also makes it a good ballast item.
+
+       Following the general guideline of not allowing a LiPo to discharge beyond 75-80% of its full
+
+capacity, roughly 4500 mAh of charge can be provided during flight without damaging the battery and
+
+thus ensuring much reusability. The minimum flight time was calculated to be 6 min.
+
+   5.2 Speed Controller and Wiring
+
+       A Castle Talon Electronic Speed Controller (ESC) rated at 90 A is used to control the motor. It
+
+includes a built in heavy duty Battery Eliminator Circuit (BEC) that provides 6 V to the receiver and servo
+
+motors. XT90 connectors, rated for 90 A constant current, were soldered between wires to match the
+
+connector that came attached to the battery. A 12-gauge wire is used to match the gauge of the motor and
+
+ESC wires and to easily fit inside the connectors. The weakest current handling connections are at the
+
+=== PAGE 11 ===
+                                                                                                10
+
+power limiter, which uses an XT60 connector rated for 60 A, and at the red arming plug, which uses a
+
+Deans ultra-plug rated between 50 A and 60 A. All the value are above maximum current to be encountered
+
+during flight. This ensures that there will be no overheating.
+
+   5.3 Servos
+
+      A Hitec HS-645MG analog servo was selected to drive each control surface. It can deliver 8.31
+
+lb-in of torque at 6 V input. Five servos are used in total, one for each control surface (two ailerons, two
+
+elevators and a rudder). To verify that the servo is adequately capable of moving each surface, the torque
+
+was approximated as needed to move an aileron with the very conservative assumption that the expected
+
+freestream dynamic pressure acts evenly over its entire area and generates a vertical net force on its center.
+
+   5.4 Radio System
+
+      A Spektrum 2.4 GHz DX6e transmitter is paired with a Spektrum AR610 receiver. This setup
+
+allows for six channels, all of which are occupied (one throttle and five servos).
+
+   6. POWER AND PROPULSION
+
+   6.1 Motor
+
+      A motor was selected on the merits of high torque, 6S lithium polymer voltage range compatibility,
+
+and high-power rating. An E-flite Power 90 brushless electric motor was selected. It has 325 KV rating,
+
+making it capable of spinning at 8190 RPM under no load. It can continuously take 50 A of current or up
+
+to 1800 W of power. A motor with a lower KV provide more torque than a higher KV motor at the same
+
+power rating, thereby rotating a larger propeller.
+
+           During testing, it was found that with the chosen propeller, the motor overheats and begins to
+
+sporadically cut power after about two minutes at full throttle. This was for a static thrust test, and so the
+
+tendency to overheat is thought to greatly diminish as the motor is cooled by the additional free stream air
+
+during flight.
+
+=== PAGE 12 | img ===
+                                                                                               11
+
+   6.2 Propeller
+
+      The propeller is a twisted spinning airfoil that generates the thrust to move the aircraft forward. A
+
+propeller of high diameter and low pitch is ideal for a relatively low speed and high weight arrangement.
+
+It aids in quickly generating the necessary thrust for takeoff, somewhat akin to a car better able to climb
+
+a hill at low gear. After testing 20 propellers of various diameter, pitch, and shape, the Aerostar 19x6 Gas
+
+Series wood propeller was chosen for the reasons discussed below.
+
+   6.3 Thrust
+
+      Since the thrust produced by a propeller is a complex function of its
+
+geometry and must typically be experimentally derived, a thrust stand, shown
+
+in Figure 6, was built to test different propellers with the combination of
+
+motor, ESC, and battery. The working principle is that if moment arms from
+
+the axis of rotation are equal, the thrust produced by the propeller is registered
+
+as a weight by the scale. A Watt meter was used to measure the power supplied Figure 6: Thrust Stand
+
+to the motor from the battery and to ensure it does not exceed the 1000 W limit. The Propeller capable of
+
+producing the highest thrust at the lowest power was chosen for flight. The upper size range of propellers
+
+tested was slightly above what was recommended by the motor manufacturer. Table 3 below displays the
+
+results of the experiment.
+
+                               Table 3: Propeller Testing Data
+                                                                  Max      Max      Thrust
+                                          Diameter      Pitch
+                Model                                            Power    Thrust Efficiency
+                                             (in)        (in)
+                                                                  (W)      (lb)      (W/lb)
+       Master Airscrew K Series              14           6       340       4.4       77.3
+          TGS Precision Sport                14           7       330       3.9       84.6
+     Aerostar Electric Series Wood           14           7       400       4.3       93
+          TGS Precision Sport                14           8       520       4.9      106.1
+                Turnigy                      15          4.5      420       5.5       76.4
+       Master Airscrew K Series              15           6       430       5.5       78.2
+          TGS Precision Sport                15           8       500       6         83.3
+            Master Airscrew                  16           6       680       7.7       88.3
+       Master Airscrew K Series              16           8       780       8.5       91.8
+       Master Airscrew 3 Blades              16           8       980       10        98
+                 JFX                         16           8       740       8.1       91.4
+
+=== PAGE 13 | math, img ===
+                                                                                             12
+
+       Aerostar Gas Series Wood              16          8       800      8.5       94.1
+     Aerostar Electric Series Wood           17          6       740      8.5       87.1
+         Turnigy Cherry Wood                 17          8       940       10        94
+          TGS Precision Sport                17          8       700      8.4       83.3
+            Turnigy 3D Gas                   17          8       990      9.5       104.2
+     Aerostar Electric Series Wood           18          8       970       10        97
+          TGS Precision Sport                18          8       810      9.4       86.2
+       Aerostar Gas Series Wood              19          6       990      11.2      88.4
+       Turnigy Gas Series Wood               19          8       980      10.8      90.7
+
+                        Table 4: Aerostar Gas Series Propeller Data
+ Current (A)    4.3     8.3    13.3     17     21.3     27     30     35.8     39      44
+  Power (W)     100    200     300     400     500     600     700     800     900     980
+ Thrust (lb)    2.1     3.6     5       6       6.9     8      8.7     9.6    10.3    10.8
+    W/lb        47.6   55.6     60     66.7    72.5     75    80.5    83.3    87.4    90.7
+
+This chosen propeller was then tested more extensively across different throttle settings. Table 4 shows
+
+that as input power increases, the power necessary to produce a pound of thrust increases so the propulsion
+
+system become less efficient. For a discharged battery, the maximum static thrust produced drops from
+
+just over 11 lb to between 9.5-10 lb.
+
+          During flight, thrust will decrease as velocity increases. Taking the more negative slope from
+
+the plot of measured data from previous SAE teams, as indicated in Nichol’s white paper, the dynamic
+
+thrust is estimated as a function of velocity, as follows: Tdynamic= 11 −0.066V.
+
+                            Figure 7: Thrust vs. Velocity Graph
+
+=== PAGE 14 ===
+                                                                                                   13
+
+   7. LOADS
+
+       During cruise, the only forces acting on the aircraft are lift, drag, weight and thrust. Under any
+
+circumstances, the lift of the aircraft must be equal to total weight of the aircraft at that time. Almost all
+
+of the lift is generated by wings. Hence, the shaft that used to attach the wings to the fuselage must have
+
+high Young’s Modulus to prevent any plastic damage by bending moment created by wings. Considering
+
+this effect, a wooden shaft of 1 in diameter was selected. The rear spar for the wings and the spars for tail
+
+section have 0.5 in diameter. Drag is a restrictive force originating from friction and viscous effects.
+
+During flight, the thrust must be greater than or equal to drag to keep aircraft moving. The thrust generated
+
+by the chosen propeller is sufficient to overcome drag. A special attention was paid towards reinforcing
+
+the plate the holds front landing gear because not it will support most of the weight of the aircraft, but it
+
+will also face high impulsive force during landing. This will also amplify the bearing stress at the location
+
+where screws are secured. Hence, to prevent fracture, 0.25 in thick birch plywood sheets was used secured
+
+on all sides by interlocking with fuselage frame to distribute the load.
+
+   8. FLIGHT ANALYSIS AND AIRCRAFT PERFORMANCE
+
+   8.1 Lift and Drag Analysis
+
+       The pressure and shear stress acting on aircraft result in lift and drag force. Accurately predicting
+
+drag force has been a challenge for aerodynamicists for centuries. Several techniques have been developed
+
+overtime to attempt to predict lift and drag force coefficients, which are lift and drag forces normalized
+
+with respect to dynamic pressure and wetted area respectively. The upcoming section discusses the
+
+combination of modern and historical methods to estimate lift and drag coefficients of the aircraft.
+
+   8.1.1 Lift on Airfoil and Wing
+       Several NACA airfoils were generated in MATLAB and imported into Fluent. The fluid domain
+
+was made 50 times bigger than the chord length. The area near the airfoil was very densely meshed. A K-
+
+Omega SST model for turbulence was elected to accurately predict drag on the airfoil. A Reynolds number
+
+of 400,000 was picked based on the assumption of cruise speed and chord length. Standard temperature
+
+and pressure of air was chosen. The parameters for the simulation are listed in Table 5. From CFD results,
+
+=== PAGE 15 | math, img ===
+                                                                                               14
+
+it was clear that NACA 6415 and NACA 6412 have higher values of lift coefficients at different angles
+
+of attack. All the airfoils stall at between 14-16° AoA. The variation in drag coefficients was negligible at
+
+low AoA.
+
+                                                             Table 5: Simulation Parameters
+                                                           Parameter               Value
+                                                           Temperature             81 °F
+                                                             Density                    slug
+                                                                              2.375E−3
+                                                                                         ft3
+                                                       Free Stream Velocity        40 ft
+                                                                                      s
+                                                        Reynolds Number           400,000
+                                                            Pressure              0 psig
+Figure 8: Mesh of the Airfoil
+
+Figure 9: Cl vs. AoA for Airfoils                     Figure 10: Cd vs. AoA for Airfoil
+      Using a linear fit for the NACA 6415 airfoil in the region where the airfoil does not stall, the value
+
+of slope was obtained. According to the CFD results,
+
+                                Clα= 5.53518 rad−1 = 0.0966 deg−1.
+
+      This represents a slope of 2D cross section and will be valid for a wing of infinite aspect ratio.
+
+Since this is a finite AR,
+
+                              dCL     5.53518(AR)        rad−1          deg−1.
+                        CL= [ dα] =            1 = 4.054       = 0.071
+                                     2+[4+(AR)2] 2
+
+      It must be noted that the wings are tapered as well. Hence, it is expected to obtain a slightly better
+
+value for the slope of CL than the one given above. A zero-lift angle of attack represents the AoA at which
+
+=== PAGE 16 | math, img ===
+                                                                                                15
+
+no lift is produced. From experiments, the zero-lift AoA was calculated to be –5.8°. Therefore, the
+
+equation for CL can be written as
+
+                                     CL= 0.071 (α+ 5.8) (1)
+
+   8.1.2 Drag Analysis
+      There are multiple sources of drag force. In general, drag can be classified as fixed drag and
+
+induced drag. The fixed drag arises from the pressure and shear forces acting on the exposed (wetted)
+
+surface of the aircraft. Induced drag represents the drag due to lift. This induced drag can further be divided
+
+into inviscid and viscid drag. In the section below, the total drag on the aircraft is estimated.
+
+      Fixed Drag: This is also known as CDO, arising from the wetted area of the aircraft. The reference
+
+area used for calculations was the planform area of the wing. Nichol’s White paper provided by SAE
+
+provides a method to estimate the skin drag on various components of the aircraft. The table below
+
+contains the value of drag for each individual component. Hence, the CDO for the team’s aircraft is 0.02210
+
+                 Table 6: Drag Coefficients Involved with Each Component
+                                       Horizontal     Vertical
+  Component      Fuselage    Wing                                Motor    Landing Gear    Total
+                                          Tail          Tail
+
+     CDO         0.00316      0.01      0.00125       0.0005     0.0005      0.0042      0.0221
+
+      Induced Drag: This is the drag induced due to the
+
+lift. It is also known as inviscid drag, arising due to
+
+vortices. It is parabolic in nature and a function of aspect
+
+ratio of the wing and planform shape. With AR and
+
+Oswald efficiency factor known, it can be estimated as
+
+                  2     CL 2             2             Figure 11: Cl vs Cd Graph of Airfoil
+      CD,ind= KCL = π(AR)e= 0.05925 CL
+
+      Viscous Drag: This is the drag term originating from the viscous forces acting on the wing. It
+
+depends upon the airfoil used. Let CL,min be the value of lift coefficient at the AoA that has lowest value
+
+of drag coefficient. Then, according to the convention, viscous drag is approximated as
+
+                           CD,vis= K1(CL− CLmin)2 = 0.0142(CL− 0.388)2
+
+=== PAGE 17 | math, img ===
+                                                                                                16
+
+      Several other sources of drag were ignored because the flight will be in subsonic and
+
+incompressible region. The full drag equation turns out to be:
+
+                     CD= 0.0221 + 0.05925(CL)2 + 0.0142(CL−0.388)2 (2)
+
+   8.1.3 Full Model CFD Simulation
+      The assembly of the aircraft was created SolidWorks. Simulation parameters and turbulence model
+
+was kept same as that of airfoil. The following data for drag was obtained from the simulation.
+
+                          Table 7: Drag Force on Each Component
+ Component Fuselage       Wing    Tail   Rudder   Wingtip    Rudder Tip    Back   Front    Total
+
+  Drag (lb)     0.118     3.17    0.11    0.096    0.006        0.001      0.01    0.06    3.71
+
+      Following is the pie chart of lift and drag on the entire aircraft. As expected, the wings contribute
+
+towards most of the drag since lift-induced drag is dominant at low speeds.
+
+                  Figure 12: Pie Chart Showing drag on Each component
+   8.2 Ground Run and Takeoff
+
+      To estimate ground run distance, the team initially estimated the takeoff velocity. Friction was
+
+ignored during ground run, although it is present. According to the convention, take off velocity must be
+
+1.2 times larger than the stall velocity. Stall velocity is the minimum velocity at which an aircraft must be
+
+flown in order to sustain flight. It also corresponds to velocity at highest value of the lift coefficient.
+
+=== PAGE 18 | math ===
+                                                                                                  17
+
+                                                (W
+                                          √2.88 S)
+                                   VLO=              = 51 ft/s
+                                           ρCLmax,TO
+
+       Propeller efficiency represents how much torque is converted into thrust power by propeller. The
+
+team assumed a standard value of 0.85 for propeller efficiency. The maximum horsepower supplied is
+
+                                                                         VLO 3
+1.334 HP. Under these circumstances, the takeoff distance becomes d=            = 165ft.
+                                                                     1100ηpg(HP W)
+
+       It must be noted that the horizontal stabilizer also contributes towards the lift. Hence, the team is
+
+expecting a smaller take off distance. It is also important to have an idea of the drag force while take off.
+
+Using a value of 1.1 for CL, the CD can be solved by using equation (2) to be 0.1. Hence drag force becomes
+
+6.75 lb. Since the static thrust is 11 lb and dynamic thrust is 8 lb, the drag force during takeoff can be
+
+overcome easily.
+
+   8.3 Payload Prediction Curve
+
+       The amount of payload an aircraft can carry is an important consideration. For an electrical aircraft,
+
+the horsepower supplied by the motor stays constant. Hence, the lift force becomes a function of the
+
+density of the aircraft, which goes down with elevation. The lift at given elevation becomes  ρ
+                                                                                        L= ρSLLSL.
+
+The payload fraction (PF) represents the ratio of the payload to the total weight of the aircraft, as shown
+
+here          Wempty The density of air at a given elevation can be found using the formula below, where
+    PF= 1 − Wtot.
+
+P and T is pressure and temperature at given altitude:       P
+                                                   ρ=
+                                                       (1718(T+459.7))
+
+       Density altitude is defined as an altitude relative to the standard atmosphere conditions (ISA) at
+
+which the air density would be equal to the indicated air density at the place of observation. It is given by
+
+the formula below, where DA is density altitude, TSL is standard atmospheric temperature, Γ is the slope
+
+of temperature versus elevation curve (0.00356 F/ ft), R is the universal gas constant, g is earth’s gravity
+
+and M is the molecular mass of the air:
+
+=== PAGE 19 | math, img ===
+                                                                                                     18
+
+                                                            ΓR
+                                                      P   gM−ΓR
+                                          TSL        PSL
+                                    DA=        1 −(     )
+                                           Γ          T
+                                                     TSL
+                                              [                  ]
+
+       The graph for payload fraction versus density altitude, also known as the payload prediction curve,
+
+is shown below.
+
+                              Figure 13: Payload Prediction Curve
+
+   9. STABILITY AND CONTROL
+
+   9.1 Static Stability
+
+       Stability requires an aircraft to restore itself to its equilibrium position after a disturbance. Where
+
+Static stability is concerned with the aircraft’s behavior immediately after a disturbance, dynamic stability
+
+is a transient response to both a disturbance and an input command. An aircraft must be statically stable
+
+to become dynamically stable, which may not always be the case.
+
+       Longitudinal stability is the most important direction to evaluate since it is necessary for level
+
+flight. An aircraft is in equilibrium about its lateral axis if its net pitching moment is 0. The neutral point,
+
+or aft limit is the center of gravity location where the aircraft is neutral, in other words dCm  0. Therefore,
+                                                                                   dCl=
+
+=== PAGE 20 | math, img ===
+                                                                                                    19
+
+the criterion for longitudinal static stability is a center of gravity location such that dCm  0, such the
+                                                                                   dCl<
+
+center of gravity lies in front of the neutral point.
+
+       The pitching moment is taken with respect to the aerodynamic center (AC) of the wing. This is the
+
+point at which the moment does not change with angle of attack. For the chosen airfoil, AC was found to
+
+be at 25 % of MAC behind the leading edge of the wing. The variation of coefficient of moment with CL
+
+is as follows:
+
+                       dCM    (xcg    xac     (at                −dε
+                            =      −      ) −     ) (ηt)(cHT) (1       ) = 0
+                       dCL       c̅    c̅      aw                  dαw
+
+       The first term represents the stability contribution of the center of gravity with respect to the AC
+
+of the wing and the second term displays the contribution of the tail. The distances are normalized with
+
+MAC. at and aw are the slopes of the tail and wing’s coefficient of lift respectively. approximated using
+
+the following equations:        dCL      5.7684 (AR)          and       dCL               is the tail
+                          at= dα=                    = 3.56       aw= dα= 4.054 ηt
+                                               AR 2
+                                       1+√[1+( 2cosΛ) ]
+
+efficiency, assumed to be 0.8. Horizontal tail volume coefficient of 0.67 as mentioned above. dE is the
+                                                                                            da
+change in downwash angle with respect to the AoA. A typical value is 0.33. Plugging all the values in to
+
+find the location of the neutral point:
+
+             xcg               3.56 (0.8)(0.67)(1 −0.33)      0, hence:
+           (     − 0.25) − ( 4.054)                        =           xcg= N0 = 12.75 in
+            22.55
+
+       The   neutral   point   is  thus
+
+calculated to be 12.75 in (57% of MAC)
+
+from the leading edge of the wing.
+
+The static margin (SM) is the allowable
+
+distance from the neutral point to the center
+                                             Figure 14: Pictorial Representation of Various Points
+of gravity. Here it is assumed to be at a standard positive value of 10% of the MAC, so that SM=2.3 in.
+
+The design cg location is hence 10.5 in from the wing leading edge. The neutral point value was checked
+
+against two different center of gravity calculators provided online. The average neutral point obtained
+
+=== PAGE 21 ===
+                                                                                                 20
+
+from these was found to be about 29.25 in from the front, making the design center of gravity about 27 in
+
+with the assumed static margin. These are more conservative values and so are to be used instead for a
+
+higher factor of safety when flying.
+
+   9.2 Mass Balancing
+
+       After manufacturing the fuselage and final assembly prior to the test flight, it was found that the
+
+plane was significantly tail heavy. To reach the neutral point in the unloaded configuration, the center of
+
+gravity had to be shifted 5 in forward. With 12 lb of removable ballast weight placed 18 in from the front,
+
+the aircraft can operate just forward of its conservative neutral point during flight at an unloaded weight
+
+of 39 lb and operate at the design Cg with a ballast of 5 lb at a total loaded weight of 51 lb.
+
+   10. MANUFACTURING
+
+       The fabrication of the aircraft was divided into different sections: the wings and empennage, the
+
+fuselage, the wiring and the landing gear. All sections were assembled in the end.
+
+   10.1 Wings and Empennage
+       The wings and empennage are made of EPP foam core. The foam cores were covered with 0.06 in
+
+balsa wood sheets to increase strength and finally covered with Monokote film. Below is the procedure:
+
+ 1.    Foam cores were shaped according to the airfoils using a hot wire device
+
+ 2.    0.06 in balsa wood sheets were soaked in water for improved malleability
+
+ 3.    Soaked balsa wood sheets were shaped to bend around the leading edge of the wings
+
+ 4.    Wood glue was used to adhere the balsa wood sheets to the wings’ leading edge
+
+ 5.    Entire wing was coated with similar balsa wood sheets using adhesive spray
+
+ 6.    The balsa wood sheets were sanded to create a smooth surface and slots were cut for wiring
+
+ 7.    Monokote was applied using a hot iron tool and a heat gun
+
+ 8.    Flat nylon hinges were used to connect the control surfaces to the wings
+
+ 9.    Control horns were installed on the control surfaces and attached to the servos using push rods
+
+=== PAGE 22 ===
+                                                                                                21
+
+   10.2 Fuselage
+      Most of the fuselage is made with 0.13 in thick birch plywood. Various components of fuselage
+
+interlock with themselves as puzzle pieces. The following procedure was used fabricate the frame:
+
+ 1.   0.13 in birch plywood was laser cut based on CAD drawings
+
+ 2.   Mating edges were sanded for a smooth connection and were glued together using wood glue
+
+ 3.   The surfaces were temporarily held together using rubber bands and strings while the glue cured
+
+ 4.   Monokote was applied using a hot iron tool and a heat gun
+
+      The fuselage has three compartments with sub-compartments. The middle compartment contains
+
+two sections, the passengers bay and the luggage bay (cargo). The passengers were placed into laser-cut
+
+wooden slots, fitting three tennis balls in each row. The last tennis ball plate holds 2 passengers per row.
+
+The cargo bay is in front of the passenger compartment.
+
+       Ten 16-gauge 0.06 in steel metal sheets of 18 x 6 in size were purchased and used for the luggage.
+
+The metal sheets were cut into thirds to create 6 x 6 in square sheets, generating a total of 30 sheets. The
+
+edges were sanded to ensure smooth contact between each plate while stacking and prevent any injury by
+
+sharp cuts. Two 0.5 in diameter holes were drilled four inches apart, roughly one inch from two opposing
+
+corners for each plate. Two 1.25 in bolts are used to secure the luggage together with a washer and a nut.
+
+Each steel metal sheet weighs 0.55 lb.
+
+   10.3 Electronics
+      The electronics wiring is installed using the following procedure:
+
+ 1.   From the nose, wires run from the motor to the ESC reaching to the battery
+
+ 2.   The battery is wired to the receiver, the power limiter and the red arming plug
+
+ 3.   The servo extensions branched off to the five servo motors used
+
+ 4.   The servo motors were secured to their respective notches with CA glue. The extension cables
+
+were also glued together to ensure they do not disconnect during flight
+
+   10.4 Landing Gear
+      The front landing gear frame is made of aluminum with two 4.5 in diameter rubber wheels. The
+
+landing gear was screwed into 0.25 in thick sheet of birch plywood, located 2 in below the cargo
+
+=== PAGE 23 | img ===
+                                                                                                22
+
+compartment. Two 2 in long fully threaded 0.5 in diameter bolts were used to secure the front landing
+
+gear. The rear landing gear is made up of steel with a 1.75 in diameter rubber wheel. Based on this landing
+
+gear configuration, the AoA is 10°.
+
+   10.5 Assembly
+
+      The fuselage’s assembly was split into the following subassemblies: front, middle and aft section.
+
+Separating the assembly process into these three sections allowed us to work meticulously on each
+
+subassembly, while placing great attention to detail. The passenger and cargo bays were assembled first.
+
+A greater detail was paid the front and aft section because of tapering.
+
+                                Figure 15: Subassemblies of Fuselage
+      The entire assembly was put together with laser cut rings and walls that were secured with wood
+
+glue. First, one side of the framework of the passenger and cargo bay was assembled. Rings were then
+
+inserted and secured at the opposite end, locking them in place. Additional patches and hooks were added
+
+to provide reinforce any weak corners. A full day of drying time was provided before starting the next
+
+subassembly. The steps were repeated for the forward and aft section except both sub-assemblies were
+
+put together upside down, to protect the taper that occurs on the sides and bottom of the fuselage.
+
+                               Figure 16: Middle section of Fuselage
+
+      Once the fuselage was assembled, the horizontal and vertical stabilizers were glued in using
+
+wood glue. The spars were used to prevent their dislocation. The wings were kept detachable to facilitate
+
+shipping and handling.
+
+=== PAGE 24 | img ===
+                                                                                                  23
+
+   10.6 Test Integration
+
+       Prior to initiating the final assembly process, it was
+
+paramount to first create a prototype of the team’s fuselage
+
+framework. This would allow to test what parts of the
+
+fuselage needed to be reinforced or reconsidered after
+
+conducting a drop test. Due to funding and cost constraints,
+                                                          Figure 17: Fuselage Prototype
+                      the fuselage was prototyped to be one third of the size of the actual fuselage.
+
+                             Upon completing this prototype’s assembly, it was put through a drop test
+
+                      at a height of six feet off the ground. As a result, a few rings snapped, and some
+
+                      areas of the framework were dismantled. This drop test corroborated that parts of
+
+                      the fuselage needed to be reinforced in particularly weak areas of connection.
+Figure 18: Fractured
+Rings of Fuselage
+
+       A number of steps were taken afterwards to strengthen the
+
+fuselage framework. They include the double layering of birch
+
+plywood used in rings that are subject to supporting majority of
+
+the load such as rings supporting cargo bay, addition of wider
+
+struts of wood that run along the length of the fuselage and using Figure 19: Strut Implementation
+
+hooks and supports to areas that experienced breakage.
+
+   11. CONCLUSION
+
+       Team WingingIt successfully completed the design, manufacturing and testing phases of the SAE
+
+Aero Design Competition. The plane was designed to optimize the following three criteria: payload,
+
+maximum power and takeoff distance. Based on the rules of the competition, several guidelines and
+
+limitations were to be accounted for.
+
+          The shape of the fuselage was critical to maximize the carried payload, however limited the
+
+total weight. The fuselage is 93.5 in long and 9 in wide up to the tapered tail. It has 13 rings connected by
+
+=== PAGE 25 ===
+                                                                                                   24
+
+rods to ensure additional strength. The cross section was designed to trade-off between the benefits of the
+
+most aerodynamic shape (circular) and ease of manufacturing (rectangular). To compensate for the weight
+
+of the plane, the wings were designed to be almost the largest possible (within the size constraints) for
+
+maximum lift. The wing area, start of taper, and wingspan simultaneously created a high aspect ratio,
+
+hence a high coefficient of lift, notably on the wing. In addition, the wing airfoil is ideal to limit the drag
+
+force applied to the plane, and after several simulations, the NACA 6415 airfoil was chosen.
+
+          Maximum thrust is produced at the maximum allowable power provided to the motor, which
+
+is required for a high takeoff velocity and low takeoff distance. A vital component of the plane’s design
+
+lay in the use of electronics. The goal was to generate the high torque for a large propeller and so an E-
+
+flite Power 90 brushless electric motor was chosen. This was coupled with an Aerostar 19 x 6 Gas Series
+
+wood propeller after testing a multitude of brands and sizes. A high capacity 6000mAh battery with a high
+
+discharge current rating was chosen as the power supply. All things considered, the propulsion system
+
+generated 11 lb of static thrust, sufficient enough to allow the plane to take off and maintain enough power
+
+to compensate the induced drag.
+
+          The wings and fuselage were designed to optimize the amount of payload carried with the
+
+maximum thrust produced under 1000 W of power. Therefore, the largest plane possible within the specific
+
+limitations was chosen for the design. The full payload (cargo and passengers) is 19 lb with a ballast of 5
+
+lb, making for a total of 51 lb. The fuselage fits ten rows of three tennis balls each, totaling 30 passengers.
+
+With these parameters and successful flight rounds, the intended design flight score for the competition is
+
+93.75.
+
+   12. REFERENCES
+
+   (1) Raymer, Daniel P. Aircraft Design: a Conceptual Approach. American Institute of Aeronautics
+
+       and Astronautics, 2012.
+
+   (2) Hale, Francis J. Introduction to Aircraft Performance, Selection, and Design. John Wiley, 1984.
+
+=== PAGE 26 ===
+                                                                                          25
+
+(3) “Airfoil Database Search (NACA 4 Digit).” NACA 4 Digit Airfoil Database Search,
+
+   airfoiltools.com/search/index?m%5Bgrp%5D=naca4d&m%5Bsort%5D=1.
+
+(4) “Density Altitude.” Wikipedia, en.wikipedia.org/wiki/Density_altitude.
+
+(5) Anderson, John D. Fundamentals of Aerodynamics. McGraw-Hill Education, 2017.
+
+(6) Benson, Tom. “Earth Atmosphere Model - English Units.” NASA, 12 June 2014,
+
+   www.grc.nasa.gov/www/k-12/rocket/atmos.html.
+
+(7) Budynas, Richard G. Shigley ́s Mechanical Engineering Design. McGrae Hill, 2016.
+
+(8) Fluent - Flow over a 2-D Airfoil, www.mne.psu.edu/cimbala/Learning/Fluent/fluent_airfoil.htm.
+
+(9) RC Center of Gravity Calculator. https://rcplanes.online/cg_calc.htm
+
+(10) ECalc Center of Gravity Calculator. https://www.ecalc.ch/cgcalc.php
+
+(11) Hurt, Hugh Harrison. Aerodynamics for Naval Aviators. Aviation Supplies Et Academics, 2015.
+
+=== PAGE 27 | math ===
+                                                                                                      26
+
+   APPENDIX A – TABLES OF ACRONYMS, UNITS, FIGURES AND TABLES
+                      List of Acronyms                            List of Physical Units
+          Aerodynamic Center               AC                Acceleration            ft/s2
+            Angle of Attack               AoA                  Current                A
+             Aspect Ratio                  AR                  Density              slug/ft3
+             Chord Length                   c                  Energy                BTU
+          Coefficient of Drag              Cd                  Velocity              ft/s
+           Coefficient of Lift             Cl                  Length                 ft
+         Coefficient of Moment             Cm                   Mass                 Slug
+      Computation Fluid Dynamics          CFD                  Power                  W
+        Computer Aided Design             CAD                 Pressure                psi
+            Density Altitude               DA                Resistance              ohm
+        Finite Element Analysis           FEA                  Stress                 psi
+      Mean Aerodynamical Chord            MAC               Temperature               °F
+           Pressure Altitude               PA                  Thrust                lb-in
+           Reynolds Number                 Re                   Time                  s
+              Sea Level                    SL                  Torque                lb-in
+             Sweep Angle                    λ                  Voltage                V
+Table of Figures:
+Figure 1: Design Process Flowchart ............................................................................................................ 4
+Figure 2: Pressure Distribution Over the Wing ............................................................................................. 5
+Figure 3: Vortices Around the Aircraft ........................................................................................................ 6
+Figure 4: Cross Section View ..................................................................................................................... 6
+Figure 5: Landing Gear Configurations ....................................................................................................... 8
+Figure 6: Thrust Stand ............................................................................................................................. 11
+Figure 7: Thrust vs. Velocity graph ........................................................................................................... 12
+Figure 8: Mesh of the Airfoil ................................................................................................................... 14
+Figure 9: Cl vs. AoA for Airfoils .............................................................................................................. 14
+Figure 10: Cd vs. AoA for Airfoil ............................................................................................................. 14
+Figure 11: Cl vs Cd Graph of Airfoil .......................................................................................................... 15
+Figure 12: Pie Chart Showing Drag on Each component .............................................................................. 16
+Figure 13: Payload Prediction Curve ......................................................................................................... 18
+Figure 14: Pictorial Representation of Various Points ................................................................................. 19
+Figure 15: Subassemblies of Fuselage ....................................................................................................... 22
+Figure 16: Middle Section of Fuselage ...................................................................................................... 22
+Figure 17: Fuselage Prototype .................................................................................................................. 23
+Figure 18: Fractured Rings of Fuselage ..................................................................................................... 23
+Figure 19: Strut Implementation ............................................................................................................... 23
+Table of Tables:
+Table 1: Schedule of Major Deliverables ..................................................................................................... 3
+Table 2: Wheel Appropriate Widths and Diameters ...................................................................................... 9
+Table 3: Propeller Testing Data ................................................................................................................ 11
+Table 4: Aerostar Gas Series Propeller Data ............................................................................................... 12
+Table 5: Simulation Parameters ................................................................................................................ 14
+Table 6: Drag Coefficients Involved with Each Component ......................................................................... 15
+
+=== PAGE 28 | math ===
+                                                                                       27
+
+APPENDIX B – TECHNICAL DATA SHEET: PAYLOAD PREDICTION
+
+                           Pressure   Density    Density
+Elevation  Temperature                                       Lift   Payload    Payload
+                              lb        slug     Altitude
+   (ft)         (°F)         ( ft2)    ( ft3)                (lb)     (lb)    Fraction
+                                                   (ft)
+
+    0          59.00       2116.22   0.002377      0.00     45.00    18.00      0.400
+
+   200         58.29       2100.95   0.002363     200.07    44.74    17.74      0.396
+
+   400         57.57       2085.78   0.002349     400.15    44.47    17.47      0.393
+
+   600         56.86       2070.69   0.002335     600.22    44.21    17.21      0.389
+
+   800         56.15       2055.69   0.002322     800.29    43.95    16.95      0.386
+
+  1000         55.43       2040.78   0.002308    1000.37    43.70    16.70      0.382
+
+  1200         54.72       2025.96   0.002294    1200.44    43.44    16.44      0.378
+
+  1400         54.01       2011.22   0.002281    1400.51    43.18    16.18      0.375
+
+  1600         53.29       1996.57   0.002267    1600.59    42.93    15.93      0.371
+
+  1800         52.58       1982.01   0.002254    1800.66    42.67    15.67      0.367
+
+  2000         51.87       1967.53   0.002241    2000.73    42.42    15.42      0.364
+
+  2200         51.15       1953.14   0.002227    2200.80    42.17    15.17      0.360
+
+  2400         50.44       1938.83   0.002214    2400.88    41.92    14.92      0.356
+
+  2600         49.73       1924.61   0.002201    2600.95    41.67    14.67      0.352
+
+  2800         49.01       1910.48   0.002188    2801.02    41.42    14.42      0.348
+
+  3000         48.30       1896.43   0.002175    3001.09    41.18    14.18      0.344
+
+=== PAGE 29 | lowtext ===
+                                                           28
+
+APPENDIX C – 2D DRAWING

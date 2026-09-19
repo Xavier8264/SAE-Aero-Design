@@ -1,0 +1,58 @@
+# ID: apc_rpm_limits
+# SOURCE: https://www.apcprop.com/technical-information/rpm-limits/
+# ORIGINAL: reference/raw/apc_rpm_limits.html
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type html | 1 pages | ~292 tokens
+# NOTE: APC max RPM vs diameter by prop series (Thin Electric: 150000/D_in). Check since no power limiter
+
+=== PAGE 1 ===
+# RPM Limits - APC Propellers
+
+## Technical Info
+
+Home
+|
+Technical Information
+|
+RPM Limits
+
+# RPM Limits
+
+The following are suggested RPM limits for APC propellers:
+
+- Glow Engine (includes Sport and Pattern Propellers) and Speed 400 Electric (E) Propellers
+
+Maximum RPM=190,000/prop diameter (inches)
+
+(For example, a 10x6 glow engine prop should be limited to 19,000 RPM)
+
+- Thin Electric (E) Propellers and Polycarbonate (Durable) FPV Propellers
+
+Maximum RPM=150,000/prop diameter (inches)
+
+- Folding Electric (F) Propellers
+
+Maximum RPM=120,000/prop diameter (inches)
+
+- Multi-Rotor (MR) Propellers and Multi-Rotor Folding (MRF) Propellers
+
+Maximum RPM=105,000/prop diameter (inches)
+
+- Slow Flyer (SF) Propellers
+
+Maximum RPM=65,000/prop diameter (inches)
+
+- Racing Propellers (including Carbon) and Electric Carbon (EC) Propellers
+
+8.75 N, W and 8.8 Series 40 Pylon Props
+
+Sport Propellers (for IC Engines) on Electric Motors
+
+Maximum RPM=225,000/prop diameter (inches)
+
+- Racing Propellers (including Carbon) on Electric Motors
+
+8.75 N,W and 8.8 Series 40 Pylon Props on Electric Motors
+
+Maximum RPM=270,000/prop diameter (inches)
+
+Download the PDF version here.

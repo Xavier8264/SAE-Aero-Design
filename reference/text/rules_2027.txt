@@ -1,0 +1,2111 @@
+# ID: rules_2027
+# SOURCE: (local file)
+# ORIGINAL: 2027_SAE_AeroDesign_Rules_Set.pdf
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type pdf | 57 pages | ~32971 tokens
+# NOTE: OFFICIAL 2027 rules v2027.0. Regular=sec 7 (printed p.33-36), TDS=sec 4.5 (p.26), flight ops=sec 3 (p.17-20). Section NUMBERS are images and absent from text: search by heading words
+# FLAG lowtext: pages 1,57
+# FLAG img: pages 1,21,36,48
+# FLAG math: pages 40,44,50,54
+
+=== PAGE 1 | lowtext, img ===
+2027 Collegiate Design Series
+   SAE Aero Design Rules
+
+          Version 2027.0
+
+             i
+
+=== PAGE 2 ===
+                                       Forward
+      Welcome to SAE Aero Design 2027! After celebrating 40 years of competition last year, we
+move forward with a new set of aircraft design challenges and build a new opportunity for teams
+to embrace. Technical competition and project management is a hallmark of the aerospace
+industry. SAE Aero Design introduces students to the concepts of design, manufacture, and
+mission performance through an industry-like series of competition events, which require
+technical documentation, test readiness presentation, and flight competition. The flight
+competitions this year will be hosted in Florida (March) and California (April), familiar venues for
+those that have competed or volunteered previously.
+      The 2027 competition introduces a new external (high-drag) and internal (heavy weight)
+combined-payload cargo mission for the Micro Class (year 1). The Micro Class mission
+requirement creates decision points around external payload type and quantity and internal
+payload weight. The power limiter requirement is removed for this class and teams will balance
+takeoff performance (current draw) against mission endurance (battery capacity). For Regular
+Class (year 2), the maximum wingspan is reduced. For Advanced Class (year 3), the Payload
+Release mission segment option is removed pushing teams to attempt the Payload Delivery
+mission segment.
+      The SAE Aero Design Rules Committee looks forward to seeing the ingenuity, teamwork,
+and dedication of the student teams. The experience the competition provides is tailored to be
+representative of real-world process with a focus on hardware and flight demonstration in
+addition to requirements deconstruction, preliminary design, and analysis. Working on a team to
+accomplish a difficult engineering challenge and learn by doing is a key element. Cheers to all
+teams undertaking this journey.
+
+                                            ii
+
+=== PAGE 3 ===
+TABLE OF CONTENTS
+1     Competition Requirements ................................................................................................. 1
+        Introduction ...................................................................................................................... 1
+        SAE Aero Design Rules and Organizer Authority .............................................................. 1
+    Penalties ................................................................................................................................... 1
+    Rules Authority......................................................................................................................... 1
+    Rules Validity ............................................................................................................................ 2
+    Rules Compliance ..................................................................................................................... 2
+    Understanding the Rules .......................................................................................................... 2
+    Loopholes ................................................................................................................................. 2
+    Participating in the Competition .............................................................................................. 2
+    Visa--United States Visas .......................................................................................................... 2
+    Letters of Invitation .................................................................................................................. 2
+    Certificates of Participation...................................................................................................... 3
+    Violations of Intent................................................................................................................... 3
+    Right to Impound ..................................................................................................................... 3
+    Flight Operations Procedure .................................................................................................... 3
+        Society Membership and Eligibility ................................................................................... 3
+    Society Membership ................................................................................................................ 3
+    Team Pilots ............................................................................................................................... 3
+        Career Profile .................................................................................................................... 3
+        Liability Waiver and Insurance Requirements .................................................................. 4
+        Ringers Prohibited ............................................................................................................ 4
+        Design and Fabrication ..................................................................................................... 4
+        Airframe Design Requirements ......................................................................................... 4
+    Original Design ......................................................................................................................... 4
+    Unique Design .......................................................................................................................... 4
+    Airframe Eligibility .................................................................................................................... 4
+        Official Languages ............................................................................................................. 5
+        Registration Information, Deadlines, Withdrawal, and Waitlist ....................................... 5
+    Team/Class/University Policy ................................................................................................... 5
+    Individual Registration Requirements – ACTION REQUIRED .................................................... 6
+    Reservation Process ................................................................................................................. 6
+        Voluntary Withdrawal ....................................................................................................... 6
+        Waitlist .............................................................................................................................. 7
+        Deadline Policy ................................................................................................................. 7
+
+                                            iii
+
+=== PAGE 4 ===
+    Late Submission Penalty .......................................................................................................... 7
+    Automatic Withdrawal Policy ................................................................................................... 7
+        Faculty Advisor ................................................................................................................. 7
+        Questions, Complaints and Appeals ................................................................................. 8
+    Questions ................................................................................................................................. 8
+    Complaints ............................................................................................................................... 8
+    Appeal / Preliminary Review .................................................................................................... 8
+    Cause for Appeal ...................................................................................................................... 8
+    Appeal Format ......................................................................................................................... 8
+    Appeals Period ......................................................................................................................... 8
+    Appeals Committee .................................................................................................................. 8
+        Professional Conduct ........................................................................................................ 9
+    Unsportsmanlike Conduct ........................................................................................................ 9
+    Arguments with Officials .......................................................................................................... 9
+    Alcohol and Illegal Material ...................................................................................................... 9
+    Event Director’s Authority ....................................................................................................... 9
+    Ground Safety and Flight Line Safety Equipment ..................................................................... 9
+        SAE Technical Standards ................................................................................................... 9
+2     General Aircraft Requirements ......................................................................................... 11
+        Technical Definitions ...................................................................................................... 11
+        Aircraft Identification ...................................................................................................... 11
+        Prohibited Aircraft Configuration ................................................................................... 11
+        Empty CG Design Requirement and Empty CG Markings on Aircraft ............................. 11
+        Gross Weight Limit ......................................................................................................... 12
+        Controllability ................................................................................................................. 12
+        Gyroscopic and Other Stability Augmentation ............................................................... 12
+        Radio Control System ..................................................................................................... 12
+        Managing Radio Frequency ............................................................................................ 12
+        Propeller Spinners or Safety Nuts Required ................................................................... 12
+        Metal Propellers ............................................................................................................. 13
+        Lead is Prohibited ........................................................................................................... 13
+        Payload Distribution ....................................................................................................... 13
+        Aircraft Ballast ................................................................................................................ 13
+        Control Surface Looseness or Backlash .......................................................................... 13
+        Servo Sizing ..................................................................................................................... 13
+                                          iv
+
+=== PAGE 5 ===
+        Clevis Keepers ................................................................................................................. 13
+        Stored Energy Restriction ............................................................................................... 13
+        Battery Pack Restrictions ................................................................................................ 14
+        Use of Lasers ................................................................................................................... 14
+        Power Limiter ................................................................................................................. 14
+        Propulsion System Red Arming Plug ............................................................................... 14
+        Receiver System Battery Pack ......................................................................................... 15
+        Receiver System On/Off Switch ...................................................................................... 15
+        Repairs ............................................................................................................................ 15
+        Design Change Process ................................................................................................... 16
+        Alteration after Flight ..................................................................................................... 16
+3     Mission Requirements and Scoring ................................................................................... 17
+        Air Boss ........................................................................................................................... 17
+        Pilot Area ........................................................................................................................ 17
+        Flight Attempt ................................................................................................................. 17
+        Aircraft Configuration at Liftoff and During the Flight Attempt ..................................... 17
+        Competition Circuit Requirements ................................................................................. 18
+        Time Limits and Multiple Takeoff Tries ........................................................................... 18
+        On-Deck Area .................................................................................................................. 19
+        Take-off ........................................................................................................................... 19
+        Landing Requirements .................................................................................................... 19
+        Grounding an Aircraft ..................................................................................................... 20
+        Flight Rules Announcement ............................................................................................ 20
+        Flight Rules Violations ..................................................................................................... 20
+        Local Field Rules.............................................................................................................. 20
+        No-Fly Zone ..................................................................................................................... 21
+        Competition Scoring ....................................................................................................... 21
+        Aircraft Empty Weight Definition ................................................................................... 21
+4     Design Report .................................................................................................................... 22
+        Submission Deadlines ..................................................................................................... 22
+        Original Work .................................................................................................................. 22
+        Design Report Requirements .......................................................................................... 23
+                                           v
+
+=== PAGE 6 ===
+        2D Drawing Requirements .............................................................................................. 24
+    2D Format and Size ................................................................................................................ 24
+    Markings Required ................................................................................................................. 24
+    Views Required ...................................................................................................................... 24
+    Dimensions Required ............................................................................................................. 24
+    Summary Data Required ........................................................................................................ 25
+        TDS: Flight Score Prediction (Regular Class Only) ........................................................... 26
+        TDS: Sequence Diagram for Payload Delivery/Capture (Advanced Class Only) .............. 28
+        TDS: Aircraft Performance Prediction (Micro Class Only) ............................................... 29
+5     Flight Demonstration Readiness Review ........................................................................... 30
+        Presentation Requirements ............................................................................................ 30
+        Presentation Process and Procedures ............................................................................ 31
+6     Requirements Check & Safety and Airworthiness Inspection ........................................... 32
+        Aircraft Conformance to 2D Drawing ............................................................................. 32
+        Deviations from 2D Drawing ........................................................................................... 32
+        Safety and Airworthiness of Aircraft ............................................................................... 32
+        Inspection of Spare Aircraft and Spare Aircraft Components ......................................... 33
+        Aircraft Shall Maintain Compliance Throughout the Competition. ................................ 33
+        Requirements Check & Safety and Airworthiness Inspection Penalties ......................... 33
+7     Regular Class Design Requirements .................................................................................. 34
+        Aircraft Dimension Requirement .................................................................................... 34
+        Material and Equipment Restrictions for Regular Class ................................................. 34
+    Fiber-Reinforced Plastic (FRP) ................................................................................................ 34
+    Rubber Bands ......................................................................................................................... 34
+        Propulsion System Requirements ................................................................................... 34
+    Electric Motor Requirements ................................................................................................. 34
+    Gearboxes, Drives, and Shafts ................................................................................................ 34
+    Aircraft Propulsion System Battery ........................................................................................ 34
+    Propeller Requirements ......................................................................................................... 34
+    Power Limiter ......................................................................................................................... 34
+        Payload Requirements .................................................................................................... 35
+    Bottle Cargo ........................................................................................................................... 35
+    Cargo Bay Requirements ........................................................................................................ 35
+        Regular Class Payload Unloading .................................................................................... 35
+        Regular Class Scoring ...................................................................................................... 36
+
+                                          vi
+
+=== PAGE 7 ===
+8     Advanced Class Design Requirements ............................................................................... 37
+        Aircraft Dimension Requirement .................................................................................... 37
+        Aircraft System Requirements ........................................................................................ 37
+    Propulsion Requirements ....................................................................................................... 37
+    Gearboxes, Drives, and Shafts ................................................................................................ 37
+    Aircraft Propulsion System Battery ........................................................................................ 37
+    Power Limiter ......................................................................................................................... 37
+    Rubber Bands ......................................................................................................................... 37
+        Video Documentation of Proven Operational Ability for Advanced Class ...................... 37
+        Mission Description ........................................................................................................ 38
+        Aircraft Payload Requirements ....................................................................................... 39
+        Designated Landing Zone (DLZ) ...................................................................................... 39
+    Designated Landing Zone shall conform to the following requirements ............................... 40
+        Autonomous Flight ......................................................................................................... 40
+        Autopilot / Autonomous Flight System ........................................................................... 41
+        First Person View System (FPV) ...................................................................................... 41
+        Payload Delivery and Recovery Operator (PO) ............................................................... 41
+        Advance Class Scoring .................................................................................................... 42
+9     Micro Class Design Requirements ..................................................................................... 43
+        Aircraft Dimension Requirements .................................................................................. 43
+        Aircraft Systems Requirements ...................................................................................... 43
+    Propulsion Requirements ....................................................................................................... 43
+    Aircraft Propulsion System Battery ........................................................................................ 43
+    Propeller Requirements ......................................................................................................... 43
+    Propeller and Gearbox ........................................................................................................... 43
+    Power Limiter ......................................................................................................................... 43
+        External Drag Article Attachment Requirements ........................................................... 43
+        Payload Requirements .................................................................................................... 44
+    1. Types of Cargo.................................................................................................................... 44
+    2. Drag Article Design and Fabrication .................................................................................. 44
+    3. Drag Article Requirements ................................................................................................ 44
+    4. Internal Payload Bay Requirements .................................................................................. 44
+    5. Internal Payload Requirements ......................................................................................... 45
+        Micro Class Payload Unloading ....................................................................................... 45
+        Micro Class Flight Scoring ............................................................................................... 46
+
+                                          vii
+
+=== PAGE 8 ===
+Appendix A - Statement of Compliance ........................................................................................ 47
+Appendix B - Appeals ..................................................................................................................... 48
+Errata ........................................................................................................................................... 49
+
+                                        viii
+
+=== PAGE 9 | p.1 ===
+1 COMPETITION REQUIREMENTS
+
+          INTRODUCTION
+   Official Announcements and Competition Information
+   The SAE Aero Design competition provides engineering students with a real-world aircraft
+   design challenge. Industry professionals develop these rules with a focus on educational
+   value and hands-on experience. The rules compress a typical aircraft development program
+   into one academic year. This competition exposes participants to conceptual design,
+   manufacturing, system integration/test, and verification through demonstration.
+   SAE Aero Design features three competition classes—Regular, Advanced, and Micro.
+       1. Regular Class develops a fundamental understanding of aircraft design by focusing
+          on heavy and volumetric payload, leveraging all-electric, multi-motor propulsion
+          while balancing power and endurance.
+       2. Advanced Class develops advanced aircraft integration skills to execute precision
+          payload delivery and recovery, leveraging concepts such as autonomous flight and
+          flight mode transition in an all-electric aircraft.
+       3. Micro Class develops aircraft design trade-offs to optimize takeoff performance and
+          multiple payload types, pushing the limits of small-form-factor, all-electric aircraft
+          design.
+
+          SAE AERO DESIGN RULES AND ORGANIZER AUTHORITY
+   General Authority
+   The competition organizing bodies consist of SAE International, Inc. and the SAE Aero
+   Design Industry Advisory Board (which includes Event Directors and Rules Committee). The
+   competition organizing bodies reserve the right to revise the competition schedule and/or
+   interpret or modify the rules at any time and in any manner, that is, in their sole judgment,
+   required for efficient and safe operation of the event or the SAE Aero Design series.
+     Penalties
+          The competition organizing bodies reserve the right to modify the points and/or
+          penalties listed in various event descriptions; to accurately reflect the operational
+          execution of events, or any special conditions unique to the site.
+     Rules Authority
+          The SAE Aero Design Rules are the responsibility of the SAE Aero Design Industry
+          Advisory Board Rules Committee and are issued under the authority of the SAE
+          Collegiate Design Series. Official announcements from the competition organizing
+          bodies shall be considered part of and have the same validity as these rules.
+          Ambiguities or questions concerning the meaning or intent of these rules will be
+          resolved by the SAE Aero Design Industry Advisory Board Rules Committee or SAE
+          International Staff.
+
+                                                          SAE Aero Design 2027 – Page: 1
+
+=== PAGE 10 | p.2 ===
+Rules Validity
+    The SAE Aero Design Rules (www.saeaerodesign.com/go/downloads) dated for the
+    academic year of the competition are the rules in effect. Rule sets dated for prior
+    competition years are invalid.
+Rules Compliance
+    By entering an SAE Aero Design competition, the team members, Faculty Advisors
+    and other personnel of the registered university agree to comply with, and be bound
+    by, the rules and all rules interpretations or procedures issued or announced by the
+    competition organizing bodies. All team members, Faculty Advisors and other
+    university representatives are required to cooperate with and follow all instructions
+    from the competition organizing bodies.
+Understanding the Rules
+    Teams are responsible for reading and understanding the rules in their entirety. The
+    section and paragraph headings in these rules are provided to facilitate reading and
+    do not affect the paragraph contents.
+Loopholes
+    Anticipating a comprehensive design space covering all possibilities and potential
+    questions about the aircraft’s design parameters or the conduct of the competition
+    is virtually impossible. Safety remains paramount during any SAE International
+    competition. Any perceived loopholes will be resolved in the direction of increased
+    safety. When in doubt, please contact the SAE Aero Design Rules Committee using
+    the FAQ forum early to avoid design impacts at competition.
+Participating in the Competition
+    Teams, team members as individuals, Faculty Advisors and other representatives of
+    a registered university who are present on-site for competition are “participating in
+    the competition” from the time they arrive until they depart the site at the
+    conclusion of the competition or earlier by withdrawing.
+Visa--United States Visas
+    Teams requiring visas to enter to the United States are advised to apply at least sixty
+    (60) days prior to the competition. Although most visa applications go through
+    without an unreasonable delay, occasionally teams have difficulties and may not be
+    issued visas before the competition.
+       AFFILIATED STUDENT TEAM MEMBERS WILL HAVE THE ABILITY TO PRINT A
+       REGISTRATION CONFIRMATION LETTER FOR THE INDIVIDUAL EVENT(S) THEY
+       ARE ATTENDING. ONCE A STUDENT TEAM MEMBER AFFILIATES THEMSELVES
+       TO THEIR TEAM PROFILE PAGE UNDER THEIR INDIVIDUAL EDIT SECTION, THEY
+       WILL HAVE THE OPPORTUNITY TO PRINT THEIR PERSONALIZED LETTER WITH
+       THE FOLLOWING INFORMATION: STUDENT’S NAME, SCHOOL’S NAME, THE CDS
+       EVENT NAME, OFFICIAL DATES AND LOCATION(S).
+Letters of Invitation
+    Neither SAE International staff nor any SAE Aero Design Industry Advisor Board
+    members are permitted to give advice on visas, customs regulations or vehicle
+    shipping regulations concerning the United States or any other country.
+                                                    SAE Aero Design 2027 – Page: 2
+
+=== PAGE 11 | p.3 ===
+  Certificates of Participation
+      SAE International and Event Directors do not create Participation Certificates outside
+      of the auto-generated certificate on your team profile page at http://www.sae.org/.
+      Certificates are available once students are affiliated to the current competition’s
+      team. Certificates will not be available once that competition year closes.
+  Violations of Intent
+      A violation of the intent of a rule will be considered a violation of the rule itself.
+      Questions about the intent or meaning of a rule may be addressed to SAE Aero
+      Design Rules Committee members or SAE International Staff.
+  Right to Impound
+      The competition organizing bodies reserve the right to impound any on-site
+      vehicle/aircraft/component at any time during competition for inspection and/or
+      rules adjudication.
+  Flight Operations Procedure
+      Refer to the SAE Aero Design Operations Procedure document for information on
+      competition operations, safety, and procedures for flight attempts, line etiquette,
+      flight log management.
+
+       SOCIETY MEMBERSHIP AND ELIGIBILITY
+  Society Membership
+      Individual team members shall be members of SAE International or an SAE
+      International affiliate society. Proof of membership, such as a membership card, is
+      required at the event. Students may join online at:
+      https://www.sae.org/participate/membership/join
+      Teams shall read the articles posted on the SAE Aero Design News Feed
+      (www.saeaerodesign.com/go/news) by SAE International and the other organizing
+      bodies. Teams shall be familiar with all official announcements concerning the
+      competition and rule interpretations released by the SAE Aero Design Rules
+      Committee.
+  Team Pilots
+      Team pilots are not required to be students or SAE International members; however,
+      all pilots shall be current members of the Academy of Model Aeronautics or the
+      Model Aircraft Association of Canada (AMA has an agreement with MAAC). Valid
+      AMA membership cards shall be presented at competition prior to flying any team’s
+      aircraft. Non-US pilots can obtain a discounted AMA Affiliate membership covering
+      flying activities while in the US by going to the AMA web site and submitting the
+      following form: https://www.modelaircraft.org/files/902.pdf.
+
+       CAREER PROFILE
+All student team members shall complete and maintain a current Career Profile on
+https://saeaerodesign.com/. Completion of the Career Profile is a mandatory participation
+requirement.  Students who have not completed their Career Profile before onsite
+registration may be prohibited from participating in competition activities until the
+
+                                                       SAE Aero Design 2027 – Page: 3
+
+=== PAGE 12 | p.4 ===
+requirement has been satisfied. Information on completing Career Profile inputs can be
+found here: Student Career Profile - Community Programs SPRT - Confluence.
+
+       LIABILITY WAIVER AND INSURANCE REQUIREMENTS
+All on-site participants and Faculty Advisors are required to sign a liability waiver, which is
+part of their Fast-Track Registration Form that can be printed off their team registration
+page. Individual medical and accident insurance coverage is the sole responsibility of the
+participant.
+
+       RINGERS PROHIBITED
+To maintain the integrity of the competition, the Faculty Advisor(s) shall prohibit ringers. A
+ringer is someone with exceptional skills related to the competition (e.g., a professional
+model builder) that is not a legal member of the team but helps the team earn points.
+
+       DESIGN AND FABRICATION
+The aircraft shall be designed and built by SAE International student members without
+direct involvement from professional engineers, radio-control model experts, pilots,
+machinists, or related professionals. The students may use any literature or knowledge
+related to R/C aircraft design and construction and information from professionals or from
+professors, as long as the information is given as a discussion of alternatives with pros and
+cons and is acknowledged in the references in the design report. Professionals may not
+make design decisions, nor contribute to the drawings, the report, or the construction of
+the aircraft. The Faculty Advisor shall sign the Statement of Compliance given in the
+Appendix.
+
+       AIRFRAME DESIGN REQUIREMENTS
+  Original Design
+  Any aircraft presented for competition shall be an original design conceived by student
+  team members. Photographic scaling of an existing model aircraft design is prohibited.
+  Use of major components such as wings, fuselage, or empennage of existing model
+  aircraft kits is prohibited. Use of standard model aircraft hardware such as motor
+  mounts, control horns, and landing gear is allowed.
+  Unique Design
+  Universities may enter one team per class in each SAE Aero Design competition, but each
+  entry shall be a unique design, significantly different from each other. If the aircraft are
+  not significantly different in the opinion of the competition organizing bodies, then the
+  university will be considered to have only a single entry and only one of the teams and its
+  aircraft will be allowed to participate in the competition. For example, two aircraft with
+  identical wings and fuselages but different empennages would not be considered
+  significantly different. For guidance regarding this topic, please submit a rules question
+  at www.saeaerodesign.com.
+  Airframe Eligibility
+  Airframes will only be allowed to compete during a single academic year. An airframe
+  may be entered in both SAE Aero Design East and SAE Aero Design West during the same
+  academic year, but that same airframe may not be used in either competition during the
+                                                       SAE Aero Design 2027 – Page: 4
+
+=== PAGE 13 | p.5 ===
+  following year. Entering the same airframe in SAE Aero Design West one year and SAE
+  Aero Design East the next year is not allowed.
+  An airframe is considered “entered to competition” during an academic year once design
+  documentation is submitted. If the airframe does not fly at competition during that
+  same academic year, the airframe is not eligible for competition during future academic
+  years.
+  The airframe shall be designed within eleven (11) months of competition and
+  constructed within nine (9) months of competition. The airframe includes the fuselage,
+  wings, and tail.
+
+       OFFICIAL LANGUAGES
+The official language of SAE Aero Design series is English. Document submissions,
+presentations and discussions in English are required at all US competitions in the series.
+
+       REGISTRATION INFORMATION, DEADLINES, WITHDRAWAL, AND WAITLIST
+SAE will use a Lottery System for registration again in 2027. Teams intending to participate
+in the SAE Aero Design competitions shall sign up during the Lottery Interest Window per
+the registration schedule in Table 1.1. The lottery will close September 30 with registration
+and waitlist positions published on October 01. All teams that secure a registration spot
+when the lottery is published will be invoiced within 24 hours. By registering, the registered
+University assumes liability of the student project. Teams will sign up for the interest
+window at https://www.saeaerodesign.com/cdsweb/reg/Upcomingcomplist.aspx
+Table 1.1: Registration Schedule
+Event               Process                  Start (Open)        End (Closed)
+Lottery Interest    Teams register interest  September 16, 2026 September 30, 2026
+Window              for competition location  10:00:00 AM EST    11:59:59 PM EST
+                    and classes for 2026
+Lottery Published   Registration spots are                       October 01, 2026
+                    assigned and published                       12:00 PM Eastern
+                    via lottery.
+Registration Closes  Any open registration                       November 30, 2026
+for 2027 Season     spots after the lottery
+                    runs will remain
+                    available on-demand
+                    until this date.
+
+The registration fee is non-refundable and failure to meet these deadlines will be
+considered a failure to qualify for the competition. Separate entry fees are required for
+each event.
+  Team/Class/University Policy
+      A university or college may only have one team registered per class. The registration
+      fees shall be paid within two (2) business days of registration invoicing to be eligible
+      for competition. Invoicing will take place once a team secures a registration spot,
+      either when the lottery results are published or at any point afterward.
+                                                        SAE Aero Design 2027 – Page: 5
+
+=== PAGE 14 | p.6 ===
+  Individual Registration Requirements – ACTION REQUIRED
+      A team member shall be enrolled as degree seeking undergraduate or graduate
+      student at the college or university of the team with which they are participating.
+      Team members who have graduated during the seven (7) months prior to the
+      competition remain eligible to participate.
+      When registering, only the student or Faculty Advisor completing the registration
+      needs to be linked to the college or university. All other students and faculty can
+      affiliate after registration has been completed; however this shall be completed no
+      later than two (2) weeks before the flight competition start date.
+      All participating team members and Faculty Advisor(s), both domestic and
+      international, shall individually affiliate to their respective college or university on
+      the SAE International website (http://www.sae.org/) Team Profile page.
+      If you are not an SAE International member, go to http://www.sae.org and select the
+      “Membership” link. Students will select “Student Membership” and answer the
+      questions. All student participants shall be members of one of the organizations
+      listed in Section 1.3 to participate.
+      Faculty members who wish to become SAE International members will select
+      “Professional Membership”. This is not mandatory for Faculty Advisors.
+      Each team member may participate for only one team. If the university or college is
+      entering multiple classes, team members shall choose only one team to affiliate and
+      participate with in the competition. For example, students cannot compete as part
+      of a Micro class team and an Advanced class team.
+  Reservation Process
+      Teams placing within the top three (3) overall in their class during the previous
+      competition year will receive a reserved spot. While these reservations will be
+      populated on the back end of the SAE system, all eligible teams MUST still sign up
+      for the Lottery to secure their reserved spot. If the team wishes to enter the Lottery
+      for an event or class that they are not reservation-eligible, their existing reservation
+      will have no effect on chances of securing that spot. This is only holding a spot,
+      teams will still be responsible for completing registration payment and meeting all
+      required deadlines.
+      If a team is eligible for reservations at both events in the same class, they will be
+      asked to which event they would like their reserved spot to apply, as SAE will only
+      honor one (1) reservation spot per class.
+
+       VOLUNTARY WITHDRAWAL
+Teams shall notify SAE International if they voluntarily withdraw from the competition. This
+notification allows organizers to move teams from the waitlist into the competition
+participation list. Teams will be able to request withdrawal through
+https://saeaerodesign.com in the area they can view their registration and roster
+information.
+
+                                                       SAE Aero Design 2027 – Page: 6
+
+=== PAGE 15 | p.7 ===
+       WAITLIST
+Once an event reaches the venue’s capacity, all remaining teams will be placed on a waitlist.
+The waitlist is capped at sixty (60) spaces per event and closes on the same day registration
+closes. Once a team withdraws from an event, an SAE International staff member will
+inform your team by email (the individual who registered the team to the waitlist) that a
+competition spot has opened. You will have twenty-four (24) hours to accept or reject the
+position and an additional two (2) business days to complete registration payment.
+Waitlisted teams shall submit all documents by the deadlines and any team that does not
+submit all documents will be removed from the waitlist.
+
+       DEADLINE POLICY
+Registered teams are required to submit several documents prior to the competition.
+  Late Submission Penalty
+      Late submission of the Design Report, Technical Data Sheet(s), and Drawings by the
+      deadline will be penalized five (5) points per day, up to a maximum of five (5) days
+      late. If your required documents are more than five (5) days late, the documents
+      will be classified as “Not Submitted” and your team will not be allowed to
+      participate.
+  Automatic Withdrawal Policy
+      Failure to submit the Design Report, Technical Data Sheet(s), and 2D Drawings
+      within five (5) days of the deadline constitutes an automatic withdrawal of your
+      team. Your team will be notified before or on the 4th day of no submission that
+      your documents have not been received. After the 5th day, your team’s registration
+      will be canceled. No refunds will be given.
+   Table 1.2: Design Report Submission Schedule
+        Activity/Action         East Event Deadline      West Event Deadline
+   Design Report              02/01/2027 11:59:59 EST  03/08/2027 11:59:59 EDT
+   TDS                        02/01/2027 11:59:59 EST  03/08/2027 11:59:59 EDT
+   2D Drawing                 02/01/2027 11:59:59 EST  03/08/2027 11:59:59 EDT
+
+       FACULTY ADVISOR
+Each team shall have a Faculty Advisor appointed by the college or university. The Faculty
+Advisor shall accompany the team to competition and is considered by competition officials
+to be the official university representative. Faculty Advisors may advise their teams on
+general engineering and engineering project management but may not design any part of
+the vehicle nor directly participate in the development of any documentation or
+presentation. Additionally, Faculty Advisors may neither fabricate nor assemble any
+components nor assist in the preparation, maintenance, or testing of the vehicle. In brief,
+Faculty Advisors may not design, build, or repair any part of the aircraft. Faculty Advisors
+may not participate in flight operations during competition weekend except as noted.
+
+                                                      SAE Aero Design 2027 – Page: 7
+
+=== PAGE 16 | p.8 ===
+    QUESTIONS, COMPLAINTS AND APPEALS
+Questions
+    Any rules questions or comments should be addressed to the SAE Aero Design Rules
+    Committee by submitting a question at https://www.saeaerodesign.com.
+    General information about hotels and other attractions, as well as a schedule of
+    events, will be posted at https://www.sae.org/attend/student-events/.
+Complaints
+    SAE International staff are the first point of contact for general complaints. SAE
+    Aero Design Rules Committee members will be available to listen to complaints
+    regarding errors in scoring, interpretation, or application of the rules during
+    competition. Volunteer judges and other competition volunteers should not be
+    recipients of complaints at any time.
+Appeal / Preliminary Review
+    A team can only appeal issues related to scoring, judging, venue policies, and/or any
+    official actions regarding their own team. Team Captain(s) and/or the Faculty
+    Advisor shall bring the issue to the competition organizing bodies for an informal
+    preliminary review before filing an official appeal.
+    A team cannot file an appeal to cause harm to another team’s standing and/or
+    score.
+Cause for Appeal
+    A team may appeal any rule interpretation, own-team scoring or official actions
+    which the team feel has caused some actual, non-trivial, harm to own-team, or has
+    had a substantive effect on their score.
+    Teams may not appeal rule interpretations or actions that have not caused the team
+    any substantive damage.
+Appeal Format
+    If a Faculty Advisor or Team Captain(s) feel their issue regarding an official action or
+    rules interpretation was not properly addressed by a member of the organizing
+    body, the team may file a formal appeal with the Appeals Committee.
+    All appeals shall be filed in writing (see Appendix B) to the Event Director by the
+    Faculty Advisor or Team Captain(s) only.
+    All appeals require the team to offer twenty-five (25) points as collateral. If the
+    appeal is successful, the team will not forfeit the twenty-five (25) points. If the
+    appeal is overruled, the team will forfeit the twenty-five (25) points.
+Appeals Period
+    All appeals shall be submitted within thirty (30) minutes of the end of the flight or
+    other competition event to which the appeal relates.
+Appeals Committee
+    When a timely appeal is received, the committee will review the claims. All
+    contentions or issues raised in the formal appeal will be addressed in a timely
+    manner. The consideration in each review is whether the actions in dispute were
+
+                                                    SAE Aero Design 2027 – Page: 8
+
+=== PAGE 17 | p.9 ===
+      just and in-line with the intent of the rules. Once the review is completed, a new
+      order will be issued affirming, reversing, or modifying the original determination.
+   All rulings issued by the Appeals Committee are final.
+      The Appeals Committee shall consist of a minimum of three members: the Event
+      Director or delegate, an SAE International representative, and an SAE Aero Design
+      Rules Committee member.
+
+       PROFESSIONAL CONDUCT
+  Unsportsmanlike Conduct
+      Unsportsmanlike conduct is not acceptable. If SAE staff and/or Rules Committee
+      members observe unsportsmanlike conduct, SAE Aero Design reserves the right to
+      assess penalty points or remove the team from competition.
+  Arguments with Officials
+      Arguments with, or disobedience toward, any competition official may result in the
+      team’s elimination from competition. All team members may be immediately
+      escorted from the competition grounds.
+  Alcohol and Illegal Material
+      Alcoholic beverages, illegal drugs, firearms, weapons, or illegal material of any type
+      are not permitted on the event sites at any time during competition. Any violations
+      will result in the immediate expulsion of all team members and Faculty Advisor(s) of
+      the offending school, not just the team member(s) in violation. This rule applies to
+      team members and Faculty Advisors. Any use of illegal drugs or alcohol by an
+      underage person will be reported to local law enforcement authorities.
+  Event Director’s Authority
+      The Event Director reserves the exclusive right to revise the competition schedule
+      and/or to interpret the competition rules at any time and in any manner required for
+      efficient operation or safety.
+  Ground Safety and Flight Line Safety Equipment
+    No open toe shoes allowed. All team members, including Faculty Advisors(s) and
+      pilots, are required to wear CLOSED toe shoes during flight testing and flight
+      competition.
+    Smoking is prohibited. Smoking is prohibited in all competition areas.
+    Personal Protective Equipment required. All students involved in flight-line launch
+      and recovery operations shall wear safety glasses.
+    Only non-visible Class 1 eye-safe (EN/IEC 60825-1 2014) lasers are allowed. Laser
+      pointers are prohibited.
+
+       SAE TECHNICAL STANDARDS
+A cooperative program of SAE International’s Education Board and Technical Standards
+Board is making some of SAE International’s Technical Standards available to teams
+registered for any North American CDS competition at no cost. The Technical Standards
+
+                                                      SAE Aero Design 2027 – Page: 9
+
+=== PAGE 18 | p.10 ===
+referenced in the Collegiate Design Series rules, along with other standards with reference
+value, will be accessible online to registered teams, team members, and Faculty Advisors.
+New for 2027, a stand-alone award will be issued to the team (across all classes) that best
+incorporates Technical Standards into their workflow as documented in the written design
+report.
+
+                                                       SAE Aero Design 2027 – Page: 10
+
+=== PAGE 19 | p.11 ===
+2 GENERAL AIRCRAFT REQUIREMENTS
+
+          TECHNICAL DEFINITIONS
+         The word “shall” within these requirements denotes legal, inspectable or
+          operational requirements. Satisfaction of shall statements determines valid scoring.
+         The word “will” within these requirements describes or clarifies a system or device’s
+          intent or purpose.
+
+          AIRCRAFT IDENTIFICATION
+   The Team Number, as assigned by SAE International, shall be visible on both the top and
+   bottom of the wing, and on both sides of the vertical stabilizer or other vertical surface(s)
+   that exist.
+       1. Aircraft shall be identified with the school name, mailing address, and email address
+          either on the outside or the inside of the aircraft.
+       2. Team Numbers on Regular aircraft shall be a minimum of four (4) inches in height.
+          If vertical surfaces are insufficiently sized to accommodate four (4) inches height
+          team numbers, smaller sized numbering will be permitted.
+       3. Team Numbers on Micro Class and Advanced Class shall be a minimum of two (2)
+          inches in height. If vertical surfaces are insufficiently sized to accommodate two (2)
+          inches height team numbers, smaller sized numbering will be permitted.
+       4. The University name shall be clearly displayed externally on the wings or fuselage.
+          The University initials may be substituted in lieu of the University name, provided
+          the initials are unique and recognizable.
+   The assigned Team Numbers appear next to the school name on the “Registered Teams”
+   page of the SAE Aero Design Collegiate Design Series website at:
+   SAE Aero East: https://www.sae.org/attend/student-events/sae-aero-design-east
+   SAE Aero West: https://www.sae.org/attend/student-events/sae-aero-design-west
+
+          PROHIBITED AIRCRAFT CONFIGURATION
+   Unless otherwise specified, competition entrants shall be fixed wing configuration only.
+   Advanced class aircraft may have variable geometry wings. Lighter‐than‐air aircraft, rotary
+   wing aircraft, or auto‐gyros and steerable, parafoil aircraft are prohibited.
+
+          EMPTY CG DESIGN REQUIREMENT AND EMPTY CG MARKINGS ON AIRCRAFT
+   The Empty CG location will be verified during Safety and Airworthiness Inspection. Empty
+   weight flight demonstration is not required. All aircraft shall meet the following Center of
+   Gravity (CG) requirements:
+       1. All aircraft shall be flyable at their designated Empty CG position (no payload, ready
+          to fly) on the submitted 2D aircraft drawing.
+       2. All aircraft shall have the CG marked on both sides of the fuselage with a CG symbol
+          (Figure 2.1) .
+
+                                                          SAE Aero Design 2027 – Page: 11
+
+=== PAGE 20 | p.12 ===
+    3. CG markings shall be a minimum of 0.5 inches in diameter centered at the Empty
+       CG position +/-0.25 inches, per the submitted 2D drawings. Flying-wing type
+       aircraft may place the CG markings on the bottom of the wing.
+
+                        Figure 2.1: Center of Gravity Symbol
+
+       GROSS WEIGHT LIMIT
+Aircraft gross take-off weight shall not exceed fifty-five (55) pounds.
+
+       CONTROLLABILITY
+All aircraft shall be controllable in flight.
+If an aircraft is equipped with a wheeled landing gear, the aircraft shall have a ground
+steering mechanism for positive directional control during takeoffs and landings.
+Aircraft shall not rely solely on aerodynamic control surfaces for ground steering.
+
+       GYROSCOPIC AND OTHER STABILITY AUGMENTATION
+Gyroscopic assist or other forms of stability augmentation are allowed.
+
+       RADIO CONTROL SYSTEM
+All aircraft shall employ a 2.4 GHz radio control system with a functional fail-safe system.
+The control system’s fail-safe system shall reduce the throttle to zero immediately upon
+loss of the radio signal. Teams may have to reset the fail-safe default to meet this
+requirement.
+
+       MANAGING RADIO FREQUENCY
+Teams are responsible for managing radio frequency (RF) and addressing potential
+interference or conflicts. Competition organizers encourage teams to implement mitigation
+measures to minimize risk. Any intentional attempts by teams to gain an unfair advantage
+will be subject to the Unsportsmanlike Conduct rule in Section 1.16.
+
+       PROPELLER SPINNERS OR SAFETY NUTS REQUIRED
+All powered aircraft shall use either a spinner or a rounded model aircraft type safety nut
+for propeller mounting. Nylon-insert Lock-Nuts are prohibited. Figure 2.2 shows examples
+of acceptable hardware.
+
+                                                       SAE Aero Design 2027 – Page: 12
+
+=== PAGE 21 | p.13 | img ===
+                         Figure 2.2: Spinners and Safety Nut
+
+       METAL PROPELLERS
+All aircraft shall not use metal propellers.
+
+       LEAD IS PROHIBITED
+Lead shall not be included in the design, manufacture, or payload of the aircraft. The use of
+lead in any portion of aircraft (payload included) is prohibited.
+
+       PAYLOAD DISTRIBUTION
+The payload design shall not contribute to the structural integrity of the airframe.
+The airframe shall be flight worthy without the payload installed.
+
+       AIRCRAFT BALLAST
+Aircraft ballast is allowed. Ballast, if employed, shall be properly secured and permanently
+installed. Ballast shall not be tradeable for payload.
+Ballast shall not be in a payload bay.
+
+       CONTROL SURFACE LOOSENESS OR BACKLASH
+Aircraft control surfaces and linkages shall not exhibit looseness or backlash within the
+mechanism’s movement. Control surfaces with excessive backlash contribute to reduced
+control effectiveness in mild cases and to aeroelastic flutter in severe cases.
+
+       SERVO SIZING
+Analysis and/or testing described in the Design Report shall demonstrate the servos are
+sufficiently sized to handle the expected aerodynamic flight loads.
+
+       CLEVIS KEEPERS
+All control clevises shall employ additional mechanical retention devices (keepers) to
+prevent accidental control clevis opening during flight.
+
+       STORED ENERGY RESTRICTION
+Aircraft shall be powered by the on-board motor(s). No other internal and/or external
+forms of stored potential energy are allowed, for example rubber bands or pressure vessels.
+
+                                                       SAE Aero Design 2027 – Page: 13
+
+=== PAGE 22 | p.14 ===
+       BATTERY PACK RESTRICTIONS
+      All batteries shall be commercially available. Homemade batteries are prohibited.
+      All batteries shall be positively secured and unable to move under all flight loads.
+      The battery bay or location in the aircraft shall be free of any hardware or other
+       protrusions that could penetrate the battery in the event of a crash.
+
+       USE OF LASERS
+The use of lasers for marking/highlighting landing zones or directing an aircraft to a landing
+zone is prohibited.
+
+       POWER LIMITER
+The use of a Power Limiter is no longer required in any class.
+
+       PROPULSION SYSTEM RED ARMING PLUG
+All electric powered aircraft shall use a discrete and removable red arming plug to arm and
+disarm the aircraft propulsion system. Disconnecting wiring harnesses to arm and disarm a
+system is prohibited.
+The red arming plug shall be integrated into the electrical circuit between the battery and
+the electronic speed controller (ESC).
+The red arming plug shall be located on the positive (RED) wire between the battery and the
+speed controller.
+The red arming plug is located as follows:
+     The red arming plug shall be a minimum of nine (9) inches away from any propeller
+       at any point in its rotational plane. Intent is to enable volunteers to safely access
+       the red arming plug if needed to safely disarm the aircraft.
+     For Regular and Micro class aircraft with propulsion systems in one longitudinal
+       plane, the red arming plug shall be located on the other side of the wing
+       longitudinally. Example: if the propulsion is all in front of the wing leading edge, the
+       red arming plug should be located at the wing trailing edge.
+     The red arming plug shall be located on the top, near the centerline of the fuselage
+       or wing, and external to the aircraft surface.
+     The red arming plug location shall be clearly visible.
+The non-removable portion of the arming plug interface shall not have more than one male
+lead.
+Disconnecting wiring harnesses to arm and disarm a system shall be prohibited.
+
+                                                     SAE Aero Design 2027 – Page: 14
+
+=== PAGE 23 | p.15 ===
+  Receiver       On/Off Switch                          Servo Power
+                                 Receiver               Servo Ground
+   Battery
+                                                        Servo Signal
+                                                        Motor Power
+                                                        Motor Ground
+
+                                                         Speed                 Motor
+   Motor         Arming Plug
+                                                        Controller
+   Battery
+
+                            Note: Speed controllers with a built in BEC should have the positive
+                            power wire in the servo connector disconnected.
+Figure 2.3: Example diagram of propulsion system with Arming Plug. Note, different classes may
+             have additional requirements or allow for alternative configurations.
+
+       RECEIVER SYSTEM BATTERY PACK
+For Regular Class, a separate battery shall be required for the receiver system.
+For Micro and Advanced Class, a separate battery or separate BEC shall be required for the
+receiver system.
+If the receiver system has a separate battery pack, it shall have a minimum capacity of 1000
+mAh and shall be a LiPo or LiFE type battery.
+Batteries shall have enough capacity to safely drive all aircraft servos, taking into
+consideration the number of servos and maximum current draw.
+The aircraft receiver system shall be able to operate without the arming plug installed.
+Battery voltage regulators are allowed.
+
+       RECEIVER SYSTEM ON/OFF SWITCH
+The receiver system shall be controlled by a clearly visible on/off switch mounted to the
+aircraft exterior, located at least nine (9) inches from any propeller at any point in its
+rotation plane. See Section 6 for details of the safety inspection.
+
+       REPAIRS
+The original aircraft design as presented in the Design Report and presentation shall be
+maintained as the baseline aircraft during the competition.
+In the event of aircraft damage, the aircraft may be repaired provided such repairs do not
+deviate from the baseline design. All major repairs shall undergo safety inspection before
+the aircraft is cleared for flight. See Section 6 for details of the safety inspection.
+If a safety inspection is triggered after a flight attempt, teams shall complete a technical
+inspection before they will be allowed to return to the flight line queue. This remains true
+regardless of whether the primary aircraft is repaired or a secondary aircraft is selected for
+
+                                                       SAE Aero Design 2027 – Page: 15
+
+=== PAGE 24 | p.16 ===
+the next flight attempt. The flight log will not be available for checkout until technical
+inspection clears the hold in the digital tracking system.
+
+       DESIGN CHANGE PROCESS
+Teams making changes to their aircraft design after the submission of the Design Report
+and prior to technical inspection at the flying event shall submit an Engineering Change
+Request (ECR) which clearly identifies what has changed. The submitted ECR provides for
+correcting TDS and/or 2D Drawing for flight event scoring execution but will not affect
+judging of Design Report, TDS, or Oral Presentation.
+    The ECR shall include definition of the design, description of the change(s), and
+       motivating factors (requirements, performance, manufacturing).
+    The ECR shall include an updated 2D drawing as described in Section 4.4 if any
+       content on the drawing changed.
+    The ECR shall be submitted at least one (1) week prior to the flying event.
+    The ECR shall be uploaded to SAE following the same process for submitted the
+       Design Report and should follow the same formatting guidelines.
+    Design changes that are not received by the deadline are subject to penalty points.
+Table 2.1: ECR Submission Schedule
+Event                East Deadline                 West Deadline
+ECR Deadline         02/26/2027 11:59 PM EDT       04/02/2027 11:59 PM EDT
+
+       ALTERATION AFTER FLIGHT
+Minor alterations are allowed after flight attempts. Consult with SAE Aero Design Rules
+Committee members to determine whether desired changes may be subject to penalty
+points. Any change made solely for safety of flight (as judged by Rules Committee) will not
+be subject to penalty points.
+
+                                                     SAE Aero Design 2027 – Page: 16
+
+=== PAGE 25 | p.17 ===
+3 MISSION REQUIREMENTS AND SCORING
+
+          AIR BOSS
+   The Air Boss is a qualified SAE event official or appointed volunteer that manages the flight
+   line process. Their responsibilities include:
+       1 Ensuring flight line safety by maintaining an orderly and controlled runway.
+       2 Being the official of record for the success or failure of the flight, including takeoff
+          and landing.
+       3 Declaration of flight termination at any time during the flight attempt.
+   The Air Boss may continue flight operations at their discretion in continuous winds up to
+   forty-five (45) knots with gusts no greater than sixty-five (65) knots.
+
+          PILOT AREA
+   A pilot area will be defined at pilot briefing. All pilots shall fly from the designated area.
+
+          FLIGHT ATTEMPT
+   Teams are allowed one (1) flight per attempt. There is no fixed or guaranteed number of
+   flight attempts.
+   A Flight Attempt is defined as each time the team brings their aircraft for mission
+   demonstration, starting when the team enters the ‘On-Deck’ area. Each team will have a
+   limited number of flight attempts for the competition, depending on local conditions.
+   A Take-off Try is defined as the aircraft leaving the starting line and moving forward under
+   its own power.
+   Airborne is defined as all parts of the aircraft no longer touching the ground.
+   A Bounce is defined as any part of the aircraft touching the runway after becoming airborne.
+   For all competition classes the aircraft may be throttled-up/run-up for take-off, subject to
+   the following conditions:
+        Regular Class: Two (2) team members may escort the aircraft from On-Deck to
+          Runway and one (1) team member may hold the aircraft in place prior to take-off
+          roll.
+        Micro and Advanced Classes: One (1) team member may escort the aircraft from
+          On-Deck to Runway and hold the aircraft in place prior to take-off roll.
+        The aircraft holder may not push the aircraft on release.
+        Regular and Micro Classes: Main gear shall remain on the take-off line prior to
+          release.
+
+          AIRCRAFT CONFIGURATION AT LIFTOFF AND DURING THE FLIGHT ATTEMPT
+   The aircraft shall remain intact during a flight attempt to receive full flight score.
+
+                                                          SAE Aero Design 2027 – Page: 17
+
+=== PAGE 26 | p.18 ===
+A twenty-five percent (25%) deduction from the flight score will be assessed in the event
+any of the following items are observed to completely detach from the aircraft during a
+flight attempt.
+    Stickers
+    Tape
+    Coverings
+Except as previously noted, a flight shall be disqualified in the event any components, other
+than a broken propellor during landing, fall off during a flight attempt.
+
+       COMPETITION CIRCUIT REQUIREMENTS
+   1. During departure and approach to landing, the pilot shall not fly the aircraft in a
+      pattern that will allow the aircraft to enter any of the no-fly zones.
+   2. Aerobatic maneuvers shall be prohibited during the flight competition for all
+      competition classes. This includes but is not limited to: loops, figure 8’s,
+      Immelmann, all types of rolling maneuvers, and inverted flight.
+   3. Regular and Micro Class aircraft shall successfully complete a minimum of one (1)
+      complete 360° circuit around the field. See Table 3.2 for additional information.
+   4. Advanced Class has no specific flight pattern (See Section 8 for clarification).
+
+       TIME LIMITS AND MULTIPLE TAKEOFF TRIES
+   1. Multiple takeoff tries per flight attempt are allowed for some classes within the
+      class-specific time allotment according to Table 3.1.
+   2. If an airborne aircraft bounces or returns to the ground after being airborne and is
+      beyond the take-off distance limits, the flight attempt shall be disqualified.
+   3. Takeoff time starts when the team is called to the flight line from the On-Deck Area.
+
+Table 3.1: Flight Attempt Information
+                    Can make multiple take-off tries if:
+            Time                Bounce         Bounce          Team members
+ Class      Limit   Still within                               allowed beyond On-
+                                within         outside the
+            (sec)   the Time                                   Deck Area:
+                                required take- required take-
+                    Limit
+                                off distance   off distance
+ Regular      60        No           No              No        Two (2) Escort + Pilot
+
+ Advanced     60        Yes          Yes             No        One (1) Escort + Pilot
+
+ Micro        60        No           No              No        One (1) Escort + Pilot
+
+                                                       SAE Aero Design 2027 – Page: 18
+
+=== PAGE 27 | p.19 ===
+       ON-DECK AREA
+The ‘On-Deck Area’ is near the flight line where teams will prepare for their flight attempt.
+    1. Teams shall surrender one (1) flight attempt when directed to the On-Deck Area as
+       they wait for their turn to take the flight line.
+    2. Teams may mount propellers, perform control surface checks, and range checks.
+    3. Teams may decide, or be directed by the Air Boss or Pit Boss, to leave the On-Deck
+       Area for maintenance and/or technical issues but shall forfeit the flight attempt.
+    4. Teams will ensure they have sufficient reserve power to handle any expected
+       delays.
+    5. Teams shall not be allowed to install their propulsion arming plugs.
+    6. Motor runup and testing shall not be allowed.
+    7. Three (3) team members are allowed along with the pilot and aircraft in the On-
+       Deck Area.
+
+       TAKE-OFF
+Take-off direction will be determined at the discretion of the Air Boss. If possible, the take-
+off direction will face into the wind. Changes in wind direction may affect the take-off
+direction throughout the day. The Air Boss reserves the right to change the take-off
+direction at any time for weather or safety.
+    1. All aircraft shall remain on the runway during the take-off roll.
+    2. Table 3.2 defines distance requirements.
+    3. Making the initial turn before passing the “distance from initial start before turn”
+       requirement shall disqualify the flight attempt.
+
+Table 3.2: Take-off Information
+                              Distance from
+             Take-off         initial start
+ Class                                         Description
+             Distance Limits  before turn
+                                               Aircraft shall be airborne within the
+ Regular         100 ft.          400 ft.      prescribed take-off distance.
+                                               Aircraft has full use of the runway.
+ Advanced         None            400 ft.
+                                               Aircraft shall be airborne within the
+                                               prescribed take-off distance. Only
+ Micro            50 ft.          350 ft.
+                                               one (1) launch release per flight
+                                               attempt is allowed.
+
+       LANDING REQUIREMENTS
+A successful landing is defined as a controlled return to the ground. Aircraft shall remain
+inside the specified landing zone for each class. The aircraft may leave the landing zone
+only if given permission by the Air Boss.
+Table 3.3 describes the pre-determined landing zone for each class.
+                                                       SAE Aero Design 2027 – Page: 19
+
+=== PAGE 28 | p.20 ===
+    1. Landing zones will be visibly marked prior to the start of competition.
+    2. Teams and their pilots are responsible for knowing the class-specific landing zones.
+    3. Any aircraft that leaves the designated landing zone or the paved runway for any
+       reason during landing shall be disqualified.
+    4. Any flight where the aircraft does not make initial touch down for landing inside the
+       designated landing zone shall be disqualified.
+    5. Touch-and-go landings are not allowed and shall be judged as a failed landing.
+    6. Landing within the zone is defined as all supporting parts of the aircraft touching
+       the ground within the landing zone. For example, a wing tip or fuselage can
+       overhang the edge of the landing zone, provided no supporting part of the aircraft
+       is physically touching outside the landing zone.
+Table 3.3: Landing Distance Limit
+
+            Landing Distance
+ Class                          Description
+            Limits (ft.)
+
+ Regular    400 ft.             Aircraft shall land in the same direction as take-off.
+ Advanced   Available Runway      Aircraft shall stop within the designated landing
+                                        zone to avoid a penalty (ref 3.9.3).
+ Micro      200 ft.
+
+       GROUNDING AN AIRCRAFT
+   1. An aircraft shall be grounded if it is deemed non-flightworthy or not in compliance
+      with the rules by any member of the competition organizing bodies.
+   2. Until the non-flightworthy or out-of-compliance condition has been addressed and
+      cleared by re-inspection, the aircraft shall not be allowed to fly.
+
+       FLIGHT RULES ANNOUNCEMENT
+Flight rules and updates will be reviewed in a pilot meeting before flight competition begins.
+
+       FLIGHT RULES VIOLATIONS
+   1. Violation of any flight rule may result in the team being eliminated from the
+      competition.
+   2. All members of an eliminated team may be escorted from the grounds.
+
+       LOCAL FIELD RULES
+In addition to competition rules, the local flying club may have additional rules in place at
+the event flying field.
+    1. Club rules shall be obeyed during the competition.
+    2. If club rules conflict with competition rules, it is the responsibility of the Team
+       Captain(s) and/or Faculty Advisor to bring attention to the conflict and follow the
+       appeals process to resolve the conflict.
+
+                                                       SAE Aero Design 2027 – Page: 20
+
+=== PAGE 29 | p.21 ===
+       NO-FLY ZONE
+Each competition will have venue-specific no-fly zones defined during the pilot meeting.
+    1. At no time shall an aircraft (controlled or uncontrolled) enter the no-fly zones.
+    2. The first infraction for crossing into the no-fly zone shall result in a disqualified flight
+       attempt and zero points will be awarded for that flight.
+    3. A second infraction shall result in disqualification from the entire event and a loss of
+       all points.
+    4. Teams and their pilots are responsible for knowing and complying with all no-fly
+       zones and complying with all venue-specific rules.
+    5. If a team is unable to directionally control their aircraft and it is headed towards or
+       is in a no-fly zone, the Air Boss may order the pilot to intentionally crash the aircraft
+       to prevent endangering people or property. If ordered, this safety directive shall be
+       followed immediately.
+
+       COMPETITION SCORING
+A team’s final, overall score is composed of scores in the following categories:
+    1. Technical Design Report (Design Report and Drawing)
+    2. Flight Demonstration Readiness Review (FDRR) Presentation
+    3. Flight Event
+    4. Penalties
+
+Teams shall submit AND receive a scored Design Report AND Presentation to qualify for the
+flight portion of the competition.
+
+Participation in all three categories – Design Report, Presentation, and Flight Event – is
+mandatory for overall score eligibility. Passing Requirements Check & Safety and
+Airworthiness inspection counts as participating in the Flight Event.
+
+       AIRCRAFT EMPTY WEIGHT DEFINITION
+All aircraft parts that are not class-specific payload contribute to the empty aircraft weight,
+including, but not limited to: airframe, receiver, electronics, batteries, hardware, brackets,
+straps, and other associated features.
+
+                                                        SAE Aero Design 2027 – Page: 21
+
+=== PAGE 30 | p.22 ===
+4 DESIGN REPORT
+The Design Report is the primary means for teams to convey their aircraft design’s suitability to
+accomplish the mission. The Design Report should explain the thought processes and
+engineering philosophy driving design decisions.
+
+Important topics to cover are: selection of the overall vehicle configuration, wing planform
+design, drag analysis, aircraft stability and control, power plant performance, and performance
+prediction. Other topics should be included as appropriate. SAE Aero Design Report Guidelines
+are available for download at www.saeaerodesign.com/go/downloads. For more information
+regarding performance prediction, a white paper by Leland Nicolai is also available at the above
+link.
+
+          SUBMISSION DEADLINES
+   The Design Report, 2D drawing, and Tech Data Sheet (TDS) shall be electronically submitted
+   to www.saeaerodesign.com no later than the Action Deadlines given on the SAE
+   International Website (See Table 1.2):
+   https://saeaerodesign.com/Deadlines.aspx?seriesCode=AERO
+   Neither the Organizer nor SAE International is responsible for any lost or misdirected
+   reports, drawings, or server routing delays. SAE International shall not accept any paper
+   copies of reports received through regular mail or email.
+
+          ORIGINAL WORK
+   The Design Report shall be the team’s original work for the current competition.
+   Resubmissions of previous and current year’s design reports will not be accepted.
+   Recitation of previous year’s work is acceptable if and only if cited and credited to the
+   original author(s). Plagiarism is a forbidden industry and academic practice. All references,
+   quoted text, and reused images from any source shall have appropriate citation within the
+   text and within the Design Report’s Table of References.
+   Reports may be checked against previous and current submissions to determine if re-use,
+   copying, or other elements of plagiarism are indicated.
+   For the SAE Aero Design Competition, plagiarism is defined as any of the following:
+      1. Use of information from textbooks, reports, or other published material without
+          proper citation
+      2. Use of sections or work from previous SAE Aero Design competitions without proper
+          citation
+   If plagiarism is detected in the Design Report, a team will be given 24 hours to make a case
+   to SAE and the Rules Committee. If the report and/or case is found to be insufficient, the
+   team will receive zero score for the report. The team will be allowed to compete in all
+   remaining competition categories but will not be eligible for awards. SAE reserves the right
+   to notify the University.
+
+                                                          SAE Aero Design 2027 – Page: 22
+
+=== PAGE 31 | p.23 ===
+If plagiarism is detected in the Presentation, the team will receive zero score for the
+presentation. The team will be allowed to compete in all remaining categories of the
+competition but will not be eligible for awards. SAE reserves the right to notify the
+University.
+The SAE Aero Design Rules Committee & SAE International has the sole discretion to
+determine whether plagiarism is indicated, and these rules are enacted. The above rules
+may be implemented before, during, or after the competition for up to six (6) months.
+
+       DESIGN REPORT REQUIREMENTS
+The Design Report is valued at fifty (50) points as detailed in Table 4.3.
+     The Design Report shall not exceed thirty (30) pages. Only the first thirty (30) pages
+       will be scored if the design report exceeds the limit.
+     The Design Report shall include a Cover Page with Team Name, Team Number, and
+       School Name and Team Member Names.
+     The Design Report shall include a current Certificate of Compliance signed by hand
+       by the team’s Faculty Advisor.
+     The Design Report shall be typewritten and double-spaced. Tables, charts, and
+       graphs are exempt from this. For single-spaced reports, only the first fifteen (15)
+       pages will be scored. All other content sections will receive zero (0) points.
+     The font shall be 12 pt. proportional; or 10 char/in. non-proportional font.
+     The margins shall be: 1.0 inch left, 0.5 inches right, 0.5 inches top, and 0.5 inches
+       bottom.
+     Each page, except the Cover Page, Certificate of Compliance, 2D Drawing and TDS
+       shall include a page number.
+     All report pages shall be ANSI A (8 1/2 x 11 inches) portrait-format.
+     The Design Report shall include a Table of Contents, Table of Figures, Table of
+       Tables, Table of References and Table of Acronyms.
+     The Design Report shall be single-column text layout.
+     The Design Report shall include the TDS appropriate for the team’s competition
+       class. The TDS shall include the Team Name, School Name, and Team Number.
+     Non-original technical content and graphics shall cite the originating author’s credit.
+
+                                                     SAE Aero Design 2027 – Page: 23
+
+=== PAGE 32 | p.24 ===
+Table 4.3: Technical Design Report
+Section                                     Page          Points Available
+                                            Count Regular Advanced       Micro
+Cover Page                                    1
+Certificate of Compliance                     1       40        40         40
+Design Report                                 27
+2D Drawing                                    1        5         5         5
+Subtotal Design Report (not including TDS)    30      45        45         45
+TDS: Maximum Flight Score Prediction          1        5         -         -
+TDS: Sequence Diagram for Payload
+                                              1        -         5         -
+Delivery/Capture
+TDS: Aircraft Performance Prediction          1        -         -         5
+Total Design Report (including TDS)           31      50        50         50
+
+      2D DRAWING REQUIREMENTS
+ 2D Format and Size
+     The 2D drawing shall be one (1) ANSI B sized page (PDF) format (11 x 17 inches).
+     Teams outside North America that cannot submit an ANSI B size drawing shall use
+     the closest available page format size.
+ Markings Required
+     The 2D drawing shall be clearly marked with the Team Number, Team Name, and
+     School Name.
+ Views Required
+     Drawings shall include at a minimum, a standard aeronautical 3-view orthographic
+     projection arranged as described:
+     1. Left side view, in lower left, with nose pointed left.
+     2. Top view, above and aligned with the left side view, also with nose pointed left
+        (wing-span break-view permitted).
+     3. Front view aligned to side view, located in the lower right (projection view non-
+        standard movement as noted by projection view arrows in accordance with
+        ANSI-Y14.5M 1994 or more recent).
+ Dimensions Required
+     Drawing dimensions and tolerance shall be in English units, decimal notation
+     accordance with ANSI-Y14.5M 1994 to an appropriate level of precision to account
+     for construction tolerances (allowable variation from analyzed prediction to account
+     for fabrication) (i.e. X.X = ± 0.1 in; X.XX = ± 0.03 in; X.XXX = ± 0.010 in).
+     The minimum required dimensions/tolerances are aircraft length, width, and height.
+
+                                                    SAE Aero Design 2027 – Page: 24
+
+=== PAGE 33 | p.25 ===
+Summary Data Required
+    The drawing shall contain a summary table to include but not limited to:
+    1. Wingspan
+    2. Wing Area
+    3. Aspect Ratio
+    4. Empty weight
+    5. Battery(s) capacity
+    6. Motor make and model
+    7. Motor KV
+    8. Propeller manufacturer, diameter, and pitch
+    9. Servo manufacturer, model number, and torque specification in ounce-inches for
+       each aircraft servo. Identify the servo being used at each position on the
+       aircraft.
+Weight and Balance Information
+    The 2D Drawing shall contain the following weight, balance, and stability
+    information:
+    1. A clearly marked and labeled aircraft datum
+    2. A weight and balance table of pertinent aircraft equipment. Each item shall
+       show its location from the aircraft datum in inches (the moment arm), the force,
+       and resultant moment. See www.saeaerodesign.com/go/downloads for
+       additional information. The minimum pertinent equipment list includes:
+       a.  Motor
+       b. Battery(s)
+       c.  Payload(s)
+       d. Electronics
+    3. Aircraft mean aerodynamic chord, stability margin and Center of Gravity (CG)
+       information listed below shall be clearly shown on the 2D Drawing.
+       a.  Aircraft mean aerodynamic chord
+       b. Stability margin for loaded CG and empty CG
+       c.  Empty CG location (flightworthy)
+       d. Fully loaded CG (flightworthy, with payload, if applicable)
+
+                                                   SAE Aero Design 2027 – Page: 25
+
+=== PAGE 34 | p.26 ===
+       TDS: FLIGHT SCORE PREDICTION (REGULAR CLASS ONLY)
+Regular Class shall include a maximum predicted flight score (PS) prediction as part of the
+Design Report. Valid TDS submission will include submission of two (2) files.
+File 1: One (1) page stand-alone document containing a data graph and textual explanation.
+File 2: JSON formatted data file. If JSON file is not formatted correctly, teams may not
+receive prediction bonus.
+The TDS Document file shall be a one (1) page, stand-alone document containing the
+prediction graph along with an explanation of how the prediction was generated.
+The graph represents an engineering estimate of the aircraft’s maximum single flight score
+performance as a function of density altitude.
+    1. Predicted Flight Score may or may not be linear over the relevant range.
+    2. Only one (1) flight score prediction value shall be presented on the graph for a given
+       density altitude. This value may account for predicted headwind for local
+       conditions, rolling drag, inertia, motor and propeller performance, or any other
+       factors that may affect take-off performance. All these factors are allowed
+       components of the monotonic prediction.
+    3. Graph axes shall be in English units, decimal notation.
+
+             Team 001: Maximum Predicted Flight Score
+      52
+
+      48
+
+      44
+
+      40
+  Score
+      36
+  Flight
+      32
+
+      28
+
+      24
+
+      20
+
+                                 Density Altitude (ft)
+
+          Figure 4.1: Example Regular Class Maximum Predicted Flight Score
+
+                                                      SAE Aero Design 2027 – Page: 26
+
+=== PAGE 35 | p.27 ===
+TDS Prediction Data File Submission
+Teams shall submit a TDS prediction data file containing the flight prediction score. File
+format will follow JSON standard.
+   json Format:
+   [
+    {
+     "Team": 2,
+     "Den-Alt": 0,
+     "Score": 100
+    },
+    {
+     "Team": 2,
+     "Den-Alt": 200,
+     "Score": 100
+    },
+    {
+     "Team": 2,
+     "Den-Alt": 400,
+     "Score": 100
+    },
+    {
+     "Team": 2,
+     "Den-Alt": 600,
+     "Score": 80
+    }
+   ]
+
+                                                      SAE Aero Design 2027 – Page: 27
+
+=== PAGE 36 | p.28 | img ===
+       TDS: SEQUENCE DIAGRAM FOR PAYLOAD DELIVERY/CAPTURE (ADVANCED CLASS ONLY)
+Advanced Class team shall provide a single-page TDS identifying critical contributors to
+sequence of operations using a sequence diagram, or a type of interaction diagram using
+the Unified Modeling Language (UML) to show how objects interact in a sequence of
+events.
+The team’s sequence diagram TDS shall illustrate the autonomous flow of operations and
+interactions between various contributors involved in the take-off, release/delivery,
+capture, and Return to Base (RTB) process. Figure 4.2 shows an example sequence diagram
+for ordering food from a restaurant.
+The Autonomous Sequence Diagram shall include:
+   1. Contributors: Players and external entities that interact with the system, such as, but
+      not limited to the Pilot, Vehicle, Payload, Command & Control, Release Mechanism,
+      Delivery Mechanism, and Capture Mechanism
+   2. 2-4 Sentences describing the overall system, contributor roles, and the desired
+      outcome from the system
+
+              Figure 4.2: Example of Advanced Class Sequence Diagram
+
+                                                     SAE Aero Design 2027 – Page: 28
+
+=== PAGE 37 | p.29 ===
+       TDS: AIRCRAFT PERFORMANCE PREDICTION (MICRO CLASS ONLY)
+Micro class shall provide a graphical prediction of power available and power required.
+Vertical axis will indicate power (lbs) and horizontal axis will indicate flight speed (ft/sec).
+Graph shall show one (1) power available curve (thrust) and three (3) power required (drag)
+curves. Power required curves shall indicate one (1), two (2), or three (3) external Drag
+Articles installed. The graph shall indicate a cruise design point where power available is
+greater than or equal to power required in the planned cruise configuration. TDS shall
+include stand-alone discussion of cruise design point and how curves were derived.
+
+                                                       SAE Aero Design 2027 – Page: 29
+
+=== PAGE 38 | p.30 ===
+5 FLIGHT DEMONSTRATION READINESS REVIEW
+
+Before any costly test campaign, professional engineers must complete a Flight Demonstration
+Readiness Review (FDRR) with senior technical leadership and independent reviewers. This
+review forces engineers to:
+   1. Gauge program maturity – identify gaps between current capability and requirements.
+   2. Define a path forward – outline upcoming tasks, required resources, and decision-
+      points.
+   3. Translate technical detail for non-specialist leaders – convey remaining risk, schedule,
+      and support needs in plain language.
+The FDRR is a forward-looking, execution centered assessment that evaluates the team’s
+readiness to execute the entire competition safely and efficiently. Unlike a traditional technical
+briefing, the FDRR focuses on testing, logistics, system and operational preparedness. Topics
+may include:
+   ● Context and team goals for the competition, including updates and progress since the
+      paper
+   ● Workflows from transportation to competition through post-flight inspection, including
+      decision trees
+   ● System readiness: validation showing results from subsystem testing, test flights, mock
+      inspections, and flight operations.
+   ● Outstanding work or testing remaining before competition and mitigation strategies
+   ● Risks remaining related to the team goals and the competition event, including
+      mitigation
+   ● Contingency planning highlighting defined Go/No-Go criteria, post-flight planning, and
+      fallback plans, includes both successful and unsuccessful scenarios
+   ● Team readiness including roles and responsibilities and decision making authority
+A high-scoring FDRR convinces the judges that the team fully understands its aircraft, has
+considered every operational step, and possesses a robust logistical framework to support the
+competition flight. FDRR is not a technical design review. A FDRR will critically assess their
+readiness for competition. By centering the FDRR on preparedness and execution planning,
+teams can confidently demonstrate mission readiness and secure the maximum score.
+
+          PRESENTATION REQUIREMENTS
+      1. The FDRR is timed with a follow-on, timed "Question and Answer" (Q&A) period.
+          Table 5.1 (Regular & Micro) and Table 5.2 (Advanced) detail the time limits.
+      2. The FDRR shall be delivered in English.
+      3. The FDRR shall address, but is not limited to event objectives, work remaining,
+          system readiness, risks and First Time Events (FTE), execution plans, failure plans,
+          and overall team readiness. A First Time Event (FTE) is defined as any subsystem
+
+                                                         SAE Aero Design 2027 – Page: 30
+
+=== PAGE 39 | p.31 ===
+      tests, assembly & integration, flight testing, new conditions, new pilot, or any other
+      occurrence that may be encountered during the competition event for the first time.
+   4. The FDRR is limited to student team members only. Non-team member pilot or
+      Faculty Advisors can attend but are prohibited from participating in the setup,
+      delivery, and/or the Q&A.
+   5. Use of visual aids are advised. Film clips, if used, shall not exceed one (1) minute.
+      Film clips may not be accompanied by recorded narration.
+
+       PRESENTATION PROCESS AND PROCEDURES
+Each virtual presentation room will have a lead judge responsible for ensuring compliance
+with competition rules and schedule. The lead judge will also identify a timekeeper.
+   1. With agreement from the team, the timekeeper will give the team a one (1) minute
+       warning prior to the presentation time limit.
+   2. If the time limit is exceeded, the team shall be assessed a five (5) point penalty.
+   3. The presentation shall be stopped after one (1) additional minute.
+   4. A team shall have time for Q&A immediately following the presentation according
+       to Table 5.1 (Regular and Micro Class) and Table 5.2 (Advanced Class). Questions
+       may be asked by any judge.
+   5. Any time remaining or exceeding the presentation time limit shall be added to or
+       subtracted from the Q&A time limit.
+
+Table 5.1: Micro and Regular Class Presentation Time Breakdown
+ Time (Minutes)     Description
+ 2                  Setup presentation
+ 12                 Present Flight Demo Readiness Review
+ 7                  Questions & Answers
+ 1                  Close down presentation
+
+Table 5.2: Advanced Class Presentation Time Breakdown
+ Time (Minutes)     Description
+ 2                  Setup presentation
+ 15                 Present Flight Demo Readiness Review
+ 7                  Questions & Answers
+ 1                  Close down presentation
+
+                                                     SAE Aero Design 2027 – Page: 31
+
+=== PAGE 40 | p.32 | math ===
+6 REQUIREMENTS CHECK & SAFETY AND AIRWORTHINESS INSPECTION
+A Requirements Check & Safety and Airworthiness Inspection of all aircraft will be conducted
+using checklists for each class. The checklists will be posted on SAE STARS. All teams will
+receive a unique code to access their interactive checklist and conduct self-certification.
+Safety and Airworthiness Inspection is the process of checking each aircraft for any issues or
+problems that could cause a safety problem in flight or on the ground.
+Requirements Check is the process of checking all aircraft for:
+        Compliance with all General aircraft requirements.
+        Compliance with all Class-specific requirements.
+        The aircraft presented matches the design submitted by the team.
+All aircraft shall pass the Requirements Check & Safety and Airworthiness to compete. Per the
+Statement of Compliance, teams shall not begin the inspection process prior to presenting a
+fully completed Requirements Check & Safety and Airworthiness Inspection for their aircraft
+submitted on SAE STARS by the Faculty Advisor or Team Captain.
+Inspectors will spot check a list of five (5) to seven (7) requirements, instead of checking all
+items. These will be randomly chosen before the event. Even though items are being spot
+checked, teams shall comply with all items, at all times.
+
+          AIRCRAFT CONFORMANCE TO 2D DRAWING
+   During Technical Inspection, the aircraft will be inspected and measured for conformance to
+   the 2D drawing presented in the Design Report (and any compliant ECRs).
+       1. At a minimum, aircraft length, wingspan and height dimensions will be measured
+          and compared to the 2D drawing.
+       2. Aircraft will have the actual empty CG compared to the 2D Drawing empty CG.
+
+          DEVIATIONS FROM 2D DRAWING
+   Deviations from the documented 2D drawing in the Design Report and any compliant
+   Engineering Change Requests (Section 2.26) may trigger penalty points. Dimensional
+   deviations (dimensions in inches) that satisfy the equation below will not trigger penalties.
+      |Lactual−Ldrawing| + |Wactual−Wdrawing| + |Hactual−Hdrawing| ≤X inches
+           Where X= 1 for Advanced and Micro Class, 2 for Regular Class
+
+          SAFETY AND AIRWORTHINESS OF AIRCRAFT
+   Safety and Airworthiness Inspection will assess the general safety and airworthiness of each
+   aircraft for any problems that could cause departure from controlled flight. This assessment
+   includes, but is not limited to:
+       1. Unintentional wing warps
+       2. Control surface alignment
+       3. Correct control surface response to radio transmitter inputs
+                                                        SAE Aero Design 2027 – Page: 32
+
+=== PAGE 41 | p.33 ===
+    4. Linkage problems
+    5. Structural and mechanical soundness of aircraft
+
+       INSPECTION OF SPARE AIRCRAFT AND SPARE AIRCRAFT COMPONENTS
+   1. All spare aircraft and spare aircraft components (wings, fuselages and tail surfaces)
+      shall be presented for inspection.
+   2. Teams may submit up to two (2) complete aircraft for inspection on Friday.
+   3. Additional spare aircraft and parts beyond two (2) sets may be submitted for
+      inspection on Saturday and Sunday.
+
+       AIRCRAFT SHALL MAINTAIN COMPLIANCE THROUGHOUT THE COMPETITION.
+All aircraft shall meet all Requirements Checks & Safety and Airworthiness requirements
+throughout the competition.
+Compliance with any rules requirement herein may be verified or require reinspection by
+any SAE official, event official or a designated technical/safety inspector at any time,
+including any errors of omissions made by officials during inspection.
+
+       REQUIREMENTS CHECK & SAFETY AND AIRWORTHINESS INSPECTION PENALTIES
+   1. If a team fails the spot check process for any General Aircraft requirements or Class
+      requirements, there shall be a point penalty for each item failed. The aircraft shall
+      be brought into compliance to compete.
+   2. SAE Aero Design reserves the right to assess the point penalty on any requirement
+      item found during inspection, even if the item is not on the spot check list.
+   3. Any Requirements Check failure involving penalty points shall be confirmed by a
+      Rules Committee member.
+   4. No additional penalty points shall be assessed for a team’s second aircraft that has
+      the same requirements failure as the first aircraft.
+   5. If a Requirements Check item failure is found on an aircraft after inspection or
+      during flight rounds, the point penalty shall be applied and any flight score earned
+      while the aircraft was non-compliant will be zeroed. The aircraft shall be brought
+      into compliance before flying again.
+   6. Penalty points shall not be applied for failing any Safety or Airworthiness item.
+      However, the team shall correct any failures before the aircraft is allowed to fly.
+      Flight points earned while the aircraft was not in compliance with Safety and
+      Airworthiness requirements may be subject to being zeroed.
+
+                                                     SAE Aero Design 2027 – Page: 33
+
+=== PAGE 42 | p.34 ===
+7 REGULAR CLASS DESIGN REQUIREMENTS
+The Regular Class objective is to design a multi-motor cargo aircraft that can maximize mission
+performance associated with payload delivery. Payload consists of unmodified, commercially
+available, 2L cylindrical plastic bottles, either EMPTY or FILLED, which will be carried on each
+flight. Successful teams will accurately predict maximum flight score and demonstrate an
+ability to incrementally increase payload capacity.
+
+          AIRCRAFT DIMENSION REQUIREMENT
+   Regular Class aircraft minimum planform wingspan shall be greater than seventy-two (72)
+   inches.
+   Regular Class aircraft maximum planform wingspan shall be less than ninety-six (96) inches.
+   Regular Class minimum wing chord shall be greater than four (4) inches.
+   Regular Class aircraft maximum body axis length shall be less than one hundred and twenty
+   (120) inches.
+
+          MATERIAL AND EQUIPMENT RESTRICTIONS FOR REGULAR CLASS
+     Fiber-Reinforced Plastic (FRP)
+          The use of Fiber-Reinforced Plastic (FRP) is prohibited on all parts of the aircraft.
+          Fiber-Reinforced Plastic includes duct tape. Exceptions include commercially
+          available FRP motor mount, propeller, landing gear, and control linkage
+          components. Exploration of alternative materials is encouraged.
+     Rubber Bands
+          Elastic material such as rubber bands, shall not retain the wing or payloads to the
+          fuselage.
+
+          PROPULSION SYSTEM REQUIREMENTS
+     Electric Motor Requirements
+          The aircraft shall be propelled by either two (2) or four (4) electric motors. There are
+          no restrictions on the make or model of the electric motors.
+     Gearboxes, Drives, and Shafts
+          Gearboxes, belt drive systems, and propeller shaft extensions are allowed if a one-
+          to-one propeller to motor RPM is maintained. The prop(s) shall rotate at motor
+          RPM.
+     Aircraft Propulsion System Battery
+          Regular Class aircraft shall be powered by a commercially available 4 cell (14.8 volt)
+          Lithium-Polymer battery pack. Maximum requirements: 2200 mAh.
+     Propeller Requirements
+          Maximum propeller diameter (per motor) shall be twelve (12) inches if two (2)
+          motors are used or nine (9) inches if four (4) motors are used.
+     Power Limiter
+          Regular class aircraft are not required to fly with a power limiter.
+                                                          SAE Aero Design 2027 – Page: 34
+
+=== PAGE 43 | p.35 ===
+       PAYLOAD REQUIREMENTS
+  Bottle Cargo
+      Regular Class payload shall consist of unmodified, commercially available, 2L
+      cylindrical plastic bottles, which shall be carried internally. Reference Section 7.5 for
+      payload unloading demonstration requirements.
+      1. Aircraft shall contain a minimum payload of one (1) bottle during a flight
+          attempt.
+      2. Bottle Cargo may have one of two configurations:
+          EMPTY BOTTLE - containing unpressurized air or inert material such that gross
+          bottle weight is greater than one (1.0) lbs and less than four (4.0) lbs
+          FILLED BOTTLE - containing unpressurized air or inert material such that gross
+          bottle weight is greater than or equal to four (4.0) lbs
+      3. After a successfully scored flight, the next flight attempt shall increase payload
+          (scored payload) either by addition of at least one (1) EMPTY BOTTLE AND/OR
+          replace at least one (1) EMPTY BOTTLE with a FILLED BOTTLE. Total scored
+          bottle count must remain constant or increase.
+      4. If payload material spills and clean up requires a delay in flight operations, teams
+          shall forfeit one (1) flight attempt.
+  Cargo Bay Requirements
+      Regular Class aircraft shall have fully enclosed Cargo Bay(s) for carrying Bottle Cargo
+      with the following additional requirements:
+      1. Bottle Cargo shall not be exposed to airstream at any point in flight.
+      2. Bottle Cargo shall not move or shift during flight.
+      3. The Cargo Bays have no restriction on size or shape.
+      4. Aircraft may contain multiple Cargo Bays.
+
+       REGULAR CLASS PAYLOAD UNLOADING
+To complete a successful flight for score, post-flight Bottle Cargo unloading shall be
+accomplished within one (1) minute. This demonstration will occur at the weigh station
+after each successful flight.
+This activity shall be performed by no more than two (2) team members.
+The demonstration will start with all Bottle Cargo loaded and secured, and the aircraft
+configuration unchanged from the most recent successful flight.
+Only Bottle Cargo successfully unloaded within the time limit will be counted, weighed, and
+recorded for that flight. FILLED BOTTLES shall weigh at least four (4.0) lbs or they will be
+counted as EMPTY BOTTLES. EMPTY BOTTLES shall weigh at least one (1.0) lbs or they will
+not be counted. Successfully unloaded Bottle Cargo shall be free from tethers, harnesses,
+or similar external modification.
+
+                                                       SAE Aero Design 2027 – Page: 35
+
+=== PAGE 44 | p.36 | math ===
+       REGULAR CLASS SCORING
+The team’s Final Flight Score (FFS) is the average of the team’s top three (3) flight scores
+achieved during the competition (FS1, FS2, and FS3).
+   Scoring Equation:
+               FFS= Final Flight Score= (FS1 + FS2 + FS3)/3 + PPB
+   Where:
+                     FS= Flight Score= 3(EB) + 11(FB)
+
+         PPB= Payload Prediction Bonus= MAX(10 −(FS−PS)2, 0)
+
+       EB= Count of EMPTY BOTTLES (#)
+       FB= Count of FILLED BOTTLES (#)
+       PS= Predicted Maximum Flight Score (#)
+The Predicted Maximum Flight Score (PS) is determined from the flight score prediction
+curve provided in the TDS (Section 4.5) and the density altitude measured at the event.
+The Payload Prediction Bonus (PPB) will be calculated once at the end of the competition.
+The PPB will be calculated using whichever of the top three (3) flight scores utilized in the
+FFS calculation generates the largest PPB. A PPB score less than zero (0) will default to zero
+(0).
+Ties in FFS will be broken by total number of filled bottles carried in top 3 scored flights.
+Penalty Points
+Penalty points assessed during competition are deducted from a team's overall score.
+
+                                                     SAE Aero Design 2027 – Page: 36
+
+=== PAGE 45 | p.37 ===
+8 ADVANCED CLASS DESIGN REQUIREMENTS
+The Advanced Class objective is to autonomously deliver and retrieve payloads to a predefined
+area. Teams earn points for completing various mission segments leading up to delivery and
+retrieval of their payload, with a strong focus on autonomous performance.
+
+          AIRCRAFT DIMENSION REQUIREMENT
+   Advanced Class aircraft maximum planform wingspan shall be less than one hundred and
+   twenty (120) inches.
+   Advanced Class aircraft maximum weight shall not exceed 3.50 lbs.
+
+          AIRCRAFT SYSTEM REQUIREMENTS
+     Propulsion Requirements
+          Advanced Class aircraft shall be limited to electric motors only.
+          Advanced Class aircraft shall be limited to a maximum of three (3) motors and three
+          (3) propellers.
+     Gearboxes, Drives, and Shafts
+          Gearboxes, belt drive systems, and propeller shaft extensions are allowed.
+     Aircraft Propulsion System Battery
+          Advanced Class aircraft shall be powered by a commercially available 4 cell (14.8
+          volt) Lithium-Polymer battery pack with a maximum capacity of 3000 mAh.
+     Power Limiter
+          Advanced class aircraft are not required to fly with a power limiter.
+     Rubber Bands
+          Elastic material, such as rubber bands, shall not retain the wing to the fuselage.
+
+          VIDEO DOCUMENTATION OF PROVEN OPERATIONAL ABILITY FOR ADVANCED CLASS
+   Advanced Class teams shall provide video documentation demonstrating the proven
+   operational capability of their aircraft during Inspection. Failure to do so will result in
+   prohibition from entering the flight portion of the event.
+       1. Teams will provide a device to play the video for officials at a size that allows officials
+          to clearly see the aircraft and runway.
+       2. The video shall show the following activities accomplished successfully with their
+          competition aircraft:
+          a. Conventional Takeoff mission segment with sustained, stable flight for ten (10)
+              seconds
+          b. Return to Base (RTB) mission segment with controlled landing on runway
+              without damage
+       3. Videos shall be no more than 1.5 minutes. Edited video will be accepted if the video
+          is of the same flight.
+
+                                                         SAE Aero Design 2027 – Page: 37
+
+=== PAGE 46 | p.38 ===
+    4. Video shall be provided to, and approved by, officials before teams will be allowed
+       to enter flight competition.
+    5. Proof of Flight Video (PoFV) can be obtained on the day of the Requirements Check
+       & Safety and Airworthiness Inspection, if the field is open. Once the flying portion
+       of the competition has begun, the event will not pause for teams to record PoFV.
+       Teams may record PoFV from another nearby open field and have the sole
+       responsibility to coordinate with any external field.
+
+       MISSION DESCRIPTION
+The Advanced Class mission is based around payload delivery and retrieval from a
+Designated Landing Zone (DLZ). Mission success is measured by maximizing mission
+segment score with a higher score corresponding to more complex and connected mission
+segment execution.
+The Advanced Class mission is broken down into several consecutive segments.
+Conventional Takeoff, Payload Delivery, Payload Capture, and Return to Base (RTB). Each
+segment may be attempted autonomously or manually.
+Maximum Mission time is four (4) minutes. Teams are incentivized to minimize mission
+time with a time bonus.
+Conventional Takeoff is defined as transitioning from zero velocity on the runway to stable,
+horizontal flight at the end of the runway consistent with Section 3.8.
+Payload Delivery is defined as retaining onboard payload from conventional takeoff until
+intentional payload separation while the vehicle is stopped and resting on the DLZ.
+Payload Capture is defined as picking up and retaining a previously Released or Delivered
+payload, as well as the aircraft and payload successfully returning to horizontal flight.
+Return To Base is defined as a conventional landing back on the runway according to
+Section 3.9. Payload will only be weighed for this segment if Capture segment was
+successful.
+Only one (1) payload shall be carried at a time.
+To receive a Payload Capture Mission Segment Score, teams shall pick up a valid payload
+that was Delivered during a previous flight attempt.
+It is possible to score up to two (2) Payload Segment Scores during one (1) flight attempt if a
+team can score a Delivery with one (1) payload and then score a Capture with a different
+payload.
+To earn mission segment points, the delivered payload shall remain entirely within the DLZ
+for the mission.
+The payload shall be fully supported by the DLZ. If the payload falls off or touches the
+ground outside the DLZ during the mission, or between missions, it will be disqualified from
+any mission scoring. Released payloads which do not remain on the correct DLZ will be
+recovered by officials and returned to teams at least once per day.
+
+                                                     SAE Aero Design 2027 – Page: 38
+
+=== PAGE 47 | p.39 ===
+Although mission segment scoring is additive, teams shall complete both Conventional
+Takeoff mission segment and Return to Base mission segment at a minimum to receive a
+Flight Score for a given flight attempt.
+Geometric boundaries are defined to indicate mission segment entry and exit criteria. This
+link contains additional information:
+https://www.saeaerodesign.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=5f05
+ade8-28d3-4bc3-9ad7-3e31ac2b73bb
+Conventional Takeoff shall employ aerodynamic lift generation from fixed wing surfaces
+during horizontal ground roll. Ground roll distance will be an outcome of the design but
+should be nonzero. Vertical takeoff from the runway is not 'conventional'. A hybrid
+approach with a propulsion device generating predominately vertical thrust (lift) will not be
+considered Conventional Takeoff. Given various propulsion solutions, a thrust line of up to
+ten (10) degrees from horizontal (runway/earth axis) is considered acceptable during
+conventional takeoff. Any propulsion device oriented greater than ten (10) degrees from
+horizontal shall not be active during Conventional Takeoff through liftoff.
+Similarly, during Return to Base (Conventional Landing), Advanced Class aircraft shall not
+use propulsion systems generating substantial vertical thrust (propulsion devices with thrust
+lines greater than ten (10) degrees from horizontal/runway axis).
+
+       AIRCRAFT PAYLOAD REQUIREMENTS
+Each team shall build and provide deliverable payloads. Payloads will be weighed regularly
+for scoring calculations. Weighing will occur prior to flight attempt if payload is present
+during takeoff. Weighing will occur after flight attempt if payload is present during landing.
+    1. Aircraft may carry up to one (1) payload during a given mission segment.
+    2. Payloads shall be clearly marked with team number in minimum one (1) inch font.
+    3. Payloads shall be uniquely numbered in minimum one (1) inch font.
+    4. Payloads shall be capable of unloading in under one (1) minute. If payload
+       unloading is not performed in the time limit, the affected mission segments will
+       receive zero (0) payload weight for scoring purposes.
+    5. The largest linear dimension of payload shall be twelve (12) inches or less.
+    6. Payloads may contain electronics or magnets but shall not be manually operated.
+    7. Payloads may not intentionally move outside of payload mission segment.
+
+       DESIGNATED LANDING ZONE (DLZ)
+The Advanced Class aircraft shall deliver and recover payload from a Designated Landing
+Zone (DLZ). Teams are responsible for sourcing all DLZ materials and installing their landing
+zone. Teams may select and set up their DLZ after successfully completing Requirements
+Check & Safety and Airworthiness Inspection. Landing zone location selection and setup
+shall be supervised by an SAE Aero Design Rules Committee member. There will be a
+designated area on the far side of the runway where DLZs are allowed to be located.
+
+                                                       SAE Aero Design 2027 – Page: 39
+
+=== PAGE 48 | p.40 | img ===
+Payloads which remain on the DLZ at the end of a flight day will be impounded overnight
+and replaced the next morning prior to resumption of flight competition.
+   Designated Landing Zone shall conform to the following requirements
+       1. One (1) zone with a size of 8 ft x 8 ft.
+       2. DLZ is (only) two (2) sheets of 4 ft x 8 ft coroplast (corrugated plastic) with a 4
+          mm thickness. Four (4) sheets of 4 ft x 4 ft coroplast is also accepted but will
+          require additional staking. No modification/material under the coroplast.
+       3. Surface staked into the ground with a minimum of nine (9) stakes (Figure 8.1).
+          Intent is a stake every four (4) ft. Stakes are eight (8) inch or longer, metal, and
+          fully embedded into the ground.
+       4. No nets or modified surfaces that can adhere to or catch the payload (Velcro,
+          magnets, tape, or other positive retention methods).
+       5. No electronics, batteries, or magnets are allowed as part of installed DLZ.
+       6. Moving the zone will only be allowed with official approval and oversight on a
+          non-interference basis with competition flying.
+       7. Teams may only successfully land on their DLZ.
+
+            Figure 8.1: Designated Landing Zone Configuration with Stakes
+
+       AUTONOMOUS FLIGHT
+Autonomous flight systems that cause the aircraft to navigate without direct pilot control
+input are allowed. Autonomous flight is subject to the following rules:
+    1. In addition to the motor, the aircraft shall have an active navigation system
+       controlling at least two (2) degrees of freedom.
+    2. Teams shall have a manual override for control through a dedicated transmitter.
+       There shall be a red-colored momentary switch (or button) on that transmitter to
+       switch between autonomous and manual flight modes. The switch shall be
+       configured such that pilot holds the switch (or button) for the aircraft to be in
+       autonomous flight mode. Rubber bands are not allowed.
+    3. Manual override may be used at the team’s discretion. Any use of manual override
+       shall be considered manual for the scoring of that flight segment.
+                                                       SAE Aero Design 2027 – Page: 40
+
+=== PAGE 49 | p.41 ===
+    4. Pilots shall clearly announce any time the team switches between automatic and
+       manual flight modes.
+    5. If the aircraft is flying in an unsafe manner, the Air Boss may order grounding as per
+       Section 3.14.5. The flight shall be considered unsuccessful.
+
+       AUTOPILOT / AUTONOMOUS FLIGHT SYSTEM
+   1. The autopilot (or autonomous flight) system shall use a discrete and removable Red
+      arming plug to apply power, subject to Section 2.22 requirements. One (1) Red
+      arming plug can be used for both autopilot and FPV.
+   2. Autopilot equipment may also have a reset switch, if desired. If a manual reset
+      switch is used, it shall be located externally in accordance with Section 2.24. A
+      wireless reset system is allowed.
+   3. Autopilot data link shall not use the same 2.4 GHz band as the pilot transmitter.
+
+       FIRST PERSON VIEW SYSTEM (FPV)
+FPV is not required. For teams wishing to use an FPV system for operational reasons, the
+following conditions apply:
+    1. The pilot shall fly visually only (no FPV goggles or ground station reference).
+    2. FPV systems shall use a separate frequency from the flight control system. FPV
+       systems CANNOT use the same frequency as the flight control system. Use of 2.4
+       GHz for FPV video is prohibited.
+    3. The FPV system shall use a discrete and removable Red arming plug to apply power,
+       subject to Section 2.22 requirements.
+
+       PAYLOAD DELIVERY AND RECOVERY OPERATOR (PO)
+Autonomous flight is encouraged. If teams elect to perform payload delivery and recovery
+operations manually, a Payload Operator (PO) shall be employed. All communication
+between the PO and pilot shall be in English. The Payload Operator may not manually
+control the payload itself.
+    1. One (1) team member may act as PO. The PO shall not rely on having a line-of-sight
+       view to the aircraft or DLZ.
+    2. PO may activate the payload release or capture system using a second 2.4 GHz
+       radio system or some other method based on their telemetry system, however this
+       will count as manually executing that mission segment. Manual safety arming of an
+       autonomous release system will not be considered manual execution of the mission
+       segment.
+
+                                                      SAE Aero Design 2027 – Page: 41
+
+=== PAGE 50 | p.42 | math ===
+       ADVANCE CLASS SCORING
+The team’s Final Flight Score (FFS) is the sum of the team’s top three (3) flight scores
+achieved during competition. Teams receive points for a flight attempt based on
+accomplishing mission segments, with more points awarded for autonomous flight.
+Segment scores are based on mission complexity, the payload weight carried for that
+mission segment, and a potential bonus for the total time required for mission completion.
+Flight Score (FS) is comprised of additive and multiplicative factors based on segments
+completed and a time bonus. Time bonus is active if and only if a payload mission segment
+is attempted.
+
+   Scoring Equation:
+                      Final Flight Score= FS1 + FS2 + FS3
+
+   Where:
+   Mission Segment Multiplier (MSM)
+                                      Autonomous     Manual
+                Mission Segment       Multiplier     Multiplier
+                Conventional Take off  2             1
+                Payload Delivery      8              1
+                Payload Capture       15             2
+                Return To Base        3              1
+
+           FS= Flight Score= (STakeoff+ SDelivery+ SCapture+ SRTB) + TB
+
+                    Sx= SMission Segment= 1 + (MSM∗WPayload)
+
+                                       0 if 180 ≤Tm < 240 sec
+                  TB= Time Bonus= { 1 if 120 ≤Tm < 180 sec
+                                       2 if    0 ≤Tm < 120 sec
+                          WPayload= Payload Weight (lbs)
+                           Tm= Total Mission Time (sec)
+
+   Penalty Points
+   Penalty points assessed during competition are deducted from a team's overall score.
+
+                                                   SAE Aero Design 2027 – Page: 42
+
+=== PAGE 51 | p.43 ===
+9 MICRO CLASS DESIGN REQUIREMENTS
+The Micro Class objective challenges students to design a small, all-electric cargo aircraft which
+must overcome drag associated with external payload while also carrying internal payload
+weight. Teams should maximize scoring for payload carried, while satisfying mission
+requirements and propulsion limits.
+
+          AIRCRAFT DIMENSION REQUIREMENTS
+   Micro Class aircraft maximum planform wingspan shall be less than sixty (60) inches.
+
+          AIRCRAFT SYSTEMS REQUIREMENTS
+     Propulsion Requirements
+          Micro Class aircraft shall be restricted to one (1) electric motor for propulsion.
+     Aircraft Propulsion System Battery
+          Micro Class aircraft shall be powered by a commercially available 3 cell (11.1 volt
+          nominal) Lithium-Polymer battery pack. Maximum requirements: 1000 mAh.
+     Propeller Requirements
+          Maximum propeller diameter shall be equal to or less than twelve (12) inches.
+          Aircraft shall be restricted to one (1) propeller.
+     Propeller and Gearbox
+          Gearboxes where the propeller RPM differs from the motor RPM are allowed.
+          Propeller shrouds, and ducted fans are not allowed.
+     Power Limiter
+          Micro class aircraft are not required to fly with a power limiter.
+
+          EXTERNAL DRAG ARTICLE ATTACHMENT REQUIREMENTS
+   Micro Class aircraft shall incorporate exactly three (3) external Drag Article attachment
+   locations. Each location may hold up to one (1) Drag Article.
+       1. Attachment locations shall be located fifteen (15) inches away from the propeller
+          (or any point in the propeller sweep).
+       2. Each attachment location shall include a quick-release mechanism that permits
+          installation and removal of a Drag Article without the use of permanent fasteners or
+          adhesives.
+       3. Each attachment location shall position the Drag Article such that it is fully exposed
+          to the free airstream during flight. Each Drag Article indicates a forward direction
+          orientation that shall be maintained during flight.
+       4. Each attachment location shall be at least nine (9) inches laterally spaced in the
+          aircraft y-axis (spanwise).
+       5. No fairings, covers, cowling, or other aerodynamic enclosures shall be permitted
+          around or partially enclose the Drag Article(s).
+
+                                                          SAE Aero Design 2027 – Page: 43
+
+=== PAGE 52 | p.44 ===
+ 6. Each attachment location shall securely retain the Drag Article throughout all
+    phases of the flight mission. Release of a Drag Article during a flight attempt
+    constitutes a failed flight attempt.
+ 7. The attachment system shall not permit any movement of the Drag Article.
+ 8. Each attachment location shall be accessible for inspection and Drag Article
+    installation prior to flight.
+
+     PAYLOAD REQUIREMENTS
+1. Types of Cargo
+    Micro Class payload shall consist of externally-mounted Drag Articles and internal
+    payload plates mounted inside the payload bay.
+2. Drag Article Design and Fabrication
+    SAE shall provide five (5) Drag Article designs in the form of digital definition files.
+    Files will be available for download from the SAE website.
+       1. Teams shall use additive manufacturing to create Drag Articles.
+       2. Teams shall bring their own Drag Articles to be used at the competition.
+3. Drag Article Requirements
+    One (1) or more Drag Articles shall be installed on the aircraft and flown as part of the
+    flight attempt for scoring purposes.
+       1. Each 3D-printed Drag Article shall have at least the minimum weight specified
+           in Section 9.5.
+       2. No material restrictions shall apply to the fabrication of Drag Articles, provided
+           all other requirements are met and material is inert.
+       3. Each 3D-printed Drag Article shall match the external profile (outer mold line
+           dimensions) of the Drag Article digital definition file.
+       4. A single type of Drag Article may receive a flight score up to four (4) times total
+           during the flight competition.
+              a. Example 1: Drag Article “Banana” is carried at two (2) attachment
+                  locations on first successful flight and at two (2) attachment locations
+                  on second successful flight and is not carried on any subsequent flights.
+                  Both successful flights receive scores.
+              b. Example 2: Drag Article “Banana” is carried at three (3) attachment
+                  locations on first successful flight and two (2) attachment locations on
+                  second successful flight. The successful second flight is not scored
+                  (regardless of other payload) because “Banana” was already scored
+                  three times and will not be scored five times. Drag Article “Banana”
+                  would still be eligible to fly at one (1) attachment location on a third
+                  flight attempt and receive a score for that flight.
+4. Internal Payload Bay Requirements
+    The internal payload bay shall provide a continuous, unobstructed volume for payload
+    installation.
+                                                     SAE Aero Design 2027 – Page: 44
+
+=== PAGE 53 | p.45 ===
+         1. The entire payload bay volume shall remain clear and usable for payload
+             placement.
+         2. Structural members, fasteners, wiring, control linkages, batteries, avionics,
+             and other aircraft components shall not protrude into the defined payload bay
+             volume.
+         3. Micro class aircraft shall incorporate one (1) internal payload bay.
+         4. The payload bay shall have minimum internal dimensions of 6 in x 6 in x 6 in.
+         5. The internal payload bay shall be fully enclosed and prevent internal payload
+             from being exposed to external airflow during flight attempt.
+  5. Internal Payload Requirements
+         1. Micro Class teams shall provide their own payload plates.
+         2. No specific payload plate configuration is required.
+         3. All payload items shall be secured and carried within the payload bay.
+         4. Payload support assemblies shall be located entirely within the payload bay.
+         5. The internal payload shall not provide structural support to the airframe.
+         6. The internal payload shall be independently secured within the payload bay.
+         7. The internal payload shall remain fixed and shall not shift during any phase of
+             the flight mission.
+         8. The internal payload score shall be based on total payload weight carried
+             within the payload bay including payload plates and payload support
+             assemblies.
+
+       MICRO CLASS PAYLOAD UNLOADING
+Teams shall demonstrate the ability to unload both external and internal payload. This
+timed demonstration will occur at the weigh station with the aircraft configuration
+unchanged from the most recent successful flight. Only Drag Articles and internal payload
+successfully removed from the aircraft within the time limit will be weighed and recorded
+for scoring.
+   1. The demonstration shall be performed by no more than two (2) team members.
+   2. The unloading process shall occur within a one (1) minute time window.
+
+                                                     SAE Aero Design 2027 – Page: 45
+
+=== PAGE 54 | p.46 | math ===
+       MICRO CLASS FLIGHT SCORING
+The team’s Final Flight Score (FFS) is the sum of the team’s top three (3) flight scores
+achieved during the competition (FS1, FS2, and FS3). Scoring scales with total internal
+payload weight carried and a sum of Drag Articles carried.
+   Scoring Equation:
+                     Final Flight Score= FFS= FS1 + FS2 + FS3
+
+   Where:
+                       Flight Score= FS= 1.25 ∗WPayload∗N
+
+                N= Number of External Drag Articles Carried
+
+                    WPayload= Sum of Internal Payload Weight (lbs)
+
+     Drag Article            Minimum Weight (lbs)
+     Rubber Chicken          1.50
+     Banana                  1.00
+     Flying Pig              0.75
+     Dumpster Fire           0.63
+     Waffle                  0.50
+
+   Penalty Points:
+   Penalty points assessed during competition are deducted from the team’s overall score.
+
+                                                     SAE Aero Design 2027 – Page: 46
+
+=== PAGE 55 | p.47 ===
+APPENDIX A - STATEMENT OF COMPLIANCE
+
+Certification of Qualification
+ Team Name                                                 Team Number
+
+ School
+
+ Faculty Advisor
+
+ Faculty Advisor’s
+ Email
+
+Statement of Compliance
+As faculty Adviser:
+
+______ (Initial) I certify that the registered team members are enrolled in collegiate courses.
+
+______ (Initial) I certify that this team has designed and constructed the radio-controlled aircraft
+in the past nine (9) months with the intention to use this aircraft in the 2027 SAE Aero Design
+competition, without direct assistance from professional engineers, R/C model experts, and/or
+related professionals.
+
+______ (Initial) I certify that this year’s Design Report has original content written by members of
+this year’s team.
+
+______ (Initial) I certify that all reused content has been properly referenced and is in
+compliance with the University’s plagiarism and reuse policies.
+
+____ (Initial) I certify that the team shall use the Requirements Check & Safety and Airworthiness
+Inspection checklists to inspect their aircraft before arrival at Technical Inspection and that the
+team shall submit the completed checklists, signed by the Faculty Advisor or Team Captain, to
+the inspectors before Technical Inspection begins.
+
+ Signature of Faculty Advisor                     Date
+
+ Signature of Team Captain                        Date
+
+Note: A copy of this statement needs to be included in your Design Report as page 2 (Reference Section 4.3)
+
+                                                            SAE Aero Design 2027 – Page: 47
+
+=== PAGE 56 | p.48 ===
+APPENDIX B - APPEALS
+ Team Name
+ Team Captain
+ Collateral               All appeals will require the team to post twenty-five (25) points as collateral. If the
+ Points                   appeal is successful and the action is reversed, the team will not forfeit the twenty-five
+                          (25) collateral points. If the appeal is overruled, the team will forfeit the twenty-five
+                          (25) collateral points
+
+                          Collateral Points:    25
+
+                          Sign if Agree: __________________________________________
+ Reason for this Appeal
+
+ Rule Reference
+                          List the section(s) in the official rule that is (are) in conflict with the action(s) taken by
+                          competition official
+
+                          Section:____________             Section:____________
+                          Section:____________             Section:____________
+
+ Desire outcome
+
+                                                                       SAE Aero Design 2027 – Page: 48
+
+=== PAGE 57 | p.49 | lowtext ===
+ERRATA
+
+                                                   SAE Aero Design 2027 – Page: 49

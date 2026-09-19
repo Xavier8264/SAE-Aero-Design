@@ -1,0 +1,454 @@
+# ID: nasa_uav_battery_model
+# SOURCE: https://c3.ndc.nasa.gov/dashlink/static/media/publication/2011_AIAA_UAVBHM.pdf
+# ORIGINAL: reference/raw/nasa_uav_battery_model.pdf
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type pdf | 8 pages | ~7559 tokens
+# NOTE: NASA AIAA 2011: Li-Po discharge model on an electric UAV (voltage sag under load)
+# FLAG img: pages 2-3
+
+=== PAGE 1 ===
+                Predicting Battery Life for Electric UAVs
+
+                                            Bhaskar Saha1
+     Mission Critical Technologies, Inc. (NASA ARC), 2041 Rosecrans Ave., Ste 220, El Segundo, CA 90245
+
+                                          Edwin Koshimoto2
+                        NASA Dryden Flight Research Center, Edwards, CA 93523
+
+                                 Cuong C. Quach3 and Sixto L. Vazquez4
+                    NASA Langley Research Center, 1 S. Wright St., Hampton, VA 23681
+
+                                          Edward F. Hogge5
+              Lockheed Martin Corporation (NASA LaRC), 1 S. Wright St., Hampton, VA 23681
+
+                                          Thomas H. Strom6
+                   ATK Space Systems (NASA LaRC), 1 S. Wright St., Hampton, VA 23681
+
+                                            Boyd L. Hill7
+                       Vigyan Inc (NASA LaRC), 30 Reseach Dr, Hampton VA 23681
+
+                                                and
+
+                                             Kai Goebel8
+                          NASA Ames Research Center, Moffett Field, CA 94035
+
+          This paper presents a novel battery health management technology for the new
+       generation of electric unmanned aerial vehicles powered by long-life, high-density, scalable
+       power sources. Current reliability based techniques are insufficient to manage the use of
+       such batteries when they are an active power source with frequently varying loads in
+       uncertain environments. The technique presented here encodes the basic electrochemical
+       processes of a Lithium-polymer battery in an advanced Bayesian inference framework to
+       simultaneously track battery state-of-charge as well as tune the battery model to make
+       accurate predictions of remaining useful life. Results from ground tests with emulated flight
+       profiles are presented with discussions on the use of such prognostics results for decision
+       making.
+
+                                           Nomenclature
+         = battery voltage
+         = voltage drop
+         = theoretical output voltage
+x        = state variable
+y        = measurement
+
+1 Research Scientist, Intelligent Systems Division, NASA ARC, MS 269-3, non-AIAA Member.
+2 Aerospace Engineer, Aerodynamics & Propulsion Branch, NASA DFRC, non-AIAA Member.
+3 Research Engineer, Safety-Critical Avionics Systems Branch, NASA LaRC, non-AIAA Member.
+4 Research Engineer, Safety-Critical Avionics Systems Branch, NASA LaRC, non-AIAA Member.
+5 Contractor, Safety-Critical Avionics Systems Branch, NASA LaRC, non-AIAA Member.
+6 Contractor, Safety-Critical Avionics Systems Branch, NASA LaRC, non-AIAA Member.
+7 Contractor, Safety-Critical Avionics Systems Branch, NASA LaRC, non-AIAA Member.
+8 Senior Scientist, Intelligent Systems Division, NASA ARC, Senior AIAA Member.
+                                                  1
+                            American Institute of Aeronautics and Astronautics
+
+=== PAGE 2 | img ===
+t         = time
+          = time delay between consecutive discrete time staps
+          = model parameter
+
+                                             I. Introduction
+      ITH electric UAVs (unmanned aerial vehicles) we are witnessing the dawn of a new era in aviation. They are
+W
+      being increasingly deployed in military, civilian and scientific missions all over the globe. However, like
+ground vehicles, battery powered electric UAVs suffer from uncertainties in estimating the remaining charge and
+hence most flight plans are highly conservative in nature. The amount of usable charge of a battery for a given
+discharge profile is not only dependent on the starting state-of-charge (SOC), but also other factors like battery
+health and the discharge or load profile imposed. This is because in most battery powered propulsion systems, the
+battery shut off criteria are based on the terminal voltage. This voltage is related to the SOC of the battery, but it is a
+highly non-linear relation, which is further complicated by a sharp drop off of the terminal voltage as the battery
+SOC nears empty. This problem is more pronounced in battery powered electric UAVs since different flight regimes
+like takeoff/landing and cruise and changing environmental factors like wind velocity impose different power
+requirements and a dead stick condition (battery shut off in flight) can have catastrophic consequences.
+   In this paper, a detailed battery discharge model is presented for the Lithium-polymer (Li-Poly) cells and verified
+using ground tests of the Edge 540, a subscale aerobatic UAV powered by four 18.5V 6000mAh Li-Poly battery
+packs. This model was then used in a Particle Filter based prognostic framework to accurately predict the remaining
+useful life (RUL) for the batteries. Particle Filters are a class of Sequential Monte Carlo methods that not only use
+the information available from system measurements but also incorporate any models available for system behavior.
+This technique also has the ability to tune non-stationary model parameters simultaneously with state estimation,
+which combined with the representation of state space as multiple weighted particles, makes it ideal for state
+tracking and prediction. Given stochastic estimates of future usage, the RUL estimates generated can facilitate
+intelligent flight plan reconfiguration, which can be vital in assuring system safety. Some initial results were
+published earlier1; this paper is intended as the next step in the approach presented. The main contributions of this
+paper are the advances in battery modeling and the statistical evaluation of prognostic performance.
+
+                                           II. UAV Platform
+   The test UAV platform for this research is a COTS 33% scale model of the Zivko Edge 540T as shown in Fig.
+Figure 1. Details of this platform have been presented in1, but are also repeated here for the sake of readability. The
+UAV is powered by dual tandem mounted electric out-runner motors capable of moving the aircraft up to 85 knots
+using a 26 inch propeller. The gas engine in the original kit specification was replaced by two electric out runner
+motors which are mounted in tandem to power a single drive shaft. The motors are powered by a set of 4 Li-Poly
+rechargeable batteries. The batteries are each rated at 6000 mAh. The tandem motors are each controlled by
+separate motor controllers.
+   The battery health management (BHM) system is
+designed to be a relatively low cost analog-to-digital
+data acquisition system. There are three major elements
+to the BHM system - a signal conditioning board, an
+analog-to-digital acquisition board, and an embedded
+processor board.  There are 12 channels of data (4
+battery voltages, 4 battery currents, and 4 battery
+temperatures) to be recorded at rates up to 30 samples
+per second. The signal conditioning board processes the
+analog  sensor   signals  for   the  analog-to-digital
+acquisition board.  The analog-to-digital acquisition
+board feeds the processed signal data into an embedded
+processor  board   running   a   Gumstix   Overo(TM) Figure 1. 1⁄3-scale Edge 540 UAV.
+computer-on-module (COM) system, where the data are fed into the battery prognostics algorithm. The battery
+prognostic algorithm leverages POSIX threading for speed and efficiency. Finally the embedded processor board
+outputs the battery prognostics algorithm results on an RS-232 data stream.
+
+                                                      2
+                               American Institute of Aeronautics and Astronautics
+
+=== PAGE 3 | img ===
+                                         III. Battery Modeling
+   The characteristics of a Li-Poly battery have also been explained in1, 2. For the purposes of this paper it will
+suffice to say that the internal chemical processes of the battery were broken down into three basic electrochemical
+processes:
+   Mass transfer: This refers to the diffusion process through which Li-ions migrate to the cathode via the
+electrolytic medium. The internal resistance to this ionic diffusion process is also referred to elsewhere as the IR
+drop.2 For a given load current this drop usually decreases with time due to the increase in internal temperature that
+results in increased ion mobility, and is henceforth referred to as  .
+   Self-discharge: Self-discharge is caused by the residual ionic and electronic flow through a cell even when there
+is no external current being drawn. The resulting drop in voltage has been modeled to represent the activation
+polarization of the battery, referred to from now on as   . All chemical reactions have a certain activation barrier
+that must be overcome in order to proceed and the energy needed to overcome this barrier leads to the activation
+polarization voltage drop. The dynamics of this process is described by the Butler–Volmer equation. This process
+was represented by an exponential function in1. However, a log function is a more accurate representation, as
+abstracted from the Butler–Volmer equation.3
+   Reactant depletion: This process represents the voltage loss due to spatial variations in reactant concentration at
+the electrodes. This is mainly
+caused when the reactants are
+consumed         by         the
+electrochemical reaction faster
+than they can diffuse into the
+porous electrode, as well as due
+to variations in bulk flow
+composition. The consumption
+of Li-ions causes a drop in their
+concentration as along the cell,
+which causes a drop in the local
+potential near the cathode.3 This
+voltage loss is also referred to
+as concentration polarization,
+represented in this paper by the
+term      . The value of this Figure 2. Typical polarization curve of a battery.
+factor is low during the initial
+part of the discharge cycle and grows rapidly towards the end of the discharge or when the load current increases.
+An exponential function is used to represent this process.
+   Thus the overall voltage of the battery, as shown by the polarization curve in Fig. Figure 2, is given by the
+equation:
+
+                                                                                                             (1)
+
+where   is the time variable during a discharge cycle and     is the Gibbs free energy, i.e. the theoretical outut
+potential for the given chemistry. The variations in    with internal temperature are not explicitly modeled, but
+accounted for by the adaptive powers of the prognostic framework described later. For a constant current discharge
+case, the individual voltage drops are modeled based on empirical evidence as follows:
+
+                                                                                                             (2)
+
+                                                                                                             (3)
+
+                                                                                                             (4)
+
+where      indicates the change in the IR drop due a change in load current. The parameters    are unknowns that
+must be learnt by the prognostic algorithm.
+   However, it must be noted that in the case of the electric UAV, as in most other battery-powered applications,
+the load is not constant. Figure 3 shows a typical flight profile of the UAV indicating that typical flight loads are
+                                                       3
+                               American Institute of Aeronautics and Astronautics
+
+=== PAGE 4 ===
+short pulses of widely differing current       80
+levels or C-Rate. Additionally, for most                                                        Fwd motor loop
+batteries the voltage as well as the charge    70                                               Aft motor loop
+delivered,  varies   considerably   with
+changes in the C-Rate.3                        60
+   This necessitates two changes to the                              Takeoff
+battery model described by Eqs. (2)–(4).       50
+Firstly, the parameters of the model must  (Amps)                                                    Landing
+be C-Rate or load dependent. We model          40
+this by making          ,    , and                                        Climb      Turn
+                                           loads
+proportional to the load current        .      30
+Secondly, when we have step changes in     Flight
+the load, a higher load level followed by a    20                            Cruise
+lower one presents a peiod of relaxation
+                                                                                         Glide
+for the battery. During this period the        10
+voltage does not immediately jump up as
+per Eqn (2), but gradually rises which can      0
+be modeled by an exponential function.6 A
+similar effect can also be observed for a     -10
+                                                 0           5           10          15          20          25
+step increase in current level as can be                               Flight duration (mins)
+seen in Figure 4. These effects can be Figure 3. Typical flight load profile for the UAV.
+reconciled by considering the battery
+impedance as an RC equivalent circuit.4 We can thus replace the         term by the         and        terms as
+follows:
+
+                                                                                                            (5)
+
+                                                                                                            (6)
+
+where    is the step change in current at time  . The model parameters are now expressed as s. Similarly, Eqs.
+(3) and (4) can be rewritten as:
+
+                                                                                                            (7)
+
+                                                                                                            (8)
+
+   Thus the overall battery voltage equation, represented earlier by Eq. (1) now becomes:
+
+                                                                                                            (9)
+
+                                      IV. Prognostic Framework
+   To ensure that the model works well, the model’s parameters need to be properly identified and tuned. Tuning
+needs to be done on an individual basis because generic parameters do not take into consideration the differences
+between different batteries or even the differences that appear between cycles of operation of the same battery.
+Indeed, parameter values may change even within a single cycle as the battery goes through the range of SOC.
+Tracking a state variable and predicting future values can be cast as a filtering problem. There is a large literature
+body delineating different filtering techniques where each techniques sports certain performance advantages over
+others. In battery prognostics we are interested in predicting EOD (end-of-discharge) and EOL (end-of-life). Here,
+we need to reconcile non-exact, non-linear non-stationary models with non-Gaussian noise and future load
+uncertainties.
+   A Particle Filtering (PF) based framework provides the capabilities for tracking and future state prediction. At
+the same time, it allows the explicit representation and management of these uncertainties. Particle Filters are non-
+linear filters that have the promise of good state tracking performance5 by combining Bayesian learning techniques
+with importance sampling. At the same time, the computational load remains tractable. System states (such as
+
+                                                       4
+                               American Institute of Aeronautics and Astronautics
+
+=== PAGE 5 ===
+battery SOC, voltage or capacity) are represented as probability density functions (pdf) that are approximated by a
+set of points (the so-called “particles”). These represent sampled values from the unknown state space. The particles
+have a set of associated weights that denote discrete probability masses. The particles are generated from an a priori
+estimate of the state pdf. They are propagated through time via a nonlinear process model, and they are recursively
+updated from measurements through a measurement model. Model parameters can be included as a part of the state
+vector to be tracked. This means that model identification can be performed in conjunction with state estimation.6
+When the model has been tuned to sufficiently reflect the specific system dynamics, it can then be used to propagate
+the particles forward to the failure threshold which it crosses as a pdf. In case of battery prognostics, the failure
+threshold is either EOD or EOL. The difference of the time at which the particle filter crosses the failure threshold
+minus the time at which the prediction is made is the RUL.6 It should be noted that the RUL is also expressed as a
+pdf.
+   For the application at hand, the EOD estimation problem needs to be expressed in the PF framework, for which
+the battery discharge model represented by Eqn (8) has to be recast in the discrete-time state-space form. The first
+step in that process in to define the state variables,  s:
+
+                                                                                                            (10)
+
+                                                                                                            (11)
+
+                                                                                                            (12)
+
+                                                                                                            (13)
+
+                                                                                                            (14)
+
+   Thus, differentiating w.r.t. time we get:
+
+                                                                                                            (15)
+
+                                                                                                            (16)
+
+                                                                                                            (17)
+
+                                                                                                            (18)
+
+                                                                                                            (19)
+
+   Transforming into the discrete time domain, integrating over the time interval     between two time instants
+    and   , and adding noise terms, we get the following state-space form:
+
+                                                                                                            (20)
+
+                                                                                                            (21)
+
+                                                                                                            (22)
+
+                                                                                                            (23)
+                                                       5
+                               American Institute of Aeronautics and Astronautics
+
+=== PAGE 6 ===
+                                                                                                            (24)
+
+   where    is the discrete time index and        is a zero-mean Gaussian random noise. Note that we are not
+assuming that the system noise is Gaussian, but merely that in the Particle Filtering framework the distribution
+approximated by the Gaussian kernels over each particle is sufficient to represent the true state pdf. As mentioned
+before, it is critical in health management applications to adapt the model parameters to a changing system. In the
+context of this paper, this corresponds to making all the  terms additional state variables to be tracked. Since this
+would significantly increase the state-space dimension, thus making the filtering problem intractable, we take the
+approach of identifying the  terms from testing data. However, a sensitivity analysis of the model shows that small
+changes in the parameters    and    have a significant effect on the battery voltage variable  , hence we include
+them in our state vector                          . The state transition logic for the parameters is simply chosen
+to be a Gaussian random walk around the initial starting point learnt from data:
+
+                                                                                                            (25)
+
+                                                                                                            (26)
+
+   Ideally, one would track the internal impedances as an indicator for battery depletion, This would necessitate
+making measurements from which those impedances can be estimated. However, measurement techniques, like
+electrochemical impedance spectroscopy (EIS), are somewhat impractical for onboard deployment. Instead, most
+battery powered systems use a cut-off based on battery voltage instead of a cut-off based on SOC. In addition, the
+relation between terminal voltage and SOC, as given by the manufacturer, does not hold throughout the full life of
+the battery or under extreme load and temperature conditions. It is therefore advantageous for the prediction tasks to
+track the variable on which system EOL is determined and we are therefore using terminal voltage,        , as an
+indicator of battery life instead of the SOC. Thus, our measurement equation becomes:
+
+                                                                                                            (27)
+
+   where      is also a zero-mean Gaussian noise sample.
+
+      V. Prediction Results
+                                              23
+   Testing on the Edge 540 UAV                                                              Fwd Motor Battery 1
+platform was carried out with the airframe    22                                            Fwd Motor Battery 2
+restrained on the ground. The propeller                                                     Aft Motor Battery 1
+was run through various RPM (revolutions                                                    Aft Motor Battery 2
+per minute) regimes indicative of the         21
+intended flight profile (takeoff, climb,
+multiple cruise, turn, and glide segments,  (Volts) 20
+descent and landing). Figure 4 shows the
+voltages during a typical flight. It is    volatge 19
+desired to predict when the battery will                             Takeoff             Glide
+run out of charge. i.e. the EOD event      Battery 18                        Cruise
+indicated by the end of the voltage plots
+                                                                          Climb      Turn
+after landing.                                17
+   In order to evaluate the prognostic
+algorithm we make multiple predictions at
+                                              16                                                     Landing
+the time instants 13, 15, 17 and 19
+minutes. It is not desired to make
+predictions till the end of the flight since  15
+                                                 0           5          10           15          20          25
+there needs to be some tme for the UAV                                 Flight duration (mins)
+pilot to land the aircraft with some safety Figure 4. Battery voltages during a typical flight.
+margin on the remaining battery life. One
+example prediction is shown in Figure 5, where the prediction is made 13 minutes into the flight. The predicted
+
+                                                       6
+                               American Institute of Aeronautics and Astronautics
+
+=== PAGE 7 ===
+    23
+                                                                                        Scaled EOD pdf
+                                                                                        Fwd Motor Battery 1
+    22                                                                                  Fwd Motor Battery 2
+                                                                                        Aft Motor Battery 1
+                                                                                        Aft Motor Battery 2
+    21
+
+    20
+
+ Volts 19
+
+    18
+
+          EOD Threshold
+    17
+
+                                                                           EOD
+                                              Prediction                         EOD
+    16
+                                                                           Predicted
+                                              Start                              Actual
+    15
+      0                5               10               15              20               25               30
+                                                      mins
+Figure 6. Predicted battery voltages with prediction means shown in dotted lines.
+mean trajectories for the battery voltages are shown by dotted lines. The plot shows good correlation between the
+predictions and the actual voltages with an accurate and precise (narrow) EOD pdf at the end. Since the PF
+algorithm need to fit the parameters  and    from the measured data, predictions earlier than 13 minutes do not
+show good convergence.
+   In order to better quantify the prognostic performance, we calculate the      performance metric7 for the
+prediction means computed as the weighted sum of the particle populations. The  metric indicates the allowable
+prediction error, while the  metric denotes the
+fraction of remaining life by which the          10
+prediction accuracy must be achieved. For our
+case, we arbitrarily select  to be 0.1 (10%       9                            (  = 0.1,  = 0.5)
+error) and  to be 0.5 so that we have about
+                                                  8
+4.5 mins left to perform remedial actions (it
+takes 2 mins to land the UAV). A more formal      7
+specification of the prognostic performance
+requirements is desired, and is under research.   6
+For the sake of statistical significance 100  mins 5
+prediction runs are made and all the
+trajectories are plotted as shown in Figure 6.    4
+The cone with the vertex at 21.85 on the x-axis
+                                                  3
+represents the 10% error bounds for RUL. The
+blue lines represent 100 prediction runs. As an   2
+aggregate they can be said to fall within the
+10% error cone with about 4.5 minutes of          1
+remaining life left (indicated by the vertical    0
+dashed   line),  thus  passing  the                12         14         16         18         20        22
+performance criteria. Further improvements in                                mins
+the prognostic algorithm, either in the model Figure 5. α-λ performance of the PF prognostic framework.
+                                                     7
+                              American Institute of Aeronautics and Astronautics
+
+=== PAGE 8 ===
+or in the model adaptation, can help bring the prediction trajectories further within the accuracy cone.
+
+                                             VI. Conclusion
+   In summary, this paper expands on the novel battery health management technique for application onboard an
+electric UAV presented in1. This technique is also readily applicable to small satellites as well as electric vehicles
+(EVs) on the ground. For over a century now the main hurdle preventing EVs from making the transition to mass
+adoption has been the uncertainty of running out of battery power on the road. A model-based battery health
+management approach that is adaptive to environmental as well as system changes, and is capable of producing a
+battery life prediction output in a pdf form that can be easily integrated into a Bayesian decision making process, is
+therefore crucial to the success of such battery-powered systems.
+   In the specific case of UAVs, by creating power profiles for different flight regimes like cruis, turns and
+landings, we can estimate the mission completion or success probability by calculating the RUL cumulative
+distribution (cdf) after the intended mission end time. If this value is not 1, i.e.100% success probability, then it can
+motivate and inform mission replanning activity based on the tradeoff between the amount of risk (1 – success
+probability) allowed by the operator and the cost of curtailing the mission. The PF prognostic framework can also be
+used to evaluate the effectiveness of possible mitigation actions, thus acting as a simulation testbed for advanced
+contingency management technologies.
+
+                                              Acknowledgments
+   The funding for this work was provided by the NASA Integrated Vehicle Health Management (IVHM) project
+under the Aviation Safety Program of the Aeronautics Research Mission Directorate (ARMD).
+
+                                                  References
+   1Saha, B., Koshimoto, E., Quach, C. C., Hogge, E. F., Strom, T. H., Hill, B. L., Vazquez, S. L., and Goebel, K., “Battery
+Health Management System for Electric UAVs,” 2011 IEEE Aerospace Conference, IEEE, Big Sky, MT, 2011.
+   2Huggins, R., Advanced Batteries: Materials Science Aspects, 1st ed., Springer, New York, 2008.
+   3Bard, A., and Faulkner, L., Electrochemical Methods. Fundamentals and Applications, 2nd ed., John Wiley and Sons, Inc.,
+New York, 2001.
+   4Zhang, H. and Chow, M.-Y., “Comprehensive dynamic battery modeling for PHEV applications,” Power and Energy
+Society General Meeting, IEEE , July 2010.
+   5Gordon, N. J., Salmond, D. J., and Smith, A. F. M., “Novel Approach to Nonlinear Non-Gaussian Bayesian State
+Estimation”, Radar and Signal Processing, IEE Proceedings, F, Vol. 140, No. 2, Apr. 1993, pp. 107, 113.
+   6Saha, B., and Goebel, K., “Modeling Li-ion Battery Capacity Depletion in a Particle Filtering Framework”, Proceedings of
+the Annual Conference of the Prognostics and Health Management Society, San Diego, CA, 2009.
+   7Saxena, A., Celaya, J., Balaban. E., Goebel. K., Saha, B., Saha, S., and Schwabacher, M., “Metrics for Evaluating
+Performance of Prognostic Techniques,” Proceedings of the Intl. Conf. on Prognostics and Health Management, Denver, CO,
+Oct. 2008.
+
+                                                       8
+                               American Institute of Aeronautics and Astronautics

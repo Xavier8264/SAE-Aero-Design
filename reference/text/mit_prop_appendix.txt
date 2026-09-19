@@ -1,0 +1,296 @@
+# ID: mit_prop_appendix
+# SOURCE: https://web.mit.edu/16.unified/www/SPRING/systems/Lab_Notes/appendix.pdf
+# ORIGINAL: reference/raw/mit_prop_appendix.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 7 pages | ~3503 tokens
+# NOTE: MIT 16.Unified Lab 10 appendix: measured thrust/RPM/power vs airspeed for small APC props
+
+=== PAGE 1 ===
+Propeller Performance                                                        7 Apr 09
+Lab 10 Lecture Notes, Appendix A
+
+Propellers tested
+Tests were performed on a Speed-280 motor driving the following propellers:
+
+APC 5.1 x 4.5
+APC 5.5 x 4.5
+APC 6.0 x 4.0
+APC 7.0 x 4.0 (narrowed)
+APC 7.0 x 5.0 (narrowed)
+
+The tests were performed over a range of air velocities and motor power levels, the latter
+controlled via motor voltage. Measurements consisted of thrust, torque, RPM, current, voltage.
+This allowed the calculation of all relevant operating parameters and efficiencies.
+Figure 1 shows typical thrust performance measurements for four applied voltages, together
+with predictions from the motor/prop simulation model.
+               1
+
+              0.9
+
+              0.8
+
+              0.7
+
+              0.6
+         [N] 0.5
+         T
+              0.4                                                        7 Volt
+
+              0.3
+                                                                5 Volt
+              0.2                                         4 Volt
+              0.1                                   3 Volt
+
+               0
+                 0            5           10           15           20           25
+                                               V [m/s]
+Figure 1: Measured thrust versus velocity (symbols), for APC 5.1x4.5 prop, Speed-280 motor.
+Lines are motor/prop numerical model predictions.
+
+The intent here is to validate the numerical model, which is used to generate all the subsequent
+performance curves.
+
+Maximum-Power Thrust
+Figure 2 shows the thrust of the propellers for the maximum available battery rest voltage of
+7.4 Volts (the actual battery voltage is reduced somewhat by battery’s internal resistance).
+
+                                             1
+
+=== PAGE 2 ===
+               1
+                                                           "apc51x45.74vb" u 1:4
+                                                           "apc55x45.74vb" u 1:4
+                                                           "apc60x40.74vb" u 1:4
+                                                          "apc70x50n.74vb" u 1:4
+                                                          "apc70x40n.74vb" u 1:4
+             0.8
+
+             0.6
+         [N]
+         T
+             0.4
+
+             0.2
+
+               0
+                0             5           10            15           20           25
+                                               V [m/s]
+          Figure 2: Maximum thrust versus velocity, for 7.4 Volt, 0.30 Ohm battery.
+
+Performance Modeling
+For optimization purposes, it is necessary to obtain simple expressions for the above prop/motor
+performance curves. For the three best props in Figure 2, the maximum thrust is closely
+approximated by the simple linear curve-fit function
+
+                                Tmax(V ) ≃ T0 + T1V                                       (1)
+                                     T0 = 0.86 N                                          (2)
+                                     T1 = −0.027 N/(m/s)                                  (3)
+
+                                              2
+
+=== PAGE 3 ===
+Airfoil Characterization                                                      7 Apr 09
+Lab 10 Lecture Notes, Appendix B
+
+Six airfoils suitable for a multipurpose light electric aircraft are shown overlaid in Figure 3. The
+thickness/chord ratios vary from τ = 0.07 to τ = 0.12 . Computed drag polars are shown in
+
+                    Figure 3: Six airfoils suitable for light electric aircraft.
+
+separate plots. The drag coefficient is in effect a function of the three variables (cl, Re, τ). For
+optimization calculations, it is desirable to approximate this function, preferably with explicit
+formulas. A suitable approximation is
+                                                                         a
+                                                               3    Re
+                  cd(cl, Re, τ) ≃ h cd0 + cd2(cl−cl0)2i 1 + kττ                           (4)
+                                                                   Reref
+where the constants are set to match the computed polars over narrow parameter ranges of
+interest.
+The following constants give a reasonable approximation for cdslow in the “slow” range,
+0.8 ≤cl≤1.0 , 40000 ≤Re ≤60000.
+
+                                        cd0 = 0.020                                       (5)
+                                        cd2 = 0.05                                        (6)
+                                        cl0 = 0.8                                         (7)
+                                         kτ = 350                                         (8)
+                                      Reref = 50000                                       (9)
+                                          a = −0.8                                      (10)
+
+The following constants give a reasonable approximation for cdfast in the “fast” range,
+0.1 ≤cl≤0.3 , 80000 ≤Re ≤120000.
+
+                                        cd0 = 0.0115                                    (11)
+                                        cd2 = 0.0                                       (12)
+                                        cl0 = 0.2                                       (13)
+                                        kτ = 350                                        (14)
+                                      Reref = 100000                                    (15)
+                                         a = −0.5                                       (16)
+
+                                              3
+
+=== PAGE 4 ===
+Plain Vanilla Fuselage Drag Measurements                                7 Apr 09
+Lab 10 Lecture Notes, Appendix C
+
+Plane Vanilla Drag Test Results
+
+Test article: Plane Vanilla fuselage + tail. No wing. No prop.
+Test rig: Force balance in 1 × 1 wind tunnel.
+Drag results:
+        q∞(Pa) D (N)
+        5.47    0.0211
+        11.06   0.0411
+        20.79   0.0877
+        31.46   0.1243
+
+This data gives an implied CDA0 estimate which can be used for your performance model.
+
+Improved CDA0 Model
+
+It may be advantageous to break up CDA0 into separate fuselage+tail contributions.
+
+                                CDA0 = CDAt + CDAf
+
+XFOIL calculations for Plane Vanilla’s 3/32” balsa tail “airfoils” suggest that the tail contributes
+about a quarter to the measured fuselage+tail drag.
+                                   CDAf ≃ 3 4CDA0
+                                   CDAt ≃ 1
+                                             4CDA0
+
+This breakdown is useful when we note that CDAt, which is dominated by friction drag, is
+roughly proportional to the tail areas (and hence to the wing area).
+
+                                   CDAt ∼St ∼S
+
+In contrast, CDAf is dominated by the frontal area of the motor, landing gear, and wing mount,
+which will be roughly constant.
+                                   CDAf ∼constant
+
+These assumptions allow the creation of a CDA0(S) function which is much more realistic than
+simply assuming CDA0 to be constant.
+
+                                          4
+
+=== PAGE 5 ===
+   Wing Taper and Twist Consideration                                          7 Apr 09
+   Lab 10 Lecture Notes, Appendix D
+
+   Tapering a wing gives significant aerodynamic and structural advantages, but it can also cause
+   problems if overdone. Consider three AR = 10 wings of the same span and area, but different
+   taper ratios λ = ctip/croot. When operated at some overall lift coefficient CL, these wings have
+   the L′(y) and cl(y) distributions shown in Figure 4.
+  cl                             cl                              cl
+
+C L                             C L                            C L
+                                                                            risk of
+                                                                            tip stall
+
+  L’                             L’                              L’
+            e = 0.952                       e = 0.990                      e = 0.971
+L/b                            L/b                            L/b
+
+     M o = 0.113 L b                Mo = 0.107 L b                 Mo = 0.100 L b
+
+           λ = 1.0                        λ = 0.5                         λ = 0.2
+
+   Figure 4: Load distributions, root bending moment, and span efficiency for three taper ratios.
+   All three cases have AR=10, and no wing twist.
+
+   More taper (smaller λ) gives the following advantages:
+   +1) Smaller tip deflection ratio δ/b, due to its larger root chord giving a greater local stiffness,
+   and also due a slightly smaller root bending moment.
+   +2) A larger span and aspect ratio for a given maximum δ/b, giving a potentially lower induced
+   drag.
+   More taper also has a number of drawbacks:
+   -1) It causes the local clto have a maximum near the tip, giving the possibility of tip stall
+   during flight. When one wingtip stalls before the rest of the wing, the loss of lift at at that tip
+   can give a sudden unexpected roll of the aircraft. This is potentially dangerous when it happens
+   near the ground. In contrast, stall on the untapered wing occurs first at the center, which will
+   not cause a roll control upset.
+   -2) It gives small chord Reynolds numbers near the tips. This will reduce the maximum clthat
+   the tips can achieve, and aggravate the tip stall problem even more.
+   In addition to taper, another wing design consideration is washout. Adding washout (smaller
+   incidence, or αaero, towards the tip) gives the following advantages:
+   +1) It mitigates tip stall problems.
+   +2) Like taper, it can further unload the tips, allowing a slightly larger span for a given δ/b.
+   And washout also has drawbacks:
+   -1) It reduces the local cl(y) towards the tips, so that the entire wing cannot operate close to a
+
+                                                5
+
+=== PAGE 6 ===
+constant best clall across the span, which increases average cd/clfor the wing.
+-2) It can cause problems when the wing is operated at speed where the overall α is decreased.
+The local α + αaero(y) at the tips can then become negative, giving a negative local cl(y) and
+large local cd(y).
+Picking a suitable wing taper / washout combination clearly involves tradeoffs. The main
+tradeoffs are between structural merit, adequate resistance to tip stall, and acceptable high-
+speed performance.
+
+Online Wing Planform and Twist Analysis
+There is a simple but useful online program written by Prof. Ilan Kroo of Stanford, for trying
+out different planform and twist combinations.
+Go to http://adg.stanford.edu/aa241/AircraftDesign.html
+Click on “6.7 Wing Analysis Program”.
+Try the following parameters:
+    Aspect Ratio: 10
+           Sweep: 0
+            Taper: 0.3
+   LE Extension: 0
+   TE Extension: 0
+ Extension Span: 0.6
+  Root Incidence: 0
+ Break Incidence: 0
+   Tip Incidence: 0
+Click on “Compute”
+Click on plot (with or without Shift key held) to change overall airplane α to reach design CL.
+
+The red line shows the Γ(y) distribution, which determines the span efficiency e. The blue
+line plot shows the local cl(y), which can be used to indicate how close to stall each spanwise
+location is. With the above parameters, the cl(y) shows a peak near the tip, so this wing will
+be susceptible to tip stall. Two possible fixes are:
+1) Increase the Taper ratio, e.g. to 0.5 or more
+2) Add washout, by setting Root Incidence = +2 and Tip Incidence = -2, for example.
+Both fixes will reduce clnear the tip and thus alleviate the risk of tip stall. Fix 2) will in
+addition give smaller structural tip deflections (or a greater span for the same tip deflection),
+but the smaller tip chords may cause the tip airfoils have high profile drag cd due to small tip
+Reynolds numbers. Also, a wing with washout will have possibly negative cl’s near the tip when
+at high speed or small CL (you can check this), which may be bad for profile drag. Some design
+judgement will therefore be required.
+You can also use a nonlinear twist by setting the Break Incidence, which is at the Extension
+Span (semispan fraction) location. Similarly, a multi-panel taper can be specified via the LE
+Exension and TE Extension parameters. Either option will require cutting each wing-half in
+two separate panels, which may be desirable in any case to make the hot-wire cutting easier.
+For reference, the Incidence quantities in the program correspond to our αaero angle defined in
+lecture F8. This is the net effective aerodynamic incidence, including αL=0 from airfoil camber.
+
+                                            6
+
+=== PAGE 7 ===
+Foam Properties                                                            7 Apr 09
+Lab 10 Lecture Notes, Appendix E
+
+Two types of foam can be used for constructing the wings: Dow Blue and HiLoad-60. Both
+foams have the same light blue color, and are supplied in 8 ft × 2 ft × 2 in boards. The foams
+can be easily distinguished by feel. The Dow Blue foam feels relatively soft to the touch on the
+printed sides, and can be easily dented with a finger. In contrast, the HiLoad-60 feels much
+harder on its shiny printed sides – almost like wood.
+The foams are orthotropic, with significantly different moduli E11, E22, E33, along the three
+principal directions. The figure shows the definition of the 1,2,3 directions on the foam board.
+Direction 1 is along the longest (8 ft) dimension, and direction 3 is along the shortest (2 in)
+dimension.
+The material properties are given in the table. The moduli have been measured by 3-point
+bending tests.
+The hard feel of the HiLoad-60 printed sides is clearly due to its relatively large E33 value.
+
+                                       E11
+                             E22
+
+                         E33
+
+                                  ρfoam   E11    E22    E33
+                        Foam      kg/m3 MPa MPa MPa
+
+                      Dow Blue     25.5   12.0   10.0  20.0
+                      HiLoad-60    33.0   11.0   19.0  47.0
+
+                                            7

@@ -1,0 +1,212 @@
+# ID: mit_airpower
+# SOURCE: https://web.mit.edu/16.unified/www/SPRING/systems/Lab_Notes/airpower.pdf
+# ORIGINAL: reference/raw/mit_airpower.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 4 pages | ~2541 tokens
+# NOTE: MIT 16.Unified Lab 1: thrust/power/velocity relations, propeller efficiency
+
+=== PAGE 1 ===
+Flight Thrust, Power, and Energy Relations                                  5 Feb 09
+Lab 1 Lecture Notes
+
+Nomenclature
+ D      aircraft drag                         T       propeller thrust
+ L      aircraft lift                         Tc      thrust coefficient
+ W      total aircraft weight                 Pprop   propulsive thrust power ( ≡TV )
+ We     empty aircraft weight                 Pshaft  motor shaft power
+ Wp     payload weight                        Eshaft motor shaft energy expended
+ V      flight speed                           R       propeller radius
+ d      flight distance                        ηprop   overall propeller efficiency
+ S      reference area (wing area)            ηv      profile propeller efficiency (viscous loss)
+ b      wing span                             ηi      Froude propeller efficiency (inviscid loss)
+ AR     wing aspect ratio                     Re      chord Reynolds number
+ CL     aircraft lift coefficient               cl      wing-airfoil profile lift coefficient
+ CD     aircraft drag coefficient               cd      wing-airfoil profile drag coefficient
+ CDA0 drag area of non-wing components        ρ       air density
+
+Thrust Power
+Generation of thrust in flight requires the expenditure of power. For a propeller or a jet-
+engine fan, the shaft power and the thrust are related by the definition of propeller efficiency.
+
+                                TV        Pprop
+                                      ≡         ≡ηprop                              (1)
+                               Pshaft     Pshaft
+
+The ηprop is the product of a viscous profile efficiency ηv which accounts for the viscous profile
+drag on the blades, and an inviscid Froude efficiency ηi which accounts for the kinetic energy
+lost in the accelerated propwash.
+
+                                    ηprop = ηv ηi                                   (2)
+
+An upper limit and estimate of ηi is related to the dimensionless Thrust Coefficient Tc.
+
+                                              2
+                                  ηi ≤       √1                                     (3)
+                                         1 +    + Tc
+                                             T
+                                  Tc ≡ 1                                            (4)
+                                          2ρV 2 πR2
+
+Limiting cases are
+
+                                T 3/2  1 1
+ Tc ≫1 , ηi ≪1 : Pshaft ≃                     ,   (Heavy loading, low-speed takeoff) (5)
+                              (2π ρ)1/2 R ηv
+                                   1
+  Tc ≪1 , ηi ≃1 : Pshaft ≃ T V                ,   (Light loading, high-speed cruise) (6)
+                                  ηv
+
+Both Tc and ηi are seen to strongly depend on the thrust and flight speed, and also on the
+propeller radius. In contrast, ηv does not vary much and is often considered a constant.
+
+                                           1
+
+=== PAGE 2 ===
+Level-Flight Relations
+In level flight we have W = L, which gives the velocity in terms of aircraft parameters.
+                                          1   2
+                             W = L = 2ρV S CL                                  (7)
+
+                                            2 W
+                                   V =           !1/2                          (8)
+                                           ρ S CL
+
+In steady level flight we also have T = D, in which case the thrust and the propulsive thrust
+power can then be given as follows.
+                                       1   2            CD
+                           T = D = 2ρV S CD = W                                (9)
+                                                        CL
+                                       1              2W 3     CD
+               Pprop = TV = DV =           3 S CD =        !1/2               (10)
+                                       2ρV             ρ S    C3/2
+                                                                L
+In the level-flight case we can also express the thrust coefficient and hence the prop Froude
+efficiency in an alternative and somewhat more convenient manner.
+                               T            D          S
+                    Tc = 1            = 1          =      CD                  (11)
+                            2ρV 2 πR2    2ρV 2 πR2    πR2
+
+Drag Breakdown
+To obtain the required thrust or propulsive power via (9) or (10), we need the overall aircraft
+drag coefficient CD, which is broken down into three basic components.
+                               CDA0                  C 2
+                        CD =         + cd(CL, Re) +    L                      (12)
+                                 S                   π AR
+The first term gives the combined drag of all the non-wing components, such as the fuselage,
+tail, landing gear, etc. The second term is the wing profile drag, estimated from the wing’s
+2D airfoil cd(cl, Re) data, and by assuming that the typical wing airfoil operates at cl≃CL.
+The last term is the induced drag coefficient CDi, which depends on CL and the aspect ratio
+of the wing.
+
+                                            b2
+                                    AR =                                      (13)
+                                            S
+Figure 1 shows the three CD components versus CL for a typical 1.5 m span light RC sport
+aircraft.
+For a typical operating point at CL = 1.0 (low speed) and CL = 0.3 (high speed), indicated by
+the symbols in Figure 1, the three components contribute roughly the following percentages
+to the total drag:
+                     CL   CDA0/S      cd    C2 L/πAR    CD
+                     1.0   0.0167   0.0335   0.0406    0.0909
+                     0.3   0.0167   0.0220   0.0037    0.0424
+                     1.0    18 %     37 %     45 %     100 %
+                     0.3    39 %     52 %     9 %      100 %
+
+                                        2
+
+=== PAGE 3 ===
+                     1.6
+                     1.4  CDAo/S   cd     CDi              CD
+
+                     1.2
+                     1.0
+                  CL 0.8
+                     0.6
+                     0.4
+                     0.2
+                     0.0 0.00  0.02  0.04  0.06  0.08  0.10  0.12  0.14  0.16
+                                            CD
+   Figure 1: Drag polar and drag polar components for electric sport aircraft. AR = 9.0
+
+                     10
+
+                      8
+
+                      6
+                  [W]
+                  Pprop
+                      4
+
+                      2
+
+                      0 0    2     4     6     8     10    12    14
+                                          V [m/s]
+      Figure 2: Propulsive thrust power Pprop = DV = TV for electric sport aircraft.
+
+The corresponding propulsive power is shown in Figure 2.
+
+Minimum Flight Energy for Given Payload
+It is of great interest to reduce the flight energy (and hence the fuel consumption) of an
+aircraft as much as possible, while still carrying the required payload. Assuming that the
+total aircraft weight does not change appreciably during flight, the time t and shaft energy
+Eshaft required to fly a distance d is
+
+                                           d
+                                    t =                                              (14)
+                                          V
+                                                     T d
+                               Eshaft = Pshaft t =                                   (15)
+                                                     ηprop
+
+Combining the relations and assumptions above, we have the following summary relations
+
+                                            3
+
+=== PAGE 4 ===
+for a sustained level flight of distance d.
+
+                           1      1       S                   CD
+                 Eshaft =        + s 1 +      CD       + Wp) d                   (16)
+                          ηv 1 2  2      πR2    (We           CL
+
+                        1       1       S         2(We + Wp)3     CD
+               Pshaft =    + s 1 +        CD                !1/2               (17)
+                        ηv 1 2  2     πR2            ρ S        C3/2
+                                                                 L
+
+                                     CDA0                  C 2 S
+                 where       CD =          + cd(CL, Re) +   L                    (18)
+                                      S                     π b2
+
+The auxilliary CD expression (18) is the same as (12), restated here for convenience.
+
+Parameter Coupling and Design Optimization
+Any change in the aircraft variables which permits a reduction of Eshaft as given by equation
+(16), with a fixed Wp, will give a reduction in energy or fuel consumption. However, it’s
+essential to realize that most of the variables and parameters in equations (16) and (18) are
+coupled in an actual design application, so the effect of changing one will have multiple side
+effects, with the net effect being nonobvious.
+One example which might appear if one attempts to reduce Eshaft by increasing the wing
+area S. One immediately-apparent benefit of a larger S is:
+
+   • Pro: Reduction of the first CDA0 term in (18)
+
+There are also obvious drawbacks:
+
+   • Con: Increase in the first propeller loss term in (16)
+
+   • Con: Increase in the last induced drag term in (18)
+
+Furthermore, there will likely be additional drawbacks which are not explicitly apparent:
+
+   • Con: Increase in the empty weight We because of more wing material, etc.
+
+Other Pros and Cons may be present in addition to those listed above, depending on the
+situation.
+Much of the activity which occurs during aircraft design and sizing consists of identifying
+and quantifying such couplings. Knowing the couplings then allows suitable tradeoffs to
+be performed, in order to find the best set of design parameters to maximize the design
+objective. Once a good or optimum design has been reached, all its competing tradeoffs are
+in balance, so that there are no more “easy” design changes which can be made without
+adversely affecting something else.
+
+                                          4

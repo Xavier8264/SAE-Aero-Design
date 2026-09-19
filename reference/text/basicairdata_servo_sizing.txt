@@ -1,0 +1,76 @@
+# ID: basicairdata_servo_sizing
+# SOURCE: https://basicairdata.eu/knowledge-center/design/elevator-hinge-moment/
+# ORIGINAL: reference/raw/basicairdata_servo_sizing.html
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type html | 1 pages | ~1909 tokens
+# NOTE: RC-specific hinge moment -> servo torque worked method. KEY for rules-required servo sizing
+
+=== PAGE 1 ===
+# Elevator Hinge Moment - Basic Air Data
+
+Figure 1 – RC model plan
+
+The sizing of the servo motors used to move control surfaces on an RC plane is not a critical issue, but from time to time there is the need to have a fast analytic tool with which to check the correctness of our choices.
+
+A common sizing problem description can be seen in Figure 1, where we have the plans for a typical RC plane which provide the geometric characteristics of the wing and the control surfaces, and we need to decide the torque required to move each of the corresponding servos. This is a mid-point in the overall design workflow, which starts from the specification of the handling requirements, then the sizing of control surfaces and finally the selection of the servo system.
+
+This discussion focuses on the horizontal stabilizer, but it is applicable on any airfoil with movable control surfaces. The horizontal stabilizer has two parts, one that is fixed to the frame and another which is pivoting on hinges, known as the elevator The elevator is actuated by a servo. During flight, the control surface is under the influence of aerodynamic effects which are carried over to the servoactuator, as seen in the block diagram of Figure 2.
+
+In this article, we will focus on the aerodynamics aspect of the servo sizing problem and we will be using numerical methods and the software Xfoil. In Figure 3 you can see the pressure field over an airfoil with a control surface, produced from Xfoil, but there is also XFLR5, which overlays a more user friendly interface over the same engine.
+
+Figure 2 – Block Diagram of the control system. Inside the transmission block there is also an embedded gearing mechanism
+
+It is possible to calculate the moment along the elevator hinge through the pressure distribution. The aerodynamic moment on the elevator hinge axis depends on the local angle of attack, the deflection angle of the elevator itself [1] and the airspeed . The elevator hinge moment is commonly defined as:
+
+(1)
+
+where is the aerodynamic elevator hinge moment, is the planform area of the elevator and is the mean chord of the elevator (not the whole airfoil, just the section aft of the hinge line). Generally, it is not possible to determine an analytical expression for .
+
+Figure 3 – Pressure distribution over a NACA 0020 airfoil plotted with Xfoil with an elevator deflected 10° downward
+
+In many cases only an accurate identification inside a wind tunnel can provide reliable results[3][4] and parameter identification techniques using flight data can also be used with success [2]. However, since our objective is to have an approximate value to use for servo sizing, we don’t need such a high degree of accuracy. A robust approach is to consider as design value the physical upper bound for this parameter. Doing that will guarantee that our servo will have the torque required to operate the control surface under any angle.
+
+Another alternative is to use simulation tools to acquire the hinge moment and to get an accurate value 3D numerical simulations are required. This is a viable way to proceed, but a reliable result requires remarkable effort.
+
+Finally, there is also the option of spatial discretization methods like vortex panel, which is used in Xfoil or XFLR5. These are faster than CFD and are our choice for this article.
+
+Figure 4 – NACA0020 10 AOA 15 FLAP hinge moment
+
+Let’s proceed with a numerical example. Assume that we want to size the elevator servo of a horizontal stabilizer with a NACA 4412 profile. The wingspan is 1.2m and the wing has a chord of 0.25 m and a rectangular planform. The elevator cord is 0.062m and the control surface is present along all the wing span. We know also that the Velocity to never exceed of our plane is 42 m/s, 150 km/h and that the maximum elevator deflection is 15°.
+
+Taking advantage of the graphical interface of XFLR5, we run a simulation providing our problem parameters and obtain the required effort with a value equal to 0.25Nm, 2.5kgcm per each movable surface. It is necessary to examine both positive and negative angles of deflection. The operating (trim) condition was chosen by us and it is our responsibility as designers to carefully select the sizing scenario. A wrong operating condition choice may lead to an undersized servo.
+
+This numerical approach is fast but not without drawbacks. Lack of convergence due to boundary layer separation is a common problem and prevents us from getting any result when it occurs. It is more pronounced in high angle of attack and high angle of control surface scenarios and can make the analysis very hard. There is a plethora [3][4] of different, more or less empirical, ways to carry out this kind of calculations; the bibliography on the topic is wide.
+
+Figure 5 – NACA4112 10 AOA 15 FLAP XFLR5
+
+It should be mentioned that using thin airfoil theory, it is possible to calculate the approximate hinge moment in a closed form[1]. A first guess can be obtained with the fast method proposed by Drela, available here. With that method, we obtain 0.16Nm, 1.6kgcm per control surface. For this particular example this is close to the value computed by XFLR5. I have been comparing this method with others for a while and many times it overestimates the required torque, oversizing the servo. It is not possible to validate this formula and sometimes it works better than others.
+
+Once the value is established, we should derive the required torque by the servo, . Between the servo and the control surface there can be a lot of mechanical links, but we can approximate them with a simple lever. With this approach, the whole mechanical setup is reduced to a constant transmission ratio. This is quite far from reality, where commonly the servo torque is applied on variable leverage, because the arm, linkage and horn configuration is variable, resulting in a changing lever arm. Moreover, any form of inertia is neglected. Under these assumptions, the torque at the servo can be written [1, Eq. 6.3.5] as:
+
+(2)
+
+where is the length of the effective lever arm associated with the mechanism or gearing that links the servo axis to the elevator.
+
+In the simple case where the servo arm with length is connected directly to the control surface control horn with length , we get . Naturally, also contributes to the control surface speed and range of travel. A first guess value for is 4/3. The advantage of using such an abstraction, depicted in Figure 2, is that it is possible to add better approximations to a single block without changing the general approach.
+
+### References
+
+[1] Warren F.Phillips(2010), Mechanics of Flight, Willey
+
+[2] M. Mulder, B. Lubbers, P.M.T. Zaal, M. M. van Paassen, and J. A. Mulder(2009), Aerodynamic Hinge Moment Coefficient Estimation Using Automatic Fly-By-Wire Control Inputs, Delft University of Technology – Retrieved 11/03/2016
+
+[3] HMS 3485, Flight Measurements of the Elevator and Aileron Hinge-Moment Derivatives of the Fairey Delta 2 Aircraft up to a Mach Number of 1.6 and Comparisons with Wind-tunnel Results, HMS AERONAUTICAL RESEARCH COUNCIL – Retrieved 11/03/2016
+
+[4] NACA TR1113, COLLECTION AND ANALYSIS OF HINGE-MOMENT DATA ON CONTROL-SURFACE TABS , NACA – Retrieved 11/03/2016
+
+### 0 Comments
+
+### Leave a Reply Cancel reply
+
+You must be logged in to post a comment.
+
+## Document links on this page
+- https://web.mit.edu/drela/Public/papers/xfoil_sv.pdf
+- https://web.archive.org/web/20170505185512/https://enu.kz:80/repository/2009/AIAA-2009-5692.pdf
+- https://naca.central.cranfield.ac.uk/reports/arc/rm/3485.pdf
+- https://www.dtic.mil/dtic/tr/fulltext/u2/b805965.pdf

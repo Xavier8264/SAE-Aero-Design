@@ -1,0 +1,761 @@
+# ID: qprop_theory
+# SOURCE: https://web.mit.edu/drela/Public/web/qprop/qprop_theory.pdf
+# ORIGINAL: reference/raw/qprop_theory.pdf
+# CONVERTED: 2026-09-18 21:19 UTC-0500 | type pdf | 14 pages | ~9943 tokens
+# NOTE: Drela QPROP/QMIL theory (blade element / vortex)
+
+=== PAGE 1 ===
+                              QPROP         Formulation
+                              Mark Drela, MIT Aero & Astro
+                                         June 2006
+   This document gives the theoretical aerodynamic formulation of QPROP, which is an analysis
+program for predicting the performance of propeller-motor combinations. The same formulation
+applies to the companion design program QMIL, which generates propeller geometries for the
+Minimum Induced Loss (MIL) condition, or windmill geometries for the MIL or Maximum Total
+Power (MTP) conditions.
+   QPROP and QMIL use an extension of the classical blade-element/vortex formulation, devel-
+oped originally by Betz [1], Goldstein [2], and Theodorsen [3], and reformulated somewhat by
+Larrabee [4]. The extensions include
+   • Radially-varying self-induction velocity which gives consistency with the heavily-loaded ac-
+     tuator disk limit
+   • Perfect consistency of the analysis and design formulations.
+   • Solution of the overall system by a global Newton method, which includes the self-induction
+     effects and powerplant model.
+   • Formulation and implementation of the Maximum Total Power (MTP) design condition for
+     windmills
+
+Nomenclature
+ r       radial coordinate                        B     number of blades
+ R       tip radius                               V     freestream velocity
+ T       thrust                                   Ω     rotation rate
+ Q       torque                                   u(r)  local externally-induced velocity at disk
+ P       shaft power                              v(r)  local rotor-induced velocity at disk
+  ̄η      overall efficiency                         W (r) local total velocity relative to blade
+ β(r)    local geometric blade pitch angle        cl(r) local blade lift coefficient
+ φ(r)    local flow angle (= arctan(Wa/Wt))        cd(r) local blade profile drag coefficient
+ α(r)    local angle of attack (= β −φ)           λ     advance ratio (= V/ΩR)
+ Γ(r)    local blade circulation                  λw(r) local wake advance ratio (= (r/R)Wa/Wt)
+ T ′(r)  local thrust/radius                      ρ     fluid density
+ Q′(r)   local torque/radius                      μ     fluid viscosity
+ ( )a, ( )t axial, tangential velocity components  a    fluid speed of sound
+
+1   Flowfield velocities
+
+1.1   Velocity decomposition
+
+Figure 1 shows the velocity triangle seen by the blade at some radius r. The axial and tangential
+components of the total relative velocity W are decomposed as follows.
+
+                                    Wa = V + ua + va                                     (1)
+                                    Wt = Ωr −ut −vt                                      (2)
+
+                                    W =       W 2a + W 2                                 (3)
+                                            q         t
+
+                                             1
+
+=== PAGE 2 ===
+                                                                            v t
+
+                                                                                v a
+                                                               W           v      u
+                    W                                                              t
+                                                                                     u a
+                                                                                 u
+                                 Wa
+
+                                                                                      V
+             φ                                         φ
+
+                   Wt                                          Ωr
+        Figure 1: Decompositions of total blade-relative velocity W at radial location r.
+
+   All velocities shown in Figure 1 are taken positive as shown. Typically, va and vt will be
+positive for a propeller with positive thrust and torque, and negative for a windmill which will
+have negative thrust and torque. The externally-induced ut will be negative if it comes from an
+upstream counter-rotating propeller, and zero if there is no upstream torque-producing device.
+
+1.2   Circulation/swirl relations
+
+The tangential velocity vt, or “swirl”, is associated with the torque imparted by the rotor on the
+fluid. It can also be related to the circulation on the rotor blades via Helmholtz’s Theorem. The
+total circulation on all the blades at radius r is BΓ(r), and this must be completely shed on the
+blade portions inboard of r. Hence, this is also the half the circulation about a circumferential
+circuit in the rotor plane at radius r
+                                                 1
+                                      2πr  ̄vt = 2BΓ                                      (4)
+                                                 BΓ
+                                           ̄vt =                                          (5)
+                                                 4πr
+where  ̄vt is the circumferentially-averaged tangential velocity. The factor of 1/2 in equation (4) is
+due to the circuit seeing semi-infinite rather than infinite trailing vortices, as shown in Figure 2.
+   The circumferential-averaged tangential velocity  ̄vt and the velocity on the blade vt are assumed
+to be related by
+                                ̄vt = vt F  1 + (4λwR/πBr)2                               (6)
+                                         q
+The square root term becomes significant near the axis, and the modified Prandtl’s factor F becomes
+significant near the tips and accounts for “tip losses”.
+                                         2
+                                  F =       arccos e−f                                   (7)
+                                         π
+                                         B     −r     1
+                                  f =        1                                           (8)
+                                          2      R λw
+                                          r          r Wa
+                                 λw =       tan φ =                                      (9)
+                                         R           R Wt
+
+In this modified F, the usual overall advance ratio λ = V/ΩR of the rotor has been replaced by the
+local wake advance ratio λw. This is more realistic for heavy disk loadings, where λ and λw differ
+considerably. The fact that λw varies with radius somewhat does not cause any difficulties in the
+formulation.
+
+                                             2
+
+=== PAGE 3 ===
+                                       1 BΓ
+                                       2
+                                              Γ
+
+             Figure 2: Circulation circuits for obtaining circulation/swirl relation.
+
+   Using the empirical relation (6) in (5) gives the final relation between the local circulation and
+local tangential induced velocity relative to the blade.
+                                     BΓ             1
+                             vt =                                                        (10)
+                                     4πr F    1 + (4λwR/πBr)2
+                                            p
+The axial induced velocity then follows with the assumption that v is perpendicular to W
+                                                  Wt
+                                       va = vt                                           (11)
+                                                  Wa
+which is correct for the case of a non-contracting helical wake which has the same pitch at all radii.
+This assumption is strictly correct only for a lightly-loaded rotor having the Goldstein circulation
+distribution, but is expected to be reasonably good for general rotors.
+   It’s useful to note that relations (10) and (11) are purely local. In effect, the circulation argument
+shown in Figure 2, together with the approximate Prandtl tip factor F, have been used in lieu of a
+Biot-Savart integration over the entire wake. The latter would have related the local vt and va to
+the overall Γ distribution, and thus introduced a considerable complication.
+
+2   Blade geometry and analysis solution
+
+2.1   Local lift and drag coefficients
+
+The propeller geometry and velocity triangle are shown in Figure 3.
+   The local angle of attack seen by the blade section is
+
+                                  α(r) = β −φ                                            (12)
+                                                       Wa
+                                        = β −arctan                                      (13)
+                                                       Wt
+which then produces some local blade lift and profile drag coefficients.
+
+                                      cl = cl(α,Re,Ma)                                   (14)
+                                      cd = cd(α,Re,Ma)                                   (15)
+
+                                              3
+
+=== PAGE 4 ===
+                                                       cl
+
+                            W                               φ
+                                                                           W
+                     α
+
+       c                            Wa                 φ cd                           Wa
+
+                        β
+                 φ                                                 φ
+
+                       Wt                                               Wt
+
+               Figure 3: Blade geometry and velocity triangle at one r location.
+
+This lift coefficient also determines the corresponding local blade circulation.
+                                              1
+                                      Γ = 2W c cl                                       (16)
+
+2.2   Local analysis solution
+
+Given some blade geometry c(r), β(r), blade airfoil properties cl(α,Re,Ma), cd(α,Re,Ma) for each radius,
+and operating variables V and Ω, the radial circulation distribution Γ(r) can be calculated for each
+radius independently. This is performed by solving the preceding nonlinear governing equations
+via the Newton method. Rather than iterating on Γ directly, it is beneficial to instead iterate on
+the dummy variable ψ, shown in Figure 4.
+                                      vt
+
+                                                va
+                                      v
+                                1 U
+                                2
+                 W            ψ
+
+                                                    Wa                              tu
+
+                                        U a
+                 U
+                                                                                           u a
+                          U t                                                       u
+
+                                                                                        V
+                                                            U                   U a
+
+                W t                                               U t
+
+                                                           Ω r
+                     Figure 4: Velocity parameterization by the angle ψ.
+
+   This ψ parameterizes all the other variables as follows. The convenient intermediate velocity
+
+                                             4
+
+=== PAGE 5 ===
+components Ua, Ut, are the overall velocities imposed on the rotor, excluding the rotor’s own
+induced velocites va and vt.
+
+                                 Ua = V + ua                                          (17)
+                                 Ut = Ωr −ut                                          (18)
+                                  U =      U 2a + U 2                                 (19)
+                                         q        t
+                              Wa(ψ) = 1      + 1    sin ψ                             (20)
+                                         2Ua    2U
+                              Wt(ψ) = 1      + 1   cos ψ                              (21)
+                                         2Ut    2U
+                               va(ψ) = Wa −Ua                                         (22)
+                               vt(ψ) = Ut −Wt                                         (23)
+                                α(ψ) = β −arctan(Wa/Wt)                               (24)
+                               W (ψ) =     W 2a + W 2                                 (25)
+                                         q         t
+                               Re(ψ) = ρWc/μ                                          (26)
+                              Ma(ψ) = W/a                                             (27)
+
+It is useful to note that with the above expressions, v and W are inscribed in the circle in Figure
+4, and hence are always perpendicular regardless of the value of ψ.
+   The circulation is also related to tangential induced velocity via the Helmoltz relation (10).
+Again parameterizing everything with ψ, we have
+                                     r Wa
+                          λw(ψ) =                                                     (28)
+                                     R Wt
+                                     B    −r     1
+                            f (ψ) =      1                                            (29)
+                                     2       R λw
+                                     2
+                           F (ψ) =     arccos e−f                                     (30)
+                                     π
+                                       4πr
+                           Γ(ψ) = vt       F   1 + (4λwR/πBr)2                        (31)
+                                        B    q
+
+Finally, the Newton residual is the cl–Γ relation (16) recast as follows.
+
+                              R(ψ) = Γ −1        c cl(α,Re,Ma)                        (32)
+                                             2W
+
+A Newton update of ψ
+                                                 R
+                                    δψ = −                                            (33)
+                                               dR/dψ
+                                     ψ ← ψ + δψ                                       (34)
+
+will then decrease |R| in the next Newton iteration. The convergence is quadratic, and only a few
+iterations are typically required to drive R to machine zero.
+
+2.3  Parameter sensitivities
+
+The simplest analysis case of the rotor has a prescribed velocity V , and also a prescribed rotation
+rate Ωor advance ratio λ. We might also modify all the blade angles by a constant,
+
+                                   β(r) = βo(r) + ∆β                                  (35)
+
+                                            5
+
+=== PAGE 6 ===
+where βo is the baseline twist distribution, and ∆β is the radially-constant specified pitch angle
+change. Each of these parameters can be set a priori, and the analysis proceeds as described above.
+   However, in many situations it is instead necessary to specify the overall rotor thrust or torque,
+or perhaps specify some torque/speed relation for a driving motor. In this case, either V , Ωor ∆β
+will be treated as an unknown. For design calculations, we wish to find the blade chord c(r) and
+blade angle β(r) distributions, again to achieve a specified thrust or torque. So c and β must then
+be treated as unknowns.
+   In the present approach, the analysis and design cases are treated conceptually in the same
+manner. The local circulation is treated as a parameter-dependent function of the form Γ(r;V,Ω,β,c),
+and any of its four parametric derivatives may be required for the analysis or design case.
+
+                                            ∂Γ
+                                 ΓV (r) ≡
+                                            ∂V (Ω,β,c)=const
+                                            ∂Γ
+                                 ΓΩ(r) ≡
+                                            ∂Ω (V,β,c)=const
+                                            ∂Γ
+                                 Γβ(r) ≡
+                                            ∂β (V,Ω,c)=const
+                                            ∂Γ
+                                 Γc(r) ≡
+                                            ∂c (V,Ω,β)=const
+
+   We first note that the residual R defined by (32) is a function of not just ψ, but also the four
+parameters being considered. A physical solution requires that R remain at zero for all cases,
+
+                                      R(ψ;V,Ω,β,c) = 0                                  (36)
+
+which implicitly defines the ψ(V,Ω,β,c) function. The actual value of ψ is obtained numerically from
+(36) by the Newton iteration procedure described previously. Its parametric derivatives are then
+derived by setting the variation of R to zero, since (36) must hold for any physical perturbation.
+
+                        ∂R        ∂R        ∂R        ∂R        ∂R
+               δR =        δψ +      δV + ∂ΩδΩ+           δβ +      δc = 0              (37)
+                        ∂ψ        ∂V                  ∂β        ∂c
+               δψ = −∂R/∂V δV −∂R/∂Ω δΩ−∂R/∂β δβ −∂R/∂c δc                              (38)
+                         ∂R/∂ψ          ∂R/∂ψ         ∂R/∂ψ        ∂R/∂ψ
+
+The variation coefficients on the righthand side of (38) are seen to be the derivatives of ψ(V,Ω,β,c).
+
+                                     ∂ψ       −∂R/∂V
+                                          =                                             (39)
+                                     ∂V         ∂R/∂ψ
+                                     ∂ψ       −∂R/∂Ω
+                                          =                                             (40)
+                                     ∂Ω         ∂R/∂ψ
+                                     ∂ψ       −∂R/∂β
+                                          =                                             (41)
+                                     ∂β         ∂R/∂ψ
+                                     ∂ψ       −∂R/∂c
+                                          =                                             (42)
+                                     ∂c         ∂R/∂ψ
+
+With these, the parametric derivatives of any converged quantity can now be computed via the
+chain rule. For example, the circulation and its parametric derivatives are computed as follows.
+                                          4
+                        Γ(ψ;V,Ω,β,c) = vt   F   (πr)2 + (4λwR/B)2                       (43)
+                                          B   q
+
+                                             6
+
+=== PAGE 7 ===
+                                      ∂Γ     ∂Γ ∂ψ
+                              ΓV =        +                                         (44)
+                                      ∂V    ∂ψ ∂V
+                                      ∂Γ    ∂Γ ∂ψ
+                              ΓΩ = ∂Ω+                                              (45)
+                                            ∂ψ ∂Ω
+                                      ∂Γ    ∂Γ ∂ψ
+                              Γβ =       +                                          (46)
+                                      ∂β    ∂ψ ∂β
+                                      ∂Γ    ∂Γ ∂ψ
+                              Γc =       +                                          (47)
+                                      ∂c    ∂ψ ∂c
+Parametric derivatives of other required quantities
+
+                  Wa(V,Ω,β,c) ,  Wt(V,Ω,β,c) ,  cl(V,Ω,β,c) ,  cd(V,Ω,β,c)
+
+are obtained by this same approach. Although the blade angle variables are defined to be βo(r)
+and ∆β, only the one β-derivative is needed for both, since from (35) we see that ∂/∂β = ∂/∂βo =
+∂/∂∆β.
+
+3   Thrust and torque relations
+
+After the Newton iteration procedure described previously is performed for each radial station, the
+overall circulation distribution Γ(r) is known. This then allows calculation of the overall thrust and
+torque of the rotor as follows.
+
+3.1  Local loading and efficiencies
+
+As shown in Figure 5, the blade lift and drag forces are resolved into thrust and torque components
+by using the net flow angle φ.
+
+                                              dD   dL
+       dL
+           φ                                                dT
+                          W                                            W
+
+        dD                           Wa          dQ / r                           Wa
+     φ
+
+                  φ
+
+                       Wt                                            Wt
+
+          Figure 5: Blade lift and drag resolved into thrust and torque components.
+
+                                  1   2
+                        dL = B 2ρW clc dr                                           (48)
+                                  1   2
+                        dD = B 2ρW cd c dr                                          (49)
+
+                        dT = dL cos φ −dD sin φ
+                                  1   2
+                            = B 2ρW (clcos φ −cd sin φ) c dr                        (50)
+
+                                           7
+
+=== PAGE 8 ===
+                       dQ = (dL sin φ + dD cos φ) r
+                                 1    2
+                            = B 2ρW (clsin φ + cd cos φ) c r dr                   (51)
+
+From the velocity triangle in Figure 5 we see that
+
+                                   W cos φ = Wt                                   (52)
+                                   W sin φ = Wa                                   (53)
+
+so the thrust and torque components can be alternatively expressed in terms of the circulation and
+net velocity components.
+
+                                  dT = ρBΓ (Wt −ǫWa) dr                           (54)
+                                  dQ = ρBΓ (Wa + ǫWt) r dr                        (55)
+                                          cd
+                         where      ǫ =                                           (56)
+                                          cl
+The local efficiency is
+                                    V dT
+                             η =                                                  (57)
+                                    ΩdQ
+                                    V clcos φ −cd sin φ
+                                =                                                 (58)
+                                    Ωr clsin φ + cd cos φ
+                                    V Wt −ǫWa
+                                =                                                 (59)
+                                    Ωr Wa + ǫWt
+which can be decomposed into induced and profile efficiencies.
+
+                                  η = ηi ηp                                       (60)
+
+                                         1 −vt/Ut
+                                  ηi =                                            (61)
+                                         1 + va/Ua
+                                         1 −ǫWa/Wt
+                                 ηp =                                             (62)
+                                         1 + ǫWt/Wa
+In the limits V/ΩR→0, ǫ→0, and with ua =ut =0 (no externally-induced velocity), the efficiency
+reduces to
+                                             1
+                                   η →                                            (63)
+                                          1 + va/V
+which exactly corresponds to the actuator disk limit, even for arbitrarily large disk loadings.
+
+3.2 Total loads and efficiency
+
+The total thrust and torque are obtained by integrating (54) and (55) along the blade.
+                          R
+               T = ρB Z Γ (Wt −ǫWa) dr ≃ρB           Γ (Wt −ǫWa) ∆r               (64)
+                          0                       X r
+                          R
+               Q = ρB Z Γ (Wa + ǫWt) r dr ≃ρB        Γ (Wa + ǫWt) r ∆r            (65)
+                          0                       X r
+
+The simple midpoint rule is used for the integral summations. The overall efficiency is then
+                                            V T
+                                      ̄η =                                         (66)
+                                            ΩQ
+
+                                          8
+
+=== PAGE 9 ===
+3.3  Parametric derivatives
+
+In order to drive an analysis solution to a specified thrust or torque, their values defined by (64) and
+(65) must be considered to be functions of the form T (V,Ω,∆β), Q(V,Ω,∆β). Their derivatives, which
+are required for Newton iteration, are obtained by implicit differentiation inside the summations,
+and by using the previously derived parametric derivatives of Γ, Wa, and Wt. For example, for the
+V -derivatives of T and Q we have
+
+                  TV = ρB         ΓV (Wt −ǫWa) + Γ (WtV −ǫWaV −ǫV Wa) ∆r              (67)
+                             X h                                         i
+                              r
+                  QV = ρB         ΓV (Wa + ǫWt) + Γ (WaV + ǫWtV + ǫV Wt) r ∆r         (68)
+                             X h                                         i
+                              r
+                           cdV     clV
+           where   ǫV =        −ǫ                                                     (69)
+                           cl      cl
+
+The Ω- and ∆β-derivatives of T and Q are computed in the same manner.
+   In order to drive a design solution to a specified thrust or torque, their values defined by (64)
+and (65) must be considered to be functions of the form T (β,c), Q(β,c). Their β- and c-derivatives,
+which are defined for each radial station, are obtained simply by taking the one summation term
+for that radius, e.g.
+
+                 Tβ = ρB Γβ (Wt −ǫWa) + Γ Wtβ −ǫWaβ −ǫβWa             ∆r              (70)
+                            h                                       i
+
+and likewise for Qβ, Tc, Qc.
+
+4   Analysis
+
+The analysis problem is to determine the loading on a rotor of given geometry and airfoil properties,
+with some suitable imposed operating conditions. The unknowns are taken to be Γ(r), V , Ω, ∆β.
+The constraints on Γ(r) are always the Newton residuals defined previously by (32) at each radial
+station.
+
+                                 Rr(Γ(r)) = Γ −1     c cl                             (32)
+                                                 2W
+
+The three residuals which constrain the remaining three variables V , Ω, ∆β will depend on the
+type of analysis problem being solved. Some typical constraint combinations might be:
+1) Specify velocity, RPM, pitch:
+
+                               R1(V,Ω,∆β) =    V −Vspec
+                               R2(V,Ω,∆β) =    Ω−Ωspec                                (71)
+                               R3(V,Ω,∆β) = ∆β −∆βspec
+
+2) Specify velocity, RPM, torque (find pitch of constant-speed prop to match engine torque):
+
+                                R1(V,Ω,∆β) = V −Vspec
+                                R2(V,Ω,∆β) = Ω−Ωspec                                  (72)
+                                R3(V,Ω,∆β) = Q −Qspec
+
+                                            9
+
+=== PAGE 10 ===
+3) Specify velocity, pitch, thrust (find RPM to get a required thrust):
+
+                                R1(V,Ω,∆β) =    V −Vspec
+                                R2(V,Ω,∆β) = ∆β −∆βspec                                 (73)
+                                R3(V,Ω,∆β) =     T −Tspec
+
+4) Specify RPM, pitch, thrust (find velocity where required thrust occurs):
+
+                                R1(V,Ω,∆β) =    Ω−Ωspec
+                                R2(V,Ω,∆β) = ∆β −∆βspec                                 (74)
+                                R3(V,Ω,∆β) =     T −Tspec
+
+   The three chosen residuals are simultaneously driven to zero by multivariable Newton iteration.
+                                                         −1
+                           δV                                 R1
+                                             R2, R3)        
+                          δΩ  = −                         R2                        (75)
+                                      ∂(R1, ∂(V, Ω, ∆β)     
+                           δ∆β                              R3
+                                                            
+If R3 is either a T or Q constraint, its Jacobian matrix entries are already known from the para-
+metric derivatives of T (V,Ω,∆β) or Q(V,Ω,∆β), computed as described previously.
+
+5   Design
+
+The design problem is to determine the geometry of a rotor which matches specified parameters,
+typically R, V , Ω, and either T or Q. The blade airfoil properties are also specified. The two un-
+knowns at each radial station are taken to be β(r) and c(r), which therefore requires two constraints
+to be imposed at each radial station. One such constraint, used for all design cases, is simply a
+specified local lift coefficient.
+
+                                    Rr1 = cl−clspec                                     (76)
+
+For the second constraint, different options are used depending on the type of design problem being
+solved.
+
+5.1   Minimum Induced Loss
+
+In this design case, the local induced efficiency is required to be radially constant, and equal to
+some initially-unknown value  ̄η. Setting ǫ = 0 in equation (59) gives a suitable expression for the
+induced efficiency for this constraint.
+                                V Wt
+                                        =  ̄η                                            (77)
+                                Ωr Wa
+                                   Rr2 =  ̄η Ωr Wa −V Wt                                 (78)
+
+5.2   Overall load constraint
+
+The design residual (78) has introduced  ̃η as one additional unknown. This in effect controls the
+overall propeller load, since a large thrust or torque typically implies a small induced efficiency,
+and vice versa. Therefore, a suitable constraint for  ̃η is to impose a specified thrust or torque.
+
+                                       Rη = T −Tspec                                    (79)
+                                  or   Rη = Q −Qspec                                    (80)
+
+                                             10
+
+=== PAGE 11 ===
+Since Ωis assumed to be given, specifying Q is equivalent to specifying the shaft power P = ΩQ.
+   Imposing Rr1 =0 and Rr2 =0 at each radial location, together with the one additional Rη =0,
+will give a propeller with a Minimum Induced Loss (MIL). Such a propeller will have the maximum
+possible overall induced efficiency for its radius and operating conditions. It is the analog of the
+elliptically-loaded wing, which has a spanwise-constant induced-drag/lift ratio.
+
+5.3  Maximum windmill power
+
+The MIL design residual (78) is applicable to a windmill, provided cl(r), and T or Q are set negative.
+This will give a windmill with the most shaft power for a given tower load, or the minimum tower
+load for a given shaft power.
+   An alternative design objective for a windmill is to simply maximize shaft power, regardless of
+the tower load. Actuator disk theory predicts that in the limits λ→0, ǫ→0, the maximum (most
+negative) shaft power is
+                                   Pmax = −8 ρV 3 πR2
+                                             27
+In the presence of profile and swirl losses, the actual power will be less than this. It is of great
+interest to maximize the power in the presence of these losses.
+   With a specified Ω, maximizing P is equivalent to maximizing the torque Q. Because all the
+radial blade stations are assumed independent, it is sufficient to maximize the differential torque
+dQ. From equation (55), and the Γ–vt relation (10) we have the following.
+
+                   dQ = ρBΓ (Wa + ǫWt) r dr                                            (81)
+                   dQ = ρ vt (Wa + ǫWt) 4π r2 F 1 + (4λwR/πBr)2 dr                     (82)
+                                                  q
+Figure 6 illustrates how this dQ varies for the inviscid case, with vt negative as for a windmill. The
+product dQ ∼vtWa clearly has an extremum at an intermediate loading. Since all the quantities in
+the dQ expression above are parameterized by ψ, we can extremize dQ by setting its ψ–derivative
+to zero, taking the log first for algebraic simplicity.
+
+           ln(dQ) = ln vt + ln (Wa + ǫWt) + ln F + ln(4π r2 ρ     1 + (4λwR/πBr)2 dr) (83)
+                                                                q
+             dQ′       v′      ′     ′  ǫ′Wt      ′
+                        t   W a + ǫW t +        F
+                   =      +                   +     = 0                                (84)
+             dQ        vt       Wa + ǫWt         F
+                       ∂( )
+     where    ( )′ ≡
+                       ∂ψ
+                                                                  ′        ǫ′
+In practice, both F and ǫ are very nearly independent of ψ, so that F ≃0 and  ≃0. Also, from
+(20), (21), (23) we have
+                                ′      1               −1
+                              W a =    2U cos ψ = Wt      2Ut                          (85)
+                                ′    −1            1
+                              W t =    2U sin ψ = 2Ua −Wa                              (86)
+                               v′ =    1  sin ψ = Wa −1                                (87)
+                                t      2U                 2Ua
+
+so that (84) can be simplified to the following residual.
+
+                               Wa −1 2Ua     Wt −1 2Ut −ǫ(Wa −1 2Ua)
+                     Rr2 =                +                                            (88)
+                                Ut −Wt              Wa + ǫWt
+
+                                            11
+
+=== PAGE 12 ===
+                                       C
+                                       B     vt
+                                       A
+
+                               propeller                                 dQ ~ v t W a
+                                windmill
+                                                                               windmill  propeller
+
+                                 ψ                  Wa
+
+                                                                                              ψ
+                                                                A
+                                                                                     C
+                                             A B C
+                                                               max            B
+                                                              windmill
+                                                            torque & power
+
+Figure 6: Three different windmill loadings. The windmill torque and power are maximum at
+loading B.
+
+   By taking the usual blade geometry variables β(r) and c(r) as unknowns, and driving the residuals
+(76) and (88) to zero at each radial location, produces a windmill with a Maximum Total Power
+(MTP). Both T and Q are a result of this calculation, and a total load constraint such as (79) or
+(80) in the MIL case is not required here.
+
+5.4  Moderated maximum windmill power
+
+We now consider designing a windmill which intentionally delivers less power than the theoretical
+maximum at point B in Figure 6. Such a “moderated” optimum is point B’ in Figure 7.
+
+                 dQ                                               va
+
+                                         ψ                                               ψ
+                                                                         B’
+                                                                va
+                           B’                                                 av’
+              dQ
+                               dQ’
+                     B
+
+Figure 7: Moderated sub-optimum windmill power at point B’. Axial velocity gradient v′ is used
+                                                                                   a
+to normalize nonzero dQ′.
+
+   This moderated optimum is selected by specifying some nonzero value for the local fractional
+
+                                            12
+
+=== PAGE 13 ===
+torque gradient dQ′/dQ. Because a suitable value is not easily determined a priori, it is implemented
+to be a specified multiple of a reference gradient. A convenient choice for this reference is v′ a/va,
+since v′ varies little over a significant range of ψ values, as can be seen in Figure 7. This reference
+      a
+ratio is readily evaluated from equation (20) and (22).
+
+                           va = Wa −Ua = −1          + 1   sin ψ                        (89)
+                                                 2Ua    2U
+                           v′ =    1   cos ψ = Wt −1                                    (90)
+                            a      2U                 2Ut
+
+The maximum-power statement (84) is now replaced by
+
+                                      dQ′/dQ
+                                               = K                                      (91)
+                                       v′a/va
+
+where K is a constant which specifies the degree of deviation away from the optimum. With
+substitutions for dQ′/dQ and v′ a/va, equation (91) is recast as an alternative residual which replaces
+(88).
+
+                      Wa −1 2Ua     Wt −1 2Ut −ǫ(Wa −1 2Ua)     Wa −Ua
+            Rr2 = "               +                          #            −K            (92)
+                        Ut −Wt              Wa + ǫWt           Wt −1 2Ut
+
+The constant K = O(1) is set by the designer. Choosing K = 0 recovers the true maximum power
+case, while choosing K > 0 gives progressively smaller power values.
+   The advantage of a moderated optimum stems from practical reasons. Because the torque Q
+and the power P = QΩare stationary with respect to K, the loss in available power scales as
+
+                                      P −P0 ∼ K2
+
+where P0 is the maximum power at K = 0. In contrast, the thrust T (or tower load) and typical
+blade chord c differences change linearly with K.
+
+                                      T −T0 ∼ K
+                                       c −c0 ∼ K
+
+Figure 8 shows these variations quantitatively for a typical windmill. Choosing K = 0.2, for
+instance, will incur only a 2.3% power penalty, but will give 8.5% smaller tower load and blade
+chords. The smaller tower load is likely to give the windmill a higher maximum safe operating
+windspeed, so that the moderated-optimum windmill may actually produce more time-averaged
+power if maximum safe winds are occasionally encountered. Alternatively, for a given tower load or
+windmill material cost, the moderated-optimum windmill can have a slightly larger diameter and
+hence actually produce more power. It is therefore certain that the moderated optimum may be
+better than the true fixed-diameter and fixed-windspeed optimum, when overall system costs and
+other operating considerations are taken into account.
+
+References
+
+[1] A. Betz. Airscrews with minimum energy loss. Report, Kaiser Wilhelm Institute for Flow
+   Research, 1919.
+
+[2] S. Goldstein. On the vortex theory of screw propellers. Proceedings of the Royal Society, 123,
+   1929.
+
+                                            13
+
+=== PAGE 14 ===
+    1
+
+                                                P / P0
+  0.9
+
+                                         T / T0
+
+  0.8
+
+  0.7
+
+  0.6
+
+  0.5
+      0        0.1       0.2        0.3       0.4       0.5        0.6       0.7
+                                         K
+
+Figure 8: Variation of power P and thrust T with power-moderating constant K, for four-bladed
+windmill with V/ΩR = 0.125. Blade chord ratio c/c0 is nearly equal to T/T0.
+
+[3] T. Theodorsen. Theory of Propellers. McGraw-Hill, New York, 1948.
+
+[4] E.E. Larrabee and S.E. French. Minimum induced loss windmills and propellers. Journal of
+   Wind Engineering and Industrial Aerodynamics, 15:317–327, 1983.
+
+                                           14

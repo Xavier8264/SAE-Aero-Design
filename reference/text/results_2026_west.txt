@@ -1,0 +1,49 @@
+# ID: results_2026_west
+# SOURCE: https://www.saeaerodesign.com/content/2026-SAE-Aero-Design-West-Final-Results.pdf
+# ORIGINAL: reference/2026/2026_SAE_Aero_Design_West_Final_Results.pdf
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type pdf | 1 pages | ~762 tokens
+# NOTE: Placings only, no scores
+
+=== PAGE 1 ===
+                     2026 SAE Aero Design Final Results
+
+                      SAE Aero Design West – April 17-19 – Fort Worth, TX
+            First Place    Warsaw University of Technology – WUT Regular
+       Reg.  Second Place Oklahoma Christian Univ – Red Tape
+            Third Place    Penn State Univ. – Nittany Air
+            First Place    Univ of Pennsylvania – Penn Aerial Robotics Zenith
+Design  Adv.  Second Place Vellore Institute of Technology – Assailing Falcons
+            Third Place    University of Toronto – U of T Aerospace Team
+            First Place    Dwarkadas J Sanghvi College of Engineering – DJS Skylark Tejas
+       Micro  Second Place Rzeszow University of Technology – EUROAVIA Rzeszów
+            Third Place    Univ of Portland – Portland Pilots
+            First Place    Oklahoma Christian Univ – Red Tape
+       Reg.  Second Place Dwarkadas J Sanghvi College of Engineering – DJS Skylark Vajra
+            Third Place    Univ of Pennsylvania – Penn Aerial Robotics – Leviathan
+            First Place    Vellore Institute of Technology – Assailing Falcons
+Presentation  Adv.  Second Place Warsaw University of Technology – WUT Advanced
+            Third Place    Wroclaw University of Technology – JetStream Advanced
+            First Place    Univ of Portland – Portland Pilots
+       Micro  Second Place Wroclaw University of Technology – JetStream Micro
+            Third Place    Dwarkadas J Sanghvi College of Engineering – DJS Skylark Vajra
+            First Place    Nanjing Univ of Aeronautics & Astronautics – Phoenix
+      Reg.  Second Place Politechnika Poznanska – White Eagle
+            Third Place    Tarleton State Univ - Central Texas – Texan Aero
+            First Place    Univ of Puerto Rico-Mayaquez – El Pescador
+Mission  Adv.  Second Place Wroclaw University of Technology – JetStream Advanced
+            Third Place    Warsaw University of Technology – WUT Advanced
+            First Place    Nanjing Univ of Aeronautics & Astronautics – Violet
+      Micro  Second Place Brno University of Technology – Chicken Wings BUT
+            Third Place    Univ of Puerto Rico-Mayaquez – La Princesa
+MathWorks First Place      Rzeszow University of Technology – EUROAVIA Rzeszów
+Simulation Second Place Vellore Institute of Technology – Assailing Falcons
+  Award     Third Place    BMS College of Engineering – Team Yaksha
+            First Place    Nanjing Univ of Aeronautics & Astronautics – Phoenix
+      Reg.  Second Place Politechnika Poznanska – White Eagle
+            Third Place    Tarleton State Univ - Central Texas – Texan Aero
+            First Place    Wroclaw University of Technology – JetStream Advanced
+Overall  Adv.  Second Place Univ of Puerto Rico-Mayaquez – El Pescador
+            Third Place    Warsaw University of Technology – WUT Advanced
+            First Place    Brno University of Technology – Chicken Wings BUT
+      Micro  Second Place Univ of Puerto Rico-Mayaquez – La Princesa
+            Third Place    Nanjing Univ of Aeronautics & Astronautics – Violet

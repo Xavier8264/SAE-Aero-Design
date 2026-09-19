@@ -1,0 +1,291 @@
+# ID: fdm_infill_orientation
+# SOURCE: https://iopscience.iop.org/article/10.1088/1757-899X/429/1/012101/pdf
+# ORIGINAL: reference/raw/fdm_infill_orientation.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 7 pages | ~5352 tokens
+# NOTE: Open-access paper: FDM PLA strength vs infill and build orientation
+# FLAG math: pages 5-6
+# FLAG img: pages 5-6
+
+=== PAGE 1 ===
+IOP Conference Series:
+Materials Science and
+Engineering
+
+PAPER • OPEN ACCESS                                                                              You may also like
+
+                                                                                                     - Infill pattern and density effects on the
+Effect of infill on tensile and flexural strength of 3D                                               tensile properties of 3D printed PLA
+                                                                                                      material
+printed PLA parts                                                                                     M Rismalia, S C Hidajat, I G R Permana et
+                                                                                                      al.
+                                                                                                     - Experimental Study of Effect of Infill
+To cite this article: S.F. Khan et al 2018 IOP Conf. Ser.: Mater. Sci. Eng. 429 012101                Density on Mechanical and Fracture
+                                                                                                      Behaviors of Flexural and Impact of Poly
+                                                                                                      lactic Acid Prepared by Fused Deposition
+                                                                                                      Modeling
+                                                                                                      Zainab H. Obaide and Najim A. Saad
+View the article online for updates and enhancements.                                                - Mechanical properties comparison of PLA,
+                                                                                                      tough PLA and PC 3D printed materials
+                                                                                                      with infill structure – Influence of infill
+                                                                                                      pattern on tensile mechanical properties
+                                                                                                      Adi Pandzic and Damir Hodzic
+
+                            This content was downloaded from IP address 135.84.194.212 on 19/09/2026 at 03:17
+
+=== PAGE 2 ===
+International Conference on Advanced Manufacturing and Industry Applications           IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 1234567890‘’“” 429 (2018) 012101 doi:10.1088/1757-899X/429/1/012101
+
+Effect of infill on tensile and flexural strength of 3D printed
+PLA parts
+
+                S.F.Khan1,*, H. Zakaria 1 ,Y.L.Chong1, M. A. M. Saad1, and K. Basaruddin1
+                1 School of Mechatronic Engineering, Universiti Malaysia Perlis, Kampus Tetap Pauh
+                Putra, 02600 Arau, Perlis, Malaysia.
+                *Corresponding author: sfkhan@unimap.edu.my
+                Abstract. Development in open source three-dimensional (3D) printing has generated interest
+                for creating low-cost customised objects; in both personal and commercial. In the 3D printing
+                process, the quality and cost of the objects produced are normally influenced by the processing
+                parameter. One of the parameter is infill patterns. Infill patterns can be used to reduce material
+                usage and printing time. Various infill patterns are available in the 3D printing software. Four
+                different infill patterns were used to evaluate the mechanical properties of fabricated parts.
+                Open source 3D printer was used to print five PLA specimens for each different infill pattern.
+                Tensile and 3-point bending tests were performed on the printed parts in order to determine the
+                tensile and flexural strength. The mechanical strength of printed parts is influence by different
+                infill patterns. The results obtained indicated that Rectilinear pattern has the highest tensile and
+                flexural strength. The average tensile strength of Rectilinear is 19.1 MPa with average modulus
+                elasticity of 10.51 GPa, whereas the average flexural strength of Rectilinear is 24.4 MPa with
+                average tangent modulus elasticity of 0.359 GPa.
+
+1. Introduction
+Additive Manufacturing (AM) technology is utilized in making physical objects from three-
+dimensional (3D) models generated by computer-aided design (CAD) software. In the late 1980's the
+method or technology of fused deposition modeling (FDM) was invented and expanded by S.Scott
+Crump and was commercialized in 1990. After the patent expiration of FDM innovation, a vast open-
+source advancement group was formed and both businesses and DIY variations using FDM for 3D
+printing showed up [1]. RepRap, a short form for Replicating Rapid Prototyping, is a kind of 3D
+printer that was developed after the patent of FDM expired and released with concept of open free
+software license. RepRap 3D printer basically able to print out different type of pattern fills of the
+internal structure of the printed part and it will generate different of mechanical properties.
+      However, the printed pattern fills characteristics of the internal structure of the printed parts is
+not fully defined and studied yet. It is desirable to include others parameters to support its printing
+process such as control of temperature and internal supporting structure.
+2. Methodology
+In order to test the specimen's mechanical properties, a series of samples is required to be built with
+different infill patterns. The test specimens were design using CATIA V5R20 computer-aided design
+(CAD) software to ASTM D638-14 and ASTM D790-10 for tensile and bending test. The geometrical
+dog-bone and rectangular bar test specimen model were representation as solid model in CATIA. The
+solid CAD models were saved in Standard Triangular Language (STL) file format which is the file
+format that can be read by 3D printer. STL file format interpret the external closed surfaces from solid
+CAD model and divide the model into slices for printing purpose. However, some general adjustments
+           Content from this work may be used under the terms of the Creative Commons Attribution 3.0 licence. Any further distribution
+           of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI.
+Published under licence by IOP Publishing Ltd     1
+
+=== PAGE 3 ===
+International Conference on Advanced Manufacturing and Industry Applications         IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 1234567890‘’“” 429 (2018) 012101 doi:10.1088/1757-899X/429/1/012101
+
+are required of the STL file such that it is correct in size, position, and orientation for test specimen
+printing[2]. The adjustments were made using Slic3r software. The G-code file was decoded by the
+Pronterface software and printing time was estimated, the designed specimen were shown in the
+software. After confirming the proper printing setup, the printer can start printing. Polylactic Acid
+(PLA) filament was used as obtained from supplier to print the specimens.The selected PLA was
+extruded from the heated nozzle and build the specimen layer by layer from bottom until the top
+according to the coordinate as generated in the G code until the specimen is completely formed as
+drawn in the CAD file. Six specimens are printed for each infill pattern from dog-bone shape and
+rectangular bar shape respectively.
+2.1. Printing Setup
+      Slic3r was also used to setup the printing parameter in term of material usage, temperature,
+nozzle movement speed, nozzle flow rate and the machine stability besides infill patterns. The
+dimensional accuracy and surface roughness of the specimens can be influence by these parameters.
+Set of testing specimens were produced selected infill patterns of rectilinear, concentric, honeycomb
+and hilbert curve. The Slic3r software then generates G-code from the STL files with the setup
+parameters. Open-source 3D printing machine based on REPRAP 3D Printer used this G-code to print
+3D specimens
+2.2. Tensile and Flexural Test
+      The mechanical behaviour for a particular part is the reaction of the material to a mechanical
+stress. The deformation causes from the applied force of a component relying on the direction of the
+applied force and the size of the component design or mechanical properties [2]. The mechanical
+properties of printed part from PLA such as tensile strength and flexural strength were determined
+according to American Society for Testing and Materials (ASTM) standard.
+      Tensile testing of the specimens was performed on a Universal Testing Machine (UTM) by
+using the crosshead testing rate of 5mm/min. In order to obtained the tensile properties of the testing
+specimens [4] accurately, the printed specimens was prepared based on the designed dimensional
+according to the ASTM D638-14. There were at least five dumbbell or dog-bone shape specimens
+have to be tested for each of the type of infill pattern so that results will be more precise [5].
+      Flexural testing of the specimens was performed on a Shimadzu Universal Testing Machine
+using a particular crosshead testing rate of 1.28 mm/min. In order to identify the flexural properties of
+the testing specimens, the printed specimens was prepared based on the designed dimensional
+according to the ASTM D790-10. There were at least five rectangular bar shape specimens have to be
+tested for each of the type of infill pattern.
+      The drawing file was input and the details parameters such as drawing dimension and geometry
+design. In this tensile properties testing would focus on determining the tensile strength, elongation
+and modulus of elasticity or Young's Modulus as well as respectively standard deviation of the printed
+part with four different types infill patterns. The tensile testing was conducted on those specimens with
+setup the crosshead speed of 5mm/min and applied force of 100kN. All the specimens were designed
+according to the ASTM D638-14 in category of Type I specimen.
+
+3. Results and discussion
+3.1. Comparison of Stress-strain Among Infill Patterns
+Figure 1 show the details scattered plot for different infill patterns which showed that the Rectilinear
+infill pattern contains highest tensile strength compared to Concentric, Honeycomb and Hilbertcurve.
+While for Hilbertcurve infill pattern was lowest tensile strength or can be classified as weakest in
+tensile strength among these four types of infill patterns. The difference of tensile strength between
+Rectilinear and Hilbertcurve was 14.93 MPa. This implies that Rectilinear can withstand extra 78.17%
+of load compare to Hilbertcurve before going to rupture.
+
+                                                 2
+
+=== PAGE 4 ===
+International Conference on Advanced Manufacturing and Industry Applications         IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 1234567890‘’“” 429 (2018) 012101 doi:10.1088/1757-899X/429/1/012101
+
+    From the results of maximum strain showed that Rectilinear and HoneyComb are highest and
+closed to each other which contribute 3.45% and 3.66% respectively. The difference of maximum
+strain between both of these infill patterns was 0.21%. Hence, this indicate that the force distribution
+among the intra bonding of HoneyComb available to flow much more fluent and less concentrate in
+the linkage chain as a result it yields a slightly higher strain of extra 6.09% than Rectilinear.
+
+              Comparison Of The Stress versus Strain Among Rectilinear, Concentric,
+         0.9                         HoneyComb & HilbertCurve
+         0.8
+         0.7
+                                                                                          Rectilinear
+         0.6
+                                                                                          Concentric
+       (MPa) 0.5
+                                                                                          HoneyComb
+       Stress 0.4                                                                         HilbertCurve
+         0.3
+         0.2
+         0.1
+           0
+              0             2              4 Strain (%) 6               8             10
+                                 Figure 1. Scattered plot of infill patterns
+       Modulus of Elasticity among these four types of infill pattern was obtained by plotted a slope
+in the elastic region of the graph and identified that Rectilinear infill pattern was highest which
+achieved 10.51 GPa, where Concentric was 7.34 GPa, HoneyComb was 6.92 GPa and HilbertCurve
+was 3.27 GPa which is the weakest among these four infill patterns. The difference of modulus of
+elasticity among the strongest and weakest was 7.24 GPa and this possible to indicate that the different
+infill patterns have a considerable influence on strength and modulus tensile properties of the material.
+       It is possible to conclude that the Rectilinear infill pattern overall contains the strongest tensile
+mechanical properties among the four different type infill pattern. Although, the HoneyComb infill
+pattern attain a slightly higher 0.21% of maximum strain, this is possible due to fabrication of printed
+part where the excess material extruded from the nozzle and causes the orientation of the molecule
+chains which decreases the elongation characteristics of the infill pattern [5]. In Table 1 is the
+summary of tensile properties for those infill patterns have been tabulated.
+                Table 1. Summarize Of Tensile Properties against the Infill Patterns
+
+                                 Infill Pattern
+ Tensile Properties              Rectilinear   Concentric     HoneyComb       HilbertCurve
+ Young's Modulus, E (GPa)        10.51         7.34           6.92            3.27
+ Tensile Strength, σ (MPa)       19.1          10.1           13.2            4.17
+ Maximum Force, F (kN)           0.799         0.463          0.611           0.207
+ Maximum Strain, ɛ (%)           3.45          2.48           3.66            1.74
+
+                                                 3
+
+=== PAGE 5 | math, img ===
+International Conference on Advanced Manufacturing and Industry Applications                 IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 1234567890‘’“” 429 (2018) 012101 doi:10.1088/1757-899X/429/1/012101
+
+3.2. Comparison of Infill Patterns
+   The data showed the details scattered plot, Figure 2 showed that the Rectilinear infill pattern contains the
+highest flexural properties compared to concentric, honeycomb and hilbertcurve. While for hilbertcurve infill
+pattern was lowest flexural properties or can be classified as weakest in flexural properties among these four
+types of infill patterns. The difference of flexural strength between Rectilinear and Hilbertcurve was 14.7 MPa.
+This implies that Rectilinear can withstand extra 14.7 MPa of maximum flexural stress compare to Hilbertcurve
+before going to rupture. Tangent modulus of elasticity among these four types of infill pattern was obtained by
+plotted a slope in the elastic region of the load-deflection curve with specific formula calculation and identified
+that Rectilinear infill pattern was highest which achieved 0.359 GPa, where Concentric was 0.263 GPa,
+HoneyComb was 0.287 GPa and HilbertCurve was 0.236 GPa which is the weakest among these four infill
+patterns. The difference of modulus of elasticity among the strongest and weakest was 0.123 GPa.
+   Although, the flexural strain showed that HilbertCurve was 0.068% higher than the other three infill patterns,
+but overall Rectilinear was indicated that better results than Concentric, HoneyComb and HilbertCurve
+regardless whether it is for tangent modulus of elasticity, flexural stress, flexural strength and maximum force as
+shown in Table 2.
+          It is possible to conclude that the Rectilinear infill pattern overall contains the strongest flexural
+mechanical properties among the four different type infill patterns. However, HilbertCurve considered its
+flexural properties are advance in term of flexural strain. Hence, it is possible to indicate that the different infill
+patterns have a considerable influence on strength and modulus of flexural properties of the material. In Table 2
+is the summary of flexural properties for the infill patterns.
+
+                                Figure 2. Load versus extension of infill patterns
+
+                  Table 2. Summarize of Flexural Properties against the Infill Patterns
+                                                                    Infill Pattern
+             Properties                 Rectilinear       Concentric     HoneyComb            HilbertCurve
+Tangent Modulus of Elasticity,
+EB (GPa)                                0.359             0.263             0.287             0.236
+Flexural Stress,
+σσfB (MPa)                              24.4              12.8              14.5              10.6
+Flexural Strength,                      24.4              12.5              14.0              9.7
+
+                                                      4
+
+=== PAGE 6 | math, img ===
+International Conference on Advanced Manufacturing and Industry Applications            IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 1234567890‘’“” 429 (2018) 012101 doi:10.1088/1757-899X/429/1/012101
+
+σσfM (MPa)
+Maximum Force,
+P (kN)                               0.042             0.025            0.030            0.020
+Flexural Strain,
+εεf (%)                              0.056             0.054            0.061            0.068
+
+3.3. Comparison of Mechanical Properties of Infill Patterns
+    The best modulus of elasticity was plotted in graph as shown in Figure 3 below. It can be observed
+that Rectilinear infill pattern was highest whereas HilbertCurve infill pattern was lowest in term of
+tensile and flexural test as well. Meanwhile, the best strength graph was plotted as shown in Figure 4 below.
+Obviously we able to define that Rectilinear infill pattern consist of highest strength while HilbertCurve
+was lowest in both tensile and flexural test as well.
+
+                           Figure 3. Modulus of elasticity in different infill
+
+                                 Figure 4. Strength in different infill
+
+4. Conclusion
+Experimental testing was conducted in order to identify the mechanical properties of 3D printed part
+that printing by RepRap 3D printer meanwhile to select the desired infill pattern. There are some
+conclusions found out from this research. Firstly, the setting of the parameters of the RepRap 3D
+
+                                                   5
+
+=== PAGE 7 ===
+International Conference on Advanced Manufacturing and Industry Applications        IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 1234567890‘’“” 429 (2018) 012101 doi:10.1088/1757-899X/429/1/012101
+
+printer such as density, nozzle temperature and movement speed and stability of the machine as well
+was important, this can be affect the printing quality of the specimen and causes the deviation towards
+the testing results.
+      Secondly, from the experimental testing results showed that the specimens generated with
+different infill pattern was given different prominence results, therefore can be concluded that the
+mechanical strength properties was depend on the given infill pattern that printed by RepRap 3D
+printer.
+      Thirdly, throughout the experimental testing results, Rectilinear infill pattern was achieved the
+best results among the four different type of infill patterns such as Rectilinear, Concentric,
+HoneyComb and HilbertCurve.
+      Fourthly, in comparison with computer simulation and experimental testing results showed that
+the tensile analysis was as expected achieved the same outcome with experimental testing results,
+where flexural analysis was beyond expectation and showed that HoneyComb as strongest strength,
+therefore computer simulation was only as a reference since we unable exactly duplicate whichever
+parameters, conditions, or influences into the virtual simulation software, consequence produce the
+divergent results.
+      Fifthly, from the results of experimental testing results compare with manufacture's bulk
+material datasheet showed that the strength of printed part was weaker compare to original bulk
+material, this is possible to conclude that the bulk material after undergone heated and melted was
+definitely changed its properties.
+5. Acknowledgment
+I would like to thank the School of Mechatronic, University Malaysia Perlis for the support and
+facilities provided in completing this research.
+6. References
+[1]   Fused Deposition Modeling. (n.d.). Retrieved November 2014, from Wikipedia:
+         http://en.wikipedia.org/wiki/Fused_deposition_modeling
+[2]   Villalpando L., Eiliat H., Urbanic R.J. 2014 Procedia CIRP, Vol. 17 pp. 880-805.
+[3]   Davis J. R. 2004 ASTM International, pp. 1. ISBN 978-0-87170-806-9
+[4]   Bagsik A., Schöppner V. 8–10 May 2011, Proceedings of the Society of Plastics Engineers
+         ANTEC Conference, (Anaheim); Boston, MA, USA.; pp. 1–5..
+[5]   Bellini A. and Guceri S. 2003 Rapid Prototyping Journal, Vol. 9 Issue: 4, pp.252-264.
+
+                                                 6

@@ -1,0 +1,469 @@
+# ID: nasa_ground_effect_propellers
+# SOURCE: https://ntrs.nasa.gov/api/citations/19930094580/downloads/19930094580.pdf
+# ORIGINAL: reference/raw/nasa_ground_effect_propellers.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 11 pages | ~4864 tokens
+# NOTE: NASA NTRS: ground effect on propellers/lifting rotors (limited relevance to fixed-wing takeoff)
+# FLAG img: pages 1-11
+
+=== PAGE 1 | img ===
+   0,
+                 ,.        TECH~ICAL MIIMORANDIJMS
+               NATIONAL ADVISORY    COMMITTEE lWR AERONAUTICS       (
+
+                                  ——.-—.
+                                   No* 836
+                                  -—-.——.
+
+                ‘THE GROUND EFFECT ON LIFTING PROPELLERS
+                                                     t
+                                 By A. 13etz
+        ,,.
+           Zeitschrift   f;r .ange~andte Mathematik    uad Mechanik
+                         Vol. 17, No. 2, April 1937
+
+                                  ——..—-...-...
+
+,’             .                 Washington
+                     .          August 1937
+
+                                         .
+
+                                                 -.. _._.______ _  —.
+
+=== PAGE 2 | img ===
+                           .                                   .
+                               .=     .                   .
+               NATIoNAL ADVISORY    COMMITTZE FOR JiIzRoNAuTIcs
+                                   .—-—..
+,“
+:                       Tl!CHNICAL MEMORANDUM  NO. 836
+--7            .,,.         .      ——.—-—- ,.,,,, .
+j
+                  THJI GROUND EFFECT ON LIFTING PROPELLERS*
+j
+                                  By A. Betz
+
+f
+                               1. INTRODUCTION
+
+              In order that a lifting propeller      of diameter    d = 2ro,
+                                     2fi            may develop a thrust
+        i.e., of disk area     F = d          2Tr
+                                       Z=ro
+        s,   it is necessary   that the air be given a downward ac-
+        celeration   by the propeller.     This results in an axial ve-
+        locity   W!   through the propeller    disk.   The minimum power
+        required of the propeller     is therefore
+        .                          Lo =Swf,                           (1)
+
+        where   S is the propeller     thrust.
+   .
+              In the presence of the ground beneath the propeller
+        the downward current of air, that is, the propeller         slip-
+        stream, will be deflected and the air flowing up to the
+        propeller   mill be ohstructod.     Assuming a constant thrust,
+        the axial velocity     W$ ‘ will then be changed with a corre-
+        sponding change in the power       Lo = S wI.    In particular,
+        the propellor   performance   is better near the ground as corn-=
+        pared with that high above it.       In what follows an esti-
+~       mate will bc made of the magnitude      of this ground effect.
+        For the two cases where the distance        a of the propeller
+        from the ground is very “small, and very large, respective-
+1       ly, in comparison with the propeller       radius   r.  the rela-
+I
+I       tions may be simply expressed.
+I             We consider first the effect of the ground, assuming
+I       that the thrust is held constant,
+                                               as may ho done by a suit-
+4       e.ble change in the propeller     speed~   If this is not done
+        the thrust will ch~ngo with decreasing       distance from the
+        ground as a result of the change in the axial velocity.
+j,      This changcof     thrust -at constant propeller    speed.m.ill be
+        separately   considered   in section 4.
+        -—-—-—.-_______.._________,_____——_-———.——-————                    —-
+        *l’Die Hubschraube   in Bodennahe. 1!  11
+                                               Zeitschrift   f&   ange-
+              wandte Mathematik   und Mechanik, vol, 1?, no. 2,
+              April 1937, pp. 68-72.
+
+=== PAGE 3 | img ===
+         <    .                   .    .
+2          N.A.C.A.   Technical  hfenorandum No. 836
+
+      We shall assume for our discussion purpose that the
+propeller   thrust   S is uniformly    distrilnzt’ed over the
+entire propeller    disk area   F and that the rotation of
+the slipstream   nay be neglected.     Each air particle    in
+passing through the propeller     will then experience     a pres-
+sure increase
+
+                                                              (2)
+
+When the particle    at sone distance from the propeller      again
+arrives at a region of undisturbed      pressure,   this pressure
+increase is converted    into kinetic energy
+
+                            P- ~02
+                             2
+The fluid which has passed through the propeller        therefore
+flows off with a velocity      W.   for which
+
+               P~ W02                 Wo =    2:s             (3)
+                      “= Po = ;$              p
+                                           f
+     At the edge of the slipstream      the pressure prevailing
+everywhere   is that of the surrounding     air and since we may
+to a sufficient   degree of accuracy set the latter pressure
+equal to the constant pressure at a large distance from
+the propeller,   the velocity over the entire surface of the
+slipstream   is =0 ‘ and only in the interior of the slip-
+stream is there an excess pressure      in the neighborhood    of
+the pro~peller and hence also a velocity less than        W. G
+
+2. DISTAJTCE OF PRopzLLER    FROM GROUND SMALL IN COMPARISON
+
+                    WITH PROPELLER RADIUS
+
+     .??or,a propeller  near the ~round this “down flowti ve-
+locity        is horizontal   and directed   out~Tard radially
+(fig. l)y” If the distance fron the <round is very small
+compared with the propeller     radius, the conversion    of
+pressure  into velocity occurs in the immediate neighbor-
+hood of the propeller-disk     area in a region whose radial
+exteilsion is small compared to the propeller      radius.    We
+may therefore,   vithout too great an error, consider the
+propeller  rim as straight (instead of circular).        To the
+fluid passing throush the propeller      (an appreciable   flow
+
+=== PAGE 4 | img ===
+&,.,,.:
+
+                   N: A. C.A,. Technical Memorandum   No. .836          3
+
+        occurs only in the neighborhood     of the rim), we now agply
+i,      t.hg...ponetununtheorem.  The excess pressure,,,acts in a hori-
+        zontal direction between the propeller      and the gr”ound. If.
+        the distance of the propeller     from the ground is     a and
+        n.e consider .a layer of thickness     8 at right angles to
+        the propeller   rim; the pressure will act on an area       a6
+        and the force exerted will therefore be
+
+                          P=poa6=~wo2a6                               (4)
+
+        The flow to the prop’bller is uniforn on all sides so that
+        there is no horizontal    inpulse.    The horizontal   force due
+        to the excess pressure must, therefore,      be equal to the
+        reaction of the fluid flowing through.        If the volume
+        floming through the propeller     is   Q then the a~ount flow-
+        in~ throu~h a portion of the rin of length @jaSis
+                                                            -2
+                                                                      (5)
+
+        Ily setting  J   and  P   equal to each. other and naking use
+        of equation (3), we obtain the volune flowing through per
+        second:
+
+                                                                      (7)
+
+        If the hei”ght of tile stream at a distance      r from the
+       propeller   axis is h,     there is obtained fron the rqla-
+        tion
+                                .....
+                               Q= 2rn&,h                   .>         (8)
+                                                     ‘:>’:,‘f .,
+        by comparison   with equation (7)                   b&
+                                                             P,
+,,-                   ,,                                             (9)
+
+             In order to deliver the quantity       Q per second through
+        the, propeller  against the pressure     p.  the power required
+        is
+                                                                    (lo)
+
+=== PAGE 5 | img ===
+4           N, A. C.A. !l?echnical Memorandum  No, 836
+
+For the undisturbed    propeller   the final velocity in the
+propeller   slipstream   is just as large as the downstream
+velocity of tho slipstream distmrbed       by the ground, name-
+ly :
+                                  x
+                         ‘o =     p
+                               i
+(equation   (3)).   Furthermore,   according  to the results of
+the simple propeller    theory (reference 1), the axial ve-
+locity in the plane of the propeller       disk for the undis-
+turbed propeller    is
+
+                                                             (11)
+
+and the volune flowing through per second
+
+                                                             (12)
+
+The minimum power required is therefore
+
+                   LOcn = s W’m = s     –~                   (13)
+                                     r 2pF
+
+The effect of the ground for the condition of constant
+thrust may therefore be simply expressed by the ratio
+                       .-—_ Lo  .l?!- =4;
+                                                             (14)
+                       Lo=    Qm
+
+   3. DISTANC13 OF PRopELLXR )?ROM GROUND LARGE COMPARED
+
+                    WITH PROPELL13R RADIUS
+
+     The essential action of a propeller       on the surround-
+ing fluid at a ~~reat distance ,awa,yis that of suction on
+the fluid.    This action nay be represented     by the field due
+to a sink into nhich the air sucked up %y the propeller
+vanished.   For a lifting propeller,     that is, one uithout
+any velocity of its own, the sucked-up air quantity is
+equal to the volume     Qm  flowing through we propeller
+(equation  (12)).   The additional   velocity~induced    by the
+propeller  at the distance     I from the former is accord-
+                             . .
+
+=== PAGE 6 | img ===
+,,
+
+I
+                   N.A.C. A. Technical Memorandum    No. 836            5
+
+       ingly
+                           ,,          q&
+                                  c   - —-                          “(15)
+,7 \ .-                             ‘4Tr t=,
+       and is dircctcd toward the propeller.
+,! ,;
+             If the propeller    is in the neighborhood    of an infinite
+       hounding. plaile  but at such a di~tancc? away that the dis-.
+       turhance due to this p’lane iS     small compared to the axi@
+       velocity,   the interference   action of this,.<planp may be rep-
+       resented analytically     by reflection   of th’e propeller  and
+       replacing   of the reflected propeller     by a sink.
+             If the propeller .is at a distance?’qbove the ground,
+       the reflected   image, or the substituted, kink, is at a dis-
+       taiice 2a    below the propeller    (fig. 2).    The strength of
+       the sink is    Clm (equati)on 12) and the sink gives rise to
+       a disturbance” velocity at the propeller      that is directed
+       dovnward and is equal to
+
+                       ,711 = ——___ Q m  = ~__:,   -%               (16)
+                             4TT(2ay     16Tr a2 f 2pl?
+
+       this cormonent bein~ superposed on the undisturbed         axial
+       velocity-   V?m.   T!ho resulting axial velocity is therefore,
+
+                                                                    (17)
+
+             Since$ with the thrust held constant,       the powers are
+~      proportional   to the axial velocities
+                  Lo                                     2
+                 --—    —- ~t =
+                               1 + -~+=       1 + ~ () ~            (18)
+                  L=wf Oco  m       16Tr a         64  a
+j
+I.     whereas  , with the propeller    a small “distance away from the
+1      ground, the%+ouer    expended iil driving the air through is,
+  1    according   to e’quation (14), decreased;    for a large distance
+W      away there is, according     to equation (18), an increase,
+       though very slight.     “Considering the two results,..we may
+       represent   the effect of the ground on the required power
+       at constant thrust approximately      by the heavy %roken line
+       on figure 3.     The relations   (14) and (18) are shown by the
+       lighter liiles. The actual function should differ from the
+       broken line only in the rounding of the sharp edge.
+
+  ,
+
+=== PAGE 7 | img ===
+6           N.A.C.4.. Technical Memorandum    No. 836
+
+            4. XI?FECT OF THE GROUND ON THE THRUST
+
+      Throughout   the previous   consider~,,tions me had assumed
+that the thrust was held constant as the propeller         approached
+the ground.    Since when this happens the axial velocity
+through the propeller     changes, it is possible    to maintain
+constant thrust only by a simultaneous       change in the rota-
+tional speed or %y a change iil the propeller       form; for ex-
+ample, by a change in the pitch angle.        We shall not, how-
+ever, ~lere consider any changes in form.        If the decrease
+in thrust for a small rate of advance        A = v/u    (v = veloc-
+ity of advance,     u = circumferential    velocity)  is known as
+well as the thrust for zero rz.te of advance, then the
+thrust near the ground may be Eiven for any propeller
+speed.   We shall assume that the thrust coefficient         ks =
+--:-—    (s = TroPeller    thrust,   p = air  density,   1? = ro2n =
+;Fu~
+propeller  disk area)    is a linear function
+
+                       ks =k-~h                              (19)
+                              so
+where   k.    is the thrust coefficient     in free air at stand-
+        (;O=                  a1<
+still         O)  and k = - &      is assumed constant as may be
+done to some extent for the sm:,,llpitches of the lifting
+propellers.    If the effective pitch of the propeller       is H
+the thruct is zero for     A = &     so that
+
+                           aks         dn
+                           ——— “ Isso yj–                    (20)
+                    ‘=-a~
+If the amount flowing through, at constant propeller
+torque, is decreased    by  AQ . Qmti” Q due to the ground ef-
+fect, the mean axial velocity is reduced %y
+
+                                                             (21)
+
+The proyeller   therefore behaves as if it had a propulsion
+velocity
+
+If, in’ order tc) maintain the thrust constant, a reduction
+
+=== PAGE 8 | img ===
+                   I?.A.C.A. Technical Memorandum    No. 836           7
+
+       in the circumferential     velocity from    U.  to U?     is nec-
+       essa~y..,.then -the.rate of ,advance is
+
+                              “3=$=+!                               (23)
+
+       and therefore,   according   to equation (19),
+
+                                                                ~    (24)
+                                                                   )
+
+       The thrust for any number of revolutions       per second    n“ or
+       circumferential   velocity    u  is then
+                 s =— :                               dn Am
+                        F U2 ks =: l?ueksol+——                      (25)
+                                               “(     H U:)
+
+             Comparing with the thrust
+
+                             so = ~ F U02 k~o                       (26)
+                                   2
+       there is obtained
+
+                                                                    (27)
+
+             If rre limit ourselves   to effects for which     Aw ~ w.~,
+       which is practically    always the case, we may replace       u?
+~      in the small correction meml)er by Uo.        Since, furthermore,
+1;     according  to equations   (21) and (11)
+>
+
+                                                                    (28)
+
+       where   Lo/Lom   is the function   shown on figure 3 for con-
+       stant thrust, we m,ay express the thrust at any circumfer-
+       ential velocity in terms of this function
+
+       In particular,   for a constant speed     u = u.
+                      s         -d!               Lo
+                     —- = 1 +        p      ( 1                  ‘ (30)
+                      so        Huo     s%      “ z~m )     “
+
+                     ,.
+
+=== PAGE 9 | img ===
+            N. A. C.A. Technical Memorandum   No. 836
+
+            5. ADDITIONAL   LOSSES TO BE CONSIDERED
+
+      In ayplying   the results given above, it is to %e noted
+ that besides the energy required for producing        the veloc-
+ity   V*   (equation  (l)), a,d.ditional energy is required to
+overcome the airfoil drag and accompanying        disturbing  ef-
+fects.   Consequently,   the power    Lm   even at an infinite
+d.ista,nce from the ground, cxcecds the theoretical      power
+L Om  according  to equation   (13) by an amount     L~ ~
+
+                       Lm=   Lore+ LRm                       (31)
+
+      For constant lift-to-drag     ratio of the wing profile
+this additional   power, at constant propeller      speed   n near
+the ground, is proportional     to the thrust.    Tor a speed    n
+we therefore   obtain for this additional     power
+                                  Sn
+                       LR = LRm –- —                         (32)
+                                 So no
+        s                                                 n
+nhere   ~—   is to 3c? taken from equation (29) and ii; = ~“:.
+         o
+      Since the powor    Lo = S w?    is proportional   to   &z,
+the total power for any rotational      speed   n  is
+
+L . Lo (:;)3‘2          Sn
+                 + LRm ~– ~    = Lom
+                         00           (5;)  5   (J:+      ‘R. :;)
+                                                              (33)
+whcro the values    &    and   LROJ are to be computed from
+                      o          .
+equations  (29) and (31) and ~-&       is again the effect at
+conctailt thrust.
+
+                           ST7MMJMY
+
+     On the basis of sinple considerations       the effect of
+the ground on the power of a liftiilg propeller       at relative-
+ly small and large distances,     respectively,   from the groundt
+was determined   and represented   by a &implc broken line.
+The ~round-effect   function thus found we.s used also to de-
+tcrmiile the variation   in thrust near the ground at any num-
+
+=== PAGE 10 | img ===
+                   I?.A. C.A. Technical Memorandum   No. 836            9
+
+.       ber of revolutions   per second.    Finally, it is also shown
+       hoi~ ‘the effect of the- additional propeller     losses may be
+        taken into account.
+
+        Translation  by S. Reiss,
+        National Advisory   Committee
+        for Aeronautics.
+
+                                 REFXRENCE
+
+        1.  H~tte:    I..Bd., 26. Aufl. , S, 404 oder Handh. d. Phys.,
+                VII. Bd., S. 264.
+
+;,.,
+
+=== PAGE 11 | img ===
+N.A.C.A. Technical Memorandum No. 836                      Figs, 1,2,3
+
+   ,,            ,,
+
+                            Propeller disk area
+
+                 ‘o-r-’.
+                              Pigure 1                                 *
+
+                               Propeller
+                                &
+                                      I
+                                     a i
+                                2a
+                              Y,-/
+
+                                .L .+
+                                    Sink
+                               Figure 2
+
+                     1.5
+
+                       1
+                Lo/Lo ~
+
+                     0.5
+
+                       0“
+                                   a/d
+
+                               Figure 3

@@ -1,0 +1,150 @@
+# ID: balsa_strength_vs_density
+# SOURCE: http://stealthsquadron-fac49.com/wp-content/uploads/2023/02/Balsa-Strength-Article.pdf
+# ORIGINAL: reference/raw/balsa_strength_vs_density.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 4 pages | ~1968 tokens
+# NOTE: Balsa strength vs density (HOBBYIST article; cross-check against Wood Handbook ch5 before relying on it)
+# FLAG img: pages 1-2,4
+# FLAG math: pages 2-4
+
+=== PAGE 1 | img ===
+        Material Properties of Balsa for FAC
+
+                                    Modelers
+
+                                       William Skelly
+                                           2022
+
+“There are two types of model airplanes: those that have crashed, and those that will crash,” but
+I have often wondered whether scientific principles can be used to design more damage
+resistant FAC ships. For instance, is it possible to calculate useful guidelines for leading edge
+dimensions and density?
+
+A first step in the direction of answering that question is to obtain some of the material
+properties of balsa that can then be used in beam bending equations. The two most important
+properties for this endeavor are: the Young’s Modulus and the failure stress. Since balsa
+material properties vary with density, I set out to figure out some relationships we modelers can
+use to figure these out.
+
+Young's Modulus is the proportion between the stress (force per unit area) and strain
+(deformation per unit length) within a part. It’s analogous to a spring constant. The failure stress
+is the force per unit area required to break a material.
+
+The material scientists in the audience might point out that balsa’s material properties aren’t
+uniform in every direction because it has grain. For many situations, we can assume the balsa
+only experiences forces in the direction parallel to the grain (i.e. the axial direction), so all the
+material properties discussed from here on are axial.
+
+These same material scientists might also point out that “failure” can be a subjective word and
+they would argue I need to specify whether failure is defined as yield, elastic limit, fracture, or a
+bunch of other things. Since balsa acts like a brittle material, it fractures shortly after yielding
+and many of these distinctions become less useful for practical purposes; therefore, I’ll use the
+terms “strength,” “failure stress,” and “fracture stress”
+interchangeably in this article to refer to when the stick is
+going to break.
+
+On to the experiments: I tested six 1/16” square sticks of
+different densities. My testing method was to use the stick as
+a cantilever beam with a known weight hanging off the end.
+By measuring the length of the beam, the weight hanging off
+the end, and the vertical displacement of the end of the
+beam, I had enough information to work backwards to the
+Young’s modulus using the equation for deflection of a
+cantilever beam with a fixed end.
+
+                                                                                          1
+
+=== PAGE 2 | math, img ===
+                                                   3
+                                                PL
+                                        δ =
+                                                3EI
+              Equation for deflection of a cantilever beam, where δ is the displacement of the end of the
+              beam, P is the force, L is the length, E is the young’s modulus, and I is the area moment of
+              inertia
+
+Instead of keeping the length constant and varying the weight, I determined it would be easier to
+vary the length. I started with the stick overhanging a little over an inch from the edge of the
+table, then slid the stick out in increments to increase the overhanging length. With a ruler taped
+to the end of a yardstick, I was able to measure both the length and vertical displacement. The
+test weight was an empty Solo cup hanging off a string cyanoed to the end of the stick.
+
+To find the second material property, the failure stress, I recorded the length when the overhang
+was so much that the stick snapped, and using that information I was able to use the equation
+for maximum stress in a cantilever beam to work out the stress at failure. If I couldn’t break the
+stick with an empty solo cup (which was the case for the denser wood) I added a few coins to
+the cup and repeated the test.
+
+                                                  PLy
+                                     σmax=          I
+              Equation for maximum stress in the a cantilever beam, where σmax is the max stress, P is
+              the force, L is the length, y is half the thickness of the stick, and I is the area moment of
+              inertia
+
+Having run the experiments, we can now plot the results for Young’s Modulus and the failure
+stress. First, here’s the experimental results for Young’s Modulus (blue dots and blue line):
+
+I averaged the Young’s modulus over as many data points as I recorded before failure for each
+stick to get the graph shown. Looking at the graph, we see that the modulus increases linearly
+
+                                                                                            2
+
+=== PAGE 3 | math ===
+with density, and varies between 0.38GPa (for a 5 lb/ft^3 density stick) and 5.77GPa (for an 18
+lb/ft^3 density stick).
+
+After conducting these experiments, I found out some folks from MIT did some more scientific
+experiments looking into the material properties of balsa1, and they also found that the modulus
+increased linearly with density to a value “up to 6GPa” for high density balsa. So far so good!
+
+The MIT folks also came up with a formula for the Young’s Modulus of balsa based on density
+using an idealized model (red dots on the graph). The short of it is that if you assume the balsa
+is an ideal honeycomb structure, the material properties are related to the material properties of
+the cell walls by the ratio of the densities of the balsa and cell wall. They also note that this
+formula overestimates the modulus compared to experimental data. My data also shows this
+formula (labeled on the graph as “ideal modulus”) to be an overestimate, so our analyses are in
+agreement.
+
+                                      balsa density               balsa density [lb/ft 3]
+  Ebalsa[GPa] = Ecell wall×                  density= 41 ×
+                                    cell wall                              97.2
+
+                                   Where E is Young’s Modulus
+
+For a more accurate estimate of Young’s Modulus for us model builders, here’s the equation for
+the trend line Google Sheets fit through my experimental data:
+
+         modulus [GPa] = 0. 388 × density [lb/ft 3] −1. 71
+
+Now, having seen the results for the Young’s Modulus, let’s take a look at the results for the
+failure stress:
+
+Looking at the graph below, we can see that the fracture stress is also linearly related to density,
+and varies from 7.09 MPa (for a 5lb stick) to 45.92 MPa (for an 18lb stick). The MIT paper also
+found a linear relationship with dense balsa having a strength of 40 MPa. Yet another point of
+close agreement!
+
+1 Borrega, Marc, and Lorna J. Gibson. “Mechanics of Balsa (Ochroma Pyramidale)
+Wood.” Mechanics of Materials 84 (May 2015): 75–90
+
+                                                                                         3
+
+=== PAGE 4 | math, img ===
+The idealized honeycomb model can also give a formula for the failure stress. The MIT paper
+says this formula is also an overestimate, but it seems to agree decently well with my data for
+low density, and then become a slight underestimate for high density.
+
+                                    balsa density                balsa density [lb/ft 3]
+σbalsa[MPa] = σ           wall×            density= 185 ×
+                      cell        cell wall                              97.2
+
+                                  Where σ is the failure stress
+
+For the pragmatic among us, here’s the equation for my linear fit for fracture stress:
+
+    Fracture Stress [MPa] = 2. 77 × density [lb/ft 3] −4. 28
+
+Stay tuned for part 2 where I’ll use these properties (Young’s Modulus and failure stress) to
+analyze one of the most common structural problems faced by the indoor FACer: the showdown
+between the leading edge and the basketball hoop.
+
+                                                                                      4

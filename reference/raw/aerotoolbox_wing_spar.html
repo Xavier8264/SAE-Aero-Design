@@ -1,0 +1,1073 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+
+<head  prefix="og: http://ogp.me/ns#"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+      <meta property="fb:app_id" content="189087093754470" />
+    
+    
+    
+<meta name="description" content="An introduction to the structural design of an aircraft wing, looking at the wing loading and design of a semi-monocoque structure."><meta property="article:published_time" content="2017-08-06T08:14:29+00:00"><meta property="article:modified_time" content="2022-08-06T07:53:53+00:00"><meta property="og:title" content="Introduction to Wing Structural Design"><meta property="og:url" content="https://aerotoolbox.com/wing-structural-design/"><meta property="og:description" content="An introduction to the structural design of an aircraft wing, looking at the wing loading and design of a semi-monocoque structure."><meta property="og:image:alt" content="Introduction to Wing Structural Design"><meta property="og:image:height" content="400"><meta property="og:image:secure_url" content="https://aerotoolbox.com/media/postimage/wing-structure.jpg"><meta property="og:image:url" content="https://aerotoolbox.com/media/postimage/wing-structure.jpg"><meta property="og:image:width" content="533"><meta property="og:type" content="article"><meta property="og:site_name" content="AeroToolbox"><meta property="article:publisher" content="https://aerotoolbox.com"><meta name="twitter:domain" content="aerotoolbox.com"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Introduction to Wing Structural Design"><meta name="twitter:url" content="https://aerotoolbox.com/wing-structural-design/"><meta name="twitter:description" content="An introduction to the structural design of an aircraft wing, looking at the wing loading and design of a semi-monocoque structure."><meta name="twitter:image" content="https://aerotoolbox.com/media/postimage/wing-structure.jpg"><meta name="twitter:site" content="@aerotoolbox">
+
+    
+    
+      
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CDR180T48"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2CDR180T48');
+</script>
+        
+          
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4009216604662031"
+     crossorigin="anonymous"></script>
+          
+        
+
+      
+    
+
+    
+      <title>Introduction to Wing Structural Design | AeroToolbox</title>
+    
+    
+    <link rel="icon" href="/static/content/images/new_logo_trial.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/static/content/css/main.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">-->
+    <!-- updated bootstrap icons to v1.11 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="/static/content/css/custom.css"> 
+    
+    
+      <link rel="stylesheet" type="text/css" href="/static/content/css/cookie-notice.css"> 
+    
+
+    <!-- Add scripts when necessary to run particular pages -->
+    
+    
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    
+    
+
+    <!-- Add TOC and post scroll -->
+    
+      
+        <link rel="stylesheet" type="text/css" href="/static/content/css/post-scroll-btn.css">
+      
+      
+        <link rel="stylesheet" type="text/css" href="/static/content/css/toc.css">
+      
+      
+    
+  </head>
+    <body>
+
+        
+            <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="4jNGqoID"></script>
+
+        
+        
+        
+<header class="header content-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-1 pb-1">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img src="/static/content/images/new_logo_trial.png" alt="" class="d-inline align-middle navbar-logo">
+            <div class="logo-title-black d-inline align-middle text-websitetitle">Aero</div><div class="d-inline logo-title-black align-middle text-websitetitle">Toolbox</div>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav pt-2 ms-auto">
+              <li class="nav-item">
+                <a class="d-none d-md-block d-lg-none nav-link fw-bold" href="/about/">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="d-none d-md-block d-lg-none nav-link fw-bold" href="/contact/">Contact</a>
+              </li>
+            </ul>
+            <form class="ms-lg-2 d-flex mt-2 mt-lg-1 mb-3 mb-lg-0" method="GET" action="/search/">
+              <input style="width:250px;" class="form-control me-1" type="search" name="q" placeholder="Search" aria-label="Search">
+              <button class="btn btn-dark opacity-50" type="submit"><i class="bi bi-search text-light"></i></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-md navbar-light bg-navbargrey shadow-sm py-0 py-md-2">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="fw-bold nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Online Ground School
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/category/airframe/">Airframe</a></li>
+                  <li><a class="dropdown-item" href="/category/electrical-system/">Electrical System</a></li>
+                  <li><a class="dropdown-item" href="/category/instrumentation/">Instrumentation</a></li>
+                  <li><a class="dropdown-item" href="/category/propulsion/">Propulsion</a></li>
+                  <li><a class="dropdown-item" href="/category/landing-gear/">Landing gear</a></li>
+                  <li><hr class="d-none d-lg-block dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/category/groundschool/">Ground School Home</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="fw-bold nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Calculators
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/metar/">METAR Decoder</a></li>
+                  <li><a class="dropdown-item" href="/crosswind/">Crosswind Calculator</a></li>
+                  <li><a class="dropdown-item" href="/density-altitude/">Density Altitude</a></li>
+                  <li><a class="dropdown-item" href="/airspeed-conversions/">Airspeed Conversions</a></li>
+                  <li><a class="dropdown-item" href="/carb-icing-calculator/">Carburetor Icing</a></li>
+                  <li><a class="dropdown-item" href="/atmcalc/">Standard Atmosphere</a></li>
+                  <li><hr class="d-none d-lg-block dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/category/calculators/">All Calculators</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="fw-bold nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Aircraft Design
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/category/intro-aircraft-design/">Design Fundamentals</a></li>
+                  <li><hr class="d-none d-lg-block dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/category/">Browse Categories</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item">
+                <a class="fw-bold nav-link" href="/category/quizzes/">Quizzes</a>
+              </li>
+              
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="d-block d-md-none d-lg-block nav-link fw-bold" href="/about/">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="d-block d-md-none d-lg-block nav-link fw-bold" href="/contact/">Contact</a>
+            </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    
+      
+  </header>
+
+        <main>
+            
+<div class="container-fluid">
+    <div class="container">
+        <div class="row mt-3 align-items-center">
+            <div class="col-xl-8 pt-4 pb-4">
+                <h1 class="display-5 fw-bold text-dark pt-2 pb-2">Introduction to Wing Structural Design</h1>
+                
+                <div class="lead mb-2 text-textdark">An introduction to the structural design of an aircraft wing, looking at the wing loading and design of a semi-monocoque structure.</div>
+
+                <div class="row mt-4 border-top pt-2">
+                    <div class="col-auto">
+                        <i style="font-size: 1.25rem;" class="bi bi-bookmark-fill"></i>
+                    </div>
+                    <div class="col-auto my-auto ps-1">
+                        <div class="h6 fw-bold mb-0"><a class="link-info category-font"
+                                href="/category/aircraft-design/intro-aircraft-design/">Fundamentals Of Aircraft Design</a></div>
+                    </div>
+                </div>
+                <div class="row mt-2 pb-2 border-bottom">
+                    <div class="d-none d-sm-block col-auto">
+                        <i style="font-size: 1.25rem;" class="bi bi-tags-fill"></i>
+                    </div>
+                    
+                    <div class="d-none d-sm-block p-1 col-auto">
+                        <a class="btn btn-tagbtn btn-sm" href="/tag/airframe-structure/">Airframe Structure</a>
+                    </div>
+                    
+                    <div class="d-none d-sm-block p-1 col-auto">
+                        <a class="btn btn-tagbtn btn-sm" href="/tag/bending-moment/">Bending Moment</a>
+                    </div>
+                    
+                    <div class="d-none d-sm-block p-1 col-auto">
+                        <a class="btn btn-tagbtn btn-sm" href="/tag/lift-distribution/">Lift Distribution</a>
+                    </div>
+                    
+                    <div class="d-none d-sm-block p-1 col-auto">
+                        <a class="btn btn-tagbtn btn-sm" href="/tag/rib/">Rib</a>
+                    </div>
+                    
+                    <div class="d-none d-sm-block p-1 col-auto">
+                        <a class="btn btn-tagbtn btn-sm" href="/tag/shear/">Shear</a>
+                    </div>
+                    
+                    <div class="d-none d-sm-block p-1 col-auto">
+                        <a class="btn btn-tagbtn btn-sm" href="/tag/shearflow/">Shearflow</a>
+                    </div>
+                    
+                    <div class="d-none d-sm-block p-1 col-auto">
+                        <a class="btn btn-tagbtn btn-sm" href="/tag/skin/">Skin</a>
+                    </div>
+                    
+                    <div class="d-none d-sm-block p-1 col-auto">
+                        <a class="btn btn-tagbtn btn-sm" href="/tag/spar/">Spar</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="d-none d-xl-block col-xl-4 my-auto">
+                
+                    <div class="p-2 p-lg-2 p-xl-3">
+                        <a href="/wing-structural-design/"><img class="img-fluid" src="/media/postimage/wing-structure.jpg"
+                                alt="An introduction to the structural design of an aircraft wing, looking at the wing loading and design of a semi-monocoque structure."></a>
+                        
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-8 col-xxl-8 pe-xl-5"> <!-- this is the main post column -->
+            
+            
+             <div class="row justify-content-center">
+                <div class="col-11 col-sm-12 bg-navbargrey" id="toc_container"></div>
+             </div>
+             
+             <div>
+                <!-- Banner-ad-leader-2022 -->
+<div class="container mt-3 mb-3 p-3">
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4009216604662031"
+     data-ad-slot="6639749402"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+</div>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            </div>
+            <div class="post-body"><h2>Introduction</h2>
+
+<p>Welcome to Part 6 of a series on an Introduction to Aircraft Design. In <a href="/intro-airfoil-aerodynamics/" rel="noopener noreferrer" target="_blank">part 5</a> we looked at the role that the airfoil profile plays in determining the flying characteristics associated with its selection. In our final introductory post on the wing we look at a typical wing structure, the various loads that the wing is expected to carry during operation, and introduce the methodology behind designing a semi-monocoque wing structure.</p>
+
+<p>The last three posts in this <a href="/category/intro-aircraft-design/" rel="noopener noreferrer" target="_blank">series</a> have focused on the conceptual design of the wing. We examined <a href="/intro-wing-design/" rel="noopener noreferrer" target="_blank">wing area and aspect ratio</a>, introduced <a href="/intro-sweep-angle/" rel="noopener noreferrer" target="_blank">sweep and drag divergence</a> and looked in more detail how the <a href="/intro-airfoil-aerodynamics/" rel="noopener noreferrer" target="_blank">airfoil profile</a> determines the flying characteristics of the aircraft. In short, we have laid the groundwork to develop a conceptual design of a wing.</p>
+
+<p>Before moving away from the wing we&rsquo;ll now spend some time introducing the structural design elements that allow the wing to operate safely through all phases of the design envelope.</p>
+
+<h2>Loads acting on a Wing</h2>
+
+<p>A wing is primarily designed to counteract the weight force produced by the aircraft as a consequence of its mass (the first post in this series deals with the <a href="/forces-in-flight/" rel="noopener noreferrer" target="_blank">fundamental forces</a> acting on the aircraft). Thus during straight and level flight, the wing provides an upward lifting force equal to the weight of the aircraft plus the trim force generated at the horizontal tail to keep the aircraft balanced. The downward trim force comes about as a result of the need to balance the moment generated by the lift <a href="/vectors-and-scalars/" rel="noopener noreferrer" target="_blank">vector</a> acting away from the center of gravity of the vehicle. In the conceptual design phase it is common to account for the additional force generated at the tail by multiplying the aircraft weight by a factor of 1.05 (5%) to account for the trim force; alternatively one can estimate the required force based on the estimated design weight of the aircraft and the approximate moment arm between the estimated location of the c.g. and the estimated location of the tail.</p>
+
+<figure class="figure"><img alt="lift-weight-vector-diagram" class="figure-img img-fluid" src="/media/uploads/2017/03/lift-drag-vector-diagram.jpg" />
+<figcaption class="figure-caption">Lift is equal to weight plus horizontal tail trim force at 1g</figcaption>
+</figure>
+
+<h3>Load Factor</h3>
+
+<p>An aircraft does not just fly straight and level during all phases of operation. If the pilot banks the aircraft at a 60 degree angle during a sharp turn, he needs to produce twice the lifting force to counteract the weight due to the angle of the lift <a href="/vectors-and-scalars/" rel="noopener noreferrer" target="_blank">vector</a> relative to the weight (which always acts downward). In this instance, the wing is producing a lift force equal to twice the weight of the aircraft and the aircraft is said to be pulling 2g&rsquo;s (twice the gravitational force) or operating at a load factor of 2.</p>
+
+<figure class="figure"><img alt="60-degree-2g-turn" class="figure-img img-fluid" src="/media/uploads/2017/03/60-degree-2g-turn-e1584880737540.jpg" />
+<figcaption class="figure-caption">A 60 degree bank angle results in a 2g turn</figcaption>
+</figure>
+
+<p>The example above illustrates that there are many cases where the aircraft will exceed a loading of 1g. The Federal Aviation Administration (among other regulatory bodies) is responsible for ensuring that all certified aircraft comply to a basic standard of safety. Therefore a series of regulations are published, which among other regulations, detail the minimum load factor that a particular aircraft class should be designed to withstand.</p>
+
+<p>The following extract comes from <a href="https://drs.faa.gov/browse/cfrPart/externalWindow/8/Part 23 - AIRWORTHINESS STANDARDS: NORMAL, UTILITY, ACROBATIC, AND COMMUTER CATEGORY AIRPLANES/current/default" rel="noopener noreferrer" target="_blank">FAR Part 23</a></p>
+
+<figure class="figure"><img alt="extract-far-23-337" class="figure-img img-fluid" src="/media/uploads/2017/03/extract-far-23-337-e1584880817169.jpg" />
+<figcaption class="figure-caption">Extract from FAR 23.337 describing the Limit Load Factor</figcaption>
+</figure>
+
+<p>The minimum design limit load factor is a function of the classification of the aircraft that is being designed. For example, it follows that an aerobatic aircraft will require a higher limit load factor than a commuter aircraft due to the difference in the severity of the maneuvers the two are expected to perform.</p>
+
+<p>The extract shown above pertains to an aircraft that is to be FAR Part 23 certified which is the airworthiness standard for <em>Normal, Utility, Acrobatic, and Commuter type aircraft</em>. Airliners and larger commercial aircraft do not fall into the FAR 23 category and so are certified in accordance with FAR Part 25 which is the airworthiness standard for <em>Transport Category Aircraft</em>.</p>
+
+<p>Further to specifying the maximum maneuvering load factor, the aircraft must also be designed to withstand a gust loading during level flight. Gust loading is outside of the scope of this tutorial but the reader is referred to <a href="https://drs.faa.gov/browse/cfrPart/externalWindow/8/Part 23 - AIRWORTHINESS STANDARDS: NORMAL, UTILITY, ACROBATIC, AND COMMUTER CATEGORY AIRPLANES/current/default" rel="noopener noreferrer" target="_blank">FAR 23.341</a> for further information.</p>
+
+<h3>Limit and Ultimate Loading</h3>
+
+<p>The maximum maneuvering load factor specified for an aircraft design is known as the aircraft limit load.</p>
+
+<blockquote class="blockquote">
+<p>A limit load is defined as the maximum expected load that the aircraft will see during normal operation.</p>
+</blockquote>
+
+<p>It is not sufficient to design an aircraft&rsquo;s structure to be able to withstand a limit load as this leaves no margin of safety in the design. <strong>Limit loads are therefore multiplied by a factor of safety to arrive at a set of Ultimate Loads which provide for a safety margin in the design and manufacturing of the aircraft.</strong> The standard factor of safety for aircraft design is 1.5.</p>
+
+<blockquote class="blockquote">
+<p>The ultimate load factor is therefore equal to 1.5 times the limit load specified in the FAR regulation.</p>
+</blockquote>
+
+<p>FAR regulations stipulate that an aircraft must be able to withstand limit loads with neither any permanent deformation of the structure nor any detriment to safe operation of the aircraft.</p>
+
+<p>Ultimate loads can result in plastic deformation of the structure but must be held for three seconds without failure.</p>
+
+<h3>Shear and Bending on a Wing</h3>
+
+<p>A wing is designed not only to produce a lifting force equal to the weight of the aircraft, but must produce sufficient lift equal to the maximum weight of the aircraft multiplied by the Ultimate Load Factor. So an aircraft that weighs 12 000 lbs and is designed to an ultimate load factor of 4.5 must thus be able to produce 54 000 lbs of lift up to a speed governed by the FAR regulations (dive speed). There will be a minimum speed below which the wing is incapable of producing the full 54 000 lbs of lift and this is governed by the maximum lift coefficient of the wing and resulting stall speed. In reality a V-n diagram is constructed which graphically illustrates the flight envelope of the aircraft. We wont&#39; discuss the V-n diagram in this introductory post.</p>
+
+<p>Once the maximum lifting force that wing is expected to produce has been established, the distribution of that lifting force over the span of the wing is estimated. The lift distribution over a conventional wing is parabolic in nature, rising from the tip and reaching a maximum at the root.</p>
+
+<figure class="figure"><img alt="forces-on-a-wing" class="figure-img img-fluid" src="/media/uploads/2017/03/forces-on-a-wing.jpg" />
+<figcaption class="figure-caption">Lift Distribution and Bending Moment acting on a wing</figcaption>
+</figure>
+
+<p>This resulting vertical force distribution over the span of the wing causes the wing to flex and bend upward when it is loaded. If you look out of the window and at the wing of a modern airliner like the Boeing 787 during takeoff and landing you are sure to see a high degree of flexing. The lift produced by the wing results in a large bending moment at the wing root that must be transferred to the wingbox (the structure that connects the wing to the fuselage).</p>
+
+<p>There are therefore two primary types of loading that the wing structure must be designed to withstand.</p>
+
+<ul>
+	<li>A vertical shear force due to the lift generated.</li>
+	<li>A bending moment arising from the lift distribution.</li>
+</ul>
+
+<p>The wing is also subjected to torsional loads arising from the pitching moment formed by the offset between the center of pressure and the attachment points of the wing, and horizontal (in-plane) shear forces as a result of the drag force acting on the wing. This introduction will concentrate on the vertical shear and bending moment as these loads generally drive the wing design. However, the torsional load should always be accounted for when performing a shear flow analysis to size the wing skins and shear webs.</p>
+
+<p>An example of the distributed lift load and resulting shear and bending moment diagrams arising from this loading is shown below. In both cases it is clear that the location of the highest shear and bending is the wing root.</p>
+
+<figure class="figure"><img alt="lift distrbution shear and bending" class="figure-img img-fluid" src="/media/uploads/2017/03/lift-dist-shear-bending-wing.jpg" />
+<figcaption class="figure-caption">Lift distribution, Shear diagram and Bending Moment Diagram of a typical wing</figcaption>
+</figure>
+
+<h2>Wing Structural Components</h2>
+
+<p>The primary objective of the wing&rsquo;s internal structure is to withstand the shear and bending moments acting on the wing at the Ultimate load factor. The secondary objective is to make the wing as light as possible without compromising the structural integrity of the design as described above.</p>
+
+<blockquote class="blockquote">
+<p>An optimized wing design will fail just as the ultimate loading conditions are reached.</p>
+</blockquote>
+
+<p>There is no need to make the wing any stronger than it needs to be, and any excess strength (wing weight due to extra material) will reduce the payload capacity of the aircraft making it uncompetitive or uneconomic to operate. In reality the wing will be analysed using computational methods for many different loading combinations that exist at the edge of the aircraft design envelope and then subjected to a static test at the ultimate load factor to show that failure will not occur below the ultimate load.</p>
+
+<p>An aircraft wing is usually designed with a <strong>semi-monocoque</strong> approach where all the components making up the wing structure are load bearing. A typical semi-monocoque wing structure is shown below with the various components labelled:</p>
+
+<figure class="figure"><img alt="wing-structure-labelled" class="figure-img img-fluid" src="/media/uploads/2017/03/wing-structure-labelled.jpg" />
+<figcaption class="figure-caption">Typical structural arrangement of a semi-monocoque wing showing the various components labelled</figcaption>
+</figure>
+
+<h3>Spar Cap (flange)</h3>
+
+<p>These consist of the upper and lower flanges attached to the spar webs. The spar caps carry the bending moment generated by the wing in flight. The upper spar cap will be loaded in compression and the lower in tension for a positive load factor (wing bending upward). The spar caps also form a boundary onto which wing skin is attached and support the wing skin against buckling. Concentrated load points such as engine mounts or landing gear are attached to the main spar.</p>
+
+<h3>Spar web</h3>
+
+<p>The spar web consists of the material between the spar caps and maintains a fixed spacing between the them. This allows the spar caps to act in pure tension and compression (bending) during flight. The spar web is responsible for carrying the vertical shear loads (lift) which arises from the aerodynamic loading of the wing. The spar webs and caps are collectively referred to as the wing spar.</p>
+
+<h3>Wing Ribs</h3>
+
+<p>The ribs are spaced equidistant from one-another (as far as is practical) and help to maintain the aerodynamic profile of the wing. The ribs form part of the boundary onto which the skins are attached, and support the skins and stiffeners against buckling. Ribs also form a convenient structure onto which to introduce concentrated loads</p>
+
+<h3>Stringers/Stiffeners</h3>
+
+<p>Stiffeners or stringers form a part of the boundary onto which the wing skin is attached and support the skin against buckling under load. The stiffeners also carry axial loads arising from bending moments in the wing.</p>
+
+<h3>Skin</h3>
+
+<p>The wing skin transmits in-plane shear loads into the surrounding structure and gives the wing its aerodynamic shape.</p>
+
+<h2>Analysis Methods</h2>
+
+<p>What follows is a brief introduction into some methodologies and analyses typically carried out during the design of a new wing structure. We will not go so far as to look into the specifics of the mathematics used, but will discuss the preliminary structural layout of the wing and look at two analysis methods that drives the structural design: a shear flow analysis and a collapse moment analysis.</p>
+
+<h3>Preliminary Structural Layout</h3>
+
+<p>Before the structural layout of the wing is designed, a preliminary sizing of the wing planform should have been completed to size the wing for its required mission. If you have been following along from the start of this <a href="/category/intro-aircraft-design/" rel="noopener noreferrer" target="_blank">series</a> then you&rsquo;ll be familiar with sizing a wing with respect to <a href="/intro-wing-design/" rel="noopener noreferrer" target="_blank">plan area and aspect ratio</a>, <a href="/intro-sweep-angle/" rel="noopener noreferrer" target="_blank">sweep and supersonic flight</a>, and selecting a suitable <a href="/intro-airfoil-aerodynamics/" rel="noopener noreferrer" target="_blank">airfoil profile</a> in order to complete the planform design of the wing.</p>
+
+<p>Once the planform is frozen, a preliminary structural layout should be drawn up using the following rules of thumb:</p>
+
+<ul>
+	<li>Generally the main spar is located at or near the 25 % chord location. The aerodynamic center of the wing exists at approximately quarter chord which is the location on the wing where the moment coefficient is independent of angle of attack. It is good design practise to locate the main spar near the aerodynamic centre.</li>
+	<li>A rear spar is often required in order to attach the trailing edge flap and aileron surfaces to the main wing structure. If the surfaces have already been specified during the conceptual phase (before the structural design is started) then these surfaces will form a natural constraint and drive the placement of the rear spar.</li>
+	<li>Ribs will need to be placed at any points in the wing where concentrated loads are introduced. Common examples such as engine pylons, landing gear, and flap and aileron junctions should guide the placement of the first few ribs.</li>
+	<li>Additional ribs should be placed equidistant along the span of the wing such that the aspect ratio between the ribs and the skin remains close to one. This aids in unloading the shear in the skin and reduces the tendency for the skins to buckle.</li>
+	<li>Stringers can be added between the spars. This will aid the skin in resisting shear buckling.</li>
+</ul>
+
+<p>A layout for a simple rectangular wing is shown below taking into account the rules of thumb described above.</p>
+
+<figure class="figure"><img alt="example-wing-preliminary-structural-layout" class="figure-img img-fluid" src="/media/uploads/2017/03/example-wing-preliminary-structural-layout.jpg" />
+<figcaption class="figure-caption">Example of a preliminary structural layout for a rectangular untapered wing</figcaption>
+</figure>
+
+<h3>Structural Idealization</h3>
+
+<p>In order to efficiently analyse the wing structure, a number of simplifying assumptions are typically made when working with a semi-monocoque structure.</p>
+
+<blockquote class="blockquote">
+<p>The spar caps/flanges and stiffeners only carry axial (bending) loads.</p>
+</blockquote>
+
+<blockquote class="blockquote">
+<p>The skins and spar web only carry shear loads.</p>
+</blockquote>
+
+<p>This is the classical approach to aircraft structural design and will result in an efficient structure that has been sized with conventional methods which are well accepted by the certification authorities. However, improvements in computing power along with the rise of composite materials in structural design means that there is a gradual movement away from the classical methods to analyzing the structure in such a way that seeks to further optimize the design to produce the lightest possible structure. We&rsquo;ll just focus on the classical methods for the sake of this tutorial.</p>
+
+<h3>Shear Flow Analysis</h3>
+
+<p>Examining the mathematics behind a shear flow analysis is outside of the scope of this introductory tutorial; rather the methodology and rationale will be discussed.</p>
+
+<p><strong>A shear flow analysis is used to size the thickness of the wing skin and shear webs.</strong> A shear force diagram is determined at the maximum load factor which then serves to specify the variation in shear force along the span of the wing. The variation in shear force along the span forms the input into the calculation as the shear at each spanwise location must be transferred into the wing structure.</p>
+
+<p>Based on the assumption that the skin and web only transmits shear and no axial load, the shear stress within a skin panel will remain constant where ever the thickness of the skin is constant.</p>
+
+<blockquote class="blockquote">
+<p>The product of the shear stress and the thickness is therefore constant along a skin and is termed shear flow.</p>
+</blockquote>
+
+<p>$$q = \tau \times t$$</p>
+
+<p><strong>Where:</strong> \( q: \) Shear flow \( (N/mm) \)</p>
+
+<p>\( \tau: \) Shear Stress \( (N/mm^2) \)</p>
+
+<p>\( t: \) Skin thickness \( (mm) \)</p>
+
+<p>A panel section of the wing can therefore be modelled as a set of skins where thickness is a variable, and once the shear flows acting on each of the skins are known, the thickness of the skins can be varied until the shear stress in each skin is below the material allowable shear stress. In this way, the wing skins and web will not fail as a result of the shear loading induced when the aircraft operates at the edge of the design envelope.</p>
+
+<p>The final skin shear flows are also a function of the spar cap area, and this can also be varied to manipulate the final shear flows.</p>
+
+<figure class="figure"><img alt="shear-flow-box-beam" class="figure-img img-fluid" src="/media/uploads/2017/03/shear-flow-box-beam.jpg" />
+<figcaption class="figure-caption">Shear flow analysis on a simple box beam wing structure</figcaption>
+</figure>
+
+<h3>Collapse Moment Analysis</h3>
+
+<p>As with the shear flow analysis, the mathematics behind this calculation are complex and outside of the scope of this tutorial. Instead we briefly introduce the rationale behind a collapse moment analysis.</p>
+
+<p>As described above, a shear flow analysis is used to size all the shear components of the wing structure (webs and skins). We now examine the bending components of the design; namely the spar cap areas and the propensity of the skins on the upper surface of the wing to buckle under compression at high load factors.</p>
+
+<p>The spar caps are responsible for transferring the bending moment generated by the wing into the surrounding structure. When the wing is subjected to a positive load factor it will tend to deflect upward and load the upper spar caps and skin in compression, and the lower structure in tension.</p>
+
+<figure class="figure"><img alt="wing-bending-positive-load-factor" class="figure-img img-fluid" src="/media/uploads/2017/03/wing-bending-positive-load-factor.jpg" />
+<figcaption class="figure-caption">Wing in bending (positive load factor) loads the upper skins in compression and lower skins in tension</figcaption>
+</figure>
+
+<p>A collapse moment analysis examines the interaction between the wing skin in compression (which will tend to buckle) and the ability of the spar caps to absorb the extra load transferred if the skins do buckle. Buckling of the skin does not necessarily result in failure of the whole wing structure as the buckled skin will transfer load into the spar caps and stiffeners that border the skin. This transfer is accomplished through shear flow.</p>
+
+<p>The wing will fail when the stress in the stiffeners or spar caps reach their maximum crippling (failing) stress. The problem becomes an iterative one as the stress at which the skin first starts to buckle must be determined, which in turn affects how much additional load is transferred into the spar caps.</p>
+
+<p>The critical bending moment at which the spar cap/stiffener will reach its critical stress and fail is a function of the cross-sectional area of the stiffener and also the distance that the stiffener lies from the neutral axis. The position of the neutral axis is in turn a function of the extent to which the skins have buckled on the application of the maximum load.</p>
+
+<p>The moment at which the structure will collapse is determined once the crippling stress (critical stress in spar cap) and the moment of inertia (function of extent to which skins have buckled) is known.</p>
+
+<p>This collapse moment is then compared to the bending moment diagram generated for the wing to ensure that the bending moment applied is lower than the collapse moment at all spanwise locations of the wing.</p>
+
+<figure class="figure"><img alt="collapse-bending-moment" class="figure-img img-fluid" src="/media/uploads/2017/03/collapse-bending-moment.jpg" />
+<figcaption class="figure-caption">The wing will not fail in bending if the collapse moment is greater than the bending moment at all spanwise locations</figcaption>
+</figure>
+
+<p>Since the bending moment is a maximum at the root of the wing, the spar caps will need to be large enough (sufficient area) so as not to fail in bending. Using a constant sparcap area from root to tip would result in a situation where the applied bending moment is very much smaller than the collapse moment as one moves toward the tip. This would result in an inefficient structure which is overly heavy.</p>
+
+<p>One way to mitigate this is to reduce the spar cap area as one moves toward the wing tip in such a manner that weight is reduced but the collapse moment is always greater than the applied moment at all points along the wing. Additional spar cap area serves to increase the moment of inertia at that cross-section of the wing, allowing the wing to resist larger bending moments.</p>
+
+<h2>Wrapping Up</h2>
+
+<p>Completing the full structural design of a new wing is a complex and iterative process. The analysis described above just represents a small part of the design and stress analysis process. A wing structure would be modeled using a Finite Element (FE) package and tested for many different load combinations before a prototype is built and tested to the point of destruction as a means to validate the paper calculations and computer analysis. However, starting with some hand calculations, similar to those shown above is a good way to begin the design process as it ensures that the engineer understands the resulting load paths before creating an FE model.</p>
+
+<p><em>Thanks for reading this Introduction to Wing Structural Design. If you enjoyed reading this please get the word out and share this post on your favorite social network!</em></p></div>
+
+            
+            <div class="container border-top pt-3">
+    <div class="row align-items-center">
+        <div class="h6 pb-2">This article is part of a series on Fundamentals Of Aircraft Design.</div>
+
+        
+        <div class="col-auto">
+                <a class="btn btn-outline-info" href="/intro-airfoil-aerodynamics/">Previous</a>
+        </div>
+        
+        
+        
+        <div class="col-auto">
+            <a class="btn btn-info" href="/intro-fuselage-design/">Next</a>
+        </div>
+        <div class="col-auto">
+            <div class="lead">Fuselage Sizing And Design</div>
+        </div>
+        
+    </div>
+</div>
+            
+
+            <div>
+                <!-- footer-2022 -->
+<div class="container mb-3 mt-3 p-3">
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4009216604662031"
+     data-ad-slot="4431801739"
+     data-ad-format="auto"
+     data-full-width-responsive="true">
+    </ins>
+</div>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            </div>
+
+            <div class="container">
+    <div class="row mb-3 mt-3 border-top pt-4">
+    <div class="col-auto"><div class="h4 mt-1">Share</div></div>
+    <div class="col-auto">
+        <div class="twitter-icon-share">
+            <a href="https://twitter.com/intent/tweet?text=Introduction%20to%20Wing%20Structural%20Design&url=https://aerotoolbox.com/wing-structural-design/&via=aerotoolbox" target="_blank"><i style="font-size: 2.0rem;" class="bi-twitter-x link-twitter"></i></a>
+        </div>
+    </div>
+    <div class="col-auto">
+        <div class="linkedin-icon-share">
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://aerotoolbox.com/wing-structural-design/&title=Introduction%20to%20Wing%20Structural%20Design&summary=An%20introduction%20to%20the%20structural%20design%20of%20an%20aircraft%20wing%2C%20looking%20at%20the%20wing%20loading%20and%20design%20of%20a%20semi-monocoque%20structure.&source=aerotoolbox.com" target="_blank"><i style="font-size: 2.0rem;" class="bi-linkedin link-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="col-auto">
+        <div class="">
+            <a href="http://www.facebook.com/share.php?u=https://aerotoolbox.com/wing-structural-design/" target="_blank"><i style="font-size: 2.0rem;" class="bi-facebook link-facebook"></i></a>
+        </div>
+    </div>
+</div>
+    <div class="mt-4 pt-4 border-top border-bottom pb-4">
+   <div class="h4 mt-1 mb-2 p-0">Category</div>
+    
+     
+                <div class="row align-items-center d-flex">
+                <div class="col-auto d-inline"><i style="font-size: 1.25rem;" class="bi bi-bookmark-fill"></i></div>  
+                <div class="col-auto d-inline"><a href="/category/">Home</a></div>
+                <div class="col-auto m-0 p-0">/</div>
+                
+                    <div class="col-auto d-inline"><a href="/category/aircraft-design/">Aircraft Design</a></div>
+                    <div class="col-auto m-0 p-0">/</div>
+                
+                <div class="col-auto d-inline"><a class="link-textdarkunderline" href="/category/intro-aircraft-design/">Fundamentals of Aircraft Design</a></div>
+            </div>
+            
+        
+        
+    <div class="h4 mt-4 p-0">Tags</div>
+    <div class="row align-items-center mt-3">
+        <div class="col-auto">
+            <i style="font-size: 1.25rem;" class="bi bi-tags-fill"></i>
+        </div>
+        
+            <div class="p-1 col-auto">
+                <a class="btn btn-tagbtn btn-sm" href="/tag/airframe-structure/">Airframe Structure</a>
+            </div>
+        
+            <div class="p-1 col-auto">
+                <a class="btn btn-tagbtn btn-sm" href="/tag/bending-moment/">Bending Moment</a>
+            </div>
+        
+            <div class="p-1 col-auto">
+                <a class="btn btn-tagbtn btn-sm" href="/tag/lift-distribution/">Lift Distribution</a>
+            </div>
+        
+            <div class="p-1 col-auto">
+                <a class="btn btn-tagbtn btn-sm" href="/tag/rib/">Rib</a>
+            </div>
+        
+            <div class="p-1 col-auto">
+                <a class="btn btn-tagbtn btn-sm" href="/tag/shear/">Shear</a>
+            </div>
+        
+            <div class="p-1 col-auto">
+                <a class="btn btn-tagbtn btn-sm" href="/tag/shearflow/">Shearflow</a>
+            </div>
+        
+            <div class="p-1 col-auto">
+                <a class="btn btn-tagbtn btn-sm" href="/tag/skin/">Skin</a>
+            </div>
+        
+            <div class="p-1 col-auto">
+                <a class="btn btn-tagbtn btn-sm" href="/tag/spar/">Spar</a>
+            </div>
+          
+    </div>
+    
+</div>
+  
+      
+    
+        <div class="container mt-3">
+    <div class="fb-comments" data-href="https://aerotoolbox.com/wing-structural-design/" data-width="100%" data-numposts="10" data-lazy="true"></div>
+</div>
+
+    
+</div>
+
+
+        
+        </div> <!-- end of main post column -->
+        
+        <div class="col-lg-4 col-xxl-4"> <!-- Sidebar column -->
+           <div>
+    <!-- sidebar-responsive-2022 -->
+<div class="container mt-3 mb-3 p-3">
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4009216604662031"
+     data-ad-slot="4971444516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+</div>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<div>
+    <div class="container">
+    <script async data-uid="73f2d7d991" src="https://aerotoolbox.kit.com/73f2d7d991/index.js"></script>
+</div>
+</div>
+
+<div>
+    <div class="d-none d-lg-block container mt-3">
+    <div class="row mb-3">
+        <div class="col-12"><h3 class="pb-lg-0 notoc">Share Article</h3></div>
+        <div class="col-auto">
+            <div class="twitter-icon-share">
+                <a href="https://twitter.com/intent/tweet?text=Introduction%20to%20Wing%20Structural%20Design&url=https://aerotoolbox.com/wing-structural-design/&via=aerotoolbox" target="_blank"><i style="font-size: 2.0rem;" class="bi-twitter-x link-twitter"></i></a>
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="linkedin-icon-share">
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://aerotoolbox.com/wing-structural-design/&title=Introduction%20to%20Wing%20Structural%20Design&summary=An%20introduction%20to%20the%20structural%20design%20of%20an%20aircraft%20wing%2C%20looking%20at%20the%20wing%20loading%20and%20design%20of%20a%20semi-monocoque%20structure.&source=aerotoolbox.com" target="_blank"><i style="font-size: 2.0rem;" class="bi-linkedin link-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="">
+                <a href="http://www.facebook.com/share.php?u=https://aerotoolbox.com/wing-structural-design/" target="_blank"><i style="font-size: 2.0rem;" class="bi-facebook link-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</div>        
+   
+
+</div>
+
+<div>
+    
+<div class="container">
+    <h3 class="notoc">Popular Posts</h3>
+    
+         
+        <div class="row mt-3 mb-3 align-items-center">
+            <div class="d-none d-lg-block d-xl-none">
+                <div class="col-12">
+                    <a class="h7 link-info category-font pop-cat-sidebar" href="/category/calculators/">Calculators &amp; Tools</a>
+                </div>
+            </div>
+    
+            <div class="d-block d-lg-none d-xl-block col-auto">
+                <a href="/crosswind/"><img class="post-thumbnail" src="/media/postimage/windsock.jpg"
+                    alt="post-thumbnail"></a>
+            </div>
+            
+            <div class="col">
+                <div>
+                    <a class="d-block d-lg-none d-xl-block h7 link-info category-font pop-cat-sidebar" href="/category/calculators/">Calculators &amp; Tools</a>
+                </div>
+                <div>
+                    <a class="h6 link-textdark fw-bold" href="/crosswind/">Crosswind Calculator</a>
+                </div>
+            </div>
+        </div>   
+    
+    
+         
+        <div class="row mt-3 mb-3 align-items-center">
+            <div class="d-none d-lg-block d-xl-none">
+                <div class="col-12">
+                    <a class="h7 link-info category-font pop-cat-sidebar" href="/category/calculators/">Calculators &amp; Tools</a>
+                </div>
+            </div>
+    
+            <div class="d-block d-lg-none d-xl-block col-auto">
+                <a href="/airspeed-conversions/"><img class="post-thumbnail" src="/media/postimage/airspeed-scale_CgQxtGx.jpg"
+                    alt="post-thumbnail"></a>
+            </div>
+            
+            <div class="col">
+                <div>
+                    <a class="d-block d-lg-none d-xl-block h7 link-info category-font pop-cat-sidebar" href="/category/calculators/">Calculators &amp; Tools</a>
+                </div>
+                <div>
+                    <a class="h6 link-textdark fw-bold" href="/airspeed-conversions/">Airspeed Conversions (CAS/EAS/TAS/Mach)</a>
+                </div>
+            </div>
+        </div>   
+    
+    
+         
+        <div class="row mt-3 mb-3 align-items-center">
+            <div class="d-none d-lg-block d-xl-none">
+                <div class="col-12">
+                    <a class="h7 link-info category-font pop-cat-sidebar" href="/category/calculators/">Calculators &amp; Tools</a>
+                </div>
+            </div>
+    
+            <div class="d-block d-lg-none d-xl-block col-auto">
+                <a href="/atmcalc/"><img class="post-thumbnail" src="/media/postimage/atm-calc_xpvXhQK.jpg"
+                    alt="post-thumbnail"></a>
+            </div>
+            
+            <div class="col">
+                <div>
+                    <a class="d-block d-lg-none d-xl-block h7 link-info category-font pop-cat-sidebar" href="/category/calculators/">Calculators &amp; Tools</a>
+                </div>
+                <div>
+                    <a class="h6 link-textdark fw-bold" href="/atmcalc/">Standard Atmosphere Calculator</a>
+                </div>
+            </div>
+        </div>   
+    
+    
+         
+        <div class="row mt-3 mb-3 align-items-center">
+            <div class="d-none d-lg-block d-xl-none">
+                <div class="col-12">
+                    <a class="h7 link-info category-font pop-cat-sidebar" href="/category/calculators/">Calculators &amp; Tools</a>
+                </div>
+            </div>
+    
+            <div class="d-block d-lg-none d-xl-block col-auto">
+                <a href="/descent-rate-calculator/"><img class="post-thumbnail" src="/media/postimage/T-6-climb-hero.jpg"
+                    alt="post-thumbnail"></a>
+            </div>
+            
+            <div class="col">
+                <div>
+                    <a class="d-block d-lg-none d-xl-block h7 link-info category-font pop-cat-sidebar" href="/category/calculators/">Calculators &amp; Tools</a>
+                </div>
+                <div>
+                    <a class="h6 link-textdark fw-bold" href="/descent-rate-calculator/">Climb and Descent Rate Calculator</a>
+                </div>
+            </div>
+        </div>   
+    
+    
+         
+        <div class="row mt-3 mb-3 align-items-center">
+            <div class="d-none d-lg-block d-xl-none">
+                <div class="col-12">
+                    <a class="h7 link-info category-font pop-cat-sidebar" href="/category/aircraft-design/intro-aircraft-design/">Fundamentals Of Aircraft Design</a>
+                </div>
+            </div>
+    
+            <div class="d-block d-lg-none d-xl-block col-auto">
+                <a href="/lift-drag-moment-coefficient/"><img class="post-thumbnail" src="/media/postimage/artturi-jalli-WUYFbcqrtiw-unsplash.jpg"
+                    alt="post-thumbnail"></a>
+            </div>
+            
+            <div class="col">
+                <div>
+                    <a class="d-block d-lg-none d-xl-block h7 link-info category-font pop-cat-sidebar" href="/category/aircraft-design/intro-aircraft-design/">Fundamentals Of Aircraft Design</a>
+                </div>
+                <div>
+                    <a class="h6 link-textdark fw-bold" href="/lift-drag-moment-coefficient/">Aerodynamic Lift, Drag and Moment Coefficients</a>
+                </div>
+            </div>
+        </div>   
+    
+    
+         
+        <div class="row mt-3 mb-3 align-items-center">
+            <div class="d-none d-lg-block d-xl-none">
+                <div class="col-12">
+                    <a class="h7 link-info category-font pop-cat-sidebar" href="/category/aircraft-design/intro-aircraft-design/">Fundamentals Of Aircraft Design</a>
+                </div>
+            </div>
+    
+            <div class="d-block d-lg-none d-xl-block col-auto">
+                <a href="/intro-wing-design/"><img class="post-thumbnail" src="/media/postimage/C172-wing.jpg"
+                    alt="post-thumbnail"></a>
+            </div>
+            
+            <div class="col">
+                <div>
+                    <a class="d-block d-lg-none d-xl-block h7 link-info category-font pop-cat-sidebar" href="/category/aircraft-design/intro-aircraft-design/">Fundamentals Of Aircraft Design</a>
+                </div>
+                <div>
+                    <a class="h6 link-textdark fw-bold" href="/intro-wing-design/">Aircraft Wing Area and Aspect Ratio</a>
+                </div>
+            </div>
+        </div>   
+    
+    
+</div>
+</div>
+<div>
+    <!-- sidebar-responsive-2022 -->
+<div class="container mt-3 mb-3 p-3">
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4009216604662031"
+     data-ad-slot="4971444516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+</div>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<div>
+    
+<div class="container">
+    <h3 class="notoc">Search by Category</h3>
+    <ul>
+        
+        <li>
+            <a class="link-textdark" href="/category/aircraft-design/">Aircraft Design</a>
+            
+            <ul class="children">
+                
+        <li>
+            <a class="link-textdark" href="/category/intro-aircraft-design/">Fundamentals Of Aircraft Design</a>
+            
+        </li>
+        
+            </ul>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/calculators/">Calculators &amp; Tools</a>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/groundschool/">Ground School</a>
+            
+            <ul class="children">
+                
+        <li>
+            <a class="link-textdark" href="/category/aerodynamics/">Aerodynamics</a>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/aircraft-technical/">Aircraft Systems</a>
+            
+            <ul class="children">
+                
+        <li>
+            <a class="link-textdark" href="/category/airframe/">Airframe Structure And Control Surfaces</a>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/electrical-system/">Electrical System</a>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/instrumentation/">Instrumentation</a>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/landing-gear/">Landing Gear</a>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/propulsion/">Propulsion</a>
+            
+        </li>
+        
+            </ul>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/principles-flight/">Principles Of Flight</a>
+            
+        </li>
+        
+            </ul>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/quick-concepts/">Quick Concepts</a>
+            
+        </li>
+        
+        <li>
+            <a class="link-textdark" href="/category/quizzes/">Quizzes</a>
+            
+        </li>
+        
+    </ul>
+</div>
+
+
+</div>
+<div>
+    <!-- sidebar-responsive-2022 -->
+<div class="container mt-3 mb-3 p-3">
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4009216604662031"
+     data-ad-slot="4971444516"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+</div>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+        </div> <!-- end of sidebar column -->
+    </div> <!-- end of post row -->
+</div>
+
+    <div class=""><a class="opacity-25 link-textdark" onclick="topFunction()" id="myBtn" title="Go to top"><i style="font-size:3.0rem;" class="bi bi-arrow-up-circle-fill"></i></a></div>
+
+    
+        </main>
+
+        
+
+          
+        
+<footer>
+    <div class="container-fluid bg-footer mt-5">
+        <div class="container">
+            
+            <div class="row pt-5 pb-3">
+                
+                <div class="col-12 col-sm-4 col-md-4 col-xl-3">
+                    <div class="h5 fw-bold text-textdark"><a class="link-textdark" href="/category/calculators/">Calculate</a></div>
+                    <ul class="mt-2 border-light list-unstyled text-textdark">
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/metar/">METAR Decoder</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/crosswind/">Crosswind Calculator</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/density-altitude/">Density Altitude</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/airspeed-conversions/">Airspeed Conversions</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/atmcalc/">Standard Atmosphere</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/category/calculators/">All Calculators</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-xl-3">
+                    <div class="h5 fw-bold text-textdark"><a class="link-textdark" href="/category/">Learn</a></div>
+                    <ul class="mt-2 border-light list-unstyled text-textdark">
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/category/aircraft-design/">Aircraft Design</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/category/groundschool/">PPL Groundschool</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/category/quizzes/">Quizzes</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/category/">Browse Categories</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-xl-3">
+                    <div class="h5 fw-bold link-textdark">Company</div>
+                    <ul class="mt-2 border-light list-unstyled link-textdark">
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/">Home</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/contact/">Contact</a></li>
+                        <li class="pt-1 pb-1 footer-link"><a class="link-textdark" href="/about/">About</a></li>
+                        
+                    </ul>
+                    
+                </div>
+            
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid bg-footer">
+        <div class="container">
+            <div class="d-flex pb-2">
+                <div class="d-inline pe-3 twitter-icon">
+                    <a href="https://twitter.com/aerotoolbox/" target="_blank"><i style="font-size: 2.0rem; " class="bi-twitter-x"></i></a>
+                </div>
+                <!--<div class="d-inline pe-3 linkedin-icon">
+                    <a href="https://www.linkedin.com/in/andrewrwood/" target="_blank"><i style="font-size: 2.0rem;" class="bi-linkedin"></i></a>
+                </div>-->
+                <div class="d-inline pe-3 facebook-icon">
+                    <a href="https://facebook.com/aerotoolbox/" target="_blank"><i style="font-size: 2.0rem;" class="bi-facebook"></i></a>
+                </div>
+            </div>
+            <div class="row text-textinvert border-top border-textinvert pt-2 pb-2">
+                <div class="col-auto"> © 2026 AeroToolbox.com | Built in Python by <a class="link-textdarkunderline" href="https://canardanalytics.com">Canard Analytics</a> |</div>
+                <div class="col-auto"><a class="link-textdarkunderline" href="/privacy-policy/">Privacy Policy</a></div>
+                <div class="col-auto"><a class="link-textdarkunderline" href="/disclaimer/">Disclaimer</a></div>
+                <div class="col-auto"><a class="link-textdarkunderline" href="/feed/">Feed</a></div>
+                <!--<div class="col-auto"><a class="link-winginvert" href="#">Terms & Conditions</a></div>-->
+            </div>
+
+        </div>
+
+    </div>
+        
+            
+    </footer>
+        
+            <div class="container-fluid cookie-wrapper bg-footer p-4 border-top">
+    <div class="row">
+        <div class="col-12">
+            <p class="mb-2 mb-lg-1">This website uses cookies to ensure you get the best experience on our website.</p>
+        </div>
+        <div class="col-auto my-auto">
+            <p class="d-inline text-align-center my-auto">By continuing here you are consenting to their use. Please refer to our <a class="link-textdarkunderline" href="/privacy-policy/">privacy policy</a> for further information.</p>
+        </div>
+        <div class="col-auto my-auto mt-3 mt-lg-0">
+            <div class="d-inline buttons">
+                <button class="btn btn-info item">Continue</button>
+              </div>
+        </div>
+        
+    </div>
+              
+     
+</div>
+        
+        
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script src="/static/content/js/cookie-consent.js"></script>
+
+
+    
+        <script src="/static/content/js/posts/post-scroll-btn.js"></script>
+    
+    
+        <script src="/static/content/js/posts/create-toc.js"></script>
+        
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
+
+

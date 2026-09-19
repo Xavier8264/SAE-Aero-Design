@@ -1,0 +1,456 @@
+# ID: nicolai_rc_model_aero
+# SOURCE: https://saeaerodesign.com/cdsweb/gen/DownloadDocument.aspx?DocumentID=cd49237c-65b1-4744-9638-68903b7faf1d
+# ORIGINAL: reference/raw/nicolai_rc_model_aero.pdf
+# CONVERTED: 2026-09-18 21:23 UTC-0500 | type pdf | 13 pages | ~6098 tokens
+# NOTE: Nicolai (Lockheed Martin) Estimating R/C Model Aerodynamics and Performance, written FOR SAE Aero Design; hosted by SAE. KEY: drag polar, Re effects, performance. 13 pp
+# FLAG img: pages 6
+# TOC:
+#   IV  SECTION  AND  WING DATA -> PDF page 4
+#   V  ESTIMATING MODEL DRAG -> PDF page 6
+#     Vertical Tail -> PDF page 8
+
+=== PAGE 1 ===
+        ESTIMATING R/C MODEL AERODYNAMICS AND PERFORMANCE
+                    Dr. Leland M. Nicolai, Technical Fellow
+                    Lockheed Martin Aeronautical Company
+                                  June 2009
+
+I OVERVIEW
+      The purpose of this white paper is to enlighten students participating in the SAE
+Aero Design competition on how to estimate the aerodynamics and performance of their
+R/C models.
+      The student needs to understand that the analysis and performance of the R/C
+model is identical to a full scale airplane such as a Cessna 172. The only differences
+between the R/C model and the full scale airplane are the wing loading, Reynolds
+Number and the moments of inertia.
+      The R/C model wing loading is one to two orders of magnitude less than a full
+scale airplane (because of the “square-cube law” ... look it up). R/C models typically
+have wing loadings of 1-3 lb/ft2 whereas the full scale airplanes are greater than 10
+(Cessna 172 is 12.6 lb/ft2). The impact is lower stall speeds and lower take-off and
+landing distances.
+      The R/C model will typically have Reynolds Numbers less than 500,000 which
+gives the wing a predominately laminar boundary layer. Full scale airplanes are greater
+than one million Reynolds Number and have turbulent boundary layer wings. The impact
+is that the full scale airplanes have higher maximum lift coefficients due to the turbulent
+boundary layer delaying flow separation over the wing better than the laminar boundary
+layer. The R/C models and the full scale airplanes are in a Reynolds Number region
+where the drag coefficients are about the same.
+      The R/C model will have much smaller moments of inertia than the full scale
+airplane. The impact is that the time-to-double-amplitude t2 from a disturbance will be
+much shorter for the R/C model since t2 = fn (1/(moment of inertia)1⁄2 . The R/C pilot will
+have his hands full with a neutral or unstable model.
+
+II DEFINITIONS
+
+                                        1
+
+=== PAGE 2 ===
+LIFT: The aerodynamic force resolved in the direction normal to the free stream due to
+the integrated effect of the static pressures acting normal to the surfaces.
+DRAG: The aerodynamic force resolved in the direction parallel to the free stream due to
+(1) viscous shearing stresses, (2) integrated effect of the static pressures acting normal to
+the surfaces and (3) the influence of the trailing vortices on the aerodynamic center of the
+body.
+INVISCID DRAG-DUE-TO-LIFT: Usually called induced drag. The drag that results
+from the influence of trailing vortices (shed downstream of a lifting surface of finite
+aspect ratio) on the wing aerodynamic center. The influence is an impressed downwash
+at the wing aerodynamic center which induces a downward incline to the local flow.
+(Note: it is present in the absence of viscosity)
+VISCOUS DRAG-DUE-TO-LIFT: The drag that results due to the integrated effect of
+the static pressure acting normal to a surface resolved in the drag direction when an
+airfoil angle-of-attack is increased to generate lift. (Note: it is present without vortices)
+SKIN FRICTION DRAG: The drag on a body resulting from viscous shearing stress over
+its wetted surface.
+PRESSURE DRAG: Sometimes called form drag. The drag on a body resulting from the
+integrated effect of the static pressure acting normal to its surface resolved in the drag
+direction.
+INTERFERENCE DRAG: The increment in drag from bringing two bodies in proximity
+to each other. For example, the total drag of a wing-fuselage combination will usually be
+greater than the sum of the wing drag and fuselage drag independent of one another.
+PROFILE DRAG: Usually taken to mean the sum of the skin friction drag and the
+pressure drag for a two-dimensional airfoil.
+TRIM DRAG: The increment in drag resulting from the aerodynamic forces required to
+trim the aircraft about its center of gravity. Usually this takes the form of added drag-due-
+to-lift on the horizontal tail.
+BASE DRAG: The specific contribution to the pressure drag attributed to a separated
+boundary layer acting on an aft facing surface.
+WAVE DRAG: Limited to supersonic flow. This drag is a pressure drag resulting from
+noncancelling static pressure components on either side of a shock wave acting on the
+surface of the body from which the wave is emanating.
+COOLING DRAG: The drag resulting from the momentum lost by the air that passes
+through the power plant installation (ie; heat exchanger) for purposes of cooling the
+engine, oil and etc.
+
+                                          2
+
+=== PAGE 3 ===
+RAM DRAG: The drag resulting from the momentum lost by the air as it slows down to
+enter an inlet.
+AIRFOIL: The two-dimensional wing shape in the X and Z axes. The airfoil gives the
+wing its basic angle-of-attack at zero lift (αOL), maximum lift coefficient (Clmax), moment
+about the aerodynamic center (that point where Cmα = 0), Cl for minimum drag and
+viscous drag-due-to-lift. Two-dimensional airfoil test data is obtained in a wind tunnel by
+extending the wing span across the tunnel and preventing the formation of trailing
+vortices at the tip (essentially an infinite aspect ratio wing with zero induced drag). The
+2D aerodynamic coefficients of lift, drag and moment are denoted by lower case letters
+(ie; Cl, Cd and Cm)
+REYNOLDS NUMBER: The Reynolds number is a major similarity parameter and is the
+ratio of the inertia forces to the viscous forces. The equation for Reynolds number is
+              Re = ρVl/μ
+              Where ρ = density (slugs/ ft3)
+                     V = flight speed (ft/sec)
+                     L = characteristic length such as wing/tail MAC (mean
+                     aerodynamic chord), fuselage length    (feet)
+                     μ = coefficient of viscosity (slugs/ft-sec)
+III APPROACH
+       We approximate the aircraft drag polar by the expression
+              CD = CDmin + K’CL2 + K’’( CL - CLmin)2                           (1)
+       The CDmin is made up of the pressure and skin friction drag from the fuselage,
+wing, tails, landing gear, engine, etc. With the exception of the landing gear and engine,
+the CDmin contributions are primarily skin friction since we take deliberate design actions
+to minimize separation pressure drag (ie; fairings, tapered aft bodies, high fineness ratio
+bodies, etc).
+The second term in the CD equation is the inviscid drag-due-to-lift (or induced drag) and
+K’ is the inviscid or induced factor = 1/(π AR e). The e in the K’ factor can be
+determined using inviscid vortex lattice codes such as AVL. The e for low speed, low
+sweep wings is typically 0.9 – 0.95 (a function of the lift distribution).
+       The third term is the viscous drag-due-to-lift where K’’ is the viscous factor =
+fn(LE radius, t/c, camber) and CLmin is the CL for minimum wing drag. Both K” and CLmin
+are determined from airfoil data.The K’’ term is difficult to estimate (see reference 2,
+page 11-11) and is often omitted. It is usually determined from 2D airfoil test data and
+will be discussed in Section IV.
+
+                                          3
+
+=== PAGE 4 ===
+IV SECTION AND WING DATA
+      The two dimensional section data needs to be corrected for finite wing effects.
+These corrections will be discussed below using the notional airfoil (termed the LMN-1)
+shown in Figure 1. The LMN-1 airfoil is a 17% thick highly cambered shape with its
+maximum thickness at 35% chord. This airfoil is similar to the shapes used by the SAE
+Aero Design teams (ie; the Selig 1223, Liebeck LD-X17A, and Wortman FX-74-CL5
+1223).
+
+                          1.8
+                                                                            0.9 Clmax
+                          1.6
+                       Cl              Curve Curve
+                          1.4        Lift
+                                           Lift
+                                   2D    10
+                          1.2           =                           LMN-1 Airfoil
+                                      AR
+                                                                    Re = 300,000
+                          1.0
+                           .8
+                           .6     Clmin
+                           .4
+      Approximation                                                    Section Drag
+                                           Cdmin
+                           .2
+                                          0.01         0.02   Cd     0.03          0.04
+
+       -8   -6    -4   -2    0     2    4     6    8    10   12    14   16    18
+                                        α Degrees
+                                                                             Nicolai-02 06-18-09
+
+              Figure 1 Notional LMN-1 airfoil data at Re = 300,000
+
+The first thing the user needs to check is that the data is for the appropriate Reynolds
+Number. If we assume an altitude of 3000 ft, standard day conditions and a flight speed
+of 55 ft/sec, the ρ = 0.002175 slugs/ ft3 , μ = 0.3677x10-6 slugs/ft-sec the Reynolds
+Number per ft is 325,000. Thus the airfoil data of Figure 1 will be good for a wing having
+a chord of about one foot.
+      From the airfoil data in Figure 1 the section Clmax = 1.85 can be determined for a
+2D αstall = 10°. Notice that the airfoil has a nasty inverted stall at α ≈ -2.5° (ie; the lower
+surface is separated). Since we do not plan on operating at negative α this is OK. Notice
+also that the linear lift curve slope has been approximated to an αOL = -8° on Figure 1.
+
+                                         4
+
+=== PAGE 5 ===
+    0.03 0.03
+
+    0.02 0.02
+                                                        Slope Slope = = K” K” = = 0.0133 0.0133
+   Cd Cd
+
+    0.01 0.01         Re Re = = 300,000 300,000
+
+       0 0
+        0 0   0.1 0.1  0.2 0.2  0.3 0.3  0.4 0.4  0.5 0.5  0.6 0.6  0.7 0.7  0.8 0.8  0.9 0.9  1.0 1.0
+                                    (Cl (Cl – – Clmin)2 Clmin)2       Nicolai-03 06-18-09
+
+       The section lift data needs to be corrected for 3D, finite wing effects. The low
+speed unswept finite wing lift curve slope is estimated as follows for AR > 3 (see
+Reference 1, page 264 or Reference 2, page 8):
+              dCL/dα = CLα = Clα AR/(2 + (4 + AR2)1⁄2)                  (2)
+              where Clα = section lift curve slope (typically 2π per radian)
+              and AR = wing aspect ratio = (span)2/wing area
+       Figure 1 shows the construction of a three dimensional AR = 10 wing lift curve
+using the 2D and the section lift curve slope. The αOL is an anchor point for constructing
+the 3D wing lift characteristics since at αOL the lift is zero and there is no correction to the
+3D lift curve for the trailing vortices. Estimate the 3D wing lift curve slope for the model
+aspect ratio using equation 2 and draw it on the Cl vs a. For large AR (ie; AR > 5) low
+speed, unswept wings, the wing CLmax ≈ 0.9 Clmax = 1.67 (Reference 2, page 9-15). The
+3D αstall is approximated using the 2D stall characteristics and is about 11.5o.
+       The section drag polar data is used to estimate the following wing data:
+                     CLmin ≈ Clmin = 0.7
+                     CDmin ≈ Cdmin = 0.0145
+
+                                         5
+
+=== PAGE 6 | img ===
+and the wing viscous drag-due-to-lift factor K’’ = 0.0133 as shown on Figure 2.
+             Figure 2 Viscous drag-due-to-lift factor for the LMN-1 airfoil
+V ESTIMATING MODEL DRAG
+       As mentioned earlier we will approximate the aircraft drag polar by the
+expression
+             CD = CDmin + K’CL2 + K’’(CL - CLmin)2                         (1)
+The CDmin term is primarily skin friction and the data on Figure 3 will be used in its
+estimation. The boundary layer can be one of three types: laminar, turbulent or separated.
+We eliminate the separated BL (except in the case of stall) by careful design. For Re <
+105 the BL is most likely laminar. At a Re = 5x105 the BL is tending to transition to
+turbulent with a marked increase in skin friction. By Re = 106 the BL is usually fully
+turbulent. Notice that our model Re is right in the transition region shown on Figure 3.
+
+             Figure 3 Skin friction coefficient versus Reynolds Number
+      We will demonstrate the methodology by estimating the drag of a notional R/C
+model with the following characteristics:
+      Configuration: Fuselage/payload pod with a boom holding a horizontal and
+vertical tail.
+
+                                        6
+
+=== PAGE 7 ===
+             Fuselage/boom length = 84 in,
+             Fuselage length = 25 in,         Fuselage width = 5 in
+             Wing AR = 10,                    Wing taper = 0.5
+             Wing area = SRef = 1440 in2 = 10 ft2 (total planform area)
+             Wing span = 120 in
+             Landing gear: tricycle
+             Take-off weight w/o payload = 12 lb
+             Item                Planform     Wetted        Reference
+                                 Area         Area          Length
+                                 (in2)        (in2)         (in)
+             Fuselage            151          605           25
+             Engine /mount       15           100           na
+             Horiz Tail          126          252           7 (MAC)
+             Tail Boom           14           28            48 + fuselage
+             Landing gear        12           24            na
+             Wing (exposed)      1360         2720          12.4 (MAC)
+             Vert Tail           0            189           9.8 (MAC)
+      The drag coefficients for the model components are estimated as follows (all
+based on SRef = 10 ft2 ).
+      Fuselage
+             Re = 625,000, assume BL is turbulent
+             Fuselage CDmin = FFF Cf SWet/SRef                    (3)
+             Where FF is a form factor (Reference 1, pg 281 or Reference 2, page 11-
+             21) representing a pressure drag contribution. Form factors are empirically
+             based and can be replaced with CFD or wind tunnel data. SWet is the
+             wetted area of the component (fuselage) and the Cf is the skin friction
+             coefficient of the component (fuselage) determined from Figure 3.
+             FFF = 1 + 60/(FR)3 + 0.0025 FR                       (4)
+             For our model the FR = fuselage fineness ratio = fuselage length/diameter
+             = 25/5 = 5 giving a FFF = 1.49 and a fuselage CDmin = 0.0032
+      Wing
+             Re = 310,000
+             Wing CDmin = FFW Cf SWet/SRef                        (5)
+             Where FFW = [1 + L(t/c) + 100(t/c)4] R               (6)
+             and L is the airfoil thickness location parameter (L = 1.2 for the max t/c
+             located at ≥ 0.3c and L = 2.0 for the max t/c < 0.3c)and R is the lifting
+
+                                       7
+
+=== PAGE 8 ===
+      surface correlation parameter. Thus L = 1.2. R is determined from
+      Reference 1, page 281 or Reference 2, page 11-13. For a low speed,
+      unswept wing R is approximately 1.05.
+      Since a wing Re = 310,000 could be either laminar or turbulent, we will
+      calculate the minimum drag coefficient both ways and compare with the
+      section Cdmin = 0.0145 (from Figure 1).
+      If the BL is laminar, the wing Cf = 0.00239 and wing CDmin = 0.0057.
+      If the BL is turbulent, the wing Cf = 0.0059 and wing CDmin = 0.014.
+      Thus the wing boundary layer must be turbulent and we will use wing
+      CDmin = 0.0145.
+
+Horizontal Tail
+      The Re = 175,000, therefore we’ll assume the BL is laminar. The tail (both
+      horizontal and vertical) CDmin equation is the same as for the wing. For a
+      t/c = 0.09 airfoil with L = 1.2 and R = 1.05, the horiz tail CDmin = 0.00046.
+Vertical Tail
+      The Re = 245,000, therefore assume the BL is laminar. For a t/c = 0.09
+      airfoil with L = 1.2 and R = 1.05, the vert tail CDmin = 0.00039.
+Tail Boom
+      The reference length for the tail boom is the fuselage length plus the boom
+      length since the BL will start on the fuselage and continue onto the boom.
+      Thus the tail boom Re = 1.825x106 and the BL is turbulent. Thus
+      Tail Boom CDmin = 1.05 Cf SWet/SRef = 0.00009.
+      Where the factor 1.05 accounts for tail/boom interference drag.
+Landing Gear
+      From Reference 3, page 13.14 a single strut and wheel (4 inch diameter,
+      0.5 inch wide) has a CDmin = 1.01 based upon frontal area. Thus the
+      tricycle gear CDmin = (3)(1.01)(2)/1440 = 0.0042 based upon the wing
+      reference area..
+Engine
+      From Reference 3, page 13.4, Figure 13 the engine CDmin = 0.34 based
+      upon frontal area. For a 6 in2 frontal area the engine CDmin = 0.002 based
+      upon the wing reference area..
+Total CDmin
+      The total CDmin is the sum of all the components. Thus the total model
+      CDmin = 0.02484 based upon a wing reference area of 10 ft2 .
+      Note #1: As a sanity check of our CDmin we compare it with a Cessna 172
+      which has a CDmin = 0.026 based upon a wing reference area of 175 ft2 .
+
+                                 8
+
+=== PAGE 9 ===
+       Note #2: The wing is the largest drag item due to its large wetted area.
+       However the second largest drag item is the landing gear which is the case
+       for all full scale airplanes. This drag can be cut in half by putting wheel
+       fairings over the wheels. Is it surprising that airplane designers go to the
+       trouble of designing retractable landing gears?
+Total Drag Expression
+       Assuming a wing efficiency e = 0.95 gives an induced drag factor
+       K’ = 1/(π AR e) = 0.0335. Notice that the often omitted viscous drag
+       factor K’’ = 0.0133 is 40% of the induced drag factor. The total drag
+       expression is
+       CD = 0.02484 + 0.0335CL2 + 0.0133(CL – 0.7)2
+       The untrimmed (neglecting the horizontal tail drag-due-to lift) model drag
+       polar and L/D are shown on Figure 4.
+
+      0.10 0.10  20 20                             CD CD
+      0.09 0.09
+      0.08 0.08
+                15 15
+      0.07 0.07
+  CD CD       L L L
+      0.06 0.06  D D D
+                                                                   L L L
+      0.05 0.05  10 10                                             D D D
+      0.04 0.04
+      0.03 0.03                 CD CD = = 0.02484 0.02484 + + 0.0335 0.0335 CL CL 2 2 + + 0.0133(CL 0.0133(CL – – CLmin)2 CLmin)2
+                5 5
+      0.02 0.02                 SRef SRef = = 10 10 ft ft 2 2
+
+      0.01 0.01
+
+         0 0 0 0  0.2 0.2  0.4 0.4  0.6 0.6  0.8 0.8  1.0 1.0  1.2 1.2  1.4 1.4  1.6 1.6  1.8 1.8  2.0 2.0
+                                      CL CL                         Nicolai-04 Nicolai-04 06-18-09 06-18-09
+
+       Figure 4 Notional model aircraft total drag polar and L/D
+
+                                   9
+
+=== PAGE 10 ===
+VI ESTIMATING PERFORMANCE
+      Takeoff
+      The takeoff ground roll distance SG is the distance required to accelerate from
+V = 0 to a speed VTO, rotate to 0.8 CLmax and have L = W. The 0.8 CLmax is an accepted
+value to allow some margin for gusts, over rotation, maneuver, etc.
+      Assuming a W = 45 lb (12 lb model and 33 lb payload), altitude = 3000 feet
+(standard day) and a CLmax = 1.67 (from Figure 1) gives the following VTO
+                    VTO = [2 W/(S ρ 0.8 CLmax)]1⁄2 = 55.65 ft/sec = 38 mph
+The takeoff acceleration will vary during the ground roll and is given by the following
+expression (see discussion in Reference 2, Chapter 10)
+                    a = (g/W)[(T – D) - FC (W – L)]                 (7)
+                    where g = gravitational constant = 32.2 ft/sec2 and
+                    FC = coefficient of rolling friction = 0.03 (typical value for a
+                    Cessna 172 on an average runway).
+Note: A useful ground test is to measure the coefficient of rolling friction for your
+airplane. The testing is fairly simple using a fish scale to measure the rolling force for
+different loading conditions. The value for FC can increase dramatically if the landing
+gear is damaged, the wheels do not track straight or the take-off is in tall grass. The
+landing gear needs to be sturdy with large diameter wheels.
+A useful expression for the ground roll distance SG is given by the equation (from
+reference 2, page 10-7)
+                    SG = VTO2/(2 amean)                             (8)
+                    where amean = acceleration at 0.7 VTO
+      Using the notional model aircraft with the wing at 0o angle of incidence (α for
+minimum drag during the ground run) and data from Figures 1 and 4 gives
+             Ground roll CL = 0.7               (from Figure 1)
+             Ground roll CD = 0.0412            (from Figure 4)
+             CLTO = 1.34 @ α = 7°               (0.8 CLmax )
+
+                                        10
+
+=== PAGE 11 ===
+       The static thrust available is assumed to be 20 lb. This thrust will degrade with
+forward speed as shown on Figure 5. The data scatter represents measurements by
+different SAE Aero Design teams.
+             1.0 1.0 1.0
+
+          T T T T
+        TStatic TStatic TStatic TStatic
+
+             0.5 0.5 0.5
+
+               0 0 0
+                0 0 0      20 20 20   40 40 40    60 60 60   80 80 80  100 100 100
+                                        V V V (mph) (mph) (mph)          Nicolai-05 Nicolai-05 Nicolai-05 06-18-09 06-18-09 06-18-09
+
+              Figure 5 Thrust variation with forward speed for a fixed pitch prop
+       A static thrust of 20 lb gives an SG = 151 feet. It is useful to examine the different
+pieces of this ground roll distance. The mean acceleration is
+              acceleration @ 0.7 VTO = (32.2/45)[ 20(0.8) – 0.68 – 1.02] = 10.25 ft/sec2
+Notice that the ground roll drag (0.68 lb) and the rolling friction force (1.02 lb) are
+overwhelmed by the available thrust force. If the static thrust was reduced by 20% to 12
+lb then SG = 210 feet. Thus the critical ingredient to lifting a certain payload is having
+sufficient thrust to accelerate to VTO in less than 200 feet and having a large useable
+CLmax so that VTO is small. Having a headwind will reduce VTO which has a significant
+effect on SG due to the square of the VTO in the SG equation.
+       After the ground roll, the aircraft rotates to 0.8 CLmax = 1.34 and lifts off. Note that
+this rotation will take a certain distance (typical rotation time is 1/3 second) and is part of
+the 200 feet takeoff distance limit. After liftoff the model accelerates and climbs to a safe
+altitude where the α is reduced to ~ 0° (CL = 0.7) and the power reduced for a steady state
+L = W, T = D cruise.
+       Bottom line for the notional model in this white paper is a max payload of about
+33 lb for a no wind takeoff at 3000 feet standard day.
+
+                                         11
+
+=== PAGE 12 ===
+      Maximum Level Flight Speed
+      The maximum level flight speed occurs when T = D at L = W as shown on Figure
+6. For the notional model at L = W = 45 lb and 3,000 ft altitude the maximum speed is
+144 ft/sec or 98 mph where T = D = 6.6 lb.
+
+         15 15
+
+                                               Thrust Thrust
+
+         10 10
+    Force Force           Altitude Altitude = = 3,000 3,000 ft ft
+     (lb) (lb)            Weight Weight = = 45 45 lb lb
+
+          5 5
+                                                   Drag Drag
+
+                                                              Max Max Speed Speed
+
+          0 0
+            0 0        20 20        40 40       60 60        80 80       100 100
+                                       V V (mph) (mph)
+                                                                      Nicolai-06 Nicolai-06 06-18-09 06-18-09
+
+             Figure 6 Thrust available Vs required (drag)
+VII REFERENCES
+      1. Raymer, Daniel P, “Aircraft Design: A Conceptual Approach”, AIAA,
+         Reston, Va, 1992
+      2. Nicolai, Leland M., “Fundamentals of Aircraft Design”, METS Inc, 6520
+         Kingsland Ct, San Jose, Ca 95120, 1975 (Reference 6 is a rewrite of this
+         reference)
+      3. Hoerner, Sighard F., ”Fluid Dynamic Drag”, 148 Busteed Dr, Midland Park,
+         NJ, 1958
+      4. Abbot, Ira H. and Von Doenhoff, Albert E., “Theory of Wing Sections”,
+         Dover Publications, New York, NY, 1959
+      5. Selig, Michael, “Summary of Low Speed Airfoil Data: Volume 2”, SoarTech
+         Publications, 1996
+
+                                      12
+
+=== PAGE 13 ===
+6. Nicolai, Leland M. and Carichner, Grant, “Fundamentals of Aircraft and
+   Airship Design, Volume I, Aircraft Design”, AIAA, Reston, Va, 2010
+
+                                 13

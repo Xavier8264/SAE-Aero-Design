@@ -1,0 +1,1443 @@
+# ID: wood_handbook_ch10
+# SOURCE: https://www.fpl.fs.usda.gov/documnts/fplgtr/fplgtr282/chapter_10_fpl_gtr282.pdf
+# ORIGINAL: reference/raw/wood_handbook_ch10.pdf
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type pdf | 26 pages | ~33773 tokens
+# NOTE: Wood Handbook ch10 adhesives (bond performance: epoxy, PVA)
+# FLAG img: pages 2-4,6,15-20
+# FLAG lowtext: pages 24
+# TOC:
+#   Contents -> PDF page 1
+#   Bond Formation -> PDF page 1
+#     Wetting -> PDF page 2
+#     Solidification -> PDF page 2
+#   Surface Properties of Wood for Bonding -> PDF page 2
+#     Lumber Surfaces -> PDF page 3
+#     Veneer Surfaces -> PDF page 3
+#     Chemical Interference to Bonding -> PDF page 4
+#     Bonding of Wood Composite Products and Nonwood Materials -> PDF page 5
+#   Physical Properties of Wood forBonding -> PDF page 5
+#     Density and Porosity -> PDF page 5
+#     Moisture Content and Dimensional Changes -> PDF page 7
+#   Adhesives -> PDF page 7
+#     Composition -> PDF page 7
+#     Strength and Durability -> PDF page 8
+#     Selection -> PDF page 8
+#     Health, Safety, and Shelf-Life -> PDF page 12
+#   Bonding Process -> PDF page 13
+#     Moisture Content Control -> PDF page 13
+#     Surface Preparation -> PDF page 14
+#     Spreading of Adhesive -> PDF page 14
+#     Assembly and Pressing -> PDF page 14
+#     Post-Cure Conditioning -> PDF page 16
+#   Bonded Joints -> PDF page 16
+#     Edge-Grain Joints -> PDF page 16
+#     End-Grain Joints -> PDF page 16
+#     End-to-Edge-Grain Joints -> PDF page 17
+#     Construction Joints -> PDF page 17
+#   Testing and Performance -> PDF page 18
+#     Analytical, Chemical, and Mechanical Testing of Polymers -> PDF page 18
+#     Mechanical Testing of Bonded Assemblies -> PDF page 18
+#     Short- and Long-Term Performance -> PDF page 19
+#     Product Quality Assurance -> PDF page 21
+#     Heat Resistance of Adhesives -> PDF page 21
+#     No-Added-Formaldehyde and Bio-Based Adhesives -> PDF page 21
+#   Acknowledgment -> PDF page 21
+#   Recommended Reading -> PDF page 21
+#   References -> PDF page 21
+
+=== PAGE 1 ===
+                                                                                   CHAPTER 10
+
+Wood Adhesives
+
+Bond Formation and Performance
+
+Charles R. Frihart, Research Chemist
+Christopher G. Hunt, Research Chemist
+
+    Contents                                                A large portion of wood products made today are glued, or
+                                                            bonded, together. This is because bonding allows wood to
+    Bond Formation  10–1                                    be used in ways that would be impossible otherwise. We
+      Wetting  10–2                                         take wooden sheet materials, such as plywood, for granted,
+      Solidification  10–2                                  but they perform far better in some ways, and are far less
+    Surface Properties of Wood for Bonding  10–2            expensive, than solid wood alternatives. Large structural
+      Lumber Surfaces  10–3                                 pieces, such as the glulam skeletons in many buildings,
+      Veneer Surfaces  10–3                                 would be impractical without adhesives. Everyday items
+      Chemical Interference to Bonding  10–4                such as wooden chairs would be extremely difficult to
+      Bonding of Wood Composite Products and                build without adhesives. In short, bonding wood products
+      Nonwood Materials  10–5                               increases their value. This chapter is an introduction
+    Physical Properties of Wood for Bonding  10–5           to wood bonding. Our primary goal is to provide an
+                                                            understanding of what makes good bonds and some
+      Density and Porosity  10–5                            principles that allow the reader to predict bond performance.
+      Moisture Content and Dimensional Changes  10–7
+    Adhesives  10–7
+                                                            Bond Formation
+      Composition  10–7
+      Strength and Durability  10–8                         Adhesives transfer and distribute loads between pieces of
+      Selection  10–8                                       wood in a composite. This increases the strength, stiffness,
+      Health, Safety, and Shelf-Life  10–12                 and reliability of wood products. Another benefit of
+    Bonding Process  10–13                                  adhesives is that by adhering wood in crossing directions,
+                                                            such as plywood, the product has much lower swelling and
+      Moisture Content Control  10–13                       shrinkage with changes in humidity or moisture. A good
+      Surface Preparation  10–14                            bond is like a strong chain across the adhesive-bonded joint
+      Spreading of Adhesive  10–14                          (Fig. 10–1). The performance of a bonded joint depends
+      Assembly and Pressing  10–15                          on each link in the chain. If one is weak, the bond breaks.
+      Post-Cure Conditioning  10–16                         Therefore, it is important to understand the factors that
+    Bonded Joints  10–16                                    contribute to the strength or weakness of the individual
+      Edge-Grain Joints  10–16                              links (wood, adhesive, and interphase regions of wood
+      End-Grain Joints  10–16                               and adhesive), and how they are controlled during product
+      End-to-Edge-Grain Joints  10–17                       assembly.
+      Construction Joints  10–17                            Adhesion, or the hold an adhesive has on the wood,
+    Testing and Performance  10–18                          involves both mechanical and chemical factors. Because
+      Analytical, Chemical, and Mechanical Testing of       wood is porous, the surface at the microscopic level is
+      Polymers  10–18                                       very rough. This allows adhesives to form mechanical
+      Mechanical Testing of Bonded Assemblies  10–18        interlocks, where the adhesive wraps around cut surfaces
+      Short- and Long-Term Performance  10–19               and surrounds surface debris and damaged fibers. Ideally,
+      Product Quality Assurance  10–21                      the adhesive penetrates to sound wood, typically two to six
+      Heat Resistance of Adhesives  10–21                   cells deep. This penetration of adhesive into the cell wall
+      No-Added-Formaldehyde and Bio-Based                   microstructure increases the mechanical interlocking and the
+      Adhesives  10–21                                      surface area for adhesive contact with the wood. With many
+                                                            adhesives, the most durable, water-resistant bonds develop
+    Acknowledgment  10–21                                   when the adhesive not only flows deeply into cell cavities
+    Recommended Reading  10–21                              near the surface, but also enters, or infiltrates, the adjacent
+    References  10–22                                       cell walls. The standard for excellent bonds is that the wood
+
+                                                                                                               10–1
+
+=== PAGE 2 | img ===
+                                                                      General Technical Report FPL–GTR–282
+                                                            and introduce stress concentrations when the adhesive has
+                                                            cured. In addition, different characteristics of wood (such as
+                                                            grain angle, natural defects, and extractives) lead to widely
+                                                            different flow characteristics, wetting ability, and roughness.
+                                                            (Surface wetting is discussed in more detail in the section
+                                                            on Chemical Interference to Bonding, p. 10–4.) In addition
+                                                            to wetting, or completely covering these different surfaces,
+                                                            adhesives must be fluid enough and low enough surface
+                                                            energy to flow into the microscopic holes, or capillary
+                                                            structure of wood. Pressure enhances wetting by forcing
+                                                            liquid adhesive to flow over the surfaces, displace air
+                                                            blockages, and penetrate to the sound wood. With wood
+                                                            surfaces not being exactly parallel to the grain, cell lumens
+                                                            are open on the surface, effectively providing tunnels
+                                                            leading below the wood surface for adhesive to flow deeper
+        Link 1—Bulk adhesive                                into the wood.
+        Links 2 & 3—Adhesive interphase
+        Links 4 & 5—Adhesive-wood interface                 Solidification
+        Links 6 & 7—Wood interphase
+        Links 8 & 9—Bulk wood                               The adhesive bond forms once the adhesive solidifies, but
+                                                            full strength may take from hours to days to develop. The
+     Figure 10–1. Imaginary links of adhesive bond          applied adhesive changes from liquid to solid by one or
+     between two pieces of wood. Although glueline          more of three mechanisms: (a) loss of solvent (including
+     and bondline are often used interchangeably,           water) from adhesive through evaporation and diffusion into
+     we recommend glueline for the pure adhesive            the wood, (b) cooling of a molten adhesive, or (c) chemical
+     phase (links 1–3) and bondline for the entire          polymerization into cross-linked structures that resist
+     wood-adhesive interaction zone (zones 1–7).
+     (Schematic adapted from Marra (1980).)                 softening when exposed to heat. Since water is a common
+                                                            carrier for most wood adhesives, loss of water and chemical
+breaks well separated from the adhesive joint and that the  polymerization often occur simultaneously.
+bond strength is equal to or greater than the strength of solid
+wood.                                                       Surface Properties of Wood for
+Attractive forces between molecules of adhesive and wood    Bonding
+contribute greatly to adhesion. Although covalent bonds—    Because adhesives bond by surface attachment, the physical
+chemical bonds between the adhesive and wood—seem           and chemical conditions of the wood’s surface are extremely
+plausible with some adhesives, no evidence exists that they  important for bond performance. The ideal wood surface is
+contribute to the strength of adhesive bonds. However,      smooth, flat, and free of machine marks and other surface
+intermolecular attractive forces, such as Van der Waal’s    irregularities, including planer skips, chatter, and crushed,
+forces, dipole–dipole forces, and hydrogen bonding, occur   torn, or chipped grain. The cells on the surface should
+so frequently that they must be very important for bond     be cleanly cut, not crushed or burnished. Oils, from the
+strength, especially given the high contact area of the     machining or the wood, dirt, wood extractives, and other
+adhesive with the wood. With some wood surfaces, such       debris that could reduce the chemical forces between wood
+as teak, wood extractives can interfere with direct adhesive  and adhesive (a weak boundary layer) (Fig. 10–1, links 4
+contact, leading to a chemically weak boundary effect and   and 5) can lead to premature wood failure.
+poor bond strength.
+                                                            Both mechanical and chemical properties of a wood
+Wetting                                                     surface influence the quality of adhesive bonds. Wood
+For maximum adhesive bond strength, the liquid adhesive     whose surface is highly fractured or crushed cannot form
+must “wet,” or completely cover the wood surface at the     an ideal bond even if the adhesive forms a strong bond
+molecular scale. Molecules of adhesive must come into       with the surface (Fig. 10–1, links 4 and 5). The weak wood
+direct contact with molecules of wood to provide the best   underneath the surface is a weak link in the chain
+mechanical interlock and intermolecular attraction between  (Fig. 10–1, links 6 and 7) and a location of failure in
+adhesive and wood. Wood surfaces may appear to be           the bonded assembly. In other cases, poor bond strength
+smooth and flat, but under a microscope, the surface is full  may be a result of the chemical properties of the surface.
+of ridges, valleys, and crevices littered with loose fibers and  Sometimes natural extractives, over drying, or chemicals
+other debris. Such surface conditions cause air pockets and  added to modify the wood change the surface chemistry
+blockages that prevent complete wetting by the adhesive     enough to reduce bond performance. Physical damage
+
+10–2
+
+=== PAGE 3 | img ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+                                                             wetted, crushed cells spring back close to their original
+                                                             shape. Therefore, if the wetted area is much rougher than
+                                                             the dry area, the machining has crushed the surface. A
+                                                             weak joint will result if the adhesive does not completely
+                                                             penetrate and repair crushed cells to restore their strength.
+                                                             To achieve higher production rates and possibly because of
+                                                             other considerations, sometimes precision sawing or even
+                                                             sanding are used. Well-maintained, properly operated saws
+                                                             regularly make surfaces good enough for even structural
+                                                             bonds (the highest level of performance). Although sanded
+                                                             surfaces do not produce optimum strength, sanding is
+                                                             sometimes used to prepare surfaces of solid wood for
+                                                             bonding. Because sanding is the only viable method for
+Figure 10–2. Cross sections of (A) southern pine bonded      trimming the thickness of panels to tolerance, gluing panel
+joint, (B) commercially planed surface, and (C) the same     faces often involves gluing to sanded surfaces. Because
+board after sanding with fresh 36-grit sandpaper. The brown  panel surfaces often have crushed cells and/or chemicals on
+band in A is phenol-formaldehyde adhesive, which contains    their surface that interfere with wetting, sanded panels often
+water, alkali, and phenol, all of which soften wood. The     glue more easily than unsanded panels.
+clamping pressure was sufficient to crush the cells near
+the glueline, but after curing, the adhesive reinforced this  Veneer Surfaces
+damaged zone, producing a strong, durable bond.
+B shows a surface ideal for bonding. C shows the impact      The desired properties of wood veneer are similar to those
+of sanding with new 36-grit sandpaper: the red arrow         of lumber, but manufacturing processes, including cutting,
+highlights the many layers of surface cells crushed by       drying, and laminating into plywood or laminated veneer
+the sandpaper. Cell damage below the red arrow is from
+specimen preparation, not sanding. Each image is 0.26 mm     lumber (LVL), can drastically change physical and chemical
+(0.01 in.) wide. A: transmission image, B, C fluorescence    properties of veneer surfaces. Special attention to these
+images.                                                      properties is required to ensure good bond strength.
+                                                             The most common veneer is rotary cut, produced by holding
+and chemical contamination of the wood surface interfere     the ends of a log and rotating it against a knife. This results
+with essential wetting, flow, and penetration of adhesive.   in continuous sheets of flat-grain veneer. The log is soaked
+Sometimes chemical contamination reduces bond strength       in warm water to soften the wood and make peeling easier.
+by preventing proper cure of the adhesive.                   As the knife peels veneer from the log, it forces the veneer
+Lumber Surfaces                                              away from the log at a sharp angle, fracturing (checking) the
+                                                             veneer. This checked side is called the loose side, and the
+Surfacing or resurfacing the wood within 24 h before         opposite side without checking is called the tight side. The
+bonding provides a clean, easily wettable surface. In some   direction and depth of checks strongly influence the shear
+situations, bonding within minutes of surface preparation    strength of plywood in standard tests.
+gives noticeably better results because of the better surface
+wettability (see Chemical Interference to Bonding, p. 10–4).  Sliced veneer is produced in long strips by moving a
+Surfacing just before bonding also minimizes the time for    section of a log, called a flitch, against a knife. As in rotary
+wood to change moisture content, and thus change size and    cutting, the knife forces the veneer away from the flitch
+possibly warp, cup, or twist, between the surfacing and      at a sharp angle, causing fine checking of the veneer. For
+bonding steps. Parallel and flat surfaces allow the adhesive  book-matched face veneers, where grain patterns of adjacent
+to flow freely and form a uniformly thin layer that is       veneers are near mirror images, half the veneer leaves will
+essential to optimal adhesive performance.                   have their loose face exposed so the veneer must be cut as
+                                                             tightly as possible. Generally, hardwood face veneers are
+Experience and testing have proven that a smooth surface     sliced to reveal the most attractive grain patterns.
+cleanly cut with a knife, such as with a jointer or planer, is
+best for bonding (Fig. 10–2). Feeding a jointer too quickly,  Sawn veneer is produced in long narrow strips from flitches
+however, results in crushed cells on the surface and a shiny  that have been selected and sawn for attractive grain
+appearance called glazing. Not only are these crushed cells  patterns. The two sides of sawn veneer are free from knife
+weaker, they also inhibit adhesive wetting and penetration.  checks, so either surface may be bonded with satisfactory
+Crushed cells on the surface can be revealed by wiping a     results.
+very wet rag over a surface, waiting for a minute or more,   Veneer is dried soon after cutting, using continuous, high-
+removing any remaining water with a dry paper towel, and     temperature dryers. Drying temperatures range from 170
+comparing the roughness of the wet and dry surfaces. When    to 230 °C (330 to 446 °F) for short periods. Drying to very
+                                                             low moisture levels at very high temperatures or at moderate
+
+                                                                                                                 10–3
+
+=== PAGE 4 | img ===
+                                                                       General Technical Report FPL–GTR–282
+temperatures for prolonged periods inactivates the veneer
+surfaces, causing poor wetting of veneer and poor bonding.
+Residues deposited on veneer surfaces from incomplete
+combustion of the fuel heating the dryer, such as soot, can
+also cause serious adhesion problems.
+Veneer selected for its attractive appearance, or for use in
+sanded grades of plywood, should be uniform in thickness,
+smooth, and flat. Deep checks, knots, holes, decay, and
+face grain all can contribute to the grade. For lower grade  Figure 10–3. A simple water drop test shows differences in
+plywood, defect standards are not as strict. For example,    wettability of yellow birch veneer surface. Three drops were
+loosely cut veneer with deep checks and large defects is     applied to surface simultaneously and then photographed
+suitable for structural plywood. Lower grade veneer often    after 30 s. The left drop retained a large contact angle on an
+                                                             aged and unsanded surface; the center drop had a smaller
+requires more adhesive than does tightly cut veneer.         contact angle and improved wettability after the surface
+                                                             was renewed by two passes with 320-grit sandpaper to cut
+Chemical Interference to Bonding                             through the deactivated surface; the right drop showed a
+Chemical interference that reduces the bondability of wood   small contact angle and good wettability after four passes
+                                                             with the sandpaper.
+is more complicated and harder to detect than mechanical
+weakening of wood surfaces. This interference can be from
+natural causes (migration of extractives to the surface),    surface molecules to expose less polar portions, and
+inadvertent wood alteration (overdrying of the wood          by oxidizing or pyrolyzing (starting to burn) the wood.
+surface), or intentional alteration (wood modification). A   Airborne chemical contaminants can also inactivate a wood
+simple water test can reveal potential surface inactivation,  surface.
+or problems in wetting and penetration. A drop of water or   To reduce decay in service, wood is treated with a
+waterborne adhesive is placed in an area on the earlywood    variety of preservatives, and these treatments may inhibit
+of a flat-grain surface that does not have checks or splits. A  adhesive cure and/or decrease the ability of the adhesive
+surface with good wettability and penetrability will absorb  to wet the wood. Poor wetting reduces the contact area,
+the drop within 20 s. If the drop spreads out but some water  and thus the bond strength, between adhesive and wood.
+remains on the surface after 40 s, then the surface has good  By understanding the properties of these treated woods,
+wettability but poor penetration and may be difficult to     adhesive companies have been able to alter the adhesives
+bond. If after 40 s the water drop retains much of its original  and bonding process to provide sufficiently durable
+shape with little spreading, then bonding problems from      products.
+surface inactivation (poor wettability and penetrability) are  The most common fire-retarding chemicals used for wood
+very likely. Figure 10–3 shows how the inactivated surface   are inorganic salts based on phosphorous, nitrogen, and
+of veneer can be restored by sanding to allow the droplet to  boron. These acid-based salts release acid at elevated
+spread out across the surface.                               temperatures to decrease flammable volatiles and increase
+Naturally occurring extractives on wood surfaces contribute  char in wood, thereby effectively reducing flame spread.
+to surface inactivation through both physical and chemical   The elevated temperature and moisture conditions of hot-
+means. Most, but not all, wood adhesives are waterborne;     press curing can release some of these acids, inhibiting the
+therefore, they are less likely to wet and penetrate         cure of alkaline phenolic adhesives. Alkaline resins can still
+extractive-covered surfaces. Particularly troublesome        make durable bonds if the wood is pretreated by priming
+extractives are pitch, especially in the southern pines and  with certain alkaline aqueous solutions or by selecting
+Douglas-fir; oil, such as in teak; and waxes in composites   appropriate adhesives.
+and straw. When subjected to high temperatures during        Chemical modification of wood reduces moisture-related
+processing, extractives migrate to the surface, where        dimensional changes and slows decay. The commercial
+they concentrate and physically block adhesive contact       modified wood available today is either thermally treated,
+with wood. Furthermore, pitchy and oily extractives are      acetylated, or furfurylated. The bondability of modified
+hydrophobic (they repel water). The acidity of extractives   wood is not well studied except in the case of acetylated
+of some oak species and tropical hardwoods can inhibit       wood. These modifications alter the basic wood properties
+the chemical cure of some adhesives. In contrast, alkaline   and consequentially alter the ability of adhesives to interact
+extractives can retard normal polymerization of an           with the wood. A major impact is to reduce water absorption
+acidic adhesive, such as urea-formaldehyde, which can        by reducing the polarity of the wood. Thus, for bonding,
+compromise the integrity of the adhesive film and bond.      adhesive selection may depend more on the modification
+Overdrying and overheating interfere with adhesion by        method than the original species. We recommend consulting
+causing extractives to diffuse to the surface, by reorienting  the wood supplier for advice on bonding, and practicing
+                                                             with the wood, before committing to a particular approach.
+
+10–4
+
+=== PAGE 5 ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+Bonding of Wood Composite Products and                       that are effectively bonded to wood can be strong and
+Nonwood Materials                                            cost-effective structural composites. Traditional waterborne
+The surfaces of wood composites such as plywood,             wood adhesives do not bond well to plastics because they
+strandboard, particleboard, fiberboard, and hardboard        are polar and hydrophilic. Epoxies, polyurethanes, and
+generally have poor wettability relative to that of freshly  isocyanate-based adhesives can bond many plastics to
+cut wood surfaces. Surfaces of these materials may appear    wood. Adhesion to plastic surfaces occurs primarily by
+glazed or shiny, indicating that they have been inactivated.  physical intermolecular attraction forces and, in some cases,
+During hot pressing, resinous extractives and added waxes    hydrogen bonding. Abrading and chemical etching of plastic
+migrate to the surface, adhesive on the outer surfaces of    surfaces increase adhesion by providing some mechanical
+particles and fibers cures, and caul release agents remain on  interlocking. Coupling agents have molecules that can
+the surfaces—all of which reduce wetting by waterborne       react with both the adhesive and the surface, making them
+adhesives. Surfaces of composite products typically are      particularly useful for bridging dissimilar materials. Plasma
+more difficult to bond than surfaces of solid wood products.  or flame treatment of plastic surfaces can clean and activate
+Lightly sanding with 320-grit sandpaper to cut through the   surfaces for enhanced adhesion. Grafting of monomers onto
+inactivated surface often improves adhesion to composite     cleaned plastic surfaces by means of plasma polymerization
+panel products having poor wettability (Fig. 10–3). Too      can create a polar surface that is more compatible with
+much sanding can create an uneven surface and perhaps        adhesives.
+produce too much loose-fiber debris that can interfere with
+adhesion. Furthermore, the internal strength of composites   Physical Properties of Wood for
+often limits the strength of adhesive bonds.                 Bonding
+Products incorporating wood composites bonded to metal or
+plastic are becoming more common for higher performance,     Density and Porosity
+but they present special challenges. Metal foils and plastic  Surface properties are not the only factors to control
+films laminated to wood composites do not require high       bonding in wood. Bond quality is also affected by the
+cohesive strength for indoor applications, but the adhesives  bulk physical properties of wood, particularly density,
+still must be compatible with both wood and nonwood          porosity, moisture content, strength, and swelling–shrinking
+surfaces. If a structural bond is required between wood and  properties.
+metal or plastic, then only epoxy, polyurethane, and other   Solid wood cell walls generally have a density of
+isocyanate-based adhesives may be sufficiently compatible.   1,500 kg m–3 (94 lb ft–3), regardless of the wood species.
+Even then, good adhesion often requires cleaning of the      However, the bulk density of wood varies between species
+nonwood surfaces to remove contaminants. Application of      because of the amount of void volume. Wood density
+coupling agents, primers, or other special treatments may be  changes widely between wood species. Within a piece of
+required to chemically activate the surfaces.                wood, there are often large differences in density between
+The difficulty with bonding metals to wood is often          earlywood and latewood. Many other factors also result in
+metal surface inactivation. The surface energy of clean      density variation, even within a single tree. High-density
+metals is higher than that of wood, but with exposure to     wood has thick walls and small lumina (the hollow centers
+air, metals quickly adsorb contaminants and form metal       of cells), whereas low-density wood has thin walls and large
+oxides to produce a low-energy, weak boundary layer at       lumina. Thus, higher density wood contains more material
+the surface. A series of cleaning procedures is required to  per unit of volume and can carry more load.
+regenerate the high-energy surface and create microscale     Bonded wood assemblies typically increase in strength with
+roughness necessary for structural bonding. Steps in surface  wood density up to a range of 700 to 800 kg m–3 (44 to 50
+preparation may include abrasion by sandblasting, cleaning   lb ft–3) at a moisture content 12%. Below this density level,
+with liquid or vapor organic solvents, alkaline washing,     adhesion is usually easy, and the strength of the wood limits
+chemical etching, and/or priming with adhesive solutions or  the assembly strength. Above this density level, high-
+coupling agents.                                             strength joints with high wood failure are harder to produce
+Plastic surfaces are difficult to bond because they are      consistently. Wood failure refers to the percentage of the
+generally low energy and hydrophobic. Plastics are organic   total failure area that is wood, rather than adhesive failure.
+polymers that may be either thermoplastic (soften on         High wood failure is preferred, especially in U.S. standards,
+heating) or thermosetting (cross-linked and resist softening  because there is no ambiguity about whether a bond is
+on heating). Thermoplastics generally are not as strong      well formed. Counterintuitively, flexible adhesives such
+and stiff as wood, but the properties of thermoset materials  as polyurethane can sometimes produce bonds with higher
+approximate and even exceed the mechanical properties of     strength due to adhesive deformation, but lower wood
+wood. Reinforcing plastics with fibers, such as fiberglass,  failure due to a less stressed adhesive–wood interphase.
+further increase strength and stiffness. Reinforced plastics
+
+                                                                                                                 10–5
+
+=== PAGE 6 | img ===
+                                                                       General Technical Report FPL–GTR–282
+
+Figure 10–4. Cross sections of three different species showing openness of cellular structure. Bonding from any of the sides
+becomes progressively more difficult with progress through the series basswood, red maple, hickory. Images approximately
+850 μm (0.033 in.) across, stained cross sections in transmission.
+
+High-density woods are difficult to bond for several reasons.  paths for adhesive flow, so overpenetration generally is not
+Because of their thicker cell walls and smaller diameter     a problem with a properly formulated adhesive, assuming it
+lumens, adhesives do not easily penetrate the wood void      is applied correctly.
+spaces, limiting mechanical interlock. Much greater bonding  The porosity and resulting adhesive flow into wood vary
+pressure is required to compress the stronger, stiffer,      greatly, both between hardwoods and softwoods and
+high-density wood to provide close contact between wood      within each of these groups. Figure 10–2A shows adhesive
+surfaces and adhesive. High-density woods are strong and     penetration in a softwood, southern pine. Softwoods contain
+allow high loads to be placed upon the bondline. Finally,    mostly longitudinal tracheid lumens connected by bordered
+high-density woods tend to swell and shrink more with        pits. Pits are the small openings between cells that permit
+changes in moisture content than do low-density woods.       lateral transfer of fluids in living trees. Adhesives can use
+This puts far higher loads on the bondline simply from       the network of pits to penetrate deeply, even in tangential
+moisture changes and also increases the problem of boards    and radial directions.
+changing shape between surface preparation and bond cure.
+                                                             Figure 10–4 shows the large differences in lumen volume
+Wood density and anatomy control wood porosity, which        and distribution of volume across the annual ring in three
+usually affects penetration and bond performance. To attain  hardwood species. In hardwoods, the thin-walled, relatively
+the highest joint strength, the adhesive must penetrate and  large longitudinal vessels have porous end walls, so
+interlock several cells deep into sound, undamaged cell      adhesives can penetrate deeply along the end grain. Where
+structure. In wood, porosity varies according to the grain   two vessels are in lateral contact, numerous inter-vessel
+direction. End-grain surfaces (butt joints) are many times   pitting can occur, which allows for lateral flow between
+more porous than radial or tangential surfaces. Adhesives    vessels. The remaining thick-walled fibers have relatively
+penetrate so easily into the open lumens perpendicular to    few pits for lateral transfer of adhesive. Some species,
+the grain that overpenetration often occurs when gluing      such as red oaks, have large numbers of radially oriented
+end-grain. Overpenetration occurs when voids form in the     rays that, along with easy flow through vessels, are prone
+glueline because too much adhesive has moved into the        to overpenetration. Adhesives for large customers may be
+wood structure. This overpenetration and the high strength   formulated specifically for hardwoods or softwoods, and
+of wood in the longitudinal direction are primary reasons    for specific species within the groups, and have adjustable
+why it is so difficult to form strong, load-bearing bonds in  properties for specific manufacturing situations.
+butt joints. Across the grain, there are fewer and smaller
+
+10–6
+
+=== PAGE 7 ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+Moisture Content and Dimensional                             in use today, although they have been largely replaced by
+Changes                                                      petrochemical- and natural-gas-based systems. The first
+Water occurs naturally in living trees and affects wood      wood adhesives based on synthetic polymers were produced
+properties and adhesive bonding strength dramatically.       commercially during the 1930s. Synthetic polymers can be
+Depending on extractive levels and morphology, wood          made stronger, more rigid, and more durable than wood,
+cell walls typically swell while taking up 25% to 30% of     and generally have much greater water resistance than
+their dry weight in water. As wood dries below 25% to        traditional adhesives from natural polymers. However,
+30% moisture, it shrinks and becomes stiffer. At higher      recent advances in biomass-based adhesives have made
+moisture levels, excess water simply fills lumens and makes  them more competitive with fossil fuel-based adhesives
+wood heavier. Wood in service will shrink and swell as       Whether a synthetic adhesive is thermoplastic or
+it loses and takes on moisture from the air; under typical   thermosetting has a major influence on its performance
+indoor conditions, wood contains 5% to 12% moisture. The     in service. Thermoplastics are long-chain polymers that
+shrinking and swelling (dimensional changes) are different   soften and flow on heating, and then harden again upon
+for the three principal directions in wood. Longitudinal     cooling or drying. They generally have less resistance to
+dimensional change (along the grain, or up and down in the   heat, moisture, and long-term loading than do thermosetting
+standing tree) is the least and usually amounts to less than  polymers. Common thermoplastic adhesives for wood
+0.2% between fiber saturation and oven dry in normal wood.   include uncross-linked poly(vinyl acetate) emulsions,
+Tangential dimensional change is the greatest, typically     elastomerics, contacts, and hot-melts. Thermosetting
+6% to 12%, whereas radial dimensional change is typically    polymers make excellent structural adhesives because
+about half the tangential movement. Wood with low density    almost all undergo irreversible chemical change when cured,
+tends to have the smallest dimensional change. Compression   and on reheating, they do not flow again. These cross-linked
+wood (softwoods), tension wood (hardwoods), and juvenile     polymers can have high strength and resistance to moisture
+wood (the first few rings in the center of a tree), are prone to  and other chemicals, and are rigid enough to support large,
+more longitudinal shrinkage, resulting in more warp, bow,    long-term loads without deforming. Phenol-formaldehyde,
+and twist of the wood. Chapter 4 discusses wood moisture     resorcinol-formaldehyde, melamine-formaldehyde, urea-
+relations in detail.                                         formaldehyde, isocyanate, polyurethane, and epoxy
+Wood dimensional changes that accompany variations           adhesives are examples of thermosetting polymers.
+in moisture content have broad-ranging and important         As applied, adhesives usually contain a mixture of several
+consequences on the performance of bonded joints. As the     chemically active and inert materials, each added for
+wood in bonded assemblies swells and shrinks, internal       specific properties such as working characteristics, shelf
+stresses develop that can damage the adhesive bond and/      life, strength properties, or durability. Solvents dissolve or
+or the wood itself. Damage may occur when moisture           disperse adhesive polymers, act as carriers of polymer and
+content changes in adjacent pieces of wood that have         additives, aid in wetting, and control flow and penetration
+different swelling–shrinkage coefficients. This can arise    of the adhesive. Water is the carrier for most wood
+with different species; variation in heartwood, sapwood, or  adhesives, primarily because water readily absorbs into
+juvenile wood content; or grain type, such as radial grain   wood, is inexpensive, and does not have adverse effects
+bonded to tangential, or end grain bonded to cross grain.    on the environment. Organic solvents are still used with
+Large stresses can occur when different parts of an assembly  elastomeric and contact adhesives, although waterborne
+have different moisture contents. Dimensional changes        versions are becoming more prevalent in the marketplace.
+associated with water are a common cause of adhesive         Reinforcing fibers, mostly inert organics, can enhance
+failure. Moisture-driven stresses can be minimized by        mechanical properties of the adhesive film, especially
+bonding pieces of wood with compatible grain directions,     toughness, impact resistance, and shrinkage. Fillers of both
+low shrinkage coefficients, and like species of similar      organic and inorganic origins contribute to rheological
+moisture content, and by bonding at the moisture content     control of the fluid system, particularly in reducing the
+expected during service.                                     spread and penetration of the adhesive into wood. Extenders
+                                                             are like fillers, in that they control flow and working
+Adhesives                                                    characteristics, but are different in that they do not reduce
+                                                             bond strength.
+Composition                                                  Certain chemicals are added to plasticize adhesive polymers,
+During the 20th century, wood adhesives shifted from         enhance tackiness, improve heat resistance, or lower costs.
+natural to synthetic organic polymers. A polymer is a large  Plasticizers, such as dibutyl phthalate, are used to soften
+molecule constructed of many small repeated units. Natural   the brittle vinyl acetate homopolymer in poly(vinyl acetate)
+polysaccharide and protein polymers in blood, hide, milk,    emulsion adhesives. This is necessary to facilitate adhesive
+soybean, starch, dextrin, and other biomass have been        spreading and formation of a flexible adhesive film from
+used as adhesives for centuries. These polymers are still    the emulsion at and below room temperature. Phenolic
+
+                                                                                                                10–7
+
+=== PAGE 8 ===
+                                                                       General Technical Report FPL–GTR–282
+polymers are used as tackifiers and adhesion promoters       exposure to water, although some do not withstand long-
+in neoprene and nitrile rubber contact adhesives. Reactive   term saturation, hence their limited exterior classification.
+polymeric fortifiers, such as melamine-formaldehyde, can     Another semi-structural adhesive application is the nailed–
+be substituted into urea-formaldehyde adhesives to improve   glued assembly where failure of the bond would not cause
+resistance to moisture and heat. Adding some phenol-         serious loss of structural integrity because the load would be
+formaldehyde to resorcinol-formaldehyde adhesives reduces    carried by mechanical fasteners.
+adhesive costs, without sacrificing adhesive strength and    Nonstructural adhesives typically support the dead weight
+durability.                                                  of the material being bonded and can equal the strength and
+Catalysts are chemicals used to accelerate the rate of       rigidity of wood in dry conditions. Nonstructural adhesives
+chemical reaction of polymeric components. Acids,            often lose strength and sometimes stiffness when exposed to
+bases, salts, peroxides, and sulfur compounds are a few      water or high humidity. Two major markets for nonstructural
+examples of catalysts. Catalysts do not become a part of     adhesives are furniture and cabinet assembly.
+the final polymer; they simply increase the rate of reaction.  Elastomeric construction adhesives are categorized as
+Hardeners are reactive components that do become a part of   nonstructural but are normally used for field assembly of
+the final polymer. Examples are an amine hardener added to   panelized floor and wall systems in light-frame construction.
+epoxy, and formaldehyde added to resorcinol—both produce     These adhesive joints are much stiffer than mechanically
+cross-linking reactions to solidify the adhesive. For curing  fastened joints, resulting in stiffer panels. In addition to the
+urea-formaldehyde and melamine-formaldehyde adhesives,       adhesive, mechanical fasteners are used to carry the load in
+what are often called hardeners are actually catalysts,      case of adhesive failure.
+because they speed up cure the adhesive but do not become
+part of the polymer. Other chemicals, such as antioxidants,  Some adhesives could be easily included in more than
+acid scavengers, preservatives, wetting agents, defoamers,   one category because they can be formulated for a broad
+or colorants, may be added to control or eliminate some      range of applications. Isocyanate and polyurethane
+of the undesirable characteristics of certain adhesive       adhesives are examples. Polymeric methylene diphenyl
+formulations.                                                diisocyanate (pMDI) with a low molecular weight develops
+                                                             highly durable bonds in structural strandboard, even
+Strength and Durability                                      though strandboard products deteriorate from swelling
+In building construction, adhesives that hold up the         and shrinkage stresses. One-part polyurethane adhesives
+building during its life are considered structural. These    provide durable adhesive films, but as molecular weight
+adhesives generally are stronger and stiffer than the wood   increases, adhesion to porous wood generally decreases
+that they bond. Structural bonds are critical because bond   and bonds become increasingly susceptible to deterioration
+failure could result in serious damage to the structure or   from swelling and shrinkage stresses. Soybean-based
+its occupants. Examples of structural applications include   adhesives have limited wet strength on their own, but cross-
+glue-laminated beams, prefabricated I-joists, laminated      linking agents are added to increase water resistance for
+veneer lumber, cross-laminated timber, mass plywood, and     nonstructural uses.
+stressed-skin panels. Structural adhesives that maintain
+their strength and rigidity under the most severe cycles of  Selection
+water saturation and drying are considered fully exterior    Many factors need to be considered when selecting the best
+adhesives. Adhesives that lose strength faster than wood     adhesive for a particular application. The adhesive must be
+under severe conditions, particularly water exposure,        applied, wet the surface, penetrate into the wood, cure, and
+are considered interior adhesives. Between exterior and      maintain strength for sufficient time under different loads
+interior adhesives are the intermediate adhesives, which     and environmental conditions. Table 10–1 describes the
+maintain strength and rigidity in short-term water soaking,  typical form, properties, preparation, and uses of common
+but deteriorate faster than wood during long-term exposure   adhesive families. Manufacturers and adhesive suppliers
+to water and heat. Unfortunately, adhesives that are the     should completely review the product, its intended service
+strongest, most rigid, and most resistant to deterioration in  environment, and all production processes and equipment
+service are typically the least tolerant of wide variations  before choosing an appropriate adhesive. Whatever the
+in wood surface condition, wood moisture content, and        approach to adhesive selection might be, the following
+assembly conditions, including pressures, temperatures, and  points are important.
+curing conditions.                                           Strength—The amount of load the adhesive is required to
+Semi-structural adhesives impart strength and stiffness to an  carry must be considered.
+adhesive-bonded assembly, and in some instances, they may    Durability—The kind of environment the bond will be
+be as strong and rigid as wood. However, semi-structural     exposed to (liquid water, humidity, heat, cold, chemicals,
+adhesives generally do not withstand long-term static        light, loading level) and the length of exposure will
+loading without deformation. They are capable of short-term  determine durability.
+
+10–8
+
+=== PAGE 9 ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+Table 10–1. Working and strength properties of adhesives, with typical uses
+                                                          Preparation and
+Type              Typical user   Form and color           application             Strength properties    Typical usesa
+Hot melt          Woodworker, Solid blocks, pellets,      Solid form melted for   Develops strength      Edge-banding of panels;
+                  industrial     ribbons, rods, or films;  spreading; bond formed quickly on cooling;    plastic lamination;
+                                 solvent-free; white      on solidification;      lower strength than    patching; film and paper
+                                 to tan; near colorless   requires special        conventional wood      overlays; furniture
+                                 bondline                 application equipment   adhesives; moderate    assembly; general
+                                                          for controlling melt and resistance to moisture; purpose home and shop
+                                                          flow                    gap-filling with
+                                                                                  minimal penetration
+Isocyanate [Iso],  Woodworker, Liquid containing          Adhesive applied        High dry and wet       OSB, particleboard,
+[pMDI]            industrial     isomers and oligomers    directly by spray or    strength; very resistant fiberboards, woodworker
+                                 of methylene diphenyl    spread; reactive with   to water and damp
+                                 diisocyanate; light      water, producing CO2    atmosphere; can
+                                 brown liquid and clear   gas (foaming), excellent reduce moisture
+                                 bondline                 spreading over surfaces, swelling of wood,
+                                                          cured with heat under   adheres to metals and
+                                                          pressure in panel       plastics
+                                                          products
+Poly(vinyl        Woodworker, Liquid ready to use;        Liquid applied          High dry strength;     Furniture; flush doors;
+acetate)emulsion  industrial     often polymerized        directly; cures at      low resistance to      plastic laminates;
+[PVA, PVAc]                      with other polymers;     room temperatures       moisture and elevated  panelized floor and wall
+                                 white to tan to yellow;                          temperatures; joints   systems in manufactured
+                                 colorless bondline                               yield under continued  housing; general purpose
+                                                                                  stress                 in home and shop; also
+                                                                                                         known as “white glue”
+Cross-linkable    Woodworker, Liquid, similar to          Liquid emulsion mixed   High dry strength;     Interior and exterior
+poly(vinyl        industrial     poly(vinyl acetate)      with catalyst; cure at  improved resistance    doors; molding and
+acetate) emulsion                emulsions but includes   room temperature or at  to moisture and        architectural woodwork;
+[PVAx]                           copolymers capable       elevated temperature    elevated temperatures, cellulosic overlays
+                                 of cross linking with a  in hot press or radio-  particularly long-term
+                                 separate catalyst; white  frequency press        performance in moist
+                                 to tan with colorless                            environment
+                                 bondline
+Polyurethane      Woodworker, Low-viscosity liquid to     Adhesive applied        High dry and wet       General purpose home
+[PU]              industrial     high-viscosity mastic;   directly to one surface,  strength; resistant  and shop; construction
+                                 supplied as one part     preferably to water-    to water and           adhesive for panelized
+                                 (1K) or two-part (2K)    misted surface; reactive damp atmosphere;      floor and wall systems;
+                                 systems, color varies    with moisture on        limited resistance     laminating plywood to
+                                 from clear to brown;     surface and in air; cures to prolonged and     metal and plastic sheet
+                                 colorless bondline       at room temperature     repeated wetting and   materials; specialty
+                                                                                  drying; gap-filling,   laminates; installation of
+                                                                                  widely used for        panels, LVL and glulam
+                                                                                  structural applications  in Europe, and CLT
+                                                                                  in Europe              assembly
+Epoxy             Woodworker, Liquid resin and            Resin and hardener      High dry to wood,      Repair of laminated
+                  historical,    hardener supplied as     mixed by user; reactive  metal, glass, and     beams and architectural
+                  niche          two parts; completely    with limited pot-life;  plastic; formulations  components, general
+                                 reactive leaving no free  cured at room or       for wood resist        home and shop,
+                                 solvent; clear to amber;  elevated temperatures;  water and damp        historical in boats,
+                                 colorless bondline       only low pressure       atmospheres;           airplanes, sports
+                                                          required for bond       delaminate with        equipment
+                                                          development             repeated wetting and
+                                                                                  drying; gap-filling
+
+                                                                                                                            10–9
+
+=== PAGE 10 ===
+                                                                              General Technical Report FPL–GTR–282
+
+Table 10–1. Working and strength properties of adhesives, with typical uses—con.
+                                                         Preparation and
+Type              Typical user   Form and color          application             Strength properties     Typical usesa
+Elastomeric       Construction   Putty-like consistency,  Mastic extruded in bead Strength develops      Lumber to plywood or
+mastic                           synthetic or natural    to framing members      slowly over             OSB in floor and wall
+(construction                    elastomers in organic   by caulking gun or like  several weeks; dry     systems; laminating
+adhesive)                        solvent or latex        pressure equipment;     strength lower than     gypsum board and
+                                 emulsions; tan, yellow,  nailing required to    conventional wood       rigid foam insulating;
+                                 gray                    hold materials in place  adhesives; resistant   assembly of panel
+                                                         during setting and      to water and moist      system in manufactured
+                                                         service                 atmospheres; tolerant   homes
+                                                                                 of outdoor assembly
+                                                                                 conditions (wet/frozen
+                                                                                 lumber); gap-filling
+Elastomeric       Industrial,    Viscous liquid, typically Liquid applied directly  Strength develops    On-the-job bonding
+contact           construction   neoprene or styrene-    to both surfaces,       immediately upon        of decorative tops to
+                                 butadiene elastomers in  partially dried after  pressing, increases     kitchen counters; factory
+                                 water emulsion; tan to  spreading and before    slowly over a           lamination of wood,
+                                 yellow                  pressing; roller-pressing period of weeks;      paper, metal, and plastic
+                                                         at room temperature     dry strengths much      sheet materials
+                                                         produces instant        lower than those of
+                                                         bonding                 conventional wood
+                                                                                 adhesives; low
+                                                                                 resistance to water and
+                                                                                 damp atmospheres;
+                                                                                 creep under static load
+Cross-linked      Industrial     Creamy tan/white        Soy flour mixed with    Good dry strength,      Interior plywood,
+soybean [soy]                    viscous fluid           water and cross-linking  acceptable wet         engineered wood
+                                                         chemicals to provide    strength                flooring; potential for
+                                                         wet strength, applied to                        use in particleboard and
+                                                         wood and hot pressed                            fiberboard
+Emulsion          Industrial     Liquid emulsion and     Emulsion and hardener   High dry and wet        I-joist assembly,
+polymer                          separate isocyanate     mixed by user; reactive  strength; very resistant laminated beams for
+isocyanate [EPI]                 hardener; colorless     on mixing with          to water and damp       interior and exterior
+and polymer                      bondline                controllable pot-life   atmosphere; very        use; lamination of wood
+emulsion                                                 and curing time; cured  resistant to prolonged  to metals and plastics;
+polyurethane                                             at room and elevated    and repeated wetting    doors and architectural
+(PEP)                                                    temperatures; radio-    and drying; adheres to  materials, structural
+                                                         frequency curable; high metals and plastics     insulated panel (SIP)
+                                                         pressure required                               assembly
+Melamine-         Industrial     Powder or liquid with   Mixed with water;       High dry and wet        Melamine-urea primary
+formaldehyde                     blended catalyst;       cured in hot press      strength; very resistant adhesive for durable
+[MF] or                          white to tan; colorless  with platens at 120    to water and damp       bonds in hardwood
+melamine-urea-                   bondline                to 150 °C (250 to       atmospheres             plywood; end-jointing
+formaldehyde                                             300 °F) and lower                               and edge-gluing of
+[MUF]                                                    internal temperatures;                          lumber; and scarf joining
+                                                         particularly suited for                         softwood plywood; LVL
+                                                         fast curings                                    and glulam in Europe,
+                                                                                                         and CLT assembly
+
+10–10
+
+=== PAGE 11 ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+Table 10–1. Working and strength properties of adhesives, with typical uses—con.
+                                                        Preparation and
+Type              Typical user  Form and color          application             Strength properties    Typical usesa
+Phenol-           Industrial    Liquid, powder, and dry Liquid blended with     High dry and wet       Primary adhesive
+formaldehyde                    film; dark red–black    extenders and fillers   strength; very resistant for extreme exterior
+[PF]                            bondline                by user; film inserted  to water and damp      durability: OSB,
+                                                        directly between        atmospheres; more      plywood, hardboard
+                                                        laminates; liquid or    resistant than wood to
+                                                        powder applied directly high temperatures and
+                                                        to wood in composites;  chemical aging
+                                                        all formulations cured
+                                                        in hot press, typically at
+                                                        120 to 150 °C (250 to
+                                                        300 °F)
+Lignin, soy,      Industrial    Like PF                 Engineered to behave    Good dry strength;     Very small markets as
+or tannin                                               like PF                 moderate to good wet   of 2020, but significant
+incorporated                                                                    strength; durability   potential
+into phenol-                                                                    improved by blending
+formaldehyde                                                                    with phenolic adhesive
+Resorcinol-       Industrial    Liquid resin and        Liquid mixed with       High dry and wet       Primary adhesives for
+formaldehyde                    powdered hardener       powdered or liquid      strength; very resistant laminated timbers and
+[RF] and                        supplied as two         hardener; resorcinol    to moisture and damp   assembly joints that
+phenol-resorcinol               parts; phenol may be    adhesives cure at room  atmospheres; more      must withstand severe
+formaldehyde                    copolymerized with      temperatures; phenol-   resistant than wood to  service conditions
+[PRF]                           resorcinol; dark red    resorcinols cure at     high temperature and
+                                bondline                temperatures from 21 to chemical aging
+                                                        66 °C (70 to 150 °F)
+Urea-             Industrial    Powder and liquid       Powder mixed with       High dry and wet       Dominates interior
+formaldehyde                    forms; white to tan     water, hardener, filler,  strength; moderately  panel market (medium
+[UF]                            resin with colorless    and extender by user;   durable under          density fiberboard;
+                                bondline                some formulations cure damp atmospheres;       particleboard, European
+                                                        at room temperatures,   moderate to low        hardwood plywood);
+                                                        others require hot      resistance to wetting  very low cost; degrades
+                                                        pressing at about       and temperatures in    over time to emit
+                                                        120 °C (250 °F)         excess of 50 °C        formaldehyde; new
+                                                                                (122 °F)               formulations emit far
+                                                                                                       less
+Animal, protein   Historical    Clear to tan to dark;   Often heated to apply;  Typically not water    Furniture
+                                thick liquid            sets upon cooling and   resistant but strong
+                                                        loss of water           when dry
+Soybean protein   Historical    Powder with added       Mixed with cold water,  Moderate to low dry    Plywood for interior use
+                                chemicals; white to     lime, caustic soda,     strength; moderate
+                                tan, similar color in   and other chemicals;    to low resistance
+                                bondline                applied and pressed at  to water and damp
+                                                        room temperatures, but  atmospheres;
+                                                        more frequently hot     moderate resistance
+                                                        pressed when blended    to intermediate
+                                                        with blood adhesive     temperatures
+aCLT, cross laminated timber; LVL, laminated veneer lumber; OSB, oriented strandboard.
+
+                                                                                                                         10–11
+
+=== PAGE 12 ===
+                                                                       General Technical Report FPL–GTR–282
+Wetting—As discussed in the introduction, the chemistry of   bleeding and staining are critical factors. Adhesives used
+the surface and adhesive must be compatible. A waterborne    in the furniture industry are usually formulated to produce
+adhesive on an oily surface is unlikely to spread out unless  either a tan or colorless joint.
+the adhesive contains surfactants, organic solvents, or other  Ease and simplicity—One-part adhesives, such as
+materials to help it spread and make molecular contact with  poly(vinyl acetate), hot-melt, and adhesive films, are the
+the wood surface.                                            simplest to use because there is no chance for error in
+Timing—Several timing factors must be considered. Pot life   weighing and mixing components. Waterborne adhesives
+refers to how long a batch of adhesive is usable after being  are easy to clean up. Two- or multiple-part adhesives require
+made. Open time is the time between applying the adhesive    careful measuring and mixing of components and may
+and joining the pieces. Closed time refers to the time       require special solvents for cleanup after bonding. High
+between joining the pieces and applying heat or pressure     water resistance often means more difficult cleanup when
+for completing the assembly. Clamp time is how long the      cured.
+finished piece must remain clamped. Increasing temperature   Cost—The cost of adhesive, related application equipment,
+usually shortens set and cure time. After pressing, adhesives  and labor can be significant. On the other hand, the value
+typically need hours or weeks to develop full strength.      of the bonded product is often many times more than the
+Consistency—The consistency, or viscosity, of the adhesive   adhesive plus wood.
+must be compatible with the application equipment, whether   Safety and environment—Many adhesives cure by chemical
+it be brush, spatula, roller, extruder, curtain coater, spray, or  reactions and therefore are hazardous in the uncured state.
+powder metering device. In addition, the adhesive must be    Even waterborne adhesives can have organic chemical
+fluid enough to enter the void spaces in the wood, but not   components that evaporate, causing health concerns for
+so fluid that most of the adhesive is squeezed deep into the  workers and consumers. The most common exposure routes
+wood or out of the glueline, causing a starved joint.        are through the skin or through inhalation of evaporated
+Mixing—If water, hardener, catalyst, filler, extender, or    components. Formaldehyde hardener for resorcinol,
+other additive are used with a resin, appropriate equipment  phenol, melamine, and urea adhesives is a severe irritant.
+must be available to produce a uniform product.              Amine hardeners in some epoxy adhesives are strong skin
+Clamping—Pressure must be applied to joints to ensure        sensitizers. Chemical sensitivity can be caused by repeated
+close contact between the parts. Typically, most wood        exposure to uncured adhesives. Aerosols and skin contact
+adhesives do not fill gaps well and high pressure may        of uncured isocyanates are a significant health hazard.
+be required to form tight joints. Pressure also helps the    Organic solvents in adhesives have largely been replaced by
+adhesive to wet and penetrate the wood surface by forcing it  water through a combination of regulation and technological
+into the void spaces of wood. However, too high a pressure,  improvements in waterborne systems.
+such that the adhesive largely squeezes out, should be       Health, Safety, and Shelf-Life
+avoided.
+                                                             Health and safety regulations require that toxic and
+Temperature—Higher temperature increases the rate of         hazardous chemicals have a visible label to warn of their
+chemical reactions, evaporation, and diffusion. Therefore,   dangers. Material safety data sheets (MSDS) along with
+higher temperature reduces pot life, open and closed         instructions are provided with adhesive products to advise
+assembly times, and clamping time. Phenol-formaldehyde,      of proper handling procedures, protective gear and clothing
+melamine-formaldehyde, urea-formaldehyde, and                (classified as personal protective equipment, PPE), and
+isocyanate adhesives must be cured at high temperatures      procedures for dealing with disposal, spills, and fire, and
+and require expensive, heated presses. Poly(vinyl acetates),  to offer guidance for first-aid and professional treatment
+epoxy, polyurethanes, resorcinol-containing adhesives and    of injuries. The statements made in this book concerning
+many isocyanates cure well at room temperature, but can      the safety of adhesives and effects on the health of the user
+often develop higher strength upon heating.                  are general and not meant to be all-inclusive. The user
+Moisture content—Many adhesives need low wood                should consult the MSDS and follow the manufacturer’s
+moisture content to properly penetrate wood (12% wood        instructions and precautions before using any adhesive.
+moisture content is a typical specification). However,       Uncured adhesives may be harmful and require safety
+isocyanates and polyurethanes need some water to cure        precautions, whereas cured adhesives are usually safe for
+and may even perform better at higher moisture content.      human contact. A notable exception is urea-formaldehyde
+Inexpensive wood moisture content meters are widely          adhesive, which can release low concentrations of
+available.                                                   formaldehyde gas from bonded wood products, especially
+Color and finishing properties—In furniture and interior     under hot, moist conditions. The carcinogenic formaldehyde
+millwork where appearance is critical, adhesive color,       can react with proteins in the body to cause irritation and
+ability to absorb stains and finishes, and freedom from      inflammation of membranes of eyes, nose, and throat. In
+
+10–12
+
+=== PAGE 13 ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+most industrialized countries, regulations now require      creating or handling fine dusts, especially when spraying
+extremely low formaldehyde emissions and mandate            chemicals.
+regular testing of wood panel products in production.       Disposal and storage life are often covered in MSDSs. For
+These regulations and the resulting innovations in the      liquid adhesives, disposal can become complicated because
+industry have produced clear reductions in formaldehyde     the adhesive ages and partially cures, and this semisolid
+emissions from wood products. Phenol(resorcinol)-           material still has the hazards of the uncured adhesive but is
+formaldehyde adhesives, which are used to manufacture       more difficult to handle. Fully cured adhesives tend to be
+plywood, strandboard, and laminated beams, also contain     the safest because the reactive groups no longer exist.
+formaldehyde. After curing, however, the highly durable
+phenol-formaldehyde, resorcinol-formaldehyde, and phenol-
+resorcinol-formaldehyde polymers do not chemically          Bonding Process
+break down in service; thus, no detectable formaldehyde     Moisture Content Control
+is released. Cured melamine-formaldehyde polymers do
+not release formaldehyde either, though they are not quite  After wood and adhesive selection, the next most important
+as durable as the others previously mentioned. Ultra-low    factor contributing to trouble-free service of adhesive bonds
+emitting formaldehyde (ULEF) adhesives are formulated       is control of wood moisture content before, during, and
+to reduce formaldehyde emissions. Uncross-linked            after the bonding process. Moisture content strongly affects
+poly(vinyl acetate), isocyanate, and soy adhesives address  the final strength and durability of joints, development of
+the formaldehyde issue by having no added formaldehyde      surface checks in wood, and dimensional stability of the
+(NAF). Unless detailed knowledge of the safety of the       bonded assembly.
+adhesive is available, it should be assumed that uncured    The moisture in wood, combined with water in adhesive,
+adhesives could be harmful at high concentrations or with   will greatly influence the wetting, flow, penetration,
+chronic exposure. As commercial adhesive formulations       and cure of waterborne wood adhesives. In general,
+change frequently, so can their safety profile.             adhesives are designed to provide the best bonds when the
+Diisocyanates are sensitizers that are capable of causing   wood is between 6% and 14% moisture content. Special
+occupational asthma. They also are highly reactive          formulations are often used for applications outside this
+chemicals that polymerize rapidly on contact with           range. Aqueous adhesives tend to interact with the wood
+strong alkali, mineral acids, proteins, water, and many     and dry out prematurely when applied to wood below 6%
+other materials. Because polymeric methylene diphenyl       moisture content. Wood absorbs water from the adhesive so
+diisocyanate (pMDI) adhesives develop strong and durable    quickly that adhesive flow and penetration into the wood
+bonds with wood, they have gained acceptance in composite   are drastically inhibited, even under high pressure. Wood
+wood products. Any isocyanate is potentially hazardous if   may become so dry below 3% moisture content that it
+mishandled, but the low vapor pressure of pMDI means        temporarily resists wetting.
+it does not evaporate quickly. pMDI adhesives require       Wood with too much moisture is also difficult to bond with
+strict attention to adequate ventilation and use of personal  normal waterborne adhesives. Water and low-molecular-
+protective equipment to remove airborne pMDI on dust        weight portions of the adhesive migrate more slowly into
+particles. Emulsion polymer isocyanates (EPI), polymer      wet wood cell walls than into drier cell walls. This leaves
+emulsion polyurethanes (PEP), and polyurethanes also        the adhesive more prone to squeeze-out when pressure
+contain the reactive isocyanate group, and so chronic       is applied. In many adhesives, low-molecular-weight
+contact with these uncured adhesives should be avoided.     components infiltrating the cell walls are necessary for long-
+Properly cured isocyanate-containing adhesives are not      term durability. Control of moisture content is particularly
+considered hazardous in bonded wood products.               critical when the adhesive is cured in a hot press because
+Thermoplastic adhesives are generally of low toxicity, but  the excess moisture turns to high-pressure steam inside
+any added solvents may carry health concerns. Construction  the product. This pressurized steam can blast channels
+and contact adhesives contain organic solvents with low     through the wood composite or cause large internal voids,
+flash points. When used in small, unventilated spaces, the  called blows, in panel products. Even if blows do not occur,
+solvent can accumulate in the air and cause an explosion    excess moisture within thermosetting adhesives can prevent
+if ignited. Some adhesive producers offer less flammable    complete cross-linking, thereby weakening the adhesive.
+formulations based on chlorinated solvents. Solvents in     Large changes in moisture content after bonding will
+these adhesives are generally toxic, but harmful effects can  cause shrinking or swelling that can seriously weaken
+be avoided by providing adequate ventilation and following  both the wood and adhesive bond and can cause warping,
+the manufacturer’s safety instructions.                     twisting, and surface irregularities. Therefore, wood
+The human respiratory system cannot handle fine dust, even  products should ideally be bonded at the same equilibrium
+from wood. Use dust masks and adequate ventilation when     moisture content (EMC) that the product will experience
+
+                                                                                                              10–13
+
+=== PAGE 14 ===
+                                                                       General Technical Report FPL–GTR–282
+in service. If the predominant relative humidity (RH) of     stress can reduce the amount of load that can be applied
+the air in an environment is known, one can estimate the     before fracture. For best results, keep differences in
+EMC of the wood by using Table 4–2. Interior RH levels in    moisture content less than about 5% for lower density
+buildings depend on climate, season, moisture-generating     species and 2% for high-density species.
+activities, and operation of conditioning equipment. With
+the exception of dry climates, air-conditioned spaces are    Surface Preparation
+often around 45% to 55% RH, giving wood an EMC of            The section “Surface Properties of Wood for Bonding”
+approximately 8% to 10%. During winter in the northern       covers the detailed relationships between surface condition
+states, indoor heating lowers air humidity so that the wood  and adhesive bond performance. Wood surfaces are
+EMC drops to around 4%, but the moisture levels within       best prepared for maximum adhesive wetting, flow, and
+the exterior walls can be higher. EMC of wood outdoors is    penetration by removing all materials that might interfere
+generally higher, ~12%, but with large variation depending   with bond formation to sound wood. Ideally, wood should
+on the climate and local conditions. The average moisture    be surfaced immediately before applying adhesive.
+content for exterior wood in most of the United States is    This short time not only minimizes the opportunity for
+8%. Average moisture content increases to 11% along the      extractives and other contaminants to degrade the bonding
+Atlantic and Gulf coastal regions; in the arid southwest,    surface, but also minimizes the opportunity for wood to
+the EMC is relatively low at 6%. For wood outdoors, local    change moisture content, and thus shape, after the flat
+environment is key. Wood close to the ground, a common       surface has been prepared. Some standards require no more
+source of moisture, and wood in the shade, are typically     than 24 h between surfacing and bonding, especially for
+wetter than wood away from moisture sources and exposed      structural products. Particularly with high-extractive-content
+to moving air and sunlight. Products manufactured in humid   woods, such as southern pines, times as short as 15 min may
+environments and then moved to dry conditions, especially    be necessary for the best bonds. In addition to improving
+northern states where EMC drops very low in winter, can      bond quality, properly prepared surfaces also facilitate
+experience warping, splitting, delamination of joints, or    uniform adhesive spread rate.
+other noticeable appearance defects. Manufacturers and
+importers of bonded wood products must be aware of these     Spreading of Adhesive
+regional and seasonal variations to condition the wood       Regardless of method used for bonding, the purpose in
+and bond it at moisture content levels consistent with air   spreading the adhesive is to evenly apply enough adhesive
+humidity conditions of the service region.                   so that under pressure, the adhesive will flow into a
+Adhesive often contributes moisture to a product. In         uniformly thin layer and penetrate adequately. The amount
+particleboard or fiberboard, the water in the adhesive can   of adhesive needed will depend on wood species, surface
+be 3% to 7% of the wood weight. During hot pressing,         quality, moisture content, type of adhesive, temperature
+some water evaporates. To minimize deformation and           and humidity of the air, assembly time, and application of
+prevent steam blisters or blows upon removal from the hot    adhesive to one or both surfaces. Adhesives can be spread
+press, the total moisture content of the assembly should     by any method, but in manufacturing, adhesives are usually
+not exceed 10%. Moisture content of 3% to 5% in veneer       applied mechanically, such as by roll-spreader, extruder,
+at the time of hot pressing is satisfactory for hardwood     curtain-coater, or spray. Instead of applying a uniform film,
+plywood intended for furniture and interior millwork and for  extruders apply continuous, uniformly spaced beads of
+softwood plywood intended for construction and industrial    specific diameter.
+uses. When radio-frequency-curing adhesives, low moisture    For composite manufacturing involving flakes, strands,
+content in the wood is necessary to prevent arcing. Often    particles, or fibers, the adhesive is applied as a slow stream
+lumber with moisture content of 6% to 7%, assuming 1% to     or as droplets using a spray nozzle or spinning disc to the
+2% will be added by aqueous adhesives, is satisfactory for   wood particles. Adhesive is further spread by allowing the
+cold pressing of furniture and interior millwork. Laminated  wood particles to contact each other in a drum blender,
+lumber (glulam) for exterior use should contain 10% to 12%   kneader, or tube blender. These binder adhesives hold the
+moisture before bonding. Because there is relatively little  product together by a series of joints similar to spot bonds
+adhesive, it only contributes about 1% to the total moisture  rather than a continuous film typical of film adhesives.
+content.                                                     Microscopic analysis of droplet size and distribution
+Lumber that has been kiln dried to the approximate average   in binder adhesives shows the importance of adhesive
+moisture content intended for bonding may nonetheless        distribution on board properties.
+vary in moisture content level between boards and within
+individual boards. Large differences in moisture content     Assembly and Pressing
+between adjacent or within boards can result in considerable  Adhesive viscosity is important during application, open
+stress on the common joint after bonding as the boards       time, closed time, and pressing conditions. Keeping the
+equalize toward a common moisture content. This internal     viscosity at the correct level throughout this process requires
+
+10–14
+
+=== PAGE 15 | img ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+balancing a variety of factors. The general relationship
+between adhesive viscosity and bonding pressure is
+illustrated in Figure 10–5. Viscosity strongly affects wetting,
+flow, penetration, and, particularly, transfer of adhesive
+to opposing wood surfaces when pressure is applied to
+the assembly. After application, adhesive viscosity will
+often change due to evaporation, change in temperature,
+polymerization, or migration of adhesive components into
+the wood cell walls. When the adhesive-covered surfaces
+remain open before assembly (open assembly), the adhesive
+thickens by losing solvent to the air by evaporation and to
+the wood by absorption and can become too dry to form
+a useful bond. Bringing the adhesive-covered surfaces
+together (closed assembly) stops evaporation but not
+absorption. Cold-setting waterborne wood adhesives lose
+water by absorption and evaporation, so that viscosity
+steadily increases until the adhesives eventually set.
+Thermosetting waterborne adhesives also dry out, but they
+may continue to flow to some extent in the presence of heat,
+eventually hardening by chemical reaction.                    Figure 10–5. Relationship between adhesive consistency
+Pressure during bond assembly serves several useful           and bonding pressure during bond formation using
+                                                              thermosetting adhesive.
+purposes by
+• forcing the wood pieces into close contact with each        times can be very important. Some adhesives require time
+  other,                                                      before pressing to allow solvents to evaporate or adsorb
+                                                              into the wood, so that the adhesive is thick enough to avoid
+• forcing trapped air from the joint,                         overpenetration when pressure is applied. This is true for
+• bringing adhesive into molecular contact with the wood      contact adhesives where the adhesive is applied to both
+  surfaces,                                                   surfaces and the solvent evaporates until both sides become
+• forcing adhesive to penetrate into the wood structure       tacky and then the bond is formed. On the other hand,
+  for more contact area, as well as getting the adhesive to   adhesives that dry or cure too much before pressing often do
+  contact undamaged cells beneath the surface,                not transfer, or wet the opposite surface, resulting in thick,
+                                                              weak bondlines. Generally, in manufacturing, adhesives are
+• squeezing the adhesive into a thin film, and                applied to one surface for ease of manufacture, even though
+• holding the assembly in position while the adhesive cures.  applying to both surfaces eliminates the transfer issue.
+If pressure is too high, however, the adhesive flows too      Bonded material should be kept under pressure until the
+deeply into the wood or in some cases out of the bond         adhesive is strong enough to resist any forces that may
+so that there is insufficient adhesive to fill the glueline.  cause parts to shift or open gaps in the glueline. When
+These conditions of overpenetration and excess squeeze-       cold-pressing lumber under normal conditions, this stage
+out result in a starved joint and produce inferior bond       can be reached in as little as a few minutes or as long
+strength (Fig. 10–5). Overpenetration is especially common    as 24 h, depending on adhesive temperature and curing
+in low-density woods, whereas excess squeeze-out is           characteristics and the absorptive characteristics of the
+common in high-density woods. The strongest joints are        wood. During hot pressing, the time under pressure varies
+made with moderately high clamping pressure for the wood      with temperature of platens, thickness of the assembly,
+density, using adhesive with viscosity high enough to avoid   species of wood, and adhesive formulation. The limiting
+overpenetration and excess squeeze-out at that pressure.      factor is typically the time at temperature in the core for
+                                                              composites. Typical hot-pressing times are 2 to 15 min,
+Low pressures near 0.7 MPa (100 lb in–2) are suitable for     and up to 30 min for very thick laminates because of slow
+low-density wood because the surfaces easily conform to       heat transfer to the middle. High-frequency heating, steam
+each other, thus ensuring intimate contact between adhesive   injection, pre-heating wood, or anything that gets the core
+and wood. High pressures up to 1.7 MPa (250 lb in–2) are      up to temperature more quickly can reduce press time. Press
+required for the highest density woods, which are difficult   factor, or the number of seconds under pressure per unit
+to compress. Small areas of flat, well-planed surfaces can be  of thickness of panel, is a way to discuss press times more
+bonded satisfactorily at lower pressures.                     generally across different panel thicknesses. Press factors
+Because adhesives become thicker after they are applied       as low as 3 s mm–1 of board thickness, or 18 s for a 6-mm-
+to the wood and some start to cure immediately, assembly      thick panel, are known for some particleboard lines where
+
+                                                                                                                  10–15
+
+=== PAGE 16 | img ===
+                                                                        General Technical Report FPL–GTR–282
+the wood is heated before entering the press. The press
+factor for hardwood plywood is typically around 16 s mm–1,
+or 4 min for a 15-mm- (5/8-in.-) thick panel.
+With stiff structural adhesives (phenol-, resorcinol-,
+melamine-formaldehyde), the strongest bonds generally
+have gluelines between 0.08 and 0.15 mm (0.003 and
+0.006 in.) thick. Thinner gluelines may not effectively
+transfer stresses, particularly stresses from moisture-
+induced dimensional changes. As these gluelines become
+thicker, they become weaker and fracture more easily. Many
+adhesives also contain solvents, including water, which
+cause the adhesive to shrink upon curing and may even
+leave voids. Thick gluelines result from inadequate pressure   Figure 10–6. Edge-grain joints: A, plain; B, tongue-and-
+or incorrect adhesive consistency. When rough, warped, or      groove.
+poorly mated surfaces are joined, pressure will be uneven
+along the glueline. As a result, the adhesive flow from the   tightly to allow the moisture to diffuse uniformly. This
+areas of very high pressure to those of little to no pressure  process also restores some of the panel thickness lost
+will result in very thick gluelines. Both the starved and thick  by compression during hot pressing and helps minimize
+areas of the glueline lead to weak bonds.                     warping in service. Many composite panels need time after
+                                                              pressing for the adhesive to cure completely and for the
+For composites, the adhesive needs to have enough strength    moisture to equilibrate throughout the panel.
+to withstand the steam pressure inside the panel as the
+applied press pressure is released. If the adhesive is not    Bonded Joints
+sufficiently strong, the internal steam pressure will cause a
+large delamination (blow) within the product when the press   Edge-Grain Joints
+pressure is released. As the size of the composite increases,
+                                                              Edge-grain joints (Fig. 10–6A) can be as strong as the wood
+there is less relative area for steam escape and the chance of
+                                                              in shear parallel to the grain, tension across the grain, and
+delamination increases. Drier wood, high-solids adhesives,
+                                                              cleavage. The tongue-and-groove joint (Fig. 10–6B) and
+less adhesive with better distribution, and faster curing
+                                                              other shaped edge-grain joints have a theoretical strength
+adhesives can decrease the problem of delamination.
+                                                              advantage because of greater surface area than the straight
+Post-Cure Conditioning                                        edge-grain joints, but they typically do not produce higher
+                                                              strength. The theoretical advantage is lost, wholly or partly,
+In the process of bonding edge-grain joints with waterborne   because the shaped sides of the two mating surfaces cannot
+adhesives, the wood in the joint swells upon absorbing        be machined precisely enough to produce the perfect fit that
+water from the adhesive. If the bonded assembly is surfaced   will distribute pressure uniformly over the entire joint area.
+before this excess moisture has evaporated or adsorbed        Because of poor contact, the effective bonding area and
+uniformly, more wood is removed along the swollen joint       strength can actually be less in a shaped joint than on a flat
+than elsewhere. As the added moisture evaporates, the         surface. Tongue-and-groove and other shaped joints have
+wood in the joint shrinks beneath the surface. These sunken   the advantage that the parts can be quickly aligned in clamps
+bondlines become very conspicuous under a high-gloss          or presses. A shallow-cut tongue-and-groove is just as useful
+finish. This is particularly important when using adhesives   in this respect as a deeper cut, and less wood is wasted.
+containing large amounts of water. Moisture can be well
+distributed by conditioning the bonded assembly for 24 h      End-Grain Joints
+at 70 °C (158 °F), 4 days at 50 °C (122 °F), or 7 days at
+                                                              It is practically impossible to make end-grain butt joints
+room temperature before surfacing. In each case, the relative
+                                                              (Fig. 10–7A) strong enough to meet the requirements of
+humidity must be adjusted to prevent drying the wood
+                                                              ordinary service with conventional bonding techniques.
+below the target moisture content.
+                                                              Even with special techniques, butt joints reach only about
+Conditioning to the moisture content of service is especially  25% of the tensile strength of the wood parallel-to-grain. To
+important for plywood, veneers, and other composites          approximate the tensile strength of clear solid wood, a scarf
+made of thin layers. During room-temperature bonding,         joint or finger joint (Fig. 10–7B to E) should have a surface
+water often needs to be removed, which can be done            area at least 10 times greater than the cross-sectional area of
+by controlling humidity on a time schedule. If room-          the piece, because wood is approximately 10 times stronger
+temperature-bonded products are dried too much, warping,      in tension than in shear. Joints cut with a slope of 1 in 12
+checking, and debonding increase markedly. Softwood           or flatter (12 times the cross-sectional area) produce the
+plywood is often very dry after hot pressing; this can be     highest strength. Scarf joints work because they essentially
+corrected by spraying the hot panels and stacking them
+
+10–16
+
+=== PAGE 17 | img ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+ Figure 10–7. End-to-end-grain joints: A, butt; B, plain scarf;
+ C, vertical structural finger joint; D, horizontal structural
+ finger joint; E, nonstructural finger joint.
+
+convert an end grain joint into an edge grain joint. Finger
+joints can be thought of as scarf joints folded over to reduce
+waste. In plywood scarf and finger joints, a slope of 1 in 8      Figure 10–8. End-to-edge-grain joints: A, plain;
+(8 times the cross-sectional area) is typical for structural      B, miter; C, dowel; D, mortise and tenon; E, dado
+                                                                  tongue and rabbet; F, slip or lock corner; G, dovetail;
+products. For nonstructural, low-strength joints, these           H, blocked; I, tongue-and-groove.
+requirements may be relaxed.
+When finger joints are cut with a high slope, such as 1 in 12,  result, it is necessary to design these joints with interlocking
+the tip thickness must be no greater than 0.8 mm (1/32 in.).  surfaces so that edge grain of the interlocking piece bonds
+A thickness of 0.4 to 0.8 mm (1/64 to 1/32 in.) is about      to the edge grain of the adjoining piece. Increasing the
+the practical minimum for machined tips. Sharper tips are     joint surface area also helps by providing more bondline
+possible using dies that are forced into the end grain of the  to transfer load. Some examples of strong connections
+board.                                                        are dowels, mortise and tenons, and rabbets (Fig. 10–8).
+                                                              Because wood swells so much more across the grain than
+Finger joints can be cut with the profile showing either on   along the grain, moisture changes in these joints produce
+the wide face (vertical joint) or on the edge (horizontal joint)  large internal stresses. All end-to-edge-grain joints should be
+(Fig. 10–7). Vertical joints have greater area for designing  protected from changes in moisture content in service.
+shapes of fingers but require a longer cutting head with
+more knives. Vertical joints cure faster than horizontal joints  Construction Joints
+in high frequency heating. A nonstructural finger joint, with  Elastomeric construction adhesives are commonly used
+fingers much shorter than in the two structural finger joints,  in the light-frame construction industry for field assembly
+is shown in Figure 10–7E.                                     of panelized floor and wall systems. Structural panels are
+A well-manufactured scarf, finger, or lap joint in end grain  bonded to floor joists and wall studs with these adhesives,
+can have up to 90% of the tensile strength of clear wood and  which have the unique capability of bridging gaps up to
+exhibit behavior much like that of clear wood. However, the   6.5 mm (1/4 in.) between rough and poorly fitting surfaces
+cycles-to-failure for a well-manufactured end joint are often  (Fig. 10 –9). Without any premixing, the adhesive is
+lower than for clear wood.                                    extruded in a bead along framing members with a hand-
+                                                              held caulk gun or a pressurized dispenser. Nails or screws
+End-to-Edge-Grain Joints                                      provide the only pressure for bonding to hold materials
+It is difficult to design a plain end-to-edge-grain joint     in position while the adhesive sets. Elastomerics are also
+(Fig. 10–8A) capable of carrying appreciable loading. As a    uniquely tolerant of temperature and moisture content
+
+                                                                                                                  10–17
+
+=== PAGE 18 | img ===
+                                                                      General Technical Report FPL–GTR–282
+                                                             performance, and as companies are under continued
+                                                             pressure to launch new products, reliance on short-term
+                                                             testing is increasing.
+                                                             Analytical, Chemical, and Mechanical Testing
+                                                             of Polymers
+                                                             Although many methods of characterizing adhesives are
+                                                             available, this section only briefly mentions some of the
+                                                             most important and common methods. Nuclear magnetic
+                                                             resonance (NMR) spectroscopy and other spectroscopic
+                                                             techniques help characterize the molecular structures of
+                                                             adhesive polymers. Molecular-size distribution is commonly
+                                                             measured by gel permeation chromatography (GPC),
+                                                             also known as size exclusion chromatography (SEC).
+                                                             Differential scanning calorimetry (DSC) and gel times
+Figure 10–9. Gap-filling construction adhesive in field-     provide information on rates of chemical curing reactions.
+assembled floor system. The adhesive minimizes problems      The rheological properties of curing and cured adhesives are
+arising from imperfect assembly.
+                                                             characterized by rheometers, dynamic mechanical analysis
+variations at field construction sites. Although they do not  (DMA), and torsional-braid analysis (TBA). Sophisticated
+deliver the strength and durability of conventional structural  fracture mechanics techniques are used to measure
+adhesives, elastomerics are strong and flexible enough       toughness of adhesive bonds as they fail in a cleavage
+to give long-term performance under most conditions of       mode. High-magnification microscopes, including scanning
+installation and service.                                    electron microscope, transmission electron microscope, and
+                                                             atomic force microscope, enable scientists to see wood and
+Construction adhesives enable a nailed or screwed floor      adhesive surfaces in minute detail before, during, and after
+system to act to some degree as a composite assembly         fracture. Fluorescent and confocal microscopies provide
+with increased stiffness. Floors are less bouncy with fewer  excellent information on adhesive distribution, adhesive
+squeaks and nail pops or screw pulls. However, structural    penetration, and bond fracture surfaces because of their
+design of the composite assembly is based only on the        ability to distinguish between wood and adhesive.
+stiffness of nailed or screwed panel and framing materials.
+The strength contributed by the adhesive cannot be factored  Although much can be learned from measurements of
+into the engineering design but provides increased value.    chemical, mechanical, and rheological properties of
+                                                             polymers and adhesives before their application to wood,
+Testing and Performance                                      the correlation between laboratory test and product
+                                                             performance is never perfect. There is no substitute for
+Testing is necessary to ensure that adhesively bonded        testing performance in bonded assemblies prepared with
+materials hold together within a given service environment   specific adhesives and materials and tested under specific
+for the life of the structure. Many methods are available    loading modes, environmental conditions, and duration
+to test bonding performance, particularly for bonded         of loading. Although adhesives are formulated through a
+assemblies. Generally, these testing methods attempt to      blend of scientific analysis and art of formulation, they are
+predict how bonded joints are likely to perform in a specific  tested for strength and durability in the laboratory and field,
+loading mode (shear, tensile, creep) in an assembly at       usually by industry-accepted standard test methods and
+specific temperature and moisture conditions for a specific  product specifications.
+time.
+Most performance tests are short term. They are based on     Mechanical Testing of Bonded Assemblies
+chemical, mechanical, and rheological laboratory tests of    To promote communication and understanding, many
+adhesive polymers, adhesives, and bonds. Intermediate-term   standardized test methods have been developed for
+tests of products that are conducted in pilot operations and  evaluating and comparing the performance of different
+field experiments are integrated with short-term laboratory  materials. Most test methods, specifications, and practices
+tests in an effort to extrapolate these data into long-term  for adhesives and bonded assemblies are consensus
+performance. Long-term tests of bonded assemblies under      standards. ASTM International publishes a book of standard
+actual environmental exposures are rarely conducted,         methods each year. European jurisdictions tend to specify
+because this information may not be available for 10 to      ISO standards developed by the International Standards
+30 years. Therefore, short-term tests are used extensively to  Organization or their own national standards. Several trade
+predict long-term performance. As we learn more about the    associations have their own specifications and performance
+relationships between chemical structure and mechanical      standards that apply to their specific wood products.
+
+10–18
+
+=== PAGE 19 | img ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+                                                              adhesive, and environmental exposure interact in response
+                                                              to loading.
+                                                              Exceeding the strength of wood is a desired performance
+                                                              criterion, and especially in the North American market, can
+                                                              be more important than measured shear strength. Percentage
+                                                              of wood failure is the amount of wood that fails as a
+                                                              percentage of the area of the bonded joint. In general, strong
+                                                              and durable bonds give high wood failure and fracture
+                                                              deep into the grain of the wood. If wood failure is shallow
+                                                              with only wood fibers remaining attached to the adhesive
+                                                              film, bond strength and durability may be lacking. Thus, a
+  Figure 10–10. Failure modes of cleavage and shear in        consistently high level of wood failure, above 75% in some
+  adhesive bonds.                                             standards and above 85% in others, means that the shear
+                                                              strength associated with these bonds is a good estimate
+Customers may also have their own tests. Standard tests       of the load-carrying capability of the joint. High levels of
+attempt to specify all the relevant variables: materials,     wood failure in a wet and hot environment suggest that the
+conditions of materials and testing, testing procedures, etc.  adhesive bond is as strong as or stronger than the wood.
+to ensure repeatability and enable valid comparisons of data.  Wood failure is considered a valid measure of bond strength
+Two basic failure modes, cleavage and shear, are commonly     only to solid wood, not in reconstituted products made of
+used to test adhesive bonds to determine strength levels      bonded wood particles.
+during impact, flexure, fatigue, and creep under long-term    Bonds in structural assemblies are expected to exceed the
+stress (Fig. 10–10). The following describes the basic stress  strength of the wood, so in traditional design of joints,
+modes in adhesive-bonded joints:                              adhesive strength has been ignored. Traditionally, adhesives
+• Cleavage, or mode I, failure results from forces applied    that are not as strong as the wood simply have not been used
+  perpendicular to the bondline. These forces may be          in structural applications.
+  applied by a wedge or other crack-opening device, by
+  pulling on a double cantilever beam, or by pulling two      Short- and Long-Term Performance
+  faces apart, such as in a section of particleboard. Tensile  Virtually all bonded wood products, even for interior
+  loads often result in cleavage failures.                    applications, have some kind of moisture durability test.
+                                                              Even interior, nonstructural products will occasionally get
+• Shear, or mode II, failure results from forces applied      wet, and the swelling forces during wetting can be very
+  parallel to the bondline, either in compression or tension,  high. In addition to the added swelling stress, mechanical
+  but care needs to be taken so to minimize the cleavage      properties of wood, adhesives, and bonded products
+  mode from the shear test due to substrate deflection.       typically decrease with moisture and heat. Therefore,
+As the names imply, impact, fatigue, and creep are tests      cyclic wetting–drying, sometimes with additional heat, are
+that pertain to the rate at which loads are applied. Standard  challenging for many wood adhesives.
+testing is done so that load continues to increase until      Delamination testing is one way to evaluate how well the
+failure, typically occurring between 1 and 5 min. Impact      bonded joint withstands severe moisture-induced swelling
+loads are sudden; for example, hitting a specimen with a      and shrinking stresses. Delamination is the separation
+swinging arm. Fatigue is the loss in strength from repeated   between laminates because of adhesive failure, either in the
+loading and unloading to reflect bond deterioration from      adhesive or at the interface between adhesive and wood. If
+mechanical stresses. Sometimes, environmental stresses        adhesives are able to resist delaminating forces, any wood
+such as moisture and temperature, are added as well. Creep    failure will occur adjacent to the bondline, not within it.
+loads are static loads applied for long times, from a few days  For example, after exposure to three cycles of saturation
+to years, usually under extreme environmental conditions.     followed by oven drying in ASTM D2559–12a, glulam
+The common measures used to estimate potential                beams cannot exceed 5% delamination in softwoods and 8%
+performance of bonded wood joints are strength and            in hardwoods.
+wood failure from mechanical tests and delamination           If the adhesive and wood are not deformed beyond
+after exposure to water. The highest performance level        their yield points during the exposure, they may return
+after exposure to severe environmental conditions is bond     to their original size after drying and cooling, and so
+strength being greater than wood strength, wood failure in    wetting–drying may not actually degrade the product.
+more than 85% of the bonded area, and less than 5% or 8%      When considering bond degradation with exposure, wood
+delamination of the joint, for softwoods and hardwoods,       properties generally decrease faster under heat and moisture
+respectively. These performance values reflect how wood,      than do rigid thermosetting adhesives like resorcinol-,
+
+                                                                                                                 10–19
+
+=== PAGE 20 | img ===
+                                                                      General Technical Report FPL–GTR–282
+phenol-, and melamine-formaldehyde, but this is not true
+for urea-formaldehyde. Therefore, evaluating short-term
+performance of products made with these adhesives is
+simply not a matter of testing bonds at room temperature
+in dry and wet conditions. With increased moisture and/
+or heat, thermoplastic adhesives such as poly(vinyl
+acetate), elastomerics, hot-melts and pressure-sensitive
+adhesives tend to lose stiffness and strength more rapidly
+than does wood. These adhesives must be tested dry, dry
+after water soaking, and after prolonged exposure to high
+humidity environments. High wood failure in shear of
+water-saturated bonds is also a strong indicator of moisture
+durability. In addition, some specifications require testing
+bonded structural and nonstructural products at elevated
+temperatures similar to what might be encountered in roofs     Figure 10–11. Relative rates of deterioration of bond
+or enclosed shipping containers. A short-term dead-load test   strength of small specimens exposed directly to
+at elevated temperatures may also be required. Adhesive        weather.
+specifications for structural products such as laminated
+beams and plywood require high minimum strength and         less durable than phenol-formaldehyde or resorcinol-
+wood failure values after several different water exposure  formaldehyde and is considered acceptable for structural
+tests.                                                      products. Although considered less durable, melamine-
+                                                            urea-formaldehyde is also accepted in structural products
+Long-term deterioration of wood, adhesives, and             at a melamine-to-urea ratio of 60:40 or larger. Urea-
+bonded products is determined by the levels of              formaldehyde resin is susceptible to deterioration by heat
+temperature, moisture, and stress, and in some instances    and moisture (Fig. 10–11).
+by concentrations of chemicals and presence of
+microorganisms. Long-term performance is the ability of     Products bonded with poly(vinyl acetate) and protein-based
+a product to resist loss of a measured mechanical property  adhesives without cross-linkers often fail after exposure
+over the time of exposure. A durable bonded product is      to wet–dry cycling. However, if properly formulated with
+one that shows no greater loss of properties during its life  appropriate cross-linkers, these adhesives are durable in
+in service than does solid wood of the same species and     normal interior environments.
+quality. Many adhesives in bonded products have decades     Some isocyanate, epoxy, polyurethane, and cross-linked
+of documented performance in many environments. Thus,       poly(vinyl acetate) adhesives are durable enough to use
+it is possible to predict with a high degree of certainty   on lower density species even in exterior conditions, but
+the long-term performance of similar products. Well-        for most of these adhesives, exterior exposure should be
+designed and well-made joints with any of the commonly      limited. Some elastomer-based adhesives may be durable
+used woodworking adhesives will retain their strength       enough for limited exposure to moisture with lower density
+indefinitely if the moisture content of the wood does not   species in nonstructural applications or in structural
+exceed approximately 15% and if the temperature remains     applications when used in conjunction with approved
+within the range of human comfort. However, some            nailing schedules. Some polyurethane, emulsion polymer
+adhesives deteriorate when exposed either intermittently or  isocyanates (EPI), and polymer emulsion polyurethane
+continuously to temperatures greater than 38 °C (100 °F) for  (PEP) adhesives that chemically cure and remain flexible
+long periods. Low temperatures seem to have no significant  are among the durable structural adhesives.
+effect on strength of bonded joints, but test data are sparse
+for very cold conditions.                                   New adhesives do not have a history of long-term
+                                                            performance in service environments, so accelerated
+Products made with phenol-formaldehyde, resorcinol-         laboratory exposures that include cycles of heat, moisture,
+formaldehyde, and phenol-resorcinol-formaldehyde            and stress are used to estimate long-term performance.
+adhesives have proven to be more durable than wood when     However, laboratory exposures cannot duplicate the actual
+exposed to warm and humid environments, water, alternate    conditions of a service environment. Estimates of long-
+wetting and drying, and even temperatures high enough to    term performance can be obtained by exposing specimens
+char wood. These adhesives are adequate for use in products  outdoors for up to 30 years. Outdoor exposures may be
+that are exposed to the weather indefinitely (Fig. 10–11).  intensified by facing specimens toward the sun to maximize
+Well-made products with melamine-, melamine-urea-, and      solar heating and by establishing exposure sites in regions
+urea-formaldehyde resin adhesives have proven to be less    with the most extreme service environments, for example,
+durable than wood. Melamine-formaldehyde is only slightly   southern coastal and arid southwestern regions. To date,
+                                                            only four long-term laboratory-aging methods have been
+
+10–20
+
+=== PAGE 21 ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+standardized for adhesives approval, but the bonded product  No-Added-Formaldehyde and Bio-Based
+is the item that must meet code standards. Therefore,       Adhesives
+performance of any new adhesive or bonded product must      Environmental factors have played an increasing role in
+be compared with performance of established adhesives or    recent years. The emphasis in many developed countries
+products tested in the same laboratory exposure.            to decrease formaldehyde emissions from wood products
+Product Quality Assurance                                   has had a big impact on the urea-formaldehyde adhesives.
+                                                            The trend towards no-added-formaldehyde adhesives to
+After the short- and long-term performance of a product has  replace UF adhesives seem to be continuing, although these
+been established, maintenance of the manufacturing process  products still represent a small portion of the market.
+to ensure that the product will be made and perform at that
+level is the major concern of a quality-assurance program,  In addition, a trend towards bio-based adhesives to replace
+which consists of three parts:                              those that come from petrochemicals is occurring. Given
+                                                            the low cost of wood adhesives, lignins from various
+1. Establishing limits on adhesive properties and bonding   sources are being widely investigated. Soy proteins have
+  process factors that will ensure acceptable joints and    largely replaced UF in interior plywood in North America.
+  product                                                   Research and market demand continue to drive new product
+2. Monitoring production processes and bond quality in      development.
+  joints and product
+3. Detecting unacceptable joints and product, determining   Acknowledgment
+  the cause, and correcting the problem                     Much of the information in this article is taken from
+Structural panel, laminated-beam, particleboard, plywood,   “Adhesives with Wood Materials—Bond Formation
+millwork, and other industrial trade associations have      and Performance,” chapter 10 of Wood Handbook,
+established quality-assurance programs that effectively     FPL–GTR–190, authored by Charles R. Frihart and
+monitor the joint and product performance at the time       Christopher G. Hunt.
+of manufacture for compliance with voluntary product
+standards. Product performance is usually evaluated         Recommended Reading
+immediately after manufacture by subjecting specimens       Hoadley, R.B. 2000. Understanding wood: a craftsman’s
+from the product to a series of swell–shrink cycles. The    guide to wood technology. Newtown, CT: Taunton Press.
+treatments are more rigorous for products intended for      ISBN: 1561583588
+exterior exposure. For example, exterior softwood plywood
+is subjected to two boil–dry cycles, whereas interior       Lukowsky, D. 2015. Failure analysis of wood and wood-
+plywood is subjected to three cycles of soak–dry steps at   based products. New York, NY: McGraw Hill Educational
+room temperature. After exposure, specimens are evaluated   Press. ISBN: 978-0-07-183937-2
+for delamination, percentage wood failure, or both. Test    River, B.H.; Gillespie, R.H.; Vick, C.B. 1991. Wood as
+results are compared with the minimum requirement in        an adherend. In: Minford, J.D., ed. Treatise on adhesion
+the trade association’s standards. Lengthy experience and   and adhesives. New York, NY: Marcel Dekker, Inc. Vol. 7.
+correlations between exterior performance and accelerated   https://www.fpl.fs.fed.us/documnts/pdf1991/river91a.pdf
+laboratory tests have shown that products with at least
+the minimum values will likely perform satisfactorily in    References
+service. If the product meets the requirement, it is certified
+by the association as meeting the standard for satisfactory  AITC. 2009. Inspection manual for structural glued
+performance.                                                laminated timber. AITC 200–09. Englewood, CO: American
+                                                            Institute of Timber Construction.
+Heat Resistance of Adhesives
+                                                            ANSI/AITC. 2017. Standard for wood products—structural
+In the early 2000s, there was a surge of interest in the    glued laminated timber. ANSI/AITC A190.1–2017. New
+fire performance of structural adhesives. North America     York, NY: American National Standards Institute, Inc.
+responded by creating the “Heat Resistant Adhesive”
+classification, for adhesives shown to be extremely stable in  APA–The Engineered Wood Association. 1997. Panel
+full-scale assemblies tested under load while exposed to fire.  handbook and glossary. Tacoma, WA: APA–The Engineered
+Europe’s approach was to recognize the insulating value of  Wood Association.
+wood and demand that there be enough material left in the   APA–The Engineered Wood Association. 2009. Voluntary
+protected core of a structural member to carry the design   product standard PS 1-09. Structural plywood. Washington,
+load after the surface had charred. The fire performance of  DC: U.S. Department of Commerce, National Bureau of
+adhesives in cross-laminated timber (CLT) construction has  Standards.
+been a focus of CLT development for tall wooden buildings.
+
+                                                                                                              10–21
+
+=== PAGE 22 ===
+                                                                    General Technical Report FPL–GTR–282
+APA–The Engineered Wood Association. 2018.                 and Technology. 23: 601–617. https://www.fpl.fs.fed.us/
+Performance standards and qualification policy for wood    documnts/pdf2009/fpl_2009_frihart001.pdf
+structural panels. APA PRP–108. Tacoma, WA: APA–The        Frihart, C.R. 2013. Wood adhesion and adhesives. In:
+Engineered Wood Association.                               Rowell, R.M., ed. Handbook of wood chemistry and wood
+ASTM. 2021. Annual book of ASTM standards, Vol. 15.06      composites. Boca Raton, FL: CRC Press: 255–313. https://
+Adhesives. West Conshohocken, PA: ASTM International.      www.fpl.fs.fed.us/documnts/pdf2013/fpl_2013_frihart001.
+  ASTM D2559. Standard specification for adhesives for     pdf
+  structural laminated wood products for use under exterior  Frihart, C.; Brandon, R.; Beecher,, J.; Ibach, R. 2017.
+  (wet use) exposure conditions.                           Adhesives for achieving durable bonds with acetylated
+  ASTM D5574. Standard methods for establishing            wood. Polymers. 9: 731. https://www.fpl.fs.fed.us/
+  allowable mechanical properties of wood bonding          documnts/pdf2017/fpl_2017_frihart001.pdf
+  adhesives for design of structural joints.               Gardner, D.J.; Blumentritt, M.; Wang, L.; Yildirim, N. 2014.
+Blomqvist, L.; Sandberg, D.; Johansson, J. 2014. Influence  Adhesion theories in wood adhesive bonding. Reviews
+of veneer orientation on shape stability of plane laminated  of Adhesion and Adhesives. 2(2): 127–172. doi:10.7569/
+veneer products. Wood Material Science & Engineering.      RAA.2014.097304
+9(4): 224–232. doi:10.1080/17480272.2014.919022            Hardwood Plywood & Veneer Association. 2009. American
+Burnard, M.; Leavengood, S.; Muszyński, L.; Ganio, L.      national standard for hardwood and decorative plywood.
+2019. Investigating face veneer check development in       ANSI/HPVA HP–1–2009. Reston, VA
+decorative plywood panels: the impact of four common       Hass, P.; Wittel, F.K.; Niemz, P. 2013. Generic failure
+manufacturing factors. European Journal of Wood and Wood   mechanisms in adhesive bonds. Holzforschung. 67(2):
+Products. 77(6): 961–979. doi:10.1007/s00107-019-01455-2   207–215. doi:10.1515/hf-2011-0256
+Caster, R.W. 1980. Correlation between exterior exposure   Hayashi, S.; Nishimoto, K. 1965. Studies on the water
+and automatic boil test results. In: John, W.E.; Gillespie,  permeability of hardwoods. Wood Research. 35: 33–43.
+R.H., eds. Proceedings of a symposium, wood adhesives—     Hemmilä, V.; Adamopoulos, S.; Karlsson, O.; Kumar,
+research, application, needs. Madison, WI: U.S. Department  A. 2017. Development of sustainable bio-adhesives for
+of Agriculture, Forest Service, Forest Products Laboratory.  engineered wood panels–a review. RSC Advances. 7(61):
+Christiansen, A.W. 1990. How overdrying wood reduces its   38604–38630. doi:10.1039/C7RA06598A
+bonding to phenol-formaldehyde adhesives: a critical review  Hunt, C.G.; Frihart, C.R.; Dunky, M.; Rohumaa, A. 2018.
+of the literature. Part I. Physical responses. Wood and    Understanding wood bonds: going beyond what meets the
+Fiber Science. 22(4): 441–459. https://www.fs.usda.gov/    eye: a critical review. Reviews of Adhesion and Adhesives.
+treesearch/pubs/8947                                       6(4): 369–440. https://www.fpl.fs.fed.us/documnts/pdf2018/
+Christiansen, A.W. 1991. How overdrying wood reduces its   fpl_2018_hunt002.pdf
+bonding to phenol-formaldehyde adhesives: a critical review  Jokerst, R.W. 1981. Finger-jointed wood products. Research
+of the literature. Part II. Chemical reactions. Wood and Fiber  Paper FPL–RP–382. Madison, WI: U.S. Department of
+Science. 23(1): 69–84. https://www.fs.usda.gov/treesearch/  Agriculture, Forest Service, Forest Products Laboratory.
+pubs/9065
+                                                           Kamke, F.A.; Lee, J.N. 2007. Adhesive penetration in
+Comstock, G. L. 1970. Directional permeability of          wood—a review. Wood and Fiber Science. 39(2): 205–220.
+softwoods. Wood Fiber. 1: 283–289.                         https://wfs.swst.org/index.php/wfs/article/view/641
+Dillard, D.A. 2002. Fundamentals of stress transfer in     Konnerth, J.; Kluge, M.; Schweizer, G.; Miljković, M.;
+bonded systems. In: Dillard, D.A.; Pocius, A.V., eds.      Gindl-Altmutter, W. 2016. Survey of selected adhesive
+Adhesion science and engineering volume 1: The mechanics   bonding properties of nine European softwood and
+of adhesion. Amsterdam, The Netherlands: Elsevier: 1–44.   hardwood species. European Journal of Wood and Wood
+Dunky, M. 2017. Adhesives in the wood industry. In: Pizzi,  Products. 74: 809–819. doi:10.1007/s00107-016-1087-1
+A.; Mittal, K.L., eds. Handbook of adhesive technology, 3rd  Mantanis, G.I.; Athanassiadou, E.T.; Barbu, M.C.;
+ed. Boca Raton, FL: CRC Press: 511–574.                    Wijnendaele, K. 2018. Adhesive systems used in the
+Food and Agriculture Organization of the United Nations.   European particleboard, MDF, and OSB industries. Wood
+2019. FAOSTAT database, food and agriculture data. http://  Material Science & Engineering 13(2): 104–116. doi:10.108
+www.fao.org/faostat/en/#home. (Accessed June 11, 2019.)    0/17480272.2017.1396622
+Frihart, C.R. 2009. Adhesive groups and how they relate to  Marra, A.A. 1980. Applications of wood bonding. In:
+the durability of bonded wood. Journal of Adhesion Science  R.F. Bloomquist; A.W. Christiansen; R.H. Gillespie; G.E.
+
+10–22
+
+=== PAGE 23 ===
+CHAPTER 10 | Wood Adhesives: Bond Formation and Performance
+
+Myers, eds. Adhesive bonding of wood and other structural
+materials, Chapter IX. EMMSE Project. University Park,
+PA: Pennsylvania State University: 365–418.
+Marra, A.A. 1992. Technology of wood bonding-principals
+in practice. New York, NY: Van Nostrand Reinhold.
+Murmanis, L.; River, B.H.; Stewart, H.A. 1986. Surface
+and subsurface characteristics related to abrasive-planing
+conditions. Wood and Fiber Science. 18(1): 107–117.
+National Particleboard Association. 2016. Particleboard.
+ANSI A208.1–2016. New York, NY: American National
+Standards Institute.
+Pizzi, A.; Mittal, K.L. 2017. Handbook of adhesive
+technology. 3rd edition. New York, NY: Marcel Dekker, Inc.
+River, B.H. 1981. Behavior of construction adhesives under
+long-term load. Research Paper FPL–RP–400. Madison,
+WI: U.S. Department of Agriculture, Forest Service, Forest
+Products Laboratory. https://www.fpl.fs.fed.us/documnts/
+fplrp/fplrp400.pdf
+River, B.H. 1984. Accelerated, real-time aging for 4
+construction adhesives. Adhesives Age. 2: 16–21. https://
+www.fpl.fs.fed.us/documnts/pdf1984/river84a.pdf
+River, B.H. 2003. Fracture of adhesive-bonded wood
+joints. In: Pizzi, A; Mittal, K.L., eds. Handbook of adhesive
+technology, 3rd edition. CRC Press, Boca Raton, FL:
+325–350. https://www.fpl.fs.fed.us/documnts/pdf2003/
+river03a.pdf
+River, B.H.; Gillespie, R.H.; Vick, C.B. 1991. Wood as
+an adherend. In: Minford, J.D., ed. Treatise on adhesion
+and adhesives. New York, NY: Marcel Dekker, Inc. Vol. 7.
+https://www.fpl.fs.fed.us/documnts/pdf1991/river91a.pdf
+Rohumaa, A.; Hunt, C.G.; Hughes, M.; Frihart, C.R.;
+Logren, J. 2013. The influence of lathe checking depth and
+orientation on the bond quality of phenol-formaldehyde-
+bonded birch plywood. Holzforschung. 67(7): 779–786.
+https://www.fpl.fs.fed.us/documnts/pdf2013/fpl_2013_
+rohumaa001p.pdf
+Sellers, T., Jr. 1985. Plywood and adhesive technology. New
+York, NY: Marcel Dekker, Inc.
+Stehr, M.; Johansson, I. 2000. Weak boundary
+layers on wood surfaces. Journal of Adhesion
+Science and Technology. 14(10): 1211–1224.
+doi:10.1163/156856100742168
+
+                                                                                                           10–23
+
+=== PAGE 24 | lowtext ===
+
+
+=== PAGE 25 ===
+  Wood Handbook
+
+      Wood as an Engineering Material
+
+Forest Products Laboratory | United States Department of Agriculture Forest Service | Madison, Wisconsin
+
+=== PAGE 26 ===
+Abstract
+Summarizes information on wood as an engineering
+material. Presents properties of wood and wood-based
+products of particular concern to the architect and engineer.
+Includes discussion of designing with wood and wood-based
+products along with some pertinent uses.
+Keywords: wood structure, physical properties (wood),
+mechanical properties (wood), lumber, wood-based
+composites, plywood, panel products, design, fastenings,
+wood moisture, drying, gluing, fire resistance, finishing,
+decay, preservation, wood-based products, heat sterilization,
+sustainable use
+
+                                                                           Pesticide Precautionary Statement
+                                                                           This publication reports research involving pesticides.
+March 2021                                                                 It does not contain recommendations for their use, nor
+Forest Products Laboratory. 2021. Wood handbook—wood as an                 does it imply that the uses discussed here have been
+engineering material. General Technical Report FPL-GTR-282. Madison,       registered. All uses of pesticides must be registered by
+WI: U.S. Department of Agriculture, Forest Service, Forest Products        appropriate State and/or Federal agencies before they
+Laboratory. 543 p.
+                                                                           can be recommended.
+A limited number of free copies of this publication are available to the
+public from the Forest Products Laboratory, One Gifford Pinchot Drive,     Caution: Pesticides can be injurious to humans,
+Madison, WI 53726-2398. This publication is also available online at
+www.fpl.fs.fed.us. Laboratory publications are sent to hundreds of libraries  domestic animals, desirable plants, and fish or other
+in the United States and elsewhere.                                        wildlife, if they are not handled or applied properly.
+The Forest Products Laboratory is maintained in cooperation with the       Use all pesticides selectively and carefully. Follow
+University of Wisconsin.                                                   recommended practices for the disposal of surplus
+The use of trade or firm names in this publication is for reader information  pesticides and pesticide containers.
+and does not imply endorsement by the United States Department of
+Agriculture (USDA) of any product or service.
+
+In accordance with Federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, the USDA, its Agencies,
+offices, and employees, and institutions participating in or administering USDA programs are prohibited from discriminating based on race, color, national
+origin, religion, sex, gender identity (including gender expression), sexual orientation, disability, age, marital status, family/parental status, income derived
+from a public assistance program, political beliefs, or reprisal or retaliation for prior civil rights activity, in any program or activity conducted or funded by
+USDA (not all bases apply to all programs). Remedies and complaint filing deadlines vary by program or incident.
+Persons with disabilities who require alternative means of communication for program information (e.g., Braille, large print, audiotape, American Sign
+Language, etc.) should contact the responsible Agency or USDA’s TARGET Center at (202) 720–2600 (voice and TTY) or contact USDA through the
+Federal Relay Service at (800) 877–8339. Additionally, program information may be made available in languages other than English.
+To file a program discrimination complaint, complete the USDA Program Discrimination Complaint Form, AD-3027, found online at http://www.ascr.usda.
+gov/complaint_filing_cust.html and at any USDA office or write a letter addressed to USDA and provide in the letter all of the information requested in
+the form. To request a copy of the complaint form, call (866) 632–9992. Submit your completed form or letter to USDA by: (1) mail: U.S. Department of
+Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250–9410; (2) fax: (202) 690–7442; or
+(3) email: program.intake@usda.gov.
+USDA is an equal opportunity provider, employer, and lender.

@@ -1,0 +1,42 @@
+# ID: faq_393
+# SOURCE: https://saeaerodesign.com/cdsweb/rqa/ViewFAQ.aspx?faqnum=393
+# ORIGINAL: reference/raw/faq_393.html
+# CONVERTED: 2026-09-18 20:54 UTC-0500 | type html | 1 pages | ~320 tokens
+
+=== PAGE 1 ===
+# SAE Aero Design
+
+Menu
+
+Click the button to view more details of the error.
+
+Click here to see what went wrong
+Dismiss
+
+FAQ #393
+
+Regular Class 2026: Density Altitude Breakpoints
+
+Last Updated On
+2/17/2026 09:52:37 AM
+by
+
+talmadge33
+
+Question
+
+In the Addendum to Section 4.5 of the TDS, Flight Score Prediction (Regular Class Only), point number 5 states that the file will be read directly by the software. From this, we understand that the density altitude will be provided as the input and the predicted flight score will be taken as the output.
+
+How precise does the CSV file need to be, and how will the software handle cases where the measured density altitude does not exactly match a value in the file?
+
+Answer
+
+There is no requirement to have equal spacing in the density altitude breakpoints. You may elect to use 1 ft increments in some places and 100 ft increments in others, for example. Further, you may elect to duplicate density altitude breakpoints at a score transition point to prevent interpolation. The highest payload score prediction will be used in the case of duplicate density altitude breakpoints. Otherwise, the software will linearly interpolate between breakpoints.
+
+No Attachments
+
+| Rule Numbers |
+
+| 2026:2026.4.5 |
+
+SAE International Privacy Policy

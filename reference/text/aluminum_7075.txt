@@ -1,0 +1,105 @@
+# ID: aluminum_7075
+# SOURCE: https://www.aircraftmaterials.com/data/aluminium/7075.html
+# ORIGINAL: reference/raw/aluminum_7075.html
+# CONVERTED: 2026-09-18 21:22 UTC-0500 | type html | 1 pages | ~1471 tokens
+# NOTE: 7075-T6 properties by temper/form (vendor data page)
+
+=== PAGE 1 ===
+# Aluminium Alloy 7075 | Aircraft Materials
+
+# Aluminium Alloy 7075
+
+Aluminium Alloy 7075 offers the highest strength of the common screw machine alloys. The superior stress corrosion resistance of the T173 and T7351 tempers makes alloy 7075 a logical replacement for 2024, 2014 and 2017 in many of the most critical applications. The T6 and T651 tempers have fair machinability. Alloy 7075 is heavily utilized by the aircraft and ordnance industries because of its superior strength.
+
+| Chemical Composition Limits |
+
+| Weight% | Al | Si | Fe | Cu | Mn | Mg | Cr | Zn | Ti | Other Each | Others Total |
+
+| Alloy 7075 min | Rem | - | - | 1.2 | - | 2.1 | 0.18 | 5.1 | - | - | - |
+
+| Alloy 7075 max | Rem | 0.40 | 0.50 | 2.0 | 0.30 | 2.9 | 0.28 | 6.1 | 0.20 | 0.05 | 0.15 |
+
+## Typical Mechanical Properties
+
+| Material | Temper | Size (") | Tensile Strength (ksi) | Yield Strength (ksi) | Elongation in 2" % |
+
+| Alloy 7075 Bar | T651 | - | 77 | 66 | 7 |
+
+| Alloy 7075 Bar | T7351 | <4" | 68 | 56 | 10 |
+
+| Alloy 7075 Bar | T73511 | <0.25 | 68 | 58 | 7 |
+
+| Alloy 7075 Bar | T73511 | 0.25 - 1.5 | 70 | 61 | 8 |
+
+| Alloy 7075 Bar | T73511 | 1.5 - 3.0 | 69 | 59 | 8 |
+
+| Alloy 7075 Bar | T6511 | <0.25 | 78 | 70 | 7 |
+
+| Alloy 7075 Bar | T6511 | 0.25 - 0.5 | 81 | 73 | 7 |
+
+| Alloy 7075 Bar | T6511 | 0.5 - 3.0 | 81 | 72 | 7 |
+
+##
+
+| Material | Temper | Thickness (in) | Tensile Strength (ksi) | Yield Strength (ksi) | Elongation % |
+
+| Alloy 7075 Sheet | T6 Bare | 0.125 - 0.25 | 78 | 69 | 8 |
+
+| Alloy 7075 Sheet | T651 Bare | 0.25 - 0.50 | 78 | 67 | 9 |
+
+| Alloy 7075 Sheet | T651 Bare | 0.5 - 1.0 | 78 | 68 | 7 |
+
+| Alloy 7075 Sheet | T6 Clad | 0.188 - 0.25 | 75 | 64 | 8 |
+
+| Alloy 7075 Sheet | T651 Clad | 0.25 - 0.50 | 75 | 65 | 9 |
+
+| Alloy 7075 Sheet | T651 Clad | 0.5 - 1.00 | 78 | 68 | 7 |
+
+## Typical Physical Properties
+
+##
+
+| Characteristic | English | Metric |
+
+| Nominal Density (68° F / 20°C) | 0.101 lbs./ in 3 | 2.80 Mg/m3 |
+
+| Melting Range | 990° F - 1175° F | 532°C - 635 °C |
+
+| Specific Heat (212 °F / 100°C | 0.23 BTU/lb - °F | 960 J/kg-°K |
+
+Availability
+
+Aluminium Alloy 7075 is available in Bar (Flat, Hexagon, Round, Square) Sheet, Plate, Strip, Wire, Forging Stock and Tube. View stock list for further information, Sheet Stock, Plate stock for all other stock availability of Aluminium Alloy 7075 contact Sales.
+
+| Specifications | | Extrustions /Part Numbers |
+
+| BS 2 L95 Alloy 7075-T651 Plate BS 2 L88 Alloy 7075-T6 Clad Sheet and Strip BS L160 Alloy 7075-T73511 Bars and Sections BS L161 Alloy 7075 Forging Stock and Forgings BS L162 Alloy 7075 Forging Stock and Forgings BS L170 Alloy 7075-T6511 Bars and Sections DTD 5110 7075 Clad Plate DTD 5124 7075 Bars and Sections AMS 4038 7075-T651 Superseded by AMS 4045 AMS 4039 7075-T651 Superseded by AMS 4049 AMS 4044 7075 -0 Sheet and Plate AMS 4045 7075-T6 Sheet and T651 Plate AMS 4046 7075-T6 Alclad one side Sheet, T651 Plate AMS 4048 7075-T0 Alclad Sheet and Plate AMS 4049 7075 -T6 Alclad Sheet and T651 Plate AMS 4078 7075-T7351 Plate AMS 4122 7075-T6 Cold finished rod, bar, wire AMS 4123 7075-T651 Cold finished bar, rod AMS 4124 7075-T7351 Cold finished bar, rod, wire AMS 4126 7075-T6 Forgings AMS 4131 7075-T74 Forgings AMS 4139 7075 Forgings (Non-Current) AMS 4141 7075-T73 Die Forgings AMS 4147 7075-T7352 Forgings AMS 4154 7075-T6 Extrusions AMS 4166 7075-T73 Extusion AMS 4167 7075-T73511 Extrusions AMS 4168 7075-T6511 Extrusions Unstraightened AMS 4169 7075-T6511 Extrusions Straightened AMS 4174 7075-T73 Flash Welded Rings AMS 4186 7075-TF Cold finished bar, rod, wire AMS 4187 7075-0 Cold finished bar, rod, wire QQ-A-250/13 7075-0 Alclad sheet and plate QQ-A-250/13 7075-T6 Alclad sheet and plate QQ-A-250/18 7075-0 Clad one side, sheet and plate QQ-A-250/18 7075-T6 Clad one side, sheet and plate QQ-A-250/24 7075-T7651 Plate QQ-A-250/25 7075 Sheet, clad with7072-T76 QQ-A-250/26 7075 Sheet, clad with7011-T76 QQ-A-367 Alloy 7075-T6 Forgings MIL-A-22771 AIR 9048.690 7075-T7351 Plate AIR 9048.700 7075-T7351 Plate AIR 9048.710 7075-T7351 Plate AIR 9049 | | AND10133-1401/7075T6511 AND10134-1006/7075T73511 AND10136-2001/7075T3511 AND10136-2401/7075T6511 AND10136-2401-7075T73511 AND10136-2404/7075T6511 AND10136-2407/7075T6511 AND10136-3004/7075T73511 AND10138-0604/7075T6511 BAC1490-2734-7075T6 BAC1490-2865-7075T6 BAC1496-377-7075T6 BAC1496-377-7075T62 BAC1498-117-7075T6 BAC1498-146-7075T62 BAC1498-156-7075T6 BAC1498-157-7075T6 BAC1498-279-7075T62 BAC1498-285-7075T62 BAC1503-100122-7075T6 BAC1504-2583-7075T6511 BAC1505-100246-7075-T6511 BAC1505-100447-7075T6511 BAC1505-100617-70756511 BAC1505-100773-7075T6511 BAC1505-100849-7075T6511 BAC1506-2422-7075T6511 BAC1509-100027-7075T6511 BAC1509-100146-7075T6511 BAC1509-100506-7075T6511 BAC1510-822-7075T6 BAC1514-2595-7075T73511 BAC1518-940/7075T6511 BAC1520-2199-7075T73511 BAC1520-792-7075T65 |
+
+Customer Reviews - What Customers Say About Us!
+
+"Just wanted to say thanks for your efforts and updates"
+
+"I always try you as you often keep stock that can't be found elsewhere"
+
+"Prompt answer & knowledge of available material, timescale & price within a good time"
+
+"Packaging is superb"
+
+"Thank you for your quick response"
+
+| | CLICK HERE TO VIEW OUR BROCHURE | |
+
+Disclaimer
+
+Every effort is made to ensure that technical specifications are accurate. However, technical specifications included herein should be used as a guideline only. All specifications are subject to change without notice.
+
+home - products - services - calculator - about us - contact us - privacy policy
+
+AircraftMaterialsUK.com Ltd Reg Co. in England and Wales 4141886 - Unit D, The Heights Business Park, Ibstone Road, Stokenchurch, Bucks, HP14 3BG.
+
+Tel: + 44(0) 1494 484844 Fax: 44(0) 1494 482155 Tel US: +1 714 735 4413
+
+Site © 2013 Aircraftmaterialsuk.com Ltd
+
+## Document links on this page
+- https://www.aircraftmaterials.com/AMUK Brochure.pdf
