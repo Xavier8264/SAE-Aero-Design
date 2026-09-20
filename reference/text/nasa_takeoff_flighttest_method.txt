@@ -1,0 +1,1563 @@
+# ID: nasa_takeoff_flighttest_method
+# SOURCE: https://ntrs.nasa.gov/api/citations/19740008604/downloads/19740008604.pdf
+# ORIGINAL: reference/raw/nasa_takeoff_flighttest_method.pdf
+# CONVERTED: 2026-09-19 21:44 UTC-0500 | type pdf | 42 pages | ~17963 tokens
+# NOTE: NASA simplified flight test method for measuring takeoff performance.
+# FLAG img: pages 1-42
+# FLAG lowtext: pages 27
+# FLAG garbled: pages 37
+
+=== PAGE 1 | img ===
+NASA TECHNICAL NOTE                            NASA TN D-7603
+
+M 0
+*o
+'1.
+n
+
+A SIMPLIFIED FLIGHT-TEST METHOD
+FOR DETERMINING AIRCRAFT TAKEOFF
+PERFORMANCE THAT INCLUDES
+EFFECTS OF PILOT TECHNIQUE
+
+by Terry J. Lurson and Willium G. Schtueikhard
+Flight Research Center
+Edwards, Cali$ 93523
+
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION  WASHINGTON, D. C.  FEBRUARY 1974
+
+=== PAGE 2 | img ===
+ 1. Report No.                        2. Government Accession No.            3. Recipient's Catalog No.
+, NASA TN D-7603
+ 4. Title and Subtitle                                                       5. Report Date
+   A SIMPLIFIED FLIGHT-TEST METHOD FOR DETERMINING AIRCRAFT                     February 1974
+   TAKEOFF PERFORMANCE THAT INCLUDES EFFECTS OF PILOT TECH-                  6. Performing Organization Code
+   NIQUE
+ 7. Author(s1                                                                8. Performing Organization Report No.
+           .                                                                   H-802
+   Terry J Larson and William G. Schweikhard
+                                                                            10. Work Unit No.
+ 9. performing Organization Name and Address                                   766-72-02
+   NASA Flight Research Center
+   P. 0. Box 273                                                            11. Contract or Grant No.
+   Edwards, California 93523
+                                                                            13. Type of Report and Period Covered
+12. Sponsoring Agency Name and Address                                         Technical Note
+   National Aeronautics and Space Administration
+   Washington, D . C . 20546                                                14. Sponsoring Agency Code
+
+                                                                           I
+15. Supplementary Notes
+
+                     A method for evaluating aircraft takeoff performance from brake release to
+                  air-phase height that requires fewer tests than conventionally required is
+                  evaluated with data for the XB-70 airplane. The method defines the effects of
+                  pilot technique on takeoff performance quantitatively, including the decrease
+                  in acceleration from drag due to lift. For a given takeoff weight and throttle
+                  setting, a single takeoff provides enough data to establish a standardizing
+                  relationship for the distance from brake release to any point where velocity
+                  is appropriate to rotation. The lower rotation rates penalized takeoff perform-
+                  ance in terms of ground roll distance; the lowest observed rotation rate required
+                  a ground roll distance that was 19 percent longer than the highest. Rotations
+                  at the minimum rate also resulted in lift-off velocities that were approximately
+                  5 knots lower than the highest rotation rate at any given lift-off distance.
+
+17. Key Words (Suggested by Author(s1 I                 18. Distribution Statement
+   Takeoff performance
+   Aircraft performance test method
+   Evaluating pilot effects on aircraft performance                     Unclassified - Unlimited
+
+ 19. Security Classif. (of this report)  20. Security Classif. (of this page)  21. NO. of Pages  22. Pricef
+   Unclassified                               Unclassified                         39              $3.00
+
+                          * For sale by the National Technical Information Service, Springfield, Virginia 22151
+
+=== PAGE 3 | img ===
+             A SIMPLIFIED FLIGHT-TEST METHOD FOR DETERMINING
+
+               AIRCRAFT TAKEOFF PERFORMANCE THAT INCLUDES
+
+                         EFFECTS OF PILOT TECHNIQUE
+                   Terry J . Larson and William G . Schweikhard
+                              Flight Research Center
+
+                                 INTRODUCTION
+
+    Aircraft takeoff performance must be evaluated to establish the limits of air-
+craft operation and for certification purposes, It is usually determined by analyzing
+many separate takeoffs , as in reference 1. With this approach , data for each tslkeoff
+are corrected to standard conditions (usually zero wind and sea-level values of
+thrust, density , and weight) by using the methods outlined in reference 2. The pro-
+cedure requires a great deal of test support and can also consume considerable
+time. Furthermore , although much of the scatter in the resulting data is usually
+attributed to variations in pilot technique, the method does not determine the
+effects on aircraft performance of different types of variation in pilot input. For ex-
+ample, reference 1 analyzed over 50 takeoffs made by the XB-70 airplane, but the
+effects of variations in pilot technique on performance could be only inferred. For
+this reason, test techniques and analytical methods are needed that provide all the
+information pertinent to the aircraft's performance, including the effects of pilot
+inputs. A technique that reduces the test effort and the time necessary to produce
+the data would be especially attractive.
+
+    This paper presents a method that determines the takeoff performance of an air-
+craft , including the effects of pilot technique , from a small number of takeoffs. The
+method is applied to some of the XB-70 takeoffs reported in reference 1; the takeoff
+performance of this airplane is especially sensitive to pilot technique. Although the
+method is applied to this airplane only, it can be applied to any aircraft that takes
+off horizontally.
+
+                                    SYMBOLS
+
+    Physical quantities in this report are given in the International System of
+Units (SI) and parenthetically in U . S . Customary Units. Measurements were taken
+in U .S . Customary Units. Factors relating the two systems are presented in refer-
+ence 3 .
+
+A           wing aspect ratio
+
+=== PAGE 4 | img ===
+                                                        2       2
+a           aircraft acceleration parallel to runway, m/sec (ft/sec )
+
+            aerodynamic drag coefficient
+cD
+
+C           induced drag coefficient
+ Di
+            zero-lift drag coefficient
+cD*
+            aerodynamic lift coefficient
+cL
+D           average aerodynamic drag, N (lbf)
+E           energy , joules (ft-lbf)
+
+      dC
+        D:
+          1
+         2
+e =   dCL     , Oswald efficiency factor
+      dCD
+          2
+      dCL
+F           average gross thrust of aircraft during ground roll or air phase,
+ g            N (lbf)
+            average net thrust of aircraft during ground roll or air phase, N (lbf)
+Fn
+                            to                      2
+g           acceleration due  gravity, m/sec2 (ft/sec )
+h           geometric height above runway, m (ft)
+
+            air-phase height, m (ft)
+ha
+        2      2
+     va - Vlof ,                                                          m
+h =               specific airplane kinetic energy increase during air phase,  (ft)
+ V       2g
+                   2
+    ( ~ ) ( (::: ~ ) ~ )
+K = - - - correction factor for applying equations that define AVr
+                                                                           a
+                        and ASr     for standard conditions to test conditions
+                                 a
+
+k           intercept of straight line
+m           slope of straight line
+
+2
+
+=== PAGE 5 | img ===
+                         2
+S           wing area, m
+            air-phase distance , horizontal distance traveled by aircraft from lift-
+'a                                   ,
+              off to air-phase height m (ft)
+
+S           ground roll distance traveled by aircraft from brake release to lift-off ,
+ g            m (ft)
+
+            distance from lift-off to height , h , above runway during air phase,
+'h
+              m (ft)
+            ground roll distance traveled by aircraft from brake release to initia-
+ST?           tion of rotation, m (ft)
+
+sr          ground roll distance traveled by aircraft from brake release to initia-
+  s OT)       tion of rotation , standardized for relating distance to aircraft veloc-
+              ity, m (ft)
+
+t           time, sec
+
+V           aircraft velocity, knots or m/sec (ft/sec)
+va          velocity at air-phase height, knots or m/sec (ft/sec)
+
+W           aircraft weight, kN (lbf)
+a           aircraft angle of attack , deg
+
+    a lof - a r
+a =          , deg/sec
+
+A           algebraic change In value of reference variable
+            distance from beginning of rotation to lift-off , m (ft)
+
+            change in horizontal distance during rotation due to the deviation of
+   a          acceleration from initial value (negative value represents loss of
+              distance), m (ft)
+
+            time from beginning of rotation to lift-off , sec
+
+            change in velocity from beginning of rotation to lift-off , knots or m/sec
+               (ftlsec)
+
+Avr         change in velocity during rotation due to the deviation of acceleration
+    a         from initial value (negative value represents loss in velocity) , knots
+              or m/sec (ftlsec)
+CL          coefficient of rolling friction
+                                                                                  3
+
+=== PAGE 6 | img ===
+            ambient density, kg/m 3 (slugS/ft 3
+P                                            )
+0           ratio of measured ambient density to standard sea-level value
+
+Subscripts:
+
+eff         effective, referenced to time during rotation phase when decrease in
+              acceleration becomes significant
+lof         referenced to time of aircraft lift-off
+
+            calculated value based on lift curve in ground effect
+P1
+            value based on takeoff measurements of the variation of    with a
+p2
+
+            referenced to time of initiation of rotation
+
+S           standardized value
+
+t           test or measured value
+
+                             AIRCRAFT DESCRIPTION
+
+    The XB-70 airplane used in this investigation (fig. 1) was a large, delta-winged
+aircraft designed for long-range supersonic cruise. The airplane was designed to
+cruise at a Mach number of 3 and to take off at weights of more than 2224 kilonewtons
+(500,000 pounds force) . Data for the two XB-70 aircraft are presented; their
+configurations are described in detail in reference 4, and information pertaining to
+takeoff configuration and operating procedure is given in reference 1.
+
+                          DATASOURCEANDACCURACY
+
+    The data in this paper are from some of the takeoffs reported in reference 1.
+Instrumentation and data processing were as described in that report. Angle of
+attack was measured from a vane mounted on a nose boom, and fuel quantity, which
+was measured for weight determination, was recorded by a pulse-code-modulation
+system. Optical space-positioning measurements were obtained from a cinetheodolite
+tracking system, and meteorological information was provided by the Air Weather
+Service at Edwards Air Force Base.
+
+    Runs were selected according to the normalcy of the pilot's takeoff techniques,
+the accuracy of the space-positioning data, and the degree of correction necessary
+to standardize the distances and velocities.
+
+4
+
+=== PAGE 7 | img ===
+    The standardization procedures are described in appendix A of reference 1.
+The accuracy of basic measurements is repeated below for convenience.
+    Position   .                                             t0.6 m (22 ft)
+
+    Velocity   .                                                    tl knot
+                   .                                                      2
+    Acceleration                                + O . 03 m/sec2 (20.1 ft/sec )
+
+    Angle of attack                                                   20.5'
+
+    Thrust                                               222 kN (25000 lbf)
+    Weight     .                                        22.22 k N (2500 lbf)
+                                                                           -
+    Temperature    .                                        50.6' C (51' F)
+               .                                     2100 N/m2 (?2 lbf/ft 2 )
+    Pressure
+
+                             TAKEOFF PERFORMANCE
+
+                                General Procedure
+
+    Takeoffs are usually thought of as having two phases (see fig. 2), a ground
+roll phase (from brake release to the lift-off of the last aircraft wheel) and an air
+phase (from lift-off to an arbitrary height sometimes called barrier height and
+referred to herein as air-phase height). In this paper, the sum of the ground roll
+and air-phase distances is termed the field length.
+
+    For the proposed method, the ground roll phase is divided into two parts, one
+from brake release to the beginning of aircraft rotation, the second from rotation to
+lift-off. If throttling procedures do not vary significantly from one takeoff to the
+next, the effects of pilot technique on performance are confined to the relatively
+short rotation phase.
+
+    Assuming that pilot technique effects are absent before aircraft rotation, for a
+given weight and under standard atmospheric and aircraft conditions the distance
+from brake release to rotation is a single-valued function of velocity. Therefore,
+this relationship can be established for any standardized aircraft weight with only
+one takeoff. A plot of this relationship can be used to determine the distance from
+brake release to the initiation of rotation.
+
+    Aircraft ground roll performance is affected by the forward velocity at which
+the pilot begins to rotate the aircraft and the way in which he performs the rotation.
+Further, if drag due to lift is large, as it is for the XB-70 airplane, lift-off velocity
+and distance cannot be accurately defined by a single standardized curve, because
+acceleration during the rotation decreases in a manner that depends on the pilot's
+rotation technique.
+
+                                                                                  5
+
+=== PAGE 8 | img ===
+    The proposed method allows the change in distance and velocity from the
+beginning of rotation to lift-off to be determined for a given rotation starting
+velocity and rotation rate. Therefore velocity and distance at lift-off can be
+determined by adding these increments to the velocity and distance at rotation.
+
+    For conventional evaluations of air-phase performance, the gain in specific
+energy from lift-off to the air-phase height is determined. Many takeoffs are nec-
+essary to establish the relationship between specific energy and air-phase dis-
+tance (distance from lift-off to air-phase height) . Once established, this relation-
+ship defines velocity at the air-phase height.
+
+    The proposed method for determining air-phase performance is similar to that
+proposed for the prerotation phase. That is, a series of data points obtained from
+one takeoff is used to determine specific energy gain as a function of distance in-
+stead of a set of points obtained one by one in a series of takeoffs for the air-phase
+height.
+
+    The following sections describe the method in detail for each phase of takeoff.
+Appendix A outlines the procedures for the general application of the method.
+
+                           Ground Roll Prior to Rotation
+
+    Reference 1 presents data for velocity at initiation of rotation plotted against
+distance from brake release for three aircraft weights. For reference purposes,
+data from that paper for a standard weight of 2313 kilonewtons (520,000 pounds
+force) are shown in figure 3. Each data point in figure 3 represents a single ground
+roll test. The distances are standardized for weight, density, and thrust, and the
+velocities are standardized for lift coefficient.
+    Because the effects of pilot technique are confined to the rotation phase, the
+ground roll distance traveled by an airplane from brake release to initiation of rota-
+tion is a single-valued function of aircraft velocity for a given aircraft weight under
+standard conditions. Hence, a sequence of data points from only one takeoff can be
+used to establish this relationship. Each point can be standardized as described in
+reference 1. These points can then be considered to correspond with the time of
+rotation, and a plot using the same abscissa and ordinate as figure 3 can be con-
+structed. A fairing of these points should give essentially the same results as the
+data obtained conventionally, as in figure 3 . Hence, for a given weight, only one
+takeoff is necessary to define the ground roll distance for any velocity appropriate
+to initiation of rotation.
+
+                                    Rotation
+    Change in acceleration, velocity, and distance during rotation. - Variations
+in the pilot's rotation techniaue are reflected in time histories of aircraft accelera-
+tion diring rotation. Figure- 4 shows a time history of the acceleration and angle of
+attack of the XB-70 airplane during a typical rotation. For purposes of comparison,
+a time history of acceleration calculated from wind-tunnel data from reference 5 is
+included. The equation used for the calculation, which results from summing the
+
+6
+
+=== PAGE 9 | img ===
+forces and accelerations along the ground track, is as follows:
+                                                                    -
+                                                       tkI
+                                          w )         s -
+                                        -    - 0.5pv         “D$]
+            W
+
+Valuesof CL and CD        were taken from reference 5 as a function of the meas-
+                       0
+ured angle of attack. The acceleration curves are similar in shape , and the in-
+crease in the measured angle of attack is nearly linear during most of the rotation.
+
+    The loss of acceleration during rotation that is apparent in figure 4 is primarily
+due to a large increase in drag due to lift , which is typical of delta-winged aircraft.
+Figure 5 shows the change in acceleration calculated for a constant rate of angle-of-
+attack change for the XB-70 airplane. The change due to induced drag is much
+larger than that due to ground rolling friction or thrust.
+
+    If acceleration during rotation were constant, the changes in velocity and dis-
+tance during rotation would be easy to determine, provided that this acceleration
+and the time taken to rotate , Atr , could be determined experimentally. W i t h a
+loss of acceleration during rotation , however, velocity and distance at lift-off
+are less for a given      than for constant acceleration. If the losses in velocity
+                    Atr
+and distance at lift-off due to decreasing acceleration during rotation are referred
+to as AVr    and ASr , AVr and ASr         canbe writtenas follows:
+          a           a
+
+                          Avr Vlof - Vr = arAtr + AVr
+                               =                       a
+
+                                      a
+                      AS = S - S = $(Atr)’     + VrAtr + ASr                (3)
+                         r   g    r                          a
+
+The components of AVr and ASr       are shown in figure 6 , along with other terms
+pertaining to rotation.
+    From equations (2) and (3) , it is apparent that to determine AVr and ASr
+from given values of Vr and Sr the quantities ary Atr, AVr , and ASr
+                                                                  a          a
+must be determined. These quantities can be approximated by simple linear
+functional relationships involving only basic aircraft and atmospheric quantities
+that usually can be considered constant for a given rotation.
+
+    Determination of ar and Atr. - For the period between brake release and
+the beginning of rotation, acceleration is a function of thrust , weight, and velocity
+for given runway conditions. For jet aircraft like the XB-70 airplane, acceleration
+is nearly constant during this period, and acceleration at rotation is about equal to
+the thrust-to-weight ratio. Hence, plotting the acceleration measured at rotation
+
+                                                                                7
+
+=== PAGE 10 | img ===
+                                       F         F
+during one or two tests as a function of - n     A ,
+                                            (or      if thrust values are avail-
+                                       Wt        Wt
+able only from the engine manufacturer's specifications) allows ar to be deter-
+mined for other thrust-to-weight ratios; that is,
+
+A method for determining a    when acceleration is a function of velocity is de-
+                     .     r
+scribed in appendix B
+    The time it takes to rotate, Atr, is a linear function of known quantities,
+assuming that (1) the rate of change of angle of attack is constant (or that an
+average rate computed for a given rotation in which & varies is an adequate
+approximation), (2) lift equals weight at lift-off, and (3) the lift-curve slope is
+linear. First writing
+
+                                  =     + &Atr aa acL
+                            C      C                                         (5)
+                             Llof    Lr
+
+and solving for       results in
+                                    C     - cL
+                                      =lof
+                              Atr =
+                                        acL
+                                       a-
+                                        aa
+                                C
+Thus, Atr is proportional to     L1of. But because C        equals        W
+                                  a                    Llof          0.5p wlof2) s '
+it follows that
+                                        W
+                               Atr :
+
+    Determination of AVr     and AS, . - To evaluate the changes in velocity and
+                          a           a
+distance that result from the decrease of acceleration during rotation, the variation
+of acceleration during rotation must be determined.
+
+    For a delta-winged aircraft, the variable that most affects acceleration during
+rotation is CL . Therefore the differential     can be approximated by the
+
+8
+
+=== PAGE 11 | img ===
+equation
+
+                              - da % - - aa  dCL
+                              dt    aCL dt
+
+This equation is valid except at small angles of attack, where the order of magnitude
+of the rolling friction approaches that of the induced drag and the loss of accelera-
+tion is small (see fig. 5).
+
+    The quantity aa in equation (8) can be derived by differentiating equa-
+tion (1):         acL
+
+                            - _                                             (9)
+                                   &( 2w   p-7cAe
+                            aa acL -
+
+      ,                                                                    da -
+Hence if the lift curve is known in ground effect (CL as a function of a ) ,
+                                                                           dt
+can be evaluated for a given variation of    or angle of attack during rotation.
+                                        CL
+This calculation method , referred to herein as the p1 method, is compared with
+the test, or p2 , method in the RESULTS AND DISCUSSION section,
+
+    When the test method is used, the lift curve need not be known, but it is
+assumed that CL is linear with a during rotation. This allows the variables
+to be transformed so that equation (8) can be written as follows:
+
+                                da dt  (2);
+                                    x
+
+If - aa  varies linearly with C    as indicated by equation (9), - aa is also
+                                L ’                              aa
+   acL
+linear with a and can be determixd with a minimum amount of testing. If this
+relationship and the given rotation rate (or the variation of angle of attack with
+                               ,                                        da
+time during rotation) are known equation (10) can be used to determine     .
+                                                                        dt
+                     - aa
+The assumption that        is linear with CL is reasonable, provided that the
+                     acL
+effect of the change in velocity during rotation is small compared to the variation in
+CL (eq. (9)).
+
+    The experimental relationship of acceleration to angle of attack can be stand-
+ardized by the relationship shown in equation (11).
+
+                                                                               9
+
+=== PAGE 12 | img ===
+                                    ($)
+
+                                            s(%)t
+                                     (
+                                      $)t
+
+                                                       is defined, (g)t can be
+which results directly from equation (9). Once
+determined for test conditions of p , Vr , and W.
+
+    The variation of acceleration at the low angles of attack that occur early in
+rotation depends on rolling friction as well as CL. Therefore - aa does not vary
+                                                               aa
+linearly at low angles of attack. Rotation rate is not linear early in rotation either,
+because it takes a certain amount of time for the rotation rate to increase from zero
+to the average rotation rate (see fig, 6) . However, the change in acceleration dur-
+ing this period is ordinarily small and has little effect on    or ASr . There-
+                                                         AVr
+                                                             a          a
+fore - da need be evaluated only in the rotation phase corresponding to higher
+      dt
+angles of attack, where the loss of acceleration is important and aa is nearly
+linear with a. An integral equation for acceleration then follows from equa-
+tion (10):
+
+where Atr      is the effective rotation time given by tlof - treff . The time tr
+           eff                                                                 eff
+is defined as the time when the change in acceleration after initiation of rotation
+becomes significant, and it can be identified in terms of angle of attack.
+    Appendix C gives general derivations of (AVra)      and (ASra)p     from the
+
+                                                    p2               2
+definition of @)t. Another way to define AVr       and ASr     is to plot test
+                                                a           a
+                                       a 2            -
+values of acceleration as a function of    instead of da as a function of a.
+                                                      da
+Both plots result in linear relationships.
+
+10
+
+=== PAGE 13 | img ===
+                                   Air Phase
+
+    The conventional way to determine specific kinetic energy gain is to subtract
+the level of kinetic energy at lift-off from that at a particular height (air-phase
+height) . This is the method used in reference 1 . In the test method , total specific
+energy (the sum of kinetic and potential energy gains) is calculated at many points
+in the climbout.
+
+    In equation form, the specific energy gain at a given point during climbout is
+
+Specific energy gain can also be written
+                               A;  = ( Fn 7 - ) D S h
+
+where Sh is the distance from lift-off to height, h. Combining equations (13)
+and (14) results in
+
+Therefore, for a given value of  Fn -  , the distance from lift-off is a linear
+
+function of the sums of the specific potential and kinetic energy gains.
+
+    With the proposed single takeoff method, distances from lift-off are standard-
+ized by using the technique used to standardize air-phase distance in reference 1.
+The distances from lift-off are then plotted as a function of  E . Because
+                                                          A w
+h = A- E - ha, the curve generated by these points is displaced from the curve
+ v    w
+generated with the conventional method by the air-phase height.
+
+                            RESULTS AND DISCUSSION
+
+                           Evaluation of Proposed Method
+
+    Ground roll prior to rotation. - Figure 7 compares the variation of ground
+roll distance with velocity at rotation for the conventional and single takeoff methods.
+Data derived by the single takeoff method are shown for two ground roll tests, one
+for each XB-70 airplane. Each point was’standardized in the same way as for
+
+                                                                               11
+
+=== PAGE 14 | img ===
+the reference 1 data. The agreement between the two sets of ground roll data from
+the single takeoff method is excellent. Differences between the data from these tests
+are well within the scatter of the data determined by
+
+    The data from the single takeoff method also            th a fairing of t
+from reference 1. Thus, for a given aircraft wei
+takeoff provided enough data to establish a stand
+the ground roll distance from brake release to any point where velocity is appro-
+priate to the initiation of rotation.
+    Rotation. - Figure 8 presents data for acceleration at rotation as a function of
+
+~     ~     )    (   ~      )
+             for individual flights. According to the scatter in this figure, a linear
+
+fairing of a   is accurate to      m/sec 2 (20.2 ft/sec 2 .
+            r                k0.06                     )
+                                                                        U
+                                             of     Wt      for individual flights.
+    In figure 9 , Atr is plotted as a function
+
+With a linear fairing of the data,     can be determined with an accuracy of
+                                 At,
+approximately 0.5 second. It was estimated that half of the scatter was due to
+measurement errors in Atr. The linear curve in figure 9 indicates that an assump-
+tion of constant angle-of-attack rate during rotation is acceptable for this analysis.
+
+    The data in figure 4 were used to determine the variation of acr aa with angle of
+attack. A s shown in figure 10, points were calculated for every half degree from
+3' to 7.5O. A straight line was drawn through the data between 4' and 6.5' and
+linearly extrapolated to higher angles of attack. The deviation of the data from
+linearity at the higher angles of attack is partly due to the effects of velocity on
+acceleration during rotation. The nonlinearity of the data for a < 4' was ex-
+pected because of the effects of friction. A value of 4O was used for     since
+                                   2            2                   clr eff
+acceleration changed only 0.1 m/sec (0.3 ft/sec ) before the airplane reached
+this angle of attack.
+
+    The test curve in figure 10 was standardized by using equation (11) and values
+of Ws equal to 2313 kilonewtons (520,000 pounds force), Vr       equal to 189 knots,
+                              3                 3             S
+and ps    equal to 1.2250 kg/m (0.00238 slug/ft 1. The test curve from figure 10
+is shown in figure 11 along with this standardized curve and a curve standardized
+by using equation (9) and wind-tunnel data from reference 5 . The standardized
+curve calculated from wind-tunnel data predicts a smaller loss of acceleration during
+rotation than the standardized curve calculated from data in figure 10. However, the
+difference between the two standardized curves, which is less than 0.06 m/sec 2 -deg
+          2                                                    of
+( 0 . 2 ft/sec -deg) for any angle of attack, results in a difference  only 1 knot or so
+in AVr     for typical rotations.
+        a
+
+12
+
+=== PAGE 15 | img ===
+    Figure 12 compares calculated and directly measured values of        and
+                                                                  AVr
+                                                                      a
+      (see appendix D for the calculation procedure). The AVr    values derived
+AS,
+   a                                                          a
+by the      method, which are based on takeoff acceleration data, are slightly more
+        p2
+accurate than the values derived by the     method, which are based on wind-
+                                        p1
+tunnel data. The values for the     method have a root-mean-square deviation of
+                                p2
+less than 1 knot from the measured data. A s can be inferred from figure 11, the
+values determined by the p    method are, on the average, slightly less than the
+measured values. Both methods are satisfactory, however, in view of the fact that
+the loss in velocity during rotation due to decreasing acceleration varies from 2 to
+1 3 knots.
+
+    The scatter in the ASr   data is greater than in the AVr   data, but this is
+                          a                                 a
+not of much significance, because ASr    is small compared with the total change
+in distance during rotation.          a
+
+    To test the accuracy with which the p2 method determined AVr and ASr
+(the total change in velocity and distance during rotation), calculated values of
+thcse quantities were also compared with direct measurements. The calculation
+procedure is outlined in appendix D .
+
+    The results are shown in figure 13. The standard deviation between the
+calculated and measured velocities is less than 2 knots, and that between the cal-
+culated and measured distances is approximately 35 meters (115 feet). A large
+proportion of the difference can be attributed to uncertainty in the measurement of
+Atr. Hence, the changes in velocity and distance during rotation determined with
+the test method by using pilot-controlled quantities of velocity at the beginning of
+rotation and rotation rate can be considered to be accurate.
+
+    Air phase. - In figure 14', data for hv = A- E - 10.7 meters  feet) as
+                                                               (35
+                                               W
+determined from a single takeoff at a standard weight of 2313 kilonewtons
+(520,000 pounds force) are plotted as a function of standardized air-phase distance.
+Also shown, from reference 1 and for the same weight, are an analytically pre-
+dicted curve and data for multiple takeoffs.
+
+    The single takeoff data and the analytical curve agree well throughout the
+air-phase performance range shown. The angle of attack during the single take-
+off was close to the 10.5' angle of attack used in the analytical computation. The
+disagreement between the single takeoff curve and the multiple takeoff data at
+distances below 600 meters (2000 feet) is believed to be a result of the fact that
+the angle of attack during the multiple takeoffs was higher than average during the
+early part of the air phase. A s explained in reference 1, the higher the angle of
+attack, the greater the air-phase distance for a given specific energy gain because
+of increased drag.
+
+                                                                               13
+
+=== PAGE 16 | img ===
+    The difference between the two sets of experimental data in figure 14 suggests
+that the data should be standardized for CL. As mentioned in reference 1, attempts
+to standardize for     using the conventional technique have not been successful.
+                   CL
+To define the effects of    on air-phase performance with the proposed test
+                        CL
+method, several takeoffs at different angles of attack would be required.
+
+                  Effect of Pilot Technique on Takeoff Performance
+
+    The test method makes possible a quantitative assessment of the effects of pilot
+technique on takeoff velocity and distance. It is assumed that the only variables
+dependent on pilot technique that significantly affect ground roll performance are.
+the velocity at which the rotation is begun, Vr , and the average rotation rate, a.
+In the air phase airplane performance is dependent on energy management.
+    Figure 15 shows the effect of Vr and 6 on standardized aircraft distance
+and velocity increments during rotation. For the range of & in these data (from
+1 . 2 degrees per second to 3 . 9 degrees per second), variations of approximately
+500 meters (1600 feet) and 25 knots occurred in ASr    and AV , respectively.
+                                                    S          rS
+For rotation initiation velocities of 166 knots and 178 knots, rotation rates were
+limited to 2 . 5 degrees per second and 3 . 0 degrees per second, respectively, to
+keep the angle of attack at lift-off from exceeding 13O (the tail-scraping angle of the
+XB-70 airplane was 14O).
+    Figure 15 was used to construct curves showing the relationship of velocity to
+distance at lift-off. Various values of Vr  and Sr at rotation (from fig. 7) were
+added to corresponding values of AVr and ASr        (from fig. 15). Figure 16(a)
+shows curves constructed in this manner for a weight of 2313 kilonewtons
+(520,000 pounds force) . Lift-off data from reference 1 are presented for comparison
+with the calculated lift-off curves, which are for & values of 1 degree per sec-
+ond, 2 degrees per second, and 4 degrees per second. The displacement of the
+curves from the rotation curve is due to the loss of acceleration during rotation.
+The calculated curves explain some of the scatter in the data, which, as noted,
+were for values of & that varied from 1 . 2 degrees per second to 3 . 9 degrees per
+second.
+
+    Figures 15 and 16(a) show that the lowest rate of rotation penalized takeoff per-
+formance by requiring ground roll distances that were as much as 19 percent longer
+than the distances for the highest rate. The lowest rate also resulted in lift-off veloc-
+ities that were as much as 5 knots lower than the highest rotation rate at any given
+lift-off distance. The lower rotation rates were also undesirable because they tended
+to reduce the pilot's control over lift-off velocity and attitude. On the other hand,
+rotation rates that are too high can result in tail scraping. In addition, if the rate
+of rotation is too high early in rotation, the pilot must reduce it, which causes the
+aircraft to be at a high angle of attack for a considerable length of time before lift-
+off. As discussed in reference 6 the time spent in this high drag condition can
+cause the ground roll to be longer than for a slower rotation. The average rotation
+
+14
+
+=== PAGE 17 | img ===
+rate reported in reference 1 for the XB-70 airplane was 2.2 degrees per second ,
+and this represents a good compromise between adequate pilot control and optimum
+ground roll performance.
+
+    The three field length curves in figure 16(b) represent conditions of minimum
+performance, nominal performance, and maximum performance (minimum distance
+for a given V ) . Data from reference 1 are also presented. The curves were cal-
+              a
+               S
+culated by adding air-phase distance from the curve in figure 14 to lift-off distances
+from the curves in figure 16(a). The maximum performance curve (h = 0 and
+                                                                   V
+& = 4 degrees per second) represents a rotation at the maximum rate assumed to be
+allowable and a steep constant-velocity takeoff that results in no increase in
+kinetic energy during the air phase. The minimum distances shown by this curve
+are based on an angle of attack that is lower than steep climbouts require. The
+flight data are well represented by the middle curve, which is based on values of
+hv and I?    that are close to the average values for the flight data.
+
+                             CONCLUDING REMARKS
+
+    A method for evaluating aircraft takeoff performance that requires fewer take-
+OF: than the conventional method was investigated. The method was evaluated
+T ,th the data used for a conventional takeoff performance analysis of the XB-70 air-
+)lane. The method makes possible a quantitative assessment of the effects of pilot
+technique during aircraft rotation that includes the decrease of acceleration from
+drag due to lift.
+
+    For a given aircraft weight and throttle setting, a single takeoff provides
+enough data to establish a standardizing relationship that indicates the distance
+from brake release to any point where velocity is appropriate to the initiation of
+rotation. The method uses the velocity at the beginning of rotation and rotation
+rate to determine the change in velocity and distance during the rotation phase of
+the takeoff. The lower rotation rates penalized takeoff performance in terms of
+ground roll distance; with the lowest observed rotation rate, 1 . 2 degrees per sec-
+ond, the XB-70 airplane required a ground roll distance that was 19 percent longer
+than with the highest rotation rate, 3.9 degrees per second. The lowest rate also
+resulted in lift-off velocities that were as much as 5 knots lower than the highest
+rotation rate at any given lift-off distance. The average rotation rate used in the
+takeoffs, 2.2 degrees per second , represented a good compromise between adequate
+pilot control and optimum ground roll performance.
+
+Flight Research Center
+  National Aeronautics and Space Administration
+    Edwards, Calif., Jan. 2, 1974
+
+                                                                               15
+
+=== PAGE 18 | img ===
+                                 APPENDIX A
+
+            APPLICATION OF TAKEOFF PERFORMANCE TEST METHOD
+
+                                 Takeoff Tests
+
+   Although ground roll performance, including the effects of pilot rotation tech-
+nique, can be determined for a given standard weight and throttle setting from only
+one takeoff, it is advisable to have at least two takeoffs performed. In addition, at
+least two tests are necessary to define the effect of angle of attack on the airplane's
+air-phase performance. The takeoffs should be made at nearly the same weight and
+within a few percent of the selected standard weight. Winds should be no higher
+than 5 to 10 knots, and other atmospheric conditions should be near standard day
+values.
+
+    One takeoff should incorporate a slow constant-rate rotation and a steep climb-
+out during the air phase, and the other a rapid constant-rate rotation and a shallow
+climbout. Rotation should come early in the test of the first type and late in that of
+the second. Rotation speeds should not be so low that tail scraping is likely or so
+high that the limit speeds are exceeded, and they should be compatible with flight
+safety during the subsequent climbouts.
+    The recommended procedure for standardizing performance quantities from two
+or more takeoffs performed in the manner just described is outlined below. The
+relationship of velocity and distance at lift-off to velocity at the beginning of rotation
+and rotation rate can be determined from these results.
+
+                     Ground Roll Performance Up to Rotation
+
+    First, standardize velocity and distance data for regular intervals during the
+ground rolls up to rotation by using the standardization procedures described in
+appendix A of reference 1 to obtain S   and Vr
+                                    rS          s c v )
+    Plot and fair Sr   as a function of Vp      for the times selected above. If
+                    S                     s cv>
+standardization procedures are adequate, a single curve can be generated from the
+two sets of data.
+
+                             Rotation Performance
+
+                            (          ~           ~           (         ~           ~
+    Calculate the parameter               for each test for the conditions at initia-
+
+tion of rotation. If thrust was not measured, use engine manufacturer specifications.
+Plot the thrust and weight parameter as a function of acceleration at the beginning
+
+16
+
+=== PAGE 19 | img ===
+                           APPENDIX A - Concluded
+of rotation, a . Fair a straight line through the data and the origin of the co-
+              r
+ordinate system.
+                                                                w,
+    Determine Atr for each test and plot it as a function of     L    . Drawa
+                                                                  2.
+                                                              OVlof a
+straight line through the two points and extrapolate if necessary. This line should
+also pass through the origin.
+
+    Plot time histories of acceleration and angle of attack for both tests. Calculate
+- aa and plot it as a function of angle of attack. Define ar  from the plot as from
+aa                                                       eff
+figure 10. Fair a straight line through each set of data and determine equations for
+- aa  (eq. (C2)). Standardize the equations for the two tests: They should be iden-
+aa
+tical. If they differ significantly, decide whether to standardize the equation on the
+basis of the average of the test results, to use data for the test considered more
+accurate, or to perform additional rotations. Develop the equations as described in
+appendix C to define AVr     and ASr     for standardized conditions.
+                          a           a
+
+                             Air-Phase Performance
+    Standardize air-phase distance at regular intervals for the two tests by using
+the equation from appendix A of reference 1 that results in S . Select a standard
+                                                            a-
+                                                             S
+weight as for a ground roll performance calculation. For each point, calculate the
+specific energy gained from lift-off,  E
+                                     A G.
+
+    Plot and fair Sa   as a function of A- E or h = A- E - ha.     plot of angle of
+                                          W                      A
+                                                   v    w
+                    S
+attack as a function of     is also helpful in interpreting the data. Significant
+                       Sa
+                         S
+differences between the two sets of data may be due to inaccurate standardization or
+to differences in drag caused by differences in angle of attack. If the standardization
+appears to be accurate, the difference is probably due to differences in angle of
+attack. Additional tests may be warranted to resolve such problems.
+
+                                                                                17
+
+=== PAGE 20 | img ===
+                                 APPENDIX B
+
+                   GENERAL METHOD FOR DETERMINING ar
+
+   When acceleration during ground roll is a function of velocity as well as thrust
+and weight) an expression for the acceleration at the beginning of rotation can be
+determined from a plot of acceleration as a function of velocity. Such a plot is typ-
+ically linear, like that shown in the sketch below for two different takeoffs.
+
+                                       V
+
+If acceleration is not linear with velocity, it may be necessary to plot acceleration as
+a function of v2 or v 1’2   to achieve a reasonably linear curve.
+
+    Assuming, for example, a linear relationship with velocity, a reasonable approx-
+imation for acceleration at rotation is
+
+                                    + F
+                                a r =   + mVr
+
+where m is the slope of the linear portion of the curve.
+
+    The standard day value of acceleration may be derived as follows:
+
+                      F               F
+                      - gs -          - gS
+                 a          mVr                    mvr
+                 - s - - wS           wS
+                 a    F            F            F
+                  t
+                      - gt -       -- gt        - gt
+                            mvr          mvr        - mVr
+                       wt           Wt           Wt
+
+                                                        $,
+The quantity mVr is usually of the order of one-tenth of     so the second
+
+18
+
+=== PAGE 21 | img ===
+                            APPENDIX B - Concluded
+
+term can be dropped for all practical purposes. The standard day acceleration then
+becomes
+                                      F
+                                      - gS
+                              a =     wS     a                            (B 3)
+                               S   F          t
+                                   - gt -
+                                   Wt    mvr
+
+Reduced, this expression assumes the form presented in the text when the accelera-
+tion is not a function of Vr.
+
+                                                                            19
+
+=== PAGE 22 | img ===
+                                APPENDIX C
+
+                  DERIVATION OF ( AVr
+                                       a)    AND t s r a )
+                                         p2              p2
+   The quantities                            can be determined from the
+                             and
+                          2               2
+successive integration of the equation
+                                  - da _ - - aa 6
+                                  dt   aa
+
+In this equation, - can be approximated by a linear function of angle of attack
+                 aa
+and can be defined by one rotation to lift-off (for example, see figs. 4 and 10) .
+Hence, - aa can be written
+        aa
+
+Once this relationship is established for one set of test conditions, it can be stand-
+ardized for other conditions by using equation (11) . Conversely, if the standardized
+equation is known, equation (11) can be used to calculate an expression for any test
+                      ($$
+condition. That is, if       has been defined in such a manner,       can be
+found because
+
+                             (E)t
+                                   = K(k + ma)s
+
+where
+
+which follows from equation (11).
+
+    A s explained in the text, the variation of acceleration during rotation is impor-
+tant only when the angle of attack reaches an appreciable angle,   . Angles of
+                                                              ar
+attack that occur after ar   is reached can be written           eff
+                         eff
+
+                                 @ = a    +Gt
+                                      r eff
+
+20
+
+=== PAGE 23 | img ===
+                             APPENDIX C - Concluded
+Substituting this expression for angle of attack in equation (C3) results in
+
+                        (%$                      “til
+                              = K [ k + m P e f f
+                                               +
+                                                     S
+
+A substitution of this expression for ($)t  in equation (Cl) results in
+
+By integrating over the effective rotation time, Atr  ,
+                                                   eff
+
+Thus,
+
+Integrating again to obtain the velocity increment,
+
+                                            (Atr   )”   &(atp )”
+                                                eff          eff
+                                                      +     6
+
+One more integration results in the ground roll increment
+
+                                                                                 21
+
+=== PAGE 24 | img ===
+                                  APPENDIX D
+
+               PROCEDURES FOREVALUATINGROTATIONMETHODS
+
+                        Verification of AVr    and ASr
+                                            a           a
+
+    The losses in velocity and distance during rotation due to the loss of acceleration
+were calculated directly from the cinetheodolite data and compared with the loss pre-
+dicted by the methods. That is, the results of the equation
+
+were compared with ?Pa)         and (""ra)     , and the results of the equation
+
+                            P1              p2
+
+were compared with (As.),       and (""r.)     . The actual effective rotation time,
+
+                             1              p2
+         , was used to calculate predictions of losses in velocity and distance to
+        t
+avoid errors in Atr that might result from using a performance test curve like that
+shown in figure 9.
+
+                    Verification of ("".>,    and pSr)p2
+                                           2
+    The term Atr was evaluated (see fig. 9) by using values of            and
+
+given by the measurements. With At,     and ar, which was determined from the
+fairing in figure 8, a prediction was made of the change in velocity during rotation
+assuming no loss of acceleration. Then the velocity loss during rotation due to
+acceleration decay, AVr , was calculated, as follows: An approximate initial
+                        a
+rotation velocity, Vr , was calculated from the measured value of
+                                                                 (Vlof),  and the
+
+22
+
+=== PAGE 25 | img ===
+                            APPENDIX D - Concluded
+
+calculated change in velocity without loss of acceleration. This value, combined
+with other known quantities, allowed an approximation to be made of      (see
+                                                                  AVr a
+eq. (C10) ) , A more accurate value of V,  was found by subtracting this approxi-
+                                       I
+mation of AVr    from the approximate value of V,.  The term AV,     was re-
+              a                                                   a
+calculated using this new value of V,. This value of       was used to make the
+                                                     AVr a
+final prediction of rotation velocity:
+
+                                                   pa)                     (D 1)
+                   (v')   = (Vlof,, - (aratr)    -
+                       p2                    p2           p2
+
+               was determined, AS,     could be calculated by using equation (C11) ,
+Once ("r,,                          a
+            r) .4
+             could be calculated from ( Slof)t.  Finally,
+and (Sr),
+          2                                                                    2
+were calculated, as follows:
+
+                                                                             23
+
+=== PAGE 26 | img ===
+                               REFERENCES
+
+1. Larson , Terry J . ; and Schweikhard , William G . : Verification of Takeoff Per-
+     formance Predictions for the XB-70 Airplane. NASA TM X-2215 , 1971.
+2. Lush , Kenneth J . : Standardization of Take-Off Performance Measurements for
+     Airplanes. Tech. Note R-12 , Air Force Flight Test Center, U .S . Air Force.
+
+3. Mechtly , E . A. : The International System of Units. Physical Constants and
+     Conversion Factors. Second Revision. NASA SP-7012, 1973.
+
+4. Wolowicz, Chester H.: Analysis of an Emergency Deceleration and Descent of
+     the XB-70-1 Airplane Due to Engine Damage Resulting From Structural Failure.
+     NASA TM X-1195, 1966.
+5. Bowman , Paul V . : Estimated Performance Report for the XB-70A Air Vehicle
+     No. 2 . Rep. No. NA-65-661 , North American Aviation , Inc. , July 26, 1965.
+6. Hall , Albert W. : Take-Off Distances of a Supersonic Transport Configuration as
+     Affected by Airplane Rotation During the Take-Off Run. NASA TN D-982 , 1961.
+
+24
+
+=== PAGE 27 | lowtext, img ===
+25
+
+=== PAGE 28 | img ===
+l   e    i   F    .    /                                    l    e     n     g     t    h     -
+
+                                                        Distance
+
+                                                 Figure 2. Takeoff phases.
+
+                26
+
+=== PAGE 29 | img ===
+                                                    sr    I ft
+                                                      S (VI
+                         44     48      52      56     60      64      68     72      76 x 18
+                          I      I       I       I      I       I      I       I
+             220
+
+             210
+
+             200
+
+             190
+
+  vr # knots 180
+    S
+
+             170
+
+             160
+
+             150
+
+                              I                       I            I
+
+Figure 3. Variation with velocity of ground roll distance at beginning of rotation.
+Data from reference 1. Ws = 2313 kilonewtons (520,000 pounds force).
+
+                                                                                               27
+
+=== PAGE 30 | img ===
+                               r                                            - 8
+                           2-5
+                                                                            - 7
+
+                                                                            - 6
+
+                                                                            - 5
+                                                                            -           2
+                                                                              4 a, ftlsec
+
+                                                                            - 3
+
+                                                                            - 2
+                                      0 0'                                  - 1
+
+                                                                            - 0
+
+Figure 4. Time histories of acceleration'and angle of attack for a typical rotation
+during ground roll.
+
+28
+
+=== PAGE 31 | img ===
+             .4 .4 - -
+                             Rolling Rolling friction, friction, p p = = 0.025 0.025
+
+ Aa, mlsec 2 -.4 -.4 - -
+
+            -.8 -.8 - -
+
+               0          1          2          3          4
+                                   t, sec
+
+Figure 5. Change in acceleration during rotation phase of takeoff due to
+induced drag, thrust, and rolling friction. Wr = 2313 kilonewtons
+(520,000 pounds force) ; F     = 689.47 kilonewtons (155,000 pounds force) ;
+               n            nr    n
+p = 1.225 kg/m' (0.002377 slug/ft') .
+
+                                                                                29
+
+=== PAGE 32 | img ===
+              V
+
+            Distance
+
+               a
+
+                          I
+
+                                         t
+
+                       Figure 6 . Rotation phase quantities.
+
+30
+
+=== PAGE 33 | img ===
+                                              N 0
+
+                                   8
+                                      0
+                                      0
+                                        0
+-
+
+   I     I     I      1     I
+
+                         v)
+                       >'
+
+                                                                     31
+
+=== PAGE 34 | img ===
+               2.8
+                                                                     0          9.0
+
+               2.6                                                              8.5
+
+                                                                                             2
+        mlsec 2                                                                 8.0 ar, ftlsec
+               2.4
+
+                                                                Airplane        7.5
+               2.2                                           0    1
+                                                             0    2             7.0
+
+                2.0
+                   .90          * 95          1,OO          1.05          1.10
+
+  Figure 8. Acceleration at beginning of rotation as a function of test quantities.
+
+                                                              3
+                                                ' t   , Ibf-sec
+                                              oVlof2k   deg-ft 2
+
+                                 1             2             3             4
+                                 I             I             I             I
+                               8
+
+                               6
+
+                   At,, sec    4
+                                                                  Airplane
+                                                               0    1
+                               2                               0     2
+
+                               0
+                                50             100            150           200
+                                                               3
+                                                  't    , N-sec
+                                                oVlof2h deg-m 2
+
+Figure 9. Time from beginning of rotation to lift-off as a function of test quantities.
+
+32
+
+=== PAGE 35 | img ===
+                     -    u
+
+                         z v)
+                         *=
+               'u.            ".              '9
+0
+I              I               I               I
+
+                                           /
+                                          /
+
+       -
+       Y-
+       ea
+
+              0
+             0
+
+                                      I
+
+                                                                      33
+
+=== PAGE 36 | img ===
+                                                    Test curve from figure 10
+                                          --- - Standardized test curve
+                                          ---       Curve cakulated from wind-tuonel data (ref. 5)
+
+               0                                                               3
+                                         r a r
+                                               eff
+
+             .05
+                                                                               -.2
+    - aa I
+    da      -. 10
+ mlsec 2 -deg
+
+            -. 15
+
+                                                                               -.6
+            -.20
+                 0           2          4          6          8           10
+                                           a, deg
+                                                                               -.8
+
+Figure 11. Experimentally and analytically derived curves of - aa as a function
+of angle of attack.                                                       acr
+
+34
+
+=== PAGE 37 | garbled, img ===
+                                            w 0
+                         4z
+                                            s
+                            N
+                           n                a
+                         Q L
+                         m
+                         6
+
+                                        c,
+                                        B
+
+                                        N
+                                        pc
+                                            a
+                                            c
+                                            cd
+                     2   "p  P   0
+
+                          E
+                             N
+                            n
+                          Q
+                           L
+                          m
+                          6
+
+                   0
+                   P
+
+                                    E
+
+                                            cu
+                                            0
+
+                   0
+2 3 3 y : 0                       0
+                      2 " p
+
+  i                       E
+  Y
+
+                                             35
+
+=== PAGE 38 | img ===
+                                                                              Airplane
+                                                                        0         1
+                                                                        0        2
+                                                                      - tine of perfect agreement
+                I:
+
+(AVr)  , knots
+                15
+     p2
+                10
+
+                 0       5      10    15     20     25    30
+                                 (*%
+                                         knots
+                              (a) Rotation velocity increment.
+
+                                  10      14      18      22      26 x 10'
+
+                        800                                            26 x lo2
+
+                        700
+                                                                       22
+
+                        600
+
+          (*sr) 3       500
+                p2
+                                                                        14
+                        400
+
+                        300                                             10
+
+                             /.,     .   I      I            I      I
+                        200
+
+=== PAGE 39 | img ===
+                                                        -
+                                                                 Single takeoff method
+                                                                 Multiple takeoff method
+                                                       ---- Ana lytica I fairing
+
+      160
+          c
+      140
+      120
+      100
+hv’    80
+
+       60
+       40
+
+       20
+
+        0      100    200   300   400   500   600    700   800   900   1000  1100 1200
+
+ Figure 14. Variation of kinetic energy gain with air-phase distance to a height of
+  10.7 meters (35 feet). Ws = 2313 kilonewtons (520,000 pounds force).
+
+                                                                                                37
+
+=== PAGE 40 | img ===
+                                                             Vr, knots
+
+                 1000
+                       - I
+                                                                                  3000
+                 800
+
+     AS,, m                                                                       2000 A S , , ft
+         S       600
+
+                 400
+                         b-                  Range of data                        1000
+                                                                          8
+                 200
+
+                  40     I                                                 I
+                            .   v\                                         I
+
+                                 .\                                        I
+
+    AV , knots
+       rS
+
+                               1        t        I         I        I        I
+                     1.0      1.5      2.0      2.5       3.0      3.5      4.0
+                                             6, deglsec
+
+Figure 15. Effect of rotation initiation velocity and rotation rate on velocity and
+distance increments during rotation phase. Ws = 2313 kilonewtons (520,000 pounds
+force); standard sea-level conditions.
+
+38
+
+=== PAGE 41 | img ===
+                                                                               Phase   6, deglsec
+                                                                              Rotation    --
+                          Standardized distance, ft                  - - --
+             4        6         8       10       12       14 la3              Lift-off    1
+                                                                     ---      Lift-off    2
+                                                                     ----     Lift-off
+      240                                                                                 4
+                                                                        o     V     from reference 1
+                                                                               'ofs
+      220
+v ,
+      200
+Vi0fs'
+knots
+       180
+
+       160
+         10      15     20      25     30      35     40      45 x lo2
+                          Standardized distance, rn
+
+                                (a) Ground roll performance.
+
+                                                                               6, deglsec  h,, rn (ft)
+                                                                     ----
+                          Standardized distance, ft                                1      122 (400)
+                                                                     ---
+             4        6         8       10       12                                2       53 (175)
+                                                                     -- - -
+                                                                                   4        0
+       260                                                              o      Data from reference 1
+
+       240
+
+ 'a *  220
+   S
+knots
+       200
+
+       180
+         10      15      20     25      30     35      40     45 x 14
+                          Standardized distance, m
+
+                               (b) Field length performance.
+
+     Figure 16. Standardized takeoff performance envelope as calculated from
+     results of proposed method and standardized takeoff data from reference 1.
+     Ws = 2313 kilonewtons (520,000 pounds force) .
+
+ NASA-Langley, 1974 H - 8 02                                                                    39
+
+=== PAGE 42 | img ===
+IATIONAL AERONAUTICS AND SPACE ADMINISTRATION-
+            WASHINGTON. D.C. 20546                                                 POSTAGE AND FEES P A I D
+                                                                                 NATIONAL AERONAUTICS AND
+              OFFICIAL BUSINESS                                                    SPACE ADMINISTRATION
+           PENALTY FOR PRIVATE USE I300  SPECIAL FOURTH-6 LASS RATE                        d51
+                                                       BOOK
+
+                                                                                           :   If Undeliverable (Section 158
+                                                                                               Postal Manual) Do Not Return
+
+                             ‘The aeronautical and space activities of the United States shall be
+                          coducted so as to contribute . . . t o the expansion of human Rnowl-
+                          edge of phenomena ilz the atmosphere and space. The Administratiolz
+                          shall provide for the widest practicable and appropriate dissmiwtio+.t
+                          of information concerning its activities and the results thereof.”
+                                       -NATIONAL AERONAUTICS AND SPACE ACT OF 1958
+
+         NASA SCIENTIFIC AND TECHNICAL PUBLICATIONS
+
+             TECHNICAL REPORTS: Scientific and ,               TECHNICAL TRANSLATIONS: Information
+             technical information considered important,       published in a foreign language considered
+             complete, and a lasting contribution to existing  ro merit NASA distribution in English.
+             knowledge.
+             TECHNICAL NOTES: Information less broad           SPECIA PUBLICATIONS : Information
+             in scope but nevertheless of importance as a      derived from or of value to NASA activities.
+             contribution to existing knowledge.               Publications include final reports of major
+                                                               projects, monographs, data compilations,
+             TECHNICAL MEMORANDUMS:
+                                                               handbooks, sourcebooks, and special
+             Information receiving limited distribution
+                                                               bibliographies.
+             because of preliminary data, security classifica-
+             tion, or other reasons. Also includes conference
+                                                               TECHNOLOGY UTILIZATION
+             proceedings with either limited or unlimited
+                                                               PUBLICATIONS: Information on technology
+             distribution.                                                                of
+                                                               used by NASA that may be      particular
+              CONTRACTOR REPORTS: Scientific and               interest in commercial and other- non-aerospace
+              technical information generated under a NASA     applications. Publications include Tech Briefs,
+              contract or grant and considered an important    Technology Utilization Reports and
+              contribution to existing knowledge.              Technology Surveys.
+
+                    Details on the availabifity of these publications may be obtained from:
+                            SCIENTIFIC AND TECHNICAL INFORMATION OFFICE
+      N A T I O N A L       A E R O N A U T I C S       A N D       SPACE        A D M I N I S T R A T I O N
+                                            Washington, D.C. 20546

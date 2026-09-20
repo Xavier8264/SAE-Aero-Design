@@ -1,0 +1,1126 @@
+# ID: syracuse_wing_spar_design
+# SOURCE: https://ecs.syr.edu/faculty/glauser/varty/Structures2.pdf
+# ORIGINAL: reference/raw/syracuse_wing_spar_design.pdf
+# CONVERTED: 2026-09-19 21:44 UTC-0500 | type pdf | 34 pages | ~13219 tokens
+# NOTE: Syracuse senior design: worked main wing spar sizing (bending moment, I, stress).
+# FLAG img: pages 3-5,11-14,16-22,25-26,29,33-34
+# FLAG lowtext: pages 15,31
+
+=== PAGE 1 ===
+DESIGN OF AN AIRCRAFT MAIN
+
+            WING SPAR
+            DESIGN PROJECT 2
+              Final Report
+            AEE 471 | Davidson
+         Assigned: October 24th, 2018
+        Due Date: November 16th, 2018
+
+          TYLER VARTABEDIAN
+
+=== PAGE 2 ===
+TABLE OF CONTENTS
+
+TABLE OF CONTENTS                                                      2
+
+BACKGROUND AND PROVIDED INFORMATION                                    3
+
+RESULTS                                                                8
+  SUMMARY                                                              8
+     CROSS SECTION 1 - X=120 (AT WALL)                                11
+     CROSS SECTION 2 - X=108                                          12
+     CROSS SECTION 3 - X=96                                           13
+     CROSS SECTION 4 - X=84                                           14
+     CROSS SECTION 5 - X=72                                           15
+     CROSS SECTION 6 - X=60                                           16
+     CROSS SECTION 7 - X=48                                           17
+     CROSS SECTION 8 - X=36                                           18
+     CROSS SECTION 9 - X=24                                           19
+     CROSS SECTION 10 - X=12                                          20
+     CROSS SECTION 11 - X=0 (AT WING TIP)                             21
+     Fatigue: N/A                                                     21
+
+STRESS CALCULATIONS and FACTORS OF SAFETY                             22
+     WEIGHT CALCULATION                                               24
+     FATIGUE                                                          25
+     TIP DEFLECTION                                                   28
+
+APPENDIX A: HAND CALCULATIONS                                         30
+
+APPENDIX B: TIP DEFLECTION CALCULATIONS                               31
+
+APPENDIX C: SUPPORTING FIGURES                                        32
+
+APPENDIX D: SUPPORTING CODE                                           33
+
+                                                             Vartabedian - 2
+
+=== PAGE 3 | img ===
+BACKGROUND AND PROVIDED INFORMATION
+
+      The goal of this project is to design and optimize the main wing spar of a concept plane
+designed for personal use. This plane is currently designed to weigh 15,000 pounds with a
+10-foot wingspan per wing. The main wing spar in question will be modeled as cantilever beam
+estimated to be subjected to a variety of loadings shown in Table 1 below, with the design and
+loading of the beam modeled in Figure 1 below. The design is rated for 10,000 flights, and the
+beam will feature a thin-walled channel cross section to make room for fuel tanks, fuel lines, and
+other integral systems. The beam will be manufactured out of 7075-T6 Aluminum which features
+material aspects shown in Table 2 below. Note that these values are obtained from the
+MIL-HDBK-5 and utilize A-basis allowables as specified by the manufacturer. These allowables
+are taken from the allowables where an area is assumed to be less than 20 square inches, and the
+extruded beam has a thickness in-between 3.1 and 4.4 inches.
+
+     Figure 1 - Geometry and Loading of Main Wing Spar ​(​AEE 471 Project 2 Handout - Davidson)
+
+   Table 1 - Expected Limit Load Spectrum for 1 Flight ​(​AEE 471 Project 2 Handout - Davidson)
+      EVENT          r-min (lb/in)  r-max (lb/in)  s-min (lb/in)  s-max (lb/in)  N (cycles)
+     Take-Off                  26            55            18            48             1
+    Maneuver 1                 24            58            12            48            50
+    Maneuver 2                 20            60            15            50             5
+       Cruise                34.4          51.6          31.2          46.8           500
+   Landing Flare               26            55            18            48             1
+Landing Touchdown             -40             5           -30             2             2
+
+                                                                            Vartabedian - 3
+
+=== PAGE 4 | img ===
+                              Table 2 - Material Properties
+
+  Density (lb/in^3)  Young's Modulus (psi)     Poisson's Ratio           Scatter Factor
+                       10400000 (Tensile)
+       0.101           10700000 (Comp.)             0.330                     4.00
+
+ Compressive Yield Compressive Ultimate                              Tensile Compressive
+       Stress               Stress           Tensile Yield Stress           Stress
+      71000 psi            81000 psi              71000 psi                81000 psi
+
+       The design of this wing spar is limited to specific design constraints. These constraints
+are displayed below in Table 3.
+
+                Table 3 - Design Constraints ​(​AEE 471 Project 2 Handout - Davidson)
+
+  Height (h) in    Depth (b) in              Thickness in                   tw/tf in
+    4 ≤h ≤8          3 ≤b ≤6       Flange or Web Thickness ≥0 .135       0 .5 ≤t w/tf ≤2 .0
+     bf/bw            Length          Yielding Factor of Safety    All other Factors of Safety
+  bf/bw ≤1 .00      120 inches                  1.250                        1.500
+
+       Where the dimensions are expressed as shown in a cross section below in Figure 2:
+                    Figure 2 - Main Wing Spar Cross Section Example
+
+                                                                               Vartabedian - 4
+
+=== PAGE 5 | img ===
+       Based upon the material properties in Table 2 and the loading in Figure 1, factors of
+safety will be calculated for every failure mode, including Yielding, Ultimate, Local Buckling,
+and Crippling. These values will drive the design of the cross section for this beam with the goal
+of minimizing weight while adhering to the appropriate factors of safety. This will also include
+tapering the beam to optimize the beam for the lowest weight possible. To do this, factors of
+safety for every failure mode will be calculated at every cross section. For simplicity, cross
+sections will be analyzed at every 12” of the beam, starting at the Fuselage and ending at the
+wingtip. Example calculations are shown in Appendix A (hand calculations pages 1-4.)
+       The factors of safety for each failure mode are calculated by dividing the critical stress
+for that failure mode by the calculated stress at that failure location as shown in Equation 1. The
+bending moment about the Y-axis is equivalent to zero (derived in Appendix A), and there is no
+axial loading leading to a value of 0 for ​Nx​, which simplifies this equation. The failure locations
+for each failure mode are shown below in Figure 3. The subsequent critical stress equations
+utilized for local buckling and crippling are shown below in Equations 5 and 6 and 7,
+respectively. For crippling, the lower value of the two critical stresses is utilized for the Factor of
+Safety.
+                       Figure 3 - Main Wing Spar Failure Locations
+
+                           F actor of Safety = σ cr / σ x      (1)
+                           σx = Nx − Mzy + Myz = − M zy/Iz     (2)
+                                 A    Iz    Iy
+       Where Mz is the Bending Moment in the beam (derived in Appendix A) given by:
+
+                                                                               Vartabedian - 5
+
+=== PAGE 6 ===
+                       M z = r    x 2 /2 + smax x 3 /(6 * l ength)  (3)
+                               max
+
+                  And Iz is the moment of inertia about the Z-axis given by:
+                              I z = ∑ 1 bh 3 + A d 2      (4)
+                                       12
+
+                    σcrLocal   = k wπ 2 E/[12(1 −ν2 )] * (tw 2 /bw 2 )  (5)
+                         Buckling
+                 Where kw is taken from Figure C6.4 from the MIL-HDBK-5
+                         =          (3.2)[(t  2 /A)(E/σ       ) 1/3 ] 0.75  (6)
+                σcr1crippling  σyscompressive  avg.   yscompressive
+                              σcr2crippling = 0 .8σ yscompressive  (7)
+
+       Fatigue due to cyclic loading will also be analyzed. This will be done utilizing the
+Palmgren-Miner rule. Example calculations are shown in Appendix A (hand calculations pages
+1-4.) Here, equivalent stress equations from the MIL-HDBK-5 (Appendix C Fig. C3) will be
+utilized for simplicity for values of the stress ratio of fatigue loading R between -1 and 1. R is
+given below in Equation 8. The applicable equivalent stress locations are shown in Equations
+9-11.
+                              R = σmin  −1 ≤R ≤1
+                                   σmax                   (8)
+                              σmax = Mzy / Iz             (9)
+                              Seq = σmax (1 −R ) 0.62     (10)
+                       l og(Nf) = 18.21 −7 .73log(Seq −1 0)      (11)
+
+       Where ​Mz​ is the bending moment in the beam, and ​Iz​ is the Moment of Inertia about the
+Z axis. Here, an important assumption is made for Equation 4. When ​Seq​ decreases below 10, the
+assumption that life is simply 10^10. This is because of the negative value created within the log
+function which yields an error. These calculations are done for each maneuver specified in Table
+1 and then applied to Equations 12 and 13 (with Eq. 12 summing the value of D for every
+maneuver shown in Table 1 for each individual cross section). This results in the anticipated
+number of flights before fatigue induced failure.
+
+                                     D = ∑ n /Nf   (12)
+
+                          F lights = (1/D) / Scatter Factor  (13)
+
+       It's also important to note that the values utilized to calculate Fatigue failure are based on
+the design loads for each maneuver, not the expected limit loads as shown in Table 1. Design
+Load is given by Equation 14, and the new values are presented in Table 4 below.
+
+                   D esign Load = Limit Load * Factor of Safety     (14)
+
+                                                                              Vartabedian - 6
+
+=== PAGE 7 ===
+       Table 4 - Expected Design Load Spectrum for 1 Flight ​(​AEE 471 Project 2 Handout - Davidson)
+      EVENT         r-min (lb/in)    r-max (lb/in)   s-min (lb/in) s-max (lb/in)  N (cycles)
+     Take-Off                 39                82.5           27           72             1
+   Maneuver 1                 36                 87            18           72            50
+   Maneuver 2                 30                 90          22.5           75             5
+      Cruise                51.6                77.4         46.8          70.2          500
+   Landing Flare              39                82.5           27           72             1
+     Landing
+    Touchdown                -60                 7.5          -45            3             2
+
+       The company also requests tip deflection be calculated, however, the results will not be a
+driver of the design. This deflection will be calculated at design loads. Results from this will
+determine the next iteration of the design. Details on deflection are detailed in Appendix A Page
+4 as well as Appendix B that features attached Maple code utilized to solve for tip deflection.
+       Optimization was a heavy factor in the design of each cross section. The goal was to
+minimize the area to decrease the weight as much as possible. Here, a focus was applied to
+minimizing the depth (b) due to having a larger influence on the area compared to the height (h).
+With a smaller depth, a larger tf could be utilized to balance this out, while a higher height
+yielded a lower tw. This was the thought process by optimizing the values of each cross section.
+Cross sections 9, 10, and 11 were all found to be minimized values and still hold the appropriate
+factors of safety. The method included heavily optimizing the first cross-section at the wall with
+the maximum height and a minimum depth. Many iterations were tested due to initial errors with
+bf and bw increasing from cross-section to cross-section. This was an important constraint with
+optimization, every value, the thicknesses, height, depth, and bw and bf had to decrease from one
+cross-section to the next. This essentially was the driving factor in the end behind final
+optimization after locating ballpark values. Making sure bf and bw decreased from section to
+section was difficult and often guided how values were picked. Cross sections 1 through 6 were
+guided by Crippling, and 7 through 11 were guided by Local Buckling.
+       Weight was also calculated, as it was ideally the goal of this project to obtain the lowest
+weight possible. A general approximation was calculated by multiplying the area of each cross
+section by its “length” of 12 inches, and then summing these areas and multiplying by the
+density. This yielded an approximation of a “tapered” beam. A more accurate weight was
+obtained by integrating the areas over the length. Both Maple and Matlab were utilized, utilizing
+different methods. The​ trapz​ function in Matlab integrated to find the volume, while Maple
+integrated a polynomial line of best fit to a power of 6 that was found in excel. Both yielded
+
+                                                                              Vartabedian - 7
+
+=== PAGE 8 ===
+similar values that were lower than the approximate weight. This will be discussed more in depth
+in the results section.
+
+RESULTS
+
+SUMMARY
+
+       After optimizing cross-sectional dimensions through analysis of failure mode Factors of
+Safeties, Fatigue, and Tip Deflection, a final set of dimensions for all 11 cross sections were
+achieved. A table featuring the values of the optimized cross-section dimensions is shown below
+in Table 6. Note that all of the subsequent values were calculated using the limit loads described
+in Table 1, not design loads unless otherwise specified.
+
+                     Table 6 - Final Cross Section Dimensions (inches)
+    Cross Section       Height h          Depth b       Web Thick. tw    Flange Thick. tf
+      1 (wall)                 7.994             3.300            0.300           0.500
+         2                     7.575             3.269            0.269           0.450
+         3                     6.145             3.259            0.265           0.431
+         4                     5.139             3.244            0.250           0.400
+         5                     4.864             3.210            0.216           0.337
+         6                     4.778             3.200            0.206           0.251
+         7                     4.119             3.200            0.206           0.195
+         8                     4.045             3.000            0.135           0.180
+         9                     4.000             3.000            0.135           0.135
+         10                    4.000             3.000            0.135           0.135
+       11 (tip)                4.000             3.000            0.135           0.135
+
+       These values follow the dimensional naming guidelines shown in Figure 2 and the
+dimensional magnitude constraints from Table 3. As stated prior, optimization was based on
+minimizing the depth b while maximizing the Height h with a focus on making sure the values
+decreased from one cross-section to the next. These values then went and calculated the
+secondary dimension values shown in Table 7.
+
+                                                                               Vartabedian - 8
+
+=== PAGE 9 ===
+                      Table 7 - Cross Section Dimensions Continued (inches)
+ Cross Section      bf             bw             h1           tw/tf       bf/bw       kw
+   1 (wall)            3.000          7.494          6.994         0.600     0.420      6.100
+      2                3.000          7.125          6.675         0.598     0.439      6.100
+      3                2.994          5.714          5.283         0.615     0.547      5.400
+      4                2.994          4.739          4.339         0.625     0.658      3.600
+      5                2.994          4.527          4.190         0.641     0.685      3.300
+      6                2.994          4.527          4.276         0.821     0.684      2.500
+      7                2.994          3.924          3.729         1.056     0.789      1.500
+      8                2.865          3.865          3.685         0.750     0.759      2.300
+      9                2.865          3.865          3.730         1.000     0.759      1.400
+      10               2.865          3.865          3.730         1.000     0.759      1.400
+    11 (tip)           2.865          3.865          3.730         1.000     0.759      1.400
+
+       Table 7 values confirm that every dimensional aspect decreases from each cross section.
+This table also shows the ratios of the thicknesses of the flange and webs and the ratio of the
+flange length to the web length. These values were then utilized using Figure C6.4 from the AEE
+Cylindrical Buckling, Local Buckling, and Crippling of Thin-Walled Sections handout in the
+Local Buckling section for channel cross sections to calculate ​kw ​for local buckling calculations
+(Appendix C Fig. C2).
+       Next, appropriate values were calculated for each cross section. This includes the bending
+moment, area, moment of inertia, and approximate weight, as seen in Table 8. Equations
+defining the bending moment and moment of inertia as they vary in length x are shown in
+Appendix A Hand Calculations (Pages 1-4). The equations for area and weight are also detailed
+in Appendix A. As stated earlier, the weight calculation here is just a piecewise approximation
+assuming each cross-section extends straight 12 inches and does not taper.
+
+                                                                               Vartabedian - 9
+
+=== PAGE 10 ===
+        Table 8 - Length, Bending Moment Mz, Areas , Moment of Inertia, Approx. Weight
+
+   Cross Section    Length (in)     Mz (in lbs)    Area (in^2)    Iz (in^4)  Weight (lbs)
+
+     1 (wall)               120            552000        5.3982 54.95374859    6.5426184
+
+        2                   108            437400     4.737675 44.05594813     5.7420621
+
+        3                    96            337920     4.209253 26.23007812 5.101614636
+
+        4                    84            252840      3.67995 16.30730678     4.4600994
+
+        5                    72            181440      3.06858   12.4293076   3.71911896
+
+        6                    60            123000     2.487256 9.580859145 3.014554272
+
+        7                    48             76800     2.016174 5.698210565 2.443602888
+
+        8                    36             42120     1.577475 4.599180496     1.9118997
+
+        9                    24             18240      1.31355 3.610040816     1.5920226
+
+       10                    12              4440      1.31355 3.610040816     1.5920226
+
+     11 (tip)                 0                 0      1.31355 3.610040816     1.5920226
+
+      The next sections feature summaries of all pertinent values of each cross section. The
+final weight utilizes the best weight calculation (Best Fit, seen in the Weight Section) for each
+tapered cross section to the next. These tables also summarize the final optimized dimensions.
+These dimensions are shown in each cross section figure. The weight calculation code is shown
+in Appendix D Fig. D2. This also states the driving Factor of Safety for each cross section.
+
+                                                                          Vartabedian - 10
+
+=== PAGE 11 | img ===
+CROSS SECTION 1 - X=120 (AT WALL)
+
+  Figure 4 - Cross Section Dimensions (right)
+
+       Table 9 - Cross Section 1 Details
+
+            Cross Section 1
+
+    Driving Factor of Safety  Crippling - 1.500
+
+         Length (in)               120
+
+         Area (in^2)              5.398
+
+           Iz (in^4)              54.954
+
+         Mz (in-lbs)             552000
+      Final Weight (lbs)          7.093
+        Deflection (in)
+           Flights                10859
+            H (in)                7.994
+            B (in)                 3.3
+           Tw (in)                 0.3
+           Tf (in)                 0.5
+          tw/tf (in)               0.6
+          bf/bw (in)               0.4
+
+                      Table 9 - Cross Section 1 Fatigue Life Calculations
+                  Iz = 54.954, X=120, Y=3.997, 1/R for Touchdown = -0.11333
+            Mz Min Mz Max σ min σ max
+  EVENT     (in-lb)  in-lb)    KSI     KSI       R     Seq (psi) Log Nf     Nf      n/Nf
+
+ Take-Off   345600 766800 25.137       55.772    0.451   38.468    6.968 9.29E+06 1.08E-07
+
+ Maneuver
+     1      302400 799200 21.995       58.129    0.378   43.289    6.443 2.77E+06 1.80E-05
+
+ Maneuver
+     2      270000 828000 19.638       60.224    0.326   47.152    6.074 1.19E+06 4.22E-06
+
+  Cruise    360000 540000 26.184       39.276    0.667   19.875   10.522 3.33E+10 1.50E-08
+
+  Landing
+   Flare    345600 766800 25.137       55.772    0.451   38.468    6.968 9.29E+06 1.08E-07
+
+Touchdown -540000     61200 -39.276     4.451   -8.824   41.980    6.577 3.78E+06 5.29E-07
+
+                                                                            Vartabedian - 11
+
+=== PAGE 12 | img ===
+CROSS SECTION 2 - X=108
+
+ Figure 5 - Cross Section Dimensions (right)
+
+      Table 10 - Cross Section 2 Details
+
+            Cross Section 2
+
+    Driving Factor of Safety  Crippling - 1.500
+
+         Length (in)               108
+
+         Area (in^2)              4.738
+
+           Iz (in^4)              44.056
+
+         Mz (in-lbs)             437400
+      Final Weight (lbs)          5.447
+        Deflection (in)
+           Flights                21547
+            H (in)                7.575
+            B (in)                3.269
+           Tw (in)                0.269
+           Tf (in)                0.450
+          tw/tf (in)              0.598
+          bf/bw (in)              0.421
+
+                     Table 10 - Cross Section 2 Fatigue Life Calculations
+                   Iz = 44.056, X=108, Y=3.787, 1/R for Touchdown = -0.114
+           Mz Min    Mz Max σ min σ max
+  EVENT     (in-lb)    in-lb)   KSI     KSI      R     Seq (psi) Log Nf     Nf      n/Nf
+
+ Take-Off  2.75E+05 6.07E+05 23.615 52.193       0.452   35.929    7.282 1.91E+07 5.23E-08
+ Maneuver
+    1      2.41E+05 6.33E+05 20.757 54.450       0.381   40.434    6.744 5.54E+06 9.02E-06
+ Maneuver
+    2      2.14E+05 6.56E+05 18.426 56.405       0.327   44.139    6.358 2.28E+06 2.19E-06
+
+  Cruise   2.83E+05 4.24E+05 24.287 36.430       0.667   18.435   11.051 1.13E+11 4.44E-09
+ Landing
+   Flare   2.75E+05 6.07E+05 23.615 52.193       0.452   35.929    7.282 1.91E+07 5.23E-08
+Touchdow
+    n      -4.29E+05 4.90E+04 -36.851   4.212   -8.750   39.409    6.859 7.22E+06 2.77E-07
+
+                                                                            Vartabedian - 12
+
+=== PAGE 13 | img ===
+CROSS SECTION 3 - X=96
+
+Figure 6 - Cross Section Dimensions (right)
+
+      Table 11 - Cross Section 3 Details
+
+            Cross Section 3
+
+    Driving Factor of Safety  Crippling - 1.500
+
+         Length (in)               96
+
+         Area (in^2)              4.209
+
+           Iz (in^4)              26.230
+
+         Mz (in-lbs)             337920
+      Final Weight (lbs)          4.413
+        Deflection (in)
+           Flights                13105
+            H (in)                6.145
+            B (in)                3.259
+           Tw (in)                0.265
+           Tf (in)                0.431
+          tw/tf (in)              0.615
+          bf/bw (in)              0.524
+
+                     Table 11 - Cross Section 3 Fatigue Life Calculations
+                    Iz = 26.230, X=96, Y=3.073, 1/R for Touchdown = -0.115
+            Mz Min    Mz Max   σ min σ max
+  EVENT      (in-lb)   in-lb)    KSI     KSI      R    Seq (psi) Log Nf     Nf      n/Nf
+
+  Take-Off  2.13E+05 4.69E+05 24.937 54.894 0.454        37.709    7.059 1.14E+07 8.74E-08
+
+Maneuver 1 1.88E+05 4.89E+05 22.022 57.323 0.384         42.441    6.529 3.38E+06 1.48E-05
+
+Maneuver 2 1.66E+05 5.07E+05 19.432 59.374 0.327         46.436    6.139 1.38E+06 3.63E-06
+
+  Cruise    2.16E+05 3.24E+05 25.304 37.956 0.667        19.207   10.757 5.72E+10 8.74E-09
+  Landing
+   Flare    2.13E+05 4.69E+05 24.937 54.894 0.454        37.709    7.059 1.14E+07 8.74E-08
+
+Touchdown -3.32E+05 3.82E+04 -38.863      4.480 -8.675   41.583    6.619 4.16E+06 4.81E-07
+
+                                                                            Vartabedian - 13
+
+=== PAGE 14 | img ===
+CROSS SECTION 4 - X=84
+
+Figure 7 - Cross Section Dimensions (right)
+
+      Table 12 - Cross Section 4 Details
+
+            Cross Section 4
+
+    Driving Factor of Safety  Crippling - 1.500
+
+         Length (in)               84
+
+         Area (in^2)              3.679
+
+           Iz (in^4)              16.307
+
+         Mz (in-lbs)             252840
+      Final Weight (lbs)          3.668
+        Deflection (in)
+           Flights                12582
+            H (in)                5.139
+            B (in)                3.244
+           Tw (in)                0.250
+           Tf (in)                0.400
+          tw/tf (in)              0.625
+          bf/bw (in)              0.632
+
+                     Table 12 - Cross Section 4 Fatigue Life Calculations
+                   Iz = 16.307, X=84, Y=2.5965, 1/R for Touchdown = -0.116
+                                           σ
+              Mz Min    Mz Max σ min      max
+   EVENT       (in-lb)   in-lb)    KSI     KSI    R    Seq (psi) Log Nf     Nf      n/Nf
+
+   Take-Off   1.60E+05 3.50E+05 25.182 55.201 0.456      37.837    7.043 1.10E+07 9.06E-08
+
+ Maneuver 1   1.42E+05 3.66E+05 22.347 57.702 0.387      42.589    6.514 3.27E+06 1.53E-05
+
+ Maneuver 2   1.24E+05 3.79E+05 19.595 59.759 0.328      46.710    6.114 1.30E+06 3.84E-06
+
+   Cruise     1.60E+05 2.40E+05 25.193 37.790 0.667      19.123   10.788 6.14E+10 8.15E-09
+
+ Landing Flare 1.60E+05 3.50E+05 25.182 55.201 0.456     37.837    7.043 1.10E+07 9.06E-08
+
+ Touchdown -2.49E+05 2.89E+04 -39.191 4.558 -8.598       41.958    6.580 3.80E+06 5.26E-07
+
+                                                                            Vartabedian - 14
+
+=== PAGE 15 | lowtext ===
+Vartabedian - 15
+
+=== PAGE 16 | img ===
+CROSS SECTION 5 - X=72
+
+Figure 8 - Cross Section Dimensions (right)
+
+      Table 13 - Cross Section 5 Details
+
+            Cross Section 5
+
+    Driving Factor of Safety  Crippling - 1.500
+
+         Length (in)               72
+
+         Area (in^2)              3.068
+
+           Iz (in^4)              12.429
+
+         Mz (in-lbs)             181440
+      Final Weight (lbs)          3.068
+        Deflection (in)
+           Flights                42061
+            H (in)                4.864
+            B (in)                3.210
+           Tw (in)                0.216
+           Tf (in)                0.337
+          tw/tf (in)              0.641
+          bf/bw (in)              0.661
+
+                     Table 13 - Cross Section 5 Fatigue Life Calculations
+                    Iz = 12.429, X=72, Y=2.432, 1/R for Touchdown = -0.117
+            Mz Min    Mz Max    σ min   σ max            Seq
+  EVENT      (in-lb)   in-lb)    KSI      KSI      R     (psi)   Log Nf     Nf      n/Nf
+
+ Take-Off   1.15E+05 2.51E+05    22.518 49.145 0.458 33.609        7.596 3.95E+07 2.53E-08
+
+Maneuver 1 1.03E+05 2.63E+05     20.084 51.427 0.391 37.832        7.044 1.11E+07 4.52E-06
+
+Maneuver 2 8.94E+04 2.72E+05     17.497 53.253 0.329 41.599        6.618 4.15E+06 1.21E-06
+
+  Cruise    1.13E+05 1.70E+05    22.194 33.290 0.667 16.846       11.752 5.65E+11 8.85E-10
+  Landing
+   Flare    1.15E+05 2.51E+05    22.518 49.145 0.458 33.609        7.596 3.95E+07 2.53E-08
+
+Touchdown -1.79E+05 2.10E+04    -34.995   4.108 -8.519 37.488      7.085 1.22E+07 1.64E-07
+
+                                                                            Vartabedian - 16
+
+=== PAGE 17 | img ===
+CROSS SECTION 6 - X=60
+
+Figure 9 - Cross Section Dimensions (right)
+
+      Table 14 - Cross Section 6 Details
+
+            Cross Section 6
+
+    Driving Factor of Safety  Crippling - 1.500
+
+         Length (in)               60
+
+         Area (in^2)              2.487
+
+           Iz (in^4)              9.581
+
+         Mz (in-lbs)             123000
+      Final Weight (lbs)          2.484
+        Deflection (in)
+           Flights               208230
+            H (in)                4.778
+            B (in)                3.200
+           Tw (in)                0.206
+           Tf (in)                0.251
+          tw/tf (in)              0.821
+          bf/bw (in)              0.661
+
+                     Table 14 - Cross Section 6 Fatigue Life Calculations
+                    Iz = 9.581, X=60, Y=2.389, 1/R for Touchdown = -0.118
+                                           σ
+              Mz Min   Mz Max σ min       max
+   EVENT      (in-lb)    in-lb)   KSI      KSI    R    Seq (psi) Log Nf     Nf      n/Nf
+
+  Take-Off    7.83E+04 1.70E+05   19.524 42.415 0.460    28.936    8.337 2.17E+08 4.61E-09
+
+ Maneuver 1   7.02E+04 1.78E+05   17.504 44.434 0.394    32.575    7.747 5.58E+07 8.96E-07
+
+ Maneuver 2   6.08E+04 1.85E+05   15.148 46.005 0.329    35.914    7.283 1.92E+07 2.60E-07
+
+   Cruise     7.60E+04 1.14E+05   18.941 28.411 0.667    14.377   13.254 1.79E+13 2.79E-11
+
+Landing Flare  7.83E+04 1.70E+05  19.524 42.415 0.460    28.936    8.337 2.17E+08 4.61E-09
+
+ Touchdown   -1.22E+05 1.44E+04 -30.296 3.591 -8.438     32.475    7.761 5.77E+07 3.46E-08
+
+                                                                            Vartabedian - 17
+
+=== PAGE 18 | img ===
+CROSS SECTION 7 - X=48
+
+Figure 10-Cross Section Dimensions (right)
+
+      Table 15 - Cross Section 7 Details
+
+            Cross Section 7
+
+    Driving Factor of Safety   Local - 1.501
+
+         Length (in)               48
+
+         Area (in^2)              2.016
+
+           Iz (in^4)              5.698
+
+         Mz (in-lbs)              76800
+      Final Weight (lbs)          2.018
+        Deflection (in)
+           Flights               811429
+            H (in)                4.119
+            B (in)                3.200
+           Tw (in)                0.206
+           Tf (in)                0.195
+          tw/tf (in)              1.056
+          bf/bw (in)              0.763
+
+                     Table 15 - Cross Section 7 Fatigue Life Calculations
+                    Iz = 5.698, X=48, Y=2.059, 1/R for Touchdown = -0.098
+                                           σ
+              Mz Min    Mz Max σ min      max
+   EVENT       (in-lb)   in-lb)    KSI     KSI    R    Seq (psi) Log Nf     Nf      n/Nf
+
+   Take-Off   5.89E+04 1.06E+05   21.297 38.347 0.555    23.200    9.548 3.53E+09 2.83E-10
+
+ Maneuver 1   5.08E+04 1.11E+05   18.362 40.221 0.457    27.559    8.590 3.89E+08 1.29E-07
+
+ Maneuver 2   4.62E+04 1.15E+05   16.707 41.637 0.401    30.295    8.104 1.27E+08 3.94E-08
+
+   Cruise     6.39E+04 7.02E+04   23.092 25.382 0.910     5.712 #NUM! 1.00E+10 5.00E-08
+
+ Landing Flare  5.89E+04 1.06E+05  21.297 38.347 0.555   23.200    9.548 3.53E+09 2.83E-10
+
+                                                                            Vartabedian - 18
+
+=== PAGE 19 | img ===
+                                                 -10.1
+ Touchdown    -9.24E+04 9.10E+03 -33.413 3.289      58   35.416    7.348 2.23E+07 8.96E-08
+
+CROSS SECTION 8 - X=36
+
+Figure 11-Cross Section Dimensions (right)
+
+      Table 16 - Cross Section 8 Details
+
+            Cross Section 8
+
+    Driving Factor of Safety   Local - 1.522
+
+         Length (in)               36
+
+         Area (in^2)              1.577
+
+           Iz (in^4)              4.599
+
+         Mz (in-lbs)              42120
+      Final Weight (lbs)          1.702
+        Deflection (in)
+           Flights               4980079
+            H (in)                4.045
+            B (in)                3.000
+           Tw (in)                0.135
+           Tf (in)                0.180
+          tw/tf (in)               0.75
+          bf/bw (in)              0.741
+
+                     Table 16 - Cross Section 8 Fatigue Life Calculations
+                    Iz = 4.599, X=36, Y=2.022, 1/R for Touchdown = -0.121
+              Mz Min    Mz Max σ min σ max               Seq
+   EVENT       (in-lb)   in-lb)    KSI     KSI     R     (psi)   Log Nf     Nf      n/Nf
+
+  Take-Off    2.70E+04 5.81E+04 11.883 25.561 0.465 17.347        11.515 3.27E+11 3.05E-12
+
+ Maneuver 1   2.45E+04 6.10E+04 10.771 26.843 0.401 19.531        10.641 4.38E+10 1.14E-09
+
+ Maneuver 2   2.09E+04 6.32E+04    9.190 27.784 0.331 21.659       9.965 9.22E+09 5.42E-10
+
+   Cruise     2.53E+04 3.80E+04 11.136 16.704 0.667       8.453 #NUM! 1.00E+10 5.00E-08
+
+ Landing Flare 2.70E+04 5.81E+04 11.883 25.561 0.465 17.347       11.515 3.27E+11 3.05E-12
+
+ Touchdown -4.18E+04 5.05E+03 -18.380     2.223 -8.269 19.728     10.573 3.74E+10 5.35E-11
+
+                                                                            Vartabedian - 19
+
+=== PAGE 20 | img ===
+CROSS SECTION 9 - X=24
+
+Figure 12-Cross Section Dimensions (right)
+
+      Table 17 - Cross Section 9 Details
+
+            Cross Section 9
+
+    Driving Factor of Safety   Local - 1.679
+
+         Length (in)               24
+
+         Area (in^2)              1.314
+
+           Iz (in^4)              3.610
+
+         Mz (in-lbs)              18240
+      Final Weight (lbs)          1.571
+        Deflection (in)
+           Flights               4472271
+            H (in)                4.000
+            B (in)                3.000
+           Tw (in)                0.135
+           Tf (in)                0.135
+          tw/tf (in)                1
+          bf/bw (in)              0.741
+
+                     Table 17 - Cross Section 9 Fatigue Life Calculations
+                      Iz = 3.610, X=24, Y=2, 1/R for Touchdown = -0.122
+            Mz Min    Mz Max    σ min   σ max             Seq
+  EVENT      (in-lb)   in-lb)    KSI      KSI      R     (psi)   Log Nf     Nf      n/Nf
+
+ Take-Off   1.18E+04 2.51E+04     6.510   13.929 0.467    9.426 #NUM! 1.00E+10 1.00E-10
+
+Maneuver 1 1.07E+04 2.64E+04      5.935   14.647 0.405 10.613     19.851 7.10E+19 7.04E-19
+
+Maneuver 2 9.07E+03 2.74E+04      5.026   15.158 0.332 11.808     16.222 1.67E+16 3.00E-16
+
+  Cruise    1.08E+04 1.62E+04     5.987    8.980 0.667    4.544 #NUM! 1.00E+10 5.00E-08
+  Landing
+   Flare    1.18E+04 2.51E+04     6.510   13.929 0.467    9.426 #NUM! 1.00E+10 1.00E-10
+
+                                                                            Vartabedian - 20
+
+=== PAGE 21 | img ===
+Touchdown -1.81E+04 2.22E+03 -10.052        1.229 -8.182 10.797    18.972 9.38E+18 2.13E-19
+
+CROSS SECTION 10 - X=12
+
+Figure 13-Cross Section Dimensions (right)
+
+      Table 18 - Cross Section 10 Details
+
+            Cross Section 10
+
+    Driving Factor of Safety    Local - 6.898
+
+         Length (in)                12
+
+         Area (in^2)               1.314
+
+           Iz (in^4)               3.610
+
+          Mz (in-lbs)              4440
+      Final Weight (lbs)           1.581
+        Deflection (in)
+           Flights               4990019
+            H (in)                 4.000
+            B (in)                 3.000
+           Tw (in)                 0.135
+           Tf (in)                 0.135
+          tw/tf (in)                 1
+          bf/bw (in)               0.741
+
+                     Table 18 - Cross Section 10 Fatigue Life Calculations
+                       Iz = 3.610, X=12, Y=2, 1/R for Touchdown = -0.124
+              Mz Min    Mz Max σ min σ max
+   EVENT       (in-lb)    in-lb)    KSI    KSI     R    Seq (psi) Log Nf     Nf      n/Nf
+
+  Take-Off    2.87E+03 6.11E+03 1.592 3.387 0.470          2.285 #NUM! 1.00E+10 1.00E-10
+
+ Maneuver 1   2.64E+03 6.44E+03 1.460 3.566 0.409          2.573 #NUM! 1.00E+10 5.00E-09
+
+ Maneuver 2   2.21E+03 6.66E+03 1.227 3.690 0.332          2.872 #NUM! 1.00E+10 5.00E-10
+
+   Cruise     2.59E+03 3.88E+03 1.434 2.152 0.667          1.089 #NUM! 1.00E+10 5.00E-08
+
+Landing Flare  2.87E+03 6.11E+03 1.592 3.387 0.470         2.285 #NUM! 1.00E+10 1.00E-10
+
+ Touchdown   -4.43E+03 5.47E+02 -2.453 0.303 -8.092        2.637 #NUM! 1.00E+10 2.00E-10
+
+                                                                              Vartabedian - 21
+
+=== PAGE 22 | img ===
+CROSS SECTION 11 - X=0 (AT WING TIP)
+
+Figure 14-Cross Section Dimensions (right)
+
+      Table 19 - Cross Section 11 Details
+
+           Cross Section 11
+
+    Driving Factor of Safety       N/A
+
+         Length (in)                0
+
+         Area (in^2)              1.314
+
+          Iz (in^4)               3.610
+
+         Mz (in-lbs)                0
+      Final Weight (lbs)           N/A
+       Deflection (in)
+           Flights                 N/A
+           H (in)                 4.000
+           B (in)                 3.000
+           Tw (in)                0.135
+           Tf (in)                0.135
+          tw/tf (in)                1
+          bf/bw (in)              0.741
+
+Fatigue: N/A
+
+                                                                            Vartabedian - 22
+
+=== PAGE 23 ===
+STRESS CALCULATIONS and FACTORS OF SAFETY
+
+                                 Table 20 - Failure Locations
+
+                       Yield/Ult   Yield/Ult Comp. Y                Crippling Y  Crippling Z
+    Cross Section    Tension Y (in)       (in)         Local Y (in)    (in)         (in)
+
+         1                  -3.997             3.997        3.747        3.747        3.497
+
+         2                  -3.788             3.788        3.563        3.563        3.338
+
+         3                  -3.073             3.073        2.857        2.857        2.642
+
+         4                  -2.570             2.570        2.370        2.370        2.170
+
+         5                  -2.432             2.432        2.264        2.264        2.095
+
+         6                  -2.389             2.389        2.264        2.264        2.138
+
+         7                  -2.060             2.060        1.962        1.962        1.865
+
+         8                  -2.023             2.023        1.933        1.933        1.843
+
+         9                  -2.000             2.000        1.933        1.933        1.865
+
+         10                 -2.000             2.000        1.933        1.933        1.865
+
+         11                 -2.000             2.000        1.933        1.933        1.865
+
+   Table 21-Stress Calculations Factor of Safety Applications in Yielding, Ultimate, Local, and
+                                       Crippling (psi)
+
+             Yielding/Ultimate              Local                      Crippling
+ Cross                    σx -                                           σx -        σx
+Section σx - tension compression       σx      σ - critical    σx       critical 1  -criticall 2
+
+   1        40149.108   -40149.108 -37637.906    93836.189 -37637.906 56461.880 56800.000
+
+   2        37603.379   -37603.379 -35369.515    83462.243 -35369.515 53055.018 56800.000
+
+   3        39582.772   -39582.772 -36806.503 111488.592 -36806.503 55216.283 56800.000
+
+   4        39839.342   -39839.342 -36738.401    96168.866 -36738.401 55118.283 56800.000
+
+   5        35501.743   -35501.743 -33042.021    72115.040 -33042.021 49566.892 56800.000
+
+   6        30670.214   -30670.214 -29059.033    49691.128 -29059.033 43590.416 56800.000
+
+   7        27757.767   -27757.767 -26443.670    39681.958 -26443.670 41939.923 56800.000
+
+   8        18522.365   -18522.365 -17698.131    26935.297 -17698.131 35099.510 56800.000
+
+   9        10105.149   -10105.149   -9764.100   16395.398   -9764.100 31953.451 56800.000
+
+   10         2459.806   -2459.806   -2376.788   16395.398   -2376.788 31953.451 56800.000
+
+   11            0.000       0.000       0.000   16395.398       0.000 31953.451 56800.000
+
+                                                                             Vartabedian - 23
+
+=== PAGE 24 ===
+The stresses calculated above were calculated using limit load factors. Sample Calculations are
+shown in Appendix A (Hand calculations Pages 1-4). The associate Factors of Safety for each
+failure mode are shown below in Table 22. Note that Crippling is the driving F.O.S. for the first
+1 through 6 cross sections, and local buckling is the driving F.O.S. for the 7th to 10th cross
+section. The 11th cross section reveals infinite factors of safety due to zero magnitude stress
+calculations as shown above, so it is not shown in the following table.
+
+                                  Table 22 - Factors of Safety
+                               Tension                         Compression
+     Cross Section        Yield     Ultimate     Yield     Ultimate      Local     Crippling
+          1                  1.768      2.017       1.768       2.017       2.493        1.5
+          2                  1.888      2.154       1.888       2.154        2.36        1.5
+          3                  1.794      2.046       1.794       2.046       3.029        1.5
+          4                  1.782      2.033       1.782       2.033       2.618        1.5
+          5                      2      2.282           2       2.282       2.183        1.5
+          6                  2.315      2.641       2.315       2.641        1.71        1.5
+          7                  2.558      2.918       2.558       2.918       1.501      1.586
+          8                  3.833      4.373       3.833       4.373       1.522      1.983
+          9                  7.026      8.016       7.026       8.016       1.679      3.273
+          10                28.864     32.929      28.864      32.929       6.898     13.444
+
+                                                                              Vartabedian - 24
+
+=== PAGE 25 | img ===
+WEIGHT CALCULATION
+              Figure 15 - Area and Length Plot for Main Wing Spar Best Fit
+(Where the solid line is the original values and the dotted line is the Best Fit - Legend Error in
+                                           Excel)
+
+       Three weight values were calculated for comparison. Linear, piecewise, and best fit. The
+best fit utilized a line of best fit utilizing the polynomial trendline tool in excel over the plot of
+areas versus length (shown above in Figure 15.) Here, the line of best fit calculated and is shown
+as ​Y​ and is shown below in Equation 15. This is then plotted versus ​x​ and yields an efficient
+relation between each cross section. This equation was then integrated over the length of zero to
+120 in Maple (See Appendix D Fig. D1). The Linear solution utilized the ​trapz​ function in
+Matlab and integrated beneath the linear plot of area versus length done in Matlab (Code in
+Appendix D.) This isn’t as accurate as the line of best fit, but it is a quick and easy integration
+process that yields close results. This was also plotted utilizing the Matlab Polyfit function and is
+shown below in Figure 16. The piecewise weight was just the simple approximation done in
+Excel where the areas of each cross section were multiplied by the length of 12 inches and
+summed together. This is not a reliable weight calculation due to the poor assumption of a
+constant cross-sectional area between points. The results are shown below in Table 23.
+
+                                                                              Vartabedian - 25
+
+=== PAGE 26 | img ===
+      Figure 16 - Area and Length Plot for Main Wing Spar Linear Approximation
+
+                               Table 23 - Weight Calculations
+                     Piecewise                  Linear                    Best Fit
+ Weight (lbs)          36.120                   33.644                    33.020
+
+      Despite 3 methods utilized ​strictly for comparison​, the chosen and true weight is the Best
+Fit weight. Utilizing a high order polynomial trendline over the area vs length plot, this yielded a
+far better and accurate function when compared to the linear ​trapz​ model. When integrating this
+equation of best fit from 0 to 120 and multiplying by the density, an believable and accurate
+weight of just over 33 pounds is obtained.
+
+                     Weight = 33.020 lbs
+
+FATIGUE
+      Fatigue was calculated and determined to not be a driving design factor. Example
+equations and derivations can be seen in Appendix A (hand calculations Page 4.) Fatigue utilized
+the Palmgren-Miner Rule to predict fatigue life. The aircraft is rated for 10,000 flights, and then
+Palmgren-Miner Rule should predict a life equal to or greater than 40,000 flights. The following
+calculations did not, but they did predict a life that would survive the 10,000 flight design
+requirement. Note that Fatigue is examined at the Design Loads, given by Equation 14 and
+utilizes the values in Table 4 for each maneuver. Fatigue calculations were required at the most
+
+                                                                           Vartabedian - 26
+
+=== PAGE 27 ===
+tensile and compressive points (top and bottom of cross section - same location as Tensile and
+Compressive Yield and Ultimate failure locations as shown in Figure 3 and given in Table 20. It
+was proved that the Fatigue life on the top and bottom are equivalent, as shown in the following
+table calculations. Individual cross section fatigue data for each maneuver is shown in the above
+individual cross section sections. Table 24 shows the final results for life, each exceeding the
+rated 10,000 flights after a scatter factor of 4 is applied (as specified by the manufacturer).
+Tables 25 and 26 show the calculations for the top and bottom locations for fatigue life in the
+first cross section at the provided design loads. Note the rules explained prior in the background
+information section regarding when an R value sits outside the typical zone of negative 1 to 1
+(take the inverse and replace sigma max with sigma minimum in Equation 10). The appropriate
+equations utilized for analyzing fatigue are given by Equations 8 through 13.
+
+                 Table 24 - Fatigue Life Summary of Results for Cross Sections
+                                            TOP
+  Length (in)  Cross Section       D               1/D                    Flights
+     120             1          2.30E-05       43437.75103              10859.438
+     108             2          1.16E-05       86191.90565              21547.976
+      96             3          1.91E-05       52423.83268              13105.958
+      84             4          1.99E-05       50329.08298              12582.271
+      72             5          5.94E-06       168246.0044              42061.501
+      60             6          1.20E-06       832921.6689              208230.42
+      48             7          3.08E-07       3245717.473              811429.37
+      36             8          5.02E-08       19920318.61              4980079.7
+      24             9          5.59E-08       17889087.66              4472271.9
+      12            10          5.01E-08       19960079.72              4990019.9
+      0             11           #DIV/0!         #DIV/0!                 #DIV/0!
+                                         BOTTOM
+  Length (in)  Cross Section       D               1/D                    Flights
+     120             1          2.30E-05       43437.75103              10859.438
+
+       Tables 25 and 26 below show how fatigue at the top and bottom of the channel is
+equivalent, therefore, only the singular list of fatigue values needed to be reported in Table 24
+above. Sample calculations at the first cross section are shown below that prove this.
+
+                                                                            Vartabedian - 27
+
+=== PAGE 28 ===
+Table 25 - Cross Section 1 Fatigue Calculations based off Design Loads for the BOTTOM Portion
+                                   of the Cross Section
+
+          Iz (in^4) 54.95374         Length
+                =       86            (in) =   120              Y (in) =  3.997
+                            σ min    σ max
+ EVENT   Mz Min Mz Max        KSI      KSI      R       Seq      Log Nf     Nf      n/Nf
+
+ Take-Off 3.46E+05 7.67E+05  25.137   55.772 0.451       38.468    6.968 9.29E+06 1.08E-07
+Maneuver
+   1     3.02E+05 7.99E+05   21.995   58.129 0.378       43.289    6.443 2.77E+06 1.80E-05
+Maneuver
+   2     2.70E+05 8.28E+05   19.638   60.224 0.326       47.152    6.074 1.19E+06 4.22E-06
+
+  Cruise  3.60E+05 5.40E+05  26.184   39.276 0.667       19.875   10.522 3.33E+10 1.50E-08
+ Landing
+  Flare  3.46E+05 7.67E+05   25.137   55.772 0.451       38.468    6.968 9.29E+06 1.08E-07
+
+         -5.40E+0
+Touchdown       5 6.12E+04 -39.276     4.451 -8.824      41.980    6.577 3.78E+06 5.29E-07
+
+                                       1/R    -0.113
+
+ Table 26 - Cross Section 1 Fatigue Calculations based off Design Loads for the TOP Portion of
+                                     the Cross Section
+
+          Iz (in^4) 54.95374         Length
+                =       86            (in) =   120              Y (in) =  -3.997
+                            σ min    σ max
+ EVENT   Mz Min Mz Max        KSI      KSI      R       Seq      Log Nf     Nf      n/Nf
+
+ Take-Off 3.46E+05 7.67E+05 -25.137 -55.772 0.451        38.468    6.968 9.29E+06 1.08E-07
+Maneuver
+   1     3.02E+05 7.99E+05 -21.995 -58.129 0.378         43.289    6.443 2.77E+06 1.80E-05
+Maneuver
+   2     2.70E+05 8.28E+05 -19.638 -60.224 0.326         47.152    6.074 1.19E+06 4.22E-06
+
+  Cruise  3.60E+05 5.40E+05 -26.184 -39.276 0.667        19.875   10.522 3.33E+10 1.50E-08
+ Landing
+  Flare  3.46E+05 7.67E+05 -25.137 -55.772 0.451         38.468    6.968 9.29E+06 1.08E-07
+
+         -5.40E+0
+Touchdown       5 6.12E+04   39.276    -4.451 -8.824     41.980    6.577 3.78E+06 5.29E-07
+
+                                       1/R    -0.113
+
+                                                                            Vartabedian - 28
+
+=== PAGE 29 | img ===
+       The Fatigue Factor of Safety was considered by applying the calculations to the design
+loads rather than the limit loads, as well as anticipating and attempting to design for 40,000
+flights rather than the stated 10,000 flight expectancy (FOS of four) along with the application of
+a scatter factor of 4. Nf was again replaced by 10^10 whenever an error occurred due to a
+necessary assumption due to errors in taking the log of a negative value. This did scue the results
+largely in cross sections 6 to 10. It was an unfortunate assumption to make but was stated and
+allowed for results to still be calculated. Even if an error wasn’t stated in the equation, the log
+function approaches an error as it nears zero or negative values. This deals with calculated
+stresses not lining up with the R value in Figure C1 in Appendix C.
+
+TIP DEFLECTION
+         Figure 17 - Curve Fit of Moment of Inertia versus Position of Main Spar
+
+       Tip deflection was calculated utilizing Maple software to solve multiple indefinite
+integrals. First, a “check” behind the theory was calculated and included in Appendix B.
+Essentially, After generating the 6th order polynomial of the best fit curve for the Moment of
+Inertia plot seen in Figure 17. This Equation is listed below as Equation 15.
+
+−1 0 ˆ (−) 9  xˆ 6 + 4 1 0 ˆ (−) 7  xˆ 5 −4 1 0 ˆ (−) 5  xˆ 4 + 0 .25e −2 xˆ 3 −0 .619e −1 xˆ 2 −. 5068 x + 3 .4763
+          *       *         *        *         *               *                *            *
+                                      Equation (15)
+
+                                                                            Vartabedian - 29
+
+=== PAGE 30 ===
+      This equation was integrated along with the bending moment and moment of inertia as
+shown in Appendix B and Appendix A Page 4. This indefinite integral was given constants after
+integration manually due to the lack of software ability to do so. This constant was solved by
+applying knowns at the edge of the system, where the value of x was known. This equation was
+then integrated again and the same process was applied to solve for another constant of
+integration. These values were then applied to yield the tip deflection, solved as:
+
+                          . 3026378790 −. 4452269990 * I    (16)
+
+      This contains an imaginary number and an exact solution is not yielded. The answer
+should typically be given in inches as the tip deflects.
+
+                                                                           Vartabedian - 30
+
+=== PAGE 31 | lowtext ===
+APPENDIX A: HAND CALCULATIONS
+
+                                         Vartabedian - 31
+
+=== PAGE 32 ===
+APPENDIX B: TIP DEFLECTION CALCULATIONS
+
+Fig B1: Closed Form Check Utilizing Maple (screenshot of work)
+
+Fig B2: Integration of Classical Beam Theory Equations Using Maple to solve for Deflection
+
+                                                                       Vartabedian - 32
+
+=== PAGE 33 | img ===
+APPENDIX C: SUPPORTING FIGURES
+
+      Figure C1     (​MIL​5-1 for 7075)  Figure C2 (​AEE 471 Local Buckling Handout)
+
+                                  Figure C3 (​MIL​5-2 for 7075)
+
+                                                                          Vartabedian - 33
+
+=== PAGE 34 | img ===
+APPENDIX D: SUPPORTING CODE
+
+       Figure D1 - Maple Integration Code for Line of Best Fit Weight Calculation
+
+  Figure D2 - Maple Integration Code for Line of Best Fit Individual Weight Calculation
+
+                                                                       Vartabedian - 34

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calibrating an Airspeed Sensor &mdash; Plane  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/ardupilot.css?v=ae9666d5" />
+      <link rel="stylesheet" type="text/css" href="../_static/common_theme_override.css?v=01d3cdd0" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon_plane.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=7f41d439"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/./useralerts.js?v=3014f84e"></script>
+        <script data-domain="ardupilot.org" defer="defer" src="https://plausible.ardupilot.org/js/script.outbound-links.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tuning Ground Steering for a Plane" href="tuning-ground-steering-for-a-plane.html" />
+    <link rel="prev" title="TECS (Total Energy Control System) for Speed and Height Tuning Guide" href="tecs-total-energy-control-system-for-speed-height-tuning-guide.html" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#2980b9" />
+  <link rel="apple-touch-icon" href="/apple-icon.png" />
+  <script src="/js/pwa.js" defer="defer"></script> 
+</head>
+
+<body class="wy-body-for-nav">    
+    <div id='cssmenu'>
+        <ul>
+           <li><a href='/ardupilot/index.html'>Home</a>
+              <ul>
+                 <li><a href='/copter/index.html'>Copter</a></li>
+                 <li><a href='/plane/index.html'>Plane</a></li>
+                 <li><a href='/rover/index.html'>Rover</a></li>
+                 <li><a href='/blimp/index.html'>Blimp</a></li>
+                 <li><a href='/sub/index.html'>Sub</a></li>
+                 <li><a href='/antennatracker/index.html'>AntennaTracker</a></li>
+                 <li><a href='/planner/index.html'>Mission Planner</a></li>
+                 <li><a href='/planner2/index.html'>APM Planner 2</a></li>
+                 <li><a href='/mavproxy/index.html'>MAVProxy</a></li>
+                 <li><a href='/dev/docs/companion-computers.html'>Companion Computers</a></li>
+                 <li><a href='/dev/index.html'>Developer</a></li>
+              </ul>
+           </li>
+           
+          
+           
+           <li><a href='https://firmware.ardupilot.org/'>Downloads</a>
+              <ul>
+                <li><a href='https://firmware.ardupilot.org/Tools/MissionPlanner/'>Mission Planner</a></li>
+                <li><a href='https://firmware.ardupilot.org/Tools/APMPlanner/'>APM Planner 2</a></li>
+                   <li><a title="Advanced User Tools" href="common-downloads_advanced_user_tools.html">Advanced User Tools</a></li>
+                   <li><a title="Developer Tools" href="common-downloads_developer_tools.html">Developer Tools</a></li>
+                   <li><a title="Firmware" href="common-downloads_firmware.html">Firmware</a></li>
+                </ul>
+           </li>
+           
+           <li><a href='https://discuss.ardupilot.org' />Community</a>
+              <ul>
+                 <li><a href='https://discuss.ardupilot.org/'>Support Forums</a></li>
+                 <li><a href='https://www.facebook.com/groups/ArduPilot.org'>Facebook</a></li>
+                 <li><a href='https://ardupilot.org/discord'>Developer Chat (Discord)</a></li>
+                 <li><a href='https://ardupilot.org/discord'>Developer Voice (Discord)</a></li>
+				 <li><a href='https://ardupilot.org/dev/docs/common-contact-us.html'>Contact us</a></li>
+				 <li><a href='https://ardupilot.org/dev/index.html#getting-involved'>Getting involved</a></li>
+                   <li><a title="Commercial Support" href="common-commercial-support.html">Commercial Support</a></li>
+                   <li><a title="Dev Team" href="common-team.html">Development Team</a></li>
+                   <li><a title="Training Centers" href="common-training-centers.html">UAS Training Centers</a></li>
+              </ul>
+           </li>
+             <li><a title="Stores" href="common-stores.html">Stores</a></li>
+
+
+           
+                        <li><a title="About" href="../index.html">About</a>
+               <ul>
+                   <li><a title="Project News" href="project-news.html">News</a></li>
+                   <li><a title="History of ArduPilot" href="common-history-of-ardupilot.html">History</a></li>
+                   <li><a href='https://ardupilot.org/dev/docs/license-gplv3.html'>License</a></li>
+                   <li><a href='https://ardupilot.org/dev/docs/trademark.html'>Trademark</a></li>
+                   <li><a title="Acknowledgments" href="common-acknowledgments.html">Acknowledgments</a></li>
+                   <li><a title="Wiki Editing Guide" href="common-wiki_editing_guide.html">Wiki Editing Guide</a></li>
+                   <li><a title="Partners Program" href="common-partners.html">Partners Program</a></li>
+               </ul>
+             </li>
+             <li><a title="Offline" href="common-offline.html">Offline</a></li>
+        </ul>
+        
+
+</div>
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Plane
+              <img src="../_static/ardupilot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plane-introduction.html"> Introduction to Plane</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-autopilots.html"> Choosing an Autopilot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-GCS.html"> Ground Control Stations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arduplane-setup.html"> First Time Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="first-flight-landing-page.html"> First Flight and Tuning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="guide-center-of-gravity.html">Center of Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="starting-up-and-calibrating-arduplane.html">Starting up and calibrating Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common-prearm-safety-checks.html">Pre-Arm Safety Checks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arming-your-plane.html">Arming Plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="takeoff-landingpage.html">Takeoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tuning-quickstart.html">Tuning Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automatic-tuning-with-autotune.html">Automatic Tuning</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="common-tuning.html">Tuning in Detail</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tuning-quickstart.html">Tuning QuickStart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automatic-tuning-with-autotune.html">Automatic Tuning with AUTOTUNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new-roll-and-pitch-tuning.html">Manual Roll, Pitch and Yaw Controller Tuning(firmware 4.1 and after)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="roll-pitch-controller-tuning.html">Manual Roll, Pitch and Yaw Controller Tuning(firmware before 4.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation-tuning.html">Navigation Tuning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tuning-cruise.html">Cruise Speed Tuning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tecs-total-energy-control-system-for-speed-height-tuning-guide.html">TECS (Total Energy Control System) for Speed &amp; Height – Tuning Guide</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Calibrating an Airspeed Sensor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pre-flight-checks">Pre-flight checks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#manual-offset-calibration">Manual Offset Calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calibrating-the-airspeed-sensor-gain">Calibrating the airspeed sensor gain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculating-a-new-airspeed-ratio">Calculating a new airspeed ratio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#note-about-higher-altitudes">Note about higher altitudes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tuning-ground-steering-for-a-plane.html">Tuning Ground Steering for a Plane</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration-files-for-common-airframes.html">Tuning Configuration Values for Common Airframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common-measuring-vibration.html">Measuring Vibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common-transmitter-tuning.html">Transmitter based tuning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quadplane-support.html"> QuadPlane Setup and Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-mission-planning.html"> Mission Planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-when-problems-arise.html"> If A Problem Arises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-advanced-configuration.html"> Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-optional-hardware.html"> Peripheral Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional-information.html"> Additional Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-user-alerts.html"> User Alerts</a></li>
+</ul>
+
+          <!-- add paypal and dronecode logos -->        <div style="margin: auto; padding-left:20px; padding-right:20px; width=100%">
+
+        <hr />
+        <form style="margin:auto;" action="https://ardupilot.org/donate">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate" />
+        </form>
+        <br>
+        <a href="common-donation.html">Individual</a>
+        <a href="common-partners.html">Partners</a>
+        <a href="https://ardupilot.org/shop">SWAG Shop</a>
+
+        <hr />
+        </div>
+          <!-- endadd paypal and dronecode logos -->
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Plane</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="first-flight-landing-page.html">First Flight</a></li>
+          <li class="breadcrumb-item"><a href="common-tuning.html">Tuning</a></li>
+      <li class="breadcrumb-item active">Calibrating an Airspeed Sensor</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ArduPilot/ardupilot_wiki/blob/master/plane/source/docs/calibrating-an-airspeed-sensor.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="calibrating-an-airspeed-sensor">
+<span id="id1"></span><h1>Calibrating an Airspeed Sensor<a class="headerlink" href="#calibrating-an-airspeed-sensor" title="Link to this heading">¶</a></h1>
+<p>A properly configured <a class="reference internal" href="airspeed.html#airspeed"><span class="std std-ref">airspeed sensor</span></a> can greatly improve
+the ability of Plane to maintain altitude in <a class="reference internal" href="flight-modes.html#flight-modes"><span class="std std-ref">auto-throttle modes</span></a> (such as AUTO, CRUISE and FBWB),
+as well as greatly improve automatic landing. It can also reduce the
+chance of a stall.</p>
+<p>At the same time, an incorrectly configured airspeed sensor can cause
+your aircraft to crash, so correctly configuring it is critical!</p>
+<section id="pre-flight-checks">
+<h2>Pre-flight checks<a class="headerlink" href="#pre-flight-checks" title="Link to this heading">¶</a></h2>
+<p>If you have an airspeed sensor installed then it is critical that you do
+pre-flight checks to ensure that it is working correctly, and ensure
+that it is correctly zeroed.</p>
+<p>During initialization, the firmware checks if you have enabled an airspeed sensor and that it is healthy, otherwise a warning will be given, but arming will still be allowed, so checking the ground station messages is important.</p>
+<p>The <a class="reference internal" href="parameters.html#arspd-offset"><span class="std std-ref">ARSPD_OFFSET</span></a> (and <code class="docutils literal notranslate"><span class="pre">ARSPD2_OFFSET</span></code> if a second sensor is enabled)  offset is measured and set at boot-up or if manually commanded from the ground station.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is very important to cover the pitot tube during power up, or when you wait and then re-calibrate. An inaccurate static calibration can result in the airspeed being reported too high, causing auto-throttle controlled modes to use very low throttle and potentially cause a crash.</p>
+</div>
+<p>If the offset has changed a lot since the last boot-up, a warning will be issued. This is often an indication that you forget to cover the pitot during boot or manual calibration. The sensitivity of this warning is set by <a class="reference internal" href="parameters.html#arspd-off-pcnt"><span class="std std-ref">ARSPD_OFF_PCNT</span></a> which applies to both sensors.</p>
+<p><a class="reference internal" href="parameters.html#arspd-skip-cal"><span class="std std-ref">ARSPD_SKIP_CAL</span></a> and <a class="reference internal" href="parameters.html#arspd2-skip-cal"><span class="std std-ref">ARSPD2_SKIP_CAL</span></a> allows you to skip airspeed offset calibration on startup, instead using the offset from the last calibration or requiring a manual calibration. This may be desirable if the offset variance between flights for your sensor is low and you want to avoid having to cover the pitot tube on each boot.</p>
+<p>After you start up the autopilot on your aircraft its recommended that you wait at least 1
+minute for your electronics to warm up, preferably longer, and then do a
+pre-flight manual calibration of your airspeed sensor. This is important if your sensor temperature does not match the ambient, but may be skipped if its close to ambient temperature.</p>
+</section>
+<section id="manual-offset-calibration">
+<h2>Manual Offset Calibration<a class="headerlink" href="#manual-offset-calibration" title="Link to this heading">¶</a></h2>
+<p>Your ground station software should have a menu for doing this, usually called “Preflight
+Calibration”. You need to loosely cover your airspeed sensor to stop
+wind from affecting the result, then press the button. The calibration
+will take a couple of seconds.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A short piece of foam slipped over the end of the pitot tube is the easiest way to
+cover it. Foam blocks the wind without sealing the tube, and leaves both hands free to
+press the calibrate button. Cupping both hands around the tube also works, but makes it
+awkward to reach the button at the same time.</p>
+</div>
+<a class="reference external image-reference" href="../_images/preflight.jpg"><img alt="../_images/preflight.jpg" src="../_images/preflight.jpg" /></a>
+<p>Choosing that action will re-calibrate both your ground barometric
+pressure and your airspeed sensor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>setting <a class="reference internal" href="parameters.html#arspd-skip-cal"><span class="std std-ref">ARSPD_SKIP_CAL</span></a> or <a class="reference internal" href="parameters.html#arspd2-skip-cal"><span class="std std-ref">ARSPD2_SKIP_CAL</span></a> to “2”, will force you to manually recalibrate the offset in order to arm each boot. This is to remind users who need to allow the sensor to settle to ambient temperature before each calibration at boot.</p>
+</div>
+<p>Next you should check that your airspeed sensor is working correctly
+before takeoff. To do that you should blow into the airspeed sensor and
+make sure that the “AS” airspeed sensor value in your HUD rises as you
+blow into it. In <em>Mission Planner</em>, airspeed can also be displayed on the
+Flight Data screen’s <strong>Quick</strong> tab, which is easier to watch than the HUD
+while you have your face at the pitot tube. Blowing into the tube should
+take the reading to 6 m/s or more; if it barely moves, suspect a blocked,
+leaking or disconnected tube.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>An airspeed of exactly 0.0 that sits there on the ground and never deviates is a
+sign of a problem, not of a well-zeroed sensor. A working sensor shows small fluctuations
+from air movement and sensor noise, so a permanently perfect zero usually means the sensor
+is not being read at all.</p>
+</div>
+</section>
+<section id="calibrating-the-airspeed-sensor-gain">
+<h2>Calibrating the airspeed sensor gain<a class="headerlink" href="#calibrating-the-airspeed-sensor-gain" title="Link to this heading">¶</a></h2>
+<p>The <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a> parameter
+determines how ArduPilot maps the differential pressure from your airspeed
+sensor into an airspeed value. The default value is around 2.0, and
+should give good results for most people using analog sensors. The correct value does depend
+on you having your airspeed sensor well placed on your aircraft, and
+some users may find they need to calibrate their airspeed sensor by
+changing <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a>.
+You will find an “Airspeed ratio” setting in the configuration page of
+the autopilot in your ground station.</p>
+<p>Adjusting
+<a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a> can be done automatically using the automatic calibration feature, or manually. The procedures for both methods
+are presented below.</p>
+<section id="automatic-calibration">
+<h3>Automatic calibration<a class="headerlink" href="#automatic-calibration" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Go to Mission Planner =&gt; CONFIG/TUNING =&gt; Full Parameter List, change <a class="reference internal" href="parameters.html#arspd-autocal"><span class="std std-ref">ARSPD_AUTOCAL</span></a> to 1 and click ‘Write Params’ to send the value to the autopilot.</p></li>
+<li><p>Take-off and fly a repeated circuit or circular loiter for 5 minutes. This can be done in any mode, but if the autopilot is already tuned
+sufficiently well, this can be achieved by leaving it in loiter or RTL
+for 5 minutes. The change in <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a> value can be checked in-flight
+by going to Mission Planner =&gt; CONFIG/TUNING =&gt; Full Parameter List, and
+clicking ‘Refresh Params’. Note that when the calibration is active, an
+updated <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a> value is only saved in the autopilot’s non-volatile
+memory every two minutes, and only if the value has changed by more than
+5% from the last saved value.</p></li>
+<li><p>Land,  go to Mission Planner =&gt; CONFIG/TUNING =&gt; Full Parameter List
+and change <a class="reference internal" href="parameters.html#arspd-autocal"><span class="std std-ref">ARSPD_AUTOCAL</span></a> back to 0 to prevent further changes.</p></li>
+<li><p>In Mission Planner =&gt; CONFIG/TUNING =&gt; Full Parameter List, click
+‘Refresh Params’ and check the value of <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a>. Normally it will
+be in the range between 1.5 and 3.0. If it is outside this range and you
+have checked for leaks, then if practical, you should consider
+relocating the pitot tube to reduce the aerodynamic interference from
+adjacent fuselage, wings, etc.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The calculation automatically compensates for the effects of altitude on air density.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not anticipate that the wind speed will vary rapidly or dramatically during flights, and you are not flying over terrain that would cause bad wind speed estimates (ie alongside steep hills or canyons), you may leave <a class="reference internal" href="parameters.html#arspd-autocal"><span class="std std-ref">ARSPD_AUTOCAL</span></a> enabled. But since the ratio should not vary once calibrated, doing a calibration flight and then disabling is highly recommended.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not leave <a class="reference internal" href="parameters.html#arspd-autocal"><span class="std std-ref">ARSPD_AUTOCAL</span></a> enabled for long stretches of level flight. The calibration requires regular turns to get a good estimate. If flown for long distances without a turn then a very poor airspeed ratio can develop, resulting in very incorrect airspeed reporting, even to the point of causing a crash in some extreme cases.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you change or replace the pitot tube, reset <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a> (Default = 2.0) and recalibrate the sensor.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For those users chasing increased accuracy, between steps 2) and 3), the value of <a class="reference internal" href="parameters.html#baro-gnd-temp"><span class="std std-ref">BARO_GND_TEMP</span></a>  can be set to the current air temperature at the take-off location. By default the calibration algorithm uses the board temperature at power on as an approximation to the ambient air temperature, but due to solar and electrical heating, this nearly always reads high. This step may be worthwhile if operating in extreme temperature conditions.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You do not have to have <a class="reference internal" href="parameters.html#arspd-use"><span class="std std-ref">ARSPD_USE</span></a> enabled to do automatic airspeed calibration. You can set <a class="reference internal" href="parameters.html#arspd-use"><span class="std std-ref">ARSPD_USE</span></a> = 0 if you would prefer not to use the sensor until it is calibrated.</p>
+</div>
+</section>
+<section id="manual-calibration">
+<h3>Manual calibration<a class="headerlink" href="#manual-calibration" title="Link to this heading">¶</a></h3>
+<p>To determine the right airspeed ratio manually you should do a test
+flight in FBWA mode, with the following procedure:</p>
+<ul class="simple">
+<li><p>takeoff and get to a safe altitude. Around 100 meters is good for
+most models</p></li>
+<li><p>start a steady turn by holding your aileron stick over to one side</p></li>
+<li><p>let your aircraft do 2 or 3 full turns</p></li>
+<li><p>land and look at your telemetry logs</p></li>
+</ul>
+<p>Ask your ground station software to graph the airspeed and ground speed
+values for your flight, zooming in on the part of your flight where you
+were circling. You will get a graph like this:</p>
+<a class="reference external image-reference" href="../_images/ratio-low.png"><img alt="../_images/ratio-low.png" src="../_images/ratio-low.png" /></a>
+<p>In this case you can see that while circling the ground speed varied
+quite a lot. That is because in this flight there was quite a strong
+constant wind (in this case about 7 meters/second).</p>
+<p>Now look at where the average of the airspeed value lies in relation to
+the average of the ground speed. In the above graph you can see that the
+average airspeed is below the average ground speed by a small amount -
+in the above graph the difference between the two averages is about 2
+meters/second.</p>
+</section>
+</section>
+<section id="calculating-a-new-airspeed-ratio">
+<h2>Calculating a new airspeed ratio<a class="headerlink" href="#calculating-a-new-airspeed-ratio" title="Link to this heading">¶</a></h2>
+<p>Given the above graph you can calculate a new airspeed ratio using this
+formula:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>NEW_RATIO = OLD_RATIO*((AVERAGE_AIRSPEED + AIRSPEED_INCREASE)/AVERAGE_AIRSPEED)²
+</pre></div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li><p>OLD_RATIO = the old value of <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a></p></li>
+<li><p>NEW_RATIO = the new value of <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a></p></li>
+<li><p>AVERAGE_AIRSPEED = the average airspeed you got during the test</p></li>
+<li><p>AIRSPEED_INCREASE = the amount you want to increase the average
+airspeed by</p></li>
+</ul>
+<p>For example, in the above graph we see an average airspeed of 36.5, and
+we would like to increase that by 2 to 38.5. The old ratio was 2.0. So
+we can calculate the new ratio as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>NEW_RATIO = 2.0 * ((36.5 + 2) / 36.5)² = 2.23
+</pre></div>
+</div>
+<p>After adjusting the <a class="reference internal" href="parameters.html#arspd-ratio"><span class="std std-ref">ARSPD_RATIO</span></a> do another flight and check that the
+airspeed is now well calibrated. Don’t forget the pre-flight checks!</p>
+</section>
+<section id="note-about-higher-altitudes">
+<h2>Note about higher altitudes<a class="headerlink" href="#note-about-higher-altitudes" title="Link to this heading">¶</a></h2>
+<p>At higher altitudes you expect the true airspeed and apparent airspeed
+to start to diverge. The above calibration procedure assumes true and
+apparent airspeed are the same. If you are flying at altitudes of 2000
+meters or more above sea level then you should take account of the
+difference, and aim for your apparent airspeed to be below the average
+ground speed by the ratio of true airspeed to apparent airspeed.</p>
+<p>At an altitude of 2000 meters above sea level the difference between
+apparent and true airspeed is around 10%, so you would expect your
+average airspeed to be below the average ground speed by about 10%. At
+4000 meters above sea level this rises to around 20%. At 5000 meters it
+is around 30%. Beyond that please consult an aircraft navigation table.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tecs-total-energy-control-system-for-speed-height-tuning-guide.html" class="btn btn-neutral float-left" title="TECS (Total Energy Control System) for Speed and Height Tuning Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tuning-ground-steering-for-a-plane.html" class="btn btn-neutral float-right" title="Tuning Ground Steering for a Plane" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+    Questions, issues, and suggestions about this page can be raised on the <a href="https://discuss.ardupilot.org">forums</a>. Issues and suggestions may be posted on the forums or the <a href="https://github.com/ArduPilot/ardupilot_wiki/issues/new?title=Calibrating an Airspeed Sensor&amp;body=[Calibrating an Airspeed Sensor](https://ardupilot.org/plane/docs/calibrating-an-airspeed-sensor.html)%20-%20Describe%20the%20issue/suggestion%20and%20improve%20the%20title.%20Please%20keep%20a%20link%20to%20the%20original%20article%20if%20relevant.&amp;labels=docs">Github Issue Tracker</a>.
+    <hr/>
+
+  <div role="contentinfo">
+    <p><a style="float:right;" rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>&#169; Copyright 2024, ArduPilot Dev Team.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1016 @@
+# ID: vt_aoe_a7a_config_layout
+# SOURCE: https://www.aoe.vt.edu/content/dam/aoe_vt_edu/people/faculty/praj/avd-fundamentals/A7A%20-%20Configuration%20Layout%20-%20Drawings%20and%20Loft.pdf
+# ORIGINAL: reference/raw/vt_aoe_a7a_config_layout.pdf
+# CONVERTED: 2026-09-19 21:44 UTC-0500 | type pdf | 100 pages | ~8172 tokens
+# NOTE: Virginia Tech AOE (Raj): configuration layout, drawings and lofting.
+# FLAG img: pages 6-13,15-20,23-25,27-29,31-34,36-39,41-45,47-54,56-58,60-61,65-66,70-73,75-99
+# FLAG lowtext: pages 30,35,42-43,47,51,59,63,67,69,75-77,79-99
+
+=== PAGE 1 ===
+                                                  A7A
+
+                Air Vehicle Design
+                  AOE 4065 – 4066
+
+           II. Air Vehicle Design Fundamentals
+
+                  Course Module A7A
+         Configuration Layout: Drawings & Loft
+
+  Kevin T. Crofton Department of Aerospace and Ocean Engineering
+                      Blacksburg, VA
+
+1  CM A7A                 13 August 2024
+
+=== PAGE 2 ===
+                                           AOE 4065-4066:
+
+              Capstone Air Vehicle Design (AVD) Course Modules (CMs)
+
+                                  Overview of AVD Courses
+
+      I. Foundational                  II. Air Vehicle Design              III. Project Management
+         Elements                          Fundamentals                              Topics
+ F1. Design: An Engineering      A1. Purpose & Process                    P1. Basics of Project Management
+    Discipline                                                               and Project Planning
+                                          Conceptual Design
+ F2. Systems and Systems Thinking                                         P2. Project Organization
+                                 A2. Understand the Problem
+F3. Basics of Systems Engineering                                         P3. Roles & Responsibilities of
+                                 A3. Solve the Problem                       Team Members
+F4. Decision Making with
+    Ethics and Integrity         A4. Initial Sizing: Takeoff Weight       P4. Project Execution:
+                                    Estimation                               Teamwork for Success
+                                 A5. Initial Sizing: Wing Loading and     P5. Project Risk Management
+                                    Thrust Loading Estimation
+                                                                          P6. Delivering Effective Oral
+                                 A6. Cost Considerations                     Presentations
+                                 A7. Concept to Configuration: Key        P7. Writing Effective Design Reports
+                                    Considerations
+                               A7A. Configuration Layout: Drawings & Loft
+
+                                   Conceptual & Preliminary Design
+                                 A8. Trade Studies
+                                 A9. Use of Software Tools
+                                A10. Preliminary Design: Baseline Design
+                                    Refinement & Validation
+2 2   CM A7A                                     13 August 2024
+
+=== PAGE 3 ===
+                               Disclaimer
+
+    Prof. Pradeep Raj, Aerospace and Ocean Engineering, Virginia Tech,
+
+       excerpted and compiled the material contained herein solely for
+
+     educational purposes from publicly available presentation slides of
+
+     Prof. Wm. Michael Butler’s lecture to the Air Vehicle Design class in
+
+                              the fall of 2021.
+
+     Although a good-faith attempt is made to cite all sources of material,
+
+                    we regret any inadvertent omissions.
+
+3   CM A7A                        13 August 2024
+
+=== PAGE 4 ===
+          CRUCIALLY IMPORTANT
+      CMs only introduce key topics and
+   highlight some important concepts and
+     ideas...but without sufficient detail.
+
+  We must use lots of Reference Material* to
+          add the necessary details!
+         (*see Appendix in the Overview CM)
+
+4 4 CM A7A          13 August 2024
+
+=== PAGE 5 ===
+                              Outline
+
+      A7A. Configuration Layout: Drawings & Loft
+
+           A7A.1 Computer Aided Design (CAD) Systems
+
+           A7A.2 Configuration Layout and CAD Drawings
+
+           A7A.3 Basics of Conic Lofting
+
+           A7A.4 Lofting in Solidworks*
+
+*Excerpt of notes from Greg Marien - San Diego State University
+
+5  CM A7A                    13 August 2024
+
+=== PAGE 6 | img ===
+                    Pre-computer Based Design (1960s)
+
+                                  F-111
+
+                             2D drawings lead to the 3D entity
+                                           Image 1779162262,CCBySA Source: https://www.worthpoint.com/worthopedia/111-general-dynamics-ardvark-jet-
+6   CM A7A                        13 August 2024
+
+=== PAGE 7 | img ===
+                                     CAD Progression:
+                                1960s through the 1990s
+                        DAC-1 (Design
+                        Automatedby
+                        Computer)  1960s
+                        developed
+                        by GM & IBM
+
+                                     CADAM              1970s
+
+                                                          Autocad &Solidworks
+
+                                                                 1980s &1990s
+
+     Initial CAD programs were computerized
+          versions of traditional drafting
+
+               Computing advances directly impacted
+               the growth of CAD and CAD capabilities
+7   CM A7A                         13 August 2024
+
+=== PAGE 8 | img ===
+                      Engineering Graphics and CAD
+
+           Early CAD:                               Today’s CAD:
+       Using 2D tomake 3D                  Using 3D to make 2D as needed
+
+                                      Technical drawing principles are
+ Remember: CAD is atool
+                                      still at the core of modern CAD
+
+8   CM A7A                        13 August 2024 This 4th ed Photoby by G. Bertoline Unknown 2005 Author is licensed under CC BY-NC-ND, From Fundamentals of Graphics Communication,
+
+=== PAGE 9 | img ===
+                                    CAD Systems:
+              Solidworks, Fusion 360, & Others – "Low Soln"
+
+                  Solidworks                                      Fusion360
+
+• Many alternatives out there and they all
+  have their strengths and weaknesses.
+• Parametric modeling tends to be norm.
+
+                                                         SharkCadPro
+
+9    CM A7A                           13 August 2024      ThisPhotobyUnknownAuthorislicensedunderCCBY-NC-ND, CC BY-SA
+
+=== PAGE 10 | img ===
+                        Production Level CAD Systems –
+                                    "High Soln"
+
+                                                  CATIA by Dassault
+
+ NX by Siemens
+
+ Very powerful software
+ but takes time to learn.
+
+10  CM A7A                     13 August 2024  This Photoby Unknown Author islicensed under CC BY-NC-ND,
+
+=== PAGE 11 | img ===
+30
+                        Design Today with CAD
+
+                           F-35
+
+      3D virtual models lead to drawings and physical models
+  11 CM A7A                   13 August 2024      Source:http://www.cobaltcfd.com, gupta9665.wordpress.com
+
+=== PAGE 12 | img ===
+                     OpenVSP & RDS Student Type Tools
+
+         OpenVSP
+Allows you to use your sketch
+ directly to create a 3D model
+
+                                                      RDS
+                                           Creates a parametric model
+                                            that is highly conducive to
+                                              being used in various
+                                             analysis programs – air
+                                                vehicle synthesis
+
+12  CM A7A                      13 August 2024
+
+=== PAGE 13 | img ===
+                         A Recommended Approach
+
+• Generate and support two models of the main concepts you
+   want to further develop
+    – CAD Model
+    – VSP or “VSP-like” model
+
+                          Why?
+
+• Answer: These models serve two different purposes
+    – CAD Model – This is the final geometry (internal and external) used in
+      drawings, making physical models, etc.
+    – VSP or “VSP-like” model – This is the model most conducive to use in
+      various analysis tools available to you – analysis quick trade study model.
+
+        You should have, and maintain, both models
+              – I would start with the CAD model
+
+13  CM A7A                     13 August 2024
+
+=== PAGE 14 ===
+                              Outline
+
+      A7A. Configuration Layout: Drawings & Loft
+
+           A7A.1 Computer Aided Design (CAD) Systems
+
+           A7A.2 Configuration Layout and CAD Drawings
+
+           A7A.3 Basics of Conic Lofting
+
+           A7A.4 Lofting in Solidworks*
+
+*Excerpt of notes from Greg Marien - San Diego State University
+
+14 CM A7A                    13 August 2024
+
+=== PAGE 15 | img ===
+                      First Select Specific Design Features
+                                       (see CM A7)
+• Fuselage size and shape (fineness ratio, cross-sectional area
+   distribution, basic structural layout, etc.)
+• Wing size, shape and location (span, sweep, AR, taper ratio, basic
+   structural layout, etc.)
+• High-lift devices (mechanical vs. powered)
+• Empennage type and size (aft tail, canard, tailless, etc.)
+• Static stability level (degree of static margin, SM, in %MAC)
+• Propulsion system (turboprop, turbofan, turbojet, number of engines,
+   bypass ratio, podded or buried, etc.)
+• Inlet and nozzle (location, type)
+• Landing gear type & location (tricycle, bicycle, tail dragger, etc.)
+• Subsystems (avionics, ECS, FCS, etc.)
+• Materials (metals or composites or both)
+• Etc.
+
+ Use Selected Features to Generate Configuration Layouts!
+15  CM A7A                        13 August 2024
+
+=== PAGE 16 | img ===
+               What are some key physical features of
+                    the Dornier 328 Jet that drive
+                         its fuselage design?
+
+16 CM A7A                13 August 2024    Source: Flight International
+
+=== PAGE 17 | img ===
+                              F-35B Cutaway
+
+Propulsion integration (lift fan and engine), weapons
+  payload, stealth, and integration on LHAs & LHDs
+were some of the design drivers on the F-35B model
+17  CM A7A                          13 August 2024        This Photoby Unknown Author islicensed under CC BY-NC-ND
+
+=== PAGE 18 | img ===
+                 What are some key physical features
+                 of Twin Otter that drive its design?
+
+18 CM A7A                13 August 2024 Source: https://www.vikingair.com/twin-otter-series-400/technical-description
+
+=== PAGE 19 | img ===
+                                   DHC-6 Twin Otter
+
+19 43  CM A7A                           13 August 2024  Source: https://www.vikingair.com/twin-otter-series-400/technical-description
+
+=== PAGE 20 | img ===
+                                     DHC-6 Twin Otter
+
+20                                      13 August 2024  Source: https://www.vikingair.com/twin-otter-series-400/technical-description
+     CM A7A
+
+=== PAGE 21 ===
+                       Configuration Layout Process
+
+• Where to begin? No Single Answer
+      o Kirschbaum says:
+          – Start with Crew Station
+      o Raymer says:
+          – Start with C.G.
+      o Shrock says:
+          – Just Start Somewhere!!
+
+• Keep in mind: the final vehicle layout might (no, would) be quite
+  different from the concept you initially sketched
+
+• Major Components Get (Re)arranged Multiple Times!
+   – Engines, Flowpath (Inlet/Nozzle), Crew Station, Payload,
+      Internal Fuel Tanks, Cargo Compartment, Landing Gear, etc., etc., etc.
+   – Take a first cut at wing planform and type of tail surfaces, their sizes and
+      locations
+
+                      HIGHLY ITERATIVE!
+21  CM A7A                      13 August 2024
+
+=== PAGE 22 ===
+                  Some Items to Note When Making an
+                             Air Vehicle in CAD
+ • We typically build half of the model (unless there is an asymmetric
+   feature) – on drawings we show both halves
+ • Units – In the U.S. we would use inches and pounds and seconds
+ • We use some naval architecture terms when describing locations
+   (water line, WL, buttock line, BL, & fuselage station, FS, which
+   align with certain axes)
+ • Build your model with some distance away from (0,0,0) to allow for
+   growth of the model and to avoid negative numbers.
+ • CAD is good for weights and CG of the overall OML (and IML if
+   detailed enough)
+    o Initial model usually does not have IML
+ • You will need to model or purchase various systems for the
+   vehicle – engines, seats, actuators, assorted cockpit items, etc.
+   (GrabCAD with caution)
+ • Engine manufacturer good source for propulsion details and
+   models
+22  CM A7A                    13 August 2024
+
+=== PAGE 23 | img ===
+                  Some Items to Note When Making an
+                            Air Vehicle in CAD
+
+• You can view creation of a 3D configuration layout and model as
+   building a puzzle where you have some parts predefined and
+   others you are allowed to create
+
+• Think about the vehicle itself and how it fits in the larger system
+   (How is the end-user going to interact with it?)
+
+• You don’t make the model once and that is it. Even your CAD
+   model is part of the iteration process!
+
+23  CM A7A                    13 August 2024
+
+=== PAGE 24 | img ===
+                      Three-view (or 3-vu) Drawings:
+                  Standard for Depicting Configuration Layout
+Common Standard Language of Designers for Communication with everyone
+FS: Fuselage Station
+                                Top View or
+WL: Water Line                  Plan View
+WS: Wing Station
+
+A-A: Vertical Reference Plane
+B-B: Fuselage Reference Plane
+C-C: Centerline Plane of Symmetry
+
+                                                             Side View
+                Front View
+
+24  CM A7A                        13 August 2024  Source: Figure 1-1, Ref. AVD 6 (Kirschbaum and Mason)
+
+=== PAGE 25 | img ===
+                             Model Orientation
+
+      FS: Fuselage Station – X-Axis           Solidworks Starter PartAvailable
+      BL or WS: Buttock Line or Wing Station – Y-Axis
+      WL: Water Line – Z-Axis
+25  CM A7A                        13 August 2024
+
+=== PAGE 26 ===
+            You should build models of
+           the key components to use as
+               guides when making
+                  the 3D model
+
+26 CM A7A             13 August 2024
+
+=== PAGE 27 | img ===
+                   Example of Initial Fuselage Guidance for
+                              Commercial Aircraft
+
+27  CM A7A                     13 August 2024  Source: https://www.vikingair.com/twin-otter-series-400/technical-description
+
+=== PAGE 28 | img ===
+                              Example Cockpit & Cabin
+
+Cockpit
+
+                                                                      1st ClassCabin
+
+                      Items to consider when laying out the vehicle
+
+28   CM A7A                              13 August 2024   Source: Civil Jet Aircraft Design by L. Jenkinson et al
+
+=== PAGE 29 | img ===
+                                              Example Internal Arrangement
+
+ FWD
+
+                                                                                Source: 717-200: Airplane Characteristics for Airport Planning
+                                                                                by Boeing
+29      CM A7A                                                13 August 2024
+
+=== PAGE 30 | lowtext ===
+                                 Propulsion
+
+30   CM A7A                             13 August 2024
+
+=== PAGE 31 | img ===
+                      Example of Selected Propulsion System
+
+     Research web, VT AOE
+                                                            F100 – PW-229
+ resources or contact vendor to
+                                                               Engine w/
+    obtain a model or info to
+                                                               afterburner
+        create a model
+
+                                                        Source: F-16.net, P&W site, Diamond aviation
+31  CM A7A                           13 August 2024
+
+=== PAGE 32 | img ===
+                       Simple Nacelle Basic Geometry
+
+• There can a cowling around the engine itself
+   depending upon the vehicle design
+• Inlets, ducts, nozzles can drive part of the
+   fuselage design if the engines are buried in the
+   fuselage.
+     o Be careful of where exhaust impinges
+• Work with propulsion on inlet size and shape
+   and required duct cross-sectional area profiles
+• Be careful of ground clearances and provide
+   enough structure for engine attachment
+
+               40”          55”         60”
+
+                           25”rad             14”rad
+   17”rad
+
+                               Flow
+   Turbofanengine
+                                                       ThisPhotobyUnknownAuthoris licensedunderCC BY-SA
+32   CM A7A                          13 August 2024
+
+=== PAGE 33 | img ===
+                      Example of Initial Propulsion System
+   PT6A engine
+
+Research web, VT
+AOE resources
+or contact vendor to
+obtain a model or
+info to create a model
+– maintenance
+manuals are also
+good sources of
+information
+
+33  CM A7A                        13 August 2024                Source: P&W site
+
+=== PAGE 34 | img ===
+                       Example of Initial Propulsion System
+
+                                           Propeller for the PT6A engine
+
+                                                                  Source: P&W site, Pixers, internet
+34  CM A7A                           13 August 2024
+
+=== PAGE 35 | lowtext ===
+                               Subsystems
+
+35   CM A7A                             13 August 2024
+
+=== PAGE 36 | img ===
+                     Example of Subsystems – Landing Gear
+
+    Landing Gear for the Twin Otter
+
+     Look up or select a the tire size in a tire book (example: Good Year Aviation Data Book )
+
+36  CM A7A                          13 August 2024              Source: F-16.net, P&W site
+
+=== PAGE 37 | img ===
+                       Example of Subsystems – Radar
+
+                              HoneywellRadar
+
+                                                  Cessna Citation Bravo
+
+                                                                  Source: F-16.net, P&W site
+37  CM A7A                           13 August 2024
+
+=== PAGE 38 | img ===
+                    Example of Subsystems – Actuator
+
+                                                 Moog Common
+                                            Electro-Hydrostatic Actuator
+
+                                 13 August 2024                  Source: Moog
+38  CM A7A
+
+=== PAGE 39 | img ===
+                                 Drawing of the Wright Flyer
+
+                                 This Photo by Unknown Author is licensed under CC BY-NC-ND
+
+39     CM A7A                                       13 August 2024
+
+=== PAGE 40 ===
+                                            Line Types
+
+                                                        Visible (or Object) – used to show visible
+                                                        edges in a view
+
+                                                        Hidden - used in multiview drawings to
+                                                        indicate a feature that is behind another
+                                                        feature in the view
+
+                                                        Center – used to mark the center of arcs > 180
+                                                        degrees (both in-plane and longitudinal). When
+                                                        the center line is short a single short dash is
+                                                        used.
+
+                                                        Construction – light solid lines used as
+                                                        guidance. Should be light enough that when
+                                                        the sketch is held at arms length the
+                                                        construction line is barely visible
+
+40    CM A7A                                      13 August 2024
+
+=== PAGE 41 | img ===
+                      A General Arrangement Drawing
+               Provide a complete graphical description of the air vehicle
+
+                •  Parallel projection and proper scale should be used
+                •  Note the data block and dimensioning
+                •  Note the units assumed in this drawing
+ A full and fairly accurate 3D model of the OML of a vehicle can be generated
+            from a 3-view when combined with a little knowledge.
+41  CM A7A                           13 August 2024
+
+=== PAGE 42 | lowtext, img ===
+                   General Arrangement Drawing: X-15
+
+42  CM A7A                     13 August 2024
+
+=== PAGE 43 | lowtext, img ===
+                      YF-23 General Arrangement - Proposal
+
+43  CM A7A                           13 August 2024
+
+=== PAGE 44 | img ===
+                    You can learn quite a bit from
+                        a good 3-view drawing!
+    They Provide Key Inputs for Engineering Analyses (See CM A3)
+
+                                             ThisPhotobyUnknownAuthorislicensedunderCC BY-SA
+44 CM A7A                    13 August 2024
+
+=== PAGE 45 | img ===
+                    Drawing: Dimensioning and Scale
+
+ Use good scales on vehicle or large object drawings such as:
+
+ 1/10, 1/20, 1/30, 1/40, 1/80 etc.
+
+Engineer’s Scale
+
+ Remember drawings are meant to illustrate a concept and also to be useful
+                        There are standards!
+
+45  CM A7A                      13 August 2024
+
+=== PAGE 46 ===
+                         Aircraft Three-view Specs (SAE)
+
+  • Required Views
+      The plans shall consist of a standard aeronautical three-view, using a US-
+      standard third-order projection:
+       1. Show [Right] Side view in the lower left with the nose pointing right
+       2. Show Top view above the right side view also with the nose pointing right
+       3. Show Front view in the lower right.
+
+  • Dimensions
+      o At a minimum, all aircraft must have the length, width, height, and CG
+        location clearly marked and dimensioned on the submitted engineering
+        drawings.
+      o All dimensions must be in set of units (e.g., inches and decimal inches) to
+        an appropriate level of precision. (Hint: four decimal places are too
+        many!)
+
+  • Summary Data
+      Include a table with a summary of pertinent aircraft data such as wingspan,
+      TOGW, empty weight, fuel weight, engine make and model, SM, etc.
+
+                We Recommend Using SAE Specs
+
+46  CM A7A                          13 August 2024
+
+=== PAGE 47 | lowtext, img ===
+                  Other General Arrangement Drawings
+
+47  CM A7A                     13 August 2024
+
+=== PAGE 48 | img ===
+                     Internal Arrangement Drawings
+  Provides a complete graphical description of the interior of an air vehicle
+
+  These drawings provide insight into
+      the structural approach and
+arrangement of systems in the vehicle.
+  Parallel projection and proper scale
+           should be used.
+
+48  CM A7A                        13 August 2024
+
+=== PAGE 49 | img ===
+                         Interior Profile Drawing
+  Provides a complete graphical description of the interior of an air vehicle
+
+    Note: key systems call-outs
+   These drawings provide insight into the structural approach and arrangement of
+      systems in the vehicle. Parallel projection and proper scale should be used.
+49  CM A7A                          13 August 2024
+
+=== PAGE 50 | img ===
+                             Cutaway Drawings
+
+                                                             Flight International is
+                                                             a great source of
+                                                             vehicle cutaway
+                                                             illustrations
+
+         Typically are basically an inboard drawing turned 3D illustration
+                              (is done in perspective).
+50   CM A7A                           13 August 2024
+
+=== PAGE 51 | lowtext, img ===
+                             Cutaway Drawings
+
+51  CM A7A                           13 August 2024
+
+=== PAGE 52 | img ===
+                      Drawing and Illustration:
+                           Distinct Entities
+
+          Drawing
+       F-4 Phantom
+                                          Illustration
+                                     F-35B Lightning II
+      Each plays an important role in design as it is
+        practiced but they are not the same thing.
+52 CM A7A                 13 August 2024
+
+=== PAGE 53 | img ===
+                  But sometimes there are hybrids...
+                                               F-35B Lightning II
+
+    ...with drawing elements adapted for an illustration
+53 CM A7A                    13 August 2024
+
+=== PAGE 54 | img ===
+                      Some Things to Note About Doing
+                                 Drawings in CAD
+
+   • Drawing standards still apply
+   • Drawings for conceptual design are different than drawings in detailed
+      design
+   • Be careful about tangent edges and hidden lines in any CAD program
+   • Remember CAD is tool – you still need to have the understanding on
+      how to use the tool correctly
+
+                                                       Line showing a
+                                                       tangent edge
+                                                       that should not
+                                                       be visible in a
+                                                       drawing
+
+54  CM A7A                      13 August 2024
+
+=== PAGE 55 ===
+                              Outline
+
+      A7A. Configuration Layout: Drawings & Loft
+
+           A7A.1 Computer Aided Design (CAD) Systems
+
+           A7A.2 Configuration Layout and CAD Drawings
+
+           A7A.3 Basics of Conic Lofting
+
+           A7A.4 Lofting in Solidworks*
+
+*Excerpt of notes from Greg Marien - San Diego State University
+
+55 CM A7A                    13 August 2024
+
+=== PAGE 56 | img ===
+                                   Conic Lofting
+
+56   CM A7A                             13 August 2024            ThisPhotobyUnknownAuthorislicensedunderCC BY-SA
+
+=== PAGE 57 | img ===
+                                        Conics
+
+ Conics defined by a rho value
+        are a powerful tool
+                                                                               SlopeControl
+
+                                               ShoulderPoint
+
+                                                        Source: Aircraft Design: A Conceptual Approach, 3rd Edition by D. Raymer
+57   CM A7A                               13 August 2024
+
+=== PAGE 58 | img ===
+                                   Conic Surfaces
+
+                                                                                     FWD
+   How you go about creating these types of
+   surfaces really depends upon the CAD
+   system you are workingin
+                                                       Source: Aircraft Design: A Conceptual Approach, 3rd Edition by D. Raymer
+58   CM A7A                               13 August 2024
+
+=== PAGE 59 | lowtext ===
+                        Fuselage Creation
+
+59  CM A7A                           13 August 2024
+
+=== PAGE 60 | img ===
+                              Conic Lofting: Fuselage
+                                         Edge Curves
+
+                                           A combination of conics and lines can be used to
+                                           generate control lines for the entireOML
+
+                                       MaxHalf-Breadth
+                                                               Image Source: Use of Conics in Airplane Design, L.J. Adams 1952
+60   CM A7A                                 13 August 2024
+
+=== PAGE 61 | img ===
+                      Set up a Fuselage Profile
+                             on a BL 0 plane
+
+                              xxlong                         FS
+
+WLx00
+                           xx”rad
+                                                          >15deg
+
+                  FS
+
+61  CM A7A                     13 August 2024
+
+=== PAGE 62 ===
+                             Fuselage Planview
+
+                            MaxHalf-Breadth
+
+             Conic
+                                      xxx”long                    Engine
+
+                           Cabin
+BL0
+                                            xx”rad
+
+         Approach is basically wrapping a clean aerodynamic shape around
+         the required systems in the fuselage
+             • Attempt to minimize wetted area and cross-sectional area
+
+ 62   CM A7A                          13 August 2024
+
+=== PAGE 63 | lowtext ===
+               Wing Creation & Placement
+
+63  CM A7A                     13 August 2024
+
+=== PAGE 64 ===
+                   Wing Basic Geometry Information
+
+ • On a simple wing establish a simple wing first with airfoils initially
+   in a single construction plane
+ • A good construction order is wing planform>airfoil sections>
+   surfaces/solids
+ • Twist, dihedral etc. can be
+   added in subsequent                Ct
+                                              BL (or WS in thiscase)
+   stages unless firmly
+   understood initially
+                                           TE
+                          LE
+
+                                            x% chordMAC
+
+                                                                 BL0
+                   FS      Cr
+64  CM A7A                      13 August 2024
+
+=== PAGE 65 | img ===
+                               Wing MAC Calculation:
+
+                               Simple Wing Geometry
+
+                        Source:AircraftDesign:AConceptualApproach,3rd Editionby D. Raymer
+
+65  CM A7A                           13 August 2024
+
+=== PAGE 66 | img ===
+                        Something to be careful of in CAD
+                                 when creating airfoils
+
+                                                      Notsmooth
+
+                     Notsmooth
+
+                Using splines alone can yield non-smooth curves.
+                Combinations of conics & lines yield better results
+66  CM A7A                         13 August 2024
+
+=== PAGE 67 | lowtext ===
+             Empennage Creation & Placement
+
+67  CM A7A                     13 August 2024
+
+=== PAGE 68 ===
+                       HT & VT Basic Geometry Information
+
+                          HTCr                           Example of a simple
+                                             VTCt        T-Tail configuration
+
+             HTCt
+                        FS
+                                                     LE
+                        BL
+                        WL
+                                                                 BL
+
+                                         VTCr
+                                                       FS                FWD
+ Place the empennage elements in the model in
+ a manner similar to thewing                           BL
+ Construction is just like the wing                    WL
+ (planform>airfoilsections>surfaces/solids
+
+68   CM A7A                           13 August 2024
+
+=== PAGE 69 | lowtext ===
+                 Landing Gear Considerations
+
+69  CM A7A                           13 August 2024
+
+=== PAGE 70 | img ===
+                      Example of Overturn Angle on Drawing
+
+         OverturnAngle
+
+                        Lockheed Martin Liquid Fly-BackBooster
+
+70  CM A7A                           13 August 2024
+
+=== PAGE 71 | img ===
+                             Landing Gear Layout
+
+                                 Classic GraphicalMethod
+71   CM A7A                            13 August 2024
+
+=== PAGE 72 | img ===
+                 CG Location for a Starting Point
+CG location is essential to balancing the design
+• Get a rough CG using the major contributors to the
+   overall weight in the empty vehicle (fuselage, wing,
+   tails, propulsion (batteries?), and other items
+• A mass properties spreadsheet can be good to use
+• CAD Assemblies are best for vehicles with systems
+
+72 CM A7A                 13 August 2024
+
+=== PAGE 73 | img ===
+                       CAD Model Examples of Lofting
+
+               Add cadmod el pics –segue to CADdemo
+               Solidworks/N X
+
+73  CM A7A                        13 August 2024
+
+=== PAGE 74 ===
+                              Outline
+
+      A7a. Configuration Layout: Drawings & Loft
+
+           A7a.1 Computer Aided Design (CAD) Systems
+
+           A7a.2 Configuration Layout and CAD Drawings
+
+           A7a.3 Basics of Conic Lofting
+
+           A7a.4 Lofting in Solidworks*
+
+*Excerpt of notes from Greg Marien - San Diego State University
+
+74 CM A7A                    13 August 2024
+
+=== PAGE 75 | lowtext, img ===
+
+
+=== PAGE 76 | lowtext, img ===
+
+
+=== PAGE 77 | lowtext, img ===
+
+
+=== PAGE 78 | img ===
+VT AOE NOTE: A start part has been added to the class Canvas site
+under
+AOE_4065 > Files > Supplemental Reference Material
+Aircraft OML Modeling_Lofting > Aircraft_Solidworks_StartPart.SLDPRT
+
+=== PAGE 79 | lowtext, img ===
+
+
+=== PAGE 80 | lowtext, img ===
+
+
+=== PAGE 81 | lowtext, img ===
+
+
+=== PAGE 82 | lowtext, img ===
+
+
+=== PAGE 83 | lowtext, img ===
+
+
+=== PAGE 84 | lowtext, img ===
+
+
+=== PAGE 85 | lowtext, img ===
+
+
+=== PAGE 86 | lowtext, img ===
+
+
+=== PAGE 87 | lowtext, img ===
+
+
+=== PAGE 88 | lowtext, img ===
+
+
+=== PAGE 89 | lowtext, img ===
+
+
+=== PAGE 90 | lowtext, img ===
+
+
+=== PAGE 91 | lowtext, img ===
+
+
+=== PAGE 92 | lowtext, img ===
+
+
+=== PAGE 93 | lowtext, img ===
+
+
+=== PAGE 94 | lowtext, img ===
+
+
+=== PAGE 95 | lowtext, img ===
+
+
+=== PAGE 96 | lowtext, img ===
+
+
+=== PAGE 97 | lowtext, img ===
+
+
+=== PAGE 98 | lowtext, img ===
+
+
+=== PAGE 99 | lowtext, img ===
+
+
+=== PAGE 100 ===
+                      Good Vehicle Layout & Lofting References
+
+              Please look beyond the stated chapters in the following list
+                     – there is plenty of useful information there
+• Design of Rocket and Space Launch Vehicles by D. Edberg & W. Costa –
+   AIAA 2020 publication Chapters 7, 8
+• Aircraft Design of WW II: A Sketchbook by Lockheed Aircraft Corp –
+   Dover Publications 2017
+• Civil Jet Aircraft Design by L.R. Jenkinson, P. Simpkin, & D. Rhodes– AIAA
+   1999 publication Chapters 3,5,6,7,9,12,15
+• The Design of the Airplane by D. Stinton– AIAA 2001 publication
+   Chapters 4,5,7,8,9,10,12,14
+• General Aviation Aircraft Design: Applied Methods and Procedures by S.
+   Gudmundsson– Elsevier Publications 2014 Chapters
+   4,5,7,9,10,11,12,13,14
+• Aircraft Design Handbook: Aircraft Design Aid and Layout Guide by
+   N. Kirschbaum – VT AOE internal publication
+• Designing Unmanned Aircraft Systems: A Comprehensive Approach, 2nd Ed. by
+   J. Gundlach– AIAA 2014 publication Chapters 4,6,7,8,10,11,12
+• Fundamentals of Aircraft and Airship Volume I – Aircraft Design by L.M. Nicolai,
+• G.E. Carichner – AIAA 2010 publication Chapters 8,9,11,14,15,16,17,18,19,23
+• Aircraft Design: A Conceptual Approach, 6th Ed. by D. Raymer– AIAA
+   2018 publication Chapters 8,9,11,14,15,16,17,18,19,23
+100 CM A7A                         13 August 2024

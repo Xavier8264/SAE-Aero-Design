@@ -1,0 +1,355 @@
+# ID: uf_wing_spar_optimization
+# SOURCE: https://ufdcimages.uflib.ufl.edu/AA/00/04/68/60/00001/Wing%20Spar%20Optimization%20of%20Radio%20Controlled%20Size%20Aircraft-Schneider.pdf
+# ORIGINAL: reference/raw/uf_wing_spar_optimization.pdf
+# CONVERTED: 2026-09-19 21:44 UTC-0500 | type pdf | 6 pages | ~6444 tokens
+# NOTE: Univ. of Florida: spar cross-section optimization for a 14 lb, 7 ft span RC aircraft. Same scale as ours.
+# FLAG img: pages 1-2,4-5
+# FLAG math: pages 3
+
+=== PAGE 1 | img ===
+Schneider, Alexander, Honors Thesis, April 20, 2016                                              1
+
+   Wing Spar Optimization of Radio Controlled
+
+                                    Size Aircraft
+
+                          Alexander W. Schneider (awschneider@ufl.edu)
+
+                            Graduating May 2016, Spring Semester Term
+
+                                        Summa Cum Laude
+
+                           Bachelor of Science in Aerospace Engineering
+
+                        Faculty Advisor: Dr. Richard Lind (ricklind@ufl.edu)
+
+                                                  for the structure of the aircraft.
+  Abstract—This honors thesis shall provide a          One of the most structurally intensive parts of
+comprehensive optimization of wing spars for      the aircraft is that of the wing, its purpose, to
+use in radio controlled aircraft. The model       provide lift for the aircraft [1]. The wing structure is
+aircraft chosen for the experimentation is        composed of spars, ribs, stringers, and skin. Spars
+approximately 14 pounds with an approximate       are situated lengthwise in the wing carrying the
+wingspan and length of 7 feet. The optimization   majority of bending forces. Ribs lie transversely and
+will compare varying cross sectional spars at
+                                                  provide airfoil shape and minor compression
+differing lengths utilizing several different
+                                                  support. Stringers also lie lengthwise and provide
+materials  defined   by their    moduli.   The
+                                                  support for the skin. The skin covers the internal
+optimization utilizes a Latin hypercube with
+surrogate modeling. The optimization process      components of the wing, provides a smooth surface
+has been altered to include a large array of      for passing airflow, and handles shear loading. Of
+design points for improved results. The results   all the components in the wing, the spars provide the
+shall provide a basis for wing spar design and    most significant support and are responsible for
+provide insight to specific material and          transferring the aerodynamic loading, created by the
+geometrical design choices.                       wing, to the aircraft wing box and fuselage [2]. See
+                                                  fig. 1 for an example of wing construction.
+                I. INTRODUCTION
+T HE ability to cut weight without the expense of
+  losing structural rigidity is of utmost importance
+in the design and fabrication of all aircraft. The
+recent advances in composites, unique alloys, and
+other complex materials has opened up a world of
+opportunity for aircraft structural engineers and
+radio controlled (RC) aircraft designers alike.
+Available material choices are abundant and each
+have their own set of benefits and disadvantages. To
+add greater confusion, material strength is very
+dependent upon the material’s geometries and
+dimensions. Due to the large amount of alternatives  Fig. 1. RC Aircraft Wing Construction
+it is helpful to perform a computer based
+                                                       The most common geometrical shapes for
+optimization to aide in design and material selection
+                                                  aircraft wing spars are I beam, rectangular beam,
+
+=== PAGE 2 | img ===
+Schneider, Alexander, Honors Thesis, April 20, 2016                                                  2
+
+and U beam (see fig 2). RC aircraft in particular   aircraft [3]. The optimization thusly assumes this
+most commonly use the rectangular beam for its      single aircraft design for simplicity in achieving
+ease to source, manufacture, and incorporate in an  results. It must be noted that a drastically different
+RC aircraft’s wings. The rectangular shape can vary  weight and size could alter the results and may not
+in aspect ratio (ratio of height to width) altering its  apply to very large nor very small RC aircraft. The
+moment of inertia and its accompanying resistance   next assumption is in regards to the cross sectional
+to bending forces.                                  area of the spar. To maintain ease of comparison,
+                                                    width of the cross section will remain constant
+                                                    whereas the height will be altered to increase the
+                                                    cross sectional area for differing designs in the
+                                                    optimization. Furthermore, the elastic modulus for
+                                                    composite and fiber materials will be assumed to be
+                                                    the elastic modulus recorded in the “1” direction,
+                                                    E1. Finally, it is assumed that the original spar
+Fig. 2. I beam, U beam, and Rectangular beam respectively.  design is based off a previous analyzation (which in
+                                                    fact it is). The initial/original design utilized in the
+    The most common spar materials found in RC      optimization will be a unidirectional carbon fiber
+aircraft vary from plastic and wood to carbon fiber  rod with a cross sectional area of 0.200 in2 and a
+and aluminum. The materials each have their own     length of 96 in. This was the selected spar for the
+set of material properties, the most relevant being  University of Florida’s Design Build Fly team and
+the modulus of elasticity (or Young’s Modulus)      was chosen based off preliminary analysis and no
+which measures the resistance of a material to      optimization.
+deform. The deformation of the spar is important
+both in regards to wing tip deflection and                  III. ALGORITHM OF OPTIMIZATION
+yield/failure of the spar. The other driving factor in
+                                                        The optimization employed for the experiment
+wingtip deflection is the length of spar itself. The
+                                                    first begins with defining a function. The function is
+increased length of the wing and its accompanying
+                                                    known as the cost function, J. Each term in the cost
+spar create a longer moment arm contributing to     function has a design parameter associated with it.
+higher stresses and a larger wingtip deflection.    These terms can have added multipliers to better
+                                                    categorize their importance in the design. The
+           II. PROBLEM STATEMENT                    parameters utilized here are based off the major
+   RC aircraft design is often a subjective process  importance in the design of the wing spars. They
+especially when determining the best material, size,  include weight, deflection, and factor of safety
+and length for the main wing spar. Analysis may     (FOS). The parameters are dependent upon the
+prove a certain material and size completely capable  design variables. The design variables include cross
+of performing the job but this is often not the     sectional area, modulus of elasticity, and the length
+optimal design to maximize strength, minimize       of the spar. A range of values is required for each
+weight, and prevent deflection. It can be difficult to  design variable and is chosen by selecting the most
+choose the best combination of designs due to the   realistic maximum and minimum values for the
+expanse of design variables. The optimization       design. Length, for example, is limited at the high
+performed here aims to determine the best           end by the ability to transport the aircraft (for
+                                                    example must fit inside a transportation vehicle) and
+combination of design points for a mid-size 14
+                                                    at the lower end due to the importance of increasing
+pound RC aircraft.
+                                                    a wing’s aspect ratio (to improve lift to drag ratio
+   For the sake of this optimization, several
+                                                    and maintain a sufficiently long wing). The ranges
+assumptions will be made. For one, the aircraft size  utilized are 0.15 to 0.40 in2 for cross sectional area,
+is assumed to be 14 pounds with an approximate      435 to 23200 ksi for modulus of elasticity, and 80 to
+wingspan and length of 7 feet. The size matches     120 in for length.
+several mid-size RC aircraft and is well below the
+maximum 50 pound limit requirement for RC
+
+=== PAGE 3 | math ===
+Schneider, Alexander, Honors Thesis, April 20, 2016                                                3
+
+   The resulting cost function includes each of the  and the results are then input into a second code
+parameters mentioned and adds multipliers to relate  which performs surrogate modeling. This process is
+the terms closer together. Even so, emphasis is     repeated two more times until there are 200 total
+highest with weight (even though it is scored with  points in the design field and 20 evaluated points.
+the same multiplier, the weight values had a greater    The FEA employs a tetrahedral mesh TET10
+difference between the design points and the        element with 4 Jacobian points. A mesh density of
+original), followed by deflection, and then FOS. The  “coarse” was selected for improved speed during
+FOS term is unique due to the desire of meeting an  analyses.
+FOS of 1.5 (the standard for most aircraft              The results are tabulated and compared. The
+components) [4]. Thus the resulting FOS is divided  optimal design is the one that minimizes the cost
+by the desired FOS and subtracted by 1. The         function.
+absolute value of that result is utilized in case the
+FOS goes above or below the target. FOS’s that                 IV. ANALYSIS OF RESULTS
+result in anything less than 1 will be automatically    An original optimization was performed
+disqualified (the cost will be manually adjusted to a  outside of this thesis experiment utilizing only 20
+very large value). FOS is also multiplied by 50 due  total points and the results were not very refined.
+to its very small initial contribution to the cost  For this thesis, the optimization was retuned and
+function (See eqn. 1).
+                                                    improved vastly. This result can be proven by
+       (Weight)DP       (Deflection)DP              judging the differences in the costs in Table I.
+ J= 3              + 3
+      (Weight)Orig     (Deflection)Orig     (1)
+                                                                         Table 1
+                 + 50 |(FOSDP ) −1|                  Design Point    Cost (Original)    Cost (New)
+                         1.5
+                                                           1             7.835            30.29
+    The optimization begins with inputting the             2             16.58            14.38
+minimum and maximum ranges for each variable. A            3             17.21            93.76
+Matlab code created by Dr. Richard Lind is utilized        4             250.4            93.87
+for the optimization albeit in modified form [5]. The      5             48.79            57.49
+initial code is set up to use a Latin hypercube to         6             25.34            35.61
+develop initial design points. The code is altered to      7             25.24            84.85
+utilize 50 points in the design space versus 5 and         8             26.27            11.22
+then handpick 5 points evenly spread out amongst           9             26.31            12.96
+the distribution. This allows for a greater resolution    10             70.10            81.44
+of varying design points aimed at avoiding local          11             718.9            122.0
+minimums in the data (and helps to find the absolute      12             697.8            25.67
+minima). While using a greater amount of design           13             659.8            33.77
+points has the advantage of finding more accurate         14             613.2            131.2
+results, it has the disadvantage of increased cost (in    15             575.6            58.10
+the form of time). The amount of time to run the
+                                                          16             20.72            44.77
+code more than doubles. For the sake of this
+                                                          17             20.17            92.25
+experiment, the 50 design points provide a good
+balance between computational time and accuracy.          18             21.39            45.21
+    After the initial 5 design points are found, they     19             20.70            42.59
+are used to alter a Solidworks model [6]. Each new        20             20.20            12.87
+model is placed into a fundamental element analysis
+(FEA) simulation study. A wingtip loading of 5          Note the wildly varying (and high) costs of the
+times the force of gravity is used to simulate an   first experiment compared with this current
+aggressive turn maneuver likely to be seen in flight  experiment. The 20 point optimization proved to be
+(equivalent to 70 lbsf). The simulation provides the  less than ideal compared to the 200 point
+parameters to input in the cost function. The cost  optimization. One similarity between the two
+function is evaluated at each of the original 5 points  optimizations (not shown) was that the original
+
+=== PAGE 4 | img ===
+Schneider, Alexander, Honors Thesis, April 20, 2016                                                   4
+
+design still was the most optimal design (showing         10         0.312         23206        86.0
+that the initial analysis to derive the original design   11         0.162         23206        98.0
+was rather accurate). The reason for improvement          12         0.387         23206        98.0
+for data also was due to changes made to the cost         13         0.225         23206        86.0
+function. The ranges for the variables were adjusted      14         0.162         23206        86.0
+                                                          15         0.187         23206        96.0
+to improve the optimization. The time utilized to
+                                                          16         0.213         12959         100
+carry out the optimization could be seen as wasted        17         0.213        1573.6         100
+time but the results show some rather interesting
+                                                          18         0.213         14097        98.0
+trends (in addition to proving the correct                19         0.213        2712.2        98.0
+material/size spar was chosen). See Table 2 for the       20         0.213         15236        84.0
+design points that were evaluated. See Table 3 for
+the evaluated costs.                                     The major trend showed that materials with a
+                                                     modulus less than 100 (such as pine wood, spruce
+                      Table 2                        wood, hemp fiber, and fiberglass) were far and away
+ Design     Weight     Deflection   FOS     Cost     too weak for the proposed size aircraft. On the other
+  Point    (Ounces)       (in)               (J)     end, the materials with higher modulus (and an
+ Original    17.6         6.7       1.51    6.44     accompanying increased weight) were simply too
+    1        35.0         7.5       2.13    30.29    heavy and/or “overdesigned” for the role (this
+    2        23.6         13.6      1.37    14.39    included a carbon fiber impregnated plastic, heavier
+    3        30.0         5.3       0.41    93.77    and stronger than standard carbon fiber laminates).
+    4         7.0        100.1      0.07    93.88    The only acceptable designs with the larger
+    5        57.1         4.2       0.12    57.49
+                                                     modulus were those with small cross sections and
+    6        24.2         1.8       3.62    35.61
+    7        30.2         1.1       5.08    84.85    shorter wing spans (to alleviate the weight issue),
+    8        22.6         2.4       2.89    11.23    and unfortunately had too much deflection.
+    9        15.1         8.3       1.37    12.96        The optimal design ended up being the initial
+   10        25.6         1.3       4.54    81.45    unidirectional carbon fiber rod measuring 96 inches
+   11        24.8         1.1       6.22   122.04    in length. The resulting FEA is shown in figures 3,
+   12        59.2         1.4       1.05    25.68    4, and 5.
+   13        34.4         1.8       3.51    33.77
+   14        24.8         0.67       6.5   131.22
+   15        28.7         1.5       4.27    58.10
+   16        18.3         12.1      0.41    44.77
+   17         5.4         99.3     0.095    92.25
+   18        93.2         10.4      0.75    45.21
+   19        20.1         50.6      1.23    42.59
+   20        44.2         5.5       1.40    12.87
+
+                      Table 3
+  Design     Area (in2)     Modulus      Length      Fig. 3. Wing tip loading showing stress
+   Point                      (ksi)        (in)
+  Original     0.197         19580         96.0
+     1         0.385         4152.4        105
+     2         0.206         23206         120
+     3         0.318         6941.5        93.1
+     4         0.267         1364.8        118
+     5         0.344         8799.4        98.8
+     6         0.288         23206         88.0
+     7         0.352         23206         90.0
+     8         0.263         23206         90.0
+     9         0.175         23206         90.0      Fig. 4. Zoom in of the area with the highest stress concentration
+
+=== PAGE 5 | img ===
+Schneider, Alexander, Honors Thesis, April 20, 2016                                                 5
+
+                                                    shortened. The reason for the larger range (80 to
+                                                    120) was to satisfy mainly satisfy aerodynamic
+                                                    “wants.” A larger wing and shorter chord is most
+                                                    favored by the aerodynamicist as it decreases drag
+                                                    and increases lift. Unfortunately, a structure has to
+                                                    make it all the way to the wingtips and there are
+                                                    limits to the possible overall length. The longer the
+                                                    wing, the stronger the structure needs to be
+                                                    (especially if the aircraft is carrying a payload), and
+                                                    the heavier the resulting aircraft. If the range were
+Fig. 5. Image of the deflection in the spar with distance
+                                                    brought down lower it would allow greater
+    Taking a closer look at figure 4 it can be seen  optimization to instead occur with the cross section
+that the majority of the stress is localized near the  and the material choices. In addition, the
+wing root. The root must deal with counteracting the  optimization could still use a greater amount of
+moment produced at the wingtip and the upward       design points. The more numerous the design points
+force seen through the body. The deflection seen in  the greater the chance there is to find a minimum in
+figure 5 is maximum at the tip as is completely     the data. Finally, the optimization could also be
+expected. Although the wing will see a distributed  improved by altering the FOS term in the cost
+load the single point load serves as an accurate    function. For many design points a large FOS was
+approximation. Wing tip tests are very common in    harming their overall cost when in fact the large
+industry and utilized by the large aircraft         FOS was not actually a negative aspect of the design
+manufacturers, Airbus and Boeing [7].               (so long as the weight was not too great). The FOS
+    Inferring the results and viewing the simulation  is mainly utilized to ensure the wing spar would not
+data provides some serious insight into available   become “overdesigned,” but there were times when
+improvements both in the design and optimization    this hampered a design’s success by too great of a
+process.                                            margin.
+    For the design, there are several opportunities
+                                                                    V. CONCLUSION
+to improve the spar’s abilities. One advantage could
+be to utilize a tapered spar (increasing from the tip   RC aircraft are a unique take on aircraft design.
+to the wing box) to allow sufficient resistance to the  While smaller than real aircraft (and not as
+higher loads at the root and decrease mass at the tips.  expensive/sensitive to accidents) they still require
+For the sake of this experiment all spars were      time to design, analyze, and fabricate. While RC
+uniform (since they are easier to source and        planes can be designed, built, and flown by hand,
+manufacture), but for the sake of the best design this  they may not achieve much more than a nosedive or
+is one valid design change. In addition, instead of  structural failure. During the design of larger RC
+using a single material or one type of laminate, a  aircraft this realization becomes even more
+sandwich construction could be utilized. Sandwich   important. Deeper analysis and optimization can
+construction consists of utilizing a lightweight/soft  improve designs, provide successful builds, and
+material like balsa wood sandwiched between two     offer enjoyable flight time. This thesis attacked the
+thin layers of very strong material like carbon fiber.  problem of selecting an optimal wing spar for a
+The advantage is decreased weight without the       small to mid-size payload carrying RC aircraft. The
+severe penalty of a drastically reduced modulus of  experiment began with a previously analyzed spar
+elasticity. Finally, the spar could be made hollow  and sought to improve upon the design (or at least
+(like a box). While pricier to source, the design   provide insight into possible design changes). What
+would cut down weight and maintain sufficient       resulted was a large amount of useful information
+strength.                                           for both the physical design and the optimization
+    For the optimization there are also areas of    process.
+weakness. For one, the length range should be           Surprisingly, the best wing spar ended up being
+
+=== PAGE 6 ===
+Schneider, Alexander, Honors Thesis, April 20, 2016                                                        6
+
+the original spar design. This begged the question:         Materials", Engineeringtoolbox.com, 2016.
+was all that time for optimization worth it? The time       [Online]. Available:
+taken to optimize was quite less than the time taken        http://www.engineeringtoolbox.com/young-
+                                                            modulus-d_417.html. [Accessed: 11- Apr- 2016].
+to conceptualize and analyze the original design and
+provided quite a large amount of data to consider.
+The   optimization    process    provided    helpful
+alternatives and aided in ensuring the best design
+was chose. It more than proved its usefulness in the
+aircraft design process.
+    As    has   been   very    evident   throughout
+engineering curriculum, sometimes the results are
+not as desired and often not as expected. It is
+important to localize the reasons for these results,
+infer the data, and apply, alter, or expand the next
+round of testing to resolve any issues discovered.
+An engineer does not merely perform a test and call
+it a day, rather, they apply and implement the
+principles and lessons learned to improve designs.
+Application is king.
+
+                   REFERENCES
+[1] "Pilot's Handbook of Aeronautical Knowledge", Faa.gov,
+    2016. [Online]. Available:
+    https://www.faa.gov/regulations_policies/handbooks_ma
+    nuals/aviation/pilot_handbook/. [Accessed: 21- Apr-
+    2016].
+[2] "Aeronautics - Parts of an Airplane (WINGS) - Level 2",
+    Allstar.fiu.edu, 2016. [Online]. Available:
+    http://www.allstar.fiu.edu/aero/flight12.htm. [Accessed:
+    21- Apr- 2016].
+[3] "Academy of Model Aeronautics", Modelaircraft.org,
+    2016. [Online]. Available: http://www.modelaircraft.org/.
+    [Accessed: 21- Apr- 2016].
+[4] "Factors of Safety", Engineeringtoolbox.com, 2016.
+    [Online]. Available:
+    http://www.engineeringtoolbox.com/factors-safety-fos-
+    d_1624.html. [Accessed: 11- Apr- 2016].
+[5] "MATLAB - MathWorks", Mathworks.com, 2016.
+    [Online]. Available:
+    http://www.mathworks.com/products/matlab/. [Accessed:
+    21- Apr- 2016].
+[6] "Products", Solidworks.com, 2016. [Online]. Available:
+    https://www.solidworks.com/sw/3d-cad-design-
+    software.htm. [Accessed: 11- Apr- 2016].
+[7] B. WIRED and B. Test, "Boeing 787 Passes Incredible
+    Wing Flex Test", WIRED, 2016. [Online]. Available:
+    http://www.wired.com/2010/03/boeing-787-passes-
+    incredible-wing-flex-test/. [Accessed: 21- Apr- 2016].
+[8] "Mechanical Properties of Carbon Fibre Composite
+    Materials", Performance-composites.com, 2016.
+    [Online]. Available: http://www.performance-
+    composites.com/carbonfibre/mechanicalproperties_
+    2.asp. [Accessed: 11- Apr- 2016].
+[9] "Modulus of Elasticity or Young's Modulus - and
+    Tensile Modulus for some common

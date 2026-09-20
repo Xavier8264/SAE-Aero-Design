@@ -1,0 +1,670 @@
+# ID: mit_1682_flight_vehicle_intro
+# SOURCE: http://web.mit.edu/16.82/www/html/16.82_fall03/old%20html/Intro.pdf
+# ORIGINAL: reference/raw/mit_1682_flight_vehicle_intro.pdf
+# CONVERTED: 2026-09-19 21:43 UTC-0500 | type pdf | 15 pages | ~8498 tokens
+# NOTE: MIT 16.82 capstone: phased flight vehicle design process (CDIO). Design process gap.
+# FLAG img: pages 5
+
+=== PAGE 1 ===
+MASSACHUSETTS INSTITUTE OF TECHNOLOGY
+              DEPARTMENT OF
+     AERONAUTICS AND ASTRONAUTICS
+
+              16.82 / 16.821
+
+          Flight Vehicle Design
+
+     New CDIO Capstone Course
+
+              Subject Syllabus
+
+            Fall 2003/Spring 2004
+
+               Jonathan P. How
+           Space Systems Laboratory
+    Department of Aeronautics and Astronautics
+      Massachusetts Institute of Technology
+
+You are responsible for reading and understanding this document.
+
+=== PAGE 2 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+                  1    16.82x - General Description
+
+CDIO: Conceive, Design, Implement, and Operate will take you through all the activ-
+ities required to create a final aerospace product. In this context the goals of CDIO
+are:
+
+  • To educate students to master a deeper working knowledge of the technical
+     fundamentals
+
+  • To educate future engineers to lead in the creation and operation of new prod-
+     ucts/systems
+
+  • To educate future researchers to understand the importance and strategic value
+     of their work
+
+Our vision is to provide students with an education that stresses the fundamentals
+and is focused on real world systems and products. This course will provide an
+integrated education that provides experiential learning through a rich offering of
+team based design, build, and operate projects; both in the classroom and a state of
+the art Learning Laboratory.
+
+For every product there is a concept, a vision of something new. The design of
+the project creates a user’s manual for the implementation. Each part of this manual
+must be self consistent; each section must allow physical implementation. At the same
+time, the result must be visionary, either in the way in which it meets the customer
+needs, advances scientific knowledge, exploits new technology and processes, or reaps
+return for investors. Good analysis, careful design, and precise implementation will
+translate into success.
+
+In this class, each of you will be part of one team, the CDIO team. We will analyze
+the objectives, design a product to meet all the specified requirements, implement
+our design in a final working product, and operate it to evaluate its performance
+in a controlled environment. As part of the Systems Engineering and Architecture
+(SE&A) curriculum, the class will emphasize the design process. While there are
+many definitions of SE&A, one definition, closest to the philosophy behind CDIO, is
+“the, ensemble of coordinated analyses, simulations, and processes which lead to the
+design of a technical product which best meets the needs of an identified customer.”
+It is essential that any systems design tell the “whole” story. The whole story consists
+of why, which, what, how, when, and where:
+
+  • Why: the requirements define the customer’s needs and why the mission is
+     worth conducting.
+
+Massachusetts Institute of Technology  2     Dept. of Aeronautics and Astronautics
+
+=== PAGE 3 ===
+16.82x Program Plan                                Flight Vehicle Design – Fall 2003
+
+  • Which: The trade analysis compares different mission architectures and deter-
+     mines which architecture best meets the requirements and therefore the cus-
+     tomer needs.
+
+  • What: The design describes what will actually be built and operated to conduct
+     the mission.
+
+  • How: The program plan describes the organizational structure, resource allo-
+     cation, funding profile, and schedule. In essence, it describes how the mission
+     will be deployed.
+
+  • When: As part of the program plan, the schedule describes when different
+     mission development and deployment stages will occur and how they depend
+     upon each other.
+
+  • Where: Also as part of the program plan, the hardware flow details where the
+     following are located: component procurement sources, sub system integration
+     facilities, test and validation sequence, and operations facilities.
+
+16.82x is a complicated course - it is part of the capstone sequence in the Depart-
+ment of Aeronautics and Astronautic, it is also used to fill the Institute Laboratory
+requirements, and it is a communication intensive course within the department. Fur-
+thermore, note that CDIO, as 16.82x, is part of an ongoing educational experiment.
+The course aims to provide each of you a lifecycle experience with a hardware related,
+complex aerospace system. You will be part of a large team environment, which em-
+phasizes communication, teamwork, planning, and responsibility. In addition, you
+will also be individually responsible for designing, building, operating, and analyzing
+a specialized subsystem in a laboratory setting. In this way you will be exposed to
+the interfaces between the needs of the team and the responsibilities of the individ-
+ual team members. We will have a fixed delivery schedule, strict requirements and
+restrictions, and several reviews. We believe that these experiences will be of great
+educational value, and hope each of you will both learn and enjoy it.
+
+                              2   The Project
+
+UAVs will play a key role in many future air missions that are of long duration (crop
+and pipeline inspection) or have high risk (surveillance and reconnaissance). Both
+the DoD and Dept. of Homeland Security are particularly interested in develop-
+ing approaches that use teams of heterogeneous vehicles (i.e., air, on/underwater,
+ground) to perform missions such as persistent surveillance and harbor protection.
+These teams will have to coordinate in uncertain, dynamic, and potentially hostile
+environments with possibly very low data rate communication.
+
+Massachusetts Institute of Technology  3      Dept. of Aeronautics and Astronautics
+
+=== PAGE 4 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+The objective of the new CDIO Capstone course will be to design and demonstrate the
+coordination and control of a small team of unmanned heterogeneous vehicles (1 air
+and 2 ground) that could be used to perform these types of missions. These teams will
+compete in a variation of the game called capture the flag (similar to the ”Roboflag”
+game being played at Cornell University, http://roboflag.mae.cornell.edu/). Capture
+the flag has a very simple set of rules, but it contains many of the key characteristics
+present in the real-world problems. We will modify the rules slightly to add a small,
+autonomous flying vehicle to the team. The addition of the flying vehicles adds an
+additional strategic dimension to the game because they can be used to perform
+surveillance and/or jump over the opponent and capture the flag. These strategies
+will be explored in more detail by the students taking the course.
+
+Mission Statement:
+
+     Demonstrate an autonomous control system for an indoor flying vehicle.
+
+  • Demonstrate - the vehicle and its control system must be designed to accomplish
+     the following tasks:
+
+       1. Achieve the objective of take-off, hover in place for 5 minutes 2m above the
+          ground, continuously pointing an onboard camera at a fixed target (20cm
+          x 20cm) with sufficient stability (min 100 x 100 pixels) that an operator
+          (e.g. Prof. How) can easily identify (85% of the time) the color, shape,
+          and orientation of the target, and then land within 1m of the target
+       2. Take-off, fly (3m offthe ground) to a specified point (covering a 10m
+          distance in less than 1min), then hover in place for 2min (same specifics
+          as part 1), return to original point and land.
+       3. Take-off, fly to a known point (10m in less than 1min), search for a
+          nearby ground target (20cm x 20cm) that is moving very slowing (speed
+          < 5cm/s)in a specified region (2m x 2m) in less than 1min. When found,
+          have the UAV track the target (height > 2m) and display the target’s
+          progress to the operator for a period of 2mins.
+       4. To extend the flying range of the UAV, this vehicle must be designed to
+          autonomously take-offand land on one of the rovers.
+
+     Note that only task 1 must be demonstrated in flight on 12/5. However, the
+     team must demonstrate in the final report that their design would be able to
+     accomplish tasks 2–4.
+
+  • Autonomous - no human input within the low-level control loops. A human
+     operator could be used to provide high-level guidance, such as identifying a
+     target and its location.
+
+Massachusetts Institute of Technology  4     Dept. of Aeronautics and Astronautics
+
+=== PAGE 5 | img ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+  • Indoor flying vehicle - In general we would give you the freedom to choose
+     between the various alternative vehicles, but since time is short, we have chosen
+     to use a quad-rotor vehicle shown in Fig. 1.
+
+   Fig. 1: Quad-rotor UAV.See http://www.draganfly.com/draganflyerxpro.php
+
+Note that there are 2 main phases to the project. The goal of Phase 1 is to conceive
+and design a complete autonomous control system for the UAV. The second phase of
+16.82x occurs in the spring semester and it involves completing tasks 2–4 and explores
+using this autonomous UAV combined with 2 ground rovers to form a coordinated
+team, which can then be used to play capture the flag (implement and operate).
+
+Note that this project will focus on the performance, stability, and control require-
+ments (mechanical structure, sensors, and low-level control). The emphasis here will
+be on individual initiative, application of fundamental principles, and the compro-
+mises inherent in the engineering design process. As such, this course will draw heavily
+on basic elements of the information technologies contributing to the Department’s
+efforts to integrate topics such as control, autonomy, software, communications, and
+networking into the curriculum. Material not covered by other courses will be covered
+in the course lectures, as necessary.
+
+There is a very tight budget for the design project, so all purchases must be signed-off
+by the team and approved by Prof. How or Col. Young. The team will have a limit
+of $15K, but you must set aside a fair percentage (e.g. $3K) as MR (Management
+Reserve). So you can spend an amount up to $12K but anything beyond has to be
+very much rationalized and justified.
+
+Massachusetts Institute of Technology  5     Dept. of Aeronautics and Astronautics
+
+=== PAGE 6 ===
+16.82x Program Plan                              Flight Vehicle Design – Fall 2003
+
+                      3   Administrative Details
+
+                                    Room        Extension   E-mail
+ Course Faculty
+ Jonathan How                       33-328      3-3267      jhow@mit.edu
+ Office Hours: By appointment
+ on TTh afternoon
+ Col. Pete Young                    33-240      3-5340      pwyoung@mit.edu
+ office hours by appointment
+ Mark Drela
+ Writing Program Faculty
+ Jennifer Craig                     37-441      2-3841      jcraig@mit.edu
+ Office Hours: By appointment
+ Graduate Teaching Assistant
+ Arthur Richards                    33-409      3-3132      arthurr@mit.edu
+ Office Hours: By appointment
+ Course Admin. Assistant
+ Margaret Yoon                      33-336      2-1536      myoon@mit.edu
+
+Course webpage: http://web.mit.edu/course/16/16.82/www/
+
+Communications Instruction Page: http://cdio-prime/aaarchive/aeroastro/index.htm
+
+Class Email List: 16.82-students@mit.edu and 16.82-instructors@mit.edu
+
+                               4   Schedule
+
+Good scheduling is key to getting the work done in the allotted time. Formal status
+and design reviews provide not only the opportunity to present the program progress
+to the Faculty and the other students, but also provide intermediate milestones to
+ensure that each group is making consistent assumptions about the resources allocated
+to them. The following tables outline the course schedule and deliverables. These
+may change during the semester, but you will be given ample warning.
+
+As discussed above, the overall schedule is to have a prototype that was designed to
+accomplish all of the required tasks and has demonstrated hovering flight by 12/5.
+The remaining objectives and the interaction with the ground rovers will then be
+demonstrated in the second semester.
+
+Since much of the work in this course is experimental, we will be organizing 3 hour lab
+sessions for the groups to meet, talk with the faculty, and perform experiments. The
+times for these will be scheduled early in the semester - attendance will be mandatory.
+
+Massachusetts Institute of Technology  6    Dept. of Aeronautics and Astronautics
+
+=== PAGE 7 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+4.1 Communications Activities and Technical Deliverables
+
+ Wk                                             9/4
+ #1                                             • Course introduction
+                                                • Team selection (ask for lead volunteers)
+ #2   9/9                                       9/11
+      • Requirements flow-down                   • Control II
+      • Control I                               • Sensing
+      • Short discussion on collaboration and its • Short lecture on how to give a briefing.
+      place in this course.
+      • Each student writes a 1 page report on col-
+      laboration due 9/11.
+ #3   9/16                                      9/18
+      • How do you write good software          • Oral presentations from each team on their
+      • Communication - issues and terminology  trade studies (2 people from each team for
+      • Short lecture on progress reports.      10mins each)
+ #4   9/23                                      9/25
+      • Progress report #1 due from each individ- • Describe a requirements document and its
+      ual. (3-5 pages including graphics)       purpose
+ #5   9/30                                      10/2
+                                                • Vehicle subsystem requirements doc-
+                                                ument due. (Sub-system team report.)
+ #6   10/7                                      10/9
+                                                • Report on how well each subsystem is meet-
+                                                ing the requirements (oral presentation from
+                                                1 member of each team.)
+                                                • Team-level iteration/redistribution of re-
+                                                sources
+ #7   10/14                                     10/16
+      • Description of a hardware plan          • Hardware plan document due
+ #8   10/21                                     10/23
+ #9   10/28                                     10/30
+                                                • Status report due on the subsystem exper-
+                                                iments and current status. (Short individual
+                                                written reports - 1 page.)
+ #10 11/4                                       11/6
+ #11 11/11 Holiday                              11/13
+                                                • Status report due on the integration of the
+                                                subsystems and current status. (Short sub-
+                                                team written reports - 2 pages.)
+ #12 11/18                                      11/20
+ #13 11/25                                      11/27 Holiday
+ #14 12/2                                       12/4
+ #15 12/9                                       12/11
+      • Group oral presentation (Team)          • Final written report (Team)
+
+Massachusetts Institute of Technology  7     Dept. of Aeronautics and Astronautics
+
+=== PAGE 8 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+4.2 Grading Criteria
+
+ Date   Item                                               Value       Value
+                                                         (Technical) (Comm)
+ 9/11   Report on collaboration                               0          5
+ 9/18   Oral presentation on the current status of the        3         10
+        trade studies
+ 9/23   Progress report #1 (individual)                       3         10
+ 10/2   Vehicle subsystem requirements document (sub-        10         10
+        team)
+ 10/16 Hardware plan document (team)                         20         15
+ 10/30 Status report (individual)                             5         10
+ 11/13 Status report (sub-team)                               7         10
+ 12/5   Final flight tests                                     7          0
+ 12/9   Group oral presentation (team - given by those       20         10
+        that have not spoken)
+ 12/11 Final written report (team)                           20         15
+ 12/11 Notebook submission (individual)                       5          5
+        Total                                               100         100
+
+Note: The final grade is weighted 75% on your technical score and 25% on your
+communication score.
+
+4.3 Communication curriculum
+
+The new CDIO capstone course, 16.82/821, has a strong communication component
+because we believe that efficient and effective written and oral communication skills
+are essential for engineers. We have organized the communication instruction and
+practice around both oral and written communication in both short and longer for-
+mats. We also pay explicit attention to collaborative process in the teams because
+communication and collaboration are parts of most complex processes.
+
+What are the assignments? The assignments are part of the course design process.
+Individual written documents will range from 2-5 pages while more formal,team-
+written reports will be longer. Also, students will practice oral communication skills in
+short briefings as well as in longer, more formal team presentations. Each assignment
+will be evaluated for technical content as well as communication skill. At the end of
+the semester, the communication grade will compose 25% of the final course grade.
+
+Massachusetts Institute of Technology  8     Dept. of Aeronautics and Astronautics
+
+=== PAGE 9 ===
+16.82x Program Plan                                Flight Vehicle Design – Fall 2003
+
+  Individual writing and                 Group writing and
+  oral presentation                      oral presentation
+  Short report on collaboration (9/11)   Vehicle subsystem requirements docu-
+                                         ment (10/2)
+  Short briefing on current trade studies Hardware plan (10/16)
+  status (9/18)
+  Progress report (9/23)                 Status report (11/13)
+  Status report (10/30)                  Final oral presentation (12/9)
+                                         Final written report (12/11)
+                                         Individual technical notebooks (12/11)
+
+How will communication be taught? Jennifer Craig, a lecturer in communication,
+will teach short modules on communication skills in the days before the assignment is
+due. Also, notes will be posted to the course Web site for additional support. She will
+assess the communication skills in all assignments and conference with teams and/or
+individuals to answer questions. Lastly, she will hold office hours in a breakout room
+in the study lounge of Bldg. 37: Monday p.m. 2:45 - 5:00, Tuesday a.m. 9:30 - 10:30.
+Other times are available by appointment. (jcraig@mit.edu or 452-3841) Students,
+individually or in teams, should feel comfortable in contacting her.
+
+                              5    Description
+
+5.1  Sub-Teams
+
+We anticipate that there will be four sub-teams within the class, the leaders of which
+will be chosen in the first week.
+
+  • Team leaders will be responsible for managing the activities of their team mem-
+     bers as they conduct trade studies, analyses, and other engineering activities.
+     They are not responsible for doing all the work of the team, but they are respon-
+     sible for making sure that all the tasks are clearly and appropriately assigned
+     and completed; staying in touch with the team process and helping resolve con-
+     flicts where possible; scheduling meetings and work sessions. Individual team
+     leads will work with other team leads as well as the faculty and staffto make
+     sure that sufficient progress is being made in the individual disciplinary ar-
+     eas. Team leaders keep written records of work assignments and progress; these
+     records should be accessible to other members of the team in case of illness or
+     emergency.
+
+Massachusetts Institute of Technology  9      Dept. of Aeronautics and Astronautics
+
+=== PAGE 10 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+  • Individual team members will be responsible for communicating status, progress,
+     problems encountered, etc. to their team leaders for review at periodic status
+     reviews.
+
+There will be an opportunity to switch both groups and the leaders after submitting
+the team has submitted the hardware plan document (10/16). The sub-teams are
+expected to take the lead in the following areas:
+
+  • Vehicle – responsible for:
+
+       – Flying and modeling the vehicle
+           3 Developing a simulink simulation for analysis and testing
+           3 Modeling/Characterizing& verifying Actuators
+           3 Parameter ID and model updating
+       – Developing the video payload & vehicle tracking display for the operator
+       – Systems analysis for the project
+           3 Interface control documents to distribute the mass, power, size
+           3 Form spreadsheets that track the current data (with confidence) to
+              track performance and margins versus time (weekly)
+           3 Spreadsheet should form database for simulink model
+           3 Track assumptions and interfaces
+
+  • Communication – responsible for:
+
+       – Determine the Data Rate & Device
+       – Identify which parts of the computation can/must be done onboard and
+          off-board
+       – Determine latency and throughput
+       – Add model to the simulink
+
+  • Sensor – responsible for:
+
+       – Responsible for converting the Objectives into Sensor requirements and
+          Sensor Options
+       – Decisions - Purchase and verification that device meets specifications
+       – Integrate into the Simulation
+       – Demonstrate component features
+       – Integrate and test.
+
+Massachusetts Institute of Technology  10    Dept. of Aeronautics and Astronautics
+
+=== PAGE 11 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+       – Estimation and sensor blending
+
+  • Control – responsible for:
+
+       – Control requirements to meet the payload pointing goals?
+       – How write code to close the loops?
+       – Design controllers for all phases of flight
+       – Integrate into the simulink
+
+5.2 Semester Plan
+
+The first semester will be split into four main periods:
+
+  • Trade studies - detailed comparison of the alternative hardware and software
+     solutions that meet the system (or subsystem) requirements. Objective is to
+     establish the pros/cons of each approach so that they can be evaluated.
+
+       – The plan is to start with this comparison in a relatively general form and
+          then make a specific trade study for this project. The products of these
+          trades will be the Oral presentation (9/18) and progress report #1 (9/23)
+
+  • Overall and subsystem design - building on your new understanding of the
+     pros/cons of the various hardware and software solutions, the objective of the
+     next period will be to develop a detailed design for both the overall system and
+     each sub-system.
+
+       – The products of this period are two key documents - the vehicle subsys-
+          tem requirements document produced by each sub-team (10/2) and the
+          Hardware plan document (10/16).
+       – The vehicle subsystem requirements document should precisely identify
+          the requirements for each subsystem to achieve the overall objectives. The
+          vehicle sub-team should focus on how the resources have been allocated
+          amongst the sub-teams.
+       – The hardware plan document must describe in detail the specific hard-
+          ware that you plan to use for each sub-system, why that choice was made,
+          and that it will meet the subsystem requirements. The document should
+          also clearly show that the integrated sub-systems will meet both the re-
+          quirements and the physical constraints. Full team report giving a fully
+          integrated hardware design wherein each subsystem is shown to meet its
+          requirements with some margin and the overall system is shown to meet
+          the functional goals.
+
+Massachusetts Institute of Technology  11    Dept. of Aeronautics and Astronautics
+
+=== PAGE 12 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+  • Subsystem testing - given an approved design, the next step is to purchase
+     and test the various parts of the subsystems. The results from these experi-
+     ments will be reported in two reports (11/16) and (11/30). The first report
+     (11/16) should discuss the experiments done to verify the hardware that has
+     been purchased/built and the second report (11/30) must show that the sub-
+     system requirements have been achieved.
+
+  • Integration and flight - the next step is to integrate the pieces and perform a
+     flight test (12/5).
+
+                 6    Learning Objectives for 16.82x
+
+The goal of 16.82x is to enable you to master the relevant methods, processes, and
+techniques necessary for conceiving, designing, implementing, operating, and docu-
+menting an experimental project aimed at the investigation of a hypothesis.
+
+Implicit in this goal is the development of your communication skills so you can
+convey technical contributions to other professionals in the field through oral and
+written reports.
+
+6.1 Demonstration of Communication Skills
+
+Although the communication aspects of 16.82x are included in the learning objec-
+tives and measurable outcomes, they are important enough that we list below the
+communication skills you will demonstrate during the course. This includes
+
+  • Ability to select a communications strategy (choice of what to communicate)
+
+  • Ability to implement a communications strategy (implementation of the above
+     choice) including selection of graphical techniques
+
+  • Ability to orally communicate technical and project management material
+
+  • Ability to effectively communicate with a team partner and with an extended
+     team of stakeholders.
+
+Assessment of your learning follows from the measurable objectives and takes several
+different forms:
+
+  • Professional level laboratory notebooks assessed on technical content and
+
+  • Written and oral assignments that exhibit your technical and your communica-
+     tion skills.
+
+Massachusetts Institute of Technology  12    Dept. of Aeronautics and Astronautics
+
+=== PAGE 13 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+                                 7   Details
+
+7.1 Late Submission of Work
+
+All written material, including notebooks, is required to be submitted at the time
+and location listed on the course calendar. Any written material submitted after
+this time will be graded as late with a penalty of 25% per day of the maximum
+possible grade. Permission to submit written material late without penalty may only
+be obtained from the course faculty if there is a valid reason. Except in extreme
+cases, this permission must be obtained at least two days prior to the due date.
+You will be using computers and software for preparation of professional-level work.
+Remember, however, that computer-related disasters are not considered excuses for
+missing deadlines. Back-up your files!
+
+7.2 Plagiarism
+
+Plagiarism is defined as the act of presenting someone else’s words, ideas, illustrations,
+or other intellectual property as your own. All use of another person’s, company’s,
+or institution’s words, ideas, illustrations, or intellectual property must be properly
+referenced and acknowledged according to AIAA standards. If in doubt about whether
+to reference or not, double-check with a course faculty member. Also, be aware that a
+student who knowingly allows his or her work to be copied is also guilty of plagiarism.
+Plagiarism is a serious transgression and will result in penalties.
+
+7.3 Division of Work in Project Teams
+
+Working together: teams are expected to work together in defining their problem,
+exploring design options, constructing the apparatus, taking data, and discussing
+other aspects of their project. Because of the team nature of the course, a few
+clarifications relating to academic honesty are provided below.
+
+Oral progress reports and oral presentations are regarded as a combined effort and
+normally are graded as such. Partners should participate equally in both the pre-
+sentation and the question-and-answer session. Figures, tables of data, graphs, and
+typeset equations used in oral and written deliverables can and likely should be pre-
+pared jointly between team members.
+
+Working separately: Notebooks must be kept separately. In the execution of an ex-
+periment, one partner may take data while the other operates the experiment. In that
+case, data should be transferred from one notebook to another by hand or photocopy.
+In general, however, each notebook should be an individual effort, documenting the
+project’s progress. Written material reflects the degree of understanding, which you
+
+Massachusetts Institute of Technology  13    Dept. of Aeronautics and Astronautics
+
+=== PAGE 14 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+have gained from the work, and your capacity to convey the results to others. Every-
+one is highly encouraged to discuss organization, results, conclusions, etc. with your
+partner, faculty advisor, and staffmembers. However, any solely authored written
+reports must be individual efforts. Duplication or direct paraphrasing of text is not
+allowed and is considered to constitute plagiarism.
+
+7.4 Written Report Style Guidelines
+
+Technical and professional writing follows certain stylistic conventions. Professional
+Societies (AIAA, ASME, IEEE, etc.) and organizations (NASA, FAA, etc,) have style
+guidelines for their publications. A style guide will be made available online and in
+hardcopy. It is representative of aerospace professional and organization style guides.
+Please consult the Writing Program Faculty if you have questions.
+
+7.5 Writing References
+
+On-line writing references are available at:
+http://web.mit.edu/uaa/www/writing/links/
+Of particular interest for 16.82x is the Mayfield Electronic Handbook of Technical
+and Scientific Writing, which can be accessed from the above web address.
+
+7.6 Submission of Written Assignments
+
+Four hard copies are due of all written assignments. These should be single-sided
+and stapled to ease the reading and correction process. In addition, each assignment
+should be submitted electronically in PDF and, Word format (if using Word) to Prof.
+How (jhow@mit.edu) by 5pm of the due date.
+
+In addition, an electronic submission of the Oral Presentation is expected. Further
+instructions about the electronic submissions will be given as the date approaches.
+At the end of the semester, we will ask if you be willing to grant the course faculty
+permission to use material from your written or oral presentations for future classes.
+Such permission is purely voluntary and in no way affects the evaluation of your
+performance in the class.
+
+7.7 Oral Progress Report
+
+The Oral Progress Report is a briefing on the status of the project. Because the
+Progress Reports must stand alone, a brief review of motivation, background, ob-
+jectives, success criteria and approach is required. The reports should present the
+problems encountered in the execution of the plans, outline the steps necessary to
+address the problems, and cite anticipated changes in design or program.
+
+Massachusetts Institute of Technology  14    Dept. of Aeronautics and Astronautics
+
+=== PAGE 15 ===
+16.82x Program Plan                               Flight Vehicle Design – Fall 2003
+
+Each speaker will only have 10 minutes to present their progress report. This will be
+followed by a 5-minute question and answer session. Time limits are strictly followed;
+speakers will not be permitted to continue beyond the limits. For this reason, it is
+important that members of a team rehearse well in advance for each presentation and
+carefully divide the time among the speakers.
+
+                8   Experimental Design References
+
+Resources that we have found particularly useful are held in The Seaman’s Aerospace
+Library:
+
+  • Beckwith, T. G., Mechanical Measurements, 5th Edition, New York: Addison-
+     Wesley, 1993.
+
+  • Jensen, C. H., Engineering Drawing and Design, New York: Gregg Division,
+     McGraw-Hill, 1990.
+
+  • Brown, Sally A., 500 Tips for Research Students, Philadelphia: Kogan, 1995.
+
+  • Hansman, R. John, Measurement, MIT Video Series. An excellent series of 8
+     videos on various aspects of measurements.
+
+The following texts on experiment design are available at Barker Library.
+
+  • Cox, D. R., Planning of Experiments, New York: Wiley, 1958.
+
+  • Bragg, G. M., Principles of Experimentation and Measurement, Englewood
+     Cliffs, N.J.: Prentice-Hall,1974.
+
+  • Diamond, W. J., Practical Experiment Designs for Engineers and Scientists,
+     Belmont, Calif.: Lifetime Learning Publications, 1981.
+
+  • Hicks, C. R., Fundamental Concepts in the Design of Experiments, New York:
+     Holt, Rinehart, and Winston, 1982.
+
+  • Doebelin, E. O., Engineering Experimentation: Planning, Execution, Report-
+     ing, New York: McGraw-Hill, 1995.
+
+Massachusetts Institute of Technology  15    Dept. of Aeronautics and Astronautics

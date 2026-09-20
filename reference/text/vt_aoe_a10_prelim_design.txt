@@ -1,0 +1,1576 @@
+# ID: vt_aoe_a10_prelim_design
+# SOURCE: https://www.aoe.vt.edu/content/dam/aoe_vt_edu/people/faculty/praj/avd-fundamentals/A10%20-%20Preliminary%20Design%20-%20Config%20Refinement%20and%20Validation.pdf
+# ORIGINAL: reference/raw/vt_aoe_a10_prelim_design.pdf
+# CONVERTED: 2026-09-19 21:44 UTC-0500 | type pdf | 113 pages | ~14779 tokens
+# NOTE: Virginia Tech AOE (Raj): preliminary design, configuration refinement and validation.
+# FLAG img: pages 6-9,13,16-20,24-30,34-35,37-47,52-58,62-72,78-93,97-100,104-108,112
+# FLAG lowtext: pages 78,80-82,84,86,108
+
+=== PAGE 1 ===
+                                                     A10
+
+                Air Vehicle Design
+
+                   AOE 4065 – 4066
+
+            III. Air Vehicle Design Fundamentals
+
+                   Course Module A10
+
+    Preliminary Design: Refine & Validate Baseline Design
+
+  Kevin T. Crofton Department of Aerospace and Ocean Engineering
+                       Blacksburg, VA
+
+1 CM A10                   13 August 2024
+
+=== PAGE 2 ===
+                                           AOE 4065-4066:
+
+              Capstone Air Vehicle Design (AVD) Course Modules (CMs)
+
+                                  Overview of AVD Courses
+
+      I. Foundational                  II. Air Vehicle Design              III. Project Management
+         Elements                          Fundamentals                              Topics
+ F1. Design: An Engineering      A1. Purpose & Process                    P1. Basics of Project Management
+    Discipline                                                               and Project Planning
+                                          Conceptual Design
+ F2. Systems and Systems Thinking                                         P2. Project Organization
+                                 A2. Understand the Problem
+F3. Basics of Systems Engineering                                         P3. Roles & Responsibilities of
+                                 A3. Solve the Problem                       Team Members
+F4. Decision Making with
+    Ethics and Integrity         A4. Initial Sizing: Takeoff Weight       P4. Project Execution:
+                                    Estimation                               Teamwork for Success
+                                 A5. Initial Sizing: Wing Loading and     P5. Project Risk Management
+                                    Thrust Loading Estimation
+                                                                          P6. Delivering Effective Oral
+                                 A6. Cost Considerations                     Presentations
+                                 A7. Concept to Configuration: Key        P7. Writing Effective Design Reports
+                                    Considerations
+                               A7A. Configuration Layout: Drawings & Loft
+
+                                   Conceptual & Preliminary Design
+                                 A8. Trade Studies
+                                 A9. Use of Software Tools
+                                A10. Preliminary Design: Baseline Design
+                                    Refinement & Validation
+2 2  CM A10                                      13 August 2024
+
+=== PAGE 3 ===
+                             Disclaimer
+
+   Prof. Pradeep Raj, Aerospace and Ocean Engineering, Virginia Tech,
+    collected and compiled the material contained herein from publicly
+            available sources solely for educational purposes.
+   Although a good-faith attempt is made to cite all sources of material,
+                  we regret any inadvertent omissions.
+
+3  CM A10                         13 August 2024
+
+=== PAGE 4 ===
+          CRUCIALLY IMPORTANT
+      CMs only introduce key topics and
+   highlight some important concepts and
+     ideas...but without sufficient detail.
+
+  We must use lots of Reference Material* to
+          add the necessary details!
+         (*see Appendix in the Overview CM)
+
+4 4 CM A10          13 August 2024
+
+=== PAGE 5 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Integrated System
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+5  CM A1                     13 August 2024
+
+=== PAGE 6 | img ===
+                     Preliminary Design (PD) Builds Upon
+                    the Outcome of Conceptual Design (CD)
+                        AOE 4065 (Fall)      AOE 4066 (Spring)
+
+                           AOE 4065            AOE 4066
+                             (CD)                 (PD)
+
+                         “Top Down”          “Bottoms Up”
+
+                             Start:              Start:
+                       Blank Sheet of Paper  Baseline Design
+
+                              End:                End:
+                         Baseline Design      Mature Design
+                           (Low TRL)          (Higher TRL)
+
+                      You Create a Feasible  You Generate a More
+                       Baseline Design in     Mature Design in
+TRL: Technology Readiness Level  AOE 4065        AOE 4066
+6   CM A10                       13 August 2024
+
+=== PAGE 7 | img ===
+                   Capstone Air Vehicle Design Project
+
+    The First Day!
+                          The Last Day of
+                            AOE-4065               The Last Day of
+                                                      AOE-4066
+
+7 7  CM A10                    13 August 2024
+
+=== PAGE 8 | img ===
+                           Baseline Design: Recap
+
+ We estimated values of parameters for the Baseline Design or the
+ Preferred System Concept based on many simplifying assumptions
+     o Initial WTO Sizing
+        – Empty Weight: Historical trends for our class of aircraft
+        – Fuel Weight: Assumed/estimated values of several parameters
+          AR, (L/D)max or CD0
+          Cruise and/or loiter speed, Vcr or Vlo; altitude, hcr or hlo; and tsfc or bsfc
+            for the cruise or loiter mission phases
+     o Initial (W/S)TO and (T/W)TO Estimation
+        – Feasible Design Space (or Domain): Used approximate form of
+          vehicle performance equations to define a Design Space
+        – Selected more parameters, such as, CLmax ,VTO , ROC, etc.
+     o Empennage Sizing
+        – Used empirical values of Tail Volume Coefficients
+     o Component Weights & System Cost
+        – Used parametric and empirical relationships
+     o Etc., Etc.
+    Baseline Design Has Low Level of Maturity (TRL ~ 2-3)
+8  CM A10                        13 August 2024
+
+=== PAGE 9 | img ===
+                          Baseline Design Needs
+                          Refinement & Validation
+ • Validate all assumptions and parameter values used to create
+    your feasible Baseline Design
+     o If the assumptions turn out to be flawed or the parameter values wrong,
+        you may not necessarily have a feasible design, do you?
+ • Tweak the design to conform to the validated parameters while
+    constantly making sure that the design is feasible
+ • Develop a project plan that integrates inputs from all sub-teams
+    and disciplines
+    o Each sub-team should prepare a list questions that need to be answered.
+      For example,
+       What assumptions/ parameters need to be validated? These lead to tasks
+       How do we validate? Defines scope of a task based on desired output
+       When do we need to complete each task? Defines schedule and milestones
+       Who else needs the results? Defines dependencies for scheduling tasks
+    o Each sub-team should prepare a Gantt chart for their own tasks; all sub-
+      team charts then roll up into full project level Gantt chart
+   Refined Design Has Higher Level of Maturity (TRL ~ 4-5)
+9  CM A10                        13 August 2024
+
+=== PAGE 10 ===
+                             Validation Example 1
+                                   Empty Weight
+        AOE 4065                               AOE 4066
+       Initial Sizing            Empty Weight = ∑ Component Weights
+TOGW = Empty Weight            Airframe Structure: wing, fuselage, tail, landing gear,...
+        + Fuel Weight          Propulsion: engine, inlet, fuel system, engine controls,
+          + Fixed (Payload)      and thrust reversers
+            Weight             Control system: hydraulic, pneumatic, actuators, ...
+                               Instruments
+                               Electrical system
+                               Furnishings
+                               Avionics
+                               Air-conditioning and anti-icing
+                               Other: drag chutes, etc.
+
+   Get precise estimates of CG
+  and Moments of Inertia based
+     on component locations           • Known weights
+     Change in CG affects             • Direct weight estimates
+                                      • Statistical weight estimates
+         all subteams!!
+10 10 CM A10                       13 August 2024
+
+=== PAGE 11 ===
+                      In case you missed it...
+
+  “...estimation of the aircraft empty weight is the weakest part of
+  the conceptual design process and it has tremendous leverage on
+  the aircraft takeoff weight. It is almost impossible to estimate the
+  empty weight of something that has not been built...However, it
+  is important to press on or aircraft will never be designed.”
+                                                    -- Lee Nicolai
+
+      That is why we start with a “Top Down” approach and
+                     end with “Bottoms up”.
+
+                                         Source: Chapter 5, Ref. 1, (Nicolai & Carichner);
+11 CM A10                    13 August 2024
+
+=== PAGE 12 ===
+                             Validation Example 2
+                                   Aerodynamics
+
+  Aerodynamics subteam should review their R&Rs, and any
+  project data deliverables in the RFP
+    o Identify all parameters that need to be validated and approaches
+    o Let us consider one of the parameters, CD0
+      Do we need to validate the assumed value of CD0?
+          Yes!
+      How will we validate CD0?
+          Use analysis and testing methods
+          Research relevant reference material for applicable methods
+            • Options include (a) Drag Build-up method which sums up individual
+               component parasitic drag values to estimate aircraft zero-lift drag; or
+               (b) computational methods, such as, FRICTION or VSPAero or some
+               other code to analyze the baseline design; or...
+          Select some or all methods based on available resources and
+            constraints!
+    o Investigate other parameters, such as, AR, Sref, (L/D)max, CLmax , etc.
+
+12 CM A10                          13 August 2024
+
+=== PAGE 13 | img ===
+                       Engineers Should Use/Choose
+                         Validation Approach Wisely
+
+       “Just because you can doesn’t mean you should.”
+
+ 1. Understand Customer’s Problem
+     • Develop a comprehensive understanding of the scope of customer needs
+        (potential impact of solution, desired level of accuracy, type and amount
+        of data, etc.) and constraints (cost and schedule)
+ 2. Devise a Practical Approach to Solving the Problem
+     • Examine available computational simulation codes for solving your
+        problem with effectiveness as the key measure of merit
+     • Choose a code based on your understanding of the problem [the type,
+        amount and quality of aerodynamic data required to meet customer needs
+        subject to the specified constraints]
+ 3. Deliver a Best Solution that Adds Value
+     • Provide a solution that best meets customer needs while satisfying all
+        constraints
+
+     Don’t Use a Hammer When You Need a Screwdriver!
+
+13 CM A10                        13 August 2024
+
+=== PAGE 14 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+14 CM A10                   13 August 2024
+
+=== PAGE 15 ===
+      A10.2 Configuration Layout and Loft
+
+   Configuration Layout and Loft subteam members should
+review their R&Rs, and any project data deliverables in the RFP
+
+15 CM A10                  13 August 2024
+
+=== PAGE 16 | img ===
+                 Three-view Drawing of RC Airplane:
+                  A Good Example Using SAE Specs
+
+16 CM A10                13 August 2024
+
+=== PAGE 17 | img ===
+                                       Final Configuration Layout:
+
+                                          A Transport Aircraft Example
+
+17                                                   13 August 2024  Source: 2020 VT Swift-Jet (AIAA Undergrad Team Aircraft Design)
+      CM A10
+
+=== PAGE 18 | img ===
+                                 An Example to Emulate:
+
+                           Cal Poly SLO Student Team Project
+
+                                                       Source: 2007 AIAA Undergrad Team Competition Winner, Cal Poly, SLO
+18   CM A10                                  13 August 2024
+
+=== PAGE 19 | img ===
+                                 An Example to Emulate:
+
+                           Cal Poly SLO Student Team Project
+
+                                                     Source: 2010 AIAA Undergrad Team Competition Winner, Cal Poly, SLO
+19   CM A10                                  13 August 2024
+
+=== PAGE 20 | img ===
+                            Aircraft Structure & Systems Layout
+
+                              Student Design Project Example to Emulate
+
+                                           Source: 2010 AIAA Undergrad Team Competition Winner, Cal Poly, SLO
+20   CM A10                                 13 August 2024
+
+=== PAGE 21 ===
+                           Configuration Layout and Loft
+
+ Recommended Reading for Topics in Configuration Layout and Loft
+
+                     Topic                                Recommended References
+  Configuration Layout and Loft
+ Configuration Layout and Loft                Chapter 7, Raymer, Ref. AVD 2
+ Aircraft Design Aid and Layout Guide         All chapters, Kirschbaum with Mason, Ref. AVD 6
+
+21 21  CM A10                                13 August 2024
+
+=== PAGE 22 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout and Loft
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+22 CM A10                   13 August 2024
+
+=== PAGE 23 ===
+                A10.3 Aerodynamics
+
+  Aerodynamics subteam members should review their R&Rs,
+         and any project data deliverables in the RFP
+
+23 CM A10                  13 August 2024
+
+=== PAGE 24 | img ===
+                     Role of Aerodynamicist
+
+• AIAA-82-0315: An Excellent
+  Reference
+   o 40 years “new”
+   o Highly relevant—just replace
+      “Tactical-Missile” with Aircraft!
+   o A copy is in the Aerodynamics
+      subfolder on Canvas
+   o Aerodynamicists help ensure
+      that aircraft delivers targeted
+      flight performance. Period.
+
+   “They own OML (Outer Mold Line)” – Lee Nicolai
+
+24 24 CM A10                   13 August 2024
+
+=== PAGE 25 | img ===
+                              Trade Studies
+• Wing Geometry (AR and S or W/S )
+
+                            W/S
+                                                               W/S
+Wing                                  Empty
+Mass                                   Mass
+
+                            AR                                 AR
+
+                                                             AR
+
+                           W/S
+(L/D)cruise                           Fuel
+                                      Mass
+
+                                                                W/S
+
+                           AR
+
+25 25 CM A10                     13 August 2024    Source: Chapter 4, Ref. AVD 21 (Jenkinson)
+
+=== PAGE 26 | img ===
+                                     Trade Studies
+• Take-off Parameters                         STO
+
+STO
+
+                                                    T/W
+        T/W                       W/S
+                                                                    CLmax
+
+• Landing Parameters
+                                  SL
+
+26 26  CM A10                           13 August 2024         Source: Chapter 4, Ref. AVD 21 (Jenkinson)
+
+=== PAGE 27 | img ===
+                        Aerodynamic Coefficients
+
+• Estimate Key Non-dimensional Parameters
+
+ • Accurate CL estimation is relatively easy; CD and Cm not so!
+
+27 27 CM A10                        13 August 2024        Source: Chapter 2, Ref. AVD 1 (Nicolai)
+
+=== PAGE 28 | img ===
+                         Broad Categorization of
+
+                   Configuration Aerodynamic Drag
+
+28 28 CM A10                     13 August 2024
+
+=== PAGE 29 | img ===
+                                      Zero-lift Drag Build-up
+
+                                           Example: Atlas
+
+                       Source: 2023-24 AIAA Heavy Lift Mobility Platform: VT Aero Sub-team Lead: Durgin)
+29    CM A10                                          13 August 2024
+
+=== PAGE 30 | img ===
+                                  Drag Polars
+
+       Cambered Wings
+                                                                       C-141
+                                                                       M ≤0.4
+
+                                       Uncambered Wings
+
+30 30  CM A10                           13 August 2024           Source: Chapter 2, Ref. AVD 1 (Nicolai)
+
+=== PAGE 31 ===
+                                        Aerodynamics
+
+Recommended Reading for Topics in Aerodynamics
+
+                       Topic                                    Recommended References
+  Aerodynamics
+  Review of Practical Aerodynamics                 Chapter 2, Nicolai & Carichner, Ref. AVD 1
+  Selecting the Planform and Airfoil Selection     Chapter 7, Nicolai & Carichner, Ref. AVD 1
+  High-Lift Devices                                Chapter 9, Nicolai & Carichner, Ref. AVD1
+  Estimating Wing-Body Aerodynamics                Chapter 13, Nicolai & Carichner, Ref. AVD 1
+  Aerodynamics                                     Chapter 12, Raymer, Ref. AVD 2 in PR
+  Wing Design                                      Chapter 5, Sadraey, Ref. AVD 5
+  The Anatomy of the Wing                          Chapter 9, Gudmundsson, AVD 4
+  Aircraft Drag Analysis                           Chapter 15, Gudmundsson, Ref. AVD 4
+  Aircraft Drag                                    Chapter 9, Kundu, Ref. AVD 8
+  Aircraft Drag and Wing Design                    See Aerodynamics folder in Supplemental Reference Material
+                                                   folder on course site
+
+31 31  CM A10                                    13 August 2024
+
+=== PAGE 32 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout and Loft
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+32 CM A10                   13 August 2024
+
+=== PAGE 33 ===
+        A10.4 AeroPropulsion Integration
+
+  Aeropropulsion Integration subteam members should review
+    their R&Rs, and any project data deliverables in the RFP
+
+33 CM A10                  13 August 2024
+
+=== PAGE 34 | img ===
+                          Propulsion System Types
+
+• Two main options to produce forward thrust
+
+1. Propellers
+   o Powered by reciprocating piston
+     engines, gas turbines (turboprops),
+     or electric motors
+   o Keeping tip speed less than sonic
+     restricts practical use to flight
+     speeds < 500 kt
+
+2. Jet Engines
+   o Variants include turbojets; afterburning
+     turbojets; and turbofans
+   o Can operate supersonically to Mach 3.5
+
+34 CM A10                            13 August 2024    Source: Ch. 14, Ref. AVD 1 (Nicolai & Carichner)
+
+=== PAGE 35 | img ===
+                         Onboard Propulsive Efficiency Chains
+
+Source: https://elib.dlr.de/78726/1/MP-AVT-209-09.pdf
+
+    Turboelectric
+ (component efficiency
+  and specific power)
+
+                                                          Source: https://www.nap.edu/download/23490
+35  CM A10                               13 August 2024
+
+=== PAGE 36 ===
+                           Turbine Engine Selection
+                                  Considerations
+
+• Choose a suitable engine that can supply the required thrust
+• Realistic propulsion expectations are essential
+    – New engines built from scratch are VERY (VERY, VERY, VERY) expensive
+         • Deciding to use a ‘rubber’ engine should take this real cost into account
+    – Much of your load is fuel, so you better know how your engine will perform to
+       justify fuel load
+    – Real engines have real dimensions, (dry) weights, mass flow rates, inlet
+       and exhaust flow effects, and noise
+    – Use extensive engine databases for availability, performance, cost, etc.
+• Sometimes new airframes do require new engines to meet stringent
+   efficiency and emissions requirements
+     – New technologies enable engines with (i) lean combustion for low Nox; (ii)
+       high-temperature turbine materials for efficiency; (iii) transonic
+       compressor/turbine designs; (iv) noise reducing inlets and exhausts
+
+36                                  13 August 2024         Courtesy of Profs. Mason and Lowe
+    CM A10
+
+=== PAGE 37 | img ===
+                        Turbine Engine Performance
+                                     Modeling
+Aircraft designers in industry obtain “Engine Decks” built by engine
+manufacturers that provide engine performance data (thrust, fuel flow, mass
+flow, pressures and temperatures at specified stations) for a wide range of
+Mach numbers and altitudes in the flight envelope, sorted by throttle setting
+
+                             Pratt &Whitney
+                              F100-PW229
+
+         “Engine Decks”--the best performance model!
+37 CM A10                         13 August 2024  Source: Ref. AVD 1 (Nicolai & Carichner)
+
+=== PAGE 38 | img ===
+                           Turbine Engine Performance
+
+                                         Modeling
+Partial-power Performance Model                General Electric TF-39-GE-1
+
+                                     13 August 2024    Source: Ref. AVD 1 (Nicolai & Carichner)
+38 CM A10
+
+=== PAGE 39 | img ===
+                           Turbine Engine Inlets
+
+ • Purpose: To slow down oncoming air to speeds suitable for combustion
+     o Typical target Mach number is 0.4 to 0.6 at the compressor face
+
+ • Design Criteria
+  o Deliver engine air with minimum distortion
+  o Maximize pressure recovery
+  o Minimize spillage drag throughout the
+     flight regime
+  o Minimize losses due to flow separation
+
+  Installed Performance Greatly Depends Upon Inlet Design
+
+ • Strongly recommend looking at Sect. 10.3, Ch. 10, PS 1 (Mattingly)
+    and Sect. 7.3.4, Ch. 7, AVD 4 (Gudmundsson)
+39 CM A10                          13 August 2024
+
+=== PAGE 40 | img ===
+                                Turbine Engine Nozzles
+
+ • Typical Nozzle Types
+
+Dry Power
+
+Max Afterburner
+
+Dry Power
+
+Max Afterburner
+
+Dry Power
+
+Max Afterburner
+
+                                                  13 August 2024          Source: Ref. AVD 1 (Nicolai & Carichner)
+40   CM A10
+
+=== PAGE 41 | img ===
+                     Turbine Engine Nozzles
+ • Required Nozzle Geometry Variation During Flight
+
+ • Make sure to account for engine installation losses (See Ch. 16 in
+   AVD 1, and also look at AVD 2)
+41 CM A10                        13 August 2024  Source: Ref. AVD 1 (Nicolai & Carichner)
+
+=== PAGE 42 | img ===
+                      Hybrid-Electric Power Train Options
+
+• Powered by both Batteries (Electrical Energy) and Fossil Fuel
+
+  o Several options for integrating fossil-
+     fuel engines with electric motors
+  o All reduce emissions and fuel burn
+  o Potential reduction in total energy
+     consumption and total energy cost:
+      Jet-A: ~$5 per gallon
+      Electricity: ~$1.2 per equivalent
+         gallon
+
+                              (Weight @ Landing)     (Weight @ Take-off)
+
+42 CM A10                           13 August 2024
+
+=== PAGE 43 | img ===
+                    Propulsive Efficiency of
+                 a Hybrid Electric (HE) System
+
+ https://canvas.vt.edu/courses/143566/files/folder/Project%20Report%20(Spring)/Winning%20Reports%20- %20Past%20Years/VT%20AOE%20Prize%20for%20Excellence?preview=21392423
+43 CM A10                 13 August 2024
+
+=== PAGE 44 | img ===
+                             Electric Motors
+
+ • Simple and Reliable (design life of 30,000 hrs. when operated at
+   ~60% rated power)
+ • Typical specific power: 3 to 5 hp/lb
+
+                                 13 August 2024  Source: Ref. AVD 1 (Nicolai & Carichner)
+44 CM A10
+
+=== PAGE 45 | img ===
+                                          Battery Characteristics
+
+                                                    13 August 2024                     Source: Ref. AVD 3 (Gundlach)
+45    CM A10
+
+=== PAGE 46 | img ===
+                          Battery Specific Energy & Density
+
+                                         13 August 2024              Source: Ref. AVD 2 (Raymer)
+46  CM A10
+
+=== PAGE 47 | img ===
+                             Propeller Performance
+                      (Sect. 14.3 and 14.4, Ch. 14, AVD 4 Gudmundsson)
+Propeller performance                     Sample Propeller Efficiency Map
+characterized by propeller
+efficiency and several
+coefficients:
+
+                   Note: See CM A7 for Generic Propeller Maps
+47 CM A10                          13 August 2024
+
+=== PAGE 48 ===
+                                     AeroPropulsion Integration
+
+  Recommended Reading for Topics in Aeropropulsion Integration
+
+                       Topic                                    Recommended References
+  AeroPropulsion Integration
+  Propulsion System Fundamentals                   Chapter 14, Nicolai & Carichner, Ref. AVD 1
+  Turbine Engine Inlet Design                      Chapter 15, Nicolai & Carichner, Ref. AVD 1
+  Corrections for Turbine Engine Installation      Chapter 16, Nicolai & Carichner, Ref. AVD 1
+  Propeller Propulsion Systems                     Chapter 17, Nicolai & Carichner, Ref. AVD 1
+  Propulsion System Thrust Sizing                  Chapter 18, Nicolai & Carichner, Ref. AVD 1
+  Propulsion                                       Chapter 13, Raymer, Ref. AVD 2
+  Propulsion and Fuel System Integration           Chapter 10, Raymer, Ref. AVD 2
+  Propulsion System Design                         Chapter 8, Sadraey, Ref. AVD 5
+  Selecting the Power Plant                        Chapter 7, Gudmundsson, Ref. AVD 4
+  The Anatomy of the Propeller                     Chapter 14, Gudmundsson, Ref. AVD 4
+  Aircraft Power Plant and Integration             Chapter 10, Kundu, Ref. AVD 8
+  DEP, Hybrid Electric, Propellers and Open Rotors  See API folder in Supplemental Reference Material folder on
+                                                   course site
+
+48 48  CM A10                                     13 August 2024
+
+=== PAGE 49 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout and Loft
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+49 CM A10                    13 August 2024
+
+=== PAGE 50 ===
+            A10.5 Vehicle Performance
+
+  Vehicle Performance subteam members should review their
+      R&Rs, and any project data deliverables in the RFP
+
+50 CM A10                  13 August 2024
+
+=== PAGE 51 ===
+                          Importance of the Role of
+                         Vehicle Performance Team
+
+ • Predict flight performance for all segments of the mission using
+    appropriate analyses and simulations
+
+ • If actual flight performance differs from predictions, adverse
+   project risks include:
+    o Loss of Credibility
+        “Cannot Deliver What Was Promised”
+    o Potential for Schedule Slip and Additional Cost
+         Flight Test “Surprises” Schedule Slips and Additional Costs due to
+           Design Modifications
+     o Dissatisfied Customer
+         Do Not Like Out-of-Spec Product or Late Delivery or Increased Cost
+
+   Mitigate Risk Through Design, Analysis, and Test
+
+51 CM A10                        13 August 2024
+
+=== PAGE 52 | img ===
+                        Flight Performance: Take-off
+
+                             Assumption: unaccelerated climb
+
+             See Sect. 10.3, Ch. 10, AVD 1, for more details and
+                     recommended values of parameters
+52 52  CM A10                          13 August 2024          Source: Chapter 10, Ref. AVD 1 (Nicolai)
+
+=== PAGE 53 | img ===
+                           Flight Performance: BFL
+
+1. BFL Estimation*                           2. More Accurate BFL Estimation**
+                                               o Assume failure recognition speed VEF
+                                               o Calculate LAB: accelerate to VEF ,free
+                                                 roll for 3 sec., brake to full stop
+                                               o Calculate LAC: accelerate to VEF ,
+                                                 continue OEI takeoff over 35 ft.
+                                                 obstacle
+                                               o Estimate refusal speed, VEF , when
+                                                 LAB = LAC
+
+                                                 *See Sect. 17.8, Ch. 17, AVD 2
+                                                 **See Sect. 10.6, Ch. 10, AVD 1
+53  CM A10                            13 August 2024
+
+=== PAGE 54 | img ===
+                          Flight Performance: Climb
+
+  • Rate of Climb (ROC)
+
+  • Constant Speed Climb
+
+  • Best ROC (maximum vertical velocity) Assumption: all angles are small
+     o Jet aircraft                         o Propeller aircraft
+
+  • Best Angle of Climb (maximum g )
+      o Jet aircraft                        o Propeller aircraft
+                                                85-90% of best ROC speed is
+                                                  a good estimate
+
+                  See Ch. 3, AVD 1, and Ch. 17, AVD 2 for more details
+54 54  CM A10                          13 August 2024  Source: Ch. 3, Ref. AVD 1 (Nicolai) & Ch. 17 AVD 2 (Raymer)
+
+=== PAGE 55 | img ===
+                        Flight Performance: Descent
+
+  • Gliding Flight (T = 0)
+
+ • Maximum Range (minimum g )
+
+ • Maximum Endurance (minimum rate of descent, ROD)
+
+          See Ch.3, AVD 1 (Nicolai & Carichner), for more details
+
+55 55 CM A10                        13 August 2024  Source: Ch. 3, Ref. AVD 1 (Nicolai) & Ch. 17 AVD 2 (Raymer)
+
+=== PAGE 56 | img ===
+                            Flight Performance: Landing
+
+  Assumptions:
+      Neglect reverse thrust
+      Zero forward thrust
+
+                 See Section 10.4, AVD 1, for more details and
+                      recommended values of parameters
+56 56  CM A10                            13 August 2024            Source: Chapter 10, Ref. AVD 1 (Nicolai)
+
+=== PAGE 57 | img ===
+                       Flight Performance: Cruise & Loiter
+• Level unaccelerated flight of symmetric aircraft with uncambered wing
+
+• Required Thrust and Power
+
+• Range                               • Endurance
+
+• Jet aircraft                         • Propeller aircraft
+  o Most Efficient cruise occurs near    o Most Efficient cruise occurs near
+    L/D = 0.943 (L/D)max (constant throttle)  L/D = (L/D)max (minimum thrust)
+    L/D = 0.866 (L/D)max (constant altitude)
+  o Most Efficient loiter occurs near    o Most Efficient loiter occurs near
+    L/D ~ (L/D)max (minimum thrust)        L/D = 0.866 (L/D)max (minimum power)
+
+57 CM A10                         13 August 2024
+
+=== PAGE 58 | img ===
+                      Flight Performance: Cruise & Loiter
+
+• Max Loiter (Jets) and Max Range (Propellers)
+
+• Max Range Speed (Jets)
+
+                                 CL
+
+• Max Loiter (Propellers)
+
+58 CM A10                        13 August 2024
+
+=== PAGE 59 ===
+                                          Vehicle Performance
+
+Recommended Reading for Topics in Vehicle Performance
+
+                       Topic                                    Recommended References
+  Vehicle Performance
+  Aircraft Performance Methods                     Chapter 3, Nicolai & Carichner, Ref. AVD 1
+  Takeoff and Landing Analysis                     Chapter 10, Nicolai & Carichner, Ref. AVD 1
+  Performance and Flight Mechanics                 Chapter 17, Raymer, Ref. AVD 2
+  Performance (GA Aircraft)                        Chapters 16 thru 22, Gudmundsson, Ref. AVD 4
+  Aircraft Performance                             Chapter 13, Kundu, Ref. AVD 8
+  Aircraft Flight Performance                      Chapters 1 thru 16, Filippone, Ref. FM 4
+  Aircraft Noise and Emissions                     Chapters 17 thu 23, Filippone, Ref. FM 4
+  Performance                                      See Performance folder for misc documents in Supplemental
+                                                   Reference Material on course site
+
+59 59  CM A10                                     13 August 2024
+
+=== PAGE 60 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout and Loft
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+60 CM A10                    13 August 2024
+
+=== PAGE 61 ===
+            10.6 Structures & Materials
+
+ Structures & Materials subteam members should review their
+      R&Rs, and any project data deliverables in the RFP
+
+61 CM A10                  13 August 2024
+
+=== PAGE 62 | img ===
+                           Structural Design Criteria
+
+• Use relevant FAR or MIL-A-8860 series of
+ documents for structural design criteria
+• V-n diagram is the starting point!
+ o Speed Ve is always written in knots as
+    KEAS given by
+                                                                       Ve
+ o nz ranges from +3 to -1 for transport-type and
+   +7.5 to -3 for fighter-type aircraft
+ o Gust load factors estimated using
+
+• Loads Engineers develop a set of external loads (aerodynamic and inertia
+ loads) that a ‘lightest weight’ structure must withstand without failing
+62 62 CM A10                          13 August 2024  Source: Ch 19, Ref. AVD 1 (Nicolai & Carichner)
+
+=== PAGE 63 | img ===
+                                                 Typical V-n Diagram
+
+                                                Student Design Team Example
+
+                                                                       Source: 2020 AIAA Undergrad Team Aircraft Design, Virginia Tech
+63 63  CM A10                                           13 August 2024
+
+=== PAGE 64 | img ===
+                            External Loads Development Process
+
+                                             13 August 2024    Source: Ch 19, Ref. AVD 1 (Nicolai & Carichner)
+64 64  CM A10
+
+=== PAGE 65 | img ===
+                           Aircraft Structure & Systems Layout
+
+                                             13 August 2024        Source: Ch. 5, Ref. AVD 4 (Gudmundsson)
+65   CM A10
+
+=== PAGE 66 | img ===
+                              Aircraft Structural Layout Example
+
+                               Student Design Team Example to Emulate
+
+66 66  CM A10                                13 August 2024 Source: 2010 AIAA Undergrad Team Competition Winner, Cal Poly, SLO
+
+=== PAGE 67 | img ===
+                                Typical Wing Box:
+                              Structural Components
+
+A wing box is made of three
+structural members: wing skin,
+spars, and ribs.
+Wing skin panels are located
+on the top and bottom of the
+wings. Skin can aid in the
+reaction of bending moments,
+but it primarily carries shear
+loading.
+Spars are members that run
+along the span of the wing
+and react carry bending and
+shear loads from lift.
+Ribs run across the spars and        Source:
+they give form to the wing           Arevalo, PT, “Design Optimization of a Composite Wing Box for
+covers as well as prevent            a High-Altitude Long-Endurance Aircraft,” Ph.D. Thesis,
+                                     Embry-Riddle Aeronautical University, Florida, May 2014
+buckling of the wing covers.
+
+67 67 CM A10                         13 August 2024
+
+=== PAGE 68 | img ===
+                                       C-130 Center Wing Box
+
+      Source: Strul, E., “IAI C-130 Life Extension Program CWB Replacement,” C-130 Hercules Operators Council, 2013
+68 68  CM A10                                       13 August 2024
+
+=== PAGE 69 | img ===
+                     Typical Wing Structural Layout
+
+                                        General Aviation Aircraft Example
+
+     Main Spar Cross Sections
+
+                                                        Rib Spacing Criterion
+                                                        (requires structural analysis)
+
+       Refine/validate Structural Layout Through Analyses
+69 69 CM A10                       13 August 2024   Source: Ch. 5, Ref. AVD 4 (Gudmundsson)
+
+=== PAGE 70 | img ===
+                    Structural Design Rules of Thumb
+
+1. Keep load paths simple and direct
+
+2. All six components of structural loading must be considered
+
+3. A statically determinate
+   structure is usually
+   preferred for minimum
+   weight (Fail safe
+   requirements might dictate
+   a statically indeterminate
+   design)
+
+ 4. Each structural component should serve multiple functions
+
+ 5. Subsystems integration requirements must be considered early
+
+70 70 CM A10                    13 August 2024  Source: Ch 19, Ref. AVD 1 (Nicolai & Carichner)
+
+=== PAGE 71 | img ===
+                                  Materials Selection
+
+• One of the most important decisions with far-reaching implications for
+  vehicle weight, performance, manufacturing schedule, reliability,
+  maintainability, and cost
+• Key parameters to consider in selecting airframe materials include:
+  o specific strength—ultimate tension strength (Ftu) divided by material density
+  o specific stiffness—Young’s modulus (E) divided by density
+  o operational environment—for example temperature range, humidity, etc.
+  o fracture toughness (KIC)—inherent capability to resist crack growth
+  o manufacturability—ability to fabricate an end product using standard tools and methods
+  o minimum gage limitations—minimum thickness to which material can be produced
+  o availability—long lead times from several months to well over a year
+
+                                                 http://www.ltas-cm3.ulg.ac.be/FractureMechanics/index.php?p=overview_P4
+71 71  CM A10                           13 August 2024  Source: Ch. 19, Ref. AVD 1 (Nicolai & Carichner)
+
+=== PAGE 72 | img ===
+                                                                                      Source: Arris Composites, Inc.
+72    CM A10                                               13 August 2024             (Alex Huckstepp, LinkedIn post, July 2020)
+
+=== PAGE 73 ===
+                                       Structures & Materials
+
+ Recommended Reading for Topics in Structures & Materials
+
+                       Topic                                    Recommended References
+  Structures & Materials
+  Structures and Materials                         Chapter 19, Nicolai & Carichner, Ref. AVD 1
+  Structures and Loads                             Chapter 15, Raymer, Ref. AVD 2
+  Aircraft Structural Layout                       Chapter 5, Gudmundsson, Ref. AVD 4
+  Aircraft Loads                                   Chapter 5, Kundu, Ref. AVD 8
+  Airframe Structural Design                       Book by Michael C.Y. Niu, Ref. STR 1
+  Composite Airframe                               Book by Michael C.Y. Niu, Ref. STR 2
+  Structural Sizing                                See Structures folder in Supplemental Reference Material on
+                                                   course site
+
+73 73  CM A10                                     13 August 2024
+
+=== PAGE 74 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout and Loft
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+74 CM A10                    13 August 2024
+
+=== PAGE 75 ===
+                  10.7 Subsystems
+
+ Subsystems subteam members should review their R&Rs, and
+           any project data deliverables in the RFP
+
+75 CM A10                  13 August 2024
+
+=== PAGE 76 ===
+                                   Subsystems
+
+• Typical Air Vehicles Subsystems
+   – Landing Gear
+   – Crew station requirements and cockpit layout
+   – Avionics system
+   – Flight control system and actuators
+   – Passenger and cargo arrangement (volume and weight)
+   – Weapons system if appropriate
+   – Environmental Control System (ECS)
+   – Thermal Management System
+   – Fuel system
+   – De-icing system
+   – ...
+• In Conceptual Design phase:
+   – Focus on relevant technology developments and current systems used
+   – Concentrate on SWaP, i.e., size (volume), weight, and power
+      requirements
+• In Preliminary Design phase:
+   – Select specific systems with actual SWaP values
+76 CM A10                        13 August 2024
+
+=== PAGE 77 ===
+ The following slides show examples of subsystems
+   integration—many from previous years’ student
+      design reports—to illustrate the nature of
+deliverables expected of the Air Vehicle Subsystems
+           team at the end of the project.
+
+77 CM A10               13 August 2024
+
+=== PAGE 78 | lowtext, img ===
+                     More Electric Aircraft Subsystems
+
+78 CM A10                        13 August 2024
+
+=== PAGE 79 | img ===
+                                              Landing Gear
+
+                                                                                20 deg
+
+                                                                                                     30 deg
+ Landing Gear
+
+  −Oleo pneumatic strut
+
+  −Carbon brakes
+
+  −Radial tires
+
+                                                                Forward CG
+                                                                   100.8’
+
+                                                                  Aft CG
+                                                                   103.7’
+
+               85’                      99’
+                                                                              208.7’
+                                                                                             35 deg
+                                                                       138.9’
+                                                                                20.8 deg
+                            Turnover angle: 60.8o
+                                                                                                              68.4’
+
+                                                                                                  16.5 deg.
+                         21.8’                                   AC = 106.9’
+79                        99’                       13 August 2024
+      CM A10
+
+=== PAGE 80 | lowtext, img ===
+                                    Landing Gear
+
+80  CM A10                              13 August 2024
+
+=== PAGE 81 | lowtext, img ===
+                                      Crew Station
+
+81  CM A10                              13 August 2024
+
+=== PAGE 82 | lowtext, img ===
+                                      Crew Station
+
+82  CM A10                              13 August 2024
+
+=== PAGE 83 | img ===
+                               B757-300 Cockpit Plan
+
+                                                                 Source: https://forum.flightgear.org/
+83 83  CM A10                           13 August 2024
+
+=== PAGE 84 | lowtext, img ===
+                          F-16 Cockpit: Avionics Layout
+
+84 84  CM A10                           13 August 2024
+
+=== PAGE 85 | img ===
+                                    Flight Crew Interface/Control
+
+      Heads Up Display Visual Guidance
+    System with integrated Synthetic Vision
+
+                        Flight Management System
+
+Primary Flight Display
+
+                                                Backup
+                                               Primary
+                    NAV                       Flight Inst
+                   Display
+
+                           ECAM/Check List
+     Electronic                 Display
+     Flight Bag
+
+                             Data Entry for
+                                 FMS
+                                                                                           Controls
+                                                                                           Flight Control Computer
+                                                                                           Electro-Hydrostatic Actuators
+                                                                                           Electric Torque Driven Tubes
+                                                                                           Electric Screw Jack
+
+            FBW and control systems reduce workload and increase efficiency
+  85    CM A10                                       13 August 2024
+
+=== PAGE 86 | lowtext, img ===
+                    Garmin G-3000 Avionics Architecture
+
+86 CM A10                        13 August 2024
+
+=== PAGE 87 | img ===
+                                            FCS Integration
+
+          Flight Control System: Fly-By-Wire
+
+                                                                                   From 2012: “Diamond plans to bring FBW
+                                                                                   in as an option under $100,000, but it might
+                                                                                   cost as much as $150,000. If it's accepted
+                                                                                   by the market in volume, the price would
+                                                                                   come down.” - AVWeb
+
+                                                                                       Computers Have Multiple
+                                                                                         Control Law Choices:
+                                                                                        1. Novice
+                                                                                        2. Standard
+                                                                                        3. Advanced
+
+[20] Design Based on
+SAFAR
+
+                                                                                                                87
+
+ 87    CM A10                                          13 August 2024
+
+=== PAGE 88 | img ===
+               Key Components of Fly-By-Wire System
+
+                                                Power Demand
+                  Fly By Wire System                            Weight (lbs)
+                                                    (Watts)
+       Rockwell-Collins Flight Computer               175            14
+
+       (8x) Moog 863 Rotary Servo Actuators
+                                                      16            14.4
+       (+/- 45 deg @ 150 in-lb torque)
+
+       iMAR Inertial Measurement Sensor               35            18.7
+
+       Septino GNSS
+                                                       6             2.2
+       (Global Navigation Satellite System)
+
+       (3x) Simtec ADS-7 Heated Air Pitots            120           13.2
+
+       FJ33 Engine FADEC                              200            11
+
+       Totals                                         552           73.5
+
+                                                                                                                    88
+
+88    CM A10                                            13 August 2024
+
+=== PAGE 89 | img ===
+                     Gate Integration & Cabin Layout
+
+                               171.74’
+
+                                 52.7’
+
+               SWIFT-Jet seamlessly integrates within existing
+             infrastructure to solve worldwide airport congestion
+89 89 CM A10                      13 August 2024
+
+=== PAGE 90 | img ===
+                               Electric Power Generation &
+
+                           Distribution to Major Subsystems
+
+           CIPS – Cowl Ice Protection System            FCAS – Flight Control Actuation System
+           TRAS – Thrust Reverser Actuation System      WIPS – Wing Ice Protection System
+90 90  CM A10                                13 August 2024
+
+=== PAGE 91 | img ===
+                     Electric & Hydraulic Systems
+
+                                 Integration
+
+91 91 CM A10                     13 August 2024
+
+=== PAGE 92 | img ===
+                       Fuel System Architecture
+
+SWIFT-Jet
+  Aft
+
+   The fuel system will ensure both engines receive the necessary amount
+     of fuel to produce the required thrust throughout the flight envelope
+
+92 CM A10                          13 August 2024
+
+=== PAGE 93 | img ===
+                              A Typical Aircraft
+                  Thermal Management System (TMS)
+
+• Numerous heat sources
+  −Cabin/cockpit
+  −Air‐cooled avionics
+  −Liquid‐cooled avionics
+  −Engine
+  −EPS+ (generators,
+    motors, pumps,
+    compressors, e-actuators,
+    power network,
+    controllers, etc.)
+• Few heat sinks
+  −Ram air
+  −Engine
+  −Environment
+
+   TMS detailed design usually deferred to              PAO: polyalphaolefin
+        later stages of the Design Cycle
+93                              13 August 2024  Source: Reed, W.C., et al, AIAA 2016-1023, Jan 2016
+   CM A10
+
+=== PAGE 94 ===
+                                    Air Vehicle Subsystems
+
+Recommended Reading for Topics in Air Vehicle Subsystems
+
+                     Topic                                    Recommended References
+ Air Vehicle Subsystems
+ Crew Station, Passengers, and Payload           Chapters 9 & 11, Raymer, Ref. AVD 1
+ Fuselage Design                                 Chapter 7, Sadraey, Ref. AVD 5
+ Systems Architecures                            Chapter 5, Moir & Seabridge, Ref. AS 1
+ Aircraft Systems Examples                       Chapter 10, Moir & Seabridge, Ref. AS 1
+ Power Systems Issues                            Chapter 11, Moir & Seabridge, Ref. AS 1
+ Key Characteristics of Aircraft Systems         Chapter 12, Moir & Seabridge, Ref. AS 1
+ Aircraft Subsystems Integration                 Book by Moir and Seabridge, Ref. AS 2
+ Civil Avionics Systems                          Book by Moir and Seabridge, Ref. AS 3
+ Military Avionics Systems                       Book by Moir and Seabridge, Ref. AS 4
+ Undercarriage                                   Chapter 7, Kundu, Ref. AVD 8
+ Landing Gear and Subsystems                     Chapter 11, Raymer, Ref. AVD 2
+ Landing Gear Design                             Chapter 9, Sadraey, Ref. AVD 5
+ The Anatomy of the Landing Gear                 Chapter 13, Gudmundsson, Ref. AVD 4
+ Aircraft Landing Gear Design                    Book by Currey, Ref. AS 5
+ Fuselage, Fuel Systems and Landing Gear         See Subsystems folder in Supplemental Reference Material
+                                                 folder on course site
+
+94 94  CM A10                                    13 August 2024
+
+=== PAGE 95 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout and Loft
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+95 CM A10                    13 August 2024
+
+=== PAGE 96 ===
+             A10.8 Stability & Control
+
+Stability & Control (S&C) subteam members should review their
+      R&Rs, and any project data deliverables in the RFP
+
+96 CM A10                  13 August 2024
+
+=== PAGE 97 | img ===
+                    Provide Evidence that the Design Meets
+                                 S&C Requirements
+  • FAR Requirements on Stability are comparatively vague by design
+  • MIL-F-8785C provides more useful numbers for requirements
+      – Based on aircraft class (Transport, Fighter) and Flight Phase
+  • Roll Control in time to certain bank angle (Dependent on class)
+
+  • Pitch Control in takeoff rotation at Stall Speed in 3-5s at specified
+     angular rate
+
+97 CM A10                        13 August 2024
+
+=== PAGE 98 | img ===
+                          Aircraft Trim vs Control
+
+  • Separate systems for each or a single system that provides both?
+      – Adjustable elevators, flaps, trim tabs
+      – Define their respective regimes and ensure compatibility
+
+ https://fl360aero.com/detail/aircraft-pitch-trim-system-how-does-a-stab-trim-or-
+ trimmable-horizontal-stabilizer-work/276  https://airplaneacademy.com/aircraft-trim-explained-with-pictures/
+
+98 CM A10                        13 August 2024
+
+=== PAGE 99 | img ===
+                          Scissor Plot (X-plot) Example
+
+Source: https://www.fzt.haw-hamburg.de/pers/Scholz/HOOU/AircraftDesign_11_EmpennageSizing.pdf
+99 99  CM A10                           13 August 2024
+
+=== PAGE 100 | img ===
+                             Scissor Plot (X-plot) Example
+
+Source: https://www.semanticscholar.org/paper/FLYING-QUALITIES-CONSTRAINTS-IN-THE-DESIGN-OF-A-Morris-
+Schetz/6eee07c8221cccdd2f3060f044c5b33a086e4e40/figure/6
+100 CM A10                                   13 August 2024
+
+=== PAGE 101 ===
+                                          Stability & Control
+
+Recommended Reading for Topics in S&C
+
+                       Topic                                    Recommended References
+ Stability & Control
+ Static Stability and Control                      Chapter 21, Nicolai & Carichner, Ref. AVD 1
+ Trim Drag and Maneuvering Flight                  Chapter 22, Nicolai & Carichner, Ref. AVD 1
+ Control Surface Sizing Criteria                   Chapter 23, Nicolai & Carichner, Ref. AVD 1
+ Stability, Control, and Handling Qualities        Chapter 16, Raymer, Ref. AVD 2
+ The Anatomy of the Tail                           Chapter 11, Gudmundsson, Ref. AVD 4
+ Tail Design                                       Chapter 6, Sadraey, Ref. AVD 5
+ Design of Control Surfaces                        Chapter 12, Sadraey, Ref. AVD 5
+ Stability Considerations Affecting Aircraft Configuration Chapter 12, Kundu, Ref. AVD 8
+ Boeing S&C Course Notes and Empennage Design      See Stabilty & Control folder in Supplemental Reference
+                                                   Material on course site
+
+101 101 CM A10                                   13 August 2024
+
+=== PAGE 102 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout and Loft
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+102 CM A10                   13 August 2024
+
+=== PAGE 103 ===
+   A10.8 Weights (Mass Properties) & Balance
+
+   Weights & Balance subteam members should review their
+      R&Rs, and any project data deliverables in the RFP
+
+103 CM A10                13 August 2024
+
+=== PAGE 104 | img ===
+                                   Weight Estimation Methods
+
+                                                               Source: Ch 19, Ref. AVD 1 (Nicolai & Carichner)
+104 104 CM A10                               13 August 2024
+
+=== PAGE 105 | img ===
+                                Final “Weight Statement”
+
+          Empty Weight
+                                                                                Operating
+                                                                                  Empty
+                                                                                  Weight
+
+Operating Empty Weight
+
+   Fuel Weight
+        Payload Weight
+Takeoff Gross Weight
+105 105 CM A10                           13 August 2024
+
+=== PAGE 106 | img ===
+                      Weight & Moment Summary
+
+  • C.G. location reported as distance from the nose and % MAC
+  • Determine C.G. location for full and empty aircraft and report as
+     most forward and most aft locations
+
+                                            Source: Chapter 20, AVD 1 (Nicolai & Carichner)
+106 106 CM A10                  13 August 2024
+
+=== PAGE 107 | img ===
+                                        C.G. Travel Example (F-4D)
+
+                                                         13 August 2024   Source: Fig. 23.2, Chapter 23, AVD 1 (Nicolai & Carichner)
+107 107 CM A10
+
+=== PAGE 108 | lowtext, img ===
+                                  Boeing 777 C.G. Limits
+
+108 108 CM A10                          13 August 2024
+
+=== PAGE 109 ===
+                                         Weights & Balance
+
+ Recommended Reading for Topics in Weights & Balance
+
+                       Topic                                   Recommended References
+  Weights & Balance
+  Refined Weight Estimate                         Chapter 20, Nicolai & Carichner, Ref. AVD 1
+  Weights                                         Chapter 15, Raymer, Ref. AVD 2
+  Weight Control and Balance                      Chapter 16, Niu, Ref. AS 1
+  Aircraft Weight and Center of Gravity Estimation  Chapter 8, Kundu, Ref. AVD 8
+  Aircraft Weight Analysis                        Chapter 6, Gudmundsson, Ref. AVD 4
+  Weight of Components                            Chapter 10, Sadraey, Ref. AVD 5
+  Aircraft Weight Distribution                    Chapter 11, Sadraey, Ref. 9 in PR
+  CG Limits and Weights & Balance                 See Weights & Balance folder in Supplemental Reference
+                                                  Material on course site
+
+109 109 CM A10                                  13 August 2024
+
+=== PAGE 110 ===
+                           Outline
+
+   A10. Preliminary Design: Refine & Validate Baseline Design
+
+      A10.1 General Remarks
+      A10.2 Configuration Layout and Loft
+      A10.3 Aerodynamics
+      A10.4 Aeropropulsion Integration
+      A10.5 Vehicle Performance
+      A10.6 Structures & Materials
+      A10.7 Subsystems
+      A10.8 Stability & Control
+      A10.9 Weights (Mass Properties) & Balance
+      A10.10 Cost & Manufacturing
+
+110 CM A10                   13 August 2024
+
+=== PAGE 111 ===
+          A10.10 Cost & Manufacturing
+
+ Cost & Manufacturing subteam members should review their
+      R&Rs, and any project data deliverables in the RFP
+
+111 CM A10                13 August 2024
+
+=== PAGE 112 | img ===
+                          Cost & Manufacturing
+
+   • Cost estimation: The Critical Area—Start Early!
+   – All Team members should factor in cost considerations of their
+      assigned area into every decision
+   – See CM A6
+   • Manufacturing planning
+
+                              Boeing B777
+
+                             Source: AIAA 93-1139
+
+112 CM A10                       13 August 2024
+
+=== PAGE 113 ===
+                                        Cost & Manufacturing
+
+Recommended Reading for Topics in Cost & Manufacturing
+
+                       Topic                                    Recommended References
+ Cost & Manufacturing
+ Life Cycle Cost                                   Chapter 24, Nicolai & Carichner, Ref. 1 in PR
+ Cost Analysis                                     Chapter 18, Raymer, Ref. 2 in PR
+ Aircraft Cost Analysis                            Chapter 2, Gudmundsson, Ref. 10 in PR
+ Aircraft Cost Considerations                      Chapter 16, Kundu, Ref. 8 in PR
+ Design for Manufacturing                          Chapter 2, Niu, Ref. 24 in PR
+ Composite Manufacturing                           Chapters 3 & 4, Niu, Ref. 25 in PR
+ Aircraft Manufacturing Considerations             Chapter 17, Kundu, Ref. 8 in PR
+ Cost Estimation & Manufacturing Consideerations   See Cost and Manufacturing folders in Supplemental
+                                                   Reference Material on course site
+
+113 113 CM A10                                    13 August 2024

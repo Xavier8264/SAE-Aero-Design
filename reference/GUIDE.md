@@ -1,8 +1,15 @@
 # Reference library: topic map (read this, not the whole INDEX)
 
-118 documents, about 2.9M tokens in total. NEVER read a document whole: grep `reference/text/<ID>.txt` and read
-line ranges. INDEX.md has every ID with its size, flags and source. Written 2026-09-18; add new IDs here when you
-archive something important.
+138 documents, about 4.1M tokens in total. NEVER read a document whole: grep `reference/text/<ID>.txt` and read
+line ranges. INDEX.md has every ID with its size, flags and source. Written 2026-09-18, extended 2026-09-19;
+add new IDs here when you archive something important.
+
+## Design process and systems engineering (added 2026-09-19)
+- vt_aoe_a5_initial_sizing, vt_aoe_a7a_config_layout, vt_aoe_a10_prelim_design: Virginia Tech AOE 4065/4066
+  course notes (Raj). The phased method: initial sizing -> configuration layout and loft -> preliminary design
+  refinement and validation. Heavily figure-based; many pages are flagged img/lowtext, so render when the text thins out.
+- mit_1682_flight_vehicle_intro: MIT 16.82 capstone framing of the design process (short, 15 pp).
+- nasa_se_handbook: NASA SP-2016-6105 Rev2. Requirements and decision traceability. 262k tokens, GREP ONLY.
 
 ## Rules and competition (official = highest authority)
 - rules_2027 (OFFICIAL; Regular = printed p.33-36; TDS p.26; flight ops p.17-20). rules_2026 is for comparison only.
@@ -19,8 +26,11 @@ archive something important.
 - mit_airpower (thrust/power/velocity), mit_prop_appendix (measured small-prop thrust vs speed),
   nasa_grc_propeller_thrust (momentum theory), nasa_ground_effect_propellers (limited relevance).
 - scholz_tail_volume: Vh/Vv sizing method and typical ranges.
-- GAP: no free takeoff-roll textbook chapter (the Stanford AA241 site is offline). Integrate
-  m dV/dt = T(V) - D - mu(W - L) using APC T(V) data.
+- GAP: no free takeoff-roll textbook chapter (the Stanford AA241 site is offline; adg.stanford.edu no longer
+  resolves, re-confirmed 2026-09-19). Integrate m dV/dt = T(V) - D - mu(W - L) using APC T(V) data.
+- nasa_takeoff_flighttest_method: NASA TN D-7603, simplified flight-test method for takeoff performance,
+  INCLUDING the effect of pilot technique. Directly relevant: the sizing found rotation technique (k_R) is
+  one of the largest levers on payload. Scanned; all pages flagged img, OCR is readable but check numbers.
 
 ## Airfoils and aerodynamics
 - Coordinates (Selig .dat): airfoil_s1223, airfoil_s1223rtl (lower Cm), airfoil_s1210 (thicker), airfoil_e423,
@@ -30,8 +40,12 @@ archive something important.
   uiuc_lsat_vol3 (SD7062). These are PLOTS: text extraction is poor, so RENDER the pages
   (`python tools/doc2text.py render uiuc_lsat_vol1 <PDF page>`; printed page != PDF page, grep the page marker labels).
 - Tools: aerosandbox_readme, neuralfoil_readme, avl_doc, xfoil_doc, xflr5_part1_theory / part2_inviscid /
-  part3_viscous, vspaero_tutorial.
-- CFD (later): openfoam_user_guide, openfoam_airfoil2d_allrun, fluidx3d_readme.
+  part3_viscous, vspaero_tutorial, openvsp_user_manual (parametric geometry, feeds VSPAERO).
+- CFD (later): openfoam_user_guide, openfoam_airfoil2d_allrun, fluidx3d_readme, su2_quick_start (alternative
+  solver), gmsh_reference_manual (meshing; 298k tokens, GREP ONLY), paraview_docs (index page only, browse the site).
+- VALIDATION GAP (searched 2026-09-19, nothing found): no published study comparing AVL / XFLR5 / VSPAERO /
+  OpenFOAM against wind-tunnel data at Re 100k-500k. We have no external error band for our own predictions.
+  Close it ourselves: run our tools against the uiuc_lsat_* polars we already hold (COMPUTE_BACKLOG T1-1).
 
 ## Propulsion and electrical
 - APC data (PARSE WITH SCRIPTS; ~30-56k tokens each): apc_12x6e, apc_12x8e, apc_12x10e, apc_12x12e, apc_11x7e,
@@ -51,11 +65,33 @@ archive something important.
 - balsa_strength_vs_density (hobbyist; cross-check with Wood Handbook).
 - aluminum_6061, aluminum_7075 (joiners, fittings).
 - prusament_pla_tds, prusament_petg_tds, colorfabb_lwpla_tds, fdm_infill_orientation (printed parts).
+- Loads: nasa_vgh_load_factor_stats (NASA CR-132531, statistical general-aviation VG/VGH gust and maneuver
+  load factor data). Use it to justify the V-n design load factor instead of picking one. Scanned, OCR is
+  rough on the tables, render pages when a number matters.
+- Worked spar examples: uf_wing_spar_optimization (Univ. of Florida, 14 lb / 7 ft span RC aircraft, closest
+  scale match we have, 6 pp), syracuse_wing_spar_design (senior design, full bending-moment-to-stress walkthrough).
+- fpl_minimum_weight_sandwich (USDA FPL RN-086): minimum-weight sandwich design. Use this for foam-core
+  sandwich work. MIL-HDBK-23 was canceled in 1988 and folded into MIL-HDBK-17, which is NOT free: do not go looking.
+- FEA: calculix_manual (CalculiX 2.22, the solver behind FreeCAD FEM; 448k tokens, GREP ONLY),
+  freecad_fem_workbench (tutorial, from the GitHub docs mirror; wiki.freecad.org is behind bot protection and
+  cannot be fetched by script, open it in a browser), gmsh_reference_manual (see the tools list above).
 
 ## Competition site and the TDS prediction curve
 - klal_airnav (elevation 141.8 ft, runways), noaa_lakeland_normals (March Tmax 80.2 F, Tmin 56.5 F),
   klal_windrose, nws_density_altitude_formula (KEY equations), nws_density_altitude_calc.
 - Raw data: reference/data/klal_asos_2021-03_to_2026-04.csv (hourly KLAL weather; see data_readme).
+
+## Flight test and operations (added 2026-09-19)
+- nasa_takeoff_flighttest_method (NASA TN D-7603; see the sizing section above).
+- ardupilot_airspeed_calibration: pitot / airspeed sensor calibration, for instrumented test flights.
+- ama_national_safety_code: AMA doc 105, the official safety code. Short; required reading before first flight.
+- GAP: no stall-speed or static-margin flight-test procedure archived yet.
+
+## Manufacturing and build technique (added 2026-09-19)
+- modelaviation_sliced_rib_method, modelaviation_diy_laser_cutting: AMA Model Aviation articles on built-up
+  wing construction and cutting balsa/ply parts. MAGAZINE GRADE: cite as common practice, never as allowables.
+  Allowables come from wood_handbook_ch5 / anc18_wood_aircraft.
+- GAP: no covering-film or adhesive-selection source archived yet (wood_handbook_ch10 covers adhesives in general).
 
 ## Precedent (other teams)
 - Same 2026 bottle mission: nau_2026_report2 (preferred), nau_2026_report1 (earlier draft), nau_2026_poster (render it).

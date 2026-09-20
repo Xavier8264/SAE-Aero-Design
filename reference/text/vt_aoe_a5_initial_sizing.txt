@@ -1,0 +1,904 @@
+# ID: vt_aoe_a5_initial_sizing
+# SOURCE: https://www.aoe.vt.edu/content/dam/aoe_vt_edu/people/faculty/praj/avd-fundamentals/A5%20-%20Initial%20Sizing%20-%20Wing%20Loading%20and%20Thrust%20Loading%20Estimation.pdf
+# ORIGINAL: reference/raw/vt_aoe_a5_initial_sizing.pdf
+# CONVERTED: 2026-09-19 21:43 UTC-0500 | type pdf | 47 pages | ~10531 tokens
+# NOTE: Virginia Tech AOE 4065/4066 (Raj): initial sizing, wing and thrust loading method.
+# FLAG img: pages 5,9-18,22,24-25,29,33,37-38,40-41,46-47
+# FLAG math: pages 10,12,31-36
+# FLAG lowtext: pages 42,45
+
+=== PAGE 1 ===
+                                                  A5
+
+               Air Vehicle Design
+                  AOE 4065 – 4066
+
+           II. Air Vehicle Design Fundamentals
+
+                   Course Module A5
+             Initial Sizing: Wing Loading and
+               Thrust Loading Estimation
+
+  Kevin T. Crofton Department of Aerospace and Ocean Engineering
+                      Blacksburg, VA
+
+1 CM A5                  13 August 2024
+
+=== PAGE 2 ===
+                                           AOE 4065-4066:
+
+              Capstone Air Vehicle Design (AVD) Course Modules (CMs)
+
+                                  Overview of AVD Courses
+
+      I. Foundational                  II. Air Vehicle Design              III. Project Management
+         Elements                          Fundamentals                              Topics
+ F1. Design: An Engineering      A1. Purpose & Process                    P1. Basics of Project Management
+    Discipline                                                               and Project Planning
+                                          Conceptual Design
+ F2. Systems and Systems Thinking                                         P2. Project Organization
+                                 A2. Understand the Problem
+F3. Basics of Systems Engineering                                         P3. Roles & Responsibilities of
+                                 A3. Solve the Problem                       Team Members
+F4. Decision Making with
+    Ethics and Integrity         A4. Initial Sizing: Takeoff Weight       P4. Project Execution:
+                                    Estimation                               Teamwork for Success
+                                 A5. Initial Sizing: Wing Loading and     P5. Project Risk Management
+                                    Thrust Loading Estimation
+                                                                          P6. Delivering Effective Oral
+                                 A6. Cost Considerations                     Presentations
+                                 A7. Concept to Configuration: Key        P7. Writing Effective Design Reports
+                                    Considerations
+                               A7A. Configuration Layout: Drawings & Loft
+
+                                   Conceptual & Preliminary Design
+                                 A8. Trade Studies
+                                 A9. Use of Software Tools
+                                A10. Preliminary Design: Baseline Design
+                                    Refinement & Validation
+2 2  CM A5                                       13 August 2024
+
+=== PAGE 3 ===
+                             Disclaimer
+
+   Prof. Pradeep Raj, Aerospace and Ocean Engineering, Virginia Tech,
+    collected and compiled the material contained herein from publicly
+            available sources solely for educational purposes.
+   Although a good-faith attempt is made to cite all sources of material,
+                  we regret any inadvertent omissions.
+
+3  CM A5                          13 August 2024
+
+=== PAGE 4 ===
+          CRUCIALLY IMPORTANT
+      CMs only introduce key topics and
+   highlight some important concepts and
+     ideas...but without sufficient detail.
+
+  We must use lots of Reference Material* to
+          add the necessary details!
+         (*see Appendix in the Overview CM)
+
+4 4 CM A5           13 August 2024
+
+=== PAGE 5 | img ===
+                                                            Aircraft Conceptual Design (CD)
+
+                                                                                                         Process
+
+                                                                                                                                       • Radius                                   Payload
+                                                                                                                    Mission            • Payload                                     Speed
+                                                                                                                    Trades             • Speed                                      Radius
+         Customer                                                                                                                      • Box Size      MoM
+                           Evaluate                                                                                                    • Hover
+                         Req/ConOps                                                                                                      Time                 -10 -5   0 +5 +10
+                                                                                                                                       • Etc.
+            ICD             Negotiate
+                         With Customer
+
+                                                 Selection
+         Mission           GO
+                                                  Criteria
+           Reqs                                                                                                                                           Iterate
+                                                                                                                            Back             Yes
+                                                                       Concept No. 1                                                                     Design
+                           Design Guidelines                                                                                To GO GO
+                                                                                                                                                        Back to A) A
+                            • Radius              Configuration
+        Concept of          • Payload
+                                                    Sketches
+        Operations          • Altitude
+                            • Signature                                                                                                                                                 Technology
+                            • Etc.                                                                                                           Req                                          Trades
+                                                                                                                  Point                    Change
+                                                                                                                 Design         No                         No
+      System Approach                            Technology                                                                                   ?                                      TFSC
+       • Tactics           Measures of Merit    • Materials
+       • Support Aircraft  • LCC                                                                                • OML
+                                                • Stealth                    Initial
+       • ECM               • TOGW                                                                               • GA                                                                     Wt
+                                                • Propulsion                Sizing
+       • Subsystems        • Targets Killed/LCC                                                                 • Performance                                       MoM                          • TSFC
+                                                • Etc.
+       • Etc.              • Etc.                                                                               • Signature                 Share                                                • Engine T/W
+                                                                                                                                                          Happy
+                                                                                                                • Subsystems            Trade Results       ?                                    • Empty Weight
+                                                                                                                                                                         -10 -5 0 +5 +10
+                                               Functional Inputs                                                • Risk Analysis        With Customer                                             • CD
+                                                                             Select           A                 • Req Analysis/Allocation                                                        • L/D
+                                                • Aero                  Configuration(s)
+                                                • Propulsion                                                    • SE Results                                                            L        • CLmax
+                   Design Trades                                                                                • Man. Plan                                                             D        • Etc.
+                                                • Weights
+                                                • Mat/Structure                                                 • RM&S                                     Yes
+                                 T/W   • W/S    • Signature                                                     • LCC Analysis
+     Select        MoM
+                                       • T/W    • Etc.                                                          • System Spec
+    Preferred                                                                                                   • Test Planning
+  Configuration                        • AR
+                                       • Sweep                                                                  • TRL = 2-3
+                                       • Etc.                                                                                                                         Risk
+                                 W/S                                                                                                                               Assessment
+                                                                                                               Preliminary
+    Baseline                                                                                                     Design
+     Design
+
+5                                                                                               13 August 2024                                                        Courtesy of Lee Nicolai
+          CM A5
+
+=== PAGE 6 ===
+                              Initial Sizing
+
+           Initial Weight Sizing (CM A4) is the first step.
+                       It answers the question:
+            How heavy is the airplane concept as sketched?
+ But, it doesn’t tell us anything about the physical size of the airplane.
+     Recall that Initial Take-off Weight estimation considers:
+      • Payload, and all phases of flight via a Mission Profile
+      • Design team makes assumptions about performance and geometric
+        parameters, such as, cruise speed (V), cruise altitude (h), (L/D)max, CL,
+        CD0, sfc, AR, etc.
+
+ The next step in Initial Sizing (covered in this module) is to estimate two
+ parameters:
+ • Wing loading, (W/S)TO, which gives wing area, Sref , to size the wing, and
+ • Thrust loading, (T/W)TO, which gives thrust, TTO, to size the engine(s).
+   These two parameters, W/S and T/W, are the key design parameters as
+   they appear in all equations that describe the vehicle performance in
+                        various mission phases!
+6  CM A5                         13 August 2024
+
+=== PAGE 7 ===
+                            Outline
+
+    A5. Initial Sizing: Wing Loading and Thrust Loading
+                          Estimation
+
+        A5.1 Wing Loading Estimation
+        A5.2 Thrust Loading Estimation
+        A5.3 Constraint Plot*
+
+ *Defines Feasible Design Space or Design Domain in terms of
+ W/S and T/W
+
+7  CM A5                     13 August 2024
+
+=== PAGE 8 ===
+                            Wing Loading: (W/S)TO
+ • (W/S)TO is the parameter used to size the wing (estimate wing area)
+ • Note that W is takeoff gross weight, WTO, and S is wing reference area, Sref
+ • “Wing Rules!” Wing affects the performance, efficiency, and handling qualities
+   more than any other single aircraft feature.
+ • (W/S)TO is determined by considering all required flight missions to ensure
+   that the aircraft will be able to meet all requirements and regulatory
+   constraints.
+ • Example mission requirements include:
+     – Range (Cruise Efficiency)
+     – Endurance (Loiter Efficiency)
+     – Take-off and Landing
+     – Air-to-air combat (Maneuverability)
+     – High altitude
+     – High altitude, long endurance
+     – Low-altitude ride quality
+ • Constraints include Government Regulations, such as Federal Air
+    Regulations (FARs) and Military Specifications and Standard (MIL-SPEC or
+    MIL-STD), which impose safety requirements that must be met.
+ • Different mission requirements drive W/S in opposite directions, i.e., high vs.
+    low values! We must strike the right balance in choosing initial (W/S)TO .
+8   CM A5                           13 August 2024
+
+=== PAGE 9 | img ===
+                    Wing Loading, W/S, Considerations
+                               Range
+ • For a jet aircraft, Best Specific Range (distance traveled per unit
+   weight of fuel or miles per pound of fuel) may be expressed as:
+
+                                        e
+
+                        HIGH Wing Loading
+                               is Good!
+
+                         (SMALL Wing Area)
+
+ • High values of aspect ratio, AR, and wing efficiency, e, are desirable.
+
+ • Low values of specific fuel consumption, sfc, air density, r (higher
+    altitude), zero-lift drag, CD0, and weight, W, are desirable.
+
+9  CM A5                        13 August 2024
+
+=== PAGE 10 | math, img ===
+                         Wing Loading, W/S, Considerations
+
+                                      Take-off
+•   For conventional take-off and landing (CTOL) aircraft, take-off distance,* sTO ,
+    may be estimated using an approximate expression:
+             1.44 (TOP ሻ             TOP ሺT Τ W ሻ    Note: ρSLis sea level air density, and
+     sTO=            −ω+ 3.394                       ωis the ratio of ground-run retardation
+            g ρSLሻ(1                     ρSL           force to takeoff thrust; ωmay be
+    Where TOP, Take-off Parameter, is:                    assumed to be 0.1 or 0.15.
+                     Τ                 *Take-off distance is the sum of ground distance,
+                   WSTO
+    TOP=                                rotation distance, transition distance, and climb
+            σ ሺCLmaxTO( ൯  TW Τ ቁ         distance to clear specified obstacle height.
+        σ = ρ/ ρSL
+
+      LOW Wing Loading
+             is Good!
+
+       LARGE Wing Area
+
+•   For low take-off distance, it’s good to have HIGH values of maximum lift
+    coefficient, CLmax; thrust-to-weight ratio, T/W; and air density (lower altitudes)...but
+    beware of the downsides!
+10  CM A5                              13 August 2024  Source: Sec. 6.4, Ref. AVD 1 (Nicolai and Carichner)
+
+=== PAGE 11 | img ===
+                                   Take-off Distance vs. TOP
+
+                                                13 August 2024  Source: Fig. 6.3, Ref. AVD 1 (Nicolai and Carichner)
+11   CM A5
+
+=== PAGE 12 | math, img ===
+                        Wing Loading, W/S, Considerations
+                                       Landing
+ •   Landing distance, sL, for conventional takeoff and landing (CTOL) aircraft may
+     be estimated from the approximate expression:
+                     2.645 (LP ሻ     hobstacle
+               sL=              +                        Note: ρSLis sea level air density
+                       μρSLg       tan θapproach
+     Where LP, Landing Parameter, is
+                WSL Τ                   *Landing distance is the air distance (horizontal
+        LP=                              distance required to clear a specified obstacle
+              σCLmaxL                   height), free roll distance, and braking distance.
+
+        σ = ρ/ ρSL
+
+      LOW Wing Loading
+             is Good!
+
+      LARGE Wing Area
+
+ •   HIGH values of maximum lift coefficient, CLmax, and air density (lower altitudes)
+     are desirable...but beware of the downsides.
+ •   Note: No impact of thrust-to-weight ratio, T/W !
+12  CM A5                              13 August 2024  Source: Sec. 6.4, Ref. AVD 1 (Nicolai and Carichner)
+
+=== PAGE 13 | img ===
+                       Landing Distance for CTOL Aircraft
+
+                                                       (lb/ft2)
+                             Large                        Small
+                                          Wing Area
+        NOTE:       Wlanding = 0.85 WTO           for civil aircraft
+                             = WTO – 0.5 Wfuel    for military aircraft
+13  CM A5                              13 August 2024  Source: Fig. 6.4, Ref. AVD 1 (Nicolai and Carichner)
+
+=== PAGE 14 | img ===
+                    Wing Loading, W/S, Considerations
+                             Coefficient of Friction, m
+
+          These may be used for estimating landing distance, sL
+
+                                 13 August 2024 Source: Table 10.3, Ref. AVD 1 (Nicolai and Carichner)
+14 CM A5
+
+=== PAGE 15 | img ===
+                     Wing Loading, W/S, Considerations
+                                Take-off and Landing
+• W/S and CLmax are partners
+  in the landing and takeoff
+  performance
+• Selecting a takeoff W/S
+  without proper
+  consideration of CLmax and
+  T/W may lead to
+  an impossible design
+  later—especially true for
+  short take-off and landing
+  (STOL) aircraft
+
+• High-lift devices are key to balancing conflicting Cruise and Take-off &
+  Landing wing loading, W/S, requirements by producing desired CLmax
+
+• Mechanical high-lift devices have an upper CLmax limit of about 4.0, with
+  powered lift devices extending up to about 12.0
+15 CM A5                          13 August 2024  Source: Fig. 6.5, Ref. AVD 1 (Nicolai and Carichner)
+
+=== PAGE 16 | img ===
+                       Wing Loading, W/S, Considerations
+             Practical Limits of Mechanical High-Lift Devices for CLmax
+
+     See Tables 9.1 & 9.2 in Ref. AVD 1 (Nicolai) for additional relevant data
+16 CM A5                            13 August 2024  Source: Fig. 9.7, Ref. AVD 1 (Nicolai and Carichner)
+
+=== PAGE 17 | img ===
+                          Mechanical High-lift Devices for
+                                        Higher CLmax
+
+                                            NOTE: CLmax 0.9 Clmax is
+                                            typically realized for wings, i.e.,
+                                            max CL for a wing is less than
+                                            max Cl for an airfoil
+17 CM A5                            13 August 2024
+
+=== PAGE 18 | img ===
+                 Wing Loading, W/S, Considerations
+                       Acceleration and Maneuver
+• Maximize excess power, PS, for critical mission phases:
+   o Acceleration for load factor n = 1
+   o Maneuver for n > 1
+
+• Excess power, PS, is maximized by minimizing D/W
+   o W/S for minimum D/W can be estimated using
+
+• Note that √(CD0 /K) is the CL value for (L/D)max (or minimum drag)
+
+   Acceleration: HIGH Wing Loading is Good    SMALL Wing Area
+     Maneuver: LOW Wing Loading is Good       LARGE Wing Area
+
+• Air combat aircraft have low wing loading for good maneuverability
+   and high thrust loading for acceleration!
+18 CM A5                     13 August 2024  Source: Sec 6.5, Ref. AVD 1 (Nicolai and Carichner)
+
+=== PAGE 19 ===
+                       Use (W/S)TO Trends for Sanity Check of
+                    Your Estimate Based on All Considerations
+
+   Dominant Mission Requirement                           (W/S)TO    Example
+   High-altitude long-endurance solar-powered ISRa        0.5-3.0    Helios
+   Competition sailplanes                                 7-12       ASW 17
+   Light civil aircraft with short range and field length  10-30     C-172
+   High-altitude long-endurance hydrocarbon-powered ISR   25-50      RQ-4A
+   STOLb and utility transports                           40-90      C-130
+   Short or intermediate range with moderate field length  50-90     Learjet 35
+
+   Long-range transports and bombers (>3000 n mile)       110-150    B 747
+   Fighter, high-altitude                                 30-60      F-106
+   Fighter, air-to-air                                    50-80      F-15A
+   Fighter, close air support                             65-90      A-10A
+   Fighter, strike interdiction                           90-130     F-4E
+   Fighter, interceptor                                   120-150    F-104G
+   Low-altitude subsonic cruise missile                   200-240    AGM-109
+
+a Intelligence, Surveillance and Reconnaissance b Short Take-Off and Landing
+19                                    13 August 2024  Source: Table 6.1, Ref. AVD 1 (Nicolai and Carichner)
+    CM A5
+
+=== PAGE 20 ===
+                            Outline
+
+    A5. Initial Sizing: Wing Loading and Thrust Loading
+                          Estimation
+
+          A5.1 Wing Loading Estimation
+          A5.2 Thrust Loading Estimation
+          A5.3 Constraint Plot*
+
+ *Defines Feasible Design Space or Design Domain in terms of
+ W/S and T/W
+
+20 CM A5                     13 August 2024
+
+=== PAGE 21 ===
+                          Thrust–to–Weight Ratio, (T/W)TO
+ • (T/W)TO is the parameter for sizing the propulsion system. Note that T
+    is TTO , takeoff thrust, and W is WTO, takeoff gross weight. TTO is typically
+    the maximum available thrust at takeoff conditions
+ • (T/W)TO is determined by considering various required mission phases
+    subject to regulatory constraints
+     – Cruise/ Loiter
+     – Takeoff
+     – Air Combat (Energy Maneuverability)
+     – Acceleration time and fuel burned during acceleration
+     – Maximum speed
+ • (T/W)TO for different mission phases typically conflict with one another
+    forcing designers to establish priorities and strike a reasonable
+    compromise in choosing an initial (T/W)TO
+ • Make sure to adjust estimated T/W for various mission phases back to
+    the takeoff conditions for consistent comparison. For example, for
+    cruise segment,
+            (T/W)TO = (T/W)cruise (Wcruise/WTO) (TTO/Tcruise)
+    Typically, Tcruise/TTO is ~ 0.2 – 0.25 for HBPR turbofan, and
+                      ~ 0.4 – 0.7 for LBPR turbofan or turbojet
+21 CM A5                          13 August 2024
+
+=== PAGE 22 | img ===
+                         Cruise Thrust and Cruise Weight
+
+• Cruise thrust is related to takeoff thrust as a function of engine cycle,
+  cruise altitude, cruise airspeed, engine thrust lapse rate, and thrust lever
+  setting (or throttle setting)
+     Tcruise = s fthrottle setting Tsea level
+• Maximum engine thrust at any
+   altitude is less than its sea-level
+   value by the ratio of air densities, s
+• At cruise altitude, available engine
+   thrust (which is less than its sea-
+   level value) is adjusted to exactly
+   match drag by the pilot via throttle
+   setting
+• Instead of assuming Wcruise = (Wtakeoff_end/ WTO)(Wclimb_end/ Wtakeoff_end) WTO
+  we could use a mid-cruise value, Wmid_cruise, estimated as
+   Wmid_cruise = 1⁄2 (Wtakeoff_end/ WTO)(Wclimb_end/ Wtakeoff_end)(1 + Wcruise_end/ Wclimb_end) WTO
+
+22 CM A5                            13 August 2024  Source: Courtesy of D.W. Hall, Personal Communication
+
+=== PAGE 23 ===
+                          Initial Estimate of (T/W)TO
+
+ • Use available data based on dominant mission requirement of
+    the aircraft being designed
+
+    Dominant Mission Requirement                           (T/W)TO
+                                                        (uninstalled)
+    Long range                                             0.2-0.35
+    Short & intermediate range with moderate field         0.3-0.45
+    length
+    STOL and utility transport                             0.4-0.6
+    Fighter—close air support                              0.4-0.6
+    Fighter—strike interdiction                            0.45-0.7
+    Fighter—air-to-air                                     0.8-1.3
+    Fighter—interceptor                                    0.55-0.8
+
+ • Note that installed thrust will be less (3-10%) due to inlet losses, and
+    sfc values will be higher (~20%), than the uninstalled values.
+
+23 CM A5                            13 August 2024  Source: Table 18.1, Ref. AVD 1 (Nicolai and Carichner)
+
+=== PAGE 24 | img ===
+                            Initial Estimate of (T/W)TO
+
+  • Typical installed values for jet aircraft shown in the table; use installed
+    values whenever available
+         Aircraft Type                                    (T/W)TO Installed
+         Jet Trainer                                             0.4
+         Jet fighter (dogfighter)                                0.9
+         Jet fighter (other)                                     0.6
+         Military cargo/bomber                                  0.25
+         Jet transport (higher values for fewer engines)      0.25-0.4
+
+  • Statistical estimation based on maximum Mach number
+
+24  CM A5                              13 August 2024      Source: Table 5.1 & 5.3, Ref. AVD 2 (Raymer)
+
+=== PAGE 25 | img ===
+                              Sanity Check of
+            Estimated Wing Area and Thrust Requirements
+ • We know Weight, hence Lift.
+   Use CLα charts or formulas to
+   compute angle of attack, α
+ • Ensure that cruise α is
+   reasonable, between 3o and 6o.
+   If not, consider decreasing W/S
+   (increasing S)
+ • We know estimated L/D and
+   Weight, W, hence L. We can,
+   therefore, determine drag, D,
+   and check if the estimated
+   thrust, T, is adequate.                        Source: Fig. 12.6, Ref. AVD 2 (Raymer)
+
+ • Check to see that the estimated Thrust value makes sense
+      Wing area is the starting point for wing design, and
+   thrust estimate is needed to select a propulsion system
+25 CM A5                       13 August 2024
+
+=== PAGE 26 ===
+                     Words of Wisdom from Experts about
+                            Initial Values of T/W and W/S
+
+   “A low wing loading makes a bigger wing which will always increase weight
+   and cost. If a very low wing loading is driven by only one of the requirements,
+   it might make sense to reconsider that requirement.”
+   “...selected values of W/S and T/W are used only for the initial design layout.
+   Once it is completed, a detailed optimization of those parameters will be done
+   and the design will be revised accordingly. The initial values are just to get
+   the design started and are never used again.”
+                                                      -- Dan Raymer
+
+   “...range-dominated aircraft always have high wing loadings.” [Except
+   when they don’t]
+   “There are two rules that must be learned in the design of aircraft:
+   1. There are no right answers, only a best answer.
+   2. There are no rules.”
+                                                      -- Lee Nicolai
+                                                Source: Ch. 6, Ref. AVD 1 (Nicolai & Carichner);
+26                                 13 August 2024           Ch. 5, Ref. AVD 2 (Raymer)
+    CM A5
+
+=== PAGE 27 ===
+                            Outline
+
+    A5. Initial Sizing: Wing Loading and Thrust Loading
+                          Estimation
+
+          A5.1 Wing Loading Estimation
+          A5.2 Thrust Loading Estimation
+          A5.3 Constraint Plot*
+
+ *Defines Feasible Design Space or Design Domain in terms of
+ W/S and T/W
+
+27 CM A5                     13 August 2024
+
+=== PAGE 28 ===
+                       Constraint Plot
+
+ Constraint Plot is a technique to define a Design Space or
+ Design Domain within which a designer can choose a
+ combination of two universal design parameters, (W/S)TO and
+ (T/W)TO, and have reasonable confidence that a design based
+ on this combination is feasible.
+ The design domain represents a region where any design will
+ meet all mission requirements including, but not limited to,
+     • Cruise Range
+     • Takeoff and Landing Field Lengths
+     • Rate of Climb
+     • Sustained Turn Rates
+     • Service Ceiling
+     • Maximum Speed
+     • Etc.
+
+28 CM A5                    13 August 2024
+
+=== PAGE 29 | img ===
+                    Constraint Plot for Jet Aircraft
+                 (Notional, for illustrative purpose only)
+
+                                Feasible
+                              Design Space
+
+    (T/W)TO
+
+                                            (W/S)TO
+     Note: In an actual plot, all curves are NOT straight lines.
+                  How do we generate the curves?
+29 CM A5                        13 August 2024  Source: Adapted from Fig. 3.19, Ref. AVD 10 (Loftin)
+
+=== PAGE 30 ===
+                    Generating Curves for
+                        Constraint Plot
+
+• Select flight segments that together define the mission profile
+• For each flight segment, choose the appropriate performance
+  equation
+• Manipulate the performance equation to express it in the form of
+       T/W = f (W/S)
+• Choose a representative set of W/S values, and compute the
+  corresponding T/W values
+• Plot the values on a graph with W/S on the abscissa and T/W on
+  the ordinate
+• For consistent comparison, convert all values to takeoff
+  conditions before plotting
+
+  The following slides show a few examples. Readers can find
+     others in one of the references or derive themselves.
+30 CM A5                     13 August 2024
+
+=== PAGE 31 | math ===
+                        Thrust Loading (T/W) as a function of
+                                      Wing Loading (W/S)
+                                (for turbofan or turbojet aircraft)
+  Takeoff
+
+         T                               1. 44 WSTO Τ
+               ≥
+        WTO
+                                                                   WSTO Τ
+                  (1−ωሻ(ρSLg σ ሻCLmaxTO sTO−3. 394
+                                                               σρSLCLmaxTO
+
+      Here, ωis the ratio of the ground-run retardation force to the takeoff thrust. The
+  retardation force, which decreases the ground run acceleration, is a function of the aircraft
+                    drag and the coefficient of friction with brakes off.
+        At this stage of design, a value of ωbetween 0.1 and 0.15 may be assumed.
+   Note that this expression is based on an updated approximate form of the full equation
+     for takeoff distance, sTO, given by Eq. (10.4b) in Ref. AVD 1 (Nicolai & Carichner).
+       The updated one differs from Eq. (6.3) in the same reference in one key aspect:
+              unlike Eq. (6.3), the updated one is not restricted to FPS units.
+              Eq. (10.4b) is the source of both Eq. (6.3) and its updated form.
+    See the two slides in the Appendix for the underlying assumptions used to derive the
+                           approximate form of the equations.
+31  CM A5                               13 August 2024
+
+=== PAGE 32 | math ===
+                        Thrust Loading (T/W) as a function of
+                                     Wing Loading (W/S)
+                               (for turbofan or turbojet aircraft)
+
+ 2nd Segment Climb: 35 ft. to 400 ft. (OEI)
+
+                        T           nengines       1
+                              ≥                  (LDሻ+ sinγ
+                       WOEI       nengines−1       Τ
+
+         L/D is evaluated at V2 ≥1.2 (Vstall); V2 is the speed at the 35 ft. height point
+                     CL= CLmax Τ 1. 22    CD= CDo+ KCL 2
+
+    It is assumed that landing gear is retracted and flaps are in takeoff position, therefore,
+     (i) increase CDoby adding incremental take-off flap drag* estimate, and
+     (ii) reduce e for estimating K
+
+    Climb gradient is typically given as a percentage (see slide 33, CM A2) from
+    which the climb angle, γ, can be calculated using
+                                          climbgradient
+                               γ= tan−1
+                                               100
+*Fig. 9.25, AVD 1, Nicolai & Carichner
+32  CM A5                              13 August 2024
+
+=== PAGE 33 | math, img ===
+                       Thrust Loading (T/W) as a function of
+                                   Wing Loading (W/S)
+                              (for turbofan or turbojet aircraft)
+Rate of Climb
+                        T            ROCmax
+                                 ≥            + 2 KCDo
+                       W ROCmax       2( WSሻ Τ
+                                       ρCLopt
+
+         Note: Maximum (T/W) and maximum (L/D) gives maximum ROC
+
+ 1. Absolute ceiling (hac). The altitude at which the ROC is zero. It is the absolute
+   maximum altitude that an aircraft can maintain level flight.
+ 2. Service ceiling (hsc). The highest altitude at which aircraft ROC is 100 ft/min
+   (i.e., 0.5 m/s).
+ 3. Cruise ceiling (hcc). The cruise ceiling is defined as the altitude at which the
+   aircraft can climb with a rate of 300 ft/min (i.e., 1.5 m/s).
+ 4. Combat ceiling (hcc). The combat ceiling is defined as the altitude at which a
+   fighter can climb with a rate of 500 ft/min (i.e., 5 m/s). This ceiling is defined only
+   for fighter aircraft.
+
+33                                   13 August 2024             Source: Ref. AVD 5 (Sadraey)
+    CM A5
+
+=== PAGE 34 | math ===
+                  Thrust Loading (T/W) as a function of
+                       Wing Loading (W/S) (contd.)
+                       (for turbofan or turbojet aircraft)
+ Cruise Speed
+
+                 T         ρVcr 2         2( WSሻ Τ
+                      ≥ 2(WSሻCD0+          2
+                 WVcr         Τ         ρVcr (πARe ሻ
+
+     Note: Vcr= aMcrwhere a is the speed of sound at the cruise altitude
+
+ Max Speed
+
+                 T         ρVmax 2          2( WSሻ Τ
+                        ≥ 2(WSሻCD0+         2
+                 WVmax         Τ         ρVmax (πARe ሻ
+
+     Note: Vmax= aMmaxwhere a is the speed of sound at the cruise altitude
+
+34 CM A5                      13 August 2024
+
+=== PAGE 35 | math ===
+                    Thrust Loading (T/W) as a function of
+                           Wing Loading (W/S) (contd.)
+                           (for turbofan or turbojet aircraft)
+  Range
+                  T           W      2( Τ ρCLcr ൯
+                         ≥                     lnWinitial
+                 Wrange       S      tsfc∙R        Wfinal
+
+      tsfc, R, ρ, and CLcr: Use estimates from Initial Take-off Weight Estimation
+      Note that Wfinal        Wfuel
+                Winitial= 1 −
+                             Winitial
+      • Use fuel fraction estimate from Initial Take-off Weight Estimation
+      • As a first approximation, fuel fraction, Wfuel/Winitial, may be considered to
+         be independent of the aircraft weight assuming the fuel consumption to
+         be proportional to the aircraft weight; see Ref. AVD 2 (Raymer)
+
+     CAUTION: Beware that varying (W/S) while keeping CLcrfixed implies
+     varying cruise velocity!
+
+35 CM A5                           13 August 2024
+
+=== PAGE 36 | math ===
+                  Thrust Loading (T/W) as a function of
+                            Wing Loading (W/S)
+                       (for turbofan or turbojet aircraft)
+  Landing
+
+                 W      μρSLgσCLmaxL           hobstacle
+                     =                  sL−
+                 S L         2. 645          tanθapproach
+
+          Civil aircraft: θapproach = 3o (4.5o for General Aviation aircraft)
+
+          Civil aircraft:  WL = 0.85 WTO
+          Military aircraft: WL = WTO – 0.5 Wfuel
+
+                Evaluated at V = 1.5 (Vstall)landing
+
+        Remember to convert (T/W)range and (W/S)L to
+                       takeoff conditions
+
+36 CM A5                      13 August 2024
+
+=== PAGE 37 | img ===
+                            Constraint Plot Example
+
+   Source: http://john-golan.blogspot.com/2015/07/aircraft-performance-part-1-design.html
+
+37  CM A5                               13 August 2024
+
+=== PAGE 38 | img ===
+                           Constraint Plot: F/A-36
+                              Student Design Project
+
+    Source: 2013-14 NAVAIR Carrier-based Tactical Fighter, VT Team, Lead: Williams
+
+38 CM A5                            13 August 2024
+
+=== PAGE 39 ===
+                    Power Loading (W/P or P/W) as
+                   a function of Wing Loading (W/S)
+                       (for propeller-driven aircraft)
+
+ • Use of Power Loading, W/P or P/W, instead of T/W, is preferred for
+   propeller aircraft because piston or turboprop engines are rated
+   in terms of shaft horsepower (SHP) or brake horsepower (BHP).
+
+ • Note that thrust, T, in lbf and power, P, in BHP are related as
+                      P = T x V/ (p x 550)
+   where speed, V, is in ft/s and p is propeller efficiency.
+
+ • This relationship can be used to convert T/W to P/W
+
+ • More details can be found in
+
+    o Section 3.2, Ref. AVD 4 (Gudmundsson)
+    o Section 4.3, Ref. AVD 5 (Sadraey)
+
+39 CM A5                       13 August 2024
+
+=== PAGE 40 | img ===
+                        Constraint Plot for Propeller Aircraft
+
+                                              An Example
+
+Power
+Loading,
+W/P,
+lbf/HP
+
+                                    Wing Loading, W/S, lbf/ft2
+                                           13 August 2024          Source: Fig. 7.1, Ref. AVD 10 (Loftin)
+40  CM A5
+
+=== PAGE 41 | img ===
+                                      Constraint Plot:
+
+                          Propeller-Driven Aircraft Example
+
+   Power
+   Loading,
+   W/P,
+   lbf/HP
+
+                                     Wing Loading, W/S, lbf/ft2
+                                           13 August 2024                   Source: Internet
+41  CM A5
+
+=== PAGE 42 | lowtext ===
+                                  Epilogue
+
+42  CM A5                                 13 August 2024
+
+=== PAGE 43 ===
+                  Where we are, and where we go next
+
+ • Having completed Initial Sizing, we now know
+    – What the payload or fixed weight is (from customer requirements)
+    – How heavy the airplane is (TOGW as the sum of empty weight, fuel
+       weight, and fixed weight)
+    – How big the wing is (wing reference area, S)
+    – How many, and how big, the engines are (based on thrust or power
+       value)
+    – How many phases the mission has (and the corresponding assumed
+       values of L/D, speeds, sfc, etc.)
+
+                     Each Team’s Challenge
+
+  “INTEGRATE all...geometrical and dimensional requirements,
+    equipment, structural components...into a vehicle that is
+    BALANCED with respect to flight in all phases of its flight
+     envelope and ground operations...Satisfy the DESIRED
+  requirements with the lightest weight (or least cost) vehicle.”
+
+                                             -- Nathan Kirschbaum
+43 CM A5                       13 August 2024
+
+=== PAGE 44 ===
+                                    Recommended Readings
+
+ Ref. No.     Chapter        Author(s)                                     Title
+ AVD 1     Chapters 6,   Nicolai, L.M. and  Fundamentals of Aircraft and Airship Design , Volume I—Aircraft Design ,
+           10, 18        Carichner, G.E.    AIAA Education Series, AIAA, Reston, VA, 2010.
+
+ AVD 2     Chapter 5     Raymer, D.P.       Aircraft Design : A Conceptual Approach ,
+                                            AIAA Education Series, AIAA, Reston, VA, 2012.
+
+ AVD 4     Chapter 3.2   Gudmundsson, S.    General Aviation Aircraft Design: Applied Methods and Procedures ,
+                                            1st Ed., Butterworth-Heinemann, September 2013.
+
+ AVD 5     Chapter 4.3   Sadrey, M.H.       Aircraft Design: A Systems Engineering Approach ,
+                                            John Wiley & Sons, Inc., 2013.
+
+NOTE: See Appendix in the Overview CM
+
+44   CM A5                                        13 August 2024
+
+=== PAGE 45 | lowtext ===
+                                 Appendix
+
+45  CM A5                                 13 August 2024
+
+=== PAGE 46 | img ===
+                       Approximate Equation of Takeoff Distance
+                               My Correspondence with Lee Nicolai
+Nov 29, 2020 (PR: I have a problem)
+“In attempting to reconcile the first term of Eq. (6.3) on page 158 with Eq. (10.4b) on
+page 265, I seem to get the multiplier to be 18.8 instead of 20.9. So my multiplier is off
+by about 10%. I wonder what I am missing--probably making an incorrect assumption
+somewhere? Any insight you can provide will be much appreciated.”
+An approximate expression of takeoff
+ distance (valid only for FPS system)
+
+ A more accurate, detailed and general
+    expression for ground distance
+
+ Nov 30, 2020 (LMN: You’re kidding me; you want me to remember details?)
+ “Where did the factor 20.9 come from? You are asking me to remember back 50 years
+ when I wrote the first design text in 1970. The equation with the 20.9 was developed
+ along with class notes for the design class at the USAF Academy and I do not remember
+ the details. The 20.9 has served me well as you are the first to ask where did it come from.
+ I suspect it came from some assumption that I made about the transition distance since it
+ is neither ground distance or air/climb out distance. Sorry that I can't be of more help.”
+  Me: Hmm...I am the first one to ask. Everyone else must have figured it out!
+46 46  CM A5                           13 August 2024
+
+=== PAGE 47 | img ===
+                      Approximate Equation of Takeoff Distance
+                           My Correspondence with Lee Nicolai (contd.)
+
+ Dec 4, 2020 (PR: Bingo!)
+ “I think I got it! Will you mind taking a quick look at the equations and approximations
+ in the one-page attachment, and let me know what you think?”
+      If we assume the retarding force term {(D/W) + μ(1 - L/W)} to be 0.1 (T/W),
+             then Eq. (10.4b) can be reduced to the 1st term of Eq. (6.3)
+
+                                                If we assume that VTO = 1.2 VS,
+                                               then Eq. (10.5) can be reduced to
+                                                   the 2nd term of Eq. (6.3)
+
+       We can now derive an updated expression that is not restricted to FPS units!
+Dec 6, 2020 (LMN: humorous, kind and generous response)
+ “I had it all the time. Just seeing if you could solve the mystery ............not
+ really, you are the better man. See if your students could get it.”
+PR: You’ve got to be kidding me!
+47 47 CM A5                          13 August 2024

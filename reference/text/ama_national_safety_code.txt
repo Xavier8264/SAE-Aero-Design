@@ -1,0 +1,44 @@
+# ID: ama_national_safety_code
+# SOURCE: https://www.modelaircraft.org/system/files/documents/105.pdf
+# ORIGINAL: reference/raw/ama_national_safety_code.pdf
+# CONVERTED: 2026-09-19 21:45 UTC-0500 | type pdf | 1 pages | ~693 tokens
+# NOTE: AMA National Model Aircraft Safety Code (doc 105). Required safety reference.
+
+=== PAGE 1 ===
+                              Academy of Model Aeronautics
+                          National Model Aircraft Safety Code
+                                           Effective January 1, 2018
+      A model aircraft is a non-human-carrying device capable of sustained flight within visual
+      line of sight of the pilot or spotter(s). It may not exceed limitations of this code and is
+      intended exclusively for sport, recreation, education and/or competition. All model flights
+      must be conducted in accordance with this safety code and related AMA guidelines, any
+      additional rules specific to the flying site, as well as all applicable laws and regulations.
+
+      As an AMA member I agree:
+      •     I will not fly a model aircraft in a careless or reckless manner.
+      •      I will not interfere with and will yield the right of way to all human-carrying aircraft using AMA’s See and
+            Avoid Guidance and a spotter when appropriate.
+      •     I will not operate any model aircraft while I am under the influence of alcohol or any drug that could
+            adversely affect my ability to safely control the model.
+      •     I will avoid flying directly over unprotected people, moving vehicles, and occupied structures.
+      •     I will fly Free Flight (FF) and Control Line (CL) models in compliance with AMA’s safety programming.
+      •     I will maintain visual contact of an RC model aircraft without enhancement other than corrective lenses
+            prescribed to me. When using an advanced flight system, such as an autopilot, or flying First-Person View
+            (FPV), I will comply with AMA’s Advanced Flight System programming.
+      •     I will only fly models weighing more than 55 pounds, including fuel, if certified through AMA’s Large
+            Model Airplane Program.
+      •     I will only fly a turbine-powered model aircraft in compliance with AMA’s Gas Turbine Program.
+      •     I will not fly a powered model outdoors closer than 25 feet to any individual, except for myself or my
+            helper(s) located at the flightline, unless I am taking off and landing, or as otherwise provided in AMA’s
+            Competition Regulation.
+      •     I will use an established safety line to separate all model aircraft operations from spectators and
+            bystanders.
+
+                             For a complete copy of AMA’s Safety Handbook please visit:
+                                          modelaircraft.org/files/100.pdf
+
+Document Academy of Model     Academy of Model Aeronautics 5161 E. Memorial Dr. Muncie IN 47302
+Aeronautics National Model    (765) 287-1256 | membership@modelaircraft.org | modelaircraft.org  Page 1 of 1
+Aircraft Safety Code
+Copyright © 1940
+Updated 01/01/2018

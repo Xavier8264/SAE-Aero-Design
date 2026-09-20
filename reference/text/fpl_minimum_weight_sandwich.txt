@@ -1,0 +1,482 @@
+# ID: fpl_minimum_weight_sandwich
+# SOURCE: https://www.fpl.fs.usda.gov/documnts/fplrn/fplrn086_rev_a.pdf
+# ORIGINAL: reference/raw/fpl_minimum_weight_sandwich.pdf
+# CONVERTED: 2026-09-19 21:44 UTC-0500 | type pdf | 17 pages | ~4932 tokens
+# NOTE: USDA FPL RN-086 minimum weight structural sandwich design. Free substitute for the canceled MIL-HDBK-23.
+# FLAG img: pages 1,4-6,8-17
+
+=== PAGE 1 | p.FPL-84 | img ===
+U. S. DEPARTMENT OF AGRICULTURE • FOREST SERVICE• FOREST PRODUCTS LABORATORY • MADlSON, WIS
+
+            U. S. FOREST SERVICE
+                    RESEARCH NOTE
+
+                                 FPL-086
+
+          REVISED OCTOBER 1965
+
+        MINIMUM WEIGHT
+
+       STRUCTURAL SANDWICH
+
+       This Report is One of a Series
+        Issued in Cooperation with the
+       MIL-HDBK-23      WORKING     GROUP    ON    COMPOSITE
+        CONSTRUCTION     FOR     FLIGHT   VEHICLES
+        of the Departments of the
+       AIR FORCE, NAVY, AND COMMERCE
+
+=== PAGE 2 | p.FPL-85 ===
+                       Abstract
+
+  This note presents theoretical analyses for determi­
+nation of dimensions of structural sandwich of mini­
+mum weight that will have certain stiffness and load-
+carrying capabilities. Included is a brief discussion of
+the resultant minimum weight configurations.
+
+=== PAGE 3 | p.FPL-86 ===
+                                                                       1
+                  MINIMUM WEIGHT STRUCTURAL SANDWICH
+
+                                            Bt
+
+                           EDWARD W. KUENZI, Engineer
+                                                    2
+                   Forest   Products    Laboratory,    Forest   Service
+                           U.S. Department of Agriculture
+
+                                      Introduction
+
+  The concept of sandwich construction combining thin, strong facings on light­
+weight, thick cores immediately suggests possibilities of deriving constructions
+so proportioned that minimum weight for a given stiffness or loading capability
+is  achieved. It is important to realize that the minimum weight construction
+derived   may not be practical because of unusually thin facings which are not
+available, or some other detail such as an unusually lightweight core of great
+thickness.   Since it is theoretically possible to arrive at impractical designs,
+various   minimum weight analyses should be used with caution for comparing
+sandwich with other constructions unless the sandwich proportions are examined,
+Analyses of the efficiency of panels of various sandwich constructions of certain
+materials have been reported.3,4 This note presents some general analyses of
+minimum weight sandwich considering stiffness, edge load capacity, and bending
+moment capacity.
+
+     1 Revision of a Note of the same title and designation, published In January 1965.
+       Research was performed for the Military Handbook 23 Working Group by the
+       Forest Products Laboratory under U.S. Navy Bureau of Naval Weapons Order
+        IPR 19-64-8041 WEPS and U.S. Air Force Contract No. 33(657)63-358. Results
+       are preliminary and may be revised as additional data  become   available.
+    2 Maintained at Madison, Wis., In cooperation with the University of Wisconsin.
+    3Johnson, Aldie E., Jr., and Semonian, Joseph W.   A study of the efficiency of
+       high-strength,  steel,  cellular-core  sandwich  plates  In  compression.  National
+       Advisory Committee for Aeronautics Tech. Note 3751, Sept. 1956.
+    4 Kaechele, L. E.  Minimum-weight design of sandwich panels.  Rand Corp.
+       Rpt. RM-1895, March 1957.
+
+FPL-086
+
+=== PAGE 4 | p.FPL-86 | img ===
+                                Bending Stiffness
+
+  Since the primary purpose of structural sandwich is to provide stiffness
+(hence low deflection under transverse load and high resistance to buckling
+under edgewise load), the analysis of minimum weight sandwich to provide a
+specified bending stiffness is considered first.
+
+  Sandwich bending stiffness per unit width can be derived by elementary
+mechanics and is given by the following formula for sandwich with thin facings
+and a core of negligible bending stiffness:
+
+                                                                               (1)
+
+where D is bending stiffness; subscripts 1 and 2 denote facings 1 and 2; E is
+modulus of elasticity; λ is one minus the product of two Poisson’s ratios; t is
+thickness; and h is distance between facing centroids.
+
+  After setting
+
+                                                                               (2)
+
+formula (1) can be rewritten as
+
+                                                                               (3)
+
+  The weight of a sandwich with thin facings is given by the formula
+
+                                                                               (4)
+
+FPL-086                               -2-
+
+=== PAGE 5 | p.FPL-86 | img ===
+where w is density (p.c.i.); WB is total weight of bond (adhesive or braze)
+between facings and core (p.s.i.); and W is sandwich weight (p.s.i.). If we assume
+that bond weight is the same for all sandwich of the type considered, then
+
+                                                                                  (5)
+
+  Now from expression (2)
+
+and substitution of this into (5) results in
+
+                                                                                  (6)
+
+From formula (3)                          and substitution of this into (6) results in
+
+                                                                                  (7)
+
+Expression (7) is to be minimized with respect to h and β. Minimizing (7) with
+respect to h results in
+
+                                                                                   (8)
+
+  The   configuration   of this minimum weight sandwich can be examined by
+substituting (3) for D in formula (8) and obtaining finally
+
+                                                                                   (9)
+
+FPL-086                                   -3-
+
+=== PAGE 6 | p.FPL-86 | img ===
+Rewriting (9) and substituting (2) for β finally yields
+
+                                                                               (10)
+
+but the core weight is W = w h and the facing weight is WF = w1 t1 + w2t2 and
+                          c    c
+substitution of these into (10) produces W = 2WF.       Then the sandwich weight
+                                            c
+(W - WB) = W + WF = 3WF and therefore
+              c
+
+                                                                               (11)
+
+and thus for minimum weight sandwich of a specified stiffness the core weight
+must be two-thirds the weight of the sandwich minus bond weight.
+
+  Formula (8) can be used to find h and formula (9) to find t1 . There     remains
+the determination of t2 from (2) after β is found. The value of β can be found
+from (7) after minimizing with respect to β to finally give
+
+                                                                               (12)
+
+and substituting (12) into (2) results in
+
+For many combinations of facing materials and cores the value of b can be
+assumed to be unity, thus resulting in
+
+  The foregoing has not considered high stresses that might have to be carried
+by very thin facings. Because of stress limitations, availability of facings in
+proper thicknesses, and availability of cores of low density, it will often be found
+
+FPL-086                                  -4-
+
+=== PAGE 7 | p.FPL-86 ===
+that the minimum weight sandwich cannot be realized. It is also important to
+review other discussions of minimum weight sandwich to be sure that inherently
+impossible combinations of unusually thin facings on lightweight cores are not
+being examined.
+
+                            Bending Moment Capacity
+
+  The bending moment resistance of a sandwich with thin, equal facings on a
+core of negligible bending stiffness is given by the formula
+
+                                      M = Fth                                   (14)
+
+where   M is bending moment per unit width; F is design facing stress, t is
+facing thickness; and h is distance between facing centroids. Following the same
+procedure as for bending stiffness, formula (14) is solved for t and substitution
+of this in the weight formula (W - W B) = 2wt + w h results in
+                                                   c
+
+                                                                                (15)
+
+Minimizing (15) with respect to h results in
+
+                                                                                (16)
+
+The configuration of this minimum weight sandwich can be examined by sub­
+stituting (14) for M in formula (16) and obtaining, finally
+
+                                                                                (17)
+
+FPL-086                                  -5-
+
+=== PAGE 8 | p.FPL-86 | img ===
+and further substitution of (17) into the weight formula leads to
+
+                                                                                 (18)
+
+Thus the core weight for a minimum weight sandwich of specified moment cap­
+acity must be one-half the weight of the sandwich minus bond weight.
+
+  The    moment capacity was based on a facing stress, F, which may be an
+allowable stress or failing stress, etc. If the possibility of local wrinkling or
+dimpling of sandwich facings exists, then moment capacity should be based on
+that stress at which wrinkling or dimpling of facings occurs.
+
+  The wrinkling stress of sandwich facings is dependent upon facing and core
+properties.  Since core properties can be related to core density, wrinkling
+stress can also be related to density. The wrinkling stress of sandwich facings
+is often given by the formula
+
+                                                                                 (19)
+
+where F    is wrinkling stress of facings; k is a theoretical or empirical buckling
+        W
+coefficient; E is effective elastic modulus of facing; E          is core modulus of
+                                                                c
+elasticity (normal to facings); G     is core shear modulus. If it is assumed that
+                                    c
+core elastic properties are related to facing properties in proportion to densities
+as follows
+
+then formula (19) can be written as
+
+                                                                                 (20)
+
+FPL-086                                   -6­
+
+=== PAGE 9 | p.FPL-86 | img ===
+where
+Since F    (formula 20)     is not dependent upon t or h, the dimensions of the
+minimum weight sandwich for face wrinkling can be determined directly from
+the previous analysis.
+
+  Substituting (20) into (16) yields
+
+                                                                                  (21)
+
+which is dependent upon relative density of core and facing materials, but as
+before
+
+which is the same as (17). Therefore, the minimum weight sandwich for which
+bending moment resistance based on wrinkling of the compression facings must
+have a core weight of one-half the sandwich weight minus bond weight.
+
+  The dimpling stress of sandwich facings on honeycomb or corrugated core is
+dependent upon facing properties and unsupported width of facing. The dimpling
+stress is given by the formula
+
+                                                                                  (22)
+
+where FD is dimpling stress of facings; k is a theoretical or empirical buckling
+coefficient; E is effective elastic modulus of facing; t is facing thickness; and
+s is honeycomb core cell size or spacing between points of corrugated core
+supports for the facings. If it is assumed that the core density is related to the
+facing density and is inversely proportional to s, then
+
+FPL-086                                   -7-
+
+=== PAGE 10 | p.FPL-86 | img ===
+and (22) becomes
+
+                                                                                  (23)
+
+where
+
+Proceeding as before and solving formula (14) for h rather than t, thus avoiding
+some cube roots after substituting (23) for F, results in
+
+                                                                                  (24)
+
+Substituting (24) into the weight equation (W - WB) = 2wt + w h results in
+                                                                       c
+
+                                                                                 (25)
+
+and minimizing this expression with respect to t finally yields
+
+                                                                                 (26)
+
+From equations (24) and (26) it is found that
+
+                                                                                  (27)
+
+FPL-086                                   -8-
+
+=== PAGE 11 | p.FPL-86 | img ===
+ and substituting (27) into the weight equation finally results in the core weight
+
+                                                                                  (28)
+
+                       Buckling Under Compressive Edge Load
+
+   The edge load capacity of a sandwich panel, precluding local facing failures
+ by wrinkling, dimpling, or facing compression failure, is dependent on the buckling
+ of the entire sandwich. This buckling is determined not only by the sandwich
+ bending stiffness, D, but also by the shear stiffness.
+
+   The buckling load, per unit width, of a simply supported flat sandwich panel
+with isotropic facings and core, and having a length not less than its loaded
+width is given by the formula 5
+
+                                                                                  (19)
+
+where
+
+5 Ericksen, Wilhelm S., and March, H. W.  Compressive buckling of sandwich
+  panels having dissimllar facings of unequal thickness.  Forest Prod. Lab.
+  Rept. 1583-B. Rev. 1958.
+
+ FPL-086                                   -9-
+
+=== PAGE 12 | p.FPL-86 | img ===
+and N is buckling load per unit panel width; b is panel width (loaded edge);
+E is facing elastic modulus; t is facing thickness; h is distance between facing
+centroids; G    is core shear modulus; and μ is facing Poisson’s ratio. After
+             c
+substituting values for D, K, and V in equation (29) and defining
+
+equation (29) becomes
+
+                                                                               (30)
+
+The sandwich weight equation is
+
+                                                                                (31)
+
+Elimination of one of the variables, t or h, by solving (30) and substituting into
+(31) is not as easy as in previous examples. However the minimum of (31) sub­
+jected the constraint imposed by (30) can be found by a method used by Lagrange
+by solving the following:
+
+                                                                               (32)
+
+FPL-086                                 -10-
+
+=== PAGE 13 | p.FPL-86 | img ===
+where L is a Lagrangian multiplier. After performing the partial differentiation
+indicated by (32) and reducing, the two expressions of (32) become:
+
+                                                                                (33)
+
+And after noting that          expressions (33) can be written as:
+
+                                                                                (34)
+
+Adding the expressions of (34) finally results in
+
+                                                                                (35)
+
+Solving (35) for t and substituting into (30) and solving for h gives
+
+                                                                                (36)
+
+Equation (36) can be used to find h by first assuming V = 0 to obtain a minimum
+h and then using a finite V after assuming a core shear modulus, G , and
+determining t from (35).                                                     c
+
+FPL-086                                  -11-
+
+=== PAGE 14 | p.FPL-86 | img ===
+  From the weight equation
+
+                                                                               (37)
+
+and substitution of (35) into (37) results finally in
+
+                                                                               (38)
+
+or
+
+and finally if W = w h
+                c   c
+
+                                                                               (39)
+
+Thus if the core shear modulus is large and V = 0, the core weight is two-thirds
+of the sandwich weight minus bond weight. This also was the result obtained when
+prescribed bending stiffness was analyzed and was to be expected since for V = 0
+buckling depends on bending stiffness (see (29)). The effect of a V = 0 reduces
+the core weight relative to the sandwich weight.
+
+                     Buckling of Sandwich Cylinders Under
+
+                            Axial Compressive Load
+
+  The axial compressive load capacity of a circular cylinder with walls of sand­
+wich construction, precluding local facing failures by wrinkling, dimpling, or
+facing compression failure, is dependent on the buckling of the sandwich walls.
+
+FPL-086                                 -12-
+
+=== PAGE 15 | p.FPL-86 | img ===
+  The buckling load, per unit circumference, of a sandwich walled cylinder in
+axial compression is given by the formula6,7
+
+                                                                                    (40)
+
+                                        1                           Et
+where K = k1 (1 - k 2V) for V <           (approximately) and V =       (approximately):
+                                        2                           rG c
+N is buckling load per unit cylinder circumference; E is elastic modulus of
+facing; t is facing thickness: h is distance between facing centroids: r is mean
+radius  of cylinder;    k    is a coefficient dependent upon whether buckling is
+                          1
+governed by small or large deflection theory;6,7 k          is a coefficient depending
+                                                          2
+upon whether isotropic or orthotropic core is used and also upon small or large
+deflection theory; and G is core shear modulus associated with shear distor­
+                           c
+tion axially.
+
+  Substituting values of K and V into (40) yields
+
+                                                                                    (41)
+
+and solving for h results in
+
+                                                                                   (42)
+
+6March, H. W., and Kuenzi, Edward W.  Buckling of cylinders of sandwich
+   construction in axial compression.  Forest Prod. Lab. Rpt. 1830.  Rev.
+   Dec. 1957.
+7 Zahn, John J., and Kuenzi ,
+                           Edward W.     Classical buckling of cylinders of
+   sandwich  construction  in axial  compression--orthotroplc cores.  U.S.  Forest
+   Serv. Res. Note FPL-018. Nov. 1963.   Forest Prod. Lab., Madison, Wis.
+
+FPL-086                                  -13-
+
+=== PAGE 16 | p.FPL-87 | img ===
+Substitution of (42) into the sandwich weight equation (W - WB) = 2wt + w h
+                                                                                 c
+yields
+
+                                                                              (43)
+
+and minimizing (43) with respect to t yields
+
+                                                                              (44)
+
+From (42) and (44) it can be shown that
+
+                                                                              (45)
+
+Rewriting the weight equation to give
+
+                                                                              (46)
+
+and substituting (45) into (46) finally results in
+
+                                                                              (47)
+
+Thus, the core weight, W , is determined to be about one-half the sandwich
+                             c
+weight for sandwich proportioned to give minimum weight for a given cylinder
+buckling load, This was to be expected because for V = 0 the buckling load is
+dependent upon the product th as when prescribed moment resistance was
+analyzed for which
+
+FPL-086                                -14-                                 1.5-15
+
+=== PAGE 17 | p.FPL-88 | img ===
+The Forest Service of the U. S. Deportment of Agriculture is dedicated to
+the  principle  of multiple   use   management      of the   Notion's   forest resources
+for  sustained   yields  of   wood,   water,   forage,  wildlife,  and   recreation.
+Through   forestry  research,   cooperation   with   the  States   and    private  forest
+owners,    and management      of   the  Notional   Forests   and    National  Gross-
+lands,  it   strives--as  directed  by   Congress--to    provide   increasingly  greater
+service  to  a   growing   Notion.

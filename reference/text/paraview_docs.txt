@@ -1,0 +1,122 @@
+# ID: paraview_docs
+# SOURCE: https://docs.paraview.org/en/latest/
+# ORIGINAL: reference/raw/paraview_docs.html
+# CONVERTED: 2026-09-19 21:47 UTC-0500 | type html | 1 pages | ~542 tokens
+# NOTE: Landing/index page only (~540 tokens), not the guide itself. The full ParaView PDF is 106 MB (too big to archive); browse docs.paraview.org for detail.
+
+=== PAGE 1 ===
+# Welcome to ParaView Documentation ! — ParaView Documentation 6.1.0 documentation
+
+# Welcome to ParaView Documentation ! 
+
+This guide is split into several volumes:
+
+- User’s Guide’s Section 1 to Section 9 cover
+various aspects of data analysis and visualization with ParaView.
+
+- Reference Manual’s Section 1 to Section 14 provide
+details on various components in the UI and the scripting API.
+
+- Catalyst: Instructions on how to use ParaView’s implementation of the Catalyst API.
+
+- Tutorials are split into Self-directed Tutorial and Classroom Tutorials:
+
+- Self-directed Tutorial’s Section 1 to
+Section 5 provide an introduction to the ParaView software and its history,
+and exercises on how to use ParaView that cover basic usage, batch Python scripting and visualizing large
+models.
+
+- Classroom Tutorials’s Section 1 to Section 18 provide
+beginning, advanced, Python and batch, and targeted tutorial lessons on how to use ParaView that are presented
+as a 3-hour class internally within Sandia National Laboratories.
+
+ParaView User's Guide
+
+- ParaView User’s Guide
+
+- 1. Introduction to ParaView
+
+- 2. Command Line Arguments
+
+- 3. Loading Data
+
+- 4. Understanding Data
+
+- 5. Displaying data
+
+- 6. Filtering Data
+
+- 7. Selecting Data
+
+- 8. Animation
+
+- 9. Saving Results
+
+ParaView Reference Manual
+
+- ParaView Reference Manual
+
+- 1. Properties Panel
+
+- 2. Object Shading Properties
+
+- 3. Light Inspector
+
+- 4. Color maps and transfer functions
+
+- 5. Comparative visualization
+
+- 6. Programmable Filter
+
+- 7. Using NumPy for processing data
+
+- 8. Remote and parallel visualization
+
+- 9. Restarted Simulation Readers
+
+- 10. Memory Inspector
+
+- 11. Multiblock Inspector
+
+- 12. Annotations
+
+- 13. Axes Grid
+
+- 14. Customizing ParaView
+
+- 15. Advanced rendering
+
+Catalyst
+
+- Catalyst
+
+- Introduction
+
+- Getting Started
+
+- Background
+
+- ParaView-Catalyst Blueprint
+
+- Fides Reader
+
+- Examples for Simulation Developers
+
+- Debugging Tips
+
+ParaView Tutorials
+
+- ParaView Tutorials
+
+- Self-directed Tutorial
+
+- Classroom Tutorials
+
+Appendix
+
+- References
+
+## Documentation Source 
+
+This documentation is generated from source files in the
+ParaView Documentation project.

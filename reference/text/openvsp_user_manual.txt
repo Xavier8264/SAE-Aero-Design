@@ -1,0 +1,869 @@
+# ID: openvsp_user_manual
+# SOURCE: https://openvsp.org/wiki/lib/exe/fetch.php?media=vsp_aircraft_analysis_user_manual.pdf
+# ORIGINAL: reference/raw/openvsp_user_manual.pdf
+# CONVERTED: 2026-09-19 21:45 UTC-0500 | type pdf | 58 pages | ~9255 tokens
+# NOTE: Official OpenVSP (NASA-derived) parametric geometry tool user manual.
+# FLAG img: pages 1,4,6-10,13,15-17,26-28,32,34,36,38-43,45-51,54,57
+# FLAG garbled: pages 28,32,34,36
+
+=== PAGE 1 | img ===
+     VSP Aircraft Analysis User Manual
+
+        Modeling and Analyzing Aircraft Designs Using Parametric
+
+                 Geometry Tools and Vortex Lattice Software
+
+                    Brandon Litherland                        Kinsey Rieth
+                   NASA Pathways IEP / ISGC                 NASA LARSS / VSGC
+             University of Illinois at Urbana-Champaign  Georgia Institute of Technology
+                     Aerospace Engineering                 Mechanical Engineering
+
+                                            Mentor:
+                                    Mark D. Moore (LARC-E403)
+                                 AST, AERO VEH DES & MISS ANALYSIS
+
+                                                                              July 24th, 2014 1
+National Aeronautics and Space Administration
+
+=== PAGE 2 ===
+ This document will serve as a guide in the use of
+ software designed for developing a drag profile for
+ aircraft in Vehicle Sketch Pad.
+
+ For more detailed information on the use of the
+ programs, please visit the website of each to find full
+ user manuals and descriptions.
+
+National Aeronautics and Space Administration  VSP Aircraft Analysis User Manual 2
+
+=== PAGE 3 ===
+ • Modeling with OpenVSP
+ • XFOIL
+ • VSPAERO
+ • Identifying Software Issues
+
+National Aeronautics and Space Administration           VSP Aircraft Analysis User Manual 3
+
+=== PAGE 4 | img ===
+National Aeronautics and Space Administration                                              VSP Aircraft Analysis User Manual  4
+
+=== PAGE 5 ===
+ • OpenVSP (Vehicle Sketch Pad) is a parametric
+   aircraft geometry tool which allows the creation of a
+   3D model of an aircraft defined by common
+   engineering parameters. The model can then be
+   processed for engineering analysis.
+ • Since the early 1990’s, OpenVSP predecessors have
+   been developed for NASA by J.R. Gloudemans and
+   others. Open VSP was released as an open source
+   project under the NASA Open Source Agreement
+   (NOSA) version 1.3 on January 10, 2012.
+
+National Aeronautics and Space Administration  VSP Aircraft Analysis User Manual 5
+
+=== PAGE 6 | img ===
+ • The two basic shapes that determine almost all of the
+   aircraft’s components are FUSE2 and MS_WING. Other
+   components may be used for more complex aircraft
+   geometries but may not be used for VSPAero analysis.
+
+          FUSE2                 MS_WING
+
+National Aeronautics and Space Administration  VSP Aircraft Analysis User Manual 6
+
+=== PAGE 7 | img ===
+ • By describing the cross-sections throughout each
+   body, the user is able to shape each component into
+   a representative model.
+
+National Aeronautics and Space Administration  VSP Aircraft Analysis User Manual 7
+
+=== PAGE 8 | img ===
+ • By describing the cross-sections throughout each
+   body, the user is able to shape each component into
+   a representative model.
+
+National Aeronautics and Space Administration  VSP Aircraft Analysis User Manual 8
+
+=== PAGE 9 | img ===
+ • In general, if a user can find a scaled diagram of the
+   model from different angles, then the model can be
+   matched to the aircraft.
+
+National Aeronautics and Space Administration   VSP Aircraft Analysis User Manual 9
+
+=== PAGE 10 | img ===
+     Piper Seminole                         Vought V-173
+
+                                                                                   Tecnam P2006T
+
+National Aeronautics and Space Administration                                      VSP Aircraft Analysis User Manual 10
+
+=== PAGE 11 ===
+ • Avoid “Clay” modeling practices
+     – Don’t just push/pull until the model matches the diagram
+     – Location and dimensions will become gibberish
+     – Understand and apply the dimensions correctly
+ • If modeling for analysis, do NOT leave open components
+     – The geometry analysis tools will crash the program
+     – Start and finish Fuse2 objects with points
+ • Make backup files!
+     – Always have at least one model that serves as the unaltered base for
+       changes. This will save you hours of work correcting a simple mistake.
+
+National Aeronautics and Space Administration       VSP Aircraft Analysis User Manual 11
+
+=== PAGE 12 ===
+            For information on additional modeling techniques and
+                       for a full user manual please go to
+                              http://openvsp.org/
+
+National Aeronautics and Space Administration            VSP Aircraft Analysis User Manual 12
+
+=== PAGE 13 | img ===
+ •   XFOIL is an interactive program for the design and analysis of
+     subsonic isolated airfoils.
+     It consists of a collection of menu-driven routines which
+     perform various useful functions such as:
+      – Viscous (or inviscid) analysis of an existing airfoil, allowing
+           • forced or free transition
+           • transitional separation bubbles
+           • limited trailing edge separation
+           • lift and drag predictions just beyond CLmax
+           • Karman-Tsien compressibility correction
+           • fixed or varying Reynolds and/or Mach numbers
+      – Airfoil design and redesign by interactive modification of surface
+         speed distributions, in two methods:
+           • Full-Inverse method, based on a complex-mapping formulation
+           • Mixed-Inverse method, an extension of XFOIL's basic panel method
+
+        *Information from web.mit.edu XFOIL homepage
+
+National Aeronautics and Space Administration                    VSP Aircraft Analysis User Manual 13
+
+=== PAGE 14 ===
+ • XFOIL is primarily used to collect profile drag data
+    under various flight conditions.
+     – Max cruise, best endurance cruise, best climb and high lift
+       scenarios.
+ • Also used to determine a rough estimation of ideal
+    CLmax (VSPAERO has none).
+
+National Aeronautics and Space Administration     VSP Aircraft Analysis User Manual 14
+
+=== PAGE 15 | img ===
+                          Source NACA 65(2)-415 (42 nodes)
+
+                                                                           Refined NACA 65(2)-415 (140 nodes)
+
+          NACA 65(2)-415 w/ Flaps @ 40°
+
+National Aeronautics and Space Administration                                         VSP Aircraft Analysis User Manual 15
+
+=== PAGE 16 | img ===
+                         CLmax
+
+                        Results are loaded into the drag buildup worksheet
+
+National Aeronautics and Space Administration                                   VSP Aircraft Analysis User Manual 16
+
+=== PAGE 17 | img ===
+                                                                          Profile Drag Comparison
+
+                                                                           0.12
+
+                                                                            0.1
+
+                                                                           0.08
+                                                                                                                  Max Cruise
+                                                           Cdp             0.06                                   Best Endur
+
+                                                                                                                  Best Climb
+                                                                           0.04
+                                                                                                                  Short TO
+                                                                           0.02                                   Short Landing
+
+                                                                             0
+                                                             -20      -10      0        10      20       30
+                                                                                 Alpha
+
+                            Results are loaded into the drag buildup worksheet
+
+National Aeronautics and Space Administration                                                VSP Aircraft Analysis User Manual 17
+
+=== PAGE 18 ===
+  Using XFOIL to obtain Airfoil Polars
+
+  This is only a guide to obtain values for a specified airfoil and not a total user manual for
+  XFOIL. For complete instructions go to
+  http://web.mit.edu/drela/Public/web/xfoil/xfoil_doc.txt
+
+  RED = CMD command
+
+  Type ? at any command line to see a list of available commands and their descriptions.
+
+  1.     Open CMD.
+  2.     Change the directory to the folder location of xfoilp4.exe
+  3.     Execute XFOILP4
+       a)     You may also preload your .dat airfoil coordinates by adding the argument after the command. For
+              example: XFOILP4 NACA0015 or XFOILP4 NACA652415.DAT
+
+National Aeronautics and Space Administration                                    VSP Aircraft Analysis User Manual 18
+
+=== PAGE 19 ===
+  4.     The number of nodes should be at LEAST 100. You may get a warning that the number
+         of nodes is too small. This is a warning that the resolution of your coordinate file is too
+         low. This is fixed using the PANE or PPAR commands.
+        a)     PANE will set the number of panels to be sufficient for XFOIL. You may not see a change in the profile.
+        b)     PPAR will show the new paneling if you changed the number with PANE. If not, you may begin with
+               PPAR.
+              i.     Type N to change the number of nodes. Use the PANE number shown as a guide. More nodes
+                     have a higher resolution but run slower.
+              ii.    When finished, the profile should be smooth. Enter key until XFOIL is displayed.
+  5.     You may choose to save the new, smooth profile to the folder using the SAVE
+         command.
+  6.     Enter operating point mode by entering OPER.
+  7.     OPERi indicates that you are operating in inviscid mode. For the purposes of finding
+         reasonable data, you will generally want to operate in viscous mode. Enter Visc to
+         toggle modes. OPERv should be displayed.
+  8.     If you have not already done so, a Reynold’s number will be requested. Enter the value
+         at this line.
+  9.     Initially, the iteration number is very low. Change this to at least 200 using ITER.
+
+National Aeronautics and Space Administration                                    VSP Aircraft Analysis User Manual 19
+
+=== PAGE 20 ===
+   10.    You must now specify the operating conditions using commands.
+         a)     Change the Mach number with Mach. Similar to other commands this may be followed by an
+                argument if you like. Enter the Mach number.
+         b)     If only a single angle of attack value is needed, use Alfa. This will show the results in the display. If a
+                sequence of attack angle is needed, proceed to the next step.
+  11.    In order to write the polar to a file to read, you MUST designate that you want the data
+         points to be saved. This is done using the Pacc command.
+         a)     Specify the polar save file name and file extension.
+         b)     Specify the dump file name and file extension if needed. Otherwise, hit Enter to skip.
+         c)     OPERva should be displayed.
+  12.    Specify the attack angle range using Aseq. If you are performing a range of speeds,
+         proceed to step 14.
+         a)     Enter the minimum alpha.
+         b)     Enter the maximum alpha.
+         c)     Enter the angle step size.
+
+National Aeronautics and Space Administration                                            VSP Aircraft Analysis User Manual 20
+
+=== PAGE 21 ===
+  13.    The program should run through many iterations and display that the information was
+         saved to your polar file. The display should also reflect the new information and you
+         can see the distribution of CD there.
+  14.    If you are performing a range of speeds for cruise conditions:
+        a)     Enter the Reynolds number
+        b)     Enter the Mach number
+        c)     Enter the CL required for steady flight
+  15.    The program will run through several iterations. If the program returns a “not
+         converged” error, the speeds may be too slow for flight (i.e. stall). Slightly change the
+         CL to see if this is simply a case of computation error or if the wing is actually stalled
+         (stall will result in non-convergence repeatedly).
+  16.    The polar file is now ready for import or view.
+        a)     If using MS Excel, use File>Load>All Files>Polar File Name
+        b)     Click Finish to open the data as a spreadsheet.
+
+National Aeronautics and Space Administration                                    VSP Aircraft Analysis User Manual 21
+
+=== PAGE 22 ===
+ • Fast vortex lattice analysis tool for VSP degenerate
+   geometry files
+ • Contains integrated actuator disks that can be accurately
+   described for fast/easy aero-propulsive analysis
+ • Comes with Viewer app which displays wakes and Delta-
+   Cp (Pressure coefficient change) gradient
+ • Open source software developed by Dave Kinney at Ames
+ • Will be released with VSP 3.0 in August
+
+National Aeronautics and Space Administration  VSP Aircraft Analysis User Manual 22
+
+=== PAGE 23 ===
+ • Analyzes the DegenGeom output file from VSP
+ • Must define operating conditions from an input file
+ • May be used with or without actuator disks
+ • Drag output is from induced only
+ • Use of components in the DegenGeom build file that do not
+   affect lift will cause excessive operating times with no
+   valuable return
+
+National Aeronautics and Space Administration  VSP Aircraft Analysis User Manual 23
+
+=== PAGE 24 ===
+ •   You want to start with your high detail model from openVSP. This is going to be your baseline
+
+     for adjusting the components for analysis.
+
+ •   Note that you want to immediately save the model file under another name! Ensure that
+
+     you are working from this model by saving then re-opening the new saved working file. This
+
+     will give you a “clay” model that you can always toss if mistakes are made and revert back to
+
+     the original high detail model.
+
+National Aeronautics and Space Administration                      VSP Aircraft Analysis User Manual 24
+
+=== PAGE 25 ===
+ •   VSPAero will analyze each interpolated section of the model and present values that
+
+     represent the overall characteristics of the vehicle. While accurate, the time and processor
+
+     power required to perform this task is immense. At some degree of detail, usually very low
+
+     by your original model’s standards, the diminishing returns will be evident. For this reason,
+
+     you should reduce the detail of your model to something that VSPAero can handle
+
+     reasonably quickly with a high enough level of accuracy.
+
+ •   For example: If your tessellation on all of your components (adjusted under the “Gen” tab of
+
+     the component window) is set at 60+, your model will look smooth but will most likely crash
+
+     the geometry algorithms. Try setting the tessellation back to the original setting of 21.
+
+     Notice that the detail diminishes slightly but the overall shape is the same. If increased
+
+     accuracy is needed, the tessellation may be set higher, avoiding values greater than 61.
+
+National Aeronautics and Space Administration                       VSP Aircraft Analysis User Manual 25
+
+=== PAGE 26 | img ===
+ Setting Up the Model
+
+ •    A large number of interpolated cross sections will also adversely affect the software’s ability
+
+      to analyze the vehicle quickly. Reducing these numbers will cause the more complex
+
+      geometries to suffer slightly but the effect on the results in VSPAero will be negligible.
+
+ •    If you have more than 4 interpolated sections in the model between ANY small cross
+
+      sections, the time will increase significantly. Experience has shown that except for complex
+
+      wing geometries, having at most 3 interpolated sections is sufficient to obtain accurate
+
+      results without sacrificing time.
+
+                           F i g u r e 1 : H i g h v s . L o w I n t e r p o l a t e d C r o s s S e c t i o n s
+National Aeronautics and Space Administration                               VSP Aircraft Analysis User Manual 26
+
+=== PAGE 27 | img ===
+ Setting Up the Model
+
+ •    The method that VSPAERO uses to calculate the segment lift coefficient (Cl) will not recognize
+
+      that the wing is one solid piece. So to obtain accurate lift coefficients, you must make a small
+
+      section near the center of the wing (section ID zero) that has a very small span (~0.3 ft) and
+
+      at least one interpolated section. This will provide a “throw away” value in the LOD file that
+
+      VSPAERO will list as excessively low. This also increases the accuracy of the integrated value
+
+      of CL.
+
+                          F i g u r e 1 : H i g h v s . L o w I n t e r p o l a t e d C r o s s S e c t i o n s
+National Aeronautics and Space Administration                            VSP Aircraft Analysis User Manual 27
+
+=== PAGE 28 | garbled, img ===
+ Setting Up the Model
+
+                                     F i g u r e 2 : C o m p a r i s o n o f h i g h d e t a i l m o d e l t o l o w
+                                                            d e t a i l m o d e l .
+
+National Aeronautics and Space Administration                                                       VSP Aircraft Analysis User Manual 28
+
+=== PAGE 29 ===
+ Setting Up the Model
+
+ •   Keep in mind that VSPAero computes the values it outputs by analyzing a representative
+
+     section of the body. By reducing the number of sections you reduce the number of
+
+     computations. However, if there are sections in your model where two surfaces align
+
+     vertically (near perpendicular) or almost exactly overlap, the software will recognize this as
+
+     an error and freeze.
+
+ •   To avoid this problem ensure that any vertical components, such as the vertical stabilizer, are
+
+     slightly raised above the attached component. If the gap is sufficiently small, the software
+
+     will show values that treat it as if it were attached without the resulting freeze.
+
+ •   Similarly, avoid the overlay of several small components. When at all possible, use a single
+
+     component to represent a complex geometry to ensure that the object is “water tight”.
+
+National Aeronautics and Space Administration                       VSP Aircraft Analysis User Manual 29
+
+=== PAGE 30 ===
+ Setting Up the Model
+
+ •   Another very important consideration is that, to date, VSPAero will not recognize “open”
+
+     components such as ducts, engines, etc.
+
+ •   When using objects similar to these, it is important to simply model them as FUSE2
+
+     components for the outer shape and to make sure that the ends of the component come to a
+
+     point. If any component is left open ended, the model is not water tight and the computed
+
+     mesh will fail. This will cause significant errors in VSPAero.
+
+ •   Additionally, any component that is not modeled as a FUSE2, MS WING, or BLANK will most
+
+     likely not run in VSPAero due to how the component is written. Remember that openVSP is
+
+     for modeling complex geometries with simple components.
+
+National Aeronautics and Space Administration                      VSP Aircraft Analysis User Manual 30
+
+=== PAGE 31 ===
+ Building Files: CFD Mesh
+
+ •   When you believe that your model is ready to begin building files for analysis, there are several
+
+     steps that will increase the success of the software.
+
+      1. Under the “Geom” tab in the menu bar, click CFD Mesh. By default, “Rigorous 3D Growth
+          Limiting” is not selected. Click “Mesh and Export”.
+
+      2. The CFD mesh will run and the mouse cursor may show that it is busy and the window may say
+          “(Not Responding)”. This is normal. Wait for the mesh to build and export and when complete
+          your model will be shown in the newly built CFD mesh (lots of small triangles).
+
+      3. Note in the CFD Mesh window, the result should say “Is Water Tight” at the end of the process.
+
+          If this is not the case, then one or more of your components have a broken edge and must
+          either be corrected or removed to proceed. If this process is unsuccessful, you can also select
+          “Rigorous 3D Growth Limiting” to see if the process will work.
+
+National Aeronautics and Space Administration                          VSP Aircraft Analysis User Manual 31
+
+=== PAGE 32 | garbled, img ===
+ Building Files: CFD Mesh
+
+                                                  F i g u r e 3 : C F D m e s h v e r i f i c a t i o n
+
+National Aeronautics and Space Administration                                                          VSP Aircraft Analysis User Manual 32
+
+=== PAGE 33 ===
+ Building Files: Component Geometry
+
+       – 4. The next step is to build the component geometry file. Under the “Geom” tab, click
+
+          “Comp Geom (Union)”. You will also want to ensure that the “.tsv” button is active
+
+          (yellow) under the title “Parasite Drag Output”. This will create a drag build file in the
+
+          directory for later use.
+
+       – 5. Click “Execute”. Again, your model will be shown in the new mesh. This new
+
+          component may be cut/deleted. The values for your vehicle will be displayed in the
+
+          Comp Geom window.
+
+National Aeronautics and Space Administration                        VSP Aircraft Analysis User Manual 33
+
+=== PAGE 34 | garbled, img ===
+ Building Files: Component Geometry
+
+                                          F i g u r e 4 : C o m p o n e n t g e o m e t r y v e r i f i c a t i o n
+
+National Aeronautics and Space Administration                                                          VSP Aircraft Analysis User Manual 34
+
+=== PAGE 35 ===
+ Building Files: Degenerate Geometry
+
+       – 6. Under the “Geom” tab, now select “DegenGeom”. Click “Execute”. The result will
+
+          show that a number of components have been written to files. Note that lifting surfaces
+
+          placed over another lifting surface will generally cause this process to crash openVSP. If
+
+          your model requires that there be multiple, stacked lifting surfaces, attempt to account
+
+          for this by offsetting one of the lift surfaces such that they are not directly overhead.
+
+National Aeronautics and Space Administration                        VSP Aircraft Analysis User Manual 35
+
+=== PAGE 36 | garbled, img ===
+ Building Files: Degenerate Geometry
+
+                                           F i g u r e 5 : D e g e n e r a t e g e o m e t r y v e r i f i c a t i o n
+National Aeronautics and Space Administration                                                            VSP Aircraft Analysis User Manual 36
+
+=== PAGE 37 ===
+ Building Files
+
+ •   When using VSPAero, the main components which control the output values of are the lifting
+     surfaces such as the wing and horizontal stabilizer. While the other body components will
+     have some small effect on the profile drag of the vehicle, the induced drag which VSPAero
+     determines is based primarily on the lift coefficient.
+
+ •   Knowing this, we can step the model down further by cutting the body components out of
+     the model. First, save this reduced detail model under the chosen file name for your “clay”
+     model. This file will be the backup for any reduced detail component that you wish to
+     analyze.
+
+ •   Cut all but the lifting components from the model using the geometry browser. Under a new
+     title, save the lift component model in the desired file location. This new model will be the
+     base for VSPAero analysis. Remember to OPEN this new file or the resulting output files will
+     overwrite the clay model files!
+
+National Aeronautics and Space Administration                    VSP Aircraft Analysis User Manual 37
+
+=== PAGE 38 | img ===
+ Building Files
+
+  •    Now that the lifting surfaces have been isolated, you can create another DegenGeom file in
+
+       the same way that you did for the aircraft. These files will be the source for VSPAero later.
+
+       Note the location of these files!
+
+                               F i g u r e 6 : M o d e l r e d u c e d t o l i f t i n g c o m p o n e n t s o n l y
+
+National Aeronautics and Space Administration                                             VSP Aircraft Analysis User Manual 38
+
+=== PAGE 39 | img ===
+ Building Files: VSPAero
+
+ •   There are six files that must be located in the same folder for VSPAero to run properly:
+
+      1. vspaero.exe
+      2. vsp_degen.exe
+      3. viewer.exe
+      4. pthreadGC2.dll
+      5. libgomp-1.dll
+      6. libgcc_s_dw2-1.dll
+
+  •   This folder should contain only these six files and the VSPAero files needed to run the
+
+      software. This is also where VSPAero will create the data files. While not required that only
+
+      the related files be present, it is strongly recommended due to the high number of files that
+
+      will be made.
+
+National Aeronautics and Space Administration                          VSP Aircraft Analysis User Manual 39
+
+=== PAGE 40 | img ===
+ Building Files: VSPAero
+
+ •   The created Filename_DegenGeom files from openVSP must both be located in the same
+
+     folder as the vspaero.exe program. Once these two files have been copied to the location,
+
+     you can create or modify the required .vspaero file that sets the conditions for VSPAero to
+
+     analyze.
+
+ •   A text file will be made using notepad or a similar application following the format shown.
+
+ •   Any extra spaces or returns at the end of each line can cause errors.
+
+ •   Follow the format shown exactly, changing only the values.
+
+ •   When complete, you must save the text exactly as the openVSP
+
+     generated files appear with the extension “.vspaero” in the same folder
+
+     as the applications.
+
+ •   Ex) Filename_DegenGeom.vspaero
+
+National Aeronautics and Space Administration                      VSP Aircraft Analysis User Manual 40
+
+=== PAGE 41 | img ===
+ Building Files: VSPAero
+
+  •    If the values for the rotors are unknown, leave the number of rotors at zero and delete the
+
+       rotor information.
+
+                                    T i t l e         M e a n i n g                                              U n i t s
+                                    Sref              Wing Face Surface Area (S)                                 Feet2
+                                    Cref              Mean Aerodynamic Chord (MAC or C)                          Feet
+                                    Bref              Wingspan (B)                                               Feet
+                                    X_cg              X-Axis Center of Gravity Location                          Feet
+                                    Y_cg              Y-Axis Center of Gravity Location                          Feet
+                                    Z_cg              Z-Axis Center of Gravity Location                          Feet
+                                    Mach              The Mach Number (Based on Speed and Air Density)           None
+                                    AoA               Angle of Attack                                            Degrees
+                                    Beta              Slide Angle                                                Degrees
+                                    Vinf              Free Stream Velocity                                       Feet/Second
+                                    Rho               Air Density                                                Pounds/Feet3
+                                    WakeIters*        The Number of Wake Iterations to Perform                   None
+
+      *When analyzing high lift conditions such as takeoff and landing or high
+      angles of attack (greater than 15 degrees), perform more than one
+      iteration to analyze wake effects.
+
+National Aeronautics and Space Administration                                                VSP Aircraft Analysis User Manual 41
+
+=== PAGE 42 | img ===
+ Building Files: VSPAero
+
+  •    If the values for the rotors are unknown, leave the number of rotors at zero and delete the
+
+       rotor information.
+
+                                 T i t l e        M e a n i n g                                         U n i t s
+                                 NumberOfRotors   The Number of Rotors for the Model                    None
+                                 PropElement_N    The Rotor Element Number                              None
+                                 n                The Rotor Number                                      None
+                                 X, Y, Z          Rotor Center Location Coordinates                     Feet
+                                 Xn, Yn, Zn       Rotor Plane Normal Vector                             None
+                                 R                Rotor Radius                                          Feet
+                                 r                Rotor Hub Radius                                      Feet
+                                 ± RPM            Rotor Speed ( minus indicates CCW rotation as seen from front)  Rev/Min
+                                 CT               Thrust Coefficient                                    None
+                                 CP               Power Coefficient                                     None
+
+National Aeronautics and Space Administration                                        VSP Aircraft Analysis User Manual 42
+
+=== PAGE 43 | img ===
+ Running VSPAero
+
+ •    Before running VSPAero, the folder should have the associated files present.
+
+National Aeronautics and Space Administration                                VSP Aircraft Analysis User Manual 43
+
+=== PAGE 44 ===
+ Running VSPAero
+
+ •   In the Command Prompt, change the directory to the folder that houses vspaero using the
+     “cd” command.
+ •   Ex)
+ •   Once in the correct directory, you will need to execute VSPAero.
+ •   Ex)
+ •   If you know the number of processors that your computer has, you can force N number of
+     processors to work on VSPAero using: >vspaero –omp N filename_degengeom
+ •   Doing this WILL use close to 100% of the selected processor’s power. System performance
+     may suffer if too many processors are used.
+
+National Aeronautics and Space Administration                       VSP Aircraft Analysis User Manual 44
+
+=== PAGE 45 | img ===
+ Running VSPAero
+
+ •   Once VSPAero is running, the
+     screen will show the program
+     operating.
+ •   Depending on the complexity
+     of the model and the number
+     of processors set to run, this
+     can take seconds or hours just
+     for ONE wake iteration. This is
+     why the model must be
+     sufficiently simple for the
+     program to analyze.
+
+National Aeronautics and Space Administration                       VSP Aircraft Analysis User Manual 45
+
+=== PAGE 46 | img ===
+ Running VSPAero
+
+ •   Once VSPAero is running, the
+     screen will show the program
+     operating.
+ •   Depending on the complexity
+     of the model and the number
+     of processors set to run, this
+     can take seconds or hours just
+     for ONE wake iteration. This is
+     why the model must be
+     sufficiently simple for the
+     program to analyze.
+
+National Aeronautics and Space Administration                       VSP Aircraft Analysis User Manual 46
+
+=== PAGE 47 | img ===
+ Running VSPAero
+
+ •   If it appears that the process is
+     extraordinarily slow, you may
+     halt the process by typing
+     “CTRL+C”.
+ •   When complete, the prompt
+     will return to the command line
+     and await the next command.
+
+National Aeronautics and Space Administration                        VSP Aircraft Analysis User Manual 47
+
+=== PAGE 48 | img ===
+ Running VSPAero
+
+ •   Used to visualize the Delta-Cp gradient over each surface
+ •   Reality check and wake visualization (Identify problem areas)
+
+          Piper Seminole
+
+                                                       Vought V173
+          Tecnam P2006T
+National Aeronautics and Space Administration                 VSP Aircraft Analysis User Manual 48
+
+=== PAGE 49 | img ===
+ Running VSPAero
+
+  •   If you would like to see what
+      the drag profile looks like,
+      enter:
+      “viewer filename_degengeom”
+      into the command line.
+  •   This will open the visualization
+      application.
+  •   To obtain meaningful gradients,
+      you will most likely need to
+      change some of the menu
+      settings.
+
+                                                              F i g u r e 7 : A i r c r a f t D e l t a - C p E x a m p l e
+
+National Aeronautics and Space Administration                                       VSP Aircraft Analysis User Manual 49
+
+=== PAGE 50 | img ===
+ Running VSPAero
+
+                                                                              If these values do not match what you wrote into the
+  •    If you would like to see what                                          .vspaero file, then the .vspaero file is formatted
+                                                                              incorrectly. Check that there are no spaces or returns
+       the drag profile looks like,                                           at the end of each line.
+
+       enter:
+
+       “viewer filename_degengeom”
+
+       into the command line.
+
+  •    This will open the visualization
+
+       application.
+
+  •    To obtain meaningful gradients,
+
+       you will most likely need to
+
+       change some of the menu
+
+       settings.
+
+                                                                   F i g u r e 7 : A i r c r a f t D e l t a - C p E x a m p l e
+
+National Aeronautics and Space Administration                                               VSP Aircraft Analysis User Manual 50
+
+=== PAGE 51 | img ===
+ Running VSPAero
+
+  •   Under Aero, select “delta_cp”.
+  •   Under Options, select “Set
+      Contour Levels” and set the
+      maximum to 1 and the
+      minimum to -2.
+  •   If you would like to see the
+      location and rotation direction
+      of the rotors, under Aero select
+      “Rotors”.
+
+                                                             F i g u r e 7 : A i r c r a f t D e l t a - C p E x a m p l e
+
+National Aeronautics and Space Administration                                      VSP Aircraft Analysis User Manual 51
+
+=== PAGE 52 ===
+ Running VSPAero
+
+ •   To obtain all of the values from VSPAero that are required for drag polar build-ups and lift
+
+     curves, it is necessary to open the .vspaero file in notepad and change the angle of attack
+
+     (AoA) to the next value to be computed and save.
+
+ •   Note that you MUST copy the values in the HISTORY file to another database before you
+
+     execute VSPAero again. The history file is only temporary storage of values. It is
+
+     recommended that you copy these values into the attached Excel spreadsheet for analysis and
+
+     comparison for your vehicle.
+
+ •   You must then re-execute VSPAero from the command window. Repeat this process for each
+
+     flight condition that is to be analyzed.
+
+National Aeronautics and Space Administration                       VSP Aircraft Analysis User Manual 52
+
+=== PAGE 53 ===
+ • VSPAERO outputs 3 files
+        • The LOD file contains the span wise loading
+         information (for example the sectional C*CLis
+         shown for each lifting component)
+        • The ADB file contains information for
+         VSPAERO
+        • The HISTORY contains the total integrated
+         forces and moments
+
+National Aeronautics and Space Administration  VSP Aircraft Analysis User Manual 53
+
+=== PAGE 54 | img ===
+                                           CL      Pressure Integrated Lift Coefficient
+  •    The HISTORY File                    CD      Pressure Integrated Induced Drag Coefficient
+                                           CS      Side Force Coefficient
+       contains the
+                                           CMx     Pressure Integrated Moment about x-axis
+       information used for                CMy     Pressure Integrated Moment about y-axis
+                                           CMz     Pressure Integrated Moment about z-axis
+       the Drag Buildup                    CLt     Trefftz Plane Integrated Lift Coefficient
+                                           CDt     Trefftz Plane Integrated Induced Drag Coefficient
+       calculations
+                                           CFx     Force Coefficients x
+                                           CFy     Force Coefficients y
+                                           CFz     Force Coefficients z
+
+National Aeronautics and Space Administration                                VSP Aircraft Analysis User Manual 54
+
+=== PAGE 55 ===
+ • DegenGeom is sensitive to surface intersections.
+ • When making a new file, you must open the new saved file to cause VSP
+    to write geometry files under the new name. Otherwise overwrite will
+    occur.
+ • Cannot use open engine nacelles.
+ • Must not have destination file open when computing geometries. VSP
+    will crash.
+ • Revert only works as long as you have not modified another component.
+    This is not an “undo” function.
+
+National Aeronautics and Space Administration        VSP Aircraft Analysis User Manual 55
+
+=== PAGE 56 ===
+ • There is a maximum number of stored polars that XFOIL
+    will create in a single operating session.
+ • The write file for a range of angle of attack will
+    sometimes display the previously stored polar’s Reynolds
+    number, though the values were computed using the
+    user input.
+ • Cumbersome if the software crashes.
+
+National Aeronautics and Space Administration      VSP Aircraft Analysis User Manual 56
+
+=== PAGE 57 | img ===
+ • Only simplified VSP models work
+ • No maximum coefficient of lift
+ • Pressure Drag vs Trefftz Drag
+ • High Lift conditions
+ • Improperly intersected components can lead to major
+    computation errors
+
+National Aeronautics and Space Administration   VSP Aircraft Analysis User Manual 57
+
+=== PAGE 58 ===
+National Aeronautics and Space Administration                                              VSP Aircraft Analysis User Manual 58
