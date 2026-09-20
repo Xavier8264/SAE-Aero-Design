@@ -632,3 +632,76 @@ analysis is what teams skip.
 Either (a) stand up the mini PC: Ubuntu Server, Python env, aerosandbox/NeuralFoil, XFOIL, AVL,
 and implement T1-1 the validation harness; or (b) proceed with conceptual sizing on the laptop as
 the previous CURRENT STATE SUMMARY planned and let the mini PC pick up T1-1 in parallel.
+
+---
+
+## [2026-09-19 21:49 CDT] Git consolidated; 20 sources archived for the post-sizing phases
+
+Task from Jordan: talk through how to approach building the airplane, with every decision grounded in an
+outside source and using free/open-source tools; make the repo good for future sessions and token-efficient;
+merge everything to main and trim stray branches.
+
+### Git housekeeping [VERIFIED by running the commands]
+- Local main had the uncommitted analysis/sizing work; origin/main was 2 commits ahead (COMPUTE_BACKLOG.md,
+  merged from PR #1 branch claude/mini-pc-compute-ideas-p4tp5m).
+- Committed the sizing work (9d8f8d6), merged origin/main (9c8168b), pushed. main == origin/main.
+- PROJECT_MEMORY.md merge conflict resolved by keeping BOTH appended blocks in timestamp order
+  (00:28 CDT sizing entries, then the 16:11 UTC compute-backlog entry). No existing text was changed.
+- Branches: main is the only branch, local and remote. The PR branch was already deleted on GitHub.
+  Nothing to trim.
+- NOTE: reference/raw/ is tracked in git and is now ~213 MB; .git is 114 MB. Works, but if the repo keeps
+  growing consider gitignoring reference/raw/ (text/ + manifest.json are what sessions actually read).
+
+### Jordan's decisions this session
+1. Push to GitHub: yes, done.
+2. Session task: archive the researched sources.
+3. ORDERING, standing guidance: TESTS FIRST. Physical tests (wing panel weigh-in, thrust stand) come before
+   further analysis refinement, because the weight model rests on a single calibration point (NAU 2026) and
+   every downstream number is scaled by it. This supersedes the "AVL stability and trim" next task from the
+   [2026-09-19 00:28] summary as the immediate priority; AVL work resumes after or alongside the test data.
+
+### Library: 118 -> 138 documents (~2.9M -> ~4.1M tokens)
+sae-researcher pass (Sonnet, ~58k tokens) found free sources for the gaps conceptual sizing left open.
+Every URL was HTTP-200 verified before archiving. New IDs, by gap:
+- Design process: vt_aoe_a5_initial_sizing, vt_aoe_a7a_config_layout, vt_aoe_a10_prelim_design (Virginia Tech
+  AOE 4065/4066, Raj), mit_1682_flight_vehicle_intro, nasa_se_handbook (SP-2016-6105 Rev2, 262k tokens).
+- Structures and loads: nasa_vgh_load_factor_stats (NASA CR-132531, VG/VGH statistics -> V-n load factor),
+  uf_wing_spar_optimization (14 lb / 7 ft span RC aircraft, closest scale match), syracuse_wing_spar_design,
+  fpl_minimum_weight_sandwich (USDA FPL RN-086).
+- Tools: openvsp_user_manual, gmsh_reference_manual (298k), calculix_manual (CalculiX 2.22, 448k),
+  freecad_fem_workbench, su2_quick_start, paraview_docs.
+- Flight test: nasa_takeoff_flighttest_method (NASA TN D-7603, takeoff performance INCLUDING pilot technique),
+  ardupilot_airspeed_calibration, ama_national_safety_code.
+- Build technique: modelaviation_sliced_rib_method, modelaviation_diy_laser_cutting (AMA magazine grade:
+  cite as practice, never as allowables).
+reference/GUIDE.md updated with three new sections and the notes above. The big ones are GREP ONLY.
+
+### Gaps and dead ends found by the search [VERIFIED this session]
+- NO published study compares AVL / XFLR5 / VSPAERO / OpenFOAM against wind-tunnel data at Re 100k-500k.
+  We therefore have NO external error band for our own aero predictions. Close it in-house by running our
+  tools against the uiuc_lsat_* polars already held (this is COMPUTE_BACKLOG T1-1, validation harness).
+- Stanford AA241 is confirmed dead (adg.stanford.edu does not resolve). Stop looking for it.
+- MIL-HDBK-23 was canceled in 1988 and folded into MIL-HDBK-17, which is not free. Use fpl_minimum_weight_sandwich.
+- wiki.freecad.org is behind Anubis bot protection: curl and doc2text get an interstitial page, not content.
+  The first freecad_fem_workbench download captured that interstitial; it was vaulted (id a1aad00b) and
+  replaced by the raw.githubusercontent.com FreeCAD-documentation mirror. Browser-only for other wiki pages.
+- Still missing: stall-speed and static-margin flight-test procedures; covering-film guidance; no
+  SAE-Aero-specific requirements-traceability source (the held student team reports are the closest thing).
+
+### Approach proposed to Jordan (not yet built; his reaction pending)
+- DECISIONS.md: a flat ledger, one row per decision (ID, decision, number with units, source citation as
+  library ID + line range or script path + output file, confidence, what would overturn it). Rule: nothing
+  enters without an external citation or a script whose inputs are cited; anything else is [UNVERIFIED] with
+  a retirement path. Purpose: a new session learns WHY the wing is 95 in without reading 600 log lines.
+- analysis/README.md (run order and which outputs are current) and a short pinned state file, so context
+  loading is one short read. The log stays append-only as the audit trail.
+- Three kinds of claim need three kinds of grounding: physics/method -> literature; component behavior ->
+  manufacturer data plus independent measurement; OUR airframe -> our own tests, because no source exists
+  for an airplane nobody has built. That third category is why tests come first.
+
+### NEXT TASK
+Write the test plan for the two tests that retire the biggest uncertainties, with procedures grounded in the
+new sources: (1) wing test panel build and weigh, to refit K_BUILD in analysis/sizing/weight.py; (2) static
+thrust stand for 12x6E and 12x8E on 800-900 Kv motors with a real 4S 2200 pack, measuring thrust, current
+and pack sag against the apc_* data. Include what to measure, how many runs, and how each result feeds back
+into a specific script. Then, with data in hand, resume AVL stability and trim.
