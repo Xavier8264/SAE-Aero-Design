@@ -565,3 +565,70 @@ Stability and trim: install AVL (or XFLR5) and build a model of the design point
 (wing Cm0 -0.28, x_np ~0.44c). Size the tail and elevator for trim at CLmax with every bottle-ladder CG, and check
 static margin, Cn_beta and Cl_beta. Then fix the Cm0 factor in aero.py and rerun sweep.py.
 Suggested: sae-analyst agent; main session on Opus.
+
+---
+
+## [2026-09-19 16:11 UTC / 11:11 CDT] Dedicated compute box: task backlog brainstorm (no scripts written)
+
+Task: Jordan has an always-on mini PC to dedicate to this project for its duration and asked for
+ideas for long-running iterative jobs. Brainstorm only; explicitly NO scripts written this session.
+
+### Hardware [VERIFIED 2026-09-19 via AMD product page / TechPowerUp / LaptopMedia]
+GMKtec NucBox M6 Ultra. AMD Ryzen 5 7640HS: 6 cores / 12 threads, Zen 4, 4.3 GHz base, 5.0 GHz
+boost, 16 MB L3, 35-54 W TDP. Radeon 760M iGPU (8 RDNA3 CUs). 32 GB RAM (DDR5-5600 supported),
+512 GB SSD. NOTE: 6 cores, not 8; the 8-core part is the 7840HS.
+
+### Compute budget [INFERRED, order of magnitude, not benchmarked]
+- Analytic eval (takeoff integration + weight + aero + score): ~1 ms -> ~1e9 evals/day.
+- NeuralFoil point ~1 ms. AVL run ~0.05-0.5 s -> ~2e6-2e7/day.
+- XFOIL alpha sweep ~5-30 s -> ~3e4-2e5 polars/day.
+- OpenFOAM 2D RANS (~1e5 cells) ~5-15 min -> ~100-300 cases/day.
+- OpenFOAM 3D RANS (~5e6 cells, fits in 32 GB) ~8-20 h -> ~1-2 cases/day.
+- FluidX3D on 760M: ~60 GB/s effective bandwidth / ~55 bytes per cell-step -> ~1e9 cell-updates/s,
+  i.e. 256^3 at ~60 steps/s. UNVERIFIED arithmetic; benchmark before relying on it.
+
+### Backlog written to COMPUTE_BACKLOG.md (NEW FILE, 184 lines)
+Tier 1 (highest value per compute hour):
+  T1-1 Model validation harness (RUN FIRST): reproduce NAU 2026 aircraft and UIUC LSAT tunnel
+       polars; sweep XFOIL Ncrit/transition/roughness settings until they match, then freeze.
+  T1-2 Payload-ladder + TDS strategy as a stochastic dynamic program over
+       (flights remaining, bottles loaded, successes, scores banked); sweep declared PS to
+       maximize expected FFS. Quadratic PPB term makes PS choice worth real compute.
+       OPEN [UNVERIFIED]: number of flight attempts available at EAST 2027 (DP input).
+  T1-3 Robust takeoff Monte Carlo: P(airborne within 100 ft) vs payload, with uncertainty on
+       empty weight, CLmax, mu, thrust, LiPo sag, and density altitude/headwind drawn from
+       reference/data/klal_asos_2021-03_to_2026-04.csv (March daytime hours). Feeds T1-2.
+  T1-4 Full-factorial design-space MAP (8 vars x 10 levels = 1e8 evals ~ 2-3 h), then NSGA-II /
+       CMA-ES multi-start; deliverable is the score plateau, not a single peak.
+  T1-5 Structural weight optimization with Monte Carlo over balsa density scatter and spruce
+       variability; CalculiX FEA on the shortlist.
+Tier 2: T2-1 XFOIL polar farm + NeuralFoil-driven airfoil shape optimization; T2-2 propulsion
+  combinatorics (prop x Kv x 2 vs 4 motors x sag, APC RPM limits as hard constraint);
+  T2-3 AVL sweeps (trim, static margin, elevator authority at rotation, gust/crosswind vs KLAL
+  wind rose); T2-4 bottle packing + CG across EVERY loading state of the ladder; T2-5 mission
+  energy / 3-DOF trajectory (2200 mAh must fly the full pattern); T2-6 cross-validation of
+  independent models over the whole sweep space.
+Tier 3: T3-1 CFD used narrowly (2D check on XFOIL; 3D only for ground effect, junction drag,
+  propwash; FluidX3D as an experiment); T3-2 surrogates + Bayesian calibration against thrust
+  stand / flight test data; T3-3 QMIL custom prop [legality UNVERIFIED, stretch only];
+  T3-4 topology optimization of printed parts (low payoff).
+Background chores: daily SAE FAQ/rules diff with alert; nightly pipeline re-run + regression
+  tests; density-altitude watch; build/weight tracker feeding the score prediction.
+Setup: Ubuntu Server bare metal (not WSL), systemd + tmux, checkpointed resumable jobs writing
+  SQLite/Parquet, 6-worker pools for bandwidth-bound work and 12 for cheap evals, log clocks and
+  temps (a 35-54 W part in a mini chassis will throttle), watch SSD fill from CFD writes.
+
+### Key judgement recorded
+The biggest risk is hours of compute on an uncalibrated model producing a confident wrong
+airplane. T1-1 gates everything else. Second judgement: T1-2 and T1-3 are where this project is
+most likely to gain points over other teams, because the physics is cheap and the decision
+analysis is what teams skip.
+
+### Files changed
+- NEW: COMPUTE_BACKLOG.md
+- No scripts written (per Jordan's instruction).
+
+### NEXT TASK
+Either (a) stand up the mini PC: Ubuntu Server, Python env, aerosandbox/NeuralFoil, XFOIL, AVL,
+and implement T1-1 the validation harness; or (b) proceed with conceptual sizing on the laptop as
+the previous CURRENT STATE SUMMARY planned and let the mini PC pick up T1-1 in parallel.
