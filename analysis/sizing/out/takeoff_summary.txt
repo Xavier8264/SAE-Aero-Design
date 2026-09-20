@@ -1,0 +1,17 @@
+Prop ranking, ref 95x20 in S1223 5 slots, DA 2000 ft, 90 A peak, thrust x0.93:
+  4x9x45e  Kv  997  W_TO_max  31.6 lb  V_R 38.9 ft/s T0 12.69 T(V_R)  9.26
+  4x9x6e   Kv  885  W_TO_max  31.6 lb  V_R 38.9 ft/s T0 12.09 T(V_R)  9.47
+  2x12x6e  Kv  843  W_TO_max  31.5 lb  V_R 38.8 ft/s T0 12.17 T(V_R)  9.32
+  2x12x8e  Kv  748  W_TO_max  31.1 lb  V_R 38.6 ft/s T0 11.40 T(V_R)  9.32
+  4x9x75e  Kv  805  W_TO_max  31.0 lb  V_R 38.6 ft/s T0 11.19 T(V_R)  9.35
+  2x11x7e  Kv  864  W_TO_max  30.5 lb  V_R 38.2 ft/s T0 10.99 T(V_R)  9.00
+  2x12x10e Kv  681  W_TO_max  30.3 lb  V_R 38.1 ft/s T0 10.42 T(V_R)  9.04
+  2x12x12e Kv  641  W_TO_max  29.3 lb  V_R 37.5 ft/s T0  9.49 T(V_R)  8.65
+  2x11x10e Kv  750  W_TO_max  29.2 lb  V_R 37.4 ft/s T0  9.54 T(V_R)  8.53
+  (I_peak 70 A: best 4x9x6e W_TO_max 29.2 lb)
+  (I_peak 110 A: best 4x9x45e W_TO_max 33.5 lb)
+W_TO_max (lb) vs S at DA 2000 ft, span 95 in, nominal CLmax (S1223 trimmed):
+  2x12x6e: S  9.2->26.8, S 10.6->28.5, S 11.9->30.0, S 13.2->31.5, S 14.5->32.8, S 15.8->34.0, S 17.2->35.0
+  4x9x45e: S  9.2->26.9, S 10.6->28.6, S 11.9->30.2, S 13.2->31.6, S 14.5->33.0, S 15.8->34.2, S 17.2->35.3
+Sensitivity, ref 95x20 in, 2x12x6e, DA 2000: nominal W_TO_max 31.5 lb
+  k_R 1.20 -2.8; t_R 0 +1.7; t_R 0.5 s -1.1; mu_r 0.03 +0.3; mu_r 0.06 -0.6; CL_g 0.5 -0.3; CL_g 1.2 -0.4; headwind 5 kt +6.1; headwind 8 kt +10.1; s_avail 90 ft -1.5; CLmax -10% -1.7; thrust x1.00 +1.2; thrust x0.85 -1.4; DA -1000 ft +2.3; DA 0 ft +1.5; DA 1000 ft +0.8; DA 1400 ft +0.4; DA 2500 ft -0.4; DA 3000 ft -0.7

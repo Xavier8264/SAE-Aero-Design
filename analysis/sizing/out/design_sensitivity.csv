@@ -1,0 +1,11 @@
+case,W_TO_lb,W_empty_lb,payload_cap_lb,mix,FS_max,mean3,FFS_ideal,E_FFS,limit
+nominal,35.038,17.662,17.375,1E4F,47,42.333,52.333,52.418,takeoff
+W_e x0.8 structure,35.038,14.786,20.252,0E5F,55,48.667,58.667,59.162,takeoff
+W_e x1.2 structure,35.038,20.538,14.499,2E3F,39,36,46,44.994,takeoff
+CLmax -10%,33.15,17.544,15.607,3E3F,42,39,49,48.208,takeoff
+CLmax +10%,36.829,17.775,19.054,2E4F,50,47,57,55.991,takeoff
+thrust x0.85,33.422,17.561,15.862,3E3F,42,39,49,48.251,takeoff
+thrust x1.00,36.387,17.747,18.64,2E4F,50,47,57,55.589,takeoff
+headwind 5 kt,41.206,18.049,23.156,1E5F,58,53.333,63.333,64.842,circuit
+headwind 8 kt,41.429,18.063,23.366,1E5F,58,53.333,63.333,64.842,circuit
+DA 1400 (median),35.537,17.693,17.844,1E4F,47,42.333,52.333,52.618,takeoff

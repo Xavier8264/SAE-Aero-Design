@@ -1,0 +1,9 @@
+case,AR,CLa_rad,alpha_L0_deg,Cm0_c4,x_ac_over_c,e_near,eta_vlm,eta_lifting_line,x_np_over_c,alpha_deg,i_t_deg,x_cg_over_c,clmax_aero_py,clmax_corrected,clmax_inviscid_bound,K_CM3D
+wing AR design,3.6538,3.5119,-12.58,-0.34322,0.22706,1.0559,,,,,,,,,,
+wing AR design fine grid,3.6538,3.4689,-13.959,-0.36188,0.22445,1.0624,,,,,,,,,,
+wing AR 40,40,5.7287,-11.297,-0.3386,0.25384,0.84588,,,,,,,,,,
+eta_max,,,,,,,1.1586,1.1726,,,,,,,,
+wing+tail,3.6538,3.8396,,,,,,,0.49139,,,,,,,
+trim CL 0.85,,,,,,,,,,2.585,-1.5559,0.37139,,,,
+trim CL 1.66,,,,,,,,,,15.167,-4.2948,0.37139,,,,
+CLmax_trim,,,,,,,,,,,,,1.6611,1.6791,1.6561,1.0136

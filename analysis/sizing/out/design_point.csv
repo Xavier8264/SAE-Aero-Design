@@ -1,0 +1,2 @@
+span_in,chord_in,S_ft2,AR,n_motors,prop,n_slots,airfoil,CLmax_trim,eta_max,W_TO_lb,limit,W_empty_lb,payload_cap_lb,E,F,FS_max,payload_used_lb,margin_lb,mean3,ladder,FFS_ideal,E_FFS,V_stall,V_R,length_in,bay_l_in,climb_grad,charge_Ah,t_flight_s,V_cruise,land_roll_free_ft,land_roll_brake_ft,length_ok
+95,26,17.153,3.6538,2,12x6e,6,s1223,1.6611,1.1726,35.038,takeoff,17.662,17.375,1,4,47,17.25,0.12548,42.333,1E3F -> 0E4F -> 1E4F,52.333,52.418,33.129,36.442,92.806,29.9,0.12944,1.3757,117.13,46.38,393.32,113.77,True

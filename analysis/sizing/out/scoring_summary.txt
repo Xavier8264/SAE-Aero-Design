@@ -1,0 +1,39 @@
+Points per lb: filled 2.716, empty 2.857 (at 4.05/1.05 lb)
+Points per slot: filled 11, empty 3
+W_cap  8.0 lb slots  4: best 3E+1F FS=  20 mean3= 17.0 ladder 1E1F -> 2E1F -> 3E1F
+W_cap  8.0 lb slots  5: best 3E+1F FS=  20 mean3= 17.0 ladder 1E1F -> 2E1F -> 3E1F
+W_cap  8.0 lb slots  6: best 3E+1F FS=  20 mean3= 17.0 ladder 1E1F -> 2E1F -> 3E1F
+W_cap  8.0 lb slots 40: best 7E+0F FS=  21 mean3= 18.0 ladder 5E0F -> 6E0F -> 7E0F
+W_cap 12.0 lb slots  4: best 2E+2F FS=  28 mean3= 25.0 ladder 0E2F -> 1E2F -> 2E2F
+W_cap 12.0 lb slots  5: best 3E+2F FS=  31 mean3= 28.0 ladder 1E2F -> 2E2F -> 3E2F
+W_cap 12.0 lb slots  6: best 3E+2F FS=  31 mean3= 28.0 ladder 1E2F -> 2E2F -> 3E2F
+W_cap 12.0 lb slots 40: best 11E+0F FS=  33 mean3= 30.0 ladder 9E0F -> 10E0F -> 11E0F
+W_cap 14.0 lb slots  4: best 1E+3F FS=  36 mean3= 31.3 ladder 1E2F -> 0E3F -> 1E3F
+W_cap 14.0 lb slots  5: best 1E+3F FS=  36 mean3= 31.3 ladder 1E2F -> 0E3F -> 1E3F
+W_cap 14.0 lb slots  6: best 1E+3F FS=  36 mean3= 31.3 ladder 1E2F -> 0E3F -> 1E3F
+W_cap 14.0 lb slots 40: best 13E+0F FS=  39 mean3= 36.0 ladder 11E0F -> 12E0F -> 13E0F
+W_cap 16.0 lb slots  4: best 1E+3F FS=  36 mean3= 31.3 ladder 1E2F -> 0E3F -> 1E3F
+W_cap 16.0 lb slots  5: best 2E+3F FS=  39 mean3= 36.0 ladder 0E3F -> 1E3F -> 2E3F
+W_cap 16.0 lb slots  6: best 3E+3F FS=  42 mean3= 39.0 ladder 1E3F -> 2E3F -> 3E3F
+W_cap 16.0 lb slots 40: best 15E+0F FS=  45 mean3= 42.0 ladder 13E0F -> 14E0F -> 15E0F
+W_cap 18.0 lb slots  4: best 0E+4F FS=  44 mean3= 37.7 ladder 0E3F -> 1E3F -> 0E4F
+W_cap 18.0 lb slots  5: best 1E+4F FS=  47 mean3= 42.3 ladder 1E3F -> 0E4F -> 1E4F
+W_cap 18.0 lb slots  6: best 1E+4F FS=  47 mean3= 42.3 ladder 1E3F -> 0E4F -> 1E4F
+W_cap 18.0 lb slots 40: best 17E+0F FS=  51 mean3= 48.0 ladder 15E0F -> 16E0F -> 17E0F
+W_cap 20.0 lb slots  4: best 0E+4F FS=  44 mean3= 37.7 ladder 0E3F -> 1E3F -> 0E4F
+W_cap 20.0 lb slots  5: best 1E+4F FS=  47 mean3= 42.3 ladder 1E3F -> 0E4F -> 1E4F
+W_cap 20.0 lb slots  6: best 2E+4F FS=  50 mean3= 47.0 ladder 0E4F -> 1E4F -> 2E4F
+W_cap 20.0 lb slots 40: best 19E+0F FS=  57 mean3= 54.0 ladder 17E0F -> 18E0F -> 19E0F
+W_cap 24.0 lb slots  4: best 0E+4F FS=  44 mean3= 37.7 ladder 0E3F -> 1E3F -> 0E4F
+W_cap 24.0 lb slots  5: best 0E+5F FS=  55 mean3= 48.7 ladder 0E4F -> 1E4F -> 0E5F
+W_cap 24.0 lb slots  6: best 1E+5F FS=  58 mean3= 53.3 ladder 1E4F -> 0E5F -> 1E5F
+W_cap 24.0 lb slots 40: best 19E+1F FS=  68 mean3= 65.0 ladder 17E1F -> 18E1F -> 19E1F
+MC w_pred 16 lb slots 4 top@1.00: PS=36 ideal 41.3 mean 41.6 p10 41.3
+MC w_pred 16 lb slots 4 top@0.95: PS=36 ideal 41.3 mean 41.6 p10 41.3
+MC w_pred 16 lb slots 4 top@0.90: PS=36 ideal 41.3 mean 41.6 p10 41.3
+MC w_pred 16 lb slots 5 top@1.00: PS=39 ideal 46.0 mean 44.6 p10 46.0
+MC w_pred 16 lb slots 5 top@0.95: PS=39 ideal 46.0 mean 44.7 p10 46.0
+MC w_pred 16 lb slots 5 top@0.90: PS=39 ideal 46.0 mean 44.6 p10 46.0
+MC w_pred 16 lb slots 6 top@1.00: PS=42 ideal 49.0 mean 45.6 p10 37.0
+MC w_pred 16 lb slots 6 top@0.95: PS=39 ideal 46.0 mean 44.6 p10 46.0
+MC w_pred 16 lb slots 6 top@0.90: PS=39 ideal 46.0 mean 44.6 p10 46.0

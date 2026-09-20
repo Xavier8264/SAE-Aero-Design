@@ -1,0 +1,8 @@
+March KLAL, 2021-2026, 09-17 local, n=1441 hourly obs (4 bad March obs removed)
+DA percentiles (ft): P0=-1256, P5=276, P10=533, P25=1017, P50=1410, P75=1745, P90=1975, P95=2083, P100=2484
+Temp F: median 77.0, P90 84.2; altimeter inHg median 30.09; dewpoint F median 59.0
+Median/P90 DA by local hour: 9:981/1473; 10:1165/1659; 11:1289/1785; 12:1463/1896; 13:1545/2036; 14:1643/2083; 15:1651/2077; 16:1644/2056
+Median DA by year: 2021:1221, 2022:1452, 2023:1580, 2024:1426, 2025:1278, 2026:1522
+Wind kt: median 9.0, P25 6.0, P75 12.0, P90 14.0
+Headwind on best KLAL runway heading, kt: median 7.7, P25 4.7 (calm obs 7%) [INFERRED: runway used at the event unknown]
+DESIGN: DA_median=1410, DA_p90=1975, DA_p10=533, DA_p95=2083, DA_min=-1256, DA_max=2484

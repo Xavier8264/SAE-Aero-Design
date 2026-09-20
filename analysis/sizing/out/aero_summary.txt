@@ -1,0 +1,18 @@
+Lifting line (straight, untwisted), a0 = 0.95*2pi:
+  AR  taper  e_inv  eta_max  CLa/rad
+   4   1.0  0.970   1.167   3.891
+   4   0.5  0.993   1.075   3.998
+   5   1.0  0.961   1.153   4.158
+   5   0.5  0.990   1.070   4.272
+   6   1.0  0.951   1.141   4.359
+   6   0.5  0.988   1.066   4.477
+   7   1.0  0.942   1.131   4.516
+   7   0.5  0.985   1.062   4.636
+   8   1.0  0.933   1.122   4.644
+   8   0.5  0.982   1.059   4.764
+Example 94 x 20 in, 5 slots, S 13.06 ft2, AR 4.70: CD0 non-wing 0.0205 fus 0.0074, boom 0.0003, tail 0.0028, gear 0.0064, nac 0.0018
+  Sh 2.39 ft2, Sv 0.92 ft2, l_t 60 in, bay 25.0 x 13.5 in, fus 41 in, overall ~78 in
+  CLmax wing 1.737, trim dCL -0.032 (x_np 0.43c, x_cg 0.31c, Cm0_3D -0.194) -> CLmax trimmed 1.706
+  CL 0.6: CD 0.0965 (free air), 0.0921 (ground, 40 ft/s)
+  CL 1.0: CD 0.1111 (free air), 0.0985 (ground, 40 ft/s)
+  CL 1.4: CD 0.1830 (free air), 0.1566 (ground, 40 ft/s)

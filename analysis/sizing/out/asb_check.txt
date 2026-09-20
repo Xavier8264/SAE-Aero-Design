@@ -1,0 +1,10 @@
+AeroSandbox VLM check: 95 x 26 in rectangular S1223 (S 17.15 ft2, AR 3.65), Sh 3.41 ft2, Sv 1.02 ft2, l_t 72 in, tail z -4 in
+Wing alone (VLM, inviscid): CLa 3.512/rad (fine grid 3.469; lifting line a0=2pi 3.907), alpha_L0 -12.6 deg, e_near 1.056 (lifting line e_inv 0.976), x_ac 0.227 c
+Critical-section factor eta_max = max(cl_local)/CL: VLM 1.159 vs lifting line (aero.py, a0 0.95*2pi) 1.173 -> wing CLmax scales by 1.012
+Wing Cm0 about c/4: AR 3.65 -0.343 (fine -0.362), AR 40 -0.339 -> K_CM3D = 1.014  (Raymer AR/(AR+2) = 0.646)
+  viscous 2-D cm0 (NeuralFoil) -0.276; inviscid/viscous ratio 1.23 -> best-estimate wing Cm0 = -0.280 (aero.py uses -0.178)
+Wing + tail (VLM): CLa 3.840/rad, x_np 0.491 c from wing LE (aero.py hand formula 0.388 c)
+  Trim CL 0.85 (CG 0.371 c): alpha  2.59 deg, tail incidence -1.56 deg (inviscid S1223 Cm, conservative); tail-incidence lift -0.022
+  Trim CL 1.66 (CG 0.371 c): alpha 15.17 deg, tail incidence -4.29 deg (inviscid S1223 Cm, conservative); tail-incidence lift -0.062
+Trimmed CLmax: aero.py 1.661; corrected (VLM eta, cm0 x K_CM3D, VLM x_np - 0.05c fus) 1.679 (+1.1%); with inviscid VLM Cm0 1.656 (-0.3%)
+  -> aero.py errors in Cm0 (-36% magnitude) and x_np (-0.05c) largely cancel in trimmed CLmax; use the VLM values for the stability/tail design. e_near > 1 is a near-field VLM artefact: keep the lifting-line e.
