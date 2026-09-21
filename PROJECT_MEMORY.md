@@ -705,3 +705,104 @@ new sources: (1) wing test panel build and weigh, to refit K_BUILD in analysis/s
 thrust stand for 12x6E and 12x8E on 800-900 Kv motors with a real 4S 2200 pack, measuring thrust, current
 and pack sag against the apc_* data. Include what to measure, how many runs, and how each result feeds back
 into a specific script. Then, with data in hand, resume AVL stability and trim.
+
+## [2026-09-20 21:55 CDT] TEST_PLAN.md written (T-1 wing panel weigh-in, T-2 static thrust stand)
+
+Task: the NEXT TASK from the [2026-09-19 21:49] entry. Wrote the test plan for the two physical
+tests that retire the biggest uncertainties, under Jordan's TESTS FIRST ordering.
+
+### Files changed
+- NEW: TEST_PLAN.md (about 440 lines, project root).
+- NEW: analysis/tests/data/ (empty; holds the CSVs the plan specifies).
+- No analysis scripts changed. No model constants changed. Nothing committed to git.
+
+### Value of each test, computed from existing outputs [VERIFIED by reading the files]
+- T-1: structure band x0.8/x1.0/x1.2 -> payload 20.25 / 17.38 / 14.50 lb -> FS 55 / 47 / 39
+  (out/design_card.txt). 16 Flight Score points of spread, about 2.8 FS per lb of empty weight.
+- T-2: THRUST_FACTOR x1.00 -> W_TO_max +1.18 lb; x0.85 -> -1.41 lb (out/takeoff_sensitivity.csv).
+  About 2.6 lb of takeoff weight, roughly 7 FS points.
+- Therefore T-1 ranks first if only one test gets done. The two are independent and can run in
+  parallel with two people.
+
+### Design choices in the plan worth remembering
+1. T-1 weighs COMPONENTS, not just the finished panel. One panel total is one equation for three
+   unknowns (A_WING0, A_WING1, K_BUILD) and wrong combinations that match the total extrapolate
+   differently to a 95 in wing. Phase A weighs every piece of stock (n >= 15, gives the balsa
+   density scatter that COMPUTE_BACKLOG T1-5 needs), Phase B weighs each rib (n = 9) and each
+   part, Phase C weighs the assembly and the film. K_BUILD then becomes a measured glue-and-
+   assembly overhead instead of a catch-all fudge factor.
+2. T-2 takes all model-critical points at 100 PERCENT THROTTLE, varying load by changing props
+   rather than throttle. At full throttle the ESC is effectively a closed switch, so
+   V_motor = V_batt and the Drela first-order model applies directly (drela_motorprop eqs 1-2).
+   At part throttle the effective motor voltage is an extra unmeasured quantity. Part-throttle
+   points are still taken for the mission energy model but tagged lower confidence.
+3. T-2 always logs THRUST AND RPM TOGETHER, so measured thrust is compared against the APC table
+   at matched RPM. That isolates prop model error from motor, battery and ESC error. Comparing at
+   matched throttle would yield a meaningless THRUST_FACTOR.
+
+### Finding: A_WING1 looks 2 to 4 times too high [INFERRED, computed this session]
+weight.py A_WING1 = 0.05 implies 23.7 g per rib at 26 in chord (0.05 * 2.167 * 4.33 ft^2 over
+9 ribs). Computed the real number: S1223 area coefficient 0.0649 (aerosandbox af.area()), so a
+26 in chord section is 43.9 in^2; in 1/8 in balsa that is 8.6 g solid at 6 lb/ft^3, 11.5 g solid
+at 8 lb/ft^3, and 5.2 to 6.9 g at 40 percent lightening. So a real rib is 5 to 11 g against the
+model's 23.7 g. Either A_WING1 is badly overestimated (wing lighter than modeled, payload goes UP)
+or it is silently absorbing capstrips, shear web and rib doublers the model names nowhere else.
+T-1 settles it. This is the single most likely-to-move number in the weight model.
+
+### Load cell sizing for the DIY thrust gauge (Jordan asked) [VERIFIED from prop_candidates.csv]
+Worst-case static thrust per motor across all 2-motor candidates at the 110 A sensitivity case,
+DA 1400: 12x6e 7.30, 12x8e 6.88, 11x7e 6.62, 12x10e 6.33, 11x10e 5.80, 12x12e 5.78 lbf.
+4-motor candidates are about 3.2 lbf per motor.
+- Max expected one motor: 7.3 lbf (3.3 kg). Design the rig to 10 lbf (4.5 kg) for model error,
+  denser air and spin-up transients.
+- RECOMMENDATION: 10 kg (22 lbf) load cell, single-point or S-beam, loaded in line with the
+  thrust axis at 1:1. Peak then sits near 33 percent of rating. A 5 kg cell puts peak at 66
+  percent, fine on resolution, thin on overload margin. Both motors on one stand would need 20 kg.
+- Resolution is NOT the binding constraint: the test needs about 0.065 lbf (30 g) and a 10 kg cell
+  on an HX711 beats that easily. Rigidity, alignment and overload survival are the real limits.
+- [INFERRED, verify on the board] the HX711 runs 10 or 80 SPS per its RATE pin and many cheap
+  breakouts tie RATE to ground for 10 SPS. That is exactly the plan's minimum with no margin for
+  the D3 droop test. Pick a board exposing RATE, cut the trace for 80 SPS, or use a faster ADC.
+- A bare digital kitchen or luggage scale will NOT do: no 10 Hz logging, so it cannot measure
+  thrust droop over the 4.5 s roll or give the V-vs-I trace that R_BATT is fitted from.
+
+### What the plan feeds back into (tables in TEST_PLAN.md sections 2.8 and 3.8)
+T-1 -> weight.py:27 A_WING0, :28 A_WING1, :32 SPRUCE_DENS, :73-84 calibrate() (keep the NAU case
+as a printed cross-check, do not delete it), :34 BATTERY_LB. Then rerun weight, sweep, design_card
+and diff design_card.txt; the wing area, bay size and top rung can all move, and the 6-vs-8 slot
+decision re-opens.
+T-2 -> takeoff.py:33 THRUST_FACTOR; propulsion.py:35 V_OC_TO, :36 V_OC_CRUISE, :37 R_BATT,
+:38 I_DESIGN, :43 MOTOR_CLASS Rm/I0 and component masses, :100 allow a measured-Kv override;
+weight.py:34,:38. Then rerun propulsion, takeoff, sweep, design_card. The prop choice is genuinely
+in play: 2x12x6e and 4x9x45e differ by 0.1 lb of W_TO_max, far below the model's own error.
+
+### Stated limits of the plan [VERIFIED as written into section 6]
+- T-1 gives n = 1 on K_BUILD unless a second panel is built. If only one, keep a band of at least
+  x0.92/x1.08. Two panels built by two different people is the most informative version.
+- T-2 is STATIC only. It cannot measure thrust lapse with airspeed, and thrust at V_R (9.5 lbf at
+  36.4 ft/s) is what actually decides the 100 ft takeoff. The static test calibrates the prop
+  model and the calibrated model predicts the lapse. A taped-down measurement from a moving
+  vehicle is NOT a substitute. The lapse gets checked later against flight data using
+  nasa_takeoff_flighttest_method (NASA TN D-7603).
+- No covering-film source is archived, so film weight has no external cross-check (GAP noted at
+  reference/GUIDE.md:94).
+- ETA_ESC_PART (propulsion.py:39) is only indirectly checked by the part-throttle map.
+
+### Listed but NOT done (section 7, Jordan's call)
+1. Proof-load the panel to n = 3.0 after weighing, to retest SPRUCE_ALLOW 3700 psi and N_DESIGN
+   (both [INFERRED]). Needs its own rig and safety case and destroys the T-1 article; build a
+   third panel if wanted.
+2. Static thrust in ground effect vs clear of it.
+3. Rolling friction (MU_R 0.04) by towing the finished gear on the real surface with a fish scale.
+
+### Standing guidance recorded this session
+Jordan: do not wait for approval to write PROJECT_MEMORY.md entries. Write them as part of
+finishing the task; he commits to GitHub himself most of the time. Saved to Claude auto-memory.
+
+### NEXT TASK
+Jordan buys the load cell and builds the thrust gauge, and the team buys wing stock. Meanwhile the
+next session should either (a) resume AVL stability and trim from the VLM values (wing Cm0 -0.28,
+x_np ~0.44c) as the [2026-09-19 00:28] summary planned, since T-1 and T-2 are now blocked on
+hardware, or (b) write analysis/tests/reduce_panel.py and reduce_thrust.py against the CSV schemas
+in TEST_PLAN.md so the reduction is ready before data exists. (b) is cheap and removes a step from
+test day; (a) is the bigger open design question.
