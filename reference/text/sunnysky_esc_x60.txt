@@ -1,0 +1,525 @@
+# ID: sunnysky_esc_x60
+# SOURCE: https://sunnyskyusa.com/products/sunnysky-60a-2-6s-brushless-esc-with-5v-6v-7-4v-5a-bec-3-5mm-rc-plug
+# ORIGINAL: reference/raw/sunnysky_esc_x60.html
+# CONVERTED: 2026-09-24 10:09 UTC-0500 | type html | 1 pages | ~3136 tokens
+# NOTE: SunnySky X series ESC X60A 2-6S, 5.6/7.4 V 8 A SBEC V2 (the team's ESC): 60 A cont, 80 A 10 s, 61 g, XT60, 3.5 mm bullets
+
+=== PAGE 1 ===
+# SUNNYSKY X Series ESC X60A 2-6S with 5.6V/7.4V/8A SBEC V2 – SunnySky USA
+
+[{"id":490797957359,"handle":"all-escs","title":"All ESCs","updated_at":"2026-09-24T07:02:29-04:00","body_html":"\u003cp\u003eSunnySky ESCs used for RC airplane, RC helicopters, and multirotors,\u003c\/p\u003e","published_at":"2026-04-01T16:08:42-04:00","sort_order":"alpha-asc","template_suffix":"","disjunctive":true,"rules":[{"column":"tag","relation":"equals","condition":"ESC"},{"column":"tag","relation":"equals","condition":"Eolo ESC"},{"column":"tag","relation":"equals","condition":"Multirotor ESC"},{"column":"tag","relation":"equals","condition":"Plane ESC"},{"column":"tag","relation":"equals","condition":"Quad ESC"}],"published_scope":"global"},{"id":479469732079,"handle":"fixed-wing-esc","title":"Fixed Wing ESC","updated_at":"2026-09-24T07:02:29-04:00","body_html":"","published_at":"2025-10-22T11:36:28-04:00","sort_order":"best-selling","template_suffix":"","disjunctive":true,"rules":[{"column":"tag","relation":"equals","condition":"Plane ESC"}],"published_scope":"global"}]
+
+["Eolo ESC","Plane ESC"]
+
+Your orders are shipped from Columbus, Ohio, USA. Check our sister online store for water sport products.
+
+- +1-614-465-6688
+
+- info@sunnyskyusa.com
+
+{"id":8299132879087,"title":"SUNNYSKY X Series ESC X60A 2-6S with 5.6V\/7.4V\/8A SBEC V2","handle":"sunnysky-60a-2-6s-brushless-esc-with-5v-6v-7-4v-5a-bec-3-5mm-rc-plug","description":"\u003cp\u003e\u003cimg src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/6388627226993079299925884.jpg?v=1788536467\" alt=\"\"\u003e\u003c\/p\u003e\n\u003cp\u003eFeatures:\u003cbr\u003eContinuous current: 60A\u003cbr\u003eBurst current: 80A (≤ 10s)\u003cbr\u003eInput voltage: 2-6S LiPo\u003cbr\u003eBEC output: 5.6V\/7.4V @ 8A\u003cbr\u003eMotor connector: 3.5mm banana plug\u003cbr\u003eBattery connector: XT60\u003cbr\u003eDimensions: 70×35×12mm (wires excluding)\u003cbr\u003eWeight: 61g\u003cbr\u003eFeatures:\u003cbr\u003eHigh performance ratings: Designed for 60A continuous current and 80A peak for up to 10 seconds, making it an ideal choice for high power RC airplanes.\u003cbr\u003eExtended Battery Compatibility: This ESC supports a wide range of input voltages from 2-6S LiPO, giving you more freedom to choose your power setup.\u003cbr\u003eVersatile BEC output: Features a switchable BEC with 5.6V or 7.4V options at 8A to provide a reliable and stable power supply for all onboard electronic devices.\u003cbr\u003eQuality construction: Comes with a 3.5mm banana plug and XT60 connector, providing solid and efficient connections between your battery and motor.\u003cbr\u003eCompact design: despite its high-performance ratings, the unit measures just 70×35×12mm and weighs 61g, making it easy to install on a variety of RC planes.\u003cbr\u003e\u003cbr\u003ePackage Included:\u003cbr\u003e\u003cbr\u003e1 X 60A\u003c\/p\u003e","published_at":"2025-08-28T08:04:58-04:00","created_at":"2024-02-29T11:37:28-05:00","vendor":"SunnySky USA","type":"ESC","tags":["Eolo ESC","Plane ESC"],"price":4599,"price_min":4599,"price_max":4599,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":44574250369263,"title":"Default Title","option1":"Default Title","option2":null,"option3":null,"sku":"SS-ESC-X60A","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"SUNNYSKY X Series ESC X60A 2-6S with 5.6V\/7.4V\/8A SBEC V2","public_title":null,"options":["Default Title"],"price":4599,"weight":50,"compare_at_price":null,"inventory_quantity":57,"inventory_management":"shopify","inventory_policy":"deny","barcode":null,"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}}],"images":["\/\/sunnyskyusa.com\/cdn\/shop\/files\/20250623113536_524561.jpg?v=1788536496"],"featured_image":"\/\/sunnyskyusa.com\/cdn\/shop\/files\/20250623113536_524561.jpg?v=1788536496","options":["Title"],"media":[{"alt":null,"id":40510551949551,"position":1,"preview_image":{"aspect_ratio":1.0,"height":700,"width":700,"src":"\/\/sunnyskyusa.com\/cdn\/shop\/files\/20250623113536_524561.jpg?v=1788536496"},"aspect_ratio":1.0,"height":700,"media_type":"image","src":"\/\/sunnyskyusa.com\/cdn\/shop\/files\/20250623113536_524561.jpg?v=1788536496","width":700}],"requires_selling_plan":false,"selling_plan_groups":[],"content":"\u003cp\u003e\u003cimg src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/6388627226993079299925884.jpg?v=1788536467\" alt=\"\"\u003e\u003c\/p\u003e\n\u003cp\u003eFeatures:\u003cbr\u003eContinuous current: 60A\u003cbr\u003eBurst current: 80A (≤ 10s)\u003cbr\u003eInput voltage: 2-6S LiPo\u003cbr\u003eBEC output: 5.6V\/7.4V @ 8A\u003cbr\u003eMotor connector: 3.5mm banana plug\u003cbr\u003eBattery connector: XT60\u003cbr\u003eDimensions: 70×35×12mm (wires excluding)\u003cbr\u003eWeight: 61g\u003cbr\u003eFeatures:\u003cbr\u003eHigh performance ratings: Designed for 60A continuous current and 80A peak for up to 10 seconds, making it an ideal choice for high power RC airplanes.\u003cbr\u003eExtended Battery Compatibility: This ESC supports a wide range of input voltages from 2-6S LiPO, giving you more freedom to choose your power setup.\u003cbr\u003eVersatile BEC output: Features a switchable BEC with 5.6V or 7.4V options at 8A to provide a reliable and stable power supply for all onboard electronic devices.\u003cbr\u003eQuality construction: Comes with a 3.5mm banana plug and XT60 connector, providing solid and efficient connections between your battery and motor.\u003cbr\u003eCompact design: despite its high-performance ratings, the unit measures just 70×35×12mm and weighs 61g, making it easy to install on a variety of RC planes.\u003cbr\u003e\u003cbr\u003ePackage Included:\u003cbr\u003e\u003cbr\u003e1 X 60A\u003c\/p\u003e"}
+
+- Home
+
+- SUNNYSKY X Series ESC X60A 2-6S with 5.6V/7.4V/8A SBEC V2
+
+# SUNNYSKY X Series ESC X60A 2-6S with 5.6V/7.4V/8A SBEC V2
+
+5 reviews
+
+-
+
+##### Product Description
+
+Default Title - $45.99 USD
+
+Maximum quantity available reached.
+
+- Description
+
+Features:
+Continuous current: 60A
+Burst current: 80A (≤ 10s)
+Input voltage: 2-6S LiPo
+BEC output: 5.6V/7.4V @ 8A
+Motor connector: 3.5mm banana plug
+Battery connector: XT60
+Dimensions: 70×35×12mm (wires excluding)
+Weight: 61g
+Features:
+High performance ratings: Designed for 60A continuous current and 80A peak for up to 10 seconds, making it an ideal choice for high power RC airplanes.
+Extended Battery Compatibility: This ESC supports a wide range of input voltages from 2-6S LiPO, giving you more freedom to choose your power setup.
+Versatile BEC output: Features a switchable BEC with 5.6V or 7.4V options at 8A to provide a reliable and stable power supply for all onboard electronic devices.
+Quality construction: Comes with a 3.5mm banana plug and XT60 connector, providing solid and efficient connections between your battery and motor.
+Compact design: despite its high-performance ratings, the unit measures just 70×35×12mm and weighs 61g, making it easy to install on a variety of RC planes.
+
+Package Included:
+
+1 X 60A
+
+-
+
+-
+
+-
+
+-
+
+## Customer Reviews
+
+Based on 5 reviews
+
+Write a review
+
+100%
+(5)
+
+0%
+(0)
+
+0%
+(0)
+
+0%
+(0)
+
+0%
+(0)
+
+H
+
+Hryhorii S.
+
+SUNNYSKY X60A 2-6S Brushless ESC with 5V/6V/7.4V/5A BEC
+
+P
+
+Patrick C.R.
+
+Phenomenal Just a really impressively designed and manufactured motor
+
+c
+
+christian c.
+
+This ESC is a beast
+
+J
+
+Jake W.
+
+SUNNYSKY X60A 2-6S Brushless ESC with 5V/6V/7.4V/5A BEC
+
+J
+
+James
+
+This ESC is a beast
+
+### Related Products
+
+##### Eolo 40A Pro High Voltage ESC 6-14S IP67 No BEC
+
+1 review
+
+$119.99
+
+##### Eolo 50A Light Version V2 ESC 4-6S
+
+2 reviews
+
+$35.99
+
+##### Eolo 50A Pro V2 Multirotor ESC 4-6S IP67
+
+2 reviews
+
+$49.99
+
+##### SunnySky and OMP hobby ESC Bluetooth program Module
+
+4 reviews
+
+$29.99
+
+##### Sunnysky UBEC 30A Power Regulator Module
+
+No reviews
+
+$59.99
+
+##### Sunnysky X series 30A 2-6S ESC
+
+3 reviews
+
+$17.99
+
+##### SUNNYSKY X Series Brushless ESC X100A 2-6S with 5.6V/7.4V 8A SBEC V2
+
+No reviews
+
+$59.99
+
+##### SUNNYSKY X Series Brushless ESC X120A 2-6S with 5.6V/7.4V 8A SBEC V2
+
+No reviews
+
+$69.99
+
+##### SUNNYSKY X Series Brushless ESC X80A 2-6S with 5.6V/7.4V 8A SBEC V2
+
+No reviews
+
+$55.99
+
+##### SunnySky X Series ESC 40A 2-4S Airplane SBEC V2
+
+4 reviews
+
+$19.99
+
+##### Sunnysky X105A PRO 3-6S ESC
+
+No reviews
+
+$120.99
+
+##### Sunnysky X125A V2 PRO 3-8S ESC
+
+No reviews
+
+$136.99
+
+##### Free and low shipping cost
+
+##### Professional customer service
+
+##### Fast local delivery
+
+#### Footer menu
+
+- About us
+
+- Legal information
+
+- Privacy policy
+
+- Order & shipping
+
+- Payment
+
+- Return & warranty
+
+#### OUR WORKING HOURS
+
+Monday to Friday, 9:00am-5:00pm
+
+Closed at weekends and US federal holidays.
+
+#### CONTACT US
+
+SunnySky USA LLC
+
+5005 Transamerica Dr
+Columbus, OH 43228,
+USA
+
+Tel: +1-614-465-6688
+
+Fax: +1-614-636-4516
+
+info@sunnyskyusa.com
+
+#### Keep in Touch
+
+Sign up for our newsletter and be the first to know about coupons and special promotions.
+
+-
+
+-
+
+-
+
+-
+
+© 2026 SunnySky USA | Shopify Theme by Mile High Themes | Powered by Shopify
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+### Net Orders Checkout
+
+Item
+
+Price
+Qty
+Total
+
+| | | Subtotal | $0.00 |
+
+| | | Shipping | |
+
+| | | Total | |
+
+### Shipping Address
+
+United States
+---
+Afghanistan
+Åland Islands
+Albania
+Algeria
+Andorra
+Angola
+Anguilla
+Antigua & Barbuda
+Argentina
+Armenia
+Aruba
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bermuda
+Bhutan
+Bolivia
+Bosnia & Herzegovina
+Botswana
+Bouvet Island
+Brazil
+British Indian Ocean Territory
+British Virgin Islands
+Brunei
+Bulgaria
+Burkina Faso
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Cayman Islands
+Central African Republic
+Chad
+Chile
+China
+Christmas Island
+Cocos (Keeling) Islands
+Colombia
+Comoros
+Congo - Brazzaville
+Congo - Kinshasa
+Cook Islands
+Costa Rica
+Croatia
+Cuba
+Curaçao
+Cyprus
+Czech Republic
+Côte d’Ivoire
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Falkland Islands
+Faroe Islands
+Fiji
+Finland
+France
+French Guiana
+French Polynesia
+French Southern Territories
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Gibraltar
+Greece
+Greenland
+Grenada
+Guadeloupe
+Guatemala
+Guernsey
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Heard & McDonald Islands
+Honduras
+Hong Kong SAR China
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Isle of Man
+Israel
+Italy
+Jamaica
+Japan
+Jersey
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macau SAR China
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Martinique
+Mauritania
+Mauritius
+Mayotte
+Mexico
+Moldova
+Monaco
+Mongolia
+Montenegro
+Montserrat
+Morocco
+Mozambique
+Myanmar (Burma)
+Namibia
+Nauru
+Nepal
+Netherlands
+Netherlands Antilles
+New Caledonia
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Niue
+Norfolk Island
+North Korea
+Norway
+Oman
+Pakistan
+Palestinian Territories
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Pitcairn Islands
+Poland
+Portugal
+Qatar
+Réunion
+Romania
+Russia
+Rwanda
+Saint Martin
+Samoa
+San Marino
+São Tomé & Príncipe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Georgia & South Sandwich Islands
+South Korea
+South Sudan
+Spain
+Sri Lanka
+St. Barthélemy
+St. Helena
+St. Kitts & Nevis
+St. Lucia
+St. Martin
+St. Pierre & Miquelon
+St. Vincent & Grenadines
+Sudan
+Suriname
+Svalbard & Jan Mayen
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Timor-Leste
+Togo
+Tokelau
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Turks & Caicos Islands
+Tuvalu
+U.S. Outlying Islands
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Wallis & Futuna
+Western Sahara
+Yemen
+Zambia
+Zimbabwe
+
+AlabamaAlaskaAmerican SamoaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFederated States of MicronesiaFloridaGeorgiaGuamHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarshall IslandsMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaNorthern Mariana IslandsOhioOklahomaOregonPalauPennsylvaniaPuerto RicoRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirgin IslandsVirginiaWashingtonWest VirginiaWisconsinWyomingArmed Forces AmericasArmed Forces EuropeArmed Forces Pacific
+
+### Shipping Methods

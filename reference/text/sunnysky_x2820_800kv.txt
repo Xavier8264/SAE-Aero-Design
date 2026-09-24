@@ -1,0 +1,965 @@
+# ID: sunnysky_x2820_800kv
+# SOURCE: https://sunnyskyusa.com/products/sunnysky-x2820-brushless-motors
+# ORIGINAL: reference/raw/sunnysky_x2820_800kv.html
+# CONVERTED: 2026-09-21 22:38 UTC-0500 | type html | 1 pages | ~47554 tokens
+# NOTE: OFFICIAL SunnySky USA page, original black X Series X2820 (KV 800/920/1100). Spec block + manufacturer test table (prop, V, A, gf, W, g/W; no RPM). Team motor = KV800. Not the V3 line.
+
+=== PAGE 1 ===
+# SunnySky X2820 Brushless Motors – SunnySky USA
+
+[{"id":490798973167,"handle":"all-motors","title":"All Motors","updated_at":"2026-09-21T07:02:51-04:00","body_html":"\u003cp\u003eSunnySky motors are widely recognized in the hobby, drone, and UAV industries for delivering high performance at an affordable price. Known for their reliability and precision engineering, SunnySky motors are trusted by RC hobby pilots and UAV professionals worldwide.\u003c\/p\u003e\n\u003cp\u003eAll SunnySky motors, excluding the Angel series, are hand-wound to improve efficiency, power output, and overall smoothness. Combined with high-quality materials and precision components, this results in motors that offer consistent performance, durability, and long service life across a wide range of applications, including fixed-wing aircraft and multirotor drones.\u003c\/p\u003e\n\u003cp data-start=\"770\" data-end=\"795\"\u003e\u003cstrong data-start=\"770\" data-end=\"795\"\u003eProduct Line Overview\u003cbr\u003e\u003c\/strong\u003e\u003cstrong data-start=\"799\" data-end=\"814\"\u003eX V3 Series \u003c\/strong\u003eFeaturing the signature blue and white design, the X V3 motors are optimized for fixed-wing aircraft, delivering excellent efficiency and strong power output.\u003cbr\u003e\u003cstrong data-start=\"981\" data-end=\"993\"\u003eX Series \u003c\/strong\u003eBlack-finished airplane motors that offer a great balance of performance and affordability, making them a popular choice for everyday fixed-wing applications.\u003cbr\u003e\u003cstrong data-start=\"1160\" data-end=\"1172\"\u003eV Series \u003c\/strong\u003eLightweight and efficient motors designed specifically for multirotor platforms, ideal for applications where weight savings and endurance are critical.\u003cbr\u003e\u003cstrong data-start=\"1333\" data-end=\"1346\"\u003eXS Series \u003c\/strong\u003eHigh-power motors built for multirotor setups where maximum thrust and performance are the top priority.\u003cbr\u003e\u003cstrong data-start=\"1459\" data-end=\"1471\"\u003eM Series \u003c\/strong\u003e“M” stands for masterpiece—these motors represent the highest level of efficiency and performance in the SunnySky lineup for multirotor applications.\u003cbr\u003e\u003cstrong data-start=\"1629\" data-end=\"1645\"\u003eAngel Series \u003c\/strong\u003eThe only machine-wound series in the lineup, designed as a cost-effective option while still maintaining SunnySky’s standards for quality and reliable performance.\u003c\/p\u003e","published_at":"2026-04-01T16:47:43-04:00","sort_order":"alpha-asc","template_suffix":"","disjunctive":true,"rules":[{"column":"tag","relation":"equals","condition":"Airplane Motor"},{"column":"tag","relation":"equals","condition":"Angel Motor"},{"column":"tag","relation":"equals","condition":"Edge Racing Motor"},{"column":"tag","relation":"equals","condition":"Eolo Motor"},{"column":"tag","relation":"equals","condition":"F3P Motor"},{"column":"tag","relation":"equals","condition":"Gimbal Motor"},{"column":"tag","relation":"equals","condition":"M Motor"},{"column":"tag","relation":"equals","condition":"Multirotor Motor"},{"column":"tag","relation":"equals","condition":"Quad Motor"},{"column":"tag","relation":"equals","condition":"R Motor"},{"column":"tag","relation":"equals","condition":"SunnySky X Motor"},{"column":"tag","relation":"equals","condition":"V Motor"},{"column":"tag","relation":"equals","condition":"X Motor"},{"column":"tag","relation":"equals","condition":"X V3 Motor"},{"column":"tag","relation":"equals","condition":"XS Motor"},{"column":"tag","relation":"equals","condition":"motor"},{"column":"tag","relation":"equals","condition":"heli motor"}],"published_scope":"global"},{"id":441122959,"handle":"x-motors","title":"X Motors","updated_at":"2026-09-19T07:03:32-04:00","body_html":"Professional Motors for Fixed Wings","published_at":"2017-05-22T16:10:52-04:00","sort_order":"alpha-asc","template_suffix":"","disjunctive":false,"rules":[{"column":"tag","relation":"equals","condition":"x motor"},{"column":"title","relation":"not_contains","condition":"multirotor"}],"published_scope":"global","image":{"created_at":"2017-05-22T16:11:25-04:00","alt":"","width":1140,"height":400,"src":"\/\/sunnyskyusa.com\/cdn\/shop\/collections\/x2212.jpg?v=1543896318"}}]
+
+["Airplane Motor","X Motor"]
+
+Your orders are shipped from Columbus, Ohio, USA. Check our sister online store for water sport products.
+
+- +1-614-465-6688
+
+- info@sunnyskyusa.com
+
+{"id":11568411855,"title":"SunnySky X2820 Brushless Motors","handle":"sunnysky-x2820-brushless-motors","description":"\u003ch5\u003eSpecifications\u003c\/h5\u003e\n\u003cp\u003eX series of motors are processed by CNC milling, the hollow-designed appearance not only guarantee good heat dissipation, but also greatly reduce motor weight. In addition, it also make motors look more strong at visual.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eStainless steel solid shaft\u003c\/strong\u003e\u003cbr\u003eThe motor shaft is made of 420 stainless steel material imported from Japan. After heat treatment, the shafts are improved to high strength, excellent ductility, and better resistance to bending and breaking.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003e6061-T6 Aviation aluminum alloy\u003c\/strong\u003e\u003cbr\u003e Top and bottom caps are made of high strength 6061-T6 aviation aluminum alloy, with high hardness and high strength of extension, which can ensure reliable performance of motors.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eImported NMB bearings\u003c\/strong\u003e\u003cbr\u003eX series uses customized NMB mini bearings imported from Japan, which provide longer life, quiet and stable operation of these motors.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eHand wound\u003c\/strong\u003e\u003cbr\u003eThe coils of X motors are all hand wound. This manufacturing procedure costs much more in labor, but makes the coil tight, neat, better coil space factor, and can increase the continuous power output of motors.\u003c\/p\u003e\n\u003ch5\u003e[TABS]OVERVIEW\u003c\/h5\u003e\n\u003cp\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/1_01_90e96d7b-886f-42ff-bfd3-93568c394753.jpg?v=1496902157\" alt=\"\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/1_02_a3a50595-242d-4b66-87f6-bdd3d93de3d2.jpg?v=1496902166\" alt=\"\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/1_03_3ff4592f-9ea2-45eb-8d42-50955a7667b9.jpg?v=1496902181\" alt=\"\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/1_04_02ea355c-1131-4fb1-8f94-20b83a1dbd9e.jpg?v=1496902191\" alt=\"\"\u003e\u003c\/p\u003e\n\u003ch5\u003eKV800\u003c\/h5\u003e\n\u003ctable\u003e\n\u003ctbody\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Diameter \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"295\" style=\"word-break: break-all;\"\u003e28mm\u003c\/td\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Rotor Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"500\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 35mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Thickness \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e20mm\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Shaft Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 5mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Stator Slots \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd\u003e12\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e (Without Shaft) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 42mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Rotor Poles \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e14\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 61mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Kv \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e800\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Lipo Cell \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 3-5S \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No-load current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e0.9A\/10V\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e ESC \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 60A \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Resistance \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e41mΩ\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Recommended Prop(inch) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: normal;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e APC13*6.5\/APC12*6\/APC12*8\/APC13*8 \u003cspan style=\"white-space: pre;\"\u003e \u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e46A\/30s\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\n\u003cp\u003eWeight for aerobatics airplane\u003c\/p\u003e\n\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 1400g-1800g (4S APC12*6\\APC12*8\\APC13*6.5\\APC13*8) \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Power \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e700W\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight for 3D airplane \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1100g-1400g (4S APC12*6\\APC12*8\\APC13*6.5\\APC13*8)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\n\u003cp\u003e138g\u003c\/p\u003e\n\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"160\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Prop(inch) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"152\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Voltage(V) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"126\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Amps(A) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"140\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Thrust(gf) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"118\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Watts(W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"163\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Efficiency(g\/W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"211\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Load temperature in 100% throttle \u003c\/span\u003e\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"16\" class=\"bgcf3f3f3\"\u003eAPC13x6.5\u003c\/td\u003e\n\u003ctd rowspan=\"6\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.1\u003c\/td\u003e\n\u003ctd width=\"68\"\u003e500\u003c\/td\u003e\n\u003ctd width=\"117\"\u003e56.61\u003c\/td\u003e\n\u003ctd width=\"171\"\u003e8.832361774\u003c\/td\u003e\n\u003ctd rowspan=\"16\" class=\"bgcfffdfd font16\"\u003e60°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.7\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e96.57\u003c\/td\u003e\n\u003ctd\u003e7.766387077\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e12.7\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e140.97\u003c\/td\u003e\n\u003ctd\u003e7.093707881\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e17.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e192.03\u003c\/td\u003e\n\u003ctd\u003e6.509399573\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e22.6\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e250.86\u003c\/td\u003e\n\u003ctd\u003e5.979430758\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e25.9\u003c\/td\u003e\n\u003ctd\u003e1670\u003c\/td\u003e\n\u003ctd\u003e287.49\u003c\/td\u003e\n\u003ctd\u003e5.808897701\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e59.2\u003c\/td\u003e\n\u003ctd\u003e8.445945946\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e6.8\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e100.64\u003c\/td\u003e\n\u003ctd\u003e7.452305246\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.1\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e149.48\u003c\/td\u003e\n\u003ctd\u003e6.689858175\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.8\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e204.24\u003c\/td\u003e\n\u003ctd\u003e6.120250685\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e17.9\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e264.92\u003c\/td\u003e\n\u003ctd\u003e5.662086668\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e22.2\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e328.56\u003c\/td\u003e\n\u003ctd\u003e5.326272218\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e27.2\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e402.56\u003c\/td\u003e\n\u003ctd\u003e4.968203498\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e33.1\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e489.88\u003c\/td\u003e\n\u003ctd\u003e4.592961542\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37.5\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e555\u003c\/td\u003e\n\u003ctd\u003e4.504504505\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e40.1\u003c\/td\u003e\n\u003ctd\u003e2670\u003c\/td\u003e\n\u003ctd\u003e593.48\u003c\/td\u003e\n\u003ctd\u003e4.498887915\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"8\" class=\"bgcf3f3f3\"\u003eAPC12x6\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.2\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e62.16\u003c\/td\u003e\n\u003ctd\u003e8.043758044\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e54°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.4\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e109.52\u003c\/td\u003e\n\u003ctd\u003e6.84806428\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.8\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e159.84\u003c\/td\u003e\n\u003ctd\u003e6.256256256\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.5\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e214.6\u003c\/td\u003e\n\u003ctd\u003e5.824790308\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.7\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e276.76\u003c\/td\u003e\n\u003ctd\u003e5.419858361\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.2\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e343.36\u003c\/td\u003e\n\u003ctd\u003e5.096691519\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.1\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e415.88\u003c\/td\u003e\n\u003ctd\u003e4.809079542\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e32.7\u003c\/td\u003e\n\u003ctd\u003e2240\u003c\/td\u003e\n\u003ctd\u003e483.96\u003c\/td\u003e\n\u003ctd\u003e4.628481693\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"8\" class=\"bgcf3f3f3\"\u003eAPC12x8\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e66.6\u003c\/td\u003e\n\u003ctd\u003e7.507507508\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e56°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.8\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e115.44\u003c\/td\u003e\n\u003ctd\u003e6.496881497\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e11.6\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e171.68\u003c\/td\u003e\n\u003ctd\u003e5.824790308\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e15.7\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e232.36\u003c\/td\u003e\n\u003ctd\u003e5.379583405\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20.5\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e303.4\u003c\/td\u003e\n\u003ctd\u003e4.943968359\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e26\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e384.8\u003c\/td\u003e\n\u003ctd\u003e4.547817048\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e31.6\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e467.68\u003c\/td\u003e\n\u003ctd\u003e4.276428327\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e38.5\u003c\/td\u003e\n\u003ctd\u003e2300\u003c\/td\u003e\n\u003ctd\u003e569.8\u003c\/td\u003e\n\u003ctd\u003e4.036504037\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"16\" class=\"bgcf3f3f3\"\u003eAPC13x8\u003c\/td\u003e\n\u003ctd rowspan=\"6\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.3\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e58.83\u003c\/td\u003e\n\u003ctd\u003e8.499065103\u003c\/td\u003e\n\u003ctd rowspan=\"16\" class=\"bgcfffdfd font16\"\u003e64°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e99.9\u003c\/td\u003e\n\u003ctd\u003e7.507507508\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.6\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e150.96\u003c\/td\u003e\n\u003ctd\u003e6.62427133\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.2\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e202.02\u003c\/td\u003e\n\u003ctd\u003e6.187506188\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.4\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e259.74\u003c\/td\u003e\n\u003ctd\u003e5.775005775\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.5\u003c\/td\u003e\n\u003ctd\u003e1760\u003c\/td\u003e\n\u003ctd\u003e327.45\u003c\/td\u003e\n\u003ctd\u003e5.374866392\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.2\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e62.16\u003c\/td\u003e\n\u003ctd\u003e8.043758044\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.1\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e105.08\u003c\/td\u003e\n\u003ctd\u003e7.137419109\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.5\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e155.4\u003c\/td\u003e\n\u003ctd\u003e6.435006435\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e211.64\u003c\/td\u003e\n\u003ctd\u003e5.906255906\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e19\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e281.2\u003c\/td\u003e\n\u003ctd\u003e5.33428165\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.7\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e350.76\u003c\/td\u003e\n\u003ctd\u003e4.989166382\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.9\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e427.72\u003c\/td\u003e\n\u003ctd\u003e4.675956233\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35.5\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e525.4\u003c\/td\u003e\n\u003ctd\u003e4.282451466\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e40.2\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e594.96\u003c\/td\u003e\n\u003ctd\u003e4.201963157\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e45.2\u003c\/td\u003e\n\u003ctd\u003e2790\u003c\/td\u003e\n\u003ctd\u003e668.96\u003c\/td\u003e\n\u003ctd\u003e4.170652954\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cp\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/X2820_d05fb405-738f-400b-92c4-8657a388891f.jpg?v=1553492183\" alt=\"\"\u003e\u003c\/p\u003e\n\u003ch5\u003eKV920\u003c\/h5\u003e\n\u003ctable\u003e\n\u003ctbody\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Diameter \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"295\" style=\"word-break: break-all;\"\u003e28mm\u003c\/td\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Rotor Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"500\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 35mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Thickness \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e20mm\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Shaft Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 5mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Stator Slots \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd\u003e12\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e (Without Shaft) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 42mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Rotor Poles \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e14\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 61mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Kv \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e920\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Lipo Cell \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 3-5S \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No-load current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1.1A\/10V\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e ESC \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 60A \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Resistance \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e28mΩ\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Recommended Prop(inch) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: normal;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e APC13*6.5\/APC12*6\/APC12*8\/APC11*5.5\/APC11*7\/APC11*8 \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e52A\/30s\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\n\u003cdiv\u003e Weight for aerobatics airplane \u003c\/div\u003e\n\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 1400g-1700g (3S APC13*6.5\\12*6\\12*8) (4S APC11*5.5\\APC11*7\\APC11*8) \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Power \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e750W\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight for 3D airplane \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1100g-1400g (3S APC13*6.5\/APC13*8)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\n\u003cp\u003e138g\u003c\/p\u003e\n\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"160\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Prop(inch) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"152\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Voltage(V) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"126\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Amps(A) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"140\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Thrust(gf) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"118\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Watts(W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"163\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Efficiency(g\/W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"211\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Load temperature in 100% throttle \u003c\/span\u003e\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC13x6.5\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5\u003c\/td\u003e\n\u003ctd width=\"87\"\u003e500\u003c\/td\u003e\n\u003ctd width=\"100\"\u003e55.5\u003c\/td\u003e\n\u003ctd width=\"185\"\u003e9.009009009\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e50°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.9\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e98.79\u003c\/td\u003e\n\u003ctd\u003e7.591861524\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e12.9\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e143.19\u003c\/td\u003e\n\u003ctd\u003e6.983727914\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e17.5\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e194.25\u003c\/td\u003e\n\u003ctd\u003e6.435006435\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e255.3\u003c\/td\u003e\n\u003ctd\u003e5.875440658\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e315.24\u003c\/td\u003e\n\u003ctd\u003e5.551325974\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37.3\u003c\/td\u003e\n\u003ctd\u003e2130\u003c\/td\u003e\n\u003ctd\u003e414.03\u003c\/td\u003e\n\u003ctd\u003e5.144554742\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"16\" class=\"bgcf3f3f3\"\u003eAPC12x6\u003c\/td\u003e\n\u003ctd rowspan=\"6\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e61.05\u003c\/td\u003e\n\u003ctd\u003e8.19000819\u003c\/td\u003e\n\u003ctd rowspan=\"16\" class=\"bgcfffdfd font16\"\u003e58°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.3\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e103.23\u003c\/td\u003e\n\u003ctd\u003e7.265329846\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.9\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e154.29\u003c\/td\u003e\n\u003ctd\u003e6.481301445\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e203.13\u003c\/td\u003e\n\u003ctd\u003e6.153694678\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e266.4\u003c\/td\u003e\n\u003ctd\u003e5.630630631\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.8\u003c\/td\u003e\n\u003ctd\u003e1780\u003c\/td\u003e\n\u003ctd\u003e330.78\u003c\/td\u003e\n\u003ctd\u003e5.381220146\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.2\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e62.16\u003c\/td\u003e\n\u003ctd\u003e8.043758044\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.3\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e108.04\u003c\/td\u003e\n\u003ctd\u003e6.94187338\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.8\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e159.84\u003c\/td\u003e\n\u003ctd\u003e6.256256256\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.7\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e217.56\u003c\/td\u003e\n\u003ctd\u003e5.74554146\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e19.1\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e282.68\u003c\/td\u003e\n\u003ctd\u003e5.306353474\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.9\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e353.72\u003c\/td\u003e\n\u003ctd\u003e4.947416035\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.3\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e433.64\u003c\/td\u003e\n\u003ctd\u003e4.612120653\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e33.9\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e501.72\u003c\/td\u003e\n\u003ctd\u003e4.484573069\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e40.4\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e597.92\u003c\/td\u003e\n\u003ctd\u003e4.181161359\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e48.4\u003c\/td\u003e\n\u003ctd\u003e2860\u003c\/td\u003e\n\u003ctd\u003e716.32\u003c\/td\u003e\n\u003ctd\u003e3.992628993\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC12x8\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.8\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e64.38\u003c\/td\u003e\n\u003ctd\u003e7.766387077\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e47°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e111\u003c\/td\u003e\n\u003ctd\u003e6.756756757\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.9\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e165.39\u003c\/td\u003e\n\u003ctd\u003e6.046314771\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e222\u003c\/td\u003e\n\u003ctd\u003e5.630630631\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e26.1\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e289.71\u003c\/td\u003e\n\u003ctd\u003e5.177591384\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e32.5\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e360.75\u003c\/td\u003e\n\u003ctd\u003e4.851004851\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35.8\u003c\/td\u003e\n\u003ctd\u003e1880\u003c\/td\u003e\n\u003ctd\u003e397.38\u003c\/td\u003e\n\u003ctd\u003e4.730987971\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"8\" class=\"bgcf3f3f3\"\u003eAPC13x8\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.4\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e59.94\u003c\/td\u003e\n\u003ctd\u003e8.341675008\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e53°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.3\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e103.23\u003c\/td\u003e\n\u003ctd\u003e7.265329846\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.7\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e152.07\u003c\/td\u003e\n\u003ctd\u003e6.575918985\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.6\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e206.46\u003c\/td\u003e\n\u003ctd\u003e6.054441538\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24.1\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e267.51\u003c\/td\u003e\n\u003ctd\u003e5.607267018\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e30.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e337.44\u003c\/td\u003e\n\u003ctd\u003e5.18610716\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e36.5\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e405.15\u003c\/td\u003e\n\u003ctd\u003e4.936443293\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e42.9\u003c\/td\u003e\n\u003ctd\u003e2180\u003c\/td\u003e\n\u003ctd\u003e476.19\u003c\/td\u003e\n\u003ctd\u003e4.578004578\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"9\" class=\"bgcf3f3f3\"\u003eAPC11x5.5\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e66.6\u003c\/td\u003e\n\u003ctd\u003e7.507507508\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e49°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.9\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e116.92\u003c\/td\u003e\n\u003ctd\u003e6.414642491\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e11.6\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e171.68\u003c\/td\u003e\n\u003ctd\u003e5.824790308\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e15.5\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e229.4\u003c\/td\u003e\n\u003ctd\u003e5.448997384\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e296\u003c\/td\u003e\n\u003ctd\u003e5.067567568\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24.6\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e364.08\u003c\/td\u003e\n\u003ctd\u003e4.806635904\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e30.1\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e445.48\u003c\/td\u003e\n\u003ctd\u003e4.489539373\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35.9\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e531.32\u003c\/td\u003e\n\u003ctd\u003e4.234736129\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37.3\u003c\/td\u003e\n\u003ctd\u003e2360\u003c\/td\u003e\n\u003ctd\u003e552.04\u003c\/td\u003e\n\u003ctd\u003e4.275052532\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"9\" class=\"bgcf3f3f3\"\u003eAPC11x7\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.7\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e69.56\u003c\/td\u003e\n\u003ctd\u003e7.188039103\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e55°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.2\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e121.36\u003c\/td\u003e\n\u003ctd\u003e6.179960448\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e12.3\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e182.04\u003c\/td\u003e\n\u003ctd\u003e5.493298176\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e16.8\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e248.64\u003c\/td\u003e\n\u003ctd\u003e5.027348777\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e21.7\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e321.16\u003c\/td\u003e\n\u003ctd\u003e4.670569187\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e26.5\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e392.2\u003c\/td\u003e\n\u003ctd\u003e4.462009179\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e33.1\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e489.88\u003c\/td\u003e\n\u003ctd\u003e4.082632481\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e39.4\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e583.12\u003c\/td\u003e\n\u003ctd\u003e3.858553985\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e45\u003c\/td\u003e\n\u003ctd\u003e2540\u003c\/td\u003e\n\u003ctd\u003e666\u003c\/td\u003e\n\u003ctd\u003e3.813813814\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"9\" class=\"bgcf3f3f3\"\u003eAPC11x8\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.1\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e75.48\u003c\/td\u003e\n\u003ctd\u003e6.62427133\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e58°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.6\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e127.28\u003c\/td\u003e\n\u003ctd\u003e5.892520427\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e192.4\u003c\/td\u003e\n\u003ctd\u003e5.197505198\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e17.7\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e261.96\u003c\/td\u003e\n\u003ctd\u003e4.771720873\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.2\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e343.36\u003c\/td\u003e\n\u003ctd\u003e4.368592731\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.3\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e418.84\u003c\/td\u003e\n\u003ctd\u003e4.178206475\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e518\u003c\/td\u003e\n\u003ctd\u003e3.861003861\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e42.3\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e626.04\u003c\/td\u003e\n\u003ctd\u003e3.594019551\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e48\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e710.4\u003c\/td\u003e\n\u003ctd\u003e3.519144144\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cp\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/X2820_d05fb405-738f-400b-92c4-8657a388891f.jpg?v=1553492183\" alt=\"\"\u003e\u003c\/p\u003e\n\u003ch5\u003eKV1100\u003c\/h5\u003e\n\u003ctable\u003e\n\u003ctbody\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Diameter \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"295\" style=\"word-break: break-all;\"\u003e28mm\u003c\/td\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Rotor Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"500\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 35mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Thickness \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e20mm\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Shaft Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 5mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Stator Slots \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd\u003e12\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e (Without Shaft) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 42mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Rotor Poles \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e14\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 61mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Kv \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1100\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Lipo Cell \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 3-5S \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No-load current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1.3A\/10V\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e ESC \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 60A \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Resistance \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e19mΩ\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Recommended Prop(inch) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: normal;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e APC11*5.5\/APC12*6\/APC11*7\/APC9060\/APC1050\/APC11*8 \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e60A\/15s\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003eWeight for aerobatics airplane\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 1500g (3S APC11*5.5\\11*7\\11*8) (4S APC1050\\APC9060) \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Power \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e880W\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight for 3D airplane \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1200g (3S APC11*5.5\\APC12*6)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\n\u003cp\u003e138g\u003c\/p\u003e\n\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003eWeight for glider\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1800g (3S APC11*5.5)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"160\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Prop(inch) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"152\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Voltage(V) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"126\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Amps(A) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"140\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Thrust(gf) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"118\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Watts(W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"163\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Efficiency(g\/W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"211\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Load temperature in 100% throttle \u003c\/span\u003e\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"17\" class=\"bgcf3f3f3\"\u003eAPC11x5.5\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.8\u003c\/td\u003e\n\u003ctd width=\"69\"\u003e500\u003c\/td\u003e\n\u003ctd width=\"125\"\u003e64.38\u003c\/td\u003e\n\u003ctd width=\"157\"\u003e7.766387077\u003c\/td\u003e\n\u003ctd rowspan=\"17\" class=\"bgcfffdfd font16\"\u003e73°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.8\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e108.78\u003c\/td\u003e\n\u003ctd\u003e6.894649752\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.3\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e158.73\u003c\/td\u003e\n\u003ctd\u003e6.3000063\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e19.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e214.23\u003c\/td\u003e\n\u003ctd\u003e5.834850394\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24.8\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e275.28\u003c\/td\u003e\n\u003ctd\u003e5.448997384\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e31.2\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e346.32\u003c\/td\u003e\n\u003ctd\u003e5.053130053\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e38\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e421.8\u003c\/td\u003e\n\u003ctd\u003e4.741583689\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.7\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e69.56\u003c\/td\u003e\n\u003ctd\u003e7.188039103\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.6\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e112.48\u003c\/td\u003e\n\u003ctd\u003e6.667852063\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e11.5\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e170.2\u003c\/td\u003e\n\u003ctd\u003e5.875440658\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e15.7\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e232.36\u003c\/td\u003e\n\u003ctd\u003e5.379583405\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20.3\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e300.44\u003c\/td\u003e\n\u003ctd\u003e4.992677406\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e25.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e375.92\u003c\/td\u003e\n\u003ctd\u003e4.655245797\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e30.8\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e455.84\u003c\/td\u003e\n\u003ctd\u003e4.387504388\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35.9\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e531.32\u003c\/td\u003e\n\u003ctd\u003e4.234736129\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e42\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e621.6\u003c\/td\u003e\n\u003ctd\u003e4.021879022\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e60\u003c\/td\u003e\n\u003ctd\u003e3060\u003c\/td\u003e\n\u003ctd\u003e888\u003c\/td\u003e\n\u003ctd\u003e3.445945946\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC11x7\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e6\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e66.6\u003c\/td\u003e\n\u003ctd\u003e7.507507508\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e52°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.5\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e116.55\u003c\/td\u003e\n\u003ctd\u003e6.435006435\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e15.4\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e170.94\u003c\/td\u003e\n\u003ctd\u003e5.85000585\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e21.1\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e234.21\u003c\/td\u003e\n\u003ctd\u003e5.337090645\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e27.2\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e301.92\u003c\/td\u003e\n\u003ctd\u003e4.968203498\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e33.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e370.74\u003c\/td\u003e\n\u003ctd\u003e4.720289151\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e44\u003c\/td\u003e\n\u003ctd\u003e2100\u003c\/td\u003e\n\u003ctd\u003e488.4\u003c\/td\u003e\n\u003ctd\u003e4.2997543\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC11x8\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e6.6\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e73.26\u003c\/td\u003e\n\u003ctd\u003e6.825006825\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e55°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e11.2\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e124.32\u003c\/td\u003e\n\u003ctd\u003e6.032818533\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e16.4\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e182.04\u003c\/td\u003e\n\u003ctd\u003e5.493298176\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e22.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e247.53\u003c\/td\u003e\n\u003ctd\u003e5.049892942\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.8\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e330.78\u003c\/td\u003e\n\u003ctd\u003e4.534736078\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e36.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e404.04\u003c\/td\u003e\n\u003ctd\u003e4.331254331\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e48\u003c\/td\u003e\n\u003ctd\u003e2100\u003c\/td\u003e\n\u003ctd\u003e532.8\u003c\/td\u003e\n\u003ctd\u003e3.941441441\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"9\" class=\"bgcf3f3f3\"\u003eAPC12x6\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e61.05\u003c\/td\u003e\n\u003ctd\u003e8.19000819\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e55°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.4\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e104.34\u003c\/td\u003e\n\u003ctd\u003e7.188039103\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.6\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e150.96\u003c\/td\u003e\n\u003ctd\u003e6.62427133\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.2\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e202.02\u003c\/td\u003e\n\u003ctd\u003e6.187506188\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24.1\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e267.51\u003c\/td\u003e\n\u003ctd\u003e5.607267018\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.7\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e329.67\u003c\/td\u003e\n\u003ctd\u003e5.308338642\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e410.7\u003c\/td\u003e\n\u003ctd\u003e4.869734599\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e44.4\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e492.84\u003c\/td\u003e\n\u003ctd\u003e4.565376187\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e48\u003c\/td\u003e\n\u003ctd\u003e2400\u003c\/td\u003e\n\u003ctd\u003e532.8\u003c\/td\u003e\n\u003ctd\u003e4.504504505\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcf3f3f3\"\u003eAPC1050\u003c\/td\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e74\u003c\/td\u003e\n\u003ctd\u003e6.756756757\u003c\/td\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e67°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.6\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e127.28\u003c\/td\u003e\n\u003ctd\u003e5.892520427\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e12.3\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e182.04\u003c\/td\u003e\n\u003ctd\u003e5.493298176\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e16.6\u003c\/td\u003e\n\u003ctd\u003e1205\u003c\/td\u003e\n\u003ctd\u003e245.68\u003c\/td\u003e\n\u003ctd\u003e4.904754152\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e21.4\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e316.72\u003c\/td\u003e\n\u003ctd\u003e4.736044456\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e27.9\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e412.92\u003c\/td\u003e\n\u003ctd\u003e4.238109077\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e32.8\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e485.44\u003c\/td\u003e\n\u003ctd\u003e4.119973632\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37.8\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e559.44\u003c\/td\u003e\n\u003ctd\u003e4.021879022\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e44.8\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e663.04\u003c\/td\u003e\n\u003ctd\u003e3.770511583\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e46.8\u003c\/td\u003e\n\u003ctd\u003e2580\u003c\/td\u003e\n\u003ctd\u003e692.64\u003c\/td\u003e\n\u003ctd\u003e3.724878725\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC9060\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.8\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e85.84\u003c\/td\u003e\n\u003ctd\u003e5.824790308\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e62°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.9\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e146.52\u003c\/td\u003e\n\u003ctd\u003e5.118755119\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.9\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e220.52\u003c\/td\u003e\n\u003ctd\u003e4.534736078\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20.2\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e298.96\u003c\/td\u003e\n\u003ctd\u003e4.181161359\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.2\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e417.36\u003c\/td\u003e\n\u003ctd\u003e3.594019551\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e34\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e503.2\u003c\/td\u003e\n\u003ctd\u003e3.477742448\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e45.8\u003c\/td\u003e\n\u003ctd\u003e2120\u003c\/td\u003e\n\u003ctd\u003e677.84\u003c\/td\u003e\n\u003ctd\u003e3.12758173\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cp\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/X2820_d05fb405-738f-400b-92c4-8657a388891f.jpg?v=1553492183\" alt=\"\"\u003e\u003c\/p\u003e\n\u003cp\u003e[\/TABS]\u003c\/p\u003e","published_at":"2017-06-06T13:05:03-04:00","created_at":"2017-06-06T13:27:24-04:00","vendor":"SunnySky USA","type":"Motor","tags":["Airplane Motor","X Motor"],"price":3499,"price_min":3499,"price_max":3499,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":45672061775,"title":"800","option1":"800","option2":null,"option3":null,"sku":"SS-X2820-800","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"SunnySky X2820 Brushless Motors - 800","public_title":"800","options":["800"],"price":3499,"weight":212,"compare_at_price":null,"inventory_quantity":60,"inventory_management":"shopify","inventory_policy":"deny","barcode":"613310717768","requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":45672061839,"title":"920","option1":"920","option2":null,"option3":null,"sku":"SS-X2820-920","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"SunnySky X2820 Brushless Motors - 920","public_title":"920","options":["920"],"price":3499,"weight":162,"compare_at_price":null,"inventory_quantity":49,"inventory_management":"shopify","inventory_policy":"deny","barcode":"613310717775","requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":45672114511,"title":"1100","option1":"1100","option2":null,"option3":null,"sku":"SS-X2820-1100","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"SunnySky X2820 Brushless Motors - 1100","public_title":"1100","options":["1100"],"price":3499,"weight":212,"compare_at_price":null,"inventory_quantity":60,"inventory_management":"shopify","inventory_policy":"deny","barcode":"613310717782","requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":12638017683550,"title":"500 long shaft","option1":"500 long shaft","option2":null,"option3":null,"sku":"SS-X2820-500-L","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"SunnySky X2820 Brushless Motors - 500 long shaft","public_title":"500 long shaft","options":["500 long shaft"],"price":3499,"weight":212,"compare_at_price":null,"inventory_quantity":31,"inventory_management":"shopify","inventory_policy":"deny","barcode":"613310717799","requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":43478712058095,"title":"500 short shaft","option1":"500 short shaft","option2":null,"option3":null,"sku":"SS-X2820-500-S","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"SunnySky X2820 Brushless Motors - 500 short shaft","public_title":"500 short shaft","options":["500 short shaft"],"price":3499,"weight":200,"compare_at_price":null,"inventory_quantity":39,"inventory_management":"shopify","inventory_policy":"deny","barcode":null,"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}}],"images":["\/\/sunnyskyusa.com\/cdn\/shop\/products\/2_57f8b863-7cf8-411b-9e83-3a694b79e602.jpg?v=1571709791","\/\/sunnyskyusa.com\/cdn\/shop\/products\/1_e5260d7d-c322-4686-b00a-a7f3bcdda5fb.jpg?v=1571709791","\/\/sunnyskyusa.com\/cdn\/shop\/products\/3_94e9ae77-17c3-4765-a1fb-79ee7ae6c8df.jpg?v=1571709791","\/\/sunnyskyusa.com\/cdn\/shop\/products\/4_913002ec-305b-4175-9b27-f0f61c56e5f5.jpg?v=1571709791"],"featured_image":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/2_57f8b863-7cf8-411b-9e83-3a694b79e602.jpg?v=1571709791","options":["KV"],"media":[{"alt":null,"id":458355802206,"position":1,"preview_image":{"aspect_ratio":1.0,"height":800,"width":800,"src":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/2_57f8b863-7cf8-411b-9e83-3a694b79e602.jpg?v=1571709791"},"aspect_ratio":1.0,"height":800,"media_type":"image","src":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/2_57f8b863-7cf8-411b-9e83-3a694b79e602.jpg?v=1571709791","width":800},{"alt":null,"id":458355081310,"position":2,"preview_image":{"aspect_ratio":1.0,"height":800,"width":800,"src":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/1_e5260d7d-c322-4686-b00a-a7f3bcdda5fb.jpg?v=1571709791"},"aspect_ratio":1.0,"height":800,"media_type":"image","src":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/1_e5260d7d-c322-4686-b00a-a7f3bcdda5fb.jpg?v=1571709791","width":800},{"alt":null,"id":458357866590,"position":3,"preview_image":{"aspect_ratio":1.0,"height":800,"width":800,"src":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/3_94e9ae77-17c3-4765-a1fb-79ee7ae6c8df.jpg?v=1571709791"},"aspect_ratio":1.0,"height":800,"media_type":"image","src":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/3_94e9ae77-17c3-4765-a1fb-79ee7ae6c8df.jpg?v=1571709791","width":800},{"alt":null,"id":458358161502,"position":4,"preview_image":{"aspect_ratio":1.0,"height":800,"width":800,"src":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/4_913002ec-305b-4175-9b27-f0f61c56e5f5.jpg?v=1571709791"},"aspect_ratio":1.0,"height":800,"media_type":"image","src":"\/\/sunnyskyusa.com\/cdn\/shop\/products\/4_913002ec-305b-4175-9b27-f0f61c56e5f5.jpg?v=1571709791","width":800}],"requires_selling_plan":false,"selling_plan_groups":[],"content":"\u003ch5\u003eSpecifications\u003c\/h5\u003e\n\u003cp\u003eX series of motors are processed by CNC milling, the hollow-designed appearance not only guarantee good heat dissipation, but also greatly reduce motor weight. In addition, it also make motors look more strong at visual.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eStainless steel solid shaft\u003c\/strong\u003e\u003cbr\u003eThe motor shaft is made of 420 stainless steel material imported from Japan. After heat treatment, the shafts are improved to high strength, excellent ductility, and better resistance to bending and breaking.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003e6061-T6 Aviation aluminum alloy\u003c\/strong\u003e\u003cbr\u003e Top and bottom caps are made of high strength 6061-T6 aviation aluminum alloy, with high hardness and high strength of extension, which can ensure reliable performance of motors.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eImported NMB bearings\u003c\/strong\u003e\u003cbr\u003eX series uses customized NMB mini bearings imported from Japan, which provide longer life, quiet and stable operation of these motors.\u003c\/p\u003e\n\u003cp\u003e\u003cstrong\u003eHand wound\u003c\/strong\u003e\u003cbr\u003eThe coils of X motors are all hand wound. This manufacturing procedure costs much more in labor, but makes the coil tight, neat, better coil space factor, and can increase the continuous power output of motors.\u003c\/p\u003e\n\u003ch5\u003e[TABS]OVERVIEW\u003c\/h5\u003e\n\u003cp\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/1_01_90e96d7b-886f-42ff-bfd3-93568c394753.jpg?v=1496902157\" alt=\"\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/1_02_a3a50595-242d-4b66-87f6-bdd3d93de3d2.jpg?v=1496902166\" alt=\"\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/1_03_3ff4592f-9ea2-45eb-8d42-50955a7667b9.jpg?v=1496902181\" alt=\"\"\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/1_04_02ea355c-1131-4fb1-8f94-20b83a1dbd9e.jpg?v=1496902191\" alt=\"\"\u003e\u003c\/p\u003e\n\u003ch5\u003eKV800\u003c\/h5\u003e\n\u003ctable\u003e\n\u003ctbody\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Diameter \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"295\" style=\"word-break: break-all;\"\u003e28mm\u003c\/td\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Rotor Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"500\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 35mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Thickness \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e20mm\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Shaft Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 5mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Stator Slots \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd\u003e12\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e (Without Shaft) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 42mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Rotor Poles \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e14\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 61mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Kv \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e800\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Lipo Cell \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 3-5S \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No-load current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e0.9A\/10V\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e ESC \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 60A \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Resistance \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e41mΩ\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Recommended Prop(inch) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: normal;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e APC13*6.5\/APC12*6\/APC12*8\/APC13*8 \u003cspan style=\"white-space: pre;\"\u003e \u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e46A\/30s\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\n\u003cp\u003eWeight for aerobatics airplane\u003c\/p\u003e\n\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 1400g-1800g (4S APC12*6\\APC12*8\\APC13*6.5\\APC13*8) \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Power \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e700W\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight for 3D airplane \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1100g-1400g (4S APC12*6\\APC12*8\\APC13*6.5\\APC13*8)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\n\u003cp\u003e138g\u003c\/p\u003e\n\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"160\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Prop(inch) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"152\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Voltage(V) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"126\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Amps(A) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"140\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Thrust(gf) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"118\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Watts(W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"163\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Efficiency(g\/W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"211\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Load temperature in 100% throttle \u003c\/span\u003e\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"16\" class=\"bgcf3f3f3\"\u003eAPC13x6.5\u003c\/td\u003e\n\u003ctd rowspan=\"6\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.1\u003c\/td\u003e\n\u003ctd width=\"68\"\u003e500\u003c\/td\u003e\n\u003ctd width=\"117\"\u003e56.61\u003c\/td\u003e\n\u003ctd width=\"171\"\u003e8.832361774\u003c\/td\u003e\n\u003ctd rowspan=\"16\" class=\"bgcfffdfd font16\"\u003e60°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.7\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e96.57\u003c\/td\u003e\n\u003ctd\u003e7.766387077\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e12.7\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e140.97\u003c\/td\u003e\n\u003ctd\u003e7.093707881\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e17.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e192.03\u003c\/td\u003e\n\u003ctd\u003e6.509399573\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e22.6\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e250.86\u003c\/td\u003e\n\u003ctd\u003e5.979430758\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e25.9\u003c\/td\u003e\n\u003ctd\u003e1670\u003c\/td\u003e\n\u003ctd\u003e287.49\u003c\/td\u003e\n\u003ctd\u003e5.808897701\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e59.2\u003c\/td\u003e\n\u003ctd\u003e8.445945946\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e6.8\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e100.64\u003c\/td\u003e\n\u003ctd\u003e7.452305246\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.1\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e149.48\u003c\/td\u003e\n\u003ctd\u003e6.689858175\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.8\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e204.24\u003c\/td\u003e\n\u003ctd\u003e6.120250685\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e17.9\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e264.92\u003c\/td\u003e\n\u003ctd\u003e5.662086668\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e22.2\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e328.56\u003c\/td\u003e\n\u003ctd\u003e5.326272218\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e27.2\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e402.56\u003c\/td\u003e\n\u003ctd\u003e4.968203498\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e33.1\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e489.88\u003c\/td\u003e\n\u003ctd\u003e4.592961542\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37.5\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e555\u003c\/td\u003e\n\u003ctd\u003e4.504504505\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e40.1\u003c\/td\u003e\n\u003ctd\u003e2670\u003c\/td\u003e\n\u003ctd\u003e593.48\u003c\/td\u003e\n\u003ctd\u003e4.498887915\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"8\" class=\"bgcf3f3f3\"\u003eAPC12x6\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.2\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e62.16\u003c\/td\u003e\n\u003ctd\u003e8.043758044\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e54°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.4\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e109.52\u003c\/td\u003e\n\u003ctd\u003e6.84806428\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.8\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e159.84\u003c\/td\u003e\n\u003ctd\u003e6.256256256\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.5\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e214.6\u003c\/td\u003e\n\u003ctd\u003e5.824790308\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.7\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e276.76\u003c\/td\u003e\n\u003ctd\u003e5.419858361\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.2\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e343.36\u003c\/td\u003e\n\u003ctd\u003e5.096691519\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.1\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e415.88\u003c\/td\u003e\n\u003ctd\u003e4.809079542\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e32.7\u003c\/td\u003e\n\u003ctd\u003e2240\u003c\/td\u003e\n\u003ctd\u003e483.96\u003c\/td\u003e\n\u003ctd\u003e4.628481693\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"8\" class=\"bgcf3f3f3\"\u003eAPC12x8\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e66.6\u003c\/td\u003e\n\u003ctd\u003e7.507507508\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e56°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.8\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e115.44\u003c\/td\u003e\n\u003ctd\u003e6.496881497\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e11.6\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e171.68\u003c\/td\u003e\n\u003ctd\u003e5.824790308\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e15.7\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e232.36\u003c\/td\u003e\n\u003ctd\u003e5.379583405\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20.5\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e303.4\u003c\/td\u003e\n\u003ctd\u003e4.943968359\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e26\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e384.8\u003c\/td\u003e\n\u003ctd\u003e4.547817048\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e31.6\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e467.68\u003c\/td\u003e\n\u003ctd\u003e4.276428327\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e38.5\u003c\/td\u003e\n\u003ctd\u003e2300\u003c\/td\u003e\n\u003ctd\u003e569.8\u003c\/td\u003e\n\u003ctd\u003e4.036504037\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"16\" class=\"bgcf3f3f3\"\u003eAPC13x8\u003c\/td\u003e\n\u003ctd rowspan=\"6\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.3\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e58.83\u003c\/td\u003e\n\u003ctd\u003e8.499065103\u003c\/td\u003e\n\u003ctd rowspan=\"16\" class=\"bgcfffdfd font16\"\u003e64°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e99.9\u003c\/td\u003e\n\u003ctd\u003e7.507507508\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.6\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e150.96\u003c\/td\u003e\n\u003ctd\u003e6.62427133\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.2\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e202.02\u003c\/td\u003e\n\u003ctd\u003e6.187506188\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.4\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e259.74\u003c\/td\u003e\n\u003ctd\u003e5.775005775\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.5\u003c\/td\u003e\n\u003ctd\u003e1760\u003c\/td\u003e\n\u003ctd\u003e327.45\u003c\/td\u003e\n\u003ctd\u003e5.374866392\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.2\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e62.16\u003c\/td\u003e\n\u003ctd\u003e8.043758044\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.1\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e105.08\u003c\/td\u003e\n\u003ctd\u003e7.137419109\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.5\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e155.4\u003c\/td\u003e\n\u003ctd\u003e6.435006435\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e211.64\u003c\/td\u003e\n\u003ctd\u003e5.906255906\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e19\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e281.2\u003c\/td\u003e\n\u003ctd\u003e5.33428165\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.7\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e350.76\u003c\/td\u003e\n\u003ctd\u003e4.989166382\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.9\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e427.72\u003c\/td\u003e\n\u003ctd\u003e4.675956233\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35.5\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e525.4\u003c\/td\u003e\n\u003ctd\u003e4.282451466\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e40.2\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e594.96\u003c\/td\u003e\n\u003ctd\u003e4.201963157\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e45.2\u003c\/td\u003e\n\u003ctd\u003e2790\u003c\/td\u003e\n\u003ctd\u003e668.96\u003c\/td\u003e\n\u003ctd\u003e4.170652954\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cp\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/X2820_d05fb405-738f-400b-92c4-8657a388891f.jpg?v=1553492183\" alt=\"\"\u003e\u003c\/p\u003e\n\u003ch5\u003eKV920\u003c\/h5\u003e\n\u003ctable\u003e\n\u003ctbody\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Diameter \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"295\" style=\"word-break: break-all;\"\u003e28mm\u003c\/td\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Rotor Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"500\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 35mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Thickness \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e20mm\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Shaft Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 5mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Stator Slots \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd\u003e12\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e (Without Shaft) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 42mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Rotor Poles \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e14\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 61mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Kv \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e920\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Lipo Cell \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 3-5S \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No-load current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1.1A\/10V\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e ESC \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 60A \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Resistance \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e28mΩ\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Recommended Prop(inch) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: normal;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e APC13*6.5\/APC12*6\/APC12*8\/APC11*5.5\/APC11*7\/APC11*8 \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e52A\/30s\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\n\u003cdiv\u003e Weight for aerobatics airplane \u003c\/div\u003e\n\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 1400g-1700g (3S APC13*6.5\\12*6\\12*8) (4S APC11*5.5\\APC11*7\\APC11*8) \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Power \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e750W\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight for 3D airplane \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1100g-1400g (3S APC13*6.5\/APC13*8)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\n\u003cp\u003e138g\u003c\/p\u003e\n\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"160\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Prop(inch) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"152\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Voltage(V) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"126\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Amps(A) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"140\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Thrust(gf) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"118\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Watts(W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"163\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Efficiency(g\/W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"211\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Load temperature in 100% throttle \u003c\/span\u003e\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC13x6.5\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5\u003c\/td\u003e\n\u003ctd width=\"87\"\u003e500\u003c\/td\u003e\n\u003ctd width=\"100\"\u003e55.5\u003c\/td\u003e\n\u003ctd width=\"185\"\u003e9.009009009\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e50°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.9\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e98.79\u003c\/td\u003e\n\u003ctd\u003e7.591861524\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e12.9\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e143.19\u003c\/td\u003e\n\u003ctd\u003e6.983727914\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e17.5\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e194.25\u003c\/td\u003e\n\u003ctd\u003e6.435006435\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e255.3\u003c\/td\u003e\n\u003ctd\u003e5.875440658\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e315.24\u003c\/td\u003e\n\u003ctd\u003e5.551325974\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37.3\u003c\/td\u003e\n\u003ctd\u003e2130\u003c\/td\u003e\n\u003ctd\u003e414.03\u003c\/td\u003e\n\u003ctd\u003e5.144554742\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"16\" class=\"bgcf3f3f3\"\u003eAPC12x6\u003c\/td\u003e\n\u003ctd rowspan=\"6\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e61.05\u003c\/td\u003e\n\u003ctd\u003e8.19000819\u003c\/td\u003e\n\u003ctd rowspan=\"16\" class=\"bgcfffdfd font16\"\u003e58°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.3\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e103.23\u003c\/td\u003e\n\u003ctd\u003e7.265329846\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.9\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e154.29\u003c\/td\u003e\n\u003ctd\u003e6.481301445\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e203.13\u003c\/td\u003e\n\u003ctd\u003e6.153694678\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e266.4\u003c\/td\u003e\n\u003ctd\u003e5.630630631\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.8\u003c\/td\u003e\n\u003ctd\u003e1780\u003c\/td\u003e\n\u003ctd\u003e330.78\u003c\/td\u003e\n\u003ctd\u003e5.381220146\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.2\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e62.16\u003c\/td\u003e\n\u003ctd\u003e8.043758044\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.3\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e108.04\u003c\/td\u003e\n\u003ctd\u003e6.94187338\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.8\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e159.84\u003c\/td\u003e\n\u003ctd\u003e6.256256256\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.7\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e217.56\u003c\/td\u003e\n\u003ctd\u003e5.74554146\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e19.1\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e282.68\u003c\/td\u003e\n\u003ctd\u003e5.306353474\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.9\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e353.72\u003c\/td\u003e\n\u003ctd\u003e4.947416035\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.3\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e433.64\u003c\/td\u003e\n\u003ctd\u003e4.612120653\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e33.9\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e501.72\u003c\/td\u003e\n\u003ctd\u003e4.484573069\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e40.4\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e597.92\u003c\/td\u003e\n\u003ctd\u003e4.181161359\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e48.4\u003c\/td\u003e\n\u003ctd\u003e2860\u003c\/td\u003e\n\u003ctd\u003e716.32\u003c\/td\u003e\n\u003ctd\u003e3.992628993\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC12x8\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.8\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e64.38\u003c\/td\u003e\n\u003ctd\u003e7.766387077\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e47°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e111\u003c\/td\u003e\n\u003ctd\u003e6.756756757\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.9\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e165.39\u003c\/td\u003e\n\u003ctd\u003e6.046314771\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e222\u003c\/td\u003e\n\u003ctd\u003e5.630630631\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e26.1\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e289.71\u003c\/td\u003e\n\u003ctd\u003e5.177591384\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e32.5\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e360.75\u003c\/td\u003e\n\u003ctd\u003e4.851004851\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35.8\u003c\/td\u003e\n\u003ctd\u003e1880\u003c\/td\u003e\n\u003ctd\u003e397.38\u003c\/td\u003e\n\u003ctd\u003e4.730987971\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"8\" class=\"bgcf3f3f3\"\u003eAPC13x8\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.4\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e59.94\u003c\/td\u003e\n\u003ctd\u003e8.341675008\u003c\/td\u003e\n\u003ctd rowspan=\"8\" class=\"bgcfffdfd font16\"\u003e53°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.3\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e103.23\u003c\/td\u003e\n\u003ctd\u003e7.265329846\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.7\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e152.07\u003c\/td\u003e\n\u003ctd\u003e6.575918985\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.6\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e206.46\u003c\/td\u003e\n\u003ctd\u003e6.054441538\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24.1\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e267.51\u003c\/td\u003e\n\u003ctd\u003e5.607267018\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e30.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e337.44\u003c\/td\u003e\n\u003ctd\u003e5.18610716\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e36.5\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e405.15\u003c\/td\u003e\n\u003ctd\u003e4.936443293\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e42.9\u003c\/td\u003e\n\u003ctd\u003e2180\u003c\/td\u003e\n\u003ctd\u003e476.19\u003c\/td\u003e\n\u003ctd\u003e4.578004578\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"9\" class=\"bgcf3f3f3\"\u003eAPC11x5.5\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e66.6\u003c\/td\u003e\n\u003ctd\u003e7.507507508\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e49°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.9\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e116.92\u003c\/td\u003e\n\u003ctd\u003e6.414642491\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e11.6\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e171.68\u003c\/td\u003e\n\u003ctd\u003e5.824790308\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e15.5\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e229.4\u003c\/td\u003e\n\u003ctd\u003e5.448997384\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e296\u003c\/td\u003e\n\u003ctd\u003e5.067567568\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24.6\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e364.08\u003c\/td\u003e\n\u003ctd\u003e4.806635904\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e30.1\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e445.48\u003c\/td\u003e\n\u003ctd\u003e4.489539373\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35.9\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e531.32\u003c\/td\u003e\n\u003ctd\u003e4.234736129\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37.3\u003c\/td\u003e\n\u003ctd\u003e2360\u003c\/td\u003e\n\u003ctd\u003e552.04\u003c\/td\u003e\n\u003ctd\u003e4.275052532\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"9\" class=\"bgcf3f3f3\"\u003eAPC11x7\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.7\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e69.56\u003c\/td\u003e\n\u003ctd\u003e7.188039103\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e55°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.2\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e121.36\u003c\/td\u003e\n\u003ctd\u003e6.179960448\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e12.3\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e182.04\u003c\/td\u003e\n\u003ctd\u003e5.493298176\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e16.8\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e248.64\u003c\/td\u003e\n\u003ctd\u003e5.027348777\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e21.7\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e321.16\u003c\/td\u003e\n\u003ctd\u003e4.670569187\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e26.5\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e392.2\u003c\/td\u003e\n\u003ctd\u003e4.462009179\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e33.1\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e489.88\u003c\/td\u003e\n\u003ctd\u003e4.082632481\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e39.4\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e583.12\u003c\/td\u003e\n\u003ctd\u003e3.858553985\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e45\u003c\/td\u003e\n\u003ctd\u003e2540\u003c\/td\u003e\n\u003ctd\u003e666\u003c\/td\u003e\n\u003ctd\u003e3.813813814\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"9\" class=\"bgcf3f3f3\"\u003eAPC11x8\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.1\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e75.48\u003c\/td\u003e\n\u003ctd\u003e6.62427133\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e58°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.6\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e127.28\u003c\/td\u003e\n\u003ctd\u003e5.892520427\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e192.4\u003c\/td\u003e\n\u003ctd\u003e5.197505198\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e17.7\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e261.96\u003c\/td\u003e\n\u003ctd\u003e4.771720873\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e23.2\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e343.36\u003c\/td\u003e\n\u003ctd\u003e4.368592731\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.3\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e418.84\u003c\/td\u003e\n\u003ctd\u003e4.178206475\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e518\u003c\/td\u003e\n\u003ctd\u003e3.861003861\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e42.3\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e626.04\u003c\/td\u003e\n\u003ctd\u003e3.594019551\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e48\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e710.4\u003c\/td\u003e\n\u003ctd\u003e3.519144144\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cp\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/X2820_d05fb405-738f-400b-92c4-8657a388891f.jpg?v=1553492183\" alt=\"\"\u003e\u003c\/p\u003e\n\u003ch5\u003eKV1100\u003c\/h5\u003e\n\u003ctable\u003e\n\u003ctbody\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Diameter \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"295\" style=\"word-break: break-all;\"\u003e28mm\u003c\/td\u003e\n\u003cth width=\"200\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Rotor Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd width=\"500\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 35mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Stator Thickness \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e20mm\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Shaft Diameter \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 5mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Stator Slots \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd\u003e12\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e (Without Shaft) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 42mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No.of Rotor Poles \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e14\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Body Length \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 61mm \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Kv \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1100\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Lipo Cell \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 3-5S \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e No-load current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1.3A\/10V\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e ESC \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 60A \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Motor Resistance \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e19mΩ\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e \u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Recommended Prop(inch) \u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: normal;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e \u003cspan style=\"white-space: nowrap;\"\u003e APC11*5.5\/APC12*6\/APC11*7\/APC9060\/APC1050\/APC11*8 \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003cspan style=\"white-space: pre;\"\u003e\u003c\/span\u003e \u003c\/span\u003e \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Current \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e60A\/15s\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003eWeight for aerobatics airplane\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\u003cspan style=\"white-space: normal;\"\u003e 1500g (3S APC11*5.5\\11*7\\11*8) (4S APC1050\\APC9060) \u003c\/span\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Max Continuous Power \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e880W\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight for 3D airplane \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1200g (3S APC11*5.5\\APC12*6)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003cth style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-weight: bold; text-align: center; white-space: normal; background-color: #f7f7f7;\"\u003e Weight \u003c\/span\u003e\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e\n\u003cp\u003e138g\u003c\/p\u003e\n\u003c\/td\u003e\n\u003cth style=\"word-break: break-all;\"\u003eWeight for glider\u003c\/th\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e1800g (3S APC11*5.5)\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr class=\"firstRow\"\u003e\n\u003cth width=\"160\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Prop(inch) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"152\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Voltage(V) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"126\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Amps(A) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"140\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Thrust(gf) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"118\" style=\"word-break: break-all;\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Watts(W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"163\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Efficiency(g\/W) \u003c\/span\u003e\u003c\/th\u003e\n\u003cth width=\"211\"\u003e\u003cspan style=\"font-size: 16px;\"\u003e Load temperature in 100% throttle \u003c\/span\u003e\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"17\" class=\"bgcf3f3f3\"\u003eAPC11x5.5\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.8\u003c\/td\u003e\n\u003ctd width=\"69\"\u003e500\u003c\/td\u003e\n\u003ctd width=\"125\"\u003e64.38\u003c\/td\u003e\n\u003ctd width=\"157\"\u003e7.766387077\u003c\/td\u003e\n\u003ctd rowspan=\"17\" class=\"bgcfffdfd font16\"\u003e73°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.8\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e108.78\u003c\/td\u003e\n\u003ctd\u003e6.894649752\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.3\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e158.73\u003c\/td\u003e\n\u003ctd\u003e6.3000063\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e19.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e214.23\u003c\/td\u003e\n\u003ctd\u003e5.834850394\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24.8\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e275.28\u003c\/td\u003e\n\u003ctd\u003e5.448997384\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e31.2\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e346.32\u003c\/td\u003e\n\u003ctd\u003e5.053130053\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e38\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e421.8\u003c\/td\u003e\n\u003ctd\u003e4.741583689\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e4.7\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e69.56\u003c\/td\u003e\n\u003ctd\u003e7.188039103\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e7.6\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e112.48\u003c\/td\u003e\n\u003ctd\u003e6.667852063\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e11.5\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e170.2\u003c\/td\u003e\n\u003ctd\u003e5.875440658\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e15.7\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e232.36\u003c\/td\u003e\n\u003ctd\u003e5.379583405\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20.3\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e300.44\u003c\/td\u003e\n\u003ctd\u003e4.992677406\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e25.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e375.92\u003c\/td\u003e\n\u003ctd\u003e4.655245797\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e30.8\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e455.84\u003c\/td\u003e\n\u003ctd\u003e4.387504388\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e35.9\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e531.32\u003c\/td\u003e\n\u003ctd\u003e4.234736129\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e42\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e621.6\u003c\/td\u003e\n\u003ctd\u003e4.021879022\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e60\u003c\/td\u003e\n\u003ctd\u003e3060\u003c\/td\u003e\n\u003ctd\u003e888\u003c\/td\u003e\n\u003ctd\u003e3.445945946\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC11x7\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e6\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e66.6\u003c\/td\u003e\n\u003ctd\u003e7.507507508\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e52°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e10.5\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e116.55\u003c\/td\u003e\n\u003ctd\u003e6.435006435\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e15.4\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e170.94\u003c\/td\u003e\n\u003ctd\u003e5.85000585\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e21.1\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e234.21\u003c\/td\u003e\n\u003ctd\u003e5.337090645\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e27.2\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e301.92\u003c\/td\u003e\n\u003ctd\u003e4.968203498\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e33.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e370.74\u003c\/td\u003e\n\u003ctd\u003e4.720289151\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e44\u003c\/td\u003e\n\u003ctd\u003e2100\u003c\/td\u003e\n\u003ctd\u003e488.4\u003c\/td\u003e\n\u003ctd\u003e4.2997543\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC11x8\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e6.6\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e73.26\u003c\/td\u003e\n\u003ctd\u003e6.825006825\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e55°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e11.2\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e124.32\u003c\/td\u003e\n\u003ctd\u003e6.032818533\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e16.4\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e182.04\u003c\/td\u003e\n\u003ctd\u003e5.493298176\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e22.3\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e247.53\u003c\/td\u003e\n\u003ctd\u003e5.049892942\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.8\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e330.78\u003c\/td\u003e\n\u003ctd\u003e4.534736078\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e36.4\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e404.04\u003c\/td\u003e\n\u003ctd\u003e4.331254331\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e48\u003c\/td\u003e\n\u003ctd\u003e2100\u003c\/td\u003e\n\u003ctd\u003e532.8\u003c\/td\u003e\n\u003ctd\u003e3.941441441\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"9\" class=\"bgcf3f3f3\"\u003eAPC12x6\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e11.1\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e61.05\u003c\/td\u003e\n\u003ctd\u003e8.19000819\u003c\/td\u003e\n\u003ctd rowspan=\"9\" class=\"bgcfffdfd font16\"\u003e55°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.4\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e104.34\u003c\/td\u003e\n\u003ctd\u003e7.188039103\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e13.6\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e150.96\u003c\/td\u003e\n\u003ctd\u003e6.62427133\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e18.2\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e202.02\u003c\/td\u003e\n\u003ctd\u003e6.187506188\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e24.1\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e267.51\u003c\/td\u003e\n\u003ctd\u003e5.607267018\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e29.7\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e329.67\u003c\/td\u003e\n\u003ctd\u003e5.308338642\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e410.7\u003c\/td\u003e\n\u003ctd\u003e4.869734599\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e44.4\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e492.84\u003c\/td\u003e\n\u003ctd\u003e4.565376187\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e48\u003c\/td\u003e\n\u003ctd\u003e2400\u003c\/td\u003e\n\u003ctd\u003e532.8\u003c\/td\u003e\n\u003ctd\u003e4.504504505\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"10\" class=\"bgcf3f3f3\"\u003eAPC1050\u003c\/td\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e74\u003c\/td\u003e\n\u003ctd\u003e6.756756757\u003c\/td\u003e\n\u003ctd rowspan=\"10\" class=\"bgcfffdfd font16\"\u003e67°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e8.6\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e127.28\u003c\/td\u003e\n\u003ctd\u003e5.892520427\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e12.3\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e182.04\u003c\/td\u003e\n\u003ctd\u003e5.493298176\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e16.6\u003c\/td\u003e\n\u003ctd\u003e1205\u003c\/td\u003e\n\u003ctd\u003e245.68\u003c\/td\u003e\n\u003ctd\u003e4.904754152\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e21.4\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e316.72\u003c\/td\u003e\n\u003ctd\u003e4.736044456\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e27.9\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e412.92\u003c\/td\u003e\n\u003ctd\u003e4.238109077\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e32.8\u003c\/td\u003e\n\u003ctd\u003e2000\u003c\/td\u003e\n\u003ctd\u003e485.44\u003c\/td\u003e\n\u003ctd\u003e4.119973632\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e37.8\u003c\/td\u003e\n\u003ctd\u003e2250\u003c\/td\u003e\n\u003ctd\u003e559.44\u003c\/td\u003e\n\u003ctd\u003e4.021879022\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e44.8\u003c\/td\u003e\n\u003ctd\u003e2500\u003c\/td\u003e\n\u003ctd\u003e663.04\u003c\/td\u003e\n\u003ctd\u003e3.770511583\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e46.8\u003c\/td\u003e\n\u003ctd\u003e2580\u003c\/td\u003e\n\u003ctd\u003e692.64\u003c\/td\u003e\n\u003ctd\u003e3.724878725\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd rowspan=\"7\" class=\"bgcf3f3f3\"\u003eAPC9060\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e14.8\u003c\/td\u003e\n\u003ctd style=\"word-break: break-all;\"\u003e5.8\u003c\/td\u003e\n\u003ctd\u003e500\u003c\/td\u003e\n\u003ctd\u003e85.84\u003c\/td\u003e\n\u003ctd\u003e5.824790308\u003c\/td\u003e\n\u003ctd rowspan=\"7\" class=\"bgcfffdfd font16\"\u003e62°\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e9.9\u003c\/td\u003e\n\u003ctd\u003e750\u003c\/td\u003e\n\u003ctd\u003e146.52\u003c\/td\u003e\n\u003ctd\u003e5.118755119\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e14.9\u003c\/td\u003e\n\u003ctd\u003e1000\u003c\/td\u003e\n\u003ctd\u003e220.52\u003c\/td\u003e\n\u003ctd\u003e4.534736078\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e20.2\u003c\/td\u003e\n\u003ctd\u003e1250\u003c\/td\u003e\n\u003ctd\u003e298.96\u003c\/td\u003e\n\u003ctd\u003e4.181161359\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e28.2\u003c\/td\u003e\n\u003ctd\u003e1500\u003c\/td\u003e\n\u003ctd\u003e417.36\u003c\/td\u003e\n\u003ctd\u003e3.594019551\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e34\u003c\/td\u003e\n\u003ctd\u003e1750\u003c\/td\u003e\n\u003ctd\u003e503.2\u003c\/td\u003e\n\u003ctd\u003e3.477742448\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr height=\"19\" style=\"height: 19px;\"\u003e\n\u003ctd height=\"19\"\u003e45.8\u003c\/td\u003e\n\u003ctd\u003e2120\u003c\/td\u003e\n\u003ctd\u003e677.84\u003c\/td\u003e\n\u003ctd\u003e3.12758173\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv contenteditable=\"false\" style=\"width: 15px; height: 15px; background-image: url('http:\/\/bianfengzhiqu.new.uoeee.com\/admin\/assets\/ueditor\/dialogs\/table\/dragicon.png'); position: absolute; cursor: move; top: -7px; left: 8px; user-select: none;\"\u003e\u003c\/div\u003e\n\u003cp\u003e\u003cimg src=\"\/\/cdn.shopify.com\/s\/files\/1\/2024\/0305\/files\/X2820_d05fb405-738f-400b-92c4-8657a388891f.jpg?v=1553492183\" alt=\"\"\u003e\u003c\/p\u003e\n\u003cp\u003e[\/TABS]\u003c\/p\u003e"}
+
+- Home
+
+- SunnySky X2820 Brushless Motors
+
+# SunnySky X2820 Brushless Motors
+
+16 reviews
+
+-
+
+-
+
+-
+
+-
+
+##### Product Description
+
+KV
+
+800
+920
+1100
+500 long shaft
+500 short shaft
+
+800 - $34.99 USD
+920 - $34.99 USD
+1100 - $34.99 USD
+500 long shaft - $34.99 USD
+500 short shaft - $34.99 USD
+
+Maximum quantity available reached.
+
+##### Specifications
+
+X series of motors are processed by CNC milling, the hollow-designed appearance not only guarantee good heat dissipation, but also greatly reduce motor weight. In addition, it also make motors look more strong at visual.
+
+Stainless steel solid shaft
+The motor shaft is made of 420 stainless steel material imported from Japan. After heat treatment, the shafts are improved to high strength, excellent ductility, and better resistance to bending and breaking.
+
+6061-T6 Aviation aluminum alloy
+Top and bottom caps are made of high strength 6061-T6 aviation aluminum alloy, with high hardness and high strength of extension, which can ensure reliable performance of motors.
+
+Imported NMB bearings
+X series uses customized NMB mini bearings imported from Japan, which provide longer life, quiet and stable operation of these motors.
+
+Hand wound
+The coils of X motors are all hand wound. This manufacturing procedure costs much more in labor, but makes the coil tight, neat, better coil space factor, and can increase the continuous power output of motors.
+
+#####
+
+-
+
+-
+
+-
+
+-
+
+-
+
+OVERVIEW
+
+-
+
+KV800
+
+-
+
+KV920
+
+-
+
+KV1100
+
+| Stator Diameter | 28mm | Rotor Diameter | 35mm |
+
+| Stator Thickness | 20mm | Shaft Diameter | 5mm |
+
+| No.of Stator Slots | 12 | Body Length (Without Shaft) | 42mm |
+
+| No.of Rotor Poles | 14 | Body Length | 61mm |
+
+| Motor Kv | 800 | Max Lipo Cell | 3-5S |
+
+| No-load current | 0.9A/10V | ESC | 60A |
+
+| Motor Resistance | 41mΩ | Recommended Prop(inch) | APC13*6.5/APC12*6/APC12*8/APC13*8 |
+
+| Max Continuous Current | 46A/30s | Weight for aerobatics airplane | 1400g-1800g (4S APC12*6\APC12*8\APC13*6.5\APC13*8) |
+
+| Max Continuous Power | 700W | Weight for 3D airplane | 1100g-1400g (4S APC12*6\APC12*8\APC13*6.5\APC13*8) |
+
+| Weight | 138g | | |
+
+| Prop(inch) | Voltage(V) | Amps(A) | Thrust(gf) | Watts(W) | Efficiency(g/W) | Load temperature in 100% throttle |
+
+| APC13x6.5 | 11.1 | 5.1 | 500 | 56.61 | 8.832361774 | 60° |
+
+| 8.7 | 750 | 96.57 | 7.766387077 |
+
+| 12.7 | 1000 | 140.97 | 7.093707881 |
+
+| 17.3 | 1250 | 192.03 | 6.509399573 |
+
+| 22.6 | 1500 | 250.86 | 5.979430758 |
+
+| 25.9 | 1670 | 287.49 | 5.808897701 |
+
+| 14.8 | 4 | 500 | 59.2 | 8.445945946 |
+
+| 6.8 | 750 | 100.64 | 7.452305246 |
+
+| 10.1 | 1000 | 149.48 | 6.689858175 |
+
+| 13.8 | 1250 | 204.24 | 6.120250685 |
+
+| 17.9 | 1500 | 264.92 | 5.662086668 |
+
+| 22.2 | 1750 | 328.56 | 5.326272218 |
+
+| 27.2 | 2000 | 402.56 | 4.968203498 |
+
+| 33.1 | 2250 | 489.88 | 4.592961542 |
+
+| 37.5 | 2500 | 555 | 4.504504505 |
+
+| 40.1 | 2670 | 593.48 | 4.498887915 |
+
+| APC12x6 | 14.8 | 4.2 | 500 | 62.16 | 8.043758044 | 54° |
+
+| 7.4 | 750 | 109.52 | 6.84806428 |
+
+| 10.8 | 1000 | 159.84 | 6.256256256 |
+
+| 14.5 | 1250 | 214.6 | 5.824790308 |
+
+| 18.7 | 1500 | 276.76 | 5.419858361 |
+
+| 23.2 | 1750 | 343.36 | 5.096691519 |
+
+| 28.1 | 2000 | 415.88 | 4.809079542 |
+
+| 32.7 | 2240 | 483.96 | 4.628481693 |
+
+| APC12x8 | 14.8 | 4.5 | 500 | 66.6 | 7.507507508 | 56° |
+
+| 7.8 | 750 | 115.44 | 6.496881497 |
+
+| 11.6 | 1000 | 171.68 | 5.824790308 |
+
+| 15.7 | 1250 | 232.36 | 5.379583405 |
+
+| 20.5 | 1500 | 303.4 | 4.943968359 |
+
+| 26 | 1750 | 384.8 | 4.547817048 |
+
+| 31.6 | 2000 | 467.68 | 4.276428327 |
+
+| 38.5 | 2300 | 569.8 | 4.036504037 |
+
+| APC13x8 | 11.1 | 5.3 | 500 | 58.83 | 8.499065103 | 64° |
+
+| 9 | 750 | 99.9 | 7.507507508 |
+
+| 13.6 | 1000 | 150.96 | 6.62427133 |
+
+| 18.2 | 1250 | 202.02 | 6.187506188 |
+
+| 23.4 | 1500 | 259.74 | 5.775005775 |
+
+| 29.5 | 1760 | 327.45 | 5.374866392 |
+
+| 14.8 | 4.2 | 500 | 62.16 | 8.043758044 |
+
+| 7.1 | 750 | 105.08 | 7.137419109 |
+
+| 10.5 | 1000 | 155.4 | 6.435006435 |
+
+| 14.3 | 1250 | 211.64 | 5.906255906 |
+
+| 19 | 1500 | 281.2 | 5.33428165 |
+
+| 23.7 | 1750 | 350.76 | 4.989166382 |
+
+| 28.9 | 2000 | 427.72 | 4.675956233 |
+
+| 35.5 | 2250 | 525.4 | 4.282451466 |
+
+| 40.2 | 2500 | 594.96 | 4.201963157 |
+
+| 45.2 | 2790 | 668.96 | 4.170652954 |
+
+| Stator Diameter | 28mm | Rotor Diameter | 35mm |
+
+| Stator Thickness | 20mm | Shaft Diameter | 5mm |
+
+| No.of Stator Slots | 12 | Body Length (Without Shaft) | 42mm |
+
+| No.of Rotor Poles | 14 | Body Length | 61mm |
+
+| Motor Kv | 920 | Max Lipo Cell | 3-5S |
+
+| No-load current | 1.1A/10V | ESC | 60A |
+
+| Motor Resistance | 28mΩ | Recommended Prop(inch) | APC13*6.5/APC12*6/APC12*8/APC11*5.5/APC11*7/APC11*8 |
+
+| Max Continuous Current | 52A/30s | Weight for aerobatics airplane | 1400g-1700g (3S APC13*6.5\12*6\12*8) (4S APC11*5.5\APC11*7\APC11*8) |
+
+| Max Continuous Power | 750W | Weight for 3D airplane | 1100g-1400g (3S APC13*6.5/APC13*8) |
+
+| Weight | 138g | | |
+
+| Prop(inch) | Voltage(V) | Amps(A) | Thrust(gf) | Watts(W) | Efficiency(g/W) | Load temperature in 100% throttle |
+
+| APC13x6.5 | 11.1 | 5 | 500 | 55.5 | 9.009009009 | 50° |
+
+| 8.9 | 750 | 98.79 | 7.591861524 |
+
+| 12.9 | 1000 | 143.19 | 6.983727914 |
+
+| 17.5 | 1250 | 194.25 | 6.435006435 |
+
+| 23 | 1500 | 255.3 | 5.875440658 |
+
+| 28.4 | 1750 | 315.24 | 5.551325974 |
+
+| 37.3 | 2130 | 414.03 | 5.144554742 |
+
+| APC12x6 | 11.1 | 5.5 | 500 | 61.05 | 8.19000819 | 58° |
+
+| 9.3 | 750 | 103.23 | 7.265329846 |
+
+| 13.9 | 1000 | 154.29 | 6.481301445 |
+
+| 18.3 | 1250 | 203.13 | 6.153694678 |
+
+| 24 | 1500 | 266.4 | 5.630630631 |
+
+| 29.8 | 1780 | 330.78 | 5.381220146 |
+
+| 14.8 | 4.2 | 500 | 62.16 | 8.043758044 |
+
+| 7.3 | 750 | 108.04 | 6.94187338 |
+
+| 10.8 | 1000 | 159.84 | 6.256256256 |
+
+| 14.7 | 1250 | 217.56 | 5.74554146 |
+
+| 19.1 | 1500 | 282.68 | 5.306353474 |
+
+| 23.9 | 1750 | 353.72 | 4.947416035 |
+
+| 29.3 | 2000 | 433.64 | 4.612120653 |
+
+| 33.9 | 2250 | 501.72 | 4.484573069 |
+
+| 40.4 | 2500 | 597.92 | 4.181161359 |
+
+| 48.4 | 2860 | 716.32 | 3.992628993 |
+
+| APC12x8 | 11.1 | 5.8 | 500 | 64.38 | 7.766387077 | 47° |
+
+| 10 | 750 | 111 | 6.756756757 |
+
+| 14.9 | 1000 | 165.39 | 6.046314771 |
+
+| 20 | 1250 | 222 | 5.630630631 |
+
+| 26.1 | 1500 | 289.71 | 5.177591384 |
+
+| 32.5 | 1750 | 360.75 | 4.851004851 |
+
+| 35.8 | 1880 | 397.38 | 4.730987971 |
+
+| APC13x8 | 11.1 | 5.4 | 500 | 59.94 | 8.341675008 | 53° |
+
+| 9.3 | 750 | 103.23 | 7.265329846 |
+
+| 13.7 | 1000 | 152.07 | 6.575918985 |
+
+| 18.6 | 1250 | 206.46 | 6.054441538 |
+
+| 24.1 | 1500 | 267.51 | 5.607267018 |
+
+| 30.4 | 1750 | 337.44 | 5.18610716 |
+
+| 36.5 | 2000 | 405.15 | 4.936443293 |
+
+| 42.9 | 2180 | 476.19 | 4.578004578 |
+
+| APC11x5.5 | 14.8 | 4.5 | 500 | 66.6 | 7.507507508 | 49° |
+
+| 7.9 | 750 | 116.92 | 6.414642491 |
+
+| 11.6 | 1000 | 171.68 | 5.824790308 |
+
+| 15.5 | 1250 | 229.4 | 5.448997384 |
+
+| 20 | 1500 | 296 | 5.067567568 |
+
+| 24.6 | 1750 | 364.08 | 4.806635904 |
+
+| 30.1 | 2000 | 445.48 | 4.489539373 |
+
+| 35.9 | 2250 | 531.32 | 4.234736129 |
+
+| 37.3 | 2360 | 552.04 | 4.275052532 |
+
+| APC11x7 | 14.8 | 4.7 | 500 | 69.56 | 7.188039103 | 55° |
+
+| 8.2 | 750 | 121.36 | 6.179960448 |
+
+| 12.3 | 1000 | 182.04 | 5.493298176 |
+
+| 16.8 | 1250 | 248.64 | 5.027348777 |
+
+| 21.7 | 1500 | 321.16 | 4.670569187 |
+
+| 26.5 | 1750 | 392.2 | 4.462009179 |
+
+| 33.1 | 2000 | 489.88 | 4.082632481 |
+
+| 39.4 | 2250 | 583.12 | 3.858553985 |
+
+| 45 | 2540 | 666 | 3.813813814 |
+
+| APC11x8 | 14.8 | 5.1 | 500 | 75.48 | 6.62427133 | 58° |
+
+| 8.6 | 750 | 127.28 | 5.892520427 |
+
+| 13 | 1000 | 192.4 | 5.197505198 |
+
+| 17.7 | 1250 | 261.96 | 4.771720873 |
+
+| 23.2 | 1500 | 343.36 | 4.368592731 |
+
+| 28.3 | 1750 | 418.84 | 4.178206475 |
+
+| 35 | 2000 | 518 | 3.861003861 |
+
+| 42.3 | 2250 | 626.04 | 3.594019551 |
+
+| 48 | 2500 | 710.4 | 3.519144144 |
+
+| Stator Diameter | 28mm | Rotor Diameter | 35mm |
+
+| Stator Thickness | 20mm | Shaft Diameter | 5mm |
+
+| No.of Stator Slots | 12 | Body Length (Without Shaft) | 42mm |
+
+| No.of Rotor Poles | 14 | Body Length | 61mm |
+
+| Motor Kv | 1100 | Max Lipo Cell | 3-5S |
+
+| No-load current | 1.3A/10V | ESC | 60A |
+
+| Motor Resistance | 19mΩ | Recommended Prop(inch) | APC11*5.5/APC12*6/APC11*7/APC9060/APC1050/APC11*8 |
+
+| Max Continuous Current | 60A/15s | Weight for aerobatics airplane | 1500g (3S APC11*5.5\11*7\11*8) (4S APC1050\APC9060) |
+
+| Max Continuous Power | 880W | Weight for 3D airplane | 1200g (3S APC11*5.5\APC12*6) |
+
+| Weight | 138g | Weight for glider | 1800g (3S APC11*5.5) |
+
+| Prop(inch) | Voltage(V) | Amps(A) | Thrust(gf) | Watts(W) | Efficiency(g/W) | Load temperature in 100% throttle |
+
+| APC11x5.5 | 11.1 | 5.8 | 500 | 64.38 | 7.766387077 | 73° |
+
+| 9.8 | 750 | 108.78 | 6.894649752 |
+
+| 14.3 | 1000 | 158.73 | 6.3000063 |
+
+| 19.3 | 1250 | 214.23 | 5.834850394 |
+
+| 24.8 | 1500 | 275.28 | 5.448997384 |
+
+| 31.2 | 1750 | 346.32 | 5.053130053 |
+
+| 38 | 2000 | 421.8 | 4.741583689 |
+
+| 14.8 | 4.7 | 500 | 69.56 | 7.188039103 |
+
+| 7.6 | 750 | 112.48 | 6.667852063 |
+
+| 11.5 | 1000 | 170.2 | 5.875440658 |
+
+| 15.7 | 1250 | 232.36 | 5.379583405 |
+
+| 20.3 | 1500 | 300.44 | 4.992677406 |
+
+| 25.4 | 1750 | 375.92 | 4.655245797 |
+
+| 30.8 | 2000 | 455.84 | 4.387504388 |
+
+| 35.9 | 2250 | 531.32 | 4.234736129 |
+
+| 42 | 2500 | 621.6 | 4.021879022 |
+
+| 60 | 3060 | 888 | 3.445945946 |
+
+| APC11x7 | 11.1 | 6 | 500 | 66.6 | 7.507507508 | 52° |
+
+| 10.5 | 750 | 116.55 | 6.435006435 |
+
+| 15.4 | 1000 | 170.94 | 5.85000585 |
+
+| 21.1 | 1250 | 234.21 | 5.337090645 |
+
+| 27.2 | 1500 | 301.92 | 4.968203498 |
+
+| 33.4 | 1750 | 370.74 | 4.720289151 |
+
+| 44 | 2100 | 488.4 | 4.2997543 |
+
+| APC11x8 | 11.1 | 6.6 | 500 | 73.26 | 6.825006825 | 55° |
+
+| 11.2 | 750 | 124.32 | 6.032818533 |
+
+| 16.4 | 1000 | 182.04 | 5.493298176 |
+
+| 22.3 | 1250 | 247.53 | 5.049892942 |
+
+| 29.8 | 1500 | 330.78 | 4.534736078 |
+
+| 36.4 | 1750 | 404.04 | 4.331254331 |
+
+| 48 | 2100 | 532.8 | 3.941441441 |
+
+| APC12x6 | 11.1 | 5.5 | 500 | 61.05 | 8.19000819 | 55° |
+
+| 9.4 | 750 | 104.34 | 7.188039103 |
+
+| 13.6 | 1000 | 150.96 | 6.62427133 |
+
+| 18.2 | 1250 | 202.02 | 6.187506188 |
+
+| 24.1 | 1500 | 267.51 | 5.607267018 |
+
+| 29.7 | 1750 | 329.67 | 5.308338642 |
+
+| 37 | 2000 | 410.7 | 4.869734599 |
+
+| 44.4 | 2250 | 492.84 | 4.565376187 |
+
+| 48 | 2400 | 532.8 | 4.504504505 |
+
+| APC1050 | 14.8 | 5 | 500 | 74 | 6.756756757 | 67° |
+
+| 8.6 | 750 | 127.28 | 5.892520427 |
+
+| 12.3 | 1000 | 182.04 | 5.493298176 |
+
+| 16.6 | 1205 | 245.68 | 4.904754152 |
+
+| 21.4 | 1500 | 316.72 | 4.736044456 |
+
+| 27.9 | 1750 | 412.92 | 4.238109077 |
+
+| 32.8 | 2000 | 485.44 | 4.119973632 |
+
+| 37.8 | 2250 | 559.44 | 4.021879022 |
+
+| 44.8 | 2500 | 663.04 | 3.770511583 |
+
+| 46.8 | 2580 | 692.64 | 3.724878725 |
+
+| APC9060 | 14.8 | 5.8 | 500 | 85.84 | 5.824790308 | 62° |
+
+| 9.9 | 750 | 146.52 | 5.118755119 |
+
+| 14.9 | 1000 | 220.52 | 4.534736078 |
+
+| 20.2 | 1250 | 298.96 | 4.181161359 |
+
+| 28.2 | 1500 | 417.36 | 3.594019551 |
+
+| 34 | 1750 | 503.2 | 3.477742448 |
+
+| 45.8 | 2120 | 677.84 | 3.12758173 |
+
+## Customer Reviews
+
+Based on 16 reviews
+
+Write a review
+
+88%
+(14)
+
+13%
+(2)
+
+0%
+(0)
+
+0%
+(0)
+
+0%
+(0)
+
+D
+
+Dennis
+
+Replacement for Predator 3536 KV850 Trying this Sunny Sky X2820 as a replacement on a FMS P-18 Super Cub. So far, it is working well. The motor seems very quiet and powerful. Smooth running with a APC propeller.
+
+M
+
+Mario G.
+
+SunnySky X2820 Brushless Motors
+
+G
+
+Gavin
+
+Met all expectations First time buying Sunnysky products and I was not disappointed. The motors are very well balanced and are a perfect go to for 3D printed rc planes especially those printed in LW-PLA.
+
+C
+
+Christopher F.
+
+Great place Love the motors.
+
+R
+
+Rolf
+
+Great BL motor I bought this Sunnysky X2820 920kv as a replacement for my Tundra V2. Perfect fit and a little more power than the original motor with the same prop.
+
+I'm going to try the APC 13x6,5 prop for a bit more juice.
+
+123
+
+### Related Products
+
+##### Eolo 2820 Brushless Motor
+
+$74.68
+
+##### Eolo 4125 Brushless Motor
+
+$132.10
+
+Back Order
+
+##### Sunnysky 3120 helicopter 380 level racing competition motor new model
+
+No reviews
+
+$69.00
+
+##### Sunnysky 4520 helicopter 520-600 level racing competition motor new model
+
+No reviews
+
+$199.00
+
+##### Sunnysky 4520R helicopter 520-600 level racing competition motor new model
+
+No reviews
+
+$249.00
+
+##### Sunnysky 4526 helicopter 600-700 level racing competition motor new model
+
+No reviews
+
+$219.00
+
+##### Sunnysky 4526R helicopter 600-700 level racing competition motor new model
+
+No reviews
+
+$269.00
+
+##### Sunnysky 4530 helicopter 700 level racing competition motor new model
+
+No reviews
+
+$289.00
+
+##### Sunnysky 4530R helicopter 700 level racing competition motor new model
+
+No reviews
+
+$335.00
+
+Back Order
+
+##### Sunnysky 4535R helicopter 700-800 level racing competition motor new model
+
+No reviews
+
+$409.00
+
+##### SunnySky A2212 980KV Brushless Motors Multirotor Version
+
+6 reviews
+
+$10.99
+
+##### SunnySky A2212 Brushless Motors
+
+14 reviews
+
+$11.99
+
+##### Free and low shipping cost
+
+##### Professional customer service
+
+##### Fast local delivery
+
+#### Footer menu
+
+- About us
+
+- Legal information
+
+- Privacy policy
+
+- Order & shipping
+
+- Payment
+
+- Return & warranty
+
+#### OUR WORKING HOURS
+
+Monday to Friday, 9:00am-5:00pm
+
+Closed at weekends and US federal holidays.
+
+#### CONTACT US
+
+SunnySky USA LLC
+
+5005 Transamerica Dr
+Columbus, OH 43228,
+USA
+
+Tel: +1-614-465-6688
+
+Fax: +1-614-636-4516
+
+info@sunnyskyusa.com
+
+#### Keep in Touch
+
+Sign up for our newsletter and be the first to know about coupons and special promotions.
+
+-
+
+-
+
+-
+
+-
+
+© 2026 SunnySky USA | Shopify Theme by Mile High Themes | Powered by Shopify
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+### Net Orders Checkout
+
+Item
+
+Price
+Qty
+Total
+
+| | | Subtotal | $0.00 |
+
+| | | Shipping | |
+
+| | | Total | |
+
+### Shipping Address
+
+United States
+---
+Afghanistan
+Åland Islands
+Albania
+Algeria
+Andorra
+Angola
+Anguilla
+Antigua & Barbuda
+Argentina
+Armenia
+Aruba
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bermuda
+Bhutan
+Bolivia
+Bosnia & Herzegovina
+Botswana
+Bouvet Island
+Brazil
+British Indian Ocean Territory
+British Virgin Islands
+Brunei
+Bulgaria
+Burkina Faso
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Cayman Islands
+Central African Republic
+Chad
+Chile
+China
+Christmas Island
+Cocos (Keeling) Islands
+Colombia
+Comoros
+Congo - Brazzaville
+Congo - Kinshasa
+Cook Islands
+Costa Rica
+Croatia
+Cuba
+Curaçao
+Cyprus
+Czech Republic
+Côte d’Ivoire
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Falkland Islands
+Faroe Islands
+Fiji
+Finland
+France
+French Guiana
+French Polynesia
+French Southern Territories
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Gibraltar
+Greece
+Greenland
+Grenada
+Guadeloupe
+Guatemala
+Guernsey
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Heard & McDonald Islands
+Honduras
+Hong Kong SAR China
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Isle of Man
+Israel
+Italy
+Jamaica
+Japan
+Jersey
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macau SAR China
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Martinique
+Mauritania
+Mauritius
+Mayotte
+Mexico
+Moldova
+Monaco
+Mongolia
+Montenegro
+Montserrat
+Morocco
+Mozambique
+Myanmar (Burma)
+Namibia
+Nauru
+Nepal
+Netherlands
+Netherlands Antilles
+New Caledonia
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Niue
+Norfolk Island
+North Korea
+Norway
+Oman
+Pakistan
+Palestinian Territories
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Pitcairn Islands
+Poland
+Portugal
+Qatar
+Réunion
+Romania
+Russia
+Rwanda
+Saint Martin
+Samoa
+San Marino
+São Tomé & Príncipe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Georgia & South Sandwich Islands
+South Korea
+South Sudan
+Spain
+Sri Lanka
+St. Barthélemy
+St. Helena
+St. Kitts & Nevis
+St. Lucia
+St. Martin
+St. Pierre & Miquelon
+St. Vincent & Grenadines
+Sudan
+Suriname
+Svalbard & Jan Mayen
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Timor-Leste
+Togo
+Tokelau
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Turks & Caicos Islands
+Tuvalu
+U.S. Outlying Islands
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Wallis & Futuna
+Western Sahara
+Yemen
+Zambia
+Zimbabwe
+
+AlabamaAlaskaAmerican SamoaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFederated States of MicronesiaFloridaGeorgiaGuamHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarshall IslandsMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaNorthern Mariana IslandsOhioOklahomaOregonPalauPennsylvaniaPuerto RicoRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirgin IslandsVirginiaWashingtonWest VirginiaWisconsinWyomingArmed Forces AmericasArmed Forces EuropeArmed Forces Pacific
+
+### Shipping Methods

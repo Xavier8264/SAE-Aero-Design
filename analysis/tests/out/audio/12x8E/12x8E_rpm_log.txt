@@ -1,0 +1,17 @@
+audio_rpm.py v1.0  2026-09-24 02:59:52
+audio 12x8E.MOV: 48000 Hz, 2 channel(s), 122.53 s; audio start - video start = 0.0000 s; video 30.000 fps
+spectra: 6127 hops of 0.020 s (window 0.171 s, bin 1.465 Hz, up to 5060 Hz); stationary lines removed: 30.8 Hz (7 dB)
+power prior: 237 display states, 35 motor-off (idle 0.11 A, 2.20 W); bound from APC 12x8e Cp_min 0.0417; 901 hops motor off, 5000 bounded, 226 free
+tracking: 3619 of 6127 hops voiced (59%); best-candidate salience on unvoiced hops: median 0.72, 99th pct 2.66 (voicing threshold 1.50)
+refinement: 3585 hops with harmonic peaks, 34 coarse only; median harmonics used 6; median spread 3.8 rpm
+done in 0.2 min
+rpm range 883 to 8315 (hops)
+display states: 237; with rpm 151; flagged motor_off 35, unsteady 44, no_rpm 51, rpm_thrust_mismatch 1
+highest-rpm state 145: 8276 rpm (std 16), I 33.86 A, V 13.17 V, T 2119.0 g
+measured / APC thrust at the audio rpm (rho 1.200, states with T_apc >= 200 g): median 0.957, range 0.869-1.056, n 105
+t2 file: rpm filled in 150 of 231 rows
+outputs:
+  C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\data\12x8E_rpm.csv
+  C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\data\12x8E_rpm_states.csv
+  C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\data\12x8E_t2.csv (rpm columns)
+  debug + plot: C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\out\audio\12x8E

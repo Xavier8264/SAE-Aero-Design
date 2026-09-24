@@ -1,0 +1,89 @@
+# ID: sunnysky_x2820_800kv_spec
+# SOURCE: https://sunnyskyusa.com/products/sunnysky-x2820-brushless-motors
+# ORIGINAL: reference/raw/sunnysky_x2820_800kv_datasheet.txt
+# CONVERTED: 2026-09-21 22:41 UTC-0500 | type txt | 1 pages | ~1266 tokens
+# NOTE: CLEAN EXTRACT of the official X2820 800KV spec + 4S test table (read this, not sunnysky_x2820_800kv). Watts column = nominal 14.8 V x A. No RPM published.
+
+=== PAGE 1 ===
+SunnySky X2820 800 KV brushless outrunner -- manufacturer datasheet (clean extract)
+
+Source: SunnySky USA official product page, original black "X Series" X2820 (KV 800 / 920 / 1100)
+  https://sunnyskyusa.com/products/sunnysky-x2820-brushless-motors
+  Full page archived as library ID sunnysky_x2820_800kv (reference/raw/sunnysky_x2820_800kv.html).
+Extracted 2026-09-21 from the page's embedded product description (KV800 tab). Values are copied
+as published; the only edits are ASCII units (mOhm, deg C) and table layout.
+SunnySky publishes no PDF datasheet for this motor; this page is the datasheet.
+Machine-readable test table: reference/data/sunnysky_x2820_800kv_testdata.csv (48 rows, all KV800).
+
+NOT the same product as "SunnySky X Series V3 X2820" (https://sunnyskyusa.com/products/sunnysky-x2820),
+which is a different line (blue/white) and has no 800 KV option.
+
+--------------------------------------------------------------------------------------------------
+SPECIFICATIONS, KV800
+--------------------------------------------------------------------------------------------------
+Stator diameter            28 mm
+Stator thickness           20 mm
+Rotor diameter             35 mm
+Shaft diameter             5 mm
+No. of stator slots        12
+No. of rotor poles         14      (12N14P; 7 pole pairs -> mechanical RPM = eRPM / 7)
+Body length (w/o shaft)    42 mm
+Body length                61 mm
+Motor Kv                   800 rpm/V
+Max LiPo cells             3-5S
+No-load current            0.9 A at 10 V
+ESC                        60 A
+Motor resistance           41 mOhm
+Recommended prop (in)      APC 13x6.5 / APC 12x6 / APC 12x8 / APC 13x8
+Max continuous current     46 A for 30 s
+Max continuous power       700 W
+Weight                     138 g
+Aircraft weight, aerobatic 1400-1800 g (4S, APC 12x6 / 12x8 / 13x6.5 / 13x8)
+Aircraft weight, 3D        1100-1400 g (4S, same props)
+
+Other KV versions on the same page, for identification only:
+  KV920:  28 mOhm, 1.1 A at 10 V no-load, 52 A / 30 s, 138 g
+  KV1100: 19 mOhm, 1.3 A at 10 V no-load, 60 A / 15 s, 138 g
+
+--------------------------------------------------------------------------------------------------
+MANUFACTURER TEST DATA, KV800, 4S (14.8 V) rows
+(last row of each prop is 100 percent throttle; temperature is given once per prop, at 100 percent)
+--------------------------------------------------------------------------------------------------
+Prop        V     A      Thrust gf   W        g/W
+APC 12x6    14.8  4.2    500         62.16    8.04
+APC 12x6    14.8  7.4    750         109.52   6.85
+APC 12x6    14.8  10.8   1000        159.84   6.26
+APC 12x6    14.8  14.5   1250        214.60   5.82
+APC 12x6    14.8  18.7   1500        276.76   5.42
+APC 12x6    14.8  23.2   1750        343.36   5.10
+APC 12x6    14.8  28.1   2000        415.88   4.81
+APC 12x6    14.8  32.7   2240        483.96   4.63     100 pct, 54 deg C
+APC 12x8    14.8  4.5    500         66.60    7.51
+APC 12x8    14.8  7.8    750         115.44   6.50
+APC 12x8    14.8  11.6   1000        171.68   5.82
+APC 12x8    14.8  15.7   1250        232.36   5.38
+APC 12x8    14.8  20.5   1500        303.40   4.94
+APC 12x8    14.8  26.0   1750        384.80   4.55
+APC 12x8    14.8  31.6   2000        467.68   4.28
+APC 12x8    14.8  38.5   2300        569.80   4.04     100 pct, 56 deg C
+APC 13x6.5  14.8  4.0    500         59.20    8.45
+APC 13x6.5  14.8  40.1   2670        593.48   4.50     100 pct, 60 deg C   (8 intermediate rows in the CSV)
+APC 13x8    14.8  4.2    500         62.16    8.04
+APC 13x8    14.8  45.2   2790        668.96   4.17     100 pct, 64 deg C   (8 intermediate rows in the CSV)
+(3S / 11.1 V rows for the 13x6.5 and 13x8 are in the CSV.)
+
+--------------------------------------------------------------------------------------------------
+READING NOTES (added by the project, not from SunnySky)
+--------------------------------------------------------------------------------------------------
+1. [VERIFIED by arithmetic] The Watts column is exactly 14.8 V x Amps in every row (e.g. 32.7 x 14.8 =
+   483.96). So "Voltage" is the nominal pack voltage and "Watts" is nominal, not a measured V x I.
+   The test supply voltage under load is not stated. A fresh real pack will sit above or below
+   14.8 V depending on current, so our stand numbers will not match this table exactly.
+2. No RPM is published. Kv, Rm and I0 must be measured on our own motor (TEST_PLAN.md Run C).
+3. The 9x4.5E, 9x6E and 12x10E props the team owns are NOT in this table. The 12x10E is the heaviest
+   load of the five and is the one most likely to exceed 46 A (see TEST_PLAN.md 3.5).
+4. The resistance is presumably line-to-line (phase to phase), which is the Rm the Drela first-order
+   model uses [INFERRED; SunnySky does not say].
+5. Researcher cross-check (2026-09-21, not archived): the manufacturer's China site
+   http://en.rcsunnysky.com/x-fixedwingseries/1104.html is reported to list the same 12N14P, 41 mOhm and
+   138 g. A reseller (readymaderc.com) lists 140 g. Weigh our motor (TEST_PLAN.md Run A).

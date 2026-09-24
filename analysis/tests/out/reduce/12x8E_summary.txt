@@ -1,0 +1,40 @@
+reduce_thrust.py  run 12x8E  prop 12x8e  (2026-09-23 20:56 CDT, indoors, Jackson TN)
+[1] Air: 72 F (Jordan 2026-09-24: 72 F indoors (assumed; not measured)); elev 464 ft (USGS EPQS 3DEP at 35.6750 -88.8635 = 464.1 ft (phone GPS 142 m agrees)); altimeter 30.20 inHg (KMKL METAR 01:53Z 30.20 / 02:53Z 30.21 (IEM ASOS; reference/data/kmkl_asos_2026-09-24.csv))
+    station P 1005.6 hPa, e 17.1 hPa (RH 64 pct; RH computed from the dewpoint / dewpoint outdoor KMKL dewpoint used as indoor [INFERRED; AC may dry the room])
+    rho 1.1785 kg/m^3 = 0.9620 x ISA SL; DA 1333 ft (NWS); ISA rho at that DA 1.1779
+[4] THRUST_FACTOR_meas (full throttle, n 16): 0.978 +/- 0.007 (1 sd); all steady points (T_apc >= 200 g, n 81): median 0.975
+    offset fit, steady points: T = 0.9879 T_apc -12.8 g (rms 14.6 g); with the offset removed the full-throttle ratio is 0.984
+[5] Full-throttle mean (n 16, 69.3-76.5 s): 8228 rpm, 33.67 A, 13.09 V, 2083 g; P_elec 441 W, APC shaft 333 W (ratio 0.756)
+    A torque side (I0 0.9 A, k_Q 1): Kv 809 rpm/V (sd 5); R_eff 86.6 mOhm = datasheet 44 + 42.6 extra. Kv at k_Q 0.95 / 1.05: 851 / 770
+    B speed side (R fixed 44 mOhm): Kv 709 rpm/V (sd 1, -11.4 pct vs 800); APC Cp must be x 1.141 to match the current
+    C free LSQ over the hold: Kv 690 +/- 20 rpm/V, R 35 mOhm, condition no. 3.7
+    Power balance at datasheet constants: P_elec - P_shaft(APC) - I^2 R - I0 V_emf = 48 W unaccounted (= 43 mOhm at 33.7 A)
+[6] Pack: resting before the run 15.40 V at 0.11 A (3.850 V/cell) [fresh = 16.8 V]
+    V = 15.37 - 68.3 mOhm x I over 99 steady points (rms 49 mV; includes polarization during the ramp)
+    step at the throttle cut: 13.03 V @ 33.33 A -> 14.32 V @ 0.44 A (0.60 s later) -> 39.2 mOhm; recovered to 14.97 V by 119 s
+[7] Hold droop over 7.2 s: thrust 0.967, rpm 0.9900, V 0.9894; rpm^2 alone predicts thrust 0.980
+[8] vs predict_x2820 (DA 1400 ft, V_oc 16.0, datasheet motor): 10074 rpm, 49.4 A, 14.77 V, 3210 g -> measured / model: rpm 0.817, I 0.682, V 0.886, T 0.649
+    vs SunnySky 100 pct row (2300 gf at 38.5 A, '14.8 V' nominal): measured / mfr T 0.906, I 0.875; g/A measured 61.9, mfr 59.7
+    datasheet motor fed THIS pack fit (V0 15.37, 68 mOhm) and this rho: 8845 rpm, 38.4 A, 12.74 V -> measured rpm is 0.930 of it
+[9] Reproduction of this run (1 motor, this pack): fit A 8218 rpm 33.6 A 2077 g; fit B 8217 rpm 33.6 A 2077 g  | measured 8228 rpm 33.7 A 2083 g
+    Per-motor current and total thrust at full throttle, static, this rho (thrust x THRUST_FACTOR_meas):
+    fit prop    pack                   1 motor: rpm   A   pct46   g   | 2 motors: A/motor  pack A  V_batt  lbf total
+    A   12x6e   this pack                8774  29.2   63  2036   |   24.5    49.0  12.02   7.44
+    A   12x6e   fresh 16.0/R ramp        9057  31.0   67  2173   |   26.0    51.9  12.45   7.92
+    A   12x6e   fresh 16.4/R step        9676  35.2   77  2488   |   31.2    62.5  13.95   9.66
+    A   12x8e   this pack                8218  33.6   73  2077   |   27.7    55.4  11.58   7.46
+    A   12x8e   fresh 16.0/R ramp        8473  35.6   77  2211   |   29.3    58.6  12.00   7.92
+    A   12x8e   fresh 16.4/R step        9096  40.9   89  2555   |   35.8    71.5  13.59   9.78
+    A   12x10e  this pack                7824  36.7   80  2016   |   29.9    59.8  11.28   7.16
+    A   12x10e  fresh 16.0/R ramp        8062  38.9   85  2143   |   31.6    63.2  11.68   7.59
+    A   12x10e  fresh 16.4/R step        8686  45.0   98  2491   |   38.9    77.9  13.35   9.45
+    B   12x6e   this pack                8638  28.3   62  1972   |   23.7    47.3  12.13   7.17
+    B   12x6e   fresh 16.0/R ramp        8936  30.2   66  2114   |   25.2    50.3  12.56   7.66
+    B   12x6e   fresh 16.4/R step        9584  34.6   75  2439   |   30.5    61.0  14.01   9.41
+    B   12x8e   this pack                8217  33.6   73  2077   |   27.4    54.8  11.62   7.37
+    B   12x8e   fresh 16.0/R ramp        8491  35.8   78  2220   |   29.1    58.1  12.03   7.86
+    B   12x8e   fresh 16.4/R step        9170  41.6   90  2598   |   35.9    71.8  13.58   9.83
+    B   12x10e  this pack                7907  37.5   81  2060   |   30.0    60.1  11.26   7.19
+    B   12x10e  fresh 16.0/R ramp        8165  39.9   87  2198   |   31.8    63.7  11.65   7.65
+    B   12x10e  fresh 16.4/R step        8864  46.8  102  2595   |   39.9    79.7  13.27   9.69
+    Separating A from B: no-prop rpm on this pack, fit A 12343, fit B 10853 (I0 about 1.2 A assumed) [INFERRED]

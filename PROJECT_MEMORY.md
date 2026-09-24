@@ -806,3 +806,525 @@ x_np ~0.44c) as the [2026-09-19 00:28] summary planned, since T-1 and T-2 are no
 hardware, or (b) write analysis/tests/reduce_panel.py and reduce_thrust.py against the CSV schemas
 in TEST_PLAN.md so the reduction is ready before data exists. (b) is cheap and removes a step from
 test day; (a) is the bigger open design question.
+
+## [2026-09-21 22:51 CDT] Hardware bought, E423 locked, TEST_PLAN.md v1.1 (T-2 rewritten for real hardware)
+
+### Decisions (Jordan, 2026-09-21)
+- AIRFOIL LOCKED: Eppler E423. Supersedes the S1223 design point. At the SAME 95 x 26 in wing the
+  model gives E423 trimmed CLmax 1.55 vs S1223 1.66 and payload 16.2 vs 17.4 lb
+  (analysis/sizing/out/sweep_summary.txt line 20). The sizing has NOT been re-optimized for the E423,
+  so design_card.txt is stale (it is still the S1223 point).
+- MOTOR BOUGHT: SunnySky X2820 800 KV, original black X Series (not the "X V3" line, which has no
+  800 KV). Quantity on hand: OPEN (ask Jordan).
+- PROPS ON HAND: APC 9x4.5E, 9x6E, 12x6E, 12x8E, 12x10E. All five have APC PER3 data in the library.
+- THRUST STAND BOUGHT: Mayatech MT10PRO 10 kg. This replaces the DIY load cell + HX711 plan in v1.0.
+
+### X2820 800 KV datasheet [VERIFIED from the official SunnySky USA page]
+Kv 800; Rm 41 mOhm; I0 0.9 A at 10 V; 46 A for 30 s max continuous; 700 W; 3-5S; ESC 60 A;
+12N14P (7 pole pairs); stator 28 x 20 mm; 5 mm shaft; 138 g. No PDF exists; the page is the datasheet.
+4S 100 pct points (V column is nominal 14.8 V, W = 14.8 x A, no RPM published):
+  12x6 32.7 A 2240 gf 54 C | 12x8 38.5 A 2300 gf 56 C | 13x6.5 40.1 A 2670 gf 60 C | 13x8 45.2 A 2790 gf 64 C.
+  The 9x4.5E, 9x6E and 12x10E are not in SunnySky's table.
+Files: reference/raw/sunnysky_x2820_800kv_datasheet.txt (library ID sunnysky_x2820_800kv_spec, READ THIS ONE),
+reference/raw/sunnysky_x2820_800kv.html (ID sunnysky_x2820_800kv, raw page, ~47k tokens),
+reference/data/sunnysky_x2820_800kv_testdata.csv (48 rows; checked against the typed table, 20 rows, 0 mismatches).
+
+### MT10PRO findings [VERIFIED from the reseller page, reference/text/mayatech_mt10pro.txt lines 87-111]
+Thrust 0-10 kg ("down to the gram" = display resolution, accuracy unpublished), V 0-60 V, A 0-150 A,
+W; motor base 16/19/25 mm; power input 5-26 V (XT60); 733 g; CNC aluminium base with bench holes.
+DISPLAY ONLY: no RPM, no torque, no data logging. No official Mayatech page or manual was found.
+Safety sheet archived as mayatech_mt10pro_safety (generic).
+Consequences written into the plan: a separate optical tach is required; the data logger is a phone
+on a tripod at 60 fps with sound (display for T/V/A/W, audio blade-pass 2 x RPM/60 for RPM, via
+ffmpeg + STFT in reduce_thrust.py); the display update rate must be measured once (Run 0.5).
+
+### Model predictions on the X2820 [computed, analysis/tests/predict_x2820.py -> analysis/tests/out/predict_x2820.csv]
+Datasheet constants (Kv 800, Rm 0.041, I0 0.9, Resc 0.003), V_oc 16.0 V, R_batt 0.025 ohm, DA 1400 ft, J = 0.
+  prop    stand 1 motor: rpm / g / A / pct of 46 A      aircraft: n / total lbf / pack A
+  9x4.5E  11883 / 1435 / 16.6 / 36                     4 / 11.0 / 59
+  9x6E    11635 / 1634 / 21.1 / 46                     4 / 12.2 / 72
+  12x6E   10531 / 3024 / 41.1 / 89                     2 / 12.0 / 74
+  12x8E   10074 / 3210 / 49.4 / 107                    2 / 12.5 / 88
+  12x10E   9736 / 3201 / 55.5 / 121                    2 / 12.4 / 98
+- 12x8E and 12x10E are predicted ABOVE the 46 A rating on a fresh pack (upper bound, see next item).
+  Plan now has a current ramp rule (50 -> 75 -> 90 pct, 3 s each; above 42 A at 90 pct means no
+  100 pct; above 46 A is a hard cut) and tests props in increasing load order.
+- vs design card: 2 x 12x6E static was 13.2 lbf (design_card.txt, generic 42xx-50xx motor, Kv 843,
+  88 A). With the X2820 the model gives 12.0 lbf; SunnySky's table implies 9.9 lbf (2 x 2240 gf).
+- Model vs SunnySky at a stiff 14.8 V, sea level: 12x6 model 3056 gf 41.6 A vs 2240 gf 32.7 A (0.73
+  thrust ratio); 12x8 model 3323 gf 51.1 A vs 2300 gf 38.5 A (0.69).
+- Back-calculation [INFERRED]: at the RPM where an APC prop absorbs SunnySky's measured current
+  (12x6 9182 rpm, 12x8 8692 rpm), SunnySky thrust is 0.943 and 0.929 of APC, i.e. right at
+  THRUST_FACTOR 0.93. That fits if their motor saw only about 12.4-12.8 V (3.1-3.2 V/cell) vs the
+  model's ~15 V. So the gap is most likely voltage under load, not the prop data, and it is worth
+  about 30 pct of static thrust. Unconfirmed: SunnySky publishes neither its loaded voltage nor
+  whether its props were E versions. Only measured V_batt + RPM on our stand settles it.
+
+### TEST_PLAN.md v1.1 changes
+- Header and section 0: v1.1 note; E423 cost at fixed geometry.
+- T-1 (section 2): airfoil row E423; rib table recomputed for E423 (area coefficient 0.0827, t/c
+  0.125, 55.9 in^2 at 26 in chord; 1/8 in rib 7-15 g vs the model's implied 23.7 g, a factor of
+  1.6-3.6); build note on the E423 thicker TE (0.015c vs 0.008c at 95 pct chord, 0.39 vs 0.20 in);
+  record as-built TE thickness at 3 ribs.
+- T-2 (section 3) rewritten: 3.1 objective with model status; 3.2 hardware on hand + ESC throttle
+  calibration; 3.3 equipment around the MT10PRO (hanging-mass pulley calibration up and down, tach,
+  60 fps video logging, mount fit check); NEW 3.4 variables to measure (per sample: T, RPM, V_batt,
+  I, P, throttle, time; per run: IDs, cell V before/after, temperatures, air density inputs, prop
+  clearance; per session: cal, display rate, masses; not measured: torque, airspeed) with the
+  SunnySky worked example; 3.5 predictions + current ramp rule; 3.6 methodology (video is the log);
+  3.7 procedure (Run 0 setup/cal, Run A masses, Run B pack, Run C motor constants over 6 load
+  points incl. no-prop Kv check 12,000-13,400 rpm, Run D thrust with D5 Y-harness downstream of the
+  MT10PRO); new CSV schemas (T_g raw grams, rpm_source, pack_id, pack_fresh, video_file, t2_cal.csv);
+  3.8 reduction incl. audio RPM; 3.9 gates (Kv +/-10 pct, V_batt near 12.5-13 V, 46 A per motor,
+  92 A pack, motor can 158 F, pack 140 F); 3.10 code feedback.
+- Section 4 safety: transmitter throttle cut + failsafe OFF test, ramp rule, leads clear of the arc.
+- Section 5: Run 0 added. Section 6: no torque; MT10PRO accuracy unpublished (calibration is the only
+  accuracy statement); time resolution = display rate; D5 RPM by optical tach (two audio peaks).
+
+### Code facts checked this session
+- PropSystem already accepts kv= and motor= (propulsion.py:106); callers takeoff.py:43 and
+  propulsion.py:196 do not pass them. So fixing Kv at 800 is a caller change, not a model change.
+- ffmpeg is installed on the laptop (winget ffmpeg full build).
+
+### Files
+New: analysis/tests/predict_x2820.py, analysis/tests/out/predict_x2820.csv,
+reference/raw/sunnysky_x2820_800kv_datasheet.txt, reference/data/sunnysky_x2820_800kv_testdata.csv,
+library IDs sunnysky_x2820_800kv, sunnysky_x2820_800kv_spec, mayatech_mt10pro, mayatech_mt10pro_safety.
+Modified: TEST_PLAN.md (v1.1), reference/GUIDE.md (Propulsion section), reference/data/README.txt,
+reference/INDEX.md and manifest.json (via doc2text).
+
+### UNVERIFIED / OPEN
+- How many X2820s are on hand, and which ESC (SunnySky recommends 60 A). Ask Jordan.
+- X2820 mount holes vs the MT10PRO 16/19/25 mm patterns.
+- Whether the MT10PRO's 5-26 V power input is the pack itself or a separate supply.
+- Rm 41 mOhm is presumably line-to-line [INFERRED]. I0 0.9 A is at 10 V; higher at 4S speed.
+- The SunnySky low-voltage explanation above [INFERRED].
+- The recharge threshold of about 3.9 V/cell per resting cell in Run B5 [INFERRED].
+- None of the predictions above have been checked against a measurement yet.
+
+### NEXT TASK
+Rerun the sizing with the E423 locked and the X2820 as the fixed motor (Kv 800, datasheet Rm/I0,
+passed through takeoff.py:43 and propulsion.py:196) as the interim baseline, so the design card
+reflects the hardware actually bought; and/or write analysis/tests/reduce_thrust.py against the
+TEST_PLAN.md 3.7 schemas before test day.
+
+## [2026-09-21 22:56 CDT] Prop ranking on the X2820 800 KV, 2-motor and 4-motor
+
+Task: Jordan asked for a best-to-worst ranking of the props in analysis/tests/out/predict_x2820.csv for
+the 2-motor and 4-motor setups. Static (J = 0) alone is not enough because T(V_R) decides the 100 ft
+takeoff, so the same model was also run over the ground roll.
+
+### Method [computed; scratch script, not saved to the repo]
+PropSystem(n, prop, kv=800, X2820 datasheet motor dict, v_oc=V_OC_TO 16.0, r_batt=0.025), DA 1400 ft,
+THRUST_FACTOR 1.0 (raw APC). full_throttle over 0 -> V_R 36.4 ft/s (25 points); Tmean = velocity-averaged
+thrust over the roll (rough). Peak current = max over the roll (APC Cp rises with J, so the peak is not
+at V = 0). Cruise: part_throttle_current at 4.22 lbf, 46.4 ft/s, V_OC_CRUISE 15.2 (design_card.txt
+line 8, S1223 point, so absolute cruise numbers are stale for the E423).
+
+  cfg        T0 lbf  Tmean  T(V_R)  Ipk/motor A  pct 46 A  pack pk A  cruise A
+  2x12x6e    11.99   10.68   9.23     38.2         83        76.3      34.5
+  2x12x8e    12.54   11.49  10.31     47.1        102        94.3      34.2
+  2x12x10e   12.38   11.58  10.67     53.5        116       107.0      35.0
+  2x9x6e      6.79    6.21   5.52     21.2         46        42.4      37.1
+  2x9x45e     6.03    5.26   4.36     16.1         35        32.2      cannot hold cruise
+  4x9x6e     12.19   11.04   9.69     19.1         41        76.2      33.4
+  4x9x45e    11.03    9.55   7.83     14.8         32        59.3      35.3
+
+### Ranking given to Jordan [INFERRED from the model above]
+2-motor: 1) 12x8E, conditional on the stand showing <= 46 A per motor (+1.08 lbf at V_R, +12 pct over
+12x6E; model peak 47.1 A = 102 pct, pack 94 A just over the TEST_PLAN 92 A gate). 2) 12x6E, the only
+12 in prop with current margin (83 pct); the fallback if 12x8E reads over. 3) 12x10E, out: 116 pct of
+rating, 107 A pack, and only +0.36 lbf at V_R over 12x8E. 2 x 9 in is legal but about half the thrust.
+4-motor (9 in max): 1) 9x6E (T(V_R) 9.69, above 2x12x6E's 9.23). 2) 9x45E (-1.86 lbf at V_R).
+On this 800 Kv motor the 9 in props run at 32-46 pct of rating, so 4 motors carry the weight of two extra
+motors and ESCs without using them. The earlier "2x12x6e vs 4x9x45e within 0.1 lb" result used Kv matched
+per prop and does not apply to the fixed X2820.
+Cruise current is 33-37 A for every viable setup, so it does not separate them.
+
+### UNVERIFIED
+- All numbers are model output. The model is about 30 pct above SunnySky's published thrust, most likely
+  loaded voltage [INFERRED, see 22:51 entry]. Lower real voltage cuts current too, which helps 12x8E's
+  current case, but also cuts high-load props the most, so the 12x8E/12x10E thrust edge may shrink.
+- Stand vs aircraft: one motor on the stand draws more than one motor in the aircraft (less pack sag):
+  12x8E 49.4 A stand vs 44.0 A aircraft static. Judge the 46 A question with the aircraft-equivalent
+  current, or with the D5 two-motor run.
+- Number of X2820s on hand is still OPEN; the 4-motor option needs four.
+
+### NEXT TASK
+Unchanged from the 22:51 entry. T-2 settles the 12x6E vs 12x8E call.
+
+## [2026-09-23 22:53 CDT] MT10PRO video reader written (read_mt10pro_video.py); 12x8E.MOV not yet processed
+
+### What was done
+- Jordan filmed the Mayatech MT10PRO screens during a 12x8E run (phone on a tripod, gantry clamped to a
+  table, some wind shake). Video moved to analysis/tests/video/12x8E.MOV (201.7 MB).
+- New .gitignore: analysis/tests/video/ (the video is over GitHub's 100 MB file limit) and
+  analysis/tests/out/video/ (the script's regenerable cache and overlays).
+- Wrote analysis/tests/read_mt10pro_video.py (v1.0, 1303 lines, accuracy over speed). Claude did NOT run
+  it on the video; Jordan runs it (commands below). Only its functions were imported in scratch tests.
+- Product facts (ranges, display-only, no RPM/torque/logging) are already in the 2026-09-21 22:51 entry.
+  This entry adds what the video shows.
+
+### Video [VERIFIED, OpenCV + ffprobe]
+3840x2160 H.264, 30.0 fps CFR (TEST_PLAN asked for 60), 3676 frames, 122.53 s, AAC audio 48 kHz stereo.
+The displays leave the picture from about frame 3580 (119.3 s). Motion blur from about 40-75 s (high
+throttle).
+
+### MT10PRO display, as read from the video [VERIFIED from frames unless tagged]
+- Blue backlit dot-matrix LCD, 2 rows x 16 cells of 5x7 dots, HD44780 A00 ROM glyph forms.
+  Row 0 "  34.12A  13.14V": current A (2 dp), battery V (2 dp). Row 1 "    2.0Wh 448.4W": aux field, power W (1 dp).
+- Aux field cycles about every 3 s: Ap, Vm, Wp, Ah, Wh. Meanings [INFERRED from units and values]: peak A,
+  minimum V, peak W, charge used, energy used. Frames 0/45/150: 0.17Ap, 15.40Vm, 1.7Wp at 0.11-0.12 A, 15.40-15.41 V live.
+- Glyphs seen (18): space . 0-9 A V W p h m.
+- Thrust: red-plate 7-segment LCD, 5 digits, grams [UNVERIFIED unit, none shown], triangle marker at the
+  left; the leading digit was blank in every frame checked.
+- Blue display refresh about 0.46 s (2.2 Hz), from frame counting in the prototype work; the script
+  re-measures it and logs it. The thrust value can change on consecutive frames, so its refresh is faster
+  than 30 fps can resolve [VERIFIED lower bound only]. Frames at a blue update are rolling-shutter mixes
+  (upper cells from one state, lower from the next).
+- |P - V x I| = 0.09, 0.18, 0.32, 0.07 W on four hand-checked states.
+
+### Hand-checked single frames [VERIFIED; points only, not the processed run]
+  frame  t s    I A     V      P W     thrust g
+  1147   38.2   2.83   15.17    43.0     352
+  2059   68.6  32.33   13.38   432.9    2053
+  2129   71.0  34.12   13.14   448.4    2111
+  2142   71.4  33.95   13.12   445.6    (not checked)
+First look vs the 22:51/22:56 model [INFERRED, throttle position unknown]: the model's 12x8E stand peak is
+49.4 A; 34.12 A is the highest hand-checked here. Voltage went 15.41 V at 0.12 A -> 13.14 V at 34.12 A,
+an apparent source resistance of 0.067 ohm (an upper bound for pack + leads, because the open-circuit
+voltage also fell as 2.0 Wh were used). The model assumes V_OC 16.0 V, r_batt 0.025 ohm. This supports the
+earlier guess that loaded voltage explains the model's thrust over-prediction. Wait for the full run and
+the Ap/Vm aux values before concluding.
+
+### Script method (analysis/tests/read_mt10pro_video.py)
+- Setup: scan every 15th frame; the sharpest clean in-state pair is the registration reference; up to 8
+  sharp frames at least 45 frames apart train lit/unlit dot footprints by least squares (with gain
+  normalization and outlier drop/relearn).
+- Pass 1, per frame: color detection of both displays -> homography from the fitted outline -> masked ECC
+  homography against the reference using static features only (borders, A/V/W unit glyphs, thrust
+  triangle). ECC failure falls back to the outline homography. Blue: frame = plane + gain * K conv
+  (sharp dot model); per-frame NNLS blur kernel K; glyph costs in dot-equivalents. Thrust: 35 segment
+  darkness values, per-frame on/off levels, costs in segment-equivalents.
+- Pass 2: per-cell / per-digit Viterbi (switch penalty 4.0 dot-eq blue, 1.0 seg-eq thrust; blurry frames
+  down-weighted). Blue mix runs (1-3 frames) dropped; thrust 1-2 frame neighbor mixes kept, flagged
+  possible_mix, and left out of T_g. P check tolerance 0.5 + 0.003 P W. T_g per blue state = mean of the
+  thrust frames over that state.
+- ECC finding: most frames converge in 15-50 iterations (1.0-1.9 s); frame 2058 needs 200-330 (13 s), with
+  corners moving 0.42 px while the correlation changes 0.0005. Cap kept at 200 for accuracy.
+- Outputs: analysis/tests/data/RUN_t2.csv (TEST_PLAN t2 columns, one row per clean blue state),
+  RUN_blue_states.csv, RUN_thrust_states.csv, RUN_frames.csv; debug in analysis/tests/out/video/RUN/
+  (log, setup.json, model.npz, pass-1 chunk cache, overlays). RUN defaults to the video name. An interrupted
+  run resumes from the chunk cache (--fresh ignores it).
+
+### Validation [VERIFIED, scratch tests importing the script's functions; not an end-to-end run]
+- Blue reader: 832/832 cells on 26 truth frames, with the prototype footprints and with the script's own
+  training path. Thrust reader: 17/17 frames. Registration and frame seek match the prototype.
+- Pass-2 block executed on synthetic pass-1 data with known truth (900 frames, 49 injected mixes, blur,
+  6 invalid frames): 66/66 blue states correct, T_g within 0.51 g of the true state mean, 117/117 thrust
+  states, refresh period 0.4615 s recovered (true 0.4613 s).
+- First 10 s: displays found and 31-32 of 32 cells decode in frames 0-299, so the smoke test is valid.
+
+### Commands (Git Bash, repo root)
+  python analysis/tests/read_mt10pro_video.py analysis/tests/video/12x8E.MOV --end 10 --run-id 12x8E_smoke
+  python analysis/tests/read_mt10pro_video.py analysis/tests/video/12x8E.MOV --prop 12x8E
+  (optional: --motor-id --esc-id --pack-id --pack-fresh --n-motors-live --throttle-pct, copied into t2)
+
+### UNVERIFIED / open
+- Full-video runtime: estimate 2-3 s per frame per worker, 6 workers -> about 35-75 min; share of slow-ECC
+  frames unknown.
+- Thrust unit (grams assumed); thrust refresh rate; latency between the thrust and blue displays (T_g
+  pairing may lag); aux field meanings; throttle position during the run.
+- Only the 18 glyphs above are modeled; other camera framings/orientations untested.
+- RPM: the audio track is present but not processed (TEST_PLAN blade-pass method, not written yet).
+- Next videos: film at 60 fps as TEST_PLAN says (30 fps cannot resolve the thrust refresh).
+
+### NEXT TASK
+Jordan runs the two commands. Next session: review 12x8E_t2.csv, the flagged states and a few overlays,
+then write the audio blade-pass RPM extraction for the same video.
+
+## [2026-09-24 03:04 CDT] 12x8E.MOV processed: video reader run reviewed, audio RPM tool written; first T-2 data
+
+Task (Jordan, overnight, no permission prompts): run the two read_mt10pro_video.py commands, review the output
+and fix the script, then write the RPM estimator. All done unattended. Nothing committed (Jordan commits).
+
+### Video reader run [VERIFIED against hand reads of the video]
+- Smoke (frames 0-299): 15.3 min, 100 pct readable, 20 blue states, refresh 0.455 s. The 12x8E_smoke_*.csv
+  files are left in analysis/tests/data/.
+- Full video: 3676 frames (122.5 s at 30 fps) took 171.8 min on 6 workers = 15.6 s per frame per worker
+  (median 9.2 s, p90 50 s, max 105 s; slow ECC convergence dominates). The 22:53 estimate (35-75 min) was wrong.
+- Readable: blue 3601 (98 pct), thrust 3596 (98 pct). All unreadable frames are at 119.3-122.5 s (unit off).
+- 237 blue states (231 good, 5 short, 1 bad end state), 231 rows in 12x8E_t2.csv. 221 thrust states, 0-2193 g.
+- Blue refresh 0.457 s (alignment R 0.50). Thrust value changes: median interval 0.333 s, min 0.100 s.
+- Hand checks, exact match: frame 1147 2.83 A 15.17 V 43.0 W 352 g; 2059 32.33 A 13.38 V 432.9 W 2053 g;
+  2129 34.12 A 13.14 V 448.4 W 2111 g; 2142 2193 g.
+- |P - V x I| max 0.39 W. Fit T = 17.07 x P^0.800 g (105 states with P > 20 W, residual std 5.8 pct).
+- One current spike (frame 1017, 2.91 A) is a mid-update frame and is excluded from every state.
+- Fix: the run_jobs() ETA divided elapsed time by chunks done, so early in the pool it read 576 min (true
+  about 150). It now counts at least one chunk per worker. Edited after the run ended, because spawned
+  workers re-import the file.
+
+### Audio RPM tool: analysis/tests/audio_rpm.py v1.0 (new)
+Method:
+1. ffmpeg audio -> STFT (8192 window, 20 ms hop). Stationary lines are removed.
+2. Harmonic salience of the blade-pass frequency F = B x RPM/60 over 10 harmonics.
+3. Sub-harmonic penalty at m = 2 and 3. For a 2-blade prop the m = 2 threshold is relative:
+   max(C_THR, mean of the neighbouring harmonic levels - SUB_REL 6 dB). Without it, the 1/rev imbalance lines
+   (10-18 dB below the blade-pass lines) made the tracker lock onto the shaft rate (F/2).
+4. Power prior from the display states: n_lim = 1.3 x ((dP + 1 W)/(0.8 Cp_min rho D^5))^(1/3). The motor is
+   treated as off when I is within 0.05 A of idle.
+5. Viterbi with an unvoiced state (max jump 1/8 octave per hop), then WLS refinement on the harmonic peaks.
+6. Each blue state's window is shifted by --state-lag, default -0.35 s (display latency, below).
+7. APC PER3 thrust check: flag rpm_thrust_mismatch when T_meas/T_apc is outside 0.5-2.0 and
+   max(T_apc, T_meas) >= 100 g. The max catches an F/2 error, which drops T_apc by 4x.
+Outputs:
+- data/RUN_rpm.csv (per hop) and data/RUN_rpm_states.csv.
+- The rpm, rpm_source and notes columns are merged into RUN_t2.csv; rerunning the merge gives the same file.
+- out/audio/RUN/RUN_rpm.png and RUN_rpm_log.txt.
+- Runtime 0.2 min.
+Command: python analysis/tests/audio_rpm.py analysis/tests/video/12x8E.MOV --prop 12x8E
+
+Fixes made during review:
+- The octave error at about 38 s is fixed by the relative m = 2 threshold. Verified on real and synthetic data.
+- The thrust gate uses the max of T_apc and T_meas, as in step 7.
+- A column-name clash with the pandas .flags attribute.
+- The docstring.
+
+Validation:
+- Synthetic: state means 4999.3 / 7000.2 / 8250.0 / 2999.4 rpm (truth 5000 / 7000 / 8250 / 3000). Held states
+  have an rpm std of 0.6-0.9.
+- 12x8E: 3619 of 6127 hops voiced; 883-8315 rpm; no lock onto the motor whine (7F).
+- States: 151 have an rpm. Flags: motor_off 35, unsteady 44, no_rpm 51, rpm_thrust_mismatch 1. The mismatch is
+  state 12, the start transient (2037 rpm at 0 g, weak evidence), and it is correctly excluded.
+- 150 of the 231 t2 rows have an rpm.
+
+Display latency [measured, one video only]:
+- The MT10PRO shows values about 0.35-0.40 s after they are measured. The best lag is -0.35 s for I and P and
+  -0.40 s for T. The two halves of the run give -0.40 and -0.35 s.
+- Fit rms improves from 4.3 to 2.5 pct for I and from 3.3 to 2.0 pct for T.
+- Throttle cut: heard at 76.46-76.50 s, while the display still showed 33.49 A until 77.07 s.
+
+### First T-2 data: X2820 800 KV + APC 12x8E on 4S [measured; throttle position not recorded]
+  state  t s    rpm (std)   I A    V V    P W    T g    T_apc g  T/T_apc
+  77     38.07  3502 (31)   2.83   15.17   43.0   352    388     0.908  unsteady
+  143    68.33  8125 (51)  32.33   13.38  432.9  2029   2114     0.960
+  145    69.27  8276 (16)  33.86   13.17  446.2  2119   2195     0.965  highest rpm
+  148    70.73  8235 (13)  34.12   13.14  448.4  2111   2173     0.971  highest current
+  149    71.13  8242 (5)   33.95   13.12  445.6  2108   2177     0.968
+- Peaks: current 34.1 A (74 pct of the 46 A rating), rpm 8276, thrust 2120 g state mean (2193 g single frame).
+- Measured / APC thrust at the audio rpm (rho 1.20, T_apc >= 200 g): median 0.957, range 0.869-1.056, n 105.
+  At matched rpm the APC PER3 data holds within about 4 pct.
+- Thrust offset [INFERRED, medium confidence]:
+  - Below 400 g of T_apc: T_meas = 0.9986 T_apc - 27.3 g (n 39).
+  - All steady states: T_meas = 0.9747 T_apc - 20.0 g (residual 13.3 g, n 107).
+  - An offset that stays constant with thrust looks like stand zero or friction, not a Ct error.
+  - With +27 g added, the top-end ratio is about 0.98.
+  - Settle it with the TEST_PLAN Run 0.2 hanging-mass calibration (load up, then down).
+- During the 69-76.5 s hold, rpm decays from 8280 to 8170 as V sags from 13.26 to 13.03 V.
+- At 8276 rpm the shaft power is about 348 W (APC Cp 0.0417) against 446 W electrical, so motor + ESC
+  efficiency is about 0.78 [INFERRED].
+- Against the model (22:51 entry), which predicted 10074 rpm / 3210 g / 49.4 A for the 12x8E stand at full
+  throttle:
+  - The measured top was 8276 rpm / 2120 g / 34.1 A.
+  - The throttle position is unknown, so this is not a full-throttle comparison. A Kv back-calculation
+    (about 708 rpm/V if the throttle was at 100 pct) is inconclusive.
+  - The prop data matches at matched rpm, so the thrust gap is in the rpm reached (motor/voltage side). This
+    agrees with the 22:51 inference.
+  - If the run was at full throttle, the 12x8E stays inside the 46 A rating and wins the 12x6E vs 12x8E call.
+    Ask Jordan.
+- After shutdown the displayed current decays from 0.44 to 0.17 A over about 25 s (idle was 0.11-0.12 A
+  before). Cause UNVERIFIED; possibly current-sensor zero drift after load. Those states are not treated as
+  motor off, but they are correctly flagged no_rpm.
+
+### Files
+New (untracked):
+- analysis/tests/audio_rpm.py
+- analysis/tests/data/: 12x8E_{t2,blue_states,thrust_states,frames,rpm,rpm_states}.csv and 12x8E_smoke_*.csv
+- analysis/tests/out/audio/12x8E/ (plot 0.86 MB + log; not in .gitignore)
+- analysis/tests/out/video/12x8E/ (37 MB, gitignored)
+Modified: analysis/tests/read_mt10pro_video.py (the ETA line in run_jobs).
+Scratch only (not in the repo): diag4.py (penalty variants), lag.py (latency fit), synthetic test data.
+
+### UNVERIFIED / open
+- Display latency (-0.35 s) is from one video only.
+- --order 7 (tracking the motor whine instead of blade pass) is untested.
+- The cause of the -20 to -27 g thrust offset.
+- rho 1.20 is assumed: air temperature and pressure were not recorded.
+- The cause of the post-shutdown current decay.
+- The throttle position during the run.
+- The start transient at 5.2-6.5 s is ambiguous in the audio.
+- Stand vs aircraft current (22:56 entry), unchanged.
+
+### Adjacent issues (listed, not fixed)
+- The video reader is slow: 172 min for 122 s of video. ECC iterations dominate. Starting ECC from the
+  previous frame's warp may cut this; worth trying before the next batch of videos.
+- Blank end frames (unit off) read as thrust 0, which stretches the last thrust state.
+- Post-shutdown states are flagged no_rpm, not motor_off (idle current drifts up after load).
+- The smoke outputs are still in data/. Archive them once they are no longer needed.
+- Next videos: 60 fps (TEST_PLAN); write down the throttle pct, air temperature and pressure; run Run 0.2.
+
+### NEXT TASK
+See the CURRENT STATE SUMMARY below.
+
+---
+
+## [2026-09-24 03:04 CDT] CURRENT STATE SUMMARY (after the first T-2 data; start here)
+
+The [2026-09-19 00:28] summary (and the [2026-09-18 21:06] one it points to) still hold for rules, team,
+bottles, scoring and the library, with these updates:
+- AIRFOIL LOCKED: E423 (2026-09-21).
+  - analysis/sizing/out/design_card.txt is STALE: it is still the S1223 point (95 x 26 in).
+  - At the same wing the E423 gives CLmax 1.55 and a payload of 16.2 lb (model).
+  - The sizing has not been re-optimized.
+- Hardware on hand:
+  - Motor: SunnySky X2820 800 KV. Quantity OPEN.
+  - ESC: OPEN.
+  - Thrust stand: Mayatech MT10PRO 10 kg (display only, no logging).
+  - Props: APC 9x4.5E, 9x6E, 12x6E, 12x8E, 12x10E.
+- Prop ranking (model, 22:56 entry): for 2 motors, 12x8E if it draws <= 46 A per motor, else 12x6E. For
+  4 motors, 9x6E.
+- Tests (TEST_PLAN.md v1.1):
+  - T-1 wing panel weigh-in: no data logged yet.
+  - T-2 thrust stand: first run done (12x8E; entry above).
+- T-2 data pipeline:
+  1. Phone video.
+  2. analysis/tests/read_mt10pro_video.py (display values; about 15.6 s per frame per worker).
+  3. analysis/tests/audio_rpm.py (rpm from blade pass; 0.2 min).
+  4. Output: analysis/tests/data/RUN_t2.csv.
+  - analysis/tests/reduce_thrust.py (TEST_PLAN 3.8) is NOT written yet.
+- First T-2 result, 12x8E (throttle unknown): up to 34.1 A, 8276 rpm, 2120 g. APC PER3 thrust matches within
+  about 4 pct at matched rpm (median ratio 0.957). There is a probable -20 to -27 g stand offset.
+- Stability and trim (the 2026-09-19 NEXT TASK) is not started. AVL/XFLR5 is not installed.
+
+### Action items for Jordan
+1. For the 12x8E run: was it full throttle? Also the air temperature and the pressure or altitude. Also: how
+   many X2820s are on hand, and which ESC?
+2. Next stand session:
+   - Film at 60 fps.
+   - Run 0.2 hanging-mass calibration (settles the thrust offset).
+   - Full-throttle ramps for 12x6E and 12x8E using the TEST_PLAN current rule.
+   - Write down the throttle pct for each hold.
+3. T-1 wing panel weigh-in (tests before analysis).
+4. From the old summary: lottery interest by 2026-09-30, AMA card, sae.org affiliation (status not logged).
+5. Commit the new files (audio_rpm.py, the 12x8E data, the reader ETA fix, this log).
+
+### NEXT TASK
+Write analysis/tests/reduce_thrust.py per TEST_PLAN.md 3.8, using 12x8E_t2.csv as the first input:
+- air density;
+- T_apc from parse_apc/coeffs in propulsion.py:51-93;
+- THRUST_FACTOR_meas per prop, with the zero-offset term;
+- Kv/I0/Rm fit.
+Then rerun the sizing with the E423 and the X2820 as the fixed motor. Use the throttle answer from item 1
+if Jordan has given it.
+
+---
+
+## [2026-09-24 10:11 CDT] reduce_thrust.py written; 12x8E run reduced as full throttle; ESC identified
+
+### Jordan's answers (2026-09-24), from the 03:04 action item 1
+- The 12x8E run WAS AT FULL THROTTLE at the peak thrust. It is an assumption: the stick was not recorded,
+  and ESC throttle-range calibration is NOT confirmed. Full-throttle window: states 145-160 (69.3-76.5 s).
+- Air: 72 F indoors (assumed, not measured), Jackson TN.
+- ESC: SunnySky X series ESC X60A V2 (label ESC-X60, 2-6S, SBEC 8 A at 5.6/7.4 V) [VERIFIED sunnysky_esc_x60]:
+  60 A continuous, 80 A for 10 s, 61 g, XT60 in, 3.5 mm bullets out, $45.99. Firmware, on-resistance and
+  programmability for the X60A itself: UNVERIFIED. sunnysky_esc_manual (32-bit proprietary firmware; calibration =
+  stick max, power on, "beep~beep" within 2 s, stick to min, cell-count beeps, long beep; default timing 15 deg,
+  LVC 3.0 V/cell) is written for X45A/X65A/X85A LW/PRO; the X60A is not in its model table.
+  The model's m_esc_lb 0.14 lb (63.5 g) matches the 61 g listing.
+- Still OPEN: how many X2820s are on hand.
+
+### Test conditions (analysis/tests/data/t2_conditions.csv, new; one row per run, each value with its source)
+- Video metadata: 2026-09-23 20:56:43 CDT (01:56 UTC), GPS 35.6750 N 88.8635 W, iPhone 15.
+- Elevation 464.1 ft [VERIFIED USGS EPQS]. KMKL field is 434.8 ft [VERIFIED airnav].
+- KMKL altimeter 30.20 inHg at 01:53Z and 30.21 at 02:53Z; outdoor 68 F / dewpoint 59 F
+  [VERIFIED IEM ASOS, saved as reference/data/kmkl_asos_2026-09-24.csv].
+- Indoor dewpoint taken as the outdoor 59 F [INFERRED]. It is worth under 0.3 pct of density.
+- Result: rho 1.1785 kg/m^3 (0.962 x ISA SL), DA 1333 ft. The 03:04 entry assumed 1.20, 1.8 pct too high.
+  DA 1333 ft is close to the design DA of 1400 ft, so these numbers compare directly with the sizing.
+
+### analysis/tests/reduce_thrust.py (new, TEST_PLAN 3.8)
+Run: `python analysis/tests/reduce_thrust.py 12x8E`
+- Inputs: RUN_rpm_states.csv and t2_conditions.csv.
+- Outputs: analysis/tests/out/reduce/RUN_{summary.txt, points.csv, predict.csv}.
+- Reuses parse_apc/coeffs (propulsion.py) and density_altitude() (density_altitude.py).
+- Covers items 1, 3-9. Item 2 (rpm) stays in audio_rpm.py. Item 7 uses the hold, not a D3 burst.
+- pyflakes clean. Checked by running on 12x8E: fits A and B reproduce the measured point (8218 vs 8228 rpm,
+  33.6 vs 33.7 A, 2077 vs 2083 g).
+
+### 12x8E results, full throttle (16 states, mean 8228 rpm, 33.67 A, 13.09 V, 2083 g, 441 W) [measured + INFERRED fits]
+- THRUST_FACTOR_meas = 0.978 +/- 0.007 (full throttle, rho 1.1785). The median over all steady points is 0.975.
+  - Offset fit over steady points: T = 0.9747 T_apc - 20 g (unchanged).
+  - The APC PER3 Ct holds to about 2 pct. Gate 3.9 "0.90-1.00": PASS. The takeoff.py value is still 0.93;
+    not changed yet.
+- Current: 33.7 A mean, 34.1 A peak = 73-74 pct of the motor's 46 A (30 s) and 56 pct of the ESC's 60 A.
+- Pack [measured]:
+  - Resting before the run: 15.40 V = 3.85 V/cell. THE PACK WAS NOT FULLY CHARGED (full = 16.8 V).
+  - Fit over the ramp: V = 15.37 - 68.3 mOhm x I (includes polarization).
+  - Step at the throttle cut: 39.2 mOhm (13.03 V at 33.3 A -> 14.32 V at 0.44 A, 0.6 s later).
+  - The model assumed V_oc 16.0 V and 25 mOhm.
+  - Gate 3.9 "V_batt 12.5-13 V instead of about 15 V" is TRIGGERED (13.09 V), but partly because the pack
+    was part-charged.
+- Against predict_x2820 (datasheet motor, V_oc 16.0 V, 25 mOhm): rpm 0.817, I 0.682, V 0.886, T 0.649.
+  Most of the gap is voltage. Fed this pack's V-I line, the datasheet motor would give 8845 rpm and 38.4 A.
+  Measured rpm is 0.930 of that, which is the motor-side part of the gap.
+- Motor fit. One prop = one load point, so Kv and R cannot both be pinned:
+  - A (torque from APC Cp, I0 0.9 A): Kv 809 rpm/V, R_eff 86.6 mOhm, i.e. datasheet 44 mOhm + 43 extra
+    (ESC, wiring, hot winding). A +/-5 pct Cp error moves Kv to 770-851.
+  - B (R fixed 44 mOhm): Kv 709 rpm/V (-11.4 pct vs 800). The APC Cp would have to be x 1.141 to match the
+    current. A duty ceiling near 89 pct from an uncalibrated throttle would look the same on the speed side.
+  - C (free LSQ over the hold): Kv 690 +/- 20, R 35 mOhm. Leans toward B, but the hold is 7 s of warming
+    winding and sagging pack, so low confidence.
+  - Power balance at datasheet constants: 48 W of 441 W unaccounted (= 43 mOhm at 33.7 A). A explains it with
+    resistance, B with APC Cp being 14 pct low. Either could be true [UNVERIFIED].
+  - What separates them: the no-prop run on the same pack predicts about 12,340 rpm under A and 10,850
+    under B. Also do the ESC throttle calibration first.
+- Hold droop over 7.2 s: thrust 0.967, rpm 0.990, V 0.989. rpm^2 alone gives 0.980; the extra 1.3 pct
+  may be room recirculation or stand drift [INFERRED]. Gate 3.9 (10 pct): PASS.
+
+### Predictions at full throttle, static, rho 1.1785, thrust x 0.978 (out/reduce/12x8E_predict.csv) [INFERRED]
+Fresh-pack bracket: pessimistic = V0 16.0 V with 68 mOhm; optimistic = V0 16.4 V with 39 mOhm.
+  prop    per motor A, 1 motor (pct of 46 A)      aircraft 2 motors: total lbf / pack A
+  12x6E   29-35 A (62-77 pct)                     7.2-9.7 lbf / 47-63 A
+  12x8E   34-42 A (73-90 pct)                     7.4-9.8 lbf / 55-72 A
+  12x10E  37-47 A (80-102 pct)                    7.2-9.7 lbf / 60-80 A
+Fits A and B agree within about 3 pct on every 12 in case, so the prop call does not depend on the
+Kv/R question.
+- PROP DECISION (2-motor): 12x8E.
+  - It stays under 46 A in every case (worst 41.6 A, 90 pct).
+  - It gives the most static thrust of the three (1-4 pct over 12x6E).
+  - Per the 22:56 rule, 12x8E wins. 12x10E: no thrust gain, and it reaches 46.8 A in the optimistic case. Drop it.
+- BIG FLAG for the sizing: 2 x 12x8E gives 7.4-9.8 lbf static against 12.5 lbf in predict_x2820 / the
+  sizing assumptions. The pack is the main lever: V0 and R_pack are worth about 2.4 lbf between the
+  bracket ends. A pack IR check and a fully charged run are needed before the sizing rerun means much.
+
+### Files
+New:
+- analysis/tests/reduce_thrust.py
+- analysis/tests/data/t2_conditions.csv
+- analysis/tests/out/reduce/12x8E_{summary.txt,points.csv,predict.csv}
+- reference/data/kmkl_asos_2026-09-24.csv (+ README entry)
+- reference: sunnysky_esc_x60, sunnysky_esc_manual (doc2text; INDEX/manifest updated; GUIDE line 61)
+
+### UNVERIFIED / open
+- Full throttle is an assumption. Whether the ESC throttle range was calibrated is unknown.
+- Air temperature 72 F not measured. Indoor humidity inferred.
+- Kv/R split (fit A vs B). APC Cp accuracy for the 12x8E at static (uiuc_propdb may have measured APC TE data).
+- Pack identity, C rating and IR. The fresh-pack V0 bracket 16.0-16.4 V is a guess.
+- Motor count on hand.
+- I0 at 4S rpm (0.9 A at 10 V used).
+
+### Adjacent issues (listed, not fixed)
+- analysis/sizing/__pycache__/ is untracked and not in .gitignore.
+- t2_conditions.csv is hand-entered; read_mt10pro_video.py still writes empty temp/throttle columns in RUN_t2.csv.
+
+### NEXT TASK
+Next stand session, then rerun the sizing:
+1. Fully charge the pack and write down its resting V. Get the pack IR from the charger if it reports it.
+2. Do the ESC throttle-range calibration (sunnysky_esc_manual steps).
+3. No-prop run (C1) with the motor-whine audio (--order 7), to settle Kv (A vs B).
+4. 12x8E and 12x6E full-throttle holds. Record the stick/throttle pct, a thermometer reading and Run 0.2.
+Then update propulsion.py and takeoff.py per TEST_PLAN 3.10 with the measured THRUST_FACTOR, Kv/R and
+pack, and rerun the sizing with the E423 and 2 x X2820 + 12x8E. If no new stand data is coming soon, run the
+sizing now with the bracket above (V0 16.0/68 mOhm and 16.4/39 mOhm).
+
+---

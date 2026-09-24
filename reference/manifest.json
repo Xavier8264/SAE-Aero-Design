@@ -1167,6 +1167,32 @@
     "tokens": 1895,
     "type": "html"
   },
+  "mayatech_mt10pro": {
+    "chars": 9349,
+    "converted": "2026-09-21 22:41 UTC-0500",
+    "fetched": "2026-09-21 22:41 UTC-0500",
+    "flags": {},
+    "note": "Mayatech MT10PRO 10 kg thrust stand + power analyser, reseller spec page (no official Mayatech site found). Display-only: no RPM, no logging.",
+    "pages": 1,
+    "path": "reference/raw/mayatech_mt10pro.html",
+    "sha256": "a6bf9ab88d32c211",
+    "source": "https://www.flyingtech.co.uk/product/mayatech-mt10-pro-thrust-stand-and-power-analyser/",
+    "tokens": 2337,
+    "type": "html"
+  },
+  "mayatech_mt10pro_safety": {
+    "chars": 1366,
+    "converted": "2026-09-21 22:49 UTC-0500",
+    "fetched": "2026-09-21 22:49 UTC-0500",
+    "flags": {},
+    "note": "Reseller (Flying Tech) safety sheet for the Mayatech MT10PRO thrust stand; linked from mayatech_mt10pro page.",
+    "pages": 1,
+    "path": "reference/raw/mayatech_mt10pro_safety.pdf",
+    "sha256": "2021d3a729cde9ab",
+    "source": "https://www.flyingtech.co.uk/wp-content/uploads/2021/02/Safety-Disclaimer-%E2%80%93-Thrust-Stand-and-Power-Analyser.pdf",
+    "tokens": 341,
+    "type": "pdf"
+  },
   "mit_1682_flight_vehicle_intro": {
     "chars": 33992,
     "converted": "2026-09-19 21:43 UTC-0500",
@@ -2601,6 +2627,62 @@
     "source": "https://su2code.github.io/docs/Quick-Start/",
     "tokens": 2741,
     "type": "html"
+  },
+  "sunnysky_esc_manual": {
+    "chars": 47348,
+    "converted": "2026-09-24 10:09 UTC-0500",
+    "fetched": "2026-09-24 10:09 UTC-0500",
+    "flags": {
+      "img": [
+        1
+      ]
+    },
+    "note": "SunnySky brushless ESC user manual (X45A/X65A/X85A LW/PRO; X60A not listed): throttle calibration, beeps, defaults (timing 15 deg, LVC 3.0 V/cell). Use with caution for the X60A",
+    "pages": 1,
+    "path": "reference/raw/sunnysky_esc_manual.pdf",
+    "sha256": "6295acd280f8dc50",
+    "source": "http://en.rcsunnysky.com/Uploads/20240723112321_989336.pdf",
+    "tokens": 11837,
+    "type": "pdf"
+  },
+  "sunnysky_esc_x60": {
+    "chars": 12545,
+    "converted": "2026-09-24 10:09 UTC-0500",
+    "fetched": "2026-09-24 10:09 UTC-0500",
+    "flags": {},
+    "note": "SunnySky X series ESC X60A 2-6S, 5.6/7.4 V 8 A SBEC V2 (the team's ESC): 60 A cont, 80 A 10 s, 61 g, XT60, 3.5 mm bullets",
+    "pages": 1,
+    "path": "reference/raw/sunnysky_esc_x60.html",
+    "sha256": "04112e0a10a0c046",
+    "source": "https://sunnyskyusa.com/products/sunnysky-60a-2-6s-brushless-esc-with-5v-6v-7-4v-5a-bec-3-5mm-rc-plug",
+    "tokens": 3136,
+    "type": "html"
+  },
+  "sunnysky_x2820_800kv": {
+    "chars": 190218,
+    "converted": "2026-09-21 22:38 UTC-0500",
+    "fetched": "2026-09-21 22:38 UTC-0500",
+    "flags": {},
+    "note": "OFFICIAL SunnySky USA page, original black X Series X2820 (KV 800/920/1100). Spec block + manufacturer test table (prop, V, A, gf, W, g/W; no RPM). Team motor = KV800. Not the V3 line.",
+    "pages": 1,
+    "path": "reference/raw/sunnysky_x2820_800kv.html",
+    "sha256": "83e8c16fa73007e2",
+    "source": "https://sunnyskyusa.com/products/sunnysky-x2820-brushless-motors",
+    "tokens": 47554,
+    "type": "html"
+  },
+  "sunnysky_x2820_800kv_spec": {
+    "added": "2026-09-21 22:41 UTC-0500",
+    "chars": 5064,
+    "converted": "2026-09-21 22:41 UTC-0500",
+    "flags": {},
+    "note": "CLEAN EXTRACT of the official X2820 800KV spec + 4S test table (read this, not sunnysky_x2820_800kv). Watts column = nominal 14.8 V x A. No RPM published.",
+    "pages": 1,
+    "path": "reference/raw/sunnysky_x2820_800kv_datasheet.txt",
+    "sha256": "a3976084ee6befdd",
+    "source": "https://sunnyskyusa.com/products/sunnysky-x2820-brushless-motors",
+    "tokens": 1266,
+    "type": "txt"
   },
   "syracuse_wing_spar_design": {
     "chars": 52878,

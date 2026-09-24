@@ -1,0 +1,4 @@
+# Raw test videos (4K, ~200 MB each; over the GitHub 100 MB file limit). Keep them out of git.
+analysis/tests/video/
+# read_mt10pro_video.py chunk cache, model and overlay images (regenerable from the video)
+analysis/tests/out/video/

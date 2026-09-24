@@ -55,6 +55,12 @@ add new IDs here when you archive something important.
 - uiuc_propdb, brandt_selig_2011 (measured low-Re prop data; cross-check for APC).
 - Battery: nasa_uav_battery_model (LiPo sag under load), nasa_liion_guidelines (background).
 - sjsu_propulsion_sizing (worked Kv/ESC/battery matching example).
+- HARDWARE ON HAND (2026-09-21): sunnysky_x2820_800kv_spec (KEY, read this: X2820 800 KV specs + 4S test table
+  + reading notes); sunnysky_x2820_800kv (raw product page, ~47k tokens, do not read); test table as CSV in
+  reference/data/sunnysky_x2820_800kv_testdata.csv. Thrust stand: mayatech_mt10pro (specs; display only, no RPM,
+  no logging), mayatech_mt10pro_safety. ESC: sunnysky_esc_x60 (team ESC, X60A V2: 60 A cont, 80 A 10 s, 61 g);
+  sunnysky_esc_manual (throttle calibration + defaults, but written for X45A/X65A/X85A, not the X60A).
+  Test-night weather: reference/data/kmkl_asos_2026-09-24.csv.
 - Servo sizing (required by the rules): basicairdata_servo_sizing (KEY, RC method), nasa_tm78664_hinge_moment.
 
 ## Structures and materials (no FRP allowed)

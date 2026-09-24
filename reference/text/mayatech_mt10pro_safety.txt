@@ -1,0 +1,38 @@
+# ID: mayatech_mt10pro_safety
+# SOURCE: https://www.flyingtech.co.uk/wp-content/uploads/2021/02/Safety-Disclaimer-%E2%80%93-Thrust-Stand-and-Power-Analyser.pdf
+# ORIGINAL: reference/raw/mayatech_mt10pro_safety.pdf
+# CONVERTED: 2026-09-21 22:49 UTC-0500 | type pdf | 1 pages | ~341 tokens
+# NOTE: Reseller (Flying Tech) safety sheet for the Mayatech MT10PRO thrust stand; linked from mayatech_mt10pro page.
+
+=== PAGE 1 ===
+⚠ Safety Disclaimer – Thrust Stand and Power Analyser
+
+This product is intended for testing electric motors and power systems in a controlled environment.
+Please read and follow all safety precautions. Use at your own risk.
+
+Important Safety Warnings
+
+  •   Dangerous moving parts – Spinning propellers can cause serious injury. Always handle
+      with extreme care.
+
+  •   Props can shatter – High-speed rotation may cause props to break apart. Do not use
+      damaged or unbalanced props.
+
+  •   Secure setup – Firmly attach the thrust stand to a stable, immovable surface before
+      operation. An unstable stand is extremely dangerous.
+
+  •   Keep clear of the propeller – Never touch or reach near the spinning prop. Keep body
+      parts, loose clothing, tools, and other objects clear at all times.
+
+  •   Power wiring – Ensure all power wires and leads are secured away from the propeller arc.
+
+  •   Personal protection – Always wear safety goggles or face protection when operating the
+      device.
+
+  •   Children and bystanders – Keep the area clear of children and untrained individuals.
+
+Disclaimer of Liability
+
+By using this product, you agree to assume all risks associated with its use. The manufacturer and
+seller are not liable for any injury, damage, or loss resulting from improper use, mishandling, or
+failure to follow safety precautions.
