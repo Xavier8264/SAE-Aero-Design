@@ -1,0 +1,135 @@
+throttle_merge.py v1.3  2026-09-26 11:51:00  callouts 2026-09-25_throttle_callouts.csv
+
+=== 2026-09-25_12x6E_T1: 10 callouts; throttle -64 -54 -40 -28 -13 2 21 34 46 58
+  callout  1  pos   -64     19 g  -> display    19 g at   13.38-  18.99 s (169 frames)
+  callout  2  pos   -54    100 g  -> display   100 g at   21.02-  27.76 s (203 frames)
+  callout  3  pos   -40    241 g  -> display   241 g at   32.60-  38.04 s (164 frames)
+  callout  4  pos   -28    345 g  -> display   345 g at   40.54-  50.29 s (293 frames)
+  callout  5  pos   -13    509 g  -> display   509 g at   52.76-  56.33 s (108 frames)  [1 other exact match(es)]
+  callout  6  pos     2    735 g  -> display   735 g at   61.60-  64.67 s (93 frames)  [1 other exact match(es)]
+  callout  7  pos    21   1052 g  -> display  1052 g at   73.71-  75.14 s (44 frames)  [2 other exact match(es)]
+  callout  8  pos    34   1292 g  -> display  1292 g at   82.32-  82.79 s (15 frames)
+  callout  9  pos    46   1508 g  -> display  1508 g at   93.17-  94.20 s (32 frames)
+  callout 10  pos    58   1701 g  -> display  1696 g at  100.17- 101.67 s (46 frames)
+  thrust grid dt 0.0330 s; 13 fast segments after merging
+  move 2-3 in 2 stages: 27.62-28.15 s dT +93 g; 30.86-32.27 s dT +43 g
+  after callout 10: uncalled stick push 105.37-106.49 s dT +378 g; stick unknown 105.37-110.19 s
+  hold  1  pos   -64     4.95-  18.99 s (14.0 s)  T     18 g (12 -> 19)  I 0.45 A  V 15.53 V  rpm   flags no_rpm
+  hold  2  pos   -54    20.10-  27.76 s ( 7.7 s)  T     99 g (93 -> 100)  I 0.91 A  V 15.49 V  rpm 2205  flags staged_move_after
+  hold  3  pos   -40    32.27-  38.84 s ( 6.6 s)  T    241 g (241 -> 240)  I 1.82 A  V 15.41 V  rpm 3149  flags staged_move_before
+  hold  4  pos   -28    39.86-  50.79 s (10.9 s)  T    345 g (342 -> 344)  I 2.67 A  V 15.33 V  rpm 3719
+  hold  5  pos   -13    51.58-  60.03 s ( 8.4 s)  T    508 g (508 -> 508)  I 4.16 A  V 15.20 V  rpm 4464
+  hold  6  pos     2    60.65-  68.71 s ( 8.1 s)  T    734 g (734 -> 733)  I 6.45 A  V 15.01 V  rpm 5263
+  hold  7  pos    21    70.19-  78.31 s ( 8.1 s)  T   1056 g (1070 -> 1056)  I 10.49 A  V 14.72 V  rpm 6250
+  hold  8  pos    34    79.00-  85.87 s ( 6.9 s)  T   1287 g (1287 -> 1300)  I 14.07 A  V 14.41 V  rpm 6885
+  hold  9  pos    46    86.36-  94.45 s ( 8.1 s)  T   1511 g (1529 -> 1508)  I 17.77 A  V 14.11 V  rpm 7371
+  hold 10  pos    58    94.97- 105.37 s (10.4 s)  T   1700 g (1729 -> 1664)  I 21.75 A  V 13.77 V  rpm 7835  flags uncalled_move_after
+  t2 file: throttle_pct filled in 210 of 235 rows
+
+=== 2026-09-25_12x6E_T2: 10 callouts; throttle -57 -39 -20 1 21 38 52 69 82 100
+blue states with I = P/V (current cell unreadable): 47; rejected by the digit check: 11
+  callout  1  pos   -57     70 g  -> display    70 g at    6.51-  10.21 s (112 frames)
+  callout  2  pos   -39    229 g  -> display   229 g at   14.62-  19.62 s (151 frames)
+  callout  3  pos   -20    411 g  -> display   411 g at   22.92-  26.13 s (97 frames)  [1 other exact match(es)]
+  callout  4  pos     1    674 g  -> display   674 g at   28.50-  32.00 s (106 frames)
+  callout  5  pos    21   1040 g  -> display  1040 g at   34.60-  37.64 s (92 frames)
+  callout  6  pos    38   1309 g  -> display  1309 g at   43.48-  44.11 s (20 frames)
+  callout  7  pos    52   1558 g  -> display  1558 g at   52.29-  53.86 s (48 frames)  [1 other exact match(es)]
+  callout  8  pos    69   1825 g  -> display  1825 g at   61.93-  62.16 s (8 frames)  [2 other exact match(es)]
+  callout  9  pos    82   1968 g  -> display  1968 g at   68.81-  69.84 s (32 frames)
+  callout 10  pos   100   1933 g  -> display  1929 g at   77.61-  78.18 s (18 frames)
+  thrust grid dt 0.0330 s; 10 fast segments after merging
+  hold  1  pos   -57     4.75-  11.91 s ( 7.2 s)  T     70 g (68 -> 72)  I 0.75 A  V 14.99 V  rpm 2912
+  hold  2  pos   -39    13.46-  20.33 s ( 6.9 s)  T    229 g (228 -> 230)  I 1.77 A  V 14.92 V  rpm 3094
+  hold  3  pos   -20    21.35-  26.37 s ( 5.0 s)  T    411 g (409 -> 411)  I 3.35 A  V 14.85 V  rpm 4065
+  hold  4  pos     1    27.26-  32.18 s ( 4.9 s)  T    675 g (671 -> 674)  I 5.95 A  V 14.69 V  rpm 5097
+  hold  5  pos    21    34.60-  40.23 s ( 5.6 s)  T   1033 g (1040 -> 1017)  I 10.28 A  V 14.40 V  rpm 6173
+  hold  6  pos    38    40.76-  49.47 s ( 8.7 s)  T   1306 g (1338 -> 1300)  I 14.80 A  V 14.10 V  rpm 6988
+  hold  7  pos    52    50.56-  56.60 s ( 6.0 s)  T   1550 g (1551 -> 1537)  I 19.29 A  V 13.78 V  rpm 7549
+  hold  8  pos    69    57.29-  63.36 s ( 6.1 s)  T   1831 g (1841 -> 1825)  I 25.44 A  V 13.35 V  rpm 8178
+  hold  9  pos    82    64.02-  69.84 s ( 5.8 s)  T   1979 g (1988 -> 1968)  I 29.18 A  V 13.07 V  rpm 8440  flags no_move_found_after
+  hold 10  pos   100    77.61-  81.02 s ( 3.4 s)  T   1911 g (1929 -> 1885)  I 28.36 A  V 12.95 V  rpm 8301  flags no_move_found_before
+  t2 file: throttle_pct filled in 107 of 117 rows
+
+=== 2026-09-25_12x10E_T1: 8 callouts; throttle -60 -49 -30 0 20 41 59 70
+  callout  1  pos   -60     26 g  -> display    26 g at   16.68-  22.52 s (176 frames)  [1 other exact match(es)]
+  callout  2  pos   -49     95 g  -> display    95 g at   39.08-  43.55 s (135 frames)  [1 other exact match(es)]
+  callout  3  pos   -30    260 g  -> display   260 g at   50.55-  55.12 s (138 frames)
+  callout  4  pos     0    681 g  -> display   681 g at   61.37-  62.90 s (47 frames)
+  callout  5  pos    20   1030 g  -> display  1030 g at   73.48-  74.11 s (20 frames)  [1 other exact match(es)]
+  callout  6  pos    41   1350 g  -> display  1350 g at   82.09-  82.99 s (28 frames)  [1 other exact match(es)]
+  callout  7  pos    59   1620 g  -> display  1620 g at   95.47-  95.77 s (10 frames)
+  callout  8  pos    70   1745 g  -> display  1747 g at  105.24- 106.64 s (43 frames)
+  thrust grid dt 0.0330 s; 15 fast segments after merging
+  move 4-5 overshoot pulled back: 68.67-69.30 s dT -44 g
+  move 6-7 in 2 stages: 86.49-88.24 s dT +253 g; 89.13-89.89 s dT +80 g
+  after callout 8: uncalled stick push 111.05-111.51 s dT +80 g; stick unknown 111.05-114.74 s
+  hold  1  pos   -60    15.94-  36.99 s (21.1 s)  T     26 g (27 -> 28)  I 0.59 A  V 14.67 V  rpm   flags no_rpm
+  hold  2  pos   -49    38.51-  46.13 s ( 7.6 s)  T     95 g (88 -> 96)  I 1.22 A  V 14.64 V  rpm   flags no_rpm
+  hold  3  pos   -30    49.83-  55.54 s ( 5.7 s)  T    260 g (259 -> 261)  I 2.85 A  V 14.52 V  rpm 2972
+  hold  4  pos     0    60.09-  66.00 s ( 5.9 s)  T    698 g (688 -> 714)  I 8.09 A  V 14.25 V  rpm 4590  flags thrust_event  EVENTS 62.93-63.36 s dT +29 g (I 8.14->7.96 A, V 14.27->14.25 V)
+  hold  5  pos    20    69.30-  76.40 s ( 7.1 s)  T   1035 g (1056 -> 1018)  I 13.46 A  V 13.91 V  rpm 5515  flags overshoot_before
+  hold  6  pos    41    78.57-  86.49 s ( 7.9 s)  T   1358 g (1365 -> 1355)  I 20.62 A  V 13.44 V  rpm 6381  flags staged_move_after
+  hold  7  pos    59    89.89-  99.26 s ( 9.4 s)  T   1627 g (1658 -> 1617)  I 28.16 A  V 12.91 V  rpm 6939  flags staged_move_before
+  hold  8  pos    70   100.49- 111.05 s (10.6 s)  T   1751 g (1789 -> 1721)  I 33.20 A  V 12.50 V  rpm 7157  flags uncalled_move_after
+  t2 file: throttle_pct filled in 199 of 253 rows
+
+=== 2026-09-25_9x4.5E_T1: 11 callouts; throttle -50 -39 -20 0 25 41 59 70 80 91 100
+  callout  1  pos   -50     91 g  -> display    91 g at    7.41-  12.01 s (139 frames)  [1 other exact match(es)]
+  callout  2  pos   -39    157 g  -> display   157 g at   14.68-  18.65 s (120 frames)
+  callout  3  pos   -20    274 g  -> display   274 g at   22.09-  25.89 s (115 frames)
+  callout  4  pos     0    380 g  -> display   380 g at   28.70-  31.53 s (86 frames)  [1 other exact match(es)]
+  callout  5  pos    25    507 g  -> display   507 g at   34.40-  36.51 s (64 frames)  [1 other exact match(es)]
+  callout  6  pos    41    648 g  -> display   648 g at   43.98-  47.38 s (103 frames)  [1 other exact match(es)]
+  callout  7  pos    59    827 g  -> display   827 g at   55.36-  57.93 s (78 frames)  [1 other exact match(es)]
+  callout  8  pos    70    929 g  -> display   929 g at   62.43-  65.44 s (91 frames)  [1 other exact match(es)]
+  callout  9  pos    80   1000 g  -> display  1000 g at   73.28-  75.95 s (81 frames)
+  callout 10  pos    91    966 g  -> display   966 g at   86.59-  89.06 s (75 frames)  [1 other exact match(es)]
+  callout 11  pos   100    945 g  -> display   946 g at   91.06-  91.60 s (17 frames)
+  thrust grid dt 0.0330 s; 51 fast segments after merging
+  hold  1  pos   -50     6.07-  12.01 s ( 5.9 s)  T     90 g (88 -> 91)  I 1.00 A  V 15.02 V  rpm 3189
+  hold  2  pos   -39    13.23-  18.65 s ( 5.4 s)  T    157 g (140 -> 157)  I 1.53 A  V 14.97 V  rpm 4247
+  hold  3  pos   -20    20.30-  25.97 s ( 5.7 s)  T    273 g (268 -> 274)  I 2.63 A  V 14.90 V  rpm 5499
+  hold  4  pos     0    27.52-  31.53 s ( 4.0 s)  T    380 g (380 -> 380)  I 3.75 A  V 14.82 V  rpm 6435
+  hold  5  pos    25    33.33-  38.58 s ( 5.2 s)  T    508 g (505 -> 507)  I 5.37 A  V 14.69 V  rpm 7353
+  hold  6  pos    41    41.45-  48.61 s ( 7.2 s)  T    647 g (648 -> 649)  I 7.02 A  V 14.51 V  rpm 8100
+  hold  7  pos    59    51.81-  58.01 s ( 6.2 s)  T    825 g (814 -> 827)  I 9.83 A  V 14.28 V  rpm 9107
+  hold  8  pos    70    60.26-  67.62 s ( 7.4 s)  T    929 g (937 -> 929)  I 11.72 A  V 14.11 V  rpm 9660
+  hold  9  pos    80    68.84-  79.89 s (11.1 s)  T   1006 g (1018 -> 974)  I 13.34 A  V 13.93 V  rpm 10072  flags thrust_event  EVENTS 79.37-79.83 s dT -30 g (I 13.31->13.25 A, V 13.9->13.9 V)
+  hold 10  pos    91    79.99-  89.06 s ( 9.1 s)  T    966 g (972 -> 966)  I 13.26 A  V 13.87 V  rpm 9993  flags no_move_found_after
+  hold 11  pos   100    91.06-  96.76 s ( 5.7 s)  T    941 g (946 -> 932)  I 13.44 A  V 13.84 V  rpm 9878  flags no_move_found_before
+  t2 file: throttle_pct filled in 188 of 392 rows
+
+=== 2026-09-25_12x10E_T2: 13 callouts; throttle -50 -40 -28 -9 0 10 20 31 40 50 60 70 80
+  callout  1  pos   -50     87 g  -> display    87 g at    8.71-  13.48 s (144 frames)
+  callout  2  pos   -40    158 g  -> display   158 g at   15.12-  19.09 s (120 frames)  [1 other exact match(es)]
+  callout  3  pos   -28    270 g  -> display   270 g at   23.89-  27.93 s (122 frames)  [2 other exact match(es)]
+  callout  4  pos    -9    528 g  -> display   528 g at   40.94-  43.81 s (87 frames)
+  callout  5  pos     0    670 g  -> display   677 g at   48.62-  52.59 s (120 frames)
+  callout  6  pos    10    840 g  -> display   840 g at   55.23-  55.69 s (15 frames)
+  callout  7  pos    20   1048 g  -> display  1048 g at   65.53-  66.94 s (43 frames)  [1 other exact match(es)]
+  callout  8  pos    31   1205 g  -> display  1205 g at   75.38-  75.95 s (18 frames)
+  callout  9  pos    40   1334 g  -> display  1334 g at   81.65-  84.45 s (85 frames)
+  callout 10  pos    50   1435 g  -> display  1435 g at   91.00-  91.23 s (8 frames)
+  callout 11  pos    60   1600 g  -> display  1600 g at   98.44- 100.24 s (55 frames)
+  callout 12  pos    70   1745 g  -> display  1744 g at  105.44- 106.08 s (20 frames)
+  callout 13  pos    80   1854 g  -> display  1854 g at  112.78- 113.25 s (15 frames)  [1 other exact match(es)]
+  thrust grid dt 0.0330 s; 22 fast segments after merging
+  move 8-9 in 2 stages: 78.31-79.17 s dT +79 g; 80.59-81.02 s dT +39 g
+  move 9-10 overshoot pulled back: 88.77-88.97 s dT -36 g
+  move 10-11 in 2 stages: 94.94-96.00 s dT +107 g; 97.12-97.55 s dT +58 g
+  hold  1  pos   -50     7.52-  13.83 s ( 6.3 s)  T     86 g (81 -> 88)  I 1.14 A  V 14.71 V  rpm   flags start_trimmed;no_rpm
+  hold  2  pos   -40    14.36-  20.76 s ( 6.4 s)  T    158 g (154 -> 157)  I 1.84 A  V 14.66 V  rpm 2218
+  hold  3  pos   -28    22.70-  37.03 s (14.3 s)  T    270 g (294 -> 267)  I 3.01 A  V 14.55 V  rpm 3046  flags thrust_event  EVENTS 22.84-23.60 s dT -20 g (I 3.11->3.06 A, V 14.6->14.58 V)
+  hold  4  pos    -9    39.80-  45.01 s ( 5.2 s)  T    528 g (524 -> 527)  I 6.26 A  V 14.34 V  rpm 4143
+  hold  5  pos     0    46.07-  52.64 s ( 6.6 s)  T    668 g (653 -> 677)  I 8.11 A  V 14.21 V  rpm 4556  flags thrust_event  EVENTS 48.38-48.81 s dT +25 g (I 8.15->8.13 A, V 14.21->14.21 V)
+  hold  6  pos    10    54.81-  62.21 s ( 7.4 s)  T    842 g (839 -> 849)  I 10.70 A  V 14.01 V  rpm 5078
+  hold  7  pos    20    64.85-  70.06 s ( 5.2 s)  T   1050 g (1047 -> 1058)  I 13.64 A  V 13.80 V  rpm 5507
+  hold  8  pos    31    71.68-  78.31 s ( 6.6 s)  T   1211 g (1230 -> 1188)  I 17.10 A  V 13.56 V  rpm 5926  flags staged_move_after
+  hold  9  pos    40    81.02-  86.16 s ( 5.1 s)  T   1332 g (1335 -> 1329)  I 20.17 A  V 13.28 V  rpm 6294  flags staged_move_before
+  hold 10  pos    50    88.97-  94.94 s ( 6.0 s)  T   1444 g (1451 -> 1433)  I 23.00 A  V 13.08 V  rpm 6590  flags overshoot_before;staged_move_after
+  hold 11  pos    60    97.55- 101.84 s ( 4.3 s)  T   1598 g (1616 -> 1580)  I 27.89 A  V 12.78 V  rpm 6924  flags staged_move_before
+  hold 12  pos    70   103.16- 108.83 s ( 5.7 s)  T   1749 g (1779 -> 1727)  I 32.59 A  V 12.51 V  rpm 7172
+  hold 13  pos    80   109.33- 113.25 s ( 3.9 s)  T   1844 g (1837 -> 1854)  I 36.36 A  V 12.24 V  rpm 7349  flags end_at_anchor
+  t2 file: throttle_pct filled in 227 of 260 rows
+outputs: C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\data/RUN_holds.csv, RUN_throttle.csv, RUN_t2.csv (throttle_pct); plots and log in C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\out\throttle

@@ -52,8 +52,69 @@ Limits and UNVERIFIED items:
     latency of the two displays is unknown.
   - Only the 18 glyphs seen in 12x8E.MOV are modeled (space . 0-9 A V W p h m). Any other glyph is read
     as the nearest one, and the state is then usually flagged by the field parser.
-  - Assumes the camera orientation of 12x8E.MOV (the thrust display is below the blue LCD in the
-    picture). The script stops with a message if the unit glyphs are not found in the reference frame.
+  - Assumes the thrust display is below the blue LCD in the (rotated) picture. The script stops with a
+    message if the unit glyphs are not found in the reference frame.
+
+v1.1 (2026-09-26, for the 2026-09-25 session videos, 59.94 fps, phone rotation metadata 90 deg):
+  - Frames are decoded without the container rotation (OpenCV would otherwise turn them to portrait);
+    --rotate auto (default) picks the rotation at which the A/V/W unit glyphs decode.
+  - The thrust display pocket may run off the bottom of the picture. Its top, left and right edges are
+    then fitted and the bottom corners are placed THR_ASPECT x (top width) down the side edges
+    ("partial" pocket). The segment sampler offset search then also fits a vertical scale, pixels from
+    outside the picture are masked out of ECC, and thrust ECC uses a Euclidean motion model (the
+    homography's vertical scale is not constrained by the visible static features).
+  - Frame-count constants (setup stride, mix-run lengths, refresh-change gap) scale with the frame rate,
+    so 30 fps video behaves exactly as in v1.0.
+  - Thrust "- 98" (minus sign in the leftmost digit, blanks before the number) parses as -98.
+  - ECC stops at 100 iterations or a correlation change below 1e-5 (v1.0: 200 and 1e-7, which ran to the
+    iteration cap). On 20 frames of three 2026-09-25 videos this moved the registered dot and segment
+    positions by at most 0.009 canonical px and cut ECC time 1.5-12x.
+  - Setup: with fewer than 8 clean pairs (blurred video), pairs whose threshold text parses and has
+    P ~ V x I are also used for the reference and training frames ("relaxed setup").
+
+v1.2 (2026-09-26): thrust top-segment row.
+  - The sampler offset search scores the separability of all 35 segments; on training frames that show
+    only a units "0" it left the thin top bar (segment a) half off its sample row in the 2026-09-25 videos
+    (bar rows 61-94 canonical px, sampled at 95-107), and a hundreds "7" read as "1" (796 g -> 196 g,
+    1745 g -> 1145 g) because a is the only segment that separates 7 from 1. Every other digit was still
+    decoded from its other segments. The a row is now refined alone after the offset search: on the units
+    digit (lit whenever the display shows a number) the a sample row is swept +-30 px and set to the
+    middle of the rows within 10 pct of the darkest; logged, stored in the setup json as thrust_a_shift.
+  - Pass-1 chunk caches stay valid when only the thrust sampler changes: the blue/registration part is
+    keyed by PASS1_VERSION (unchanged since 1.1), the thrust sampler by a separate key. A cached chunk
+    with another thrust key is re-sampled from the video with its stored thrust homographies (no
+    registration or blue decode), so a v1.1 run is corrected in minutes instead of re-read in an hour.
+v1.3 (2026-09-26): thrust sampler guard.
+  - On 2026-09-25 12X10E Trial #1 the training frames show 1-2 lit digits ("0", "26", "24") and the
+    separability search chose (8, 33, 1.02) on the edge of its grid: every training frame then decoded
+    blank and the reference thrust sigma was 0.39 (0.14-0.15 on the other runs). The fitted offset is now
+    kept only if it also lowers the median thrust residual sigma of the training frames below its value
+    at (0, 0); otherwise (0, 0) is used (logged). Checked on the quad-rectified training frames: fitted /
+    (0, 0) sigma 0.150 / 0.229 (12X10E T2), 0.149 / 0.252 (9X4.5E T1), 0.136 / 0.235 (12X6E T2): kept;
+    0.394 / 0.240 (12X10E T1): rejected, and (0, 0) decodes 0 / 26 / 24 there, matching callout 1 (26 g).
+  - The pass-1 signature keeps the fitted offset (the blue/registration records do not depend on the
+    sampler); the offset in use goes into the thrust key, so a guarded run re-samples cached chunks.
+v1.4 (2026-09-26): thrust darkness against a background field; sampler geometry from high-power frames.
+  - In the 2026-09-25 camera position the thrust display is lit unevenly and a shadow moves across it
+    (top right darker). Against the two loop-center patches of each digit, an unlit tens segment a read
+    darkness 0.27 on 12X10E Trial #1 frames 3856 / 3906 (lit segments about 0.6), a tens "1" could read
+    as "7", and v1.3 hold means on that run were up to 50 g above the callouts. Darkness is now (B - I) / B with B a full cubic in
+    (x, y) fitted per frame to 3 x 3 patches down the unlit gaps between digits plus the loop centers
+    (3-sigma clipping). On those two frames the unlit a read 0.07-0.08 and the frame sigma dropped from
+    0.21 to 0.10-0.12.
+  - The sampler geometry (offset, vertical scale, a rows) is fitted by minimizing the median decode sigma
+    (field darkness) of up to 8 high-power frames, where most digits are lit. The v1.3 separability fit
+    ran on the training frames, which on 12X10E Trial #1 showed 1-2 lit digits, so its vertical scale was
+    unconstrained there. Offline on the 8 highest-thrust holds of each 2026-09-25 run (median sigma,
+    v1.3 geometry -> fitted): 12X10E T1 0.212 -> 0.067 at (-8, 10, 0.935); 12X10E T2 0.096 -> 0.073 at
+    (-6, 8, 0.935); 9X4.5E T1 0.098 -> 0.078 at (-8, 9, 0.94); 12X6E T2 0.067 -> 0.052 at (-9, 4, 0.96).
+    The four fits agree within 3 px and 0.025 in scale (same camera position). The fitted geometry is used
+    only if its sigma is below the v1.3 geometry's on the same frames (logged, setup json
+    thrust_geometry_fit). The v1.3 fit still runs with the old darkness because its result is part of the
+    pass-1 signature, so v1.3 chunk caches stay valid and are only re-sampled.
+  - Rejected first (not in this version): a per-segment on/off calibration over time. It misclassified
+    weakly lit segments ("681" -> "68 ", "1627" -> "1621") because the moving shadow is not stationary.
+  - Pass-1 records keep the (5, 7) segment darkness of every frame ("tv" in the pass-1 npz).
 Requires: Python 3, numpy, scipy, opencv-python (cv2.findTransformECCWithMask, present in OpenCV 4.13).
 """
 import argparse
@@ -69,7 +130,8 @@ from pathlib import Path
 import numpy as np
 import cv2
 
-SCRIPT_VERSION = "1.0"
+SCRIPT_VERSION = "1.4"
+PASS1_VERSION = "1.1"   # cache key for the blue/registration pass-1 records; bump when register() or the blue path changes
 HERE = Path(__file__).resolve().parent
 
 # ----------------------------------------------------------------------------------------------
@@ -81,8 +143,9 @@ MARGIN = 40                   # canonical margin kept around each display for EC
 GRID = (127.638, 86.1487, 14.0046, 50.4365, 147.2971, 16.1425)   # x0, cell pitch, dot pitch x, y0, row pitch, dot pitch y
 UNIT_CELLS = {(0, 7): "A", (0, 15): "V", (1, 15): "W"}           # static glyphs used for registration and sanity checks
 TRI_BOX = (1117, 82, 1148, 113)                                   # static triangle marker on the thrust display
+THR_ASPECT = 0.422            # pocket height / top width in the picture (0.419 in 12x8E.MOV, 0.424 in 12X6E Trial #1.MOV)
 FR, KR = 12, 28               # dot footprint radius, blur kernel radius (px)
-ECC_CRIT = (cv2.TERM_CRITERIA_COUNT | cv2.TERM_CRITERIA_EPS, 200, 1e-7)
+ECC_CRIT = (cv2.TERM_CRITERIA_COUNT | cv2.TERM_CRITERIA_EPS, 100, 1e-5)   # v1.0: 200, 1e-7 (see v1.1 notes)
 ECC_MIN = 0.5                 # ECC correlation below this: display not found or occluded
 FIELD_UNITS_AUX = ("Ap", "Vm", "Wp", "Ah", "Wh")
 
@@ -170,7 +233,9 @@ def blue_contour(hsv):
 
 
 def thr_quad(hsv, bq):
-    """Thrust display: the largest non-red hole in the red plate below the blue LCD."""
+    """Thrust display: the largest non-red hole in the red plate below the blue LCD.
+    Returns (quad, partial). partial = the hole runs off the bottom of the picture; its bottom corners are
+    then placed THR_ASPECT x (top width) down the fitted left and right edges."""
     Wb = np.linalg.norm(bq[1] - bq[0])
     Hb = np.linalg.norm(bq[3] - bq[0])
     xa = int(max(0, bq[3, 0] - 0.15 * Wb))
@@ -178,7 +243,8 @@ def thr_quad(hsv, bq):
     ya = int(max(bq[2, 1], bq[3, 1]) + 0.2 * Hb)
     yb = int(min(hsv.shape[0], max(bq[2, 1], bq[3, 1]) + 4 * Hb))
     if xb - xa < 50 or yb - ya < 50:
-        return None
+        return None, False
+    at_bottom = yb == hsv.shape[0]      # the search window reaches the bottom of the picture
     sub = hsv[ya:yb, xa:xb]
     red = (((sub[..., 0] < 12) | (sub[..., 0] > 168)) & (sub[..., 1] > 90) & (sub[..., 2] > 50)).astype(np.uint8)
     hole = cv2.morphologyEx(1 - red, cv2.MORPH_OPEN, np.ones((7, 7), np.uint8))
@@ -186,15 +252,26 @@ def thr_quad(hsv, bq):
     best = None
     for k in range(1, n):
         x, y, w, h, a = st[k]
-        if x == 0 or y == 0 or x + w == hole.shape[1] or y + h == hole.shape[0] or a < 0.05 * Wb * Hb:
+        if x == 0 or y == 0 or x + w == hole.shape[1] or a < 0.05 * Wb * Hb:
+            continue
+        if y + h == hole.shape[0] and not (at_bottom and h > 0.5 * Hb):
             continue
         if best is None or a > st[best][4]:
             best = k
     if best is None:
-        return None
+        return None, False
+    partial = bool(st[best][1] + st[best][3] == hole.shape[0])
     blob = cv2.morphologyEx((lab == best).astype(np.uint8), cv2.MORPH_CLOSE, np.ones((31, 31), np.uint8))
     c = max(cv2.findContours(blob, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[0], key=cv2.contourArea)
-    return fit_quad_from_contour(c + np.array([xa, ya]), tol=20)
+    q = fit_quad_from_contour(c + np.array([xa, ya]), tol=20).astype(np.float64)
+    if partial:
+        # q[3] and q[2] lie on the picture border; keep only the directions of the left and right edges
+        L = THR_ASPECT * np.linalg.norm(q[1] - q[0])
+        dl = (q[3] - q[0]) / np.linalg.norm(q[3] - q[0])
+        dr = (q[2] - q[1]) / np.linalg.norm(q[2] - q[1])
+        q[3] = q[0] + L * dl
+        q[2] = q[1] + L * dr
+    return q.astype(np.float32), partial
 
 
 def quad_area(q):
@@ -202,7 +279,7 @@ def quad_area(q):
 
 
 def find_quads(im):
-    """Returns (blue quad or None, thrust quad or None)."""
+    """Returns (blue quad or None, thrust quad or None, thrust quad partial)."""
     hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
     try:
         c = blue_contour(hsv)
@@ -210,12 +287,12 @@ def find_quads(im):
     except (ValueError, np.linalg.LinAlgError, cv2.error):
         bq = None
     if bq is None:
-        return None, None
+        return None, None, False
     try:
-        tq = thr_quad(hsv, bq)
+        tq, partial = thr_quad(hsv, bq)
     except (ValueError, np.linalg.LinAlgError, cv2.error):
-        tq = None
-    return bq, tq
+        tq, partial = None, False
+    return bq, tq, partial
 
 
 def canon_H(q, W, H):
@@ -224,6 +301,14 @@ def canon_H(q, W, H):
 
 
 SHIFT = np.array([[1, 0, -MARGIN], [0, 1, -MARGIN], [0, 0, 1]], np.float64)
+
+
+def inside_mask(H, shape, W, H_, erode=6):
+    """255 where the canonical canvas pixel comes from inside the picture (eroded by `erode` px), else 0."""
+    ones = np.full(shape[:2], 255, np.uint8)
+    m = cv2.warpPerspective(ones, H, (W + 2 * MARGIN, H_ + 2 * MARGIN), flags=cv2.INTER_NEAREST,
+                            borderMode=cv2.BORDER_CONSTANT, borderValue=0)
+    return cv2.erode(m, np.ones((2 * erode + 1, 2 * erode + 1), np.uint8)) if erode else m
 
 
 # ----------------------------------------------------------------------------------------------
@@ -461,27 +546,91 @@ def seg_pts(cx, name):
     return (c[None, None, :] + t[:, None, None] * ax + s[None, :, None] * ac).reshape(-1, 2)
 
 
-def thrust_sampler(ox=0.0, oy=0.0):
-    """All sample points for 5 digits x (background + 7 segments), as one remap row."""
-    groups = []
+FIELD_ROWS = [85, 125, 163, 203, 243, 290, 330, 370, 404]   # background-field sample rows (v1.4)
+
+
+def field_points(ox=0.0, oy=0.0, sy=1.0):
+    """Background-field sample points (v1.4): 3 x 3 patches (8 px) down the unlit gap left of each digit
+    and right of the last one, following the digit slant, plus the two loop-center patches of each digit.
+    Points within 12 px of the canvas edge or 20 px of the triangle marker are left out."""
+    sl = -SLANT[0] / SLANT[1]
+    pts = []
+    for g in range(6):
+        for y in FIELD_ROWS:
+            xc = (DCX[g] if g < 5 else DCX[4] + 211.0) - 136.0 + (243.0 - y) * sl
+            pts += [[xc + dx, y + dy] for dx in (-8, 0, 8) for dy in (-4, 0, 4)]
+    for cx in DCX:
+        pts += [[cx - 38 + dx, 163 + dy] for dx in (-8, 0, 8) for dy in (-15, 0, 15)]
+        pts += [[cx - 55 + dx, 328 + dy] for dx in (-8, 0, 8) for dy in (-15, 0, 15)]
+    P = np.array(pts) * np.array([1.0, sy]) + np.array([ox, oy])
+    tb = TRI_BOX
+    keep = (P[:, 0] > 12) & (P[:, 0] < TW - 12) & (P[:, 1] > 12) & (P[:, 1] < TH - 12) & \
+        ~((P[:, 0] > tb[0] - 20) & (P[:, 0] < tb[2] + 20) & (P[:, 1] > tb[1] - 20) & (P[:, 1] < tb[3] + 20))
+    return P[keep].astype(np.float32)
+
+
+def field_basis(x, y):
+    """Full cubic in (x, y), coordinates normalized to -0.5..0.5 over the canvas: n x 10."""
+    x = np.asarray(x, np.float64) / TW - 0.5
+    y = np.asarray(y, np.float64) / TH - 0.5
+    return np.stack([np.ones_like(x), x, y, x * x, x * y, y * y, x ** 3, x * x * y, x * y * y, y ** 3], -1)
+
+
+def thrust_sampler(ox=0.0, oy=0.0, sy=1.0, ay=0.0):
+    """All sample points for 5 digits x (background + 7 segments), as one remap row.
+    (ox, oy) shifts the layout; sy scales it vertically about the pocket top edge (y = 0); ay then moves
+    the top segment (a) rows alone, in output px. v1.4 adds the background-field points and the field
+    basis at both point sets: (mx, my, starts, sizes, fx, fy, basis at field points, basis at sample points)."""
+    groups, is_a = [], []
     for cx in DCX:
         bg = [[cx - 38 + dx, 163 + dy] for dx in (-8, 0, 8) for dy in (-15, 0, 15)] + \
              [[cx - 55 + dx, 328 + dy] for dx in (-8, 0, 8) for dy in (-15, 0, 15)]
         groups.append(np.array(bg, np.float64))
+        is_a.append(np.zeros(len(bg), bool))
         for s in "abcdefg":
-            groups.append(seg_pts(cx, s))
+            g = seg_pts(cx, s)
+            groups.append(g)
+            is_a.append(np.full(len(g), s == "a"))
     sizes = np.array([len(g) for g in groups])
-    P = (np.concatenate(groups) + np.array([ox, oy])).astype(np.float32)
-    return P[:, 0].reshape(1, -1).copy(), P[:, 1].reshape(1, -1).copy(), np.r_[0, np.cumsum(sizes)[:-1]], sizes
+    P = np.concatenate(groups) * np.array([1.0, sy]) + np.array([ox, oy])
+    P[np.concatenate(is_a), 1] += ay
+    P = P.astype(np.float32)
+    Q = field_points(ox, oy, sy)
+    return (P[:, 0].reshape(1, -1).copy(), P[:, 1].reshape(1, -1).copy(), np.r_[0, np.cumsum(sizes)[:-1]], sizes,
+            Q[:, 0].reshape(1, -1).copy(), Q[:, 1].reshape(1, -1).copy(), field_basis(Q[:, 0], Q[:, 1]),
+            field_basis(P[:, 0], P[:, 1]))
 
 
-def thrust_dark(T, smp):
-    """Darkness (bg - seg) / bg of every segment, shape (5, 7)."""
-    mxp, myp, starts, sizes = smp
+def thrust_dark_loop(T, smp):
+    """v1.0-v1.3 darkness (bg - seg) / bg against the two loop-center patches of each digit, shape (5, 7).
+    Used only by the v1.3 sampler fit, whose result is part of the pass-1 cache signature."""
+    mxp, myp, starts, sizes = smp[:4]
     v = cv2.remap(T, mxp, myp, cv2.INTER_LINEAR)[0].astype(np.float64)
     m = (np.add.reduceat(v, starts) / sizes).reshape(5, 8)
     bg = np.maximum(m[:, :1], 1.0)
     return (bg - m[:, 1:]) / bg
+
+
+def thrust_dark(T, smp):
+    """Darkness (B - I) / B of every segment, shape (5, 7) (v1.4). B is the display background field:
+    a full cubic in (x, y) fitted to the field points by least squares with 3-sigma clipping (5 rounds).
+    Field points darker than 5 (outside the picture) are left out. All zeros if under 30 points remain."""
+    mxp, myp, starts, sizes, fxp, fyp, Af, As = smp
+    Ib = cv2.remap(T, fxp, fyp, cv2.INTER_LINEAR)[0].astype(np.float64)
+    ok = Ib >= 5.0
+    if ok.sum() < 30:
+        return np.zeros((5, 7))
+    w = ok.astype(np.float64)
+    for _ in range(5):
+        c = np.linalg.lstsq(Af * w[:, None], Ib * w, rcond=None)[0]
+        r = Ib - Af @ c
+        s = 1.4826 * np.median(np.abs(r[ok])) + 1e-6
+        w = (ok & (np.abs(r) < 3.0 * s)).astype(np.float64)
+    v = cv2.remap(T, mxp, myp, cv2.INTER_LINEAR)[0].astype(np.float64)
+    B = As @ c
+    d = (B - v) / np.maximum(B, 1.0)
+    m = (np.add.reduceat(d, starts) / sizes).reshape(5, 8)
+    return m[:, 1:]
 
 
 def thrust_costs(v):
@@ -525,16 +674,37 @@ def frame_index(cap, fps):
     return int(round(cap.get(cv2.CAP_PROP_POS_MSEC) * fps / 1000.0))
 
 
+ROTATIONS = {0: None, 90: cv2.ROTATE_90_CLOCKWISE, 180: cv2.ROTATE_180, 270: cv2.ROTATE_90_COUNTERCLOCKWISE}
+
+
+def open_video(path):
+    """VideoCapture that returns the stored frames: the container rotation metadata is NOT applied
+    (phone videos carry a 90 deg tag that OpenCV would otherwise apply). Rotation is chosen by --rotate."""
+    cap = cv2.VideoCapture(str(path))
+    if hasattr(cv2, "CAP_PROP_ORIENTATION_AUTO"):
+        cap.set(cv2.CAP_PROP_ORIENTATION_AUTO, 0)
+    return cap
+
+
+def decode(cap, rot=None):
+    """Decode the grabbed frame and apply the rotation (degrees clockwise; default the run's --rotate)."""
+    ok, im = cap.retrieve()
+    if not ok:
+        return None
+    r = ROTATIONS[_G.get("rot", 0) if rot is None else rot]
+    return im if r is None else cv2.rotate(im, r)
+
+
 def iter_frames(path, a, b, fps, step=1):
     """Yield (idx, t_s, cap) for frames a <= idx < b with (idx - a) % step == 0; the frame is grabbed,
-    call cap.retrieve() to decode it. Frame indices come from the frame timestamps, and a seek that lands
+    call decode(cap) to decode it. Frame indices come from the frame timestamps, and a seek that lands
     past frame a is retried from further back, so frame numbering is exact for constant-frame-rate video."""
     cap = None
     idx = None
     for back in (0, 60, 300, 1800, None):
         if cap is not None:
             cap.release()
-        cap = cv2.VideoCapture(str(path))
+        cap = open_video(path)
         s = 0 if back is None else max(0, a - back)
         if s > 0:
             cap.set(cv2.CAP_PROP_POS_FRAMES, s)
@@ -555,10 +725,9 @@ def iter_frames(path, a, b, fps, step=1):
         cap.release()
 
 
-def read_one(path, idx, fps):
+def read_one(path, idx, fps, rot=None):
     for i, t, cap in iter_frames(path, idx, idx + 1, fps):
-        ok, im = cap.retrieve()
-        return im if ok else None
+        return decode(cap, rot)
     return None
 
 
@@ -573,10 +742,22 @@ def _worker_init(ctx):
     _G.update(ctx)
     cv2.setNumThreads(int(ctx.get("cv_threads", 1)))
     if "thr_off" in ctx:
-        _G["smp"] = thrust_sampler(*ctx["thr_off"])
+        _G["smp"] = thrust_sampler(*ctx["thr_off"], ay=ctx.get("thr_ay", 0.0))
     if "Tb" in ctx:
         _G["in_b"] = np.full(ctx["Tb"].shape, 255, np.uint8)
         _G["in_t"] = np.full(ctx["Tt"].shape, 255, np.uint8)
+
+
+def input_mask(H, shape, W, H_, full, erode=6):
+    """ECC input mask for a frame warped by H: `full` (all 255) when the whole canvas comes from inside
+    the picture, else the inside_mask."""
+    m = MARGIN
+    cor = np.float64([[0, 0], [W + 2 * m, 0], [W + 2 * m, H_ + 2 * m], [0, H_ + 2 * m]]).reshape(-1, 1, 2)
+    p = cv2.perspectiveTransform(cor, np.linalg.inv(H)).reshape(-1, 2)
+    if (p[:, 0] >= erode).all() and (p[:, 0] <= shape[1] - 1 - erode).all() and \
+            (p[:, 1] >= erode).all() and (p[:, 1] <= shape[0] - 1 - erode).all():
+        return full
+    return inside_mask(H, shape, W, H_, erode)
 
 
 def _scan_chunk(job):
@@ -589,10 +770,10 @@ def _scan_chunk(job):
         k = (idx - _G["f0"]) % stride
         if k != 0 and k != gap:
             continue
-        ok, im = cap.retrieve()
-        if not ok:
+        im = decode(cap)
+        if im is None:
             continue
-        bq, tq = find_quads(im)
+        bq, tq, _ = find_quads(im)
         if bq is None or tq is None:
             continue
         R = cv2.warpPerspective(im, canon_H(bq, BW, BH), (BW + 2 * MARGIN, BH + 2 * MARGIN),
@@ -600,8 +781,14 @@ def _scan_chunk(job):
         assign, okc = threshold_decode(R)
         sharp = float(cv2.Laplacian(R[_ys_fit, _xs_fit], cv2.CV_64F).var())
         out.append((idx, sharp, "|".join(text_of(assign)), bool(okc.all() and units_ok(assign)),
-                    quad_area(bq), quad_area(tq)))
+                    quad_area(bq), quad_area(tq), text_consistent(*text_of(assign))))
     return out
+
+
+def text_consistent(r0, r1):
+    """Blue text that parses with no flags and has P within p_tol of V x I (the relaxed setup check, v1.1)."""
+    num, _, flags = parse_blue(r0, r1)
+    return not flags and abs(num["P_W"] - num["I_A"] * num["V_V"]) <= p_tol(num["P_W"])
 
 
 def register(im, prev):
@@ -610,7 +797,7 @@ def register(im, prev):
     sets the frame weight), 0 = display not found. Returns (Mb or None, Mt or None, info dict, new prev)."""
     G = _G
     info = {"quad_b": 0, "quad_t": 0, "ecc_b": float("nan"), "ecc_t": float("nan"), "reg_b": 0, "reg_t": 0}
-    bq, tq = find_quads(im)
+    bq, tq, _ = find_quads(im)
     Hb = Ht = None
     if bq is not None and 0.6 < quad_area(bq) / G["area_b"] < 1.6:
         Hb = canon_H(bq, BW, BH)
@@ -623,18 +810,23 @@ def register(im, prev):
     elif prev is not None:
         Ht = prev[1]
     out = {}
-    for key, H, T, mask, inm, (W_, H_) in (("b", Hb, G["Tb"], G["mb"], G["in_b"], (BW, BH)),
-                                          ("t", Ht, G["Tt"], G["mt"], G["in_t"], (TW, TH))):
+    for key, H, T, mask, full, (W_, H_), motion in (
+            ("b", Hb, G["Tb"], G["mb"], G["in_b"], (BW, BH), cv2.MOTION_HOMOGRAPHY),
+            ("t", Ht, G["Tt"], G["mt"], G["in_t"], (TW, TH), G.get("thr_motion", cv2.MOTION_HOMOGRAPHY))):
         out[key] = None
         if H is None:
             continue
         J = cv2.warpPerspective(im, H, (W_ + 2 * MARGIN, H_ + 2 * MARGIN), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32)
+        inm = input_mask(H, im.shape, W_, H_, full)
+        W0 = np.eye(3, dtype=np.float32) if motion == cv2.MOTION_HOMOGRAPHY else np.eye(2, 3, dtype=np.float32)
         try:
-            cc, W = cv2.findTransformECCWithMask(T, J, mask, inm, np.eye(3, dtype=np.float32),
-                                                 cv2.MOTION_HOMOGRAPHY, ECC_CRIT, 5)
+            cc, W = cv2.findTransformECCWithMask(T, J, mask, inm, W0, motion, ECC_CRIT, 5)
             info["ecc_" + key] = float(cc)
             if cc >= ECC_MIN:
-                out[key] = SHIFT @ np.linalg.solve(W.astype(np.float64), H)
+                W = W.astype(np.float64)
+                if W.shape[0] == 2:
+                    W = np.vstack([W, [0.0, 0.0, 1.0]])
+                out[key] = SHIFT @ np.linalg.solve(W, H)
                 info["reg_" + key] = 2
         except cv2.error:
             pass
@@ -678,38 +870,66 @@ def _frame_record(im, prev, prev_assign):
     # thrust LCD
     rec["thrust_valid"] = int(Mt is not None)
     rec["tc"] = np.zeros((5, ND), np.float32)
+    rec["tv"] = np.zeros((5, 7), np.float32)
     rec["tcon"] = rec["tsig"] = float("nan")
     if Mt is not None:
         T = cv2.warpPerspective(im, Mt, (TW, TH), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32)
-        tc, con, sig = thrust_costs(thrust_dark(T, G["smp"]))
-        rec.update(tc=tc, tcon=con, tsig=sig)
+        tv = thrust_dark(T, G["smp"])
+        tc, con, sig = thrust_costs(tv)
+        rec.update(tc=tc, tv=tv.astype(np.float32), tcon=con, tsig=sig)
         if not np.isfinite(sig):
             rec["thrust_valid"] = 0
     return rec, new_prev, new_assign
 
 
 REC_KEYS = ["idx", "t", "quad_b", "quad_t", "ecc_b", "ecc_t", "reg_b", "reg_t", "Mb", "Mt", "blue_valid", "ct", "assign",
-            "gain", "rms", "sx", "sy", "iters", "stable", "thrust_valid", "tc", "tcon", "tsig", "tproc"]
+            "gain", "rms", "sx", "sy", "iters", "stable", "thrust_valid", "tc", "tv", "tcon", "tsig", "tproc"]
 
 
 def _process_chunk(job):
     a, b = job
     G = _G
     cache = Path(G["cache_dir"]) / ("chunk_%07d_%07d.npz" % (a, b))
+    cached = None
     if cache.exists() and not G.get("fresh"):
         try:
             with np.load(cache, allow_pickle=False) as z:
                 if str(z["sig"]) == G["sig"]:
-                    return {k: z[k] for k in REC_KEYS}
+                    cached = {k: z[k] for k in REC_KEYS if k in z.files}
+                    if "tv" not in cached:   # cache written before v1.4: re-sampled below
+                        cached["tv"] = np.zeros((len(cached["idx"]), 5, 7), np.float32)
+                    elif "thr_key" in z.files and str(z["thr_key"]) == G["thr_key"]:
+                        return cached
         except Exception:
-            pass
+            cached = None
+    if cached is not None:
+        # blue records and registration are still valid, only the thrust sampler changed: re-sample the
+        # thrust display of each cached frame with its stored homography
+        out = cached
+        pos = {int(i): j for j, i in enumerate(out["idx"])}
+        for idx, t, cap in iter_frames(G["video"], a, b, G["fps"], G["step"]):
+            j = pos.get(int(idx))
+            if j is None or not np.isfinite(out["Mt"][j]).all():
+                continue
+            im = decode(cap)
+            if im is None:
+                continue
+            T = cv2.warpPerspective(im, out["Mt"][j], (TW, TH), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32)
+            tv = thrust_dark(T, G["smp"])
+            tc, con, sg = thrust_costs(tv)
+            out["tc"][j], out["tv"][j], out["tcon"][j], out["tsig"][j] = tc, tv, con, sg
+            out["thrust_valid"][j] = int(np.isfinite(sg))
+        tmp = cache.with_name(cache.stem + "_tmp.npz")
+        np.savez(tmp, sig=np.array(G["sig"]), thr_key=np.array(G["thr_key"]), **out)
+        os.replace(tmp, cache)
+        return out
     recs = {k: [] for k in REC_KEYS}
     prev = None
     prev_assign = None
     for idx, t, cap in iter_frames(G["video"], a, b, G["fps"], G["step"]):
         t0 = time.time()
-        ok, im = cap.retrieve()
-        if not ok:
+        im = decode(cap)
+        if im is None:
             continue
         rec, prev, prev_assign = _frame_record(im, prev, prev_assign)
         rec["idx"], rec["t"], rec["tproc"] = idx, t, time.time() - t0
@@ -719,13 +939,14 @@ def _process_chunk(job):
     if len(out["idx"]) == 0:
         out = empty_records()
     tmp = cache.with_name(cache.stem + "_tmp.npz")
-    np.savez(tmp, sig=np.array(G["sig"]), **out)
+    np.savez(tmp, sig=np.array(G["sig"]), thr_key=np.array(G["thr_key"]), **out)
     os.replace(tmp, cache)
     return out
 
 
 def empty_records():
-    shapes = {"Mb": (0, 3, 3), "Mt": (0, 3, 3), "ct": (0, 2, 16, NG), "assign": (0, 2, 16), "tc": (0, 5, ND)}
+    shapes = {"Mb": (0, 3, 3), "Mt": (0, 3, 3), "ct": (0, 2, 16, NG), "assign": (0, 2, 16), "tc": (0, 5, ND),
+              "tv": (0, 5, 7)}
     return {k: np.zeros(shapes.get(k, (0,))) for k in REC_KEYS}
 
 
@@ -830,9 +1051,15 @@ def parse_blue(r0, r1):
 
 
 def parse_thrust(s):
-    """Right-aligned integer: leading blanks only, no leading zero, optional minus sign."""
+    """Right-aligned integer: leading blanks only, no leading zero, optional minus sign. The minus sign may
+    sit in the leftmost digit with blanks before the number ('-  98', seen in 9X4.5E Trial #1.MOV)."""
     s2 = s.strip()
-    if s != s.rstrip() or " " in s2:
+    if s != s.rstrip():
+        return None
+    m = re.match(r"^- +(\d+)$", s2)
+    if m:
+        s2 = "-" + m.group(1)
+    if " " in s2:
         return None
     if re.match(r"^-?\d+$", s2) and not re.match(r"^-?0\d", s2):
         return int(s2)
@@ -882,6 +1109,8 @@ def main():
     ap.add_argument("--lambda-blue", type=float, default=4.0, help="blue switch penalty, dot-equivalents")
     ap.add_argument("--lambda-thrust", type=float, default=1.0, help="thrust switch penalty, segment-equivalents")
     ap.add_argument("--ref-frame", type=int, default=None, help="force the registration reference frame")
+    ap.add_argument("--rotate", default="auto", choices=["auto", "0", "90", "180", "270"],
+                    help="clockwise rotation applied to the stored frames (auto: the one where the unit glyphs decode)")
     ap.add_argument("--no-overlays", action="store_true")
     ap.add_argument("--fresh", action="store_true", help="ignore cached pass-1 chunks")
     args = ap.parse_args()
@@ -907,10 +1136,11 @@ def main():
             print(msg, flush=True)
 
     T0 = time.time()
-    cap = cv2.VideoCapture(str(video))
+    cap = open_video(video)
     fps = cap.get(cv2.CAP_PROP_FPS)
     nfr = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     fw, fh = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    orient = cap.get(cv2.CAP_PROP_ORIENTATION_META) if hasattr(cv2, "CAP_PROP_ORIENTATION_META") else float("nan")
     cap.release()
     if not fps or fps <= 0 or nfr <= 0:
         sys.exit("cannot read frame rate / frame count from %s" % video)
@@ -924,43 +1154,82 @@ def main():
     os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
     os.environ.setdefault("MKL_NUM_THREADS", "1")
     log("read_mt10pro_video.py v%s  %s" % (SCRIPT_VERSION, time.strftime("%Y-%m-%d %H:%M:%S")), echo=True)
-    log("video %s: %dx%d, %.3f fps, %d frames (%.2f s); range frames %d-%d, step %d, workers %d"
-        % (video.name, fw, fh, fps, nfr, nfr / fps, f0, f1 - 1, args.step, workers), echo=True)
+    log("video %s: %dx%d stored (rotation tag %s deg, not applied), %.3f fps, %d frames (%.2f s); range frames %d-%d, step %d, workers %d"
+        % (video.name, fw, fh, orient, fps, nfr, nfr / fps, f0, f1 - 1, args.step, workers), echo=True)
+    # frame-count constants were set on 30 fps video; kf scales them to this frame rate (1 at 30 fps),
+    # km scales the mix-run lengths to the processed frame rate fps / step
+    kf = max(1, int(round(fps / 30.0)))
+    km = max(1, int(round(fps / args.step / 30.0)))
+
+    # ---------------- setup: rotation ----------------
+    if args.rotate == "auto":
+        votes = {r: 0 for r in ROTATIONS}
+        for fi in np.linspace(f0, f1 - 1, 7)[1:-1].round().astype(int):
+            im0 = read_one(video, int(fi), fps, rot=0)
+            if im0 is None:
+                continue
+            for r in ROTATIONS:
+                imr = im0 if r == 0 else cv2.rotate(im0, ROTATIONS[r])
+                bq_, _, _ = find_quads(imr)
+                if bq_ is None:
+                    continue
+                Rr = cv2.warpPerspective(imr, canon_H(bq_, BW, BH), (BW + 2 * MARGIN, BH + 2 * MARGIN),
+                                         flags=cv2.INTER_CUBIC)[MARGIN:MARGIN + BH, MARGIN:MARGIN + BW, 1].astype(np.float64)
+                if units_ok(threshold_decode(Rr)[0]):
+                    votes[r] += 1
+        rot = max(votes, key=lambda r: (votes[r], r == 0))
+        log("setup: rotation %d deg clockwise (unit glyphs decoded in %s of 5 test frames per rotation)" % (rot, votes), echo=True)
+    else:
+        rot = int(args.rotate)
+    _G["rot"] = rot
 
     # ---------------- setup: candidate scan ----------------
-    stride, gap = 15, 4
-    base = {"video": str(video), "fps": fps, "stride": stride, "gap": gap, "f0": f0, "cv_threads": cv_threads}
+    stride, gap = 15 * kf, 4 * kf
+    base = {"video": str(video), "fps": fps, "stride": stride, "gap": gap, "f0": f0, "cv_threads": cv_threads, "rot": rot}
     span = max(stride * 8, (f1 - f0) // (workers * 3) // stride * stride)
     scan_jobs = [(a, min(a + span + gap + 1, f1)) for a in range(f0, f1, span)]
     scan = {}
     for res in run_jobs(_scan_chunk, scan_jobs, base, workers, log, "setup scan"):
         for row in res:
             scan[row[0]] = row
-    pairs = []
+    pairs, rpairs = [], []
     for idx, row in scan.items():
         if (idx - f0) % stride == 0 and idx + gap in scan:
             r2 = scan[idx + gap]
             if row[3] and r2[3] and row[2] == r2[2]:
                 pairs.append((min(row[1], r2[1]), idx, row[2]))
+            elif row[6] and r2[6] and row[2] == r2[2]:
+                rpairs.append((min(row[1], r2[1]), idx, row[2]))
     pairs.sort(reverse=True)
+    rpairs.sort(reverse=True)
     log("setup: %d scanned frames, %d clean in-state pairs" % (len(scan), len(pairs)), echo=True)
+    # v1.1 relaxed setup: blurred or partly dim frames rarely decode within 1 dot in every cell. With fewer
+    # than 8 clean pairs, pairs whose threshold text is identical in both frames, parses with no flags and
+    # has P within p_tol of V x I are added after the clean ones (the P check rejects misread I/V/P digits).
+    relaxed = len(pairs) < 8 and len(rpairs) > 0
+    if relaxed:
+        log("setup: relaxed training selection: adding %d pairs whose text parses and has P ~ V x I" % len(rpairs), echo=True)
+        pairs = pairs + rpairs
     if not pairs and args.ref_frame is None:
         sys.exit("no frame in range where the blue LCD decodes cleanly; check the video framing (see log %s)" % logf.name)
     ref_idx = args.ref_frame if args.ref_frame is not None else pairs[0][1]
     train = []
     for sh, idx, txt in pairs:
-        if all(abs(idx - j) >= 45 for j, _ in train):
+        if all(abs(idx - j) >= 45 * kf for j, _ in train):
             train.append((idx, txt))
-        if len(train) >= 8:
+        if len(train) >= (12 if relaxed else 8):
             break
 
     ref = read_one(video, ref_idx, fps)
     if ref is None:
         sys.exit("cannot read reference frame %d" % ref_idx)
-    bq, tq = find_quads(ref)
+    bq, tq, thr_partial = find_quads(ref)
     if bq is None or tq is None:
         sys.exit("displays not found in reference frame %d" % ref_idx)
     Hb0, Ht0 = canon_H(bq, BW, BH), canon_H(tq, TW, TH)
+    if thr_partial:
+        log("setup: the thrust display runs off the bottom of the picture; its bottom edge is placed %.3f x top width "
+            "down the side edges, thrust ECC is Euclidean, and the sampler fit includes a vertical scale" % THR_ASPECT, echo=True)
     Tb = cv2.warpPerspective(ref, Hb0, (BW + 2 * MARGIN, BH + 2 * MARGIN), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32)
     Tt = cv2.warpPerspective(ref, Ht0, (TW + 2 * MARGIN, TH + 2 * MARGIN), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32)
     a_ref, ok_ref = threshold_decode(Tb[MARGIN:MARGIN + BH, MARGIN:MARGIN + BW])
@@ -979,12 +1248,19 @@ def main():
         xb, yb = int(GX[r, c].max()) + 13, int(GY[r, c, :7].max()) + 13
         mb[ya + MARGIN:yb + MARGIN, xa + MARGIN:xb + MARGIN] = 1
     mt[TRI_BOX[1] + MARGIN:TRI_BOX[3] + MARGIN, TRI_BOX[0] + MARGIN:TRI_BOX[2] + MARGIN] = 1
-    ctx = dict(base, Tb=Tb, Tt=Tt, mb=mb, mt=mt, area_b=quad_area(bq), area_t=quad_area(tq), thr_off=(0.0, 0.0))
+    # template pixels from outside the picture carry no information (v1.1)
+    mb &= (inside_mask(Hb0, ref.shape, BW, BH) > 0).astype(np.uint8)
+    mt &= (inside_mask(Ht0, ref.shape, TW, TH) > 0).astype(np.uint8)
+    thr_motion = cv2.MOTION_EUCLIDEAN if thr_partial else cv2.MOTION_HOMOGRAPHY
+    ctx = dict(base, Tb=Tb, Tt=Tt, mb=mb, mt=mt, area_b=quad_area(bq), area_t=quad_area(tq), thr_off=(0.0, 0.0),
+               thr_motion=thr_motion)
     _worker_init(ctx)
 
     # ---------------- setup: learn dot footprints on the training frames ----------------
     tr = []
     for idx, txt in train:
+        if len(tr) >= 8:
+            break
         im = read_one(video, idx, fps)
         if im is None:
             continue
@@ -993,7 +1269,7 @@ def main():
             continue
         R = cv2.warpPerspective(im, Mb, (BW, BH), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float64)
         a, okc = threshold_decode(R)
-        if not okc.all() or "|".join(text_of(a)) != txt:
+        if not (okc.all() or relaxed) or "|".join(text_of(a)) != txt:
             log("  training frame %d dropped: registered decode differs from scan decode" % idx)
             continue
         T = cv2.warpPerspective(im, Mt, (TW, TH), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32)
@@ -1026,31 +1302,177 @@ def main():
     # thrust: check the segment geometry offset on the training frames, and the reference noise level
     best_off, best_sc = (0.0, 0.0), -1.0
     sc0 = None
-    for oy in range(-6, 7, 2):
-        for ox in range(-6, 7, 2):
-            smp = thrust_sampler(ox, oy)
-            sc = float(np.mean([sep_score(thrust_dark(f["T"], smp)) for f in tr]))
-            if (ox, oy) == (0, 0):
-                sc0 = sc
-            if sc > best_sc:
-                best_off, best_sc = (float(ox), float(oy)), sc
+
+    def sampler_score(ox, oy, sy=1.0):
+        smp_ = thrust_sampler(ox, oy, sy)
+        return float(np.mean([sep_score(thrust_dark_loop(f["T"], smp_)) for f in tr]))
+    if not thr_partial:
+        for oy in range(-6, 7, 2):
+            for ox in range(-6, 7, 2):
+                sc = sampler_score(ox, oy)
+                if (ox, oy) == (0, 0):
+                    sc0 = sc
+                if sc > best_sc:
+                    best_off, best_sc = (float(ox), float(oy)), sc
+    else:
+        # partial pocket: the bottom edge is estimated, so the layout can be shifted and scaled vertically
+        # more than in a fully visible pocket. Coarse grid (x +-12, y +-30 px, scale 0.86-1.14), then a fine
+        # grid (1 px, 0.005) around the coarse best.
+        sc0 = sampler_score(0.0, 0.0, 1.0)
+        coarse = [(ox, oy, round(sy, 3)) for sy in np.arange(0.86, 1.1401, 0.02) for oy in range(-30, 31, 3)
+                  for ox in range(-12, 13, 3)]
+        scs = [sampler_score(*g) for g in coarse]
+        cx_, cy_, cs_ = coarse[int(np.argmax(scs))]
+        if abs(cx_) == 12 or abs(cy_) == 30 or cs_ in (0.86, 1.14):
+            log("  [!] thrust sampler coarse best %s is on the search boundary; check the sampler image" % ((cx_, cy_, cs_),), echo=True)
+        for sy in np.round(np.arange(cs_ - 0.02, cs_ + 0.0201, 0.005), 3):
+            for oy in range(cy_ - 3, cy_ + 4):
+                for ox in range(cx_ - 3, cx_ + 4):
+                    sc = sampler_score(ox, oy, sy)
+                    if sc > best_sc:
+                        best_off, best_sc = (float(ox), float(oy), float(sy)), sc
     thr_off = best_off if best_sc > sc0 + 0.02 else (0.0, 0.0)
-    smp = thrust_sampler(*thr_off)
+    thr_fit = thr_off   # the pass-1 signature keeps this (v1.3; see docstring)
+    if thr_off != (0.0, 0.0):
+        # guard (v1.3): the separability score can prefer an offset where every training digit samples blank
+        def med_sig(o):
+            smp_ = thrust_sampler(*o)
+            return float(np.median([thrust_costs(thrust_dark_loop(f["T"], smp_))[2] for f in tr]))
+        s_fit, s_0 = med_sig(thr_off), med_sig((0.0, 0.0))
+        if not s_fit < s_0:
+            log("  [!] thrust sampler offset %s rejected: training-frame thrust sigma %.3f, not below %.3f at (0, 0);"
+                " using (0, 0)" % (thr_off, s_fit, s_0), echo=True)
+            thr_off = (0.0, 0.0)
+    # top-segment row (v1.2): sweep the a rows alone on the units digit and take the middle of the rows
+    # within 10 pct of the darkest. Only when most training frames show a units digit that lights a.
+    shifts = np.arange(-30.0, 30.01, 1.0)
+    has_a = [j for j, k in enumerate(DKEYS) if "a" in SEG7[k]]
+    smp0 = thrust_sampler(*thr_off)
+    n_a = sum(int(thrust_costs(thrust_dark_loop(f["T"], smp0))[0][4].argmin() in has_a) for f in tr)
+    thr_ay = 0.0
+    if n_a >= max(2, (len(tr) + 1) // 2):
+        prof = np.array([np.median([thrust_dark_loop(f["T"], thrust_sampler(*thr_off, ay=dy))[4, 0] for f in tr])
+                         for dy in shifts])
+        lo_, hi_ = prof.min(), prof.max()
+        k1 = k2 = int(np.argmax(prof))
+        near = prof >= hi_ - 0.1 * (hi_ - lo_)
+        while k1 > 0 and near[k1 - 1]:
+            k1 -= 1
+        while k2 < len(prof) - 1 and near[k2 + 1]:
+            k2 += 1
+        if k1 == 0 or k2 == len(prof) - 1:
+            log("  [!] thrust top-segment row: darkest rows reach the +-30 px sweep limit (%+.0f..%+.0f); a row not moved"
+                % (shifts[k1], shifts[k2]), echo=True)
+        else:
+            thr_ay = float(0.5 * (shifts[k1] + shifts[k2]))
+            log("  thrust top-segment row: shift %+.1f px (units-digit a darkness %.3f unshifted, %.3f shifted; rows %+.0f..%+.0f"
+                " within 10 pct of the darkest)" % (thr_ay, prof[len(shifts) // 2], prof[int(np.argmin(np.abs(shifts - thr_ay)))],
+                                                    shifts[k1], shifts[k2]), echo=True)
+    else:
+        log("  thrust top-segment row: only %d of %d training frames show a units digit with segment a; a row not moved"
+            % (n_a, len(tr)), echo=True)
+    # thrust sampler geometry (v1.4): with the background-field darkness, minimize the median decode sigma of
+    # up to 8 high-power frames (most digits lit) at least 5 s apart; same grids as the v1.3 partial-pocket
+    # search, then the a rows alone (middle of the shifts within 5 pct of the lowest sigma). The result
+    # replaces the v1.3 geometry only if its sigma on these frames is lower.
+    leg_off, leg_ay = thr_off, thr_ay
+    geo = {"frames": [], "P_W": []}
+    hp = []
+    for _, idx, txt in pairs:
+        num, _, flags = parse_blue(*txt.split("|"))
+        if not flags and abs(num["P_W"] - num["I_A"] * num["V_V"]) <= p_tol(num["P_W"]):
+            hp.append((num["P_W"], idx))
+    hp.sort(reverse=True)
+    gT = []
+    for P_, idx in hp:
+        if len(gT) >= 8:
+            break
+        if any(abs(idx - j) < 150 * kf for j in geo["frames"]):
+            continue
+        im = read_one(video, idx, fps)
+        if im is None:
+            continue
+        _, Mt_, _, _ = register(im, None)
+        if Mt_ is None:
+            continue
+        gT.append(cv2.warpPerspective(im, Mt_, (TW, TH), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32))
+        geo["frames"].append(idx)
+        geo["P_W"].append(P_)
+    if len(gT) >= 3:
+        def gsig(g, ay=0.0):
+            smp_ = thrust_sampler(*g, ay=ay)
+            return float(np.median([thrust_costs(thrust_dark(T_, smp_))[2] for T_ in gT]))
+        t0g = time.time()
+        coarse = [(ox, oy, round(float(sy), 3)) for sy in np.arange(0.86, 1.1401, 0.02) for oy in range(-30, 31, 3)
+                  for ox in range(-12, 13, 3)]
+        scs = [gsig(g) for g in coarse]
+        cx_, cy_, cs_ = coarse[int(np.argmin(scs))]
+        if abs(cx_) == 12 or abs(cy_) == 30 or cs_ in (0.86, 1.14):
+            log("  [!] thrust geometry coarse best %s is on the search boundary; check the sampler image" % ((cx_, cy_, cs_),), echo=True)
+        best_g, best_s = (cx_, cy_, cs_), min(scs)
+        for sy in np.round(np.arange(cs_ - 0.02, cs_ + 0.0201, 0.005), 3):
+            for oy in range(cy_ - 3, cy_ + 4):
+                for ox in range(cx_ - 3, cx_ + 4):
+                    s_ = gsig((ox, oy, sy))
+                    if s_ < best_s:
+                        best_g, best_s = (ox, oy, sy), s_
+        best_g = (float(best_g[0]), float(best_g[1]), float(best_g[2]))
+        ays = np.arange(-20.0, 20.01, 2.0)
+        gprof = np.array([gsig(best_g, a_) for a_ in ays])
+        k1 = k2 = int(np.argmin(gprof))
+        near = gprof <= 1.05 * gprof.min()
+        while k1 > 0 and near[k1 - 1]:
+            k1 -= 1
+        while k2 < len(gprof) - 1 and near[k2 + 1]:
+            k2 += 1
+        g_ay = float(0.5 * (ays[k1] + ays[k2]))
+        if k1 == 0 or k2 == len(gprof) - 1:
+            log("  [!] thrust geometry: a-row shifts within 5 pct reach the +-20 px sweep limit; the middle may be biased "
+                "toward the other end by up to half the unseen width", echo=True)
+        s_new, s_leg = gsig(best_g, g_ay), gsig(leg_off, leg_ay)
+        if s_new < s_leg:
+            thr_off, thr_ay = best_g, g_ay
+        geo.update(fit=list(best_g), a_shift=g_ay, sigma_fit=s_new, sigma_v13=s_leg, a_profile=[float(x) for x in gprof])
+        log("  thrust geometry (v1.4): %d frames at P %.0f-%.0f W; fitted %s, a row %+.1f px (%+.0f..%+.0f within 5 pct): "
+            "median sigma %.3f vs %.3f for the v1.3 geometry %s, a %+.1f -> %s (%.0f s)"
+            % (len(gT), min(geo["P_W"]), max(geo["P_W"]), best_g, g_ay, ays[k1], ays[k2], s_new, s_leg, leg_off, leg_ay,
+               "fitted geometry used" if s_new < s_leg else "[!] v1.3 geometry kept", time.time() - t0g), echo=True)
+    else:
+        log("  [!] thrust geometry (v1.4): only %d high-power frames registered; v1.3 geometry kept" % len(gT), echo=True)
+    smp = thrust_sampler(*thr_off, ay=thr_ay)
     tsig_ref = float(np.median([thrust_costs(thrust_dark(f["T"], smp))[2] for f in tr]))
-    log("setup: reference frame %d; training frames %s; dot model rms %.1f; thrust offset %s (sep %.3f vs %.3f at 0,0); thrust sigma %.3f"
-        % (ref_idx, [f["idx"] for f in tr], rms_ref, thr_off, best_sc, sc0, tsig_ref), echo=True)
-    sig_src = "%s|%d|%d|%d|%d|%d|%s|%.6e|%.6e|%s" % (SCRIPT_VERSION, video.stat().st_size, f0, f1, args.step, ref_idx,
-                                                   [f["idx"] for f in tr], float(FL.sum()), float(FU.sum()), thr_off)
+    log("setup: reference frame %d; training frames %s; dot model rms %.1f; thrust geometry %s, a row %+.1f px "
+        "(v1.3 fit: sep %.3f vs %.3f at 0,0); thrust sigma %.3f" % (ref_idx, [f["idx"] for f in tr], rms_ref, thr_off, thr_ay,
+                                                                    best_sc, sc0, tsig_ref), echo=True)
+    thr_key = "%s|%s|%.1f" % (SCRIPT_VERSION, thr_off, thr_ay)
+    sig_src = "%s|%d|%d|%d|%d|%d|%s|%.6e|%.6e|%s|%d|%d" % (PASS1_VERSION, video.stat().st_size, f0, f1, args.step, ref_idx,
+                                                         [f["idx"] for f in tr], float(FL.sum()), float(FU.sum()), thr_fit,
+                                                         rot, thr_partial)
     sig = hashlib.sha1(sig_src.encode()).hexdigest()
     with open(dbg / (run_id + "_setup.json"), "w") as fh_:
         json.dump({"video": str(video), "fps": fps, "frames": nfr, "range": [f0, f1], "step": args.step,
+                   "rotate_deg": rot, "relaxed_setup": bool(relaxed), "thrust_partial": bool(thr_partial), "thr_aspect": THR_ASPECT if thr_partial else None,
                    "ref_frame": ref_idx, "train_frames": [f["idx"] for f in tr],
                    "train_text": ["|".join(text_of(f["a"])) for f in tr], "train_rms": [f["rms"] for f in tr],
-                   "rms_ref": rms_ref, "U": U, "thrust_offset": thr_off, "tsig_ref": tsig_ref, "signature": sig}, fh_, indent=1)
+                   "rms_ref": rms_ref, "U": U, "thrust_offset": thr_off, "thrust_a_shift": thr_ay, "tsig_ref": tsig_ref,
+                   "thrust_darkness": "background field (v1.4)", "thrust_geometry_v13": [leg_off, leg_ay],
+                   "thrust_geometry_fit": geo, "signature": sig, "thrust_key": thr_key}, fh_, indent=1)
     np.savez(dbg / (run_id + "_model.npz"), FL=FL, FU=FU, Tb=Tb, Tt=Tt)
+    # sampler check image: segment sample points (red) and background-field points (green) on the thrust
+    # display of the geometry-fit frames (the training frames if the fit did not run)
+    chk = []
+    for T_ in (gT[:4] if len(gT) >= 3 else [f["T"] for f in tr[:4]]):
+        im_ = cv2.cvtColor(np.clip(T_, 0, 255).astype(np.uint8), cv2.COLOR_GRAY2BGR)
+        for x_, y_ in zip(smp[0][0], smp[1][0]):
+            cv2.circle(im_, (int(round(x_)), int(round(y_))), 2, (0, 0, 255), -1)
+        for x_, y_ in zip(smp[4][0], smp[5][0]):
+            cv2.circle(im_, (int(round(x_)), int(round(y_))), 2, (0, 200, 0), -1)
+        chk.append(cv2.resize(im_, (TW // 2, TH // 2), interpolation=cv2.INTER_AREA))
+    cv2.imwrite(str(dbg / (run_id + "_thrust_sampler.jpg")), np.vstack(chk), [cv2.IMWRITE_JPEG_QUALITY, 88])
 
     # ---------------- pass 1 ----------------
-    ctx.update(FL=FL, FU=FU, U=U, thr_off=thr_off, step=args.step, sig=sig, cache_dir=str(cache_dir), fresh=args.fresh)
+    ctx.update(FL=FL, FU=FU, U=U, thr_off=thr_off, thr_ay=thr_ay, step=args.step, sig=sig, thr_key=thr_key,
+               cache_dir=str(cache_dir), fresh=args.fresh)
     clen = max(1, 90 // args.step) * args.step
     jobs = [(a, min(a + clen, f1)) for a in range(f0, f1, clen)]
     log("pass 1: %d chunks of %d frames (finished chunks are cached, so an interrupted run resumes)" % (len(jobs), clen), echo=True)
@@ -1066,6 +1488,8 @@ def main():
     if F == 0:
         sys.exit("pass 1 produced no frames")
     t = D["t"].astype(np.float64)
+    # a frame a cache re-sample could not decode has no v1.4 darkness record: leave it out of the thrust read
+    D["thrust_valid"] = D["thrust_valid"] * (np.abs(D["tv"]).reshape(F, -1).sum(1) > 0)
     np.savez_compressed(dbg / (run_id + "_pass1.npz"), **D)
     log("pass 1: %d frames, mean %.2f s per frame per worker" % (F, float(np.mean(D["tproc"]))), echo=True)
 
@@ -1116,7 +1540,7 @@ def main():
     for n, (s, e, k) in enumerate(truns):
         fr = vt[s:e]
         flags = []
-        if e - s <= 2 and 0 < n < len(truns) - 1 and mixed(k, truns[n - 1][2], truns[n + 1][2]):
+        if e - s <= 2 * km and 0 < n < len(truns) - 1 and mixed(k, truns[n - 1][2], truns[n + 1][2]):
             flags.append("possible_mix")
             tmix[fr] = True
         val = parse_thrust(k)
@@ -1134,7 +1558,7 @@ def main():
     vb = np.where(bval)[0]
     bruns_all = runs_of([btxt[i] for i in vb])
     bruns = [(s, e, k) for n, (s, e, k) in enumerate(bruns_all)
-             if not (e - s <= 3 and 0 < n < len(bruns_all) - 1 and mixed(k, bruns_all[n - 1][2], bruns_all[n + 1][2]))]
+             if not (e - s <= 3 * km and 0 < n < len(bruns_all) - 1 and mixed(k, bruns_all[n - 1][2], bruns_all[n + 1][2]))]
     bstates = []
     frame_state = np.full(F, -1)
     for sid, (s, e, k) in enumerate(bruns):
@@ -1235,14 +1659,14 @@ def main():
     tt = []
     for (s1, e1, _), (s2, e2, _) in zip(bruns[:-1], bruns[1:]):
         ta, tb = t[vb[e1 - 1]], t[vb[s2]]
-        if tb - ta <= 5.0 / fps:
+        if tb - ta <= (3 * km + 2) * args.step / fps:     # gap left by up to 3 * km dropped mix frames
             tt.append(0.5 * (ta + tb))
     P_blue, R_blue = refresh_period(tt)
     dth = np.diff([s["t_start_s"] for s in tstates if "possible_mix" not in s["flags"]])
     log("blue refresh: period %.4f s (%.3f Hz), grid alignment R %.3f from %d changes" % (P_blue, 1 / P_blue if P_blue else 0, R_blue, len(tt)))
     if len(dth):
-        log("thrust value changes: %d, interval min %.3f s, 5th pct %.3f s, median %.3f s (30 fps video cannot resolve a faster refresh)"
-            % (len(dth) + 1, dth.min(), np.percentile(dth, 5), np.median(dth)))
+        log("thrust value changes: %d, interval min %.3f s, 5th pct %.3f s, median %.3f s (the processed frame rate %.1f fps cannot resolve a faster refresh)"
+            % (len(dth) + 1, dth.min(), np.percentile(dth, 5), np.median(dth), fps / args.step))
 
     # ---------------- overlays ----------------
     if not args.no_overlays and bstates:

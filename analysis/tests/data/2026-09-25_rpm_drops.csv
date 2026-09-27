@@ -1,0 +1,19 @@
+run_id,t_display_s,phase,throttle_pos,rpm_before,rpm_after,drop_pct,T_before_g,T_after_g,I_before,I_after,V_before,V_after,signature,check
+2026-09-25_12x6E_T2,80.95,hold 10,100,8448.6,2230.55,-73.5986,1890,189,,,,,,display thrust fell with it
+2026-09-25_12x10E_T1,48.75,move 2-3,-35.5,2545.7,2050,-19.4721,198,253,1.98,2.8,14.6,14.53,I up (overload / desync?),display thrust did not fall with it: audio tracking artefact
+2026-09-25_12x10E_T1,51.95,hold 3,-30,3078.6,2928.9,-4.8626,260,260,2.84,2.85,14.51,14.53,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-25_12x10E_T1,68.95,move 4-5,17.8,5696.55,5524.55,-3.01937,1100,1055,14.92,13.66,13.98,13.95,I and V ~unchanged,display thrust fell with it
+2026-09-25_12x10E_T1,114.75,,,7346.4,4193.2,-42.9217,1818,548,36.34,7.39,12.17,13.15,"I down, V up (load shed: LVC or throttle cut)",display thrust fell with it; V within 1 V of the LVC reference; ESC alarm group 4.1 s later
+2026-09-25_12x10E_T1,117.05,,,4279.2,1517.75,-64.5319,558,564,7.47,2.41,13.26,13.38,"I down, V up (load shed: LVC or throttle cut)","display thrust did not fall with it: audio tracking artefact; V 1.3 V above the LVC reference: throttle cut, not LVC"
+2026-09-25_9x4.5E_T1,37.35,hold 5,25,7370.95,7091.73,-3.78818,515,507,5.43,5.32,14.67,14.69,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-25_9x4.5E_T1,95.35,hold 11,100,10078.7,9760.25,-3.15963,939,932,13.32,13.34,13.83,13.83,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-25_9x4.5E_T1,97.95,,,9304.3,8291.9,-10.881,900,688,11.87,7.74,13.86,14.07,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 1.9 V above the LVC reference: throttle cut, not LVC"
+2026-09-25_9x4.5E_T1,100.75,,,7055.35,6040.35,-14.3862,499,389,4.9,3.5,14.21,14.25,I and V ~unchanged,display thrust fell with it
+2026-09-25_9x4.5E_T1,102.45,,,5622.2,1948.9,-65.3356,338.5,153,2.95,1.26,14.3,14.41,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 2.3 V above the LVC reference: throttle cut, not LVC"
+2026-09-25_12x10E_T2,16.95,hold 2,-40,2439.6,1780.7,-27.0085,158,158,1.81,1.83,14.65,14.65,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-25_12x10E_T2,19.15,hold 2,-40,2484.95,1780.8,-28.3366,158,157,1.81,1.8,14.65,14.65,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-25_12x10E_T2,22.65,move 2-3,-28.3,3080.35,2885.2,-6.33532,274,269,3.11,2.72,14.6,14.6,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-25_12x10E_T2,31.35,hold 3,-28,3194,3096.5,-3.0526,270,270,3.03,3.01,14.55,14.53,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-25_12x10E_T2,33.95,hold 3,-28,3091.35,2973.3,-3.81872,270,270,3.26,3,14.53,14.53,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-25_12x10E_T2,36.85,hold 3,-28,3273.05,2881.7,-11.9567,268,378,2.95,3.64,14.51,14.51,I up (overload / desync?),display thrust did not fall with it: audio tracking artefact
+2026-09-25_12x10E_T2,113.55,,,6610.9,3208.8,-51.462,1854,546,36.15,7.46,12.2,13.28,"I down, V up (load shed: LVC or throttle cut)",display thrust fell with it; V within 1 V of the LVC reference; ESC alarm group 2.0 s later

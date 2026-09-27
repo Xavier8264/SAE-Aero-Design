@@ -1,0 +1,99 @@
+Ceiling line check over 9 points: refit K 776.2 rpm/V, R' 75.0 mOhm (log: 776.1 / 75.0); max |err| vs log line 0.35 pct
+Per-prop calibration against APC PER3 (k_t thrust, k_q torque/current):
+          k_t  k_t_sd  n_kt  k_t_all    k_q  k_q_sd  n_kq
+12x10e  1.009   0.014    11    1.006  1.170   0.016     2
+12x6e   1.018   0.012    10    1.006  1.113   0.014     3
+12x8e   0.981   0.011    43    0.975  1.042     NaN     1
+9x45e   0.973   0.027     6    0.950  1.150   0.016     3
+Ceiling points: 12x8E 8228 rpm 33.7 A 13.09 V k_q 1.042; 12x6E 8440 rpm 29.2 A 13.07 V k_q 1.129; 12x6E 8400 rpm 28.4 A 12.95 V k_q 1.107; 9x4.5E 10041 rpm 13.3 A 13.93 V k_q 1.139; 9x4.5E 9997 rpm 13.3 A 13.87 V k_q 1.142; 9x4.5E 9953 rpm 13.4 A 13.84 V k_q 1.169; 12x10E 7386 rpm 36.4 A 12.24 V k_q 1.158; 12x6E 8585 rpm 29.5 A 13.28 V k_q 1.104; 12x10E 7337 rpm 36.6 A 12.22 V k_q 1.182
+
+Predictions, full throttle, DA 1400 ft (rho 1.1756), T0 static, TVR at 36.4 ft/s; totals per aircraft
+-- ESC as set (776.1, 0.075), pack fresh ideal (16.4, 0.039)
+    layout     factors   variant  rpm0  T0_lbf  TVR_lbf  I_motor_pk_A  pct_46A  I_pack_pk_A  V_batt_min  below_LVC
+ 4 x 9x75e  from 9x45e band high  9549   10.73     8.81          19.4       42         77.5       13.38      False
+  4 x 9x6e  from 9x45e band high  9907   10.58     8.13          16.4       36         65.7       13.84      False
+ 4 x 9x75e  from 9x45e   nominal  9363    9.85     8.02          20.5       45         81.9       13.21      False
+ 2 x 12x8e    measured   nominal  8489    9.80     7.71          37.9       82         75.8       13.44      False
+ 4 x 9x75e  from 9x45e  band low  9330    9.78     7.95          20.7       45         82.7       13.18      False
+  4 x 9x6e  from 9x45e   nominal  9732    9.75     7.43          17.4       38         69.6       13.69      False
+  4 x 9x6e  from 9x45e  band low  9701    9.69     7.37          17.6       38         70.3       13.66      False
+ 2 x 12x6e    measured   nominal  8924    9.65     7.09          32.3       70         64.7       13.88      False
+2 x 12x12e from 12x10e band high  7748    9.27     7.99          45.4       99         90.8       12.86      False
+2 x 12x10e    measured   nominal  7838    9.18     7.47          44.7       97         89.3       12.92      False
+ 4 x 9x45e    measured   nominal 10230    9.07     6.21          13.9       30         55.7       14.23      False
+ 2 x 11x7e  from 12x8e band high  9316    8.89     6.99          30.3       66         60.7       14.03      False
+2 x 11x10e from 12x10e band high  8709    8.63     7.38          37.2       81         74.3       13.50      False
+2 x 12x12e from 12x10e   nominal  7495    8.60     7.33          47.7      104         95.3       12.68      False
+ 2 x 11x7e  from 12x8e   nominal  9316    8.57     6.74          30.3       66         60.7       14.03      False
+2 x 12x12e from 12x10e  band low  7495    8.29     7.07          47.7      104         95.3       12.68      False
+ 2 x 11x7e  from 12x8e  band low  9088    8.08     6.29          32.3       70         64.6       13.88      False
+2 x 11x10e from 12x10e   nominal  8466    8.08     6.83          39.3       86         78.7       13.33      False
+2 x 11x10e from 12x10e  band low  8466    7.79     6.59          39.3       86         78.7       13.33      False
+-- ESC as set (776.1, 0.075), pack fresh real (16.0, 0.068)
+    layout     factors   variant  rpm0  T0_lbf  TVR_lbf  I_motor_pk_A  pct_46A  I_pack_pk_A  V_batt_min  below_LVC
+  4 x 9x6e  from 9x45e band high  8922    8.56     6.28          13.4       29         53.5       12.36      False
+ 4 x 9x75e  from 9x45e band high  8536    8.56     6.71          15.6       34         62.4       11.76       True
+ 2 x 12x8e    measured   nominal  7643    7.91     5.97          30.8       67         61.5       11.82       True
+ 2 x 12x6e    measured   nominal  8079    7.88     5.54          26.5       58         53.0       12.40      False
+  4 x 9x6e  from 9x45e   nominal  8732    7.83     5.68          14.1       31         56.3       12.17      False
+ 4 x 9x75e  from 9x45e   nominal  8338    7.80     6.05          16.3       36         65.4       11.56       True
+  4 x 9x6e  from 9x45e  band low  8699    7.77     5.63          14.2       31         56.7       12.14      False
+ 4 x 9x75e  from 9x45e  band low  8304    7.73     5.98          16.5       36         65.9       11.52       True
+ 4 x 9x45e    measured   nominal  9276    7.43     4.84          11.7       25         46.7       12.83      False
+2 x 12x12e from 12x10e band high  6909    7.37     6.11          36.4       79         72.8       11.05       True
+ 2 x 11x7e  from 12x8e band high  8484    7.35     5.56          25.2       55         50.3       12.58      False
+2 x 12x10e    measured   nominal  6996    7.30     5.68          35.7       78         71.4       11.14       True
+ 2 x 11x7e  from 12x8e   nominal  8484    7.08     5.36          25.2       55         50.3       12.58      False
+2 x 11x10e from 12x10e band high  7861    7.02     5.79          30.4       66         60.9       11.86       True
+2 x 12x12e from 12x10e   nominal  6664    6.79     5.55          38.0       83         76.0       10.83       True
+ 2 x 11x7e  from 12x8e  band low  8249    6.63     4.96          26.6       58         53.2       12.38      False
+2 x 12x12e from 12x10e  band low  6664    6.54     5.35          38.0       83         76.0       10.83       True
+2 x 11x10e from 12x10e   nominal  7616    6.53     5.31          32.0       70         64.0       11.65       True
+2 x 11x10e from 12x10e  band low  7616    6.29     5.12          32.0       70         64.0       11.65       True
+-- ESC calibrated (809.0, 0.069), pack fresh ideal (16.4, 0.039)
+    layout     factors   variant  rpm0  T0_lbf  TVR_lbf  I_motor_pk_A  pct_46A  I_pack_pk_A  V_batt_min  below_LVC
+ 4 x 9x75e  from 9x45e band high  9765   11.22     9.25          21.0       46         83.9       13.13      False
+  4 x 9x6e  from 9x45e band high 10150   11.12     8.60          17.9       39         71.5       13.61      False
+ 4 x 9x75e  from 9x45e   nominal  9566   10.29     8.40          22.1       48         88.5       12.95      False
+  4 x 9x6e  from 9x45e   nominal  9962   10.23     7.84          18.9       41         75.6       13.45      False
+ 2 x 12x8e    measured   nominal  8666   10.22     8.07          41.0       89         82.0       13.20      False
+ 4 x 9x75e  from 9x45e  band low  9531   10.21     8.32          22.3       49         89.3       12.92      False
+  4 x 9x6e  from 9x45e  band low  9929   10.16     7.78          19.1       42         76.4       13.42      False
+ 2 x 12x6e    measured   nominal  9125   10.11     7.48          35.2       77         70.4       13.65      False
+2 x 12x12e from 12x10e band high  7888    9.62     8.29          48.8      106         97.6       12.59      False
+ 4 x 9x45e    measured   nominal 10500    9.56     6.64          15.2       33         60.8       14.03      False
+2 x 12x10e    measured   nominal  7983    9.53     7.77          48.0      104         96.0       12.65      False
+ 2 x 11x7e  from 12x8e band high  9541    9.33     7.38          33.0       72         66.1       13.82      False
+2 x 11x10e from 12x10e band high  8899    9.02     7.71          40.2       87         80.3       13.27      False
+ 2 x 11x7e  from 12x8e   nominal  9541    8.99     7.11          33.0       72         66.1       13.82      False
+2 x 12x12e from 12x10e   nominal  7625    8.90     7.59          51.1      111        102.3       12.41      False
+2 x 12x12e from 12x10e  band low  7625    8.58     7.32          51.1      111        102.3       12.41      False
+ 2 x 11x7e  from 12x8e  band low  9299    8.46     6.62          35.1       76         70.2       13.66      False
+2 x 11x10e from 12x10e   nominal  8643    8.42     7.13          42.4       92         84.9       13.09      False
+2 x 11x10e from 12x10e  band low  8643    8.12     6.87          42.4       92         84.9       13.09      False
+-- ESC calibrated (809.0, 0.069), pack fresh real (16.0, 0.068)
+    layout     factors   variant  rpm0  T0_lbf  TVR_lbf  I_motor_pk_A  pct_46A  I_pack_pk_A  V_batt_min  below_LVC
+  4 x 9x6e  from 9x45e band high  9092    8.89     6.56          14.4       31         57.6       12.08      False
+ 4 x 9x75e  from 9x45e band high  8681    8.85     6.95          16.7       36         66.7       11.46       True
+ 2 x 12x6e    measured   nominal  8219    8.16     5.78          28.5       62         57.1       12.12      False
+ 2 x 12x8e    measured   nominal  7761    8.16     6.17          32.9       72         65.8       11.52       True
+  4 x 9x6e  from 9x45e   nominal  8889    8.12     5.93          15.1       33         60.5       11.89       True
+ 4 x 9x75e  from 9x45e   nominal  8471    8.05     6.25          17.4       38         69.8       11.25       True
+  4 x 9x6e  from 9x45e  band low  8854    8.05     5.87          15.2       33         61.0       11.85       True
+ 4 x 9x75e  from 9x45e  band low  8434    7.98     6.18          17.6       38         70.3       11.22       True
+ 4 x 9x45e    measured   nominal  9472    7.75     5.12          12.6       27         50.3       12.58      False
+ 2 x 11x7e  from 12x8e band high  8646    7.64     5.81          27.1       59         54.3       12.31      False
+2 x 12x12e from 12x10e band high  6995    7.55     6.26          38.7       84         77.3       10.74       True
+2 x 12x10e    measured   nominal  7086    7.49     5.83          38.0       83         76.0       10.83       True
+ 2 x 11x7e  from 12x8e   nominal  8646    7.36     5.60          27.1       59         54.3       12.31      False
+2 x 11x10e from 12x10e band high  7989    7.25     5.98          32.5       71         65.1       11.57       True
+2 x 12x12e from 12x10e   nominal  6741    6.94     5.67          40.3       88         80.6       10.52       True
+ 2 x 11x7e  from 12x8e  band low  8398    6.88     5.16          28.6       62         57.2       12.11      False
+2 x 11x10e from 12x10e   nominal  7733    6.73     5.47          34.2       74         68.3       11.35       True
+2 x 12x12e from 12x10e  band low  6741    6.70     5.47          40.3       88         80.6       10.52       True
+2 x 11x10e from 12x10e  band low  7733    6.49     5.28          34.2       74         68.3       11.35       True
+
+Sensitivity, calibrated ESC, on-hand props, nominal factors: T0/TVR lbf, peak A per motor
+  c0 0.5 A, fresh ideal: 2x12x8e 10.21/8.06 41A | 4x9x6e 10.19/7.81 19A | 2x12x6e 10.09/7.47 35A | 4x9x45e 9.55/6.64 15A | 2x12x10e 9.52/7.75 48A
+  c0 1.5 A, fresh ideal: 4x9x6e 10.28/7.90 19A | 2x12x8e 10.23/8.09 41A | 2x12x6e 10.12/7.50 35A | 4x9x45e 9.58/6.66 15A | 2x12x10e 9.55/7.79 48A
+  stiff 16.8 V, 0 ohm pack: 4x9x6e 15.23/12.64 28A | 2x12x8e 15.01/12.69 60A | 2x12x10e 14.58/12.78 73A | 2x12x6e 14.46/11.42 50A | 4x9x45e 13.49/10.05 21A

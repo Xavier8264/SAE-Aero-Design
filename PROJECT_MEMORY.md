@@ -1328,3 +1328,423 @@ pack, and rerun the sizing with the E423 and 2 x X2820 + 12x8E. If no new stand 
 sizing now with the bracket above (V0 16.0/68 mOhm and 16.4/39 mOhm).
 
 ---
+
+## [2026-09-26 12:00 CDT] 2026-09-25 T-2 session: 5 videos read, audio rpm, throttle from callouts, battery / ESC check
+
+Task (Jordan, unattended): run the MT10PRO frame reader on the new videos (camera moved), get audio rpm despite the
+spoken callouts, interpolate throttle between the logged callout points (prop_data_9.25.xlsx), put the videos in a
+dated folder, and check Jordan's idea that low packs limited the motor above ~80 pct throttle.
+
+### Layout (use this for future sessions)
+- Videos: analysis/tests/video/YYYY-MM-DD/<PROP> Trial #N.MOV (gitignored, 0.6-1.6 GB each). 2026-09-25 folder:
+  12X6E Trial #1/#2, 12X10E Trial #1/#2, 9X4.5E Trial #1. run_id = YYYY-MM-DD_<prop>_T<N> (e.g. 2026-09-25_12x6E_T1).
+- Callouts: analysis/tests/data/2026-09-25_throttle_callouts.csv (run_id, video_file, prop, point, throttle_pos,
+  thrust_callout_g, source), transcribed from prop_data_9.25.xlsx (one sheet per video). throttle_pos is the stick on
+  -100..+100 (Jordan, confirmed); throttle_pct = (pos + 100) / 2.
+- Per-run data (analysis/tests/data/RUN_*.csv): frames, thrust_states, blue_states, t2 (reader); rpm, rpm_states
+  (audio_rpm); throttle, holds (throttle_merge). Session: 2026-09-25_battery_{runs,holds}.csv, 2026-09-25_rpm_drops.csv.
+- Plots: analysis/tests/out/audio/RUN/, out/throttle/, out/battery/. Reader debug (gitignored): out/video/RUN/.
+- Weather: reference/data/kmkl_asos_2026-09-26.csv (+ README entry). t2_conditions.csv: 5 new rows.
+
+### Pipeline, in order (from the repo root)
+  V=analysis/tests/video/2026-09-25; C=analysis/tests/data/2026-09-25_throttle_callouts.csv
+  python analysis/tests/read_mt10pro_video.py "$V/12X6E Trial #1.MOV" --run-id 2026-09-25_12x6E_T1 --prop 12x6E --step 2 --workers 6
+  python analysis/tests/audio_rpm.py "$V/12X6E Trial #1.MOV" --run-id 2026-09-25_12x6E_T1 --prop 12x6E --rho 1.175 --blades 1 --kmax 4
+  python analysis/tests/throttle_merge.py $C            (all runs in the callouts file; --run-id for one)
+  python analysis/tests/battery_check.py $C
+Reader: about 35-180 min per video at --step 2 (30 fps effective) on this laptop, with several running in
+parallel. A v1.4 re-sample of a cached run takes 15-38 min. The rest takes minutes.
+
+### Tool changes
+All four scripts carry the details and the evidence in their docstrings. All are ASCII and compile.
+- read_mt10pro_video.py v1.0 -> v1.4.
+  - v1.1: 59.94 fps phone video with 90 deg rotation metadata (--rotate auto). The thrust pocket runs off the
+    bottom of the picture (new camera position), so it is handled as a "partial" pocket: the bottom is placed
+    THR_ASPECT 0.422 x the top width down, and the sampler offset search also fits a vertical scale. Other changes:
+    - ECC is masked, and thrust ECC is Euclidean.
+    - ECC stops at 100 iterations or 1e-5.
+    - "- 98" parses as -98.
+    - Relaxed setup for blurred video.
+    - Frame-count constants scale with fps.
+  - v1.2: thrust top-segment (a) row refinement. A hundreds "7" was read as "1" (1745 -> 1145 g) because the
+    a bar was half off its sample row. Pass-1 caches are split: blue/registration is keyed by PASS1_VERSION,
+    thrust by a thrust key, so a sampler change re-samples the cached chunks in minutes instead of re-reading.
+  - v1.3: sampler guard. The fitted offset is kept only if it lowers the training-frame thrust sigma below
+    its value at (0, 0). 12X10E Trial #1 fitted (8, 33, 1.02) and decoded every training frame blank (sigma
+    0.394 vs 0.240 at (0, 0)).
+  - v1.4: thrust darkness against a per-frame background field, and a sampler geometry fit on high-power frames.
+    - Cause of the remaining misreads [VERIFIED on frames]: uneven light and a moving shadow on the thrust display
+      in the new camera position. Against the per-digit loop-center patches, an unlit tens "a" read 0.27 darkness
+      (lit ~0.6), so a tens "1" could read "7". The v1.3 geometry of 12X10E T1 was also off (its training frames
+      showed 1-2 digits, so the v1.3 fit was rejected and (0, 0, 1.0) used).
+    - Darkness is now (B - I)/B, with B a robust full-cubic fit to patches in the unlit gaps between digits plus the
+      loop centers, per frame. Geometry (offset, vertical scale, a row) minimizes the median decode sigma on up to 8
+      high-power frames. It is kept only if it beats the v1.3 geometry. The v1.3 fit still runs (old darkness), so
+      the pass-1 signature is unchanged: v1.3 caches are only re-sampled (~10-35 min per run).
+    - Rejected on the way: a per-segment on/off calibration over time ("681" -> "68 ", "1627" -> "1621").
+    - Pass-1 npz now keeps the (5, 7) segment darkness "tv" per frame.
+    - Checks: legacy darkness bit-identical to v1.3; field darkness equals the offline prototype to 1e-16.
+    - 12X10E T1: geometry (-9, 8, 0.945), a -9 px; high-power sigma 0.290 -> 0.102, training sigma 0.240 -> 0.065.
+      Thrust states 315 -> 229 (under 0.1 s: 112 -> 50).
+      - Hold 4 (callout 681) at 63.2-65 s: 770-778 -> 708-719 g (true ~713). 75.6 s: 1077 -> 1019 g.
+      - Hold mean minus callout (max): 50.1 -> 22.6 g. The rest is real: a thrust rise after the hold-4 callout,
+        sag in hold 5, and the uncalled stick push in hold 8.
+    - 12X10E T2: geometry (-6, 9, 0.935), a -2 px; high-power sigma 0.100 (v1.3 geometry (-10, 25, 0.90),
+      a -20) -> 0.080. Thrust states 352 -> 286 (under 0.1 s: 140 -> 74). The v1.3 misreads "1500" at 100.2 s
+      and "1899"/"1878" in hold 13 are gone. Hold mean minus callout (max): 19.4 -> 17.3 g. Re-sample 30.7 min.
+    - 9X4.5E T1: geometry (-7, 11, 0.935), a -2 px; sigma 0.095 -> 0.070. Hold mean minus callout (max, merge
+      v1.2): 16.1 -> 6.3 g (hold 5: 16.1 -> 1.1). Short states 195 -> 192: 160 outside holds (real ramps), 29 of the
+      32 inside holds are within 20 g of their neighbours (LCD digit transitions). Re-sample 37.6 min.
+    - 12X6E T2: geometry (-10, 10, 0.945), a 0 px; sigma 0.069 -> 0.058. Thrust states 228 -> 177 (under 0.1 s:
+      75 -> 34). Max hold error 17.5 -> 21.7 g, and both changes are real drift that v1.3 had hidden:
+      - Hold 5: v1.3 read "1098" at 34.37 s and 37.67 s (true 1048/1038). That made two fake events and pulled
+        the mean up to the 1040 callout. v1.4 shows a smooth drift 1040 -> 1017 g (mean 1033).
+      - Hold 10: it now ends at 81.02 s, not 80.78 s. Mean 1915.5 -> 1911.3 g, with thrust decaying from 1929
+        to 1885 g during the hold.
+      Re-sample 15.1 min.
+    - 12X6E T1 (the driver read it with v1.3 first, 178.9 min; the v1.4 re-sample took 16.3 min): geometry
+      (0, 15, 0.93), a -2 px; high-power sigma 0.119 (v1.3 (-6, -6), a +8) -> 0.103, training sigma 0.051. Thrust
+      states 238 -> 194 (under 0.1 s: 69 -> 38). Holds 1-9 move 0.6 g or less.
+      - The v1.3 single-frame "88839" at 114.25 s (motor off, same pattern as the 9X4.5E "88880" tare state) is
+        gone.
+      - Hold 10: 88.9 -> -0.9 g against the callout. That comes from the throttle_merge uncalled-push rule, not the
+        reader.
+      - Two 0.13 s states "1094"/"1099" at 105.88-106.21 s are ramp misreads (true ~1994). They sit inside the
+        uncalled push, not in a hold.
+- audio_rpm.py v1.0 -> v1.3.
+  - v1.1: thrust window. APC Ct(rpm) at the displayed thrust bounds F within a factor f.
+  - v1.2: f 1.4 -> 1.25 (a 2/3 F alias at 270 g).
+  - v1.3: tare = median of the motor-off states within 10 s of the motor-on span. It was every motor-off
+    state; post-run stand handling set the 9x4.5E tare to 77 g.
+  - Session flags: --blades 1 --kmax 4 (the 1/rev lines are as strong as blade-pass on these videos)
+    --rho 1.175.
+  - 12x8E.MOV is unchanged by v1.1-v1.3 (0 of 151 states moved > 50 rpm).
+- throttle_merge.py (new, v1.3). Callouts -> throttle(t).
+  - Each callout is anchored by dynamic programming to the display thrust state equal to it.
+  - Stick moves are found from the thrust rate. Throttle is linear across each move and flat during holds.
+  - Per-hold output: T, I, V, P, rpm, drift and events (RUN_throttle.csv, RUN_holds.csv); throttle_pct is
+    written into RUN_t2.csv.
+  - v1.1 pv_fallback: I = P/V where only the current cell is unreadable. The meter's P = V x I to 0.32 W.
+    The readable d.ddA digits must agree mod 10 A within 0.1 A.
+  - v1.2 staged stick moves: the move between two callouts also takes in any other same-direction fast thrust
+    segment that is event-sized and whose blue current moves with it (dI/I >= 0.75 dT/T; a prop gives ~1.5).
+    v1.1 kept only the largest segment, so a second stage > 1.2 s later stayed in the next hold. Cleaner v1.4
+    thrust states exposed it: 12X10E T2 hold 11 started at 96.00 s during the move (mean 1586 g, callout 1600);
+    v1.2 starts it at 97.55 s (1598 g). Changed 4 holds (12X10E T1 7, 12X10E T2 9 and 11, 9X4.5E 5), each mean
+    moved toward its callout. 12X10E T1 hold 4 (+29 g at 62.93 s, I 8.14 -> 7.96 A) stays an in-hold event.
+  - v1.2 uncalled stick push: a rising segment after the last callout that passes the same current test ends
+    the last hold. Throttle is blank after it, and the phase is "uncalled" until the cut (flag
+    uncalled_move_after). Found twice:
+    - 12X6E T1 105.37-106.49 s, +378 g, I 21.55 -> 29.51 A. Hold 10 (stick 58) was 94.94-110.15 s, mean
+      1790 g against the 1701 callout. Now 94.97-105.37 s, 1700 g.
+    - 12X10E T1 111.05-111.51 s, +80 g, I 31.58 -> 36.69 A. Hold 8 (stick 70) mean 1767.6 -> 1751.3 g
+      (callout 1745). 110 more throttle rows are blank.
+    The stick position in these two windows is unknown. They are the highest-power parts of both runs, and they
+    are where the full-throttle windows below come from.
+  - v1.3 overshoot pulled back: after a stick move, an opposite-sign fast segment before the next callout state that
+    passes the current test with the sign reversed also belongs to the move (flag overshoot_before). Two found:
+    - 12X10E T1 move 0 -> 20: thrust 1093-1100 g, then 68.67-69.30 s -44 g with I 14.92 -> 13.66 A (ratio +2.0),
+      callout 1030 at 73.48 s. Hold 5 mean 1044.1 -> 1035.1 g.
+    - 12X10E T2 move 40 -> 50: 1486-1491 g, then 88.77-88.97 s -36 g, I 24.03 -> 23.09 A (+1.6), callout 1435 at
+      91.00 s. Hold 10 mean 1452.3 -> 1443.8 g.
+    The other opposite-sign segments score -0.53 to +0.22, so the 0.75 threshold separates them cleanly. No other
+    hold changed. During the overshoot, throttle(t) is below the true stick (linear interpolation) [known limit].
+- battery_check.py (new, v1.4). Per run and session:
+  - Resting V before/after, pack line V0/R, V min loaded vs the 12.0 V LVC reference.
+  - Duty d = (rpm/Kv + I R)/V per hold, with 12x8E fits A (Kv 809, R 86.6 mOhm) and B (709, 44 mOhm).
+  - Sudden audio-rpm drops (>= 3 pct), classified against the display thrust (tracking artefact or real)
+    and the blue I/V (load shed, or I and V unchanged).
+  - ESC 3-beep alarm-group scan of the audio. The only 3-beep pattern in the SunnySky manual is LVC.
+  - Plots.
+  - v1.4: session CSVs written with %.6g (v1.3's %.4g wrote rpm >= 10000 as 1.004e+04).
+
+### Results per run
+Final data: reader v1.4, audio_rpm v1.3, throttle_merge v1.3, battery_check v1.4 (all 5 runs re-run on it).
+Runs in time order (video start, CDT 2026-09-25): 12x6E T1 20:12, 12x6E T2 20:25, 12x10E T1 20:33, 9x4.5E T1 20:40,
+12x10E T2 20:45.
+  run          callouts  |hold mean - callout| max / median  holds with rpm  top of the run: T, rpm, I, V (stick)
+  12x6E_T1     10        4.8 / 0.9 g                          9/10           2028 g, 8585, 29.5 A, 13.28 V (uncalled)
+  12x6E_T2     10        21.7 / 4.2 g (real drift, hold 10)   10/10          1979 g, 8440, 29.2 A, 13.07 V (82)
+  12x10E_T1    8         17.5 / 5.7 g (hold 4 real +29 g)     6/8            1823 g, 7337, 36.6 A, 12.22 V (uncalled)
+  9x4.5E_T1    11        6.3 / 0.9 g                          11/11          1006 g, 10041, 13.3 A, 13.93 V (80)
+  12x10E_T2    13        9.8 / 2.1 g                          12/13          1844 g, 7386, 36.4 A, 12.24 V (80)
+- The callouts are the display values read aloud, so "hold mean - callout" checks the reader plus the hold finder.
+  The holds without rpm are the lowest sticks (18-95 g), flagged no_rpm.
+- throttle_pct in RUN_t2.csv is filled only between the first and last hold. It is blank before spool-up, in the
+  uncalled windows and after the cut.
+- The top-of-run numbers are wduty windows (overlap-weighted clean blue states, voiced audio hops) for the uncalled
+  windows, and hold means otherwise.
+- t2_conditions.csv: ft_t_start_s / ft_t_end_s filled for the 5 runs, each with its evidence in notes:
+  - 12x6E_T1 106.49-110.42 s (uncalled)
+  - 12x6E_T2 64.02-81.02 s (sticks 82 + 100)
+  - 12x10E_T1 111.51-114.52 s (uncalled, ends before the LVC drop)
+  - 9x4.5E_T1 68.84-96.76 s (sticks 80/91/100)
+  - 12x10E_T2 109.33-113.25 s (stick 80, ends before the LVC drop)
+  These windows are the ESC ceiling. Whether the ceiling is 100 pct duty is NOT known (see verdict).
+- reduce_thrust.py was NOT run on these runs. It finds few clean rpm_states in the windows (most are flagged
+  unsteady), and 12x6E_T2 has no per-state I_A. Use RUN_holds.csv and 2026-09-25_battery_holds.csv.
+
+### Battery / ESC verdict (Jordan's question)
+Jordan's report: both packs were low; above about 80 pct throttle the rpm sometimes dropped suddenly; was the low
+battery limiting the motor? I read "80" as the stick value 80 on the -100..+100 callout scale (90 pct of travel)
+[ASSUMPTION]. Nothing changes at stick 60, so the answer is the same if it meant 80 pct of travel.
+
+Short answer: partly right. Two different things happened, and only one of them was the battery.
+
+1. The sudden drops were the ESC low-voltage cutoff (LVC), caused by the low packs. Only the 12x10E runs hit it:
+   they drew the most current (36-37 A) and ran on the lowest packs (14.69 and 14.76 V resting).
+   [VERIFIED on the display, the blue meter and the audio; that it is LVC: medium-high]
+   - 12x10E T1 (stick unknown, after an uncalled push past 70): at about 115.0 s thrust went 1818 -> 540-548 g,
+     I 36.3 -> 7.4 A, V 12.17 -> 13.15 V (audio rpm 7346 -> about 4190 at 114.75 s).
+   - 12x10E T2 (stick 80, 3.9 s into the hold): at 113.45 s thrust went 1854 -> 546-548 g, I 36.2 -> 7.4 A,
+     V 12.20 -> 13.2-13.3 V (audio 113.55 s).
+   - Why LVC and not the stick:
+     a. The loaded V was 12.17-12.20 V, only 0.17-0.20 V above the 12.0 V cutoff (the manual's default is
+        3.0 V/cell).
+     b. Both runs dropped to the same level, 540-548 g at 7.4 A (about 0.5 of the ceiling duty), and held it
+        until the operator cut (2.7 s and 1.0 s later). That matches the manual's default LVC "Reduce Power" mode.
+        A hand on the stick would not land on the same level twice.
+        The manual says 70 pct power in one place (line 25) and "at most 50 pct" in another (lines 123-125).
+        Measured: 97 W against 442 W before the drop.
+     c. The 3-beep alarm group (the manual's LVC alarm, line 145) started after the cut, at 118.9 s and 115.5 s.
+        No other run had an alarm group.
+2. The flat top was not the battery. Every run that went past stick 70 reached the same ESC output ceiling, and
+   where the stick is known it got there by stick 80-82. From there to stick 100, rpm and current stay flat and
+   thrust drifts down with pack sag:
+   - 12x6E T2: 1979 g at stick 82 -> 1911 g at 100.
+   - 9x4.5E: 1006 g at 80 -> 966 g at 91 -> 941 g at 100.
+   This slow fall in thrust at higher stick may be part of what felt like the rpm dropping at the top.
+   - One ceiling [fit VERIFIED numerically; meaning INFERRED, high]. All 8 top-end points sit on one motor line,
+     rpm = 776.1 x (V - 0.0750 x I), to within 0.3 pct. They span 4 props, 2 sessions, 13-37 A and 12.2-13.9 V:
+       12x8E 09-23 top +0.3, 12x6E T1 uncalled -0.1, 12x6E T2 st82 -0.1, st100 -0.0,
+       12x10E T1 uncalled -0.2, 12x10E T2 st80 +0.0, 9x4.5E st80 +0.1, st100 -0.1 pct.
+     The line is the ESC ceiling: K = Kv x dmax and R' = R / dmax^2. The motor sees I/d under PWM.
+   - Relative duty from that line rises linearly with stick: 0.0057 per stick unit, rms 0.031 over 40 holds.
+     It is 0.87-0.88 at stick 58-60, 0.94-0.95 at stick 69-70, and 1.00 from stick 80-82 on.
+     The linear fit reaches the ceiling at stick 82 and zero near stick -93 (rough).
+   - A low pack lowers rpm at every stick (rpm ~ d x V), but it cannot move the stick where the ESC tops out.
+     [INFERRED, high that the plateau is not the battery]
+   - Most likely cause: the ESC's stored throttle range does not match this radio, so the ESC reaches its maximum
+     at about stick 80 [INFERRED, medium]. Radio endpoints, travel or a throttle curve could do the same.
+   - Whether the ceiling is 100 pct duty is unknown.
+   - The 12x8E "full throttle" point from 2026-09-23 is on the same line, so it was this same ceiling.
+3. 12x6E T1: the callouts stop at stick 58. An uncalled push then took it to the same ceiling (-0.1 pct from the
+   line) at 13.24-13.33 V, 1.24 V above the cutoff. No alarm, and a clean throttle cut at 110.4 s (2023 -> 23 g).
+   No sudden drop.
+4. The other real drops were throttle movements, not the battery.
+   - 12x6E T2 at 81.2 s (audio 80.95 s): the cut at the end of the stick-100 hold (1889 -> 189 -> 0 g). It happened at 12.95 V,
+     with no alarm and no reduced-power level.
+   - 12x10E T1 at 68.95 s: the stick overshoot pulled back before callout 20 (-3 pct).
+   - 9x4.5E at 97.95, 100.75 and 102.45 s: the operator stepped the throttle down in about 100 g steps
+     (938 -> 100 g over 7 s), 1.9-2.3 V above the cutoff.
+   The other 11 audio drops are tracking artefacts: the display thrust did not move.
+
+Pack state:
+- Resting V at the start of each run: 15.55, 15.01, 14.69, 15.06, 14.76 V (3.89-3.67 V/cell; full is 4.20).
+  After the last run: 13.97 V (3.49 V/cell).
+- Pack line V0 / R: 14.67-15.55 V / 64-85 mOhm.
+- Loaded minimum: 12.17-13.83 V.
+- Which pack was on which run was not logged.
+
+Kv consequence (corrects the 2026-09-24 plan):
+- The ceiling line gives only Kv x dmax = 776 rpm/V and R / dmax^2 = 75 mOhm.
+- Fit B (Kv 709, R 44) would need dmax = 1.09 > 1, so it is excluded [INFERRED, medium-high].
+- Fit A (Kv 809) implies dmax 0.96 and R about 69 mOhm.
+- If dmax = 1: Kv 776 and R 75 mOhm (datasheet 44 + about 31 mOhm of ESC, wires and hot winding).
+- A no-prop run at full stick also measures only Kv x dmax, so it cannot split them by itself.
+- What splits them: calibrate the ESC first (then dmax is presumably 1 [UNVERIFIED]), or back-drive the motor
+  (drill, phase voltage and rpm), or read the ESC's throttle telemetry. The manual lists telemetry, but it is
+  UNVERIFIED for the X60A.
+- For sizing on these packs and this ESC setting, the ceiling line is the measured top end:
+  rpm_max = 776 x (V - 0.075 I).
+
+What would settle it:
+1. Fresh packs: 4S full is 16.8 V.
+2. ESC throttle-range calibration to this radio, per reference/text/sunnysky_esc_manual.txt lines 116-133
+   (X45/65/85 manual, UNVERIFIED for the X60A):
+   a. Radio on, stick at the top.
+   b. Connect the battery and wait 2 s for two beeps.
+   c. Within 3 s, pull the stick to the bottom.
+   d. N short beeps (the cell count), then a final long beep.
+3. One 12x10E run to stick 100, with callouts at 60/70/80/90/100.
+If duty keeps rising past stick 80 (rpm above the 776 line) and no alarm sounds, both findings are confirmed.
+
+### UNVERIFIED / open
+- ESC and motor for 2026-09-25 are assumed to be the same as for 12x8E (X60A, X2820 800KV) [UNVERIFIED].
+  - The archived SunnySky manual is for the X45A/X65A/X85A.
+  - The LVC default (3.0 V/cell, 12.0 V on 4S), the "Reduce Power" mode and the 3-beep LVC alarm come from it
+    [UNVERIFIED for the X60A].
+- ESC throttle-range calibration: not known (Jordan: "Not sure").
+  - The ceiling at about stick 80 is explained by an uncalibrated range [INFERRED, medium].
+  - Other causes are not excluded: radio endpoints or travel below 100 pct, a throttle curve, ESC limits.
+- dmax (the ESC ceiling as a fraction of full duty) is unknown, so Kv and R are not separated (see the verdict).
+- "80 pct" was read as stick 80 [ASSUMPTION; the conclusion does not depend on it].
+- Indoor temperature 72 F assumed (not measured on 2026-09-25); indoor dewpoint = outdoor KMKL [INFERRED].
+- Which of the two packs was on which run: not logged.
+- The duty in battery_check.py v1.4 uses d = (rpm/Kv + I R)/V with the 12x8E fits.
+  - It ignores that the motor sees I/d under PWM, so it reads about 0.01-0.02 low at stick 58-70.
+  - It is exact at the ceiling.
+  - The stick-duty numbers in the verdict use the PWM form and the ceiling line [INFERRED model].
+- 12x10E T2 hold 2 (stick -40): audio rpm mixed (2215 median, likely about 2450) [UNVERIFIED].
+- 12x6E T2 blue display from 56.9 s: glare and blur on the left LCD cells. I comes from P/V where the digit check
+  passes.
+- Thrust states under 0.1 s still exist (LCD digit transitions). Holds use means over long states.
+- 12x10E T1 hold 5: a 1-frame v1.4 "1000" misread at 68.94 s, inside the overshoot (minor; the hold starts at
+  69.30 s).
+- During the two overshoots (12x10E T1 68.67-69.30 s, T2 88.77-88.97 s), throttle(t) is below the true stick
+  (linear interpolation).
+
+### Adjacent issues (listed, not fixed)
+- 12x8E.MOV (2026-09-23) is not in a date folder, and prop_data_9.25.xlsx sits at the repo root.
+- analysis/tests/__pycache__/*.pyc files show up in git status (one is tracked). A .gitignore entry would fix it.
+- The 12x8E audio rpm was run with rho 1.200 (out/audio/12x8E summary), not the air() value of its t2_conditions
+  row. rho only sets the APC thrust window, not the rpm itself [INFERRED].
+- reduce_thrust.py needs states with flags == "" and with I_A and rpm, and it has no I = P/V fallback. The
+  2026-09-25 windows are mostly "unsteady", and 12x6E_T2 has no per-state I_A. Its full-throttle model
+  (V_motor = V_batt) does not hold if the ceiling is below 100 pct duty.
+- battery_check.py could carry the ceiling-line fit and the PWM duty form. Both were done here in scratch; the
+  inputs are listed in the verdict.
+- Reader: the a-row sweep limit (+-20 px) was touched on 12x10E T1 (band -20..+2). Widen it if a run needs it.
+- rh_pct in t2_conditions.csv is blank for all rows (RH is computed from the dewpoint by design).
+- The read_mt10pro_video.py v1.2 docstring says thrust has "a separate cache key". Since v1.4 the key is
+  SCRIPT_VERSION|offset|a-row and the geometry fit is in setup (imprecise wording, not a bug).
+- The Gmail and Google Calendar MCP connectors need authorization in claude.ai connector settings (not used here).
+
+### NEXT TASK
+Next stand session (T-2), before any sizing rerun:
+1. Fully charge both packs and write down the resting V and which pack goes on which run.
+2. Do the ESC throttle-range calibration (steps in the verdict).
+3. Re-run one 12x10E and one 12x8E to stick 100, with callouts at 60/70/80/90/100. Check that rpm rises above the
+   776 x (V - 0.075 I) line and that no LVC cut happens.
+4. If possible, check Kv directly (back-drive, or ESC telemetry).
+Then feed the measured top end into propulsion.py and takeoff.py (TEST_PLAN 3.10) and rerun the sizing with the
+E423.
+
+---
+
+## [2026-09-26 12:01 CDT] CURRENT STATE SUMMARY (after the 2026-09-25 T-2 session; start here)
+
+The [2026-09-24 03:04] summary still holds (rules, team, library, TEST_PLAN, T-2 pipeline), with these updates:
+- AIRFOIL LOCKED: E423.
+  - analysis/sizing/out/design_card.txt is still STALE (S1223 point).
+  - The sizing has not been rerun.
+- Hardware:
+  - Motor: SunnySky X2820 800 KV. Quantity OPEN.
+  - ESC: SunnySky X60A V2.
+  - Two identical 4S packs, both low on 2026-09-25. Capacity, C rating and IR are not logged.
+  - Stand: MT10PRO.
+  - Props: APC 9x4.5E, 9x6E, 12x6E, 12x8E, 12x10E.
+- Prop decision (2026-09-24, 2-motor): 12x8E. The 2026-09-25 data does not change it.
+  - At the same ESC ceiling on low packs:
+    - 12x6E: 2028 g, 29.5 A at 13.28 V.
+    - 12x10E: 1823-1844 g, 36.4-36.6 A at 12.2 V, and it tripped the LVC.
+    - 12x8E (2026-09-23): 2083 g, 33.7 A at 13.09 V.
+  - The packs differ between runs, so this is not a clean comparison [INFERRED].
+- BIG FLAG (2026-09-24) still stands: 2 x 12x8E gives 7.4-9.8 lbf static, against 12.5 lbf in the sizing.
+- NEW:
+  - All stand data so far is at an ESC output ceiling that is reached at about stick 80. It may be below full
+    duty (ESC throttle range probably not calibrated [INFERRED, medium]).
+  - Measured top end on this setup: rpm_max = 776 x (V - 0.075 I), within 0.3 pct over 4 props.
+  - Fit B (Kv 709) is excluded. Kv and dmax are not separated.
+- T-2 pipeline (analysis/tests/; order and commands in the entry above):
+  1. read_mt10pro_video.py v1.4
+  2. audio_rpm.py v1.3
+  3. throttle_merge.py v1.3 (throttle from spoken callouts)
+  4. battery_check.py v1.4
+  reduce_thrust.py has only been used on 12x8E. Videos go in analysis/tests/video/YYYY-MM-DD/.
+- T-1 wing panel weigh-in: no data logged yet.
+- Stability and trim: not started.
+
+### Action items for Jordan
+1. Commit. New: throttle_merge.py, battery_check.py, the 2026-09-25 data CSVs, out/audio|throttle|battery plots,
+   reference/data/kmkl_asos_2026-09-26.csv. Modified: read_mt10pro_video.py, audio_rpm.py, t2_conditions.csv,
+   reference/data/README.txt, and this log. prop_data_9.25.xlsx is still at the repo root.
+2. Next stand session (NEXT TASK below). Write down which pack goes on which run.
+3. T-1 wing panel weigh-in (tests before analysis).
+4. From the old summary: lottery interest by 2026-09-30, AMA card, sae.org affiliation (status not logged).
+5. How many X2820s are on hand (still OPEN).
+
+### NEXT TASK
+Next stand session:
+1. Full packs.
+2. ESC throttle-range calibration.
+3. 12x10E and 12x8E to stick 100, with callouts at 60/70/80/90/100.
+4. A Kv check if possible.
+Then process it with the 4-step pipeline and rerun the sizing with the E423.
+
+---
+
+## [2026-09-26 19:59 CDT] Max-thrust layout prediction: 2 x 12 in vs 4 x 9 in, calibrated to the stand data
+
+Task (Jordan): from the existing prop data, predict which setup gives the most thrust under ideal conditions,
+2 or 4 motors, and which props.
+
+### Method (analysis/tests/predict_config.py, new; out/predict_config/{calibration.csv, predict.csv, summary.txt})
+Run: `python analysis/tests/predict_config.py`
+- Top end = the measured ESC-ceiling line, rpm = K (V - R' I). Refit over 9 ceiling points gives K 776.2,
+  R' 75.0 mOhm (log line 776.1 / 75.0, max err 0.35 pct) [VERIFIED numerically].
+- Battery current I = c0 + K_si k_q Q_apc. This works at any duty because I = d I0 + (Kv d) Q. c0 = 0.9 A.
+- Thrust = k_t T_apc. N identical motors on one pack: V = V0 - N I R_pack.
+- Per-prop factors against APC PER3 [computed from the holds files and 12x8E_points.csv]:
+    prop    k_t (upper half of thrust range)  k_t all holds  k_q (ceiling points)
+    12x6E   1.018 (n 10)                      1.006          1.113 (n 3)
+    12x8E   0.981 (n 43)                      0.975          1.042 (n 1, 2026-09-23)
+    12x10E  1.009 (n 11)                      1.006          1.170 (n 2)
+    9x4.5E  0.973 (n 6)                       0.950          1.150 (n 3)
+  - k_t rises with rpm: 12 in props read 0.88-0.94 below 4500 rpm and 0.98-1.04 above 6000. Hence the
+    upper-half rule.
+  - APC Cp under-predicts the torque by 4-17 pct, so the measured current is higher than APC implies.
+- 9x6E was never on the stand. It borrows the 9x4.5E factors. Band = worst/best factor pair over all 4 tested props.
+- Scenarios [INFERRED brackets]:
+  - ESC "as set": 776 / 75 mOhm. ESC "calibrated": 809 / 69 mOhm (fit A, dmax 0.96).
+  - Pack "fresh ideal": 16.4 V, 39 mOhm. Pack "fresh real": 16.0 V, 68 mOhm.
+  - DA 1400 ft. V_R 36.4 ft/s (from the stale S1223 card).
+- Gotcha found: in 12x8E_points.csv, T_over_Tapc is from audio_rpm at rho 1.200. The reduce_thrust ratio at the
+  run's rho 1.1785 is T_ratio (0.975). Use T_ratio.
+
+### Results: totals per aircraft, full throttle, nominal factors (lbf, static T0 / at V_R)
+    layout      as set+ideal   as set+real   calib+ideal   calib+real   calib+ideal: A/motor, pack A
+    2 x 12x8E   9.80 / 7.71    7.91 / 5.97   10.22 / 8.07  8.16 / 6.17  41.0 (89 pct of 46), 82
+    4 x 9x6E    9.75 / 7.43    7.83 / 5.68   10.23 / 7.84  8.12 / 5.93  18.9 (41 pct), 76
+    2 x 12x6E   9.65 / 7.09    7.88 / 5.54   10.11 / 7.48  8.16 / 5.78  35.2 (77 pct), 70
+    4 x 9x4.5E  9.07 / 6.21    7.43 / 4.84    9.56 / 6.64  7.75 / 5.12  15.2 (33 pct), 61
+    2 x 12x10E  9.18 / 7.47    7.30 / 5.68    9.53 / 7.77  7.49 / 5.83  48.0 (104 pct), 96
+- 4 x 9x6E band (calibrated + ideal): 10.16-11.12 lbf static, 7.78-8.60 at V_R.
+- Sensitivity (calibrated + ideal):
+  - c0 0.5 A: 2x12x8E 10.21 vs 4x9x6E 10.19 static. c0 1.5 A: 10.23 vs 10.28. The static order flips.
+    V_R: 12x8E +0.22-0.25 lbf both ways.
+  - Stiff 16.8 V, 0 ohm pack (theoretical bound):
+    - 4x9x6E 15.23 / 12.64 at 28 A per motor.
+    - 2x12x8E 15.01 / 12.69 at 60 A per motor. That is over the motor's 46 A and at the ESC's 60 A. Not reachable.
+- APC-only props (not on hand, borrowed factors): 4 x 9x7.5E 10.29 / 8.40 nominal (calib+ideal), which is within
+  about 1 pct of the leaders. The 11 in props and the 12x12E are worse. 12x12E is at 111 pct of 46 A.
+
+### Answer given to Jordan [INFERRED from the model]
+- STATIC thrust is a tie: 4 x 9x6E and 2 x 12x8E, about 10.2 lbf under ideal conditions. They are within 0.5 pct,
+  which is inside the model error [confidence low on the order].
+- At takeoff speed, 2 x 12x8E is ahead by about 3 pct in all 4 scenarios [medium].
+- Recommendation unchanged: 2 x 12x8E.
+- 12x10E is out: the least 12 in thrust and over 46 A. 4 x 9x4.5E is last or next to last.
+- 4 x 9x6E is the only layout with a real upside, because its factors are borrowed.
+  - One stand run of the 9x6E would settle it. The prop is on hand.
+  - A 4-motor layout also needs 4 X2820s and 4 ESCs, and carries about 0.4 kg more motor+ESC mass.
+    Motor count on hand is still OPEN.
+
+### Findings to carry forward
+- LVC risk: on the "fresh real" pack (16.0 V, 68 mOhm), 2 x 12x8E sags to 11.5-11.8 V and 4 x 9x6E to 11.9 V.
+  Both are below the 12.0 V default LVC [INFERRED; LVC value UNVERIFIED for X60A].
+  - So pack IR and the LVC setting matter as much as the prop choice.
+- Pack current is 76-82 A for either leader, about 35-37C on 2200 mAh. The pack C rating is still not logged.
+- BIG FLAG stands: best case about 10.2 lbf static against 12.5 lbf in the sizing.
+
+### UNVERIFIED
+- 9x6E factors (borrowed). The ESC-calibrated case (Kv 809 / dmax 0.96 is fit A, not measured). Both pack brackets.
+- k_t and k_q are calibrated at J = 0 and applied at V_R. Thrust lapse with airspeed is unmeasured.
+- k_q for 12x8E rests on 1 point from a different day.
+- There is no prop-prop or airframe interference, and no harness resistance beyond the pack R.
+
+### NEXT TASK
+Unchanged (next stand session), plus one item: add a 9x6E run to stick 100. It is the only prop that could beat
+the 12x8E, and the model cannot settle that without data.
+
+---

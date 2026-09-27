@@ -1,0 +1,77 @@
+layout,n,prop,on_hand,factors,variant,esc,pack,rpm0,rpm_limit,T0_lbf,TVR_lbf,I_motor_pk_A,pct_46A,I_pack_pk_A,V_batt_min,below_LVC,W_pack
+2 x 12x6e,2,12x6e,True,measured,nominal,as set,fresh ideal,8924,12500,9.65,7.09,32.3,70,64.7,13.88,False,898
+2 x 12x6e,2,12x6e,True,measured,nominal,as set,fresh real,8079,12500,7.88,5.54,26.5,58,53.0,12.4,False,657
+2 x 12x6e,2,12x6e,True,measured,nominal,calibrated,fresh ideal,9125,12500,10.11,7.48,35.2,77,70.4,13.65,False,961
+2 x 12x6e,2,12x6e,True,measured,nominal,calibrated,fresh real,8219,12500,8.16,5.78,28.5,62,57.1,12.12,False,692
+2 x 12x8e,2,12x8e,True,measured,nominal,as set,fresh ideal,8489,12500,9.8,7.71,37.9,82,75.8,13.44,False,1019
+2 x 12x8e,2,12x8e,True,measured,nominal,as set,fresh real,7643,12500,7.91,5.97,30.8,67,61.5,11.82,True,727
+2 x 12x8e,2,12x8e,True,measured,nominal,calibrated,fresh ideal,8666,12500,10.22,8.07,41.0,89,82.0,13.2,False,1083
+2 x 12x8e,2,12x8e,True,measured,nominal,calibrated,fresh real,7761,12500,8.16,6.17,32.9,72,65.8,11.52,True,759
+2 x 12x10e,2,12x10e,True,measured,nominal,as set,fresh ideal,7838,12500,9.18,7.47,44.7,97,89.3,12.92,False,1154
+2 x 12x10e,2,12x10e,True,measured,nominal,as set,fresh real,6996,12500,7.3,5.68,35.7,78,71.4,11.14,True,796
+2 x 12x10e,2,12x10e,True,measured,nominal,calibrated,fresh ideal,7983,12500,9.53,7.77,48.0,104,96.0,12.65,False,1215
+2 x 12x10e,2,12x10e,True,measured,nominal,calibrated,fresh real,7086,12500,7.49,5.83,38.0,83,76.0,10.83,True,823
+4 x 9x45e,4,9x45e,True,measured,nominal,as set,fresh ideal,10230,16667,9.07,6.21,13.9,30,55.7,14.23,False,793
+4 x 9x45e,4,9x45e,True,measured,nominal,as set,fresh real,9276,16667,7.43,4.84,11.7,25,46.7,12.83,False,598
+4 x 9x45e,4,9x45e,True,measured,nominal,calibrated,fresh ideal,10500,16667,9.56,6.64,15.2,33,60.8,14.03,False,853
+4 x 9x45e,4,9x45e,True,measured,nominal,calibrated,fresh real,9472,16667,7.75,5.12,12.6,27,50.3,12.58,False,633
+4 x 9x6e,4,9x6e,True,from 9x45e,nominal,as set,fresh ideal,9732,16667,9.75,7.43,17.4,38,69.6,13.69,False,953
+4 x 9x6e,4,9x6e,True,from 9x45e,band low,as set,fresh ideal,9701,16667,9.69,7.37,17.6,38,70.3,13.66,False,960
+4 x 9x6e,4,9x6e,True,from 9x45e,band high,as set,fresh ideal,9907,16667,10.58,8.13,16.4,36,65.7,13.84,False,909
+4 x 9x6e,4,9x6e,True,from 9x45e,nominal,as set,fresh real,8732,16667,7.83,5.68,14.1,31,56.3,12.17,False,685
+4 x 9x6e,4,9x6e,True,from 9x45e,band low,as set,fresh real,8699,16667,7.77,5.63,14.2,31,56.7,12.14,False,689
+4 x 9x6e,4,9x6e,True,from 9x45e,band high,as set,fresh real,8922,16667,8.56,6.28,13.4,29,53.5,12.36,False,661
+4 x 9x6e,4,9x6e,True,from 9x45e,nominal,calibrated,fresh ideal,9962,16667,10.23,7.84,18.9,41,75.6,13.45,False,1017
+4 x 9x6e,4,9x6e,True,from 9x45e,band low,calibrated,fresh ideal,9929,16667,10.16,7.78,19.1,42,76.4,13.42,False,1025
+4 x 9x6e,4,9x6e,True,from 9x45e,band high,calibrated,fresh ideal,10150,16667,11.12,8.6,17.9,39,71.5,13.61,False,973
+4 x 9x6e,4,9x6e,True,from 9x45e,nominal,calibrated,fresh real,8889,16667,8.12,5.93,15.1,33,60.5,11.89,True,719
+4 x 9x6e,4,9x6e,True,from 9x45e,band low,calibrated,fresh real,8854,16667,8.05,5.87,15.2,33,61.0,11.85,True,723
+4 x 9x6e,4,9x6e,True,from 9x45e,band high,calibrated,fresh real,9092,16667,8.89,6.56,14.4,31,57.6,12.08,False,696
+2 x 12x12e,2,12x12e,False,from 12x10e,nominal,as set,fresh ideal,7495,12500,8.6,7.33,47.7,104,95.3,12.68,False,1209
+2 x 12x12e,2,12x12e,False,from 12x10e,band low,as set,fresh ideal,7495,12500,8.29,7.07,47.7,104,95.3,12.68,False,1209
+2 x 12x12e,2,12x12e,False,from 12x10e,band high,as set,fresh ideal,7748,12500,9.27,7.99,45.4,99,90.8,12.86,False,1168
+2 x 12x12e,2,12x12e,False,from 12x10e,nominal,as set,fresh real,6664,12500,6.79,5.55,38.0,83,76.0,10.83,True,823
+2 x 12x12e,2,12x12e,False,from 12x10e,band low,as set,fresh real,6664,12500,6.54,5.35,38.0,83,76.0,10.83,True,823
+2 x 12x12e,2,12x12e,False,from 12x10e,band high,as set,fresh real,6909,12500,7.37,6.11,36.4,79,72.8,11.05,True,804
+2 x 12x12e,2,12x12e,False,from 12x10e,nominal,calibrated,fresh ideal,7625,12500,8.9,7.59,51.1,111,102.3,12.41,False,1269
+2 x 12x12e,2,12x12e,False,from 12x10e,band low,calibrated,fresh ideal,7625,12500,8.58,7.32,51.1,111,102.3,12.41,False,1269
+2 x 12x12e,2,12x12e,False,from 12x10e,band high,calibrated,fresh ideal,7888,12500,9.62,8.29,48.8,106,97.6,12.59,False,1229
+2 x 12x12e,2,12x12e,False,from 12x10e,nominal,calibrated,fresh real,6741,12500,6.94,5.67,40.3,88,80.6,10.52,True,848
+2 x 12x12e,2,12x12e,False,from 12x10e,band low,calibrated,fresh real,6741,12500,6.7,5.47,40.3,88,80.6,10.52,True,848
+2 x 12x12e,2,12x12e,False,from 12x10e,band high,calibrated,fresh real,6995,12500,7.55,6.26,38.7,84,77.3,10.74,True,831
+2 x 11x7e,2,11x7e,False,from 12x8e,nominal,as set,fresh ideal,9316,13636,8.57,6.74,30.3,66,60.7,14.03,False,851
+2 x 11x7e,2,11x7e,False,from 12x8e,band low,as set,fresh ideal,9088,13636,8.08,6.29,32.3,70,64.6,13.88,False,896
+2 x 11x7e,2,11x7e,False,from 12x8e,band high,as set,fresh ideal,9316,13636,8.89,6.99,30.3,66,60.7,14.03,False,851
+2 x 11x7e,2,11x7e,False,from 12x8e,nominal,as set,fresh real,8484,13636,7.08,5.36,25.2,55,50.3,12.58,False,633
+2 x 11x7e,2,11x7e,False,from 12x8e,band low,as set,fresh real,8249,13636,6.63,4.96,26.6,58,53.2,12.38,False,659
+2 x 11x7e,2,11x7e,False,from 12x8e,band high,as set,fresh real,8484,13636,7.35,5.56,25.2,55,50.3,12.58,False,633
+2 x 11x7e,2,11x7e,False,from 12x8e,nominal,calibrated,fresh ideal,9541,13636,8.99,7.11,33.0,72,66.1,13.82,False,913
+2 x 11x7e,2,11x7e,False,from 12x8e,band low,calibrated,fresh ideal,9299,13636,8.46,6.62,35.1,76,70.2,13.66,False,959
+2 x 11x7e,2,11x7e,False,from 12x8e,band high,calibrated,fresh ideal,9541,13636,9.33,7.38,33.0,72,66.1,13.82,False,913
+2 x 11x7e,2,11x7e,False,from 12x8e,nominal,calibrated,fresh real,8646,13636,7.36,5.6,27.1,59,54.3,12.31,False,668
+2 x 11x7e,2,11x7e,False,from 12x8e,band low,calibrated,fresh real,8398,13636,6.88,5.16,28.6,62,57.2,12.11,False,693
+2 x 11x7e,2,11x7e,False,from 12x8e,band high,calibrated,fresh real,8646,13636,7.64,5.81,27.1,59,54.3,12.31,False,668
+2 x 11x10e,2,11x10e,False,from 12x10e,nominal,as set,fresh ideal,8466,13636,8.08,6.83,39.3,86,78.7,13.33,False,1049
+2 x 11x10e,2,11x10e,False,from 12x10e,band low,as set,fresh ideal,8466,13636,7.79,6.59,39.3,86,78.7,13.33,False,1049
+2 x 11x10e,2,11x10e,False,from 12x10e,band high,as set,fresh ideal,8709,13636,8.63,7.38,37.2,81,74.3,13.5,False,1003
+2 x 11x10e,2,11x10e,False,from 12x10e,nominal,as set,fresh real,7616,13636,6.53,5.31,32.0,70,64.0,11.65,True,746
+2 x 11x10e,2,11x10e,False,from 12x10e,band low,as set,fresh real,7616,13636,6.29,5.12,32.0,70,64.0,11.65,True,746
+2 x 11x10e,2,11x10e,False,from 12x10e,band high,as set,fresh real,7861,13636,7.02,5.79,30.4,66,60.9,11.86,True,722
+2 x 11x10e,2,11x10e,False,from 12x10e,nominal,calibrated,fresh ideal,8643,13636,8.42,7.13,42.4,92,84.9,13.09,False,1111
+2 x 11x10e,2,11x10e,False,from 12x10e,band low,calibrated,fresh ideal,8643,13636,8.12,6.87,42.4,92,84.9,13.09,False,1111
+2 x 11x10e,2,11x10e,False,from 12x10e,band high,calibrated,fresh ideal,8899,13636,9.02,7.71,40.2,87,80.3,13.27,False,1066
+2 x 11x10e,2,11x10e,False,from 12x10e,nominal,calibrated,fresh real,7733,13636,6.73,5.47,34.2,74,68.3,11.35,True,776
+2 x 11x10e,2,11x10e,False,from 12x10e,band low,calibrated,fresh real,7733,13636,6.49,5.28,34.2,74,68.3,11.35,True,776
+2 x 11x10e,2,11x10e,False,from 12x10e,band high,calibrated,fresh real,7989,13636,7.25,5.98,32.5,71,65.1,11.57,True,753
+4 x 9x75e,4,9x75e,False,from 9x45e,nominal,as set,fresh ideal,9363,16667,9.85,8.02,20.5,45,81.9,13.21,False,1082
+4 x 9x75e,4,9x75e,False,from 9x45e,band low,as set,fresh ideal,9330,16667,9.78,7.95,20.7,45,82.7,13.18,False,1089
+4 x 9x75e,4,9x75e,False,from 9x45e,band high,as set,fresh ideal,9549,16667,10.73,8.81,19.4,42,77.5,13.38,False,1037
+4 x 9x75e,4,9x75e,False,from 9x45e,nominal,as set,fresh real,8338,16667,7.8,6.05,16.3,36,65.4,11.56,True,755
+4 x 9x75e,4,9x75e,False,from 9x45e,band low,as set,fresh real,8304,16667,7.73,5.98,16.5,36,65.9,11.52,True,759
+4 x 9x75e,4,9x75e,False,from 9x45e,band high,as set,fresh real,8536,16667,8.56,6.71,15.6,34,62.4,11.76,True,733
+4 x 9x75e,4,9x75e,False,from 9x45e,nominal,calibrated,fresh ideal,9566,16667,10.29,8.4,22.1,48,88.5,12.95,False,1146
+4 x 9x75e,4,9x75e,False,from 9x45e,band low,calibrated,fresh ideal,9531,16667,10.21,8.32,22.3,49,89.3,12.92,False,1153
+4 x 9x75e,4,9x75e,False,from 9x45e,band high,calibrated,fresh ideal,9765,16667,11.22,9.25,21.0,46,83.9,13.13,False,1101
+4 x 9x75e,4,9x75e,False,from 9x45e,nominal,calibrated,fresh real,8471,16667,8.05,6.25,17.4,38,69.8,11.25,True,785
+4 x 9x75e,4,9x75e,False,from 9x45e,band low,calibrated,fresh real,8434,16667,7.98,6.18,17.6,38,70.3,11.22,True,789
+4 x 9x75e,4,9x75e,False,from 9x45e,band high,calibrated,fresh real,8681,16667,8.85,6.95,16.7,36,66.7,11.46,True,765

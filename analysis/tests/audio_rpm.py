@@ -30,6 +30,23 @@ Method (accuracy first):
      RPM <= 1.3 * RPM at which APC Cp (x 0.8) absorbs P_elec - P_idle + 1 W. Candidates above that are
      scored as missing. This removes the motor whine (7 F, 14 F) at low throttle. Hops where every covering
      state shows idle current (within 0.05 A of the lowest, which must be < 0.3 A) are motor-off: no F.
+  4c. Thrust window (v1.1; needs the same inputs): while a display state is on screen (same lag and +/- 1 s),
+     the measured thrust above the motor-off tare, T_min..T_max over the state (>= 100 g), fixes the RPM through
+     APC Ct(RPM, J = 0) to within a factor f either way (--tw-factor, default 1.25 since v1.2; 1.4 in v1.1):
+     F is limited to [F(T_min) / f, f F(T_max)], the
+     union over all covering states (a state below 100 g, without thrust, or motor-off leaves the hop free).
+     Inside the window a lower fundamental F/m below the window is ruled out, so the sub-harmonic penalty at
+     that m is dropped. An F/2 or 2F reading is a factor 4 in thrust and falls outside. Added because on
+     the 2026-09-25 videos the 1/rev lines are as strong as the blade-pass lines, so from sound alone F/2
+     scored higher than F at high throttle (12X6E Trial #1 at ~100 s: 130 Hz tracked, display 1701 g needs
+     ~260 Hz). v1.2 narrowed f from 1.4 to 1.25 because at low throttle a 2/3 F reading (0.67, inside 1/1.4 =
+     0.71) was tracked: 12X10E Trial #2 at 22-37 s (270 g) jumped between ~3050 rpm (measured / APC thrust
+     0.83-0.98) and ~2050 rpm (1.4-1.9); with 1.25 the states with measured / APC > 1.3 fell from 25 to 8,
+     and 12x8E.MOV was unchanged (0 of 151 states moved by > 50 rpm).
+     Tare (v1.3): median thrust of the motor-off states within 10 s of the motor-on span (first to last
+     motor-on state). v1.2 used every motor-off state; on 9X4.5E Trial #1 the stand was handled after the
+     run (display 77 g at 162-209 s, 0 g before the run and at 106-127 s), which set the tare to 77 g and
+     dropped the window from every state below 177 g. Falls back to all motor-off states if none is that close.
   5. Viterbi over time on 1/96-octave cells plus an unvoiced state: cost = -salience; unvoiced cost
      = -voicing threshold; a switch penalty between voiced and unvoiced; a penalty on frequency moves beyond
      a free slew per hop, and no move over 1/8 octave per hop. This stops octave jumps.
@@ -47,11 +64,14 @@ Usage (from the repo root, Git Bash; run read_mt10pro_video.py on the same video
     python analysis/tests/audio_rpm.py analysis/tests/video/12x8E.MOV
 Options: --run-id (default the video name), --blades, --order, --rpm-min, --rpm-max, --kmax, --win, --hop,
          --voicing, --state-lag, --prop (APC name for the prior and thrust check; default from the t2 file
-         or the video name), --rho, --no-prior (sound alone), --no-merge, --no-plot.
+         or the video name), --rho, --tw-factor (thrust window half-width in RPM, default 1.25),
+         --no-prior (sound alone), --no-thrust-window (power prior only, as v1.0),
+         --no-merge, --no-plot.
 
 Outputs (RUN = --run-id):
     analysis/tests/data/RUN_rpm.csv          one row per hop: t, voiced, rpm, blade-pass Hz, quality,
-                                             F_limit_Hz (power-prior bound; blank = none, 0 = motor off)
+                                             F_limit_Hz (power-prior bound; blank = none, 0 = motor off),
+                                             F_lo_Hz, F_hi_Hz (thrust window; blank = none)
     analysis/tests/data/RUN_rpm_states.csv   one row per blue display state: RPM statistics + thrust check
     analysis/tests/data/RUN_t2.csv           rpm, rpm_source, notes filled in place (other columns untouched)
     analysis/tests/out/audio/RUN/            log, spectrogram + track plot
@@ -62,6 +82,11 @@ Limits and UNVERIFIED items:
     (default -0.35 s). On 12x8E.MOV the fit of displayed I, P against the audio RPM is best at -0.35 s and
     of the state's mean thrust at -0.40 s (both halves of the run agree within 0.05 s; rms 4.3 -> 2.5 pct
     for I). One video, one MT10PRO; check again on the next video. Steady points are unaffected.
+  - Harmonic family per recording: 12x8E.MOV has blade-pass lines to k = 10 and weak 1/rev lines (default
+    --blades 2 --kmax 10). The 2026-09-25 videos (phone in another place) show only shaft harmonics 1-4, with
+    the 1/rev lines as strong as the blade-pass lines; there --blades 1 --kmax 4 (track the shaft rate) gave
+    RPM on 44 of 45 states against 18 of 45 with the defaults (12X6E Trial #2, 30-50 s). Look at the
+    spectrum of a new recording before choosing.
   - Needs one dominant prop. Two motors at slightly different RPM (TEST_PLAN D5) give two close families.
   - --order 7 (no-prop run, motor electrical frequency, 7 pole pairs) is untested: the strongest no-prop
     line may be 2 x electrical (14 f_r), which would read as double the RPM. Check against the optical tach.
@@ -71,6 +96,14 @@ Limits and UNVERIFIED items:
     for about 1 s. The 1.3 and 0.8 margins cover APC Cp error and display latency, not a gross misread.
   - Without the prior (no states, unknown prop, or --no-prior), low-throttle readings can lock on the motor
     whine at 7 F (seen at 5-7 s and 22-25 s in 12x8E.MOV).
+  - The thrust window trusts APC Ct at J = 0 to about +/- 25 pct in RPM (a factor 1.56 in thrust; measured / APC
+    was 0.87-1.06 on 12x8E.MOV and 0.76-1.05 on 12X10E Trial #2 where tracked correctly) and the tare from
+    the motor-off states. Below 100 g there is no lower bound, so an F/2 reading at low throttle is still possible
+    there (the rpm_thrust_mismatch check is gated at 100 g as well). Because the window is built from the measured
+    thrust, the rpm_thrust_mismatch check can no longer catch an octave error where the window applies; it
+    still catches a gross thrust misread. A wrong line just inside the window can still be tracked and then
+    sits at the window edge: 12X10E Trial #2 at 17-21 s (158 g) reads ~1760 rpm against ~2450 rpm on the
+    neighbouring states (measured / APC 1.5-1.7 against 0.8-0.9). Check T_over_Tapc in RUN_rpm_states.csv.
 Requires: Python 3, numpy, scipy, ffmpeg + ffprobe on PATH; matplotlib for the plot; pandas for the thrust check.
 """
 import argparse
@@ -87,7 +120,7 @@ import numpy as np
 from scipy import fft as sfft
 from scipy.ndimage import maximum_filter1d
 
-SCRIPT_VERSION = "1.0"
+SCRIPT_VERSION = "1.3"
 HERE = Path(__file__).resolve().parent
 FINE = 576                       # candidate grid, steps per octave (0.12 pct)
 CELL = 6                         # fine steps per Viterbi cell (1/96 octave)
@@ -177,7 +210,7 @@ def spectral_floor(Pdb, f, q=30.0, half_oct=1.0 / 6.0, min_half_hz=30.0, per_oct
 # ----------------------------------------------------------------------------------------------
 # Salience, tracking, refinement
 # ----------------------------------------------------------------------------------------------
-def salience(L, df, Fgrid, K, rel_m=None, chunk=100):
+def salience(L, df, Fgrid, K, rel_m=None, F_lo=None, chunk=100):
     """Harmonic salience for every hop and candidate F:
         mean over k = 1..K of clip(L(k F) - C_THR, C_LO, C_HI)                        (harmonics present; a missing
                                                                                         one costs C_LO, so F/2 loses)
@@ -190,7 +223,8 @@ def salience(L, df, Fgrid, K, rel_m=None, chunk=100):
     (12x8E.MOV); the true harmonics of F/2 are about as strong as their neighbours and are still penalized.
     The penalty does not depend on how strong the fundamental is. L is max-pooled over +/- 2 bins so a harmonic
     between grid points is not lost (the grid step is 0.12 pct). 7F / 14F (motor whine) are not separated here:
-    that is the power prior's job."""
+    that is the power prior's job. F_lo (per hop, Hz; 0 = none): the thrust window's lower limit; where F / m is
+    below it, the lower fundamental is ruled out and the penalty at that m is dropped."""
     Lp = maximum_filter1d(L, size=5, axis=1, mode="nearest")
     kk = np.arange(1, K + 1)
     idx = np.rint(kk[None, :] * Fgrid[:, None] / df).astype(np.int64)
@@ -205,7 +239,10 @@ def salience(L, df, Fgrid, K, rel_m=None, chunk=100):
             thr = C_THR
             if m == rel_m == 2:                            # (k - 1/2) F sits between harmonics k - 1 and k
                 thr = np.maximum(C_THR, 0.5 * (np.concatenate([H[..., :1], H[..., :-1]], -1) + H) - SUB_REL)
-            pens.append(np.clip(Lc[:, si] - thr, 0.0, C_HI).mean(-1))
+            pm = np.clip(Lc[:, si] - thr, 0.0, C_HI).mean(-1)
+            if F_lo is not None:
+                pm[Fgrid[None, :] / m < F_lo[a:a + chunk, None]] = 0.0
+            pens.append(pm)
         S[a:a + chunk] = np.clip(H - C_THR, C_LO, C_HI).mean(-1) - SUB_GAMMA * np.max(pens, axis=0)
     return S
 
@@ -289,6 +326,9 @@ PRIOR_CP_FACTOR = 0.8    # APC Cp may be this much too high
 PRIOR_DP_W = 1.0         # W added to the power above idle (display resolution, idle drift)
 IDLE_MAX_A = 0.3         # the lowest display current is taken as ESC idle only if it is below this
 OFF_DI_A = 0.05          # a state within this of the idle current is 'motor off'
+TW_MIN_G = 100.0         # g above tare: a state bounds F from below only if its lowest thrust reaches this
+TARE_PAD_S = 10.0        # s: the tare uses motor-off states within this of the motor-on span (not post-run handling)
+TW_FACTOR = 1.25         # thrust window half-width in RPM (x / 1.25 .. x 1.25 = a factor 1.56 in thrust); --tw-factor
 
 
 def apc_model(prop, log):
@@ -350,6 +390,52 @@ def power_prior(states, t, order, apc, rho, lag, fps, log):
     return Flim, off
 
 
+def thrust_window(states, t, order, apc, rho, lag, fps, off, log, factor=TW_FACTOR):
+    """Per-hop window [F_lo, F_hi] (Hz of the tracked order) from the displayed thrust (0 / inf = no bound).
+    Tare T0 = median thrust of the motor-off states within TARE_PAD_S of the motor-on span (all motor-off states
+    if none is that close; 0 if there are none). A state with T_min - T0 >= TW_MIN_G gives
+    [order * n(T_min - T0) / factor, order * n(T_max - T0) * factor], n(T) from APC Ct(RPM, J = 0) at rho;
+    any other covering state (low or no thrust, motor off) gives no bound. A hop takes the union over the states
+    within PRIOR_PAD s, so one misread state can only widen the window, never narrow it."""
+    rr = np.linspace(100.0, 40000.0, 4000)
+    Tt = np.array([apc["T_g"](r, rho) for r in rr])                 # monotonic in rpm (T ~ rpm^2)
+
+    def n_of_T(T):
+        return float(np.interp(T, Tt, rr)) / 60.0
+    on_t = [(float(s["t_start_s"]), float(s["t_end_s"])) for s, o in zip(states, off) if not o]
+    Toff = [(fnum(s.get("T_g_mean")), float(s["t_start_s"]), float(s["t_end_s"])) for s, o in zip(states, off) if o]
+    Toff = [v for v in Toff if v[0] is not None]
+    near = []
+    if on_t:
+        a, b = min(x[0] for x in on_t), max(x[1] for x in on_t)
+        near = [v for v in Toff if max(a - v[2], v[1] - b, 0.0) <= TARE_PAD_S]
+        Toff = near or Toff
+    Toff = [v[0] for v in Toff]
+    T0 = float(np.median(Toff)) if Toff else 0.0
+    F_lo = np.full(len(t), np.inf)
+    F_hi = np.full(len(t), -np.inf)
+    covered = np.zeros(len(t), bool)
+    n_used = 0
+    for s, o in zip(states, off):
+        ta, tb = float(s["t_start_s"]), float(s["t_end_s"])
+        sel = (t >= ta + lag - PRIOR_PAD) & (t < tb + 1.0 / fps + lag + PRIOR_PAD)
+        covered |= sel
+        tmin, tmax = fnum(s.get("T_g_min")), fnum(s.get("T_g_max"))
+        if o or tmin is None or tmax is None or tmin - T0 < TW_MIN_G:
+            lo, hi = 0.0, np.inf
+        else:
+            lo, hi = order * n_of_T(tmin - T0) / factor, order * n_of_T(tmax - T0) * factor
+            n_used += 1
+        F_lo[sel] = np.minimum(F_lo[sel], lo)
+        F_hi[sel] = np.maximum(F_hi[sel], hi)
+    F_lo[~covered], F_hi[~covered] = 0.0, np.inf
+    act = F_lo > 0
+    log("thrust window: tare %.1f g (median of %d motor-off states%s); %d of %d states >= %.0f g above tare bound F; "
+        "%d hops bounded (x/%.2f in rpm), %d free"
+        % (T0, len(Toff), " within %.0f s of the motor-on span" % TARE_PAD_S if near else "", n_used, len(states), TW_MIN_G, act.sum(), factor, (~act).sum()), echo=True)
+    return F_lo, F_hi
+
+
 # ----------------------------------------------------------------------------------------------
 # Main
 # ----------------------------------------------------------------------------------------------
@@ -381,6 +467,9 @@ def main():
     ap.add_argument("--prop", default=None, help="for the thrust check; default from the t2 file or the video name")
     ap.add_argument("--rho", type=float, default=1.20, help="air density for the thrust check and power bound, kg/m^3")
     ap.add_argument("--no-prior", action="store_true", help="track from sound alone (no display power bound, no motor-off gating)")
+    ap.add_argument("--tw-factor", type=float, default=TW_FACTOR,
+                    help="thrust window half-width in RPM (x / f .. x f; v1.1 used 1.4)")
+    ap.add_argument("--no-thrust-window", action="store_true", help="power prior only (v1.0 behaviour)")
     ap.add_argument("--no-merge", action="store_true", help="do not write rpm into RUN_t2.csv")
     ap.add_argument("--no-plot", action="store_true")
     args = ap.parse_args()
@@ -411,6 +500,10 @@ def main():
     x = load_audio(video, fs)
     log("audio %s: %d Hz, %d channel(s), %.2f s; audio start - video start = %.4f s; video %.3f fps%s"
         % (video.name, fs, info["channels"], len(x) / fs, off, fps, "" if info["fps"] else " (assumed)"), echo=True)
+    log("settings: blades %d, order %g, kmax %d, rpm %g-%g, voicing %.2f, state lag %.2f s, rho %.4f, prop '%s'%s%s"
+        % (args.blades, order, args.kmax, args.rpm_min, args.rpm_max, args.voicing, args.state_lag, args.rho,
+           args.prop or "", ", no prior" if args.no_prior else "", ", no thrust window" if args.no_thrust_window else ""),
+        echo=True)
 
     # ---------------- spectra ----------------
     hop = max(1, int(round(args.hop * fs)))
@@ -455,14 +548,20 @@ def main():
     apc = apc_model(prop, log) if order == args.blades else None
     Flim = np.full(T, np.inf)
     off_state = [False] * len(states)
+    F_lo, F_hi = np.zeros(T), np.full(T, np.inf)
     if states and not args.no_prior:
         Flim, off_state = power_prior(states, t, order, apc, args.rho, args.state_lag, fps, log)
+        if apc is not None and not args.no_thrust_window:
+            F_lo, F_hi = thrust_window(states, t, order, apc, args.rho, args.state_lag, fps, off_state, log,
+                                       factor=args.tw_factor)
 
     # ---------------- salience + tracking ----------------
     NF = (int(np.floor(FINE * np.log2(F_max / F_min))) + 1) // CELL * CELL
     Fgrid = F_min * 2.0 ** (np.arange(NF) / FINE)
-    S = salience(L, df, Fgrid, args.kmax, rel_m=args.blades if order == args.blades else None)
+    S = salience(L, df, Fgrid, args.kmax, rel_m=args.blades if order == args.blades else None,
+                 F_lo=F_lo if (F_lo > 0).any() else None)
     S[Fgrid[None, :] > Flim[:, None]] = C_LO                       # above the power bound, or motor off
+    S[(Fgrid[None, :] < F_lo[:, None]) | (Fgrid[None, :] > F_hi[:, None])] = C_LO   # outside the thrust window
     Sc = S.reshape(T, NF // CELL, CELL).max(-1)
     J = Sc.shape[1]
     slew_cells = 3.0 * (hop / fs) * FINE / CELL                    # 3 octaves/s free
@@ -479,7 +578,8 @@ def main():
     rows = []
     for i in range(T):
         r = {"t_s": t[i], "voiced": int(voiced[i]),
-             "F_limit_Hz": 0.0 if np.isneginf(Flim[i]) else (float(Flim[i]) if np.isfinite(Flim[i]) else None)}
+             "F_limit_Hz": 0.0 if np.isneginf(Flim[i]) else (float(Flim[i]) if np.isfinite(Flim[i]) else None),
+             "F_lo_Hz": float(F_lo[i]) if F_lo[i] > 0 else None, "F_hi_Hz": float(F_hi[i]) if np.isfinite(F_hi[i]) else None}
         if voiced[i]:
             j = int(path[i])
             a, b = max(0, (j - 1) * CELL), min(NF, (j + 2) * CELL)
@@ -521,8 +621,8 @@ def main():
 
     p_hops = data_dir / (run_id + "_rpm.csv")
     write_csv(p_hops, ["t_s", "voiced", "rpm", "F_Hz", "F_coarse_Hz", "salience", "n_harm", "harmonics", "spread_rpm",
-                       "snr_max_dB", "method", "F_limit_Hz"], rows,
-              {"rpm": 1, "spread_rpm": 2, "salience": 2, "snr_max_dB": 1, "F_limit_Hz": 1})
+                       "snr_max_dB", "method", "F_limit_Hz", "F_lo_Hz", "F_hi_Hz"], rows,
+              {"rpm": 1, "spread_rpm": 2, "salience": 2, "snr_max_dB": 1, "F_limit_Hz": 1, "F_lo_Hz": 1, "F_hi_Hz": 1})
 
     # ---------------- display states ----------------
     T_apc = apc["T_g"] if apc else None
@@ -612,7 +712,10 @@ def main():
             Fh = np.where(ok, [r.get("F_Hz", np.nan) for r in rows], np.nan)
             for k in (1, 2, 3, 4):
                 ax.plot(t, k * Fh, color="r", lw=0.6, alpha=0.8)
-            ax.set_ylabel("Hz (dB above background; red = k x tracked blade-pass)")
+            if (F_lo > 0).any():
+                ax.plot(t, np.where(F_lo > 0, F_lo, np.nan), color="w", lw=0.6, ls="--")
+                ax.plot(t, np.where(np.isfinite(F_hi) & (F_hi <= fmax_plot), F_hi, np.nan), color="w", lw=0.6, ls="--")
+            ax.set_ylabel("Hz (dB above background; red = k x tracked blade-pass; white dashed = thrust window)")
             ax.set_title("%s: audio blade-pass tracking (order %g)" % (video.name, order))
             ax = axs[1]
             ax.plot(t, rpm, ".", ms=1.5, color="C0", label="rpm per hop")
