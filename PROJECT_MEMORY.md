@@ -1748,3 +1748,72 @@ Unchanged (next stand session), plus one item: add a 9x6E run to stick 100. It i
 the 12x8E, and the model cannot settle that without data.
 
 ---
+
+## [2026-09-28 15:02 CDT] Memory system: STATE.md hot cache + DECISIONS.md register + memcheck (after claude-obsidian)
+
+Task (Jordan): use github.com/AgriciDaniel/claude-obsidian (v2.2.0) to optimize memory for this project.
+
+### What was adopted, and what was not
+- Adopted the patterns only. The plugin itself was NOT installed: its mutation core refuses native Windows and
+  Git Bash (UNSUPPORTED_PLATFORM; needs WSL/Linux/macOS) [VERIFIED in its compound-vault-guide.md].
+- claude-obsidian -> this project:
+  - wiki/hot.md (bounded cache, under 500 words, refreshed on every save) -> STATE.md.
+  - claim/source ledger (status, support, confidence, contradictions visible) -> DECISIONS.md.
+  - wiki-fold (extractive rollups; every line cites its child entry) -> citation rule: every STATE/DECISIONS
+    item cites a log entry [YYYY-MM-DD HH:MM]. Folds themselves are deferred (not needed yet).
+  - SessionStart hook injecting hot.md -> a native `@STATE.md` import in CLAUDE.md. No hook, no python on
+    PATH needed. Claude Code docs: @imports expand at launch; the project-root CLAUDE.md is re-read after
+    /compact [VERIFIED reference/text/cc_memory.txt lines 103-107, 586].
+  - wiki-lint (deterministic, read-only) -> tools/memcheck.py.
+
+### New files
+- STATE.md: hot cache, 500 words max, overwritten at every checkpoint, auto-loaded through the CLAUDE.md
+  import. Sections: Reflects log through, Phase, Hardware, Key numbers, BIG FLAG, Decisions in force,
+  Open items, NEXT TASK.
+- DECISIONS.md: 34 rows (R1-R8 rules, D1-D10 design, H1-H5 hardware, N1-N9 numbers, P1-P2 process).
+  Columns: ID | decision/number | status (LOCKED/CURRENT/OPEN/SUPERSEDED) | conf | source | overturned by.
+  Rows are never deleted; a changed decision gets a SUPERSEDED old row plus a new row.
+- tools/memcheck.py (read-only). Checks:
+  - log is ASCII; the committed HEAD copy is a byte prefix of the working copy (append-only);
+    headers in time order (warning);
+  - STATE.md is ASCII, <= 500 words, has the sections, and is not older than the newest log entry;
+  - DECISIONS.md IDs unique, status/conf valid, every row cites an entry;
+  - every cited [timestamp] exists as a log header; backticked paths exist.
+  - Tested in a scratch git repo: stale cache, edited log line, duplicate ID, bad status, bad conf,
+    missing citation, missing path, non-ASCII, over 500 words, missing section and CRLF working copy
+    all behave as intended [VERIFIED this session].
+
+### Changed files
+- CLAUDE.md:
+  - New session start: STATE.md (auto) -> grep DECISIONS.md -> grep the cited log entry and read only it.
+  - New checkpoint: log entry -> DECISIONS.md rows -> rewrite STATE.md -> `python tools/memcheck.py`.
+  - Agents never write STATE.md or DECISIONS.md either.
+- AI_WORKFLOW.md: file table, session loop, section 7, cheat sheet.
+- .claude/agents/sae-analyst.md and sae-researcher.md: read STATE.md/DECISIONS.md instead of the last summary.
+
+### Supersedes (RULES amendment; rules 1-6 and 8-9 unchanged)
+- Rule 7 and the old session-start protocol ("read the RULES header, then the LAST CURRENT STATE SUMMARY
+  and every entry after it") are SUPERSEDED. Sessions now start from STATE.md.
+- CURRENT STATE SUMMARY entries are now written only at the end of a design phase, as a copy of STATE.md,
+  and must be self-contained (no "the older summary still holds" chains). The ~400-line trigger is dropped.
+- This log stays the source of truth and stays append-only. STATE.md and DECISIONS.md are derived and may be
+  overwritten (git history + vault snapshots keep old versions). If they disagree with the log, the log's
+  latest entry wins.
+
+### Numbers (session-start context, bytes; about 4 bytes per token [INFERRED rule of thumb])
+- Before: CLAUDE.md 3166 + log header 2993 + latest summary and after 7856 = 14015 B. Following the
+  "still holds" chain to the 09-24, 09-19 and 09-18 summaries: +8180 = 22195 B. Also 2-5 extra Read calls.
+  It also grew with every entry after the last summary (up to about 400 lines).
+- After: CLAUDE.md 4100 + STATE.md 2730 = 6830 B, loaded with no tool calls. The cap is about 500 words.
+  DECISIONS.md (6688 B) is grepped, not read.
+- Result: about 51-69 pct less at session start, and the cost no longer grows with the log.
+
+### UNVERIFIED
+- The VS Code extension expanding `@STATE.md`. Check: after a restart or /clear, /context -> Memory files
+  should list STATE.md, or ask Claude for the NEXT TASK without letting it read files.
+- The import being re-expanded after /compact (the docs say the project-root CLAUDE.md is re-injected).
+
+### NEXT TASK
+Unchanged: the next stand session (see STATE.md NEXT TASK).
+
+---

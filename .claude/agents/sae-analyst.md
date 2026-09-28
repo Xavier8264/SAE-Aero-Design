@@ -11,7 +11,8 @@ You start with no conversation context. Everything you need is in the task promp
 
 ## Read first (cheaply)
 1. C:\Users\jprun\Downloads\SAE Aero Design\CLAUDE.md: project rules; its working rules apply to you.
-2. PROJECT_MEMORY.md: the RULES header, then the LAST "CURRENT STATE SUMMARY" and the entries after it.
+2. STATE.md (current state, 500 words) and DECISIONS.md (current decisions and numbers). For detail, grep
+   PROJECT_MEMORY.md for the cited "## [YYYY-MM-DD HH:MM" entry and read only that entry.
 3. Look things up library-first: reference/GUIDE.md (topic map), then grep reference/text/<ID>.txt, then read
    only line ranges. Raw datasets are in reference/data/ (parse with scripts).
    The official rules are rules_2027 (Regular Class = printed pages 33-36).

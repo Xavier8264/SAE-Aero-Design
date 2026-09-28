@@ -15,7 +15,10 @@ That is why this project has:
 | File | Role | Loaded automatically? |
 |---|---|---|
 | `CLAUDE.md` | Short rules for Claude (session start, checkpoints, compaction) | Yes, every session |
-| `PROJECT_MEMORY.md` | Append-only project log; "CURRENT STATE SUMMARY" entries | No; Claude reads the header + latest summary |
+| `STATE.md` | One-screen current state (500 words max), rewritten at every checkpoint | Yes; `CLAUDE.md` imports it |
+| `DECISIONS.md` | Register: every current decision and number, with status, confidence and source | No; Claude greps it |
+| `PROJECT_MEMORY.md` | Append-only project log, the source of truth | No; Claude reads only the entries cited |
+| `tools/memcheck.py` | Read-only check of the three files above (stale state, broken citations, log edits) | No; run at checkpoint |
 | `reference/INDEX.md` + `reference/text/` | Every source, converted to searchable text | No; Claude greps it |
 | `.claude/settings.json` | Project settings (auto-compact at 200K) | Yes |
 
@@ -23,11 +26,12 @@ That is why this project has:
 
 1. **Start** a fresh conversation (VS Code: new conversation / new tab, or `/clear`).
    State ONE task in one specific sentence, e.g. "Build the takeoff model for the sizing study."
-   Claude reads the log summary on its own (CLAUDE.md tells it to).
+   Claude starts from STATE.md, which loads by itself (CLAUDE.md imports it).
 2. **Pick the model and effort before the first message.** Changing either mid-session forces a full,
    uncached re-read of the conversation (docs).
 3. **Work.**
-4. **Checkpoint**: type `checkpoint`. Claude appends what was done, decided, and still open to the log.
+4. **Checkpoint**: type `checkpoint`. Claude appends what was done, decided, and still open to the log,
+   updates DECISIONS.md, rewrites STATE.md, and runs `python tools/memcheck.py`.
 5. **`/clear`**. It costs nothing (docs), and nothing is lost because it is all in the log.
    Next task -> back to step 1.
 
@@ -89,7 +93,9 @@ That is why this project has:
 
 ## 7. How Claude keeps its side (from CLAUDE.md)
 
-- Reads the log header + latest summary, not the whole log. Greps the document library, never whole PDFs.
+- Starts from STATE.md, looks decisions up in DECISIONS.md, and reads only the log entries they cite.
+  Greps the document library, never whole PDFs.
+- Want the status yourself? Open STATE.md (one screen). "What did we decide about X?" -> DECISIONS.md.
 - Scripts print short summaries; full output goes to files.
 - Renders images only when text extraction is flagged unreliable.
 - Checkpoints to the append-only log, so `/clear` never loses anything important.
@@ -104,4 +110,5 @@ LONG + MID-TASK -> /compact keep <what matters>
 SIDE QUESTION   -> /btw <question>
 BREAK > 1 HOUR  -> "checkpoint" before leaving, fresh session after
 USAGE CHECK     -> /usage
+PROJECT STATUS  -> STATE.md (one screen); decisions -> DECISIONS.md
 ```
