@@ -1,0 +1,10 @@
+run_id,t_display_s,phase,throttle_pos,rpm_before,rpm_after,drop_pct,T_before_g,T_after_g,I_before,I_after,V_before,V_after,signature,check
+2026-09-29_9x6E_T1,31.85,move 4-5,7.2,6582.05,6339,-3.69262,484,545,4.89,4.34,16.35,16.38,I and V ~unchanged,display thrust did not fall with it: audio tracking artefact
+2026-09-29_9x6E_T1,99.25,hold 13,100,10449.5,7544.75,-27.798,1304,656,18.54,7.58,14.95,15.4,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 2.9 V above the LVC reference: throttle cut, not LVC"
+2026-09-29_9x6E_T1,100.95,,,7578.3,6625.25,-12.576,656,487,7.58,4.77,15.4,15.54,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 3.4 V above the LVC reference: throttle cut, not LVC"
+2026-09-29_9x6E_T1,102.55,,,6055.6,4666.65,-22.9366,458,128,4.77,0.24,15.54,15.8,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 3.5 V above the LVC reference: throttle cut, not LVC"
+2026-09-29_12x8E_T1,152.35,hold 18,100,8345.6,7877.4,-5.61014,2156,1988,35.66,28.05,13.63,13.81,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 1.6 V above the LVC reference: throttle cut, not LVC"
+2026-09-29_12x8E_T1,153.95,,,7201.65,5918.75,-17.814,1988,1147,21.84,13.7,13.95,14.25,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 1.9 V above the LVC reference: throttle cut, not LVC"
+2026-09-29_9x4.5E_T1,137.75,,,10782.4,9095.5,-15.6449,1148,738,16.1,8.02,15.2,15.41,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 3.2 V above the LVC reference: throttle cut, not LVC"
+2026-09-29_9x4.5E_T1,140.75,,,6954.35,5911.5,-14.9957,518,285,4.56,3.05,15.59,15.66,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 3.6 V above the LVC reference: throttle cut, not LVC"
+2026-09-29_9x4.5E_T1,142.95,,,5047.85,3717.5,-26.3548,294,94.5,1.93,1.09,15.77,15.82,"I down, V up (load shed: LVC or throttle cut)","display thrust fell with it; V 3.8 V above the LVC reference: throttle cut, not LVC"

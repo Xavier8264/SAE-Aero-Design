@@ -1,0 +1,42 @@
+battery_check.py v1.4  session 2026-09-29  lag -0.35 s  LVC reference 12.00 V (3.00 V/cell, UNVERIFIED)
+
+run (time order)        created     Vrest start/end   pack line V0 / R        V min loaded (I)    margin to 12.0 V   ESC alarm groups (first, s)
+2026-09-29_9x6E_T1      19:54:17     16.73 /  15.84       16.76 V /    93 mOhm    14.95 V ( 18.6 A)     +2.95 V   0 (-)
+2026-09-29_12x8E_T1     20:08:14     16.74 /      -       16.74 V /    85 mOhm    13.63 V ( 35.7 A)     +1.63 V   0 (-)
+2026-09-29_9x4.5E_T1    20:42:08     16.74 /  16.05       16.75 V /    92 mOhm    15.20 V ( 16.1 A)     +3.20 V   0 (-)
+holds at stick >= 50:  run / stick: T g, rpm, I A, V V, duty A (B)
+  2026-09-29_9x6E_T1       59:   950 g   8952 rpm  11.53 A  15.75 V  d 0.766 (0.834)
+  2026-09-29_9x6E_T1       69:  1065 g   9355 rpm  13.25 A  15.54 V  d 0.818 (0.887)
+  2026-09-29_9x6E_T1       79:  1151 g   9726 rpm  14.87 A  15.37 V  d 0.866 (0.935)
+  2026-09-29_9x6E_T1       90:  1243 g  10110 rpm  16.82 A  15.19 V  d 0.919 (0.988)
+  2026-09-29_9x6E_T1      100:  1320 g  10458 rpm  18.70 A  14.99 V  d 0.970 (1.039)
+  2026-09-29_12x8E_T1      59:  1726 g   7433 rpm  22.82 A  14.76 V  d 0.757 (0.778)
+  2026-09-29_12x8E_T1      70:  1875 g   7740 rpm  26.32 A  14.46 V  d 0.819 (0.835)
+  2026-09-29_12x8E_T1      81:  2015 g   8015 rpm  29.93 A  14.22 V  d 0.879 (0.888)
+  2026-09-29_12x8E_T1      90:  2112 g   8190 rpm  33.14 A  13.96 V  d 0.931 (0.932)
+  2026-09-29_12x8E_T1     100:  2198 g   8364 rpm  36.11 A  13.70 V  d 0.983 (0.977)
+  2026-09-29_9x4.5E_T1     50:   770 g   8814 rpm   8.07 A  16.03 V  d 0.723 (0.797)
+  2026-09-29_9x4.5E_T1     60:   860 g   9322 rpm   9.54 A  15.90 V  d 0.777 (0.853)
+  2026-09-29_9x4.5E_T1     70:   939 g   9761 rpm  11.01 A  15.78 V  d 0.825 (0.903)
+  2026-09-29_9x4.5E_T1     81:  1016 g  10242 rpm  12.56 A  15.59 V  d 0.882 (0.962)
+  2026-09-29_9x4.5E_T1     90:  1095 g  10582 rpm  14.21 A  15.43 V  d 0.927 (1.008)
+  2026-09-29_9x4.5E_T1    100:  1166 g  10859 rpm  15.75 A  15.26 V  d 0.969 (1.049)
+sudden RPM drops >= 3 pct: 9, of which 1 audio tracking artefacts (details in 2026-09-29_rpm_drops.csv)
+  2026-09-29_9x6E_T1       31.85 s  move 4-5   stick     7   6582 ->  6339 rpm (-3.7%)  I and V ~unchanged; display thrust did not fall with it: audio tracking artefact
+  2026-09-29_9x6E_T1       99.25 s  hold 13    stick   100  10450 ->  7545 rpm (-27.8%)  I down, V up (load shed: LVC or throttle cut); display thrust fell with it; V 2.9 V above the LVC reference: throttle cut, not LVC
+    [real] 2026-09-29_9x6E_T1 99.25 s: display thrust fell with it; V 2.9 V above the LVC reference: throttle cut, not LVC
+  2026-09-29_9x6E_T1      100.95 s             stick     -   7578 ->  6625 rpm (-12.6%)  I down, V up (load shed: LVC or throttle cut); display thrust fell with it; V 3.4 V above the LVC reference: throttle cut, not LVC
+    [real] 2026-09-29_9x6E_T1 100.95 s: display thrust fell with it; V 3.4 V above the LVC reference: throttle cut, not LVC
+  2026-09-29_9x6E_T1      102.55 s             stick     -   6056 ->  4667 rpm (-22.9%)  I down, V up (load shed: LVC or throttle cut); display thrust fell with it; V 3.5 V above the LVC reference: throttle cut, not LVC
+    [real] 2026-09-29_9x6E_T1 102.55 s: display thrust fell with it; V 3.5 V above the LVC reference: throttle cut, not LVC
+  2026-09-29_12x8E_T1     152.35 s  hold 18    stick   100   8346 ->  7877 rpm (-5.6%)  I down, V up (load shed: LVC or throttle cut); display thrust fell with it; V 1.6 V above the LVC reference: throttle cut, not LVC
+    [real] 2026-09-29_12x8E_T1 152.35 s: display thrust fell with it; V 1.6 V above the LVC reference: throttle cut, not LVC
+  2026-09-29_12x8E_T1     153.95 s             stick     -   7202 ->  5919 rpm (-17.8%)  I down, V up (load shed: LVC or throttle cut); display thrust fell with it; V 1.9 V above the LVC reference: throttle cut, not LVC
+    [real] 2026-09-29_12x8E_T1 153.95 s: display thrust fell with it; V 1.9 V above the LVC reference: throttle cut, not LVC
+  2026-09-29_9x4.5E_T1    137.75 s             stick     -  10782 ->  9096 rpm (-15.6%)  I down, V up (load shed: LVC or throttle cut); display thrust fell with it; V 3.2 V above the LVC reference: throttle cut, not LVC
+    [real] 2026-09-29_9x4.5E_T1 137.75 s: display thrust fell with it; V 3.2 V above the LVC reference: throttle cut, not LVC
+  2026-09-29_9x4.5E_T1    140.75 s             stick     -   6954 ->  5912 rpm (-15.0%)  I down, V up (load shed: LVC or throttle cut); display thrust fell with it; V 3.6 V above the LVC reference: throttle cut, not LVC
+    [real] 2026-09-29_9x4.5E_T1 140.75 s: display thrust fell with it; V 3.6 V above the LVC reference: throttle cut, not LVC
+  2026-09-29_9x4.5E_T1    142.95 s             stick     -   5048 ->  3718 rpm (-26.4%)  I down, V up (load shed: LVC or throttle cut); display thrust fell with it; V 3.8 V above the LVC reference: throttle cut, not LVC
+    [real] 2026-09-29_9x4.5E_T1 142.95 s: display thrust fell with it; V 3.8 V above the LVC reference: throttle cut, not LVC
+outputs: 2026-09-29_battery_runs.csv, 2026-09-29_battery_holds.csv, 2026-09-29_rpm_drops.csv; plots and log in C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\out\battery

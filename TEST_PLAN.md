@@ -298,7 +298,7 @@ Motor: SunnySky X2820 800 KV, original black X Series (NOT the "X V3" line, whic
 - Datasheet: reference/text/sunnysky_x2820_800kv_spec.txt; manufacturer test table:
   reference/data/sunnysky_x2820_800kv_testdata.csv. Ratings: 46 A for 30 s max continuous, 700 W,
   3-5S, 60 A ESC recommended, 12N14P (14 poles, 7 pole pairs), 5 mm shaft, 138 g.
-- How many are on hand: OPEN, Jordan to confirm. The 2-motor layout needs 2, the 4-motor layout
+- How many are on hand: 4 (Jordan, 2026-09-30). The 2-motor layout needs 2, the 4-motor layout
   needs 4. Test at least 2 of them if available; motor-to-motor scatter matters when all motors
   share one pack.
 - Confirm it really is the 800 KV version with the no-prop run (C1). The 800, 920 and 1100 KV

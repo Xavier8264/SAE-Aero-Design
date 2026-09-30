@@ -38,7 +38,7 @@ Usage (from the repo root, Git Bash):
     python analysis/tests/read_mt10pro_video.py VIDEO --end 10          # quick smoke test, first 10 s
 Options: --run-id, --prop, --motor-id, --esc-id, --pack-id, --pack-fresh, --n-motors-live,
          --throttle-pct (copied into the t2 CSV), --start/--end (s), --step (frames), --workers,
-         --lambda-blue, --lambda-thrust, --ref-frame, --no-overlays, --fresh.
+         --lambda-blue, --lambda-thrust, --ref-frame, --no-overlays, --fresh, --thrust-refine (v1.5).
 
 Outputs (RUN = --run-id, default the video file name without extension):
     analysis/tests/data/RUN_t2.csv            one row per blue display state, TEST_PLAN.md t2_thrust columns
@@ -115,6 +115,23 @@ v1.4 (2026-09-26): thrust darkness against a background field; sampler geometry 
   - Rejected first (not in this version): a per-segment on/off calibration over time. It misclassified
     weakly lit segments ("681" -> "68 ", "1627" -> "1621") because the moving shadow is not stationary.
   - Pass-1 records keep the (5, 7) segment darkness of every frame ("tv" in the pass-1 npz).
+v1.5 (2026-09-30): per-frame thrust sampler translation (--thrust-refine PX; 0 = off = v1.4 behavior).
+  - On 2026-09-29 12X8E Trial #1 (relaxed setup, 3 training frames; the v1.4 geometry fit was skipped with
+    2 high-power frames) the registered thrust display sat about 9-12 px right of the sampler on many
+    high-power frames (vibration blur), and within 3 px on the sharp ones. The left segments were then
+    sampled on their edges: a hundreds 6 read 5 (1614 -> 1514) and a thousands 2 read 3 (2200 -> 3200); the
+    smoothed hold at stick 49 read 1546 g while the display showed 1600-1618 g. On 18 frames read by eye
+    (102-153 s) the v1.4 sampler decoded 10 correctly. The v1.4 geometry fit run offline on 8 high-power
+    pass-1 frames, (3, 25, 0.955) a -9, decoded 2: one fixed geometry cannot follow a per-frame error.
+    A per-frame search of the sampler translation minimizing the decode sigma decoded all 18 (sigma about
+    0.17 -> 0.08 on the misread frames); adding a vertical scale to the search changed no read.
+  - With PX > 0 each frame's sampler is moved on a 4 px grid over +-PX in x and +-2/3 PX in y, then in 1 px
+    steps within +-2 px of the best grid point; the translation with the lowest decode sigma is kept (ties
+    keep the unmoved sampler). At PX = 24 the search is far smaller than the 111 px between a digit's left
+    and right segments or the 160 px between its a, g and d rows, so it cannot slide one segment's samples
+    onto another. Cost about 140 decodes (0.2-0.3 s) per frame.
+  - The shift is stored per frame (pass-1 npz "tshift", frames.csv thrust_dx_px / thrust_dy_px) and
+    summarized in the log. PX is part of the thrust key, so cached chunks are re-sampled, not re-read.
 Requires: Python 3, numpy, scipy, opencv-python (cv2.findTransformECCWithMask, present in OpenCV 4.13).
 """
 import argparse
@@ -130,7 +147,7 @@ from pathlib import Path
 import numpy as np
 import cv2
 
-SCRIPT_VERSION = "1.4"
+SCRIPT_VERSION = "1.5"
 PASS1_VERSION = "1.1"   # cache key for the blue/registration pass-1 records; bump when register() or the blue path changes
 HERE = Path(__file__).resolve().parent
 
@@ -743,9 +760,51 @@ def _worker_init(ctx):
     cv2.setNumThreads(int(ctx.get("cv_threads", 1)))
     if "thr_off" in ctx:
         _G["smp"] = thrust_sampler(*ctx["thr_off"], ay=ctx.get("thr_ay", 0.0))
+        _G["smp_d"] = {}
     if "Tb" in ctx:
         _G["in_b"] = np.full(ctx["Tb"].shape, 255, np.uint8)
         _G["in_t"] = np.full(ctx["Tt"].shape, 255, np.uint8)
+
+
+def thrust_read(T):
+    """Segment darkness, digit costs, contrast and decode sigma of one rectified thrust frame, plus the sampler
+    translation (dx, dy) used. With thr_refine = PX > 0 (v1.5) the sampler is moved per frame: a 4 px grid
+    over +-PX in x and +-2/3 PX in y, then 1 px steps within +-2 px of the best grid point; the translation
+    with the lowest decode sigma is kept (the unmoved sampler is tried first and wins ties)."""
+    G = _G
+    tv = thrust_dark(T, G["smp"])
+    tc, con, sg = thrust_costs(tv)
+    px = int(G.get("thr_refine", 0))
+    if px <= 0:
+        return tv, tc, con, sg, (0, 0)
+    off, ay, cache = G["thr_off"], G.get("thr_ay", 0.0), G["smp_d"]
+    best = [sg, (0, 0), tv, tc, con]
+    seen = {(0, 0)}
+
+    def trial(dx, dy):
+        if (dx, dy) in seen:
+            return
+        seen.add((dx, dy))
+        smp_ = cache.get((dx, dy))
+        if smp_ is None:
+            smp_ = thrust_sampler(off[0] + dx, off[1] + dy, *off[2:], ay=ay)
+            if len(cache) < 300:
+                cache[(dx, dy)] = smp_
+        tv_ = thrust_dark(T, smp_)
+        tc_, con_, sg_ = thrust_costs(tv_)
+        if sg_ < best[0]:
+            best[:] = [sg_, (dx, dy), tv_, tc_, con_]
+
+    ry = (2 * px) // 3
+    for dy in range(-(ry // 4) * 4, ry + 1, 4):
+        for dx in range(-(px // 4) * 4, px + 1, 4):
+            trial(dx, dy)
+    cx, cy = best[1]
+    for dy in range(cy - 2, cy + 3):
+        for dx in range(cx - 2, cx + 3):
+            trial(dx, dy)
+    sg, sh, tv, tc, con = best
+    return tv, tc, con, sg, sh
 
 
 def input_mask(H, shape, W, H_, full, erode=6):
@@ -872,18 +931,18 @@ def _frame_record(im, prev, prev_assign):
     rec["tc"] = np.zeros((5, ND), np.float32)
     rec["tv"] = np.zeros((5, 7), np.float32)
     rec["tcon"] = rec["tsig"] = float("nan")
+    rec["tshift"] = np.zeros(2, np.float32)
     if Mt is not None:
         T = cv2.warpPerspective(im, Mt, (TW, TH), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32)
-        tv = thrust_dark(T, G["smp"])
-        tc, con, sig = thrust_costs(tv)
-        rec.update(tc=tc, tv=tv.astype(np.float32), tcon=con, tsig=sig)
+        tv, tc, con, sig, sh = thrust_read(T)
+        rec.update(tc=tc, tv=tv.astype(np.float32), tcon=con, tsig=sig, tshift=np.array(sh, np.float32))
         if not np.isfinite(sig):
             rec["thrust_valid"] = 0
     return rec, new_prev, new_assign
 
 
 REC_KEYS = ["idx", "t", "quad_b", "quad_t", "ecc_b", "ecc_t", "reg_b", "reg_t", "Mb", "Mt", "blue_valid", "ct", "assign",
-            "gain", "rms", "sx", "sy", "iters", "stable", "thrust_valid", "tc", "tv", "tcon", "tsig", "tproc"]
+            "gain", "rms", "sx", "sy", "iters", "stable", "thrust_valid", "tc", "tv", "tcon", "tsig", "tproc", "tshift"]
 
 
 def _process_chunk(job):
@@ -896,6 +955,8 @@ def _process_chunk(job):
             with np.load(cache, allow_pickle=False) as z:
                 if str(z["sig"]) == G["sig"]:
                     cached = {k: z[k] for k in REC_KEYS if k in z.files}
+                    if "tshift" not in cached:   # cache written before v1.5
+                        cached["tshift"] = np.zeros((len(cached["idx"]), 2), np.float32)
                     if "tv" not in cached:   # cache written before v1.4: re-sampled below
                         cached["tv"] = np.zeros((len(cached["idx"]), 5, 7), np.float32)
                     elif "thr_key" in z.files and str(z["thr_key"]) == G["thr_key"]:
@@ -915,9 +976,8 @@ def _process_chunk(job):
             if im is None:
                 continue
             T = cv2.warpPerspective(im, out["Mt"][j], (TW, TH), flags=cv2.INTER_CUBIC)[..., 1].astype(np.float32)
-            tv = thrust_dark(T, G["smp"])
-            tc, con, sg = thrust_costs(tv)
-            out["tc"][j], out["tv"][j], out["tcon"][j], out["tsig"][j] = tc, tv, con, sg
+            tv, tc, con, sg, sh = thrust_read(T)
+            out["tc"][j], out["tv"][j], out["tcon"][j], out["tsig"][j], out["tshift"][j] = tc, tv, con, sg, sh
             out["thrust_valid"][j] = int(np.isfinite(sg))
         tmp = cache.with_name(cache.stem + "_tmp.npz")
         np.savez(tmp, sig=np.array(G["sig"]), thr_key=np.array(G["thr_key"]), **out)
@@ -946,7 +1006,7 @@ def _process_chunk(job):
 
 def empty_records():
     shapes = {"Mb": (0, 3, 3), "Mt": (0, 3, 3), "ct": (0, 2, 16, NG), "assign": (0, 2, 16), "tc": (0, 5, ND),
-              "tv": (0, 5, 7)}
+              "tv": (0, 5, 7), "tshift": (0, 2)}
     return {k: np.zeros(shapes.get(k, (0,))) for k in REC_KEYS}
 
 
@@ -1113,6 +1173,8 @@ def main():
                     help="clockwise rotation applied to the stored frames (auto: the one where the unit glyphs decode)")
     ap.add_argument("--no-overlays", action="store_true")
     ap.add_argument("--fresh", action="store_true", help="ignore cached pass-1 chunks")
+    ap.add_argument("--thrust-refine", type=int, default=0,
+                    help="v1.5: per-frame thrust sampler translation search, +-PX in x and +-2/3 PX in y (0 = off)")
     args = ap.parse_args()
 
     if not hasattr(cv2, "findTransformECCWithMask"):
@@ -1444,7 +1506,8 @@ def main():
     log("setup: reference frame %d; training frames %s; dot model rms %.1f; thrust geometry %s, a row %+.1f px "
         "(v1.3 fit: sep %.3f vs %.3f at 0,0); thrust sigma %.3f" % (ref_idx, [f["idx"] for f in tr], rms_ref, thr_off, thr_ay,
                                                                     best_sc, sc0, tsig_ref), echo=True)
-    thr_key = "%s|%s|%.1f" % (SCRIPT_VERSION, thr_off, thr_ay)
+    thr_refine = max(0, int(args.thrust_refine))
+    thr_key = "%s|%s|%.1f" % (SCRIPT_VERSION, thr_off, thr_ay) + ("|refine%d" % thr_refine if thr_refine else "")
     sig_src = "%s|%d|%d|%d|%d|%d|%s|%.6e|%.6e|%s|%d|%d" % (PASS1_VERSION, video.stat().st_size, f0, f1, args.step, ref_idx,
                                                          [f["idx"] for f in tr], float(FL.sum()), float(FU.sum()), thr_fit,
                                                          rot, thr_partial)
@@ -1456,7 +1519,8 @@ def main():
                    "train_text": ["|".join(text_of(f["a"])) for f in tr], "train_rms": [f["rms"] for f in tr],
                    "rms_ref": rms_ref, "U": U, "thrust_offset": thr_off, "thrust_a_shift": thr_ay, "tsig_ref": tsig_ref,
                    "thrust_darkness": "background field (v1.4)", "thrust_geometry_v13": [leg_off, leg_ay],
-                   "thrust_geometry_fit": geo, "signature": sig, "thrust_key": thr_key}, fh_, indent=1)
+                   "thrust_geometry_fit": geo, "thrust_refine_px": thr_refine, "signature": sig, "thrust_key": thr_key},
+                  fh_, indent=1)
     np.savez(dbg / (run_id + "_model.npz"), FL=FL, FU=FU, Tb=Tb, Tt=Tt)
     # sampler check image: segment sample points (red) and background-field points (green) on the thrust
     # display of the geometry-fit frames (the training frames if the fit did not run)
@@ -1471,8 +1535,8 @@ def main():
     cv2.imwrite(str(dbg / (run_id + "_thrust_sampler.jpg")), np.vstack(chk), [cv2.IMWRITE_JPEG_QUALITY, 88])
 
     # ---------------- pass 1 ----------------
-    ctx.update(FL=FL, FU=FU, U=U, thr_off=thr_off, thr_ay=thr_ay, step=args.step, sig=sig, thr_key=thr_key,
-               cache_dir=str(cache_dir), fresh=args.fresh)
+    ctx.update(FL=FL, FU=FU, U=U, thr_off=thr_off, thr_ay=thr_ay, thr_refine=thr_refine, step=args.step, sig=sig,
+               thr_key=thr_key, cache_dir=str(cache_dir), fresh=args.fresh)
     clen = max(1, 90 // args.step) * args.step
     jobs = [(a, min(a + clen, f1)) for a in range(f0, f1, clen)]
     log("pass 1: %d chunks of %d frames (finished chunks are cached, so an interrupted run resumes)" % (len(jobs), clen), echo=True)
@@ -1492,6 +1556,14 @@ def main():
     D["thrust_valid"] = D["thrust_valid"] * (np.abs(D["tv"]).reshape(F, -1).sum(1) > 0)
     np.savez_compressed(dbg / (run_id + "_pass1.npz"), **D)
     log("pass 1: %d frames, mean %.2f s per frame per worker" % (F, float(np.mean(D["tproc"]))), echo=True)
+    if thr_refine:
+        sh_ = D["tshift"][D["thrust_valid"].astype(bool)]
+        if len(sh_):
+            p_ = np.percentile(sh_, [5, 50, 95], axis=0)
+            log("thrust refine (v1.5, +-%d px): sampler shift dx median %+.0f px (5-95 pct %+.0f..%+.0f), dy median %+.0f px "
+                "(%+.0f..%+.0f); %.0f pct of frames moved 6 px or more"
+                % (thr_refine, p_[1, 0], p_[0, 0], p_[2, 0], p_[1, 1], p_[0, 1], p_[2, 1],
+                   100.0 * float(np.mean(np.abs(sh_).max(1) >= 6))), echo=True)
 
     # ---------------- pass 2: smoothing ----------------
     # Frame weights. Glyph-cost noise in dot-equivalents scales with (fit rms / gain), so the log-likelihood
@@ -1606,7 +1678,7 @@ def main():
              "blue_gain", "blue_rms", "blue_rel_rms", "blue_weight", "blur_sx_px", "blur_sy_px", "blue_iters", "blue_stable",
              "blue_raw_row0", "blue_raw_row1", "blue_raw_min_margin", "blue_row0", "blue_row1", "blue_state_id",
              "thrust_raw", "thrust_raw_min_margin", "thrust_sigma", "thrust_weight", "thrust_display", "T_g",
-             "thrust_possible_mix", "t_proc_s"]
+             "thrust_possible_mix", "t_proc_s", "thrust_dx_px", "thrust_dy_px"]
     frows = []
     for i in range(F):
         rr0, rr1 = raw_btxt[i].split("|")
@@ -1624,7 +1696,9 @@ def main():
                       "thrust_raw": ("[" + raw_ttxt[i] + "]") if tval[i] else "",
                       "thrust_raw_min_margin": raw_t_marg[i] if tval[i] else None, "thrust_sigma": D["tsig"][i],
                       "thrust_weight": wt[i], "thrust_display": ("[" + ttxt[i] + "]") if tval[i] else "", "T_g": tval_num[i],
-                      "thrust_possible_mix": int(tmix[i]), "t_proc_s": D["tproc"][i]})
+                      "thrust_possible_mix": int(tmix[i]), "t_proc_s": D["tproc"][i],
+                      "thrust_dx_px": int(D["tshift"][i][0]) if tval[i] else None,
+                      "thrust_dy_px": int(D["tshift"][i][1]) if tval[i] else None})
     p_frames = out_dir / (run_id + "_frames.csv")
     write_csv(p_frames, fcols, frows)
     bcols = ["state_id", "t_start_s", "t_end_s", "t_mid_s", "n_frames", "row0", "row1", "I_A", "V_V", "aux_value", "aux_unit",

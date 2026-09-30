@@ -37,3 +37,10 @@ kmkl_asos_2026-09-26.csv  (4 rows)
   Columns as above. 01:53Z: 66 F, dewpoint 59 F, altimeter 30.11 inHg.
   Source: https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=MKL&data=tmpf,dwpf,relh,alti,mslp&year1=2026&month1=9&day1=26&hour1=0&year2=2026&month2=9&day2=26&hour2=4&tz=Etc%2FUTC&format=onlycomma&latlon=no&elev=no&missing=M&trace=T&direct=no&report_type=3&report_type=4
   Fetched 2026-09-26. Use: altimeter for air density of the 2026-09-25 runs in t2_conditions.csv.
+
+kmkl_asos_2026-09-30.csv  (4 rows)
+  Hourly ASOS/METAR at KMKL (as above), 2026-09-30 00:53-03:53 UTC, the night of the 2026-09-29 T-2 session
+  (videos in analysis/tests/video/2026-09-29/, recorded 2026-09-30 00:54-01:42 UTC = 19:54-20:42 CDT 2026-09-29).
+  Columns as above. 00:53Z: 67 F, dewpoint 52 F, altimeter 29.96 inHg; 01:53Z: 62 F, dewpoint 53 F, altimeter 29.98 inHg.
+  Source: https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=MKL&data=tmpf,dwpf,relh,alti,mslp&year1=2026&month1=9&day1=30&hour1=0&year2=2026&month2=9&day2=30&hour2=4&tz=Etc%2FUTC&format=onlycomma&latlon=no&elev=no&missing=M&trace=T&direct=no&report_type=3&report_type=4
+  Fetched 2026-09-30. Use: altimeter for air density of the 2026-09-29 runs in t2_conditions.csv.

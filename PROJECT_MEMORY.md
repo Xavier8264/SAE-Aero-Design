@@ -1817,3 +1817,263 @@ Task (Jordan): use github.com/AgriciDaniel/claude-obsidian (v2.2.0) to optimize 
 Unchanged: the next stand session (see STATE.md NEXT TASK).
 
 ---
+
+## [2026-09-30 06:59 CDT] 2026-09-29 T-2 session: 3 videos read (reader v1.5 thrust refine), audio rpm, throttle from callouts, battery / ESC check
+
+Task (Jordan, unattended overnight): pull the frames from the new videos and write the data to CSV "same as before"
+(the 2026-09-25 pipeline, [2026-09-26 12:00]). Interpolate throttle from Throttle Data 9.29.xlsx (stick position
+vs thrust in grams). State assumptions; ground decisions in data.
+
+### Inputs and layout
+- Videos (gitignored): analysis/tests/video/2026-09-29/{9X6E, 12X8E, 9X4.5E} Trial #1.MOV. run_id
+  2026-09-29_<prop>_T1. Jordan wrote "4 video files"; there are 3 videos plus the Excel.
+- Callouts: analysis/tests/data/2026-09-29_throttle_callouts.csv, 49 rows (13 / 18 / 18), transcribed from
+  Throttle Data 9.29.xlsx (repo root, like prop_data_9.25.xlsx; one sheet per video) by make_callouts.py (scratch,
+  not in the repo). Every sheet says "Battery A, Fully Charged". No sheet mentions the ESC calibration.
+  throttle_pos is the stick -100..+100 as on 2026-09-25 [ASSUMPTION, same sheet layout]; throttle_pct = (pos+100)/2.
+- Video metadata (ffprobe): 9x6E 19:54:17 CDT, 105.2 s; 12x8E 20:08:14, 159.0 s; 9x4.5E 20:42:08, 167.7 s. Phone GPS
+  35.6750-35.6751 -88.8633/-88.8634, the same site as 2026-09-25 (t2_conditions.csv), elev 464 ft.
+- Weather: reference/data/kmkl_asos_2026-09-30.csv (+ README entry). KMKL 00:53Z 67 F, dewpoint 52, 29.96 inHg;
+  01:53Z 62 F, dewpoint 53, 29.98 inHg. rho 1.171 kg/m^3 at the assumed 72 F indoors [UNVERIFIED].
+- t2_conditions.csv: 3 new rows. Numbers are pulled from the holds and battery files by a script, not typed.
+
+### Pipeline, in order (from the repo root)
+  V=analysis/tests/video/2026-09-29; C=analysis/tests/data/2026-09-29_throttle_callouts.csv
+  python analysis/tests/read_mt10pro_video.py "$V/12X8E Trial #1.MOV" --run-id 2026-09-29_12x8E_T1 --prop 12x8E \
+      --pack-id A --pack-fresh yes --step 2 --workers 4 --thrust-refine 24
+  python analysis/tests/audio_rpm.py "$V/12X8E Trial #1.MOV" --run-id 2026-09-29_12x8E_T1 --prop 12x8E --rho 1.171
+  python analysis/tests/throttle_merge.py $C
+  python analysis/tests/battery_check.py $C
+- Run times, one read at a time (4 workers use the whole CPU): v1.4 full reads 12x8E 134.2 min, 9x6E 80.2 min.
+  v1.5 re-samples of those caches: 25.3 and 17.5 min. 9x4.5E v1.5 full read: 153.6 min. The rest takes minutes.
+- Outputs: data/2026-09-29_<run>_{frames, thrust_states, blue_states, t2, rpm, rpm_states, throttle, holds}.csv;
+  session 2026-09-29_battery_{runs, holds}.csv and 2026-09-29_rpm_drops.csv. Plots and logs: out/throttle/2026-09-29_*,
+  out/battery/2026-09-29_*, out/audio/2026-09-29_*_T1/. Reader debug (gitignored): out/video/2026-09-29_*_T1/.
+
+### Tool change: read_mt10pro_video.py v1.4 -> v1.5 (installed, NOT committed; md5 33cd4afc2f0b04b92529a5aade49f960)
+- Symptom (12x8E, v1.4): a hundreds 6 read as 5 (1614 -> 1514) and a thousands 2 read as 3 (2200 -> 3200).
+  Hold 13 (stick 49) read 1546 g while the display showed 1600-1618 g.
+- Cause [VERIFIED on frames]: per-frame registration drift of 9-12 px on blurred high-power frames, so the left
+  segments were sampled on their edges. The setup was relaxed (3 training frames); the geometry fit was skipped.
+  A better fixed geometry was tested and refuted: the v1.4 fit run offline on 8 high-power frames decoded 2 / 18
+  truth frames, against 10 / 18 for the v1.4 sampler.
+- Fix: --thrust-refine PX. A per-frame translation search of the thrust sampler: 4 px grid over +-PX in x and
+  +-2/3 PX in y, then 1 px steps within +-2 px of the best. The lowest decode sigma wins; ties keep the unmoved
+  sampler. PX 24 is far below the 111 px between a digit's left and right segments. The default 0 = v1.4.
+  The shift is stored per frame (frames.csv thrust_dx_px / thrust_dy_px). PX is in the thrust key, so cached
+  chunks are re-sampled, not re-read. Details and evidence are in the docstring.
+- Validation (scratch validate15.py; v1.4 outputs kept in scratch pre_v15/, session temp, may not survive):
+    run      truth frames   sigma med      isolated outliers   states   max state g   frames moved >= 6 px
+    12x8E    10/18 -> 18/18  0.074 -> 0.062  15 -> 2            408->449 2998 -> 2284  48 pct
+    9x6E     -              0.070 -> 0.056  2 -> 0              264->291 1650 (1 frame) 72 pct
+    9x4.5E   - (v1.5 only)  0.060           4                   -        -             44 pct
+  An isolated outlier is a frame more than 100 g from the median of its +-0.5 s neighbours.
+  - 12x8E: 441 frames changed T_g, 37 of them by >= 500 g. Hold max |error| 69.0 -> 12.1 g. The fake event in
+    hold 13 is gone (1546 -> 1603 g). The 2 left outliers are flagged frames (127.94 s LCD transition 1984 -> 2024
+    read 1084 / 2084; 153.59 s spin-down).
+  - 9x6E: max state 1650 g is one possible_mix frame in the spin-down at 99.8 s; a 1383 g weak state at 90.8 s
+    is in a ramp. Both are outside the holds.
+  - 9x4.5E: geometry (13, 22, 0.955), a row -3 px. 4 frames read 114 at 141.5 s, in the slow throttle-down after
+    the last hold (409 / 309 / 399 / 114 / 304, mostly weak). Outside the holds; true values UNVERIFIED.
+  - 9x6E and 9x4.5E: the coarse geometry best sits on the search boundary [minor; the holds match the callouts].
+
+### Audio rpm: audio_rpm.py defaults (blades 2, kmax 10), not the 2026-09-25 --blades 1 --kmax 4
+Both settings were run on scratch copies (aud_cmp.py). Criterion as for the 12x8E choice: states not flagged
+motor_off / no_rpm / mismatch, T_over_Tapc spread for T > 300 g, median rpm_std.
+    run      clean states (b2k10 vs b1k4)  rpm_std median  unsteady flags  mismatch flags
+    12x8E    329 vs 316                    5.9 vs 44.5     -               -
+    9x6E     225 vs 223                    6.4 vs 42.4     28 vs 128       1 vs 4
+    9x4.5E   312 vs 313                    5.4 vs 36.5     45 vs 165       1 vs 10
+Measured / APC thrust at the audio rpm (rho 1.171, T_apc >= 200 g), median: 12x8E 0.996, 9x6E 0.984, 9x4.5E 0.964.
+- 12x8E hold 1 (stick -78, 44 g): rpm 2980 is above hold 2 (148 g, 2361 rpm), so it is not credible [INFERRED].
+  Low power only.
+
+### Holds (throttle_merge v1.3): all 49 callouts anchored; hold mean minus callout
+- 9x6E: 13 / 13, max |err| 9.9 g (hold 13), median 0.5 g.
+- 12x8E: 18 / 18, max 12.1 g (hold 13: 1603 vs 1615, a real sag to 1600), median 1.6 g. Callout 17 now matches
+  2100 g exactly at 140.45 s.
+- 9x4.5E: 18 / 18, max 9.0 g (hold 15: 939 vs 948), median 0.8 g.
+Stick-100 holds (full-throttle windows, also in t2_conditions.csv):
+    run      window s         T g    rpm     I A     V V     duty A  duty B  rpm / 776 line  rpm / 809 line
+    9x6E     90.98-99.36      1320   10458   18.70   14.99   0.970   1.039   0.991           0.943
+    12x8E    143.02-152.43    2198   8364    36.11   13.70   0.983   0.977   0.980           0.922
+    9x4.5E   124.71-137.35    1166   10859   15.75   15.26   0.969   1.049   0.994           0.947
+776 line = 776 x (V - 0.075 I), the 2026-09-25 ceiling (N2). 809 line = 809 x (V - 0.069 I), the "calibrated"
+case of [2026-09-26 19:59] (fit A, dmax 0.96).
+
+### Battery / ESC (battery_check v1.4)
+- Rest V at start 16.73 / 16.74 / 16.74 V (4.18 V/cell). 9x6E ended at 15.84 V, and 12x8E started at 16.74 V, so the
+  pack was recharged between those runs [INFERRED from V; the sheets only say "Fully Charged"].
+- Pack line V0 / R: 16.76 V / 93 mOhm (9x6E), 16.74 / 85 (12x8E), 16.75 / 92 (9x4.5E). R includes the leads and
+  wiring. It is higher than on 2026-09-25 (64-85 mOhm, packs not full). Pack IR itself is still not logged.
+- V min loaded: 14.95 V at 18.6 A; 13.63 V at 35.7 A; 15.20 V at 16.1 A. Margin to the 12.0 V LVC reference
+  +2.95 / +1.63 / +3.20 V [LVC reference UNVERIFIED for the X60A]. No ESC alarm. All 8 real rpm drops are throttle
+  cuts (display thrust fell with them), not LVC.
+
+### Answer to the 2026-09-26 test ("rpm rises above the 776 line past stick 80")
+1. Duty keeps rising past stick 80: YES. duty A climbs 0.05-0.06 per 10 stick units, all the way to stick 100
+   (12x8E 0.757 / 0.819 / 0.879 / 0.931 / 0.983 at stick 59 / 70 / 81 / 90 / 100). On 2026-09-25 it went flat
+   at stick 80-82. At stick 90, rpm / 776 line is 0.92-0.95.
+2. rpm above the 776 line: NO. At stick 100 rpm is 0.980-0.994 of it.
+   - Fit of rpm = K (V - R' I) to the 3 stick-100 holds (scratch top_fit.py): K 776.5 rpm/V, R' 81.2 mOhm,
+     residuals under 0.05 pct [VERIFIED numerically; 3 points, 1 dof]. The same K as the 2026-09-25 ceiling
+     (776.2).
+   - With R' fixed at 75 mOhm, K_eff is 761-771, i.e. stick 100 sits 0.6-2.0 pct below the old line. The data
+     cannot tell "at the ceiling, R' 81" from "just below it, R' 75". Either way, it is not above.
+   - Meaning [INFERRED, medium-high]: the stick-to-output mapping changed, so stick 100 now reaches what stick 80
+     reached on 2026-09-25. The maximum output did not rise. This fits an ESC throttle-range calibration (NEXT
+     TASK item 2 of [2026-09-26 19:59]), but Jordan has not confirmed one was done. Radio endpoint changes would
+     look the same.
+3. Consequences [INFERRED; predict_config.py NOT rerun]:
+   - The "calibrated" case (Kv x dmax 809) is not reached: stick-100 rpm is 5.3-7.8 pct below the 809 line. Of the
+     N4 prediction cases, the "as set" ones match the measured top end. 2 x 12x8E: 9.80 / 7.71 lbf (ideal pack),
+     7.91 / 5.97 (real). 4 x 9x6E: 9.75 / 7.43, 7.83 / 5.68 (borrowed factors). The "calibrated" 10.22 / 10.23 lbf
+     is optimistic.
+   - BIG FLAG: the best predicted static thrust is about 9.8 lbf, not 10.2, against 12.5 lbf in the sizing.
+   - Kv and dmax are still not separated. If the calibrated ESC's top is 100 pct duty [UNVERIFIED], Kv x dmax 776
+     means Kv about 776, not fit A's 809.
+
+### Single-motor stick-100 results (measured; NOT a layout comparison)
+- 9x6E 1320 g at 18.7 A / 14.99 V. 12x8E 2198 g at 36.1 A / 13.70 V. 9x4.5E 1166 g at 15.75 A / 15.26 V.
+- These are one motor on one pack. In the aircraft either layout pulls about 76-82 A from one pack
+  ([2026-09-26 19:59]), so the per-motor bench numbers sit at different pack voltages. Multiplying them by the
+  motor count (9x6E x 4 = 11.6 lbf, 12x8E x 2 = 9.7 lbf) is NOT a valid comparison.
+- The D4 / N4 overturn condition ("9x6E stand run") now has its data. The comparison needs predict_config.py rerun
+  with the measured 9x6E factors and the 2026-09-29 top end and pack line. Not done here.
+
+### UNVERIFIED / INFERRED
+- Indoor 72 F assumed (not measured on 2026-09-29), so rho 1.171 is assumed. Indoor dewpoint = outdoor KMKL.
+- ESC and motor assumed to be the same as for 12x8E on 2026-09-23 (X60A, X2820 800 KV).
+- The pack recharge between 9x6E and 12x8E (from rest V). Pack A on all three runs (from the sheets).
+- The ESC calibration (inferred from the duty curve; Jordan to confirm what changed since 2026-09-25).
+- The LVC reference 12.0 V (from the X45/65/85 manual).
+- Thrust in ramps outside the holds: some weak or flagged states are misreads (see validation).
+- v1.5 was validated on the 2026-09-29 runs only, not rerun on the 2026-09-25 runs.
+- 12x8E hold 1 audio rpm (not credible).
+
+### Adjacent issues (listed, not fixed)
+- v1.5 --thrust-refine defaults to 0. Consider making 24 the default after rerunning the 2026-09-25 runs with it.
+- The reader's debug overlays call read_one without the rotation argument (overlays only; data unaffected
+  [INFERRED]).
+- The reader log's "mean s per frame" label is imprecise.
+- The relaxed setup (3 training frames on 12x8E) skipped the geometry fit; the refine search covered it here.
+- pre_v15/ (v1.4 outputs), validate15.py, aud_cmp.py, top_fit.py and make_callouts.py live in session scratch
+  only. Copy them if they should be kept.
+- Stale grep processes from 2026-09-26 may still be running.
+- analysis/tests/__pycache__/*.pyc still shows in git status (one tracked). Throttle Data 9.29.xlsx is at the
+  repo root.
+- The Gmail and Google Calendar MCP connectors need authorization in claude.ai connector settings (not used).
+
+### NEXT TASK
+Rerun analysis/tests/predict_config.py (2 x 12x8E vs 4 x 9x6E) with the measured 2026-09-29 data: 9x6E factors
+from its own run, the top end K 776.5 / R' 81 mOhm (drop the "calibrated" 809 case unless Jordan says the ESC was
+not calibrated), and pack line 16.75 V / 85-93 mOhm. Then put the top end into propulsion.py / takeoff.py and rerun
+the sizing with the E423. Ask Jordan first: was the ESC calibrated before 2026-09-29? Pack C rating and IR?
+How many X2820s?
+
+---
+
+## [2026-09-30 09:21 CDT] 2026-09-29 T-2 data packaged as a zip for an outside Claude Code session
+
+Task (Jordan): a comprehensive zip of the 2026-09-29 test data to hand to someone else's Claude Code.
+
+- Output: C:\Users\jprun\Downloads\SAE_T2_2026-09-29.zip (63.5 MB, 1003 files, outside the repo).
+  Zip integrity checked (testzip: all CRCs OK). Repo files unchanged.
+- Layout mirrors the repo, so the scripts run from the zip root. Contents:
+  - Throttle Data 9.29.xlsx.
+  - All 29 analysis/tests/data/2026-09-29_* CSVs, plus t2_conditions.csv (all rows; 3 are 09-29).
+  - out/{throttle, battery, audio} 09-29 plots and logs.
+  - out/video/2026-09-29_*_T1: log, setup.json, thrust_sampler.jpg and 929 overlay JPGs (from the v1.5 reads).
+  - Scripts as installed: read_mt10pro_video.py v1.5 (md5 33cd4afc...), audio_rpm.py 1.3,
+    throttle_merge.py 1.3, battery_check.py 1.4.
+  - analysis/sizing/{propulsion, common}.py; reference/raw/apc_{12x8e, 9x6e, 9x45e}.dat;
+    kmkl_asos_2026-09-30.csv; X2820 test data and spec text.
+  - context/: verbatim log entries [2026-09-30 06:59], [2026-09-26 12:00] and [2026-09-26 19:59], plus
+    TEST_PLAN.md section 3.
+  - README.md for a cold-start reader (setup, pipeline, file map, key results, caveats) and MANIFEST.csv
+    (size and md5 per file).
+- Left out: the 3 videos (4.5 GB), the reader .npz caches, data from 09-23 and 09-25, predict_config.py and
+  the sizing code.
+- Self-containment check [VERIFIED] on a copy of the package:
+  - throttle_merge.py reproduced every holds, throttle and t2 CSV byte for byte.
+  - battery_check.py --no-alarms reproduced every number. Without the videos three things are lost: the run
+    order (from the video timestamps), the created column, and the alarm columns.
+- The README's stick-100 table, hold errors and pack line were checked against the CSVs.
+- Build script: scratch build_pkg.py (session temp only).
+- The package contains the test site's phone-GPS coordinates (t2_conditions.csv, logs). Flagged to Jordan in
+  the handoff message.
+
+### NEXT TASK
+Unchanged from [2026-09-30 06:59]: rerun predict_config.py with the 2026-09-29 data.
+
+---
+
+## [2026-09-30 09:24 CDT] Jordan's answers: ESC calibrated, lottery registered, 4 motors, prop counts
+
+Jordan (2026-09-30), verbatim: "i did calibrate the esc and controller. we have already registered for the
+lottery, so that is a closed matter. i have 4 motors and 2 of each of the 12" props and 4 of the 9" props."
+
+### Recorded (Jordan)
+- ESC throttle range calibrated to the transmitter before the 2026-09-29 session. This answers open item 1
+  of [2026-09-30 06:59].
+  - When this happened relative to the 2026-09-25 session was not stated. On 09-25 the output went flat near
+    stick 80, which fits a range that was not yet calibrated [INFERRED].
+- Competition lottery: registered. Jordan calls it closed.
+  - The result (which event) is not logged. R8 (East/Florida) is unchanged.
+  - The AMA card and sae.org affiliation (R7) were not mentioned. Their status is still not logged.
+- Motors on hand: 4 x SunnySky X2820 800 KV.
+- Props on hand: 12x6E, 12x8E and 12x10E, 2 of each.
+  - 9 in props: "4 of the 9 in props". Read here as 4 each of 9x4.5E and 9x6E [INTERPRETED; Jordan to
+    confirm, it could mean 4 in total].
+
+### What changes [INFERRED unless marked]
+- Top end. With a calibrated range, stick 100 is the ESC's full output.
+  - So the measured rpm = 776.5 x (V - 0.081 I) ([2026-09-30 06:59]) is the calibrated maximum.
+  - It has the same K (776) as the 09-25 ceiling. The calibration moved where the ceiling is reached, from
+    about stick 80 to stick 100. It did not raise the maximum.
+  - Confidence high: Jordan's confirmation plus 3 stick-100 holds.
+- The "calibrated" prediction case of [2026-09-26 19:59] (Kv x dmax 809, fit A) is ruled out.
+  - That case assumed the calibration would raise the top end. It did not.
+  - The "as set" numbers are therefore the calibrated numbers: 2 x 12x8E 9.80 lbf static / 7.71 at V_R
+    (ideal pack); 4 x 9x6E 9.75 / 7.43 (borrowed factors). predict_config.py is not rerun yet.
+- BIG FLAG is firmer: about 9.8 lbf best static, against 12.5 lbf in the sizing.
+- Kv and dmax are still not separated.
+  - Whether the X60A's calibrated top is 100 pct duty is UNVERIFIED.
+  - A Kv measurement that does not go through the ESC (for example a back-EMF spin test) would separate them.
+  - If dmax = 1, Kv is about 776.
+- Motor count. The hardware no longer limits the layout choice: both 2 x 12 in and 4 x 9 in can be built
+  from the motors and props on hand. D4 (2 x 12x8E) stands until predict_config.py is rerun with the
+  measured 9x6E factors.
+- Not stated: how many ESCs are on hand. The 4-motor layout needs 4; the bench used one X60A V2.
+- Spares (listed, not a decision):
+  - 2 of each 12 in prop leaves a 2-motor aircraft with no spare of its prop.
+  - 4 of each 9 in prop, if that reading is right, leaves a 4-motor aircraft with none either.
+- TEST_PLAN 3.2 asks for at least 2 motors on the stand, to see motor-to-motor scatter. All bench data so
+  far is from one motor (assumed to be the same unit).
+
+### Files updated
+- DECISIONS.md: D5, H4, N10 and N11 SUPERSEDED. New rows D11, H6, H7, N16, N17 and P4.
+- STATE.md rewritten.
+- TEST_PLAN.md 3.2: the motor count line.
+- analysis/tests/data/t2_conditions.csv: in the three 2026-09-29 rows, the note "[ESC throttle-range
+  calibration INFERRED from this, not confirmed by Jordan]" now says it is confirmed. Text replace only.
+- C:\Users\jprun\Downloads\SAE_T2_2026-09-29.zip rebuilt with the updated README and t2_conditions.csv.
+  The previous zip was archived to the vault.
+
+### Still open for Jordan
+- How many ESCs are on hand.
+- Pack capacity, C rating and IR.
+- AMA card and sae.org affiliation.
+- T-1 wing panel weigh-in.
+- Does "4 of the 9 in props" mean 4 of each?
+- Commit reader v1.5 and the 2026-09-29 data.
+
+### NEXT TASK
+Rerun analysis/tests/predict_config.py with the 2026-09-29 data:
+- drop the "calibrated" 809 case (ruled out);
+- use the 9x6E factors from its own run;
+- top end K 776.5 / R' 81 mOhm;
+- pack line 16.75 V / 85-93 mOhm.
+Then rerun the sizing with the E423.
+
+---

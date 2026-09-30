@@ -1,0 +1,19 @@
+audio_rpm.py v1.3  2026-09-30 06:54:25
+audio 9X4.5E Trial #1.MOV: 48000 Hz, 2 channel(s), 167.72 s; audio start - video start = 0.0000 s; video 59.937 fps
+settings: blades 2, order 2, kmax 10, rpm 600-15000, voicing 1.50, state lag -0.35 s, rho 1.1710, prop '9x4.5E'
+spectra: 8387 hops of 0.020 s (window 0.171 s, bin 1.465 Hz, up to 5060 Hz); stationary lines removed: 30.8 Hz (9 dB)
+power prior: 342 display states, 19 motor-off (idle 0.10 A, 2.30 W); bound from APC 9x45e Cp_min 0.0409; 636 hops motor off, 7751 bounded, 0 free
+thrust window: tare 0.0 g (median of 18 motor-off states within 10 s of the motor-on span); 285 of 342 states >= 100 g above tare bound F; 6476 hops bounded (x/1.25 in rpm), 1911 free
+tracking: 7320 of 8387 hops voiced (87%); best-candidate salience on unvoiced hops: median -3.00, 99th pct 2.93 (voicing threshold 1.50)
+refinement: 7254 hops with harmonic peaks, 66 coarse only; median harmonics used 9; median spread 4.4 rpm
+done in 0.3 min
+rpm range 1334 to 10938 (hops)
+display states: 342; with rpm 313; flagged motor_off 19, unsteady 45, no_rpm 10, rpm_thrust_mismatch 1
+highest-rpm state 269: 10920 rpm (std 7), I 15.47 A, V 15.32 V, T 1153.0 g
+measured / APC thrust at the audio rpm (rho 1.171, states with T_apc >= 200 g): median 0.964, range 0.773-1.254, n 271
+t2 file: rpm filled in 302 of 329 rows
+outputs:
+  C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\data\2026-09-29_9x4.5E_T1_rpm.csv
+  C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\data\2026-09-29_9x4.5E_T1_rpm_states.csv
+  C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\data\2026-09-29_9x4.5E_T1_t2.csv (rpm columns)
+  debug + plot: C:\Users\jprun\Downloads\SAE Aero Design\analysis\tests\out\audio\2026-09-29_9x4.5E_T1
